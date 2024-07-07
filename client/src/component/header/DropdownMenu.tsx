@@ -1,20 +1,25 @@
-// src/components/DropdownMenu.tsx
-
-import { NavLink } from "react-router-dom";
 import { Route } from "../../config/MenuItemsData";
+import MenuItems from "./MenuItems";
 
-interface IProp {
+interface DropdownMenuProps {
   submenus: Route[];
+  dropdown: boolean;
+  depthLevel: number;
 }
 
-const DropdownMenu = ({ submenus }: IProp) => {
+const DropdownMenu = ({ submenus, dropdown, depthLevel}: DropdownMenuProps) => {
+  const newDepthLevel = depthLevel + 1;
+  const dropdownClass = newDepthLevel > 1 ? "mt-4" : "";
+
   return (
-    <ul className="absolute min-w-[7rem] left-0 top-full bg-purple py-2 shadow-md rounded-sm hidden group-hover:block">
+    <ul
+      className={`dropdown ${dropdownClass} ${dropdown ? "block" : "hidden"} ${
+        newDepthLevel > 1 ? "left-full top-0" : "left-0 top-full"
+      } absolute min-w-[7rem] bg-purple py-2 shadow-md rounded-sm`}
+    >
       {submenus.map((submenu, index) => (
-        <li key={index} className="px-4 py-1">
-          <NavLink to={submenu.url} className="text-white font-title text-2xl tracking-wider hover:text-gray-300">
-            {submenu.title}
-          </NavLink>
+        <li key={index} className="relative">
+          <MenuItems items={submenu} depthLevel={newDepthLevel} />
         </li>
       ))}
     </ul>

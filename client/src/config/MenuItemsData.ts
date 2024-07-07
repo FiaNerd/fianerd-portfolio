@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/config/Navigation.ts
 
 import HomePage from '../pages/HomePage';
@@ -5,9 +6,9 @@ import HomePage from '../pages/HomePage';
 export interface Route {
   url: string;
   title: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  nav?: React.ComponentType<any>;
-  subMenu?: Route[];
+  nav?: React.ComponentType<any>; // Optional component
+  subMenu?: Route[]; // Submenu for the main dropdown
+  dropdown?: Route[]; // Additional dropdown menu for 'Webb'
 }
 
 export const navRoutes: Route[] = [
@@ -23,17 +24,37 @@ export const navRoutes: Route[] = [
   {
     title: 'Projekt',
     url: '/',
-    subMenu:[
+    subMenu: [
       {
         title: 'Webb',
-        url: 'web-dev'
+        url: '/web-dev',
+        subMenu: [
+          {
+            title: 'Frontend',
+            url: '/frontend',
+          },
+          {
+            title: 'Backend',
+            url: '/backend',
+          },
+          {
+            title: 'Fullstack',
+            url: '/fullstack',
+          },
+        ],
+        dropdown: [
+          {
+            title: 'Extra Menu',
+            url: '/extra-menu',
+          },
+        ],
       },
       {
         title: 'Grafisk',
-        url: 'graphic-design'
-      }
-    ]
-    },
+        url: '/graphic-design',
+      },
+    ],
+  },
   {
     title: 'Kontakt',
     url: '/',
