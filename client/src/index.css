@@ -1,3 +1,15 @@
+/* Import Adobe Fonts styles or define font-face */
+@import url('https://use.typekit.net/bwg5bhb.css');
+
+body {
+  /* font-family: 'quiroh', sans-serif;  */
+  font-family: 'montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* font-family: 'playfair-display', serif; */
+  /* font-family: "adapt-variable", sans-serif; */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
