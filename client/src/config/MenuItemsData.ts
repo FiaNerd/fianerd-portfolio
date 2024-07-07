@@ -1,14 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // src/config/Navigation.ts
 
-import HomePage from '../pages/HomePage';
+import {
+  faCaretDown,
+  faCaretRight,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons'
+import HomePage from '../pages/HomePage'
 
 export interface Route {
-  url: string;
-  title: string;
-  nav?: React.ComponentType<any>; // Optional component
-  subMenu?: Route[]; // Submenu for the main dropdown
-  dropdown?: Route[]; // Additional dropdown menu for 'Webb'
+  url: string
+  title: string
+  nav?: React.ComponentType<any>
+  subMenu?: Route[]
+  dropdown?: Route[]
+  icon?: IconDefinition
 }
 
 export const navRoutes: Route[] = [
@@ -24,10 +30,12 @@ export const navRoutes: Route[] = [
   {
     title: 'Projekt',
     url: '/',
+    icon: faCaretDown,
     subMenu: [
       {
         title: 'Webb',
         url: '/web-dev',
+        icon: faCaretRight,
         subMenu: [
           {
             title: 'Frontend',
@@ -59,4 +67,4 @@ export const navRoutes: Route[] = [
     title: 'Kontakt',
     url: '/',
   },
-];
+]

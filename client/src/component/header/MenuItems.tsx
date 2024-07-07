@@ -1,39 +1,42 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import DropdownMenu from "./DropdownMenu"; // Adjust the import based on your directory structure
-import { Route } from "../../config/MenuItemsData"; // Adjust this import based on your data structure
+import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import DropdownMenu from './DropdownMenu' // Adjust the import based on your directory structure
+import { Route } from '../../config/MenuItemsData' // Adjust this import based on your data structure
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface MenuItemsProps {
-  items: Route;
-  depthLevel: number;
+  items: Route
+  depthLevel: number
 }
 
 const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false)
 
   const handleMouseEnter = () => {
-    setDropdown(true);
-  };
+    setDropdown(true)
+  }
 
   const handleMouseLeave = () => {
-    setDropdown(false);
-  };
+    setDropdown(false)
+  }
 
   return (
     <li
-      className="relative group"
+      className='relative group'
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {items.subMenu ? (
+      onMouseLeave={handleMouseLeave}>
+      {items.subMenu && items.subMenu.length > 0 ? (
         <>
           <button
-            type="button"
-            aria-haspopup="menu"
-            className={`px-4 py-4 font-title font-bold tracking-wider text-2xl text-white hover:text-gray-300`}
-            aria-expanded={dropdown ? "true" : "false"}
-          >
-            {items.title} {depthLevel > 0 ? <span>&raquo;</span> : <span />}
+            type='button'
+            className={`px-4 font-title tracking-wider text-2xl text-white hover:text-gray-300`}>
+            {items.title}{' '}
+            {items.icon && (
+              <FontAwesomeIcon
+                icon={items.icon}
+                className='ml-1 w-[0.5em] text-center'
+              />
+            )}
           </button>
           <DropdownMenu
             submenus={items.subMenu}
@@ -42,15 +45,16 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
           />
         </>
       ) : (
-        <NavLink
-          to={items.url}
-          className="mt-6 px-4 py-4 font-title tracking-wider text-2xl text-white hover:text-gray-300"
-        >
-          {items.title}
-        </NavLink>
+        <>
+          <NavLink
+            to={items.url}
+            className='mt-6 px-4 py-4 font-title tracking-wider text-2xl text-white hover:text-gray-300'>
+            {items.title}
+          </NavLink>
+        </>
       )}
     </li>
-  );
-};
+  )
+}
 
-export default MenuItems;
+export default MenuItems
