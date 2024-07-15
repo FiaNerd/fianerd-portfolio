@@ -1,25 +1,24 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useTheme } from '../context/ThemeContext'
+import ThemeContext from '../context/ThemeContext'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { useContext } from 'react'
 
 const ThemeSwitch = () => {
-  const { theme, toggleTheme } = useTheme()
+  const { currentTheme, toggleTheme } = useContext(ThemeContext)
 
   return (
-    <div
-      className={`flex flex-col ${
-        theme === 'dark' ? 'text-white' : 'text-dark'
-      }`}>
+    <div className={`flex flex-col `}>
       <button
-        onClick={toggleTheme}
+        data-testid='switch-theme-btn'
+        onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
         className='p-2 rounded-full focus:outline-none'>
         {/* Conditional rendering for the icon */}
         <FontAwesomeIcon
-          icon={theme === 'dark' ? faSun : faMoon}
+          icon={currentTheme === 'light' ? faSun : faMoon}
           className='text-center'
         />
         <p className='text-sm'>
-          {theme === 'dark' ? 'ljust läge' : 'mörkt läge'}
+          {currentTheme === 'light' ? 'ljust läge' : 'mörkt läge'}
         </p>
       </button>
     </div>

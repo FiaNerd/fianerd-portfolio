@@ -15,7 +15,9 @@ body {
 }
 
 .dark {
-  --bg-color: #42383f;
+  --bg-color: #181417; 
+  /* --bg-color: #241e22;  */
+  /* --bg-color: #42383f; */
   --text-color: #efe5df;
 }
 
