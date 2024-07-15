@@ -34,7 +34,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
             {items.icon && (
               <FontAwesomeIcon
                 icon={items.icon}
-                className='ml-1 w-[0.5em] text-center'
+                className='ml-1 h-[0.8em] text-center'
               />
             )}
           </button>

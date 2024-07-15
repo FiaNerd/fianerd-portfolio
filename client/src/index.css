@@ -2,12 +2,21 @@
 @import url('https://use.typekit.net/bwg5bhb.css');
 
 body {
-  /* font-family: 'quiroh', sans-serif;  */
   font-family: 'montserrat', sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* font-family: 'playfair-display', serif; */
-  /* font-family: "adapt-variable", sans-serif; */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+:root {
+  --bg-color: #efe5df;
+  --text-color: #42383f;
+}
+
+.dark {
+  --bg-color: #42383f;
+  --text-color: #efe5df;
 }
 
 @tailwind base;
