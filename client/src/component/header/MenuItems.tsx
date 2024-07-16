@@ -27,17 +27,17 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
       onMouseLeave={handleMouseLeave}>
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
-          <button
-            type='button'
-            className={`px-4 font-title tracking-wider text-2xl text-white hover:text-gray-300`}>
-            {items.title}{' '}
+          <NavLink
+            className={`px-4 text-xl font-bold text-white font-title tracking-wider hover:text-gray-300`}
+            to={items.url}>
+            {items.title.toLocaleUpperCase()}{' '}
             {items.icon && (
               <FontAwesomeIcon
                 icon={items.icon}
                 className='ml-1 h-[0.8em] text-center'
               />
             )}
-          </button>
+          </NavLink>
           <DropdownMenu
             submenus={items.subMenu}
             dropdown={dropdown}
@@ -48,8 +48,8 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
         <>
           <NavLink
             to={items.url}
-            className='mt-6 px-4 py-4 font-title tracking-wider text-2xl text-white hover:text-gray-300'>
-            {items.title}
+            className='mt-6 px-4 py-4 font-title tracking-wider text-xl font-bold text-white hover:text-gray-300'>
+            {items.title.toUpperCase()}
           </NavLink>
         </>
       )}

@@ -17,9 +17,9 @@ const ThemeSwitch = () => {
           icon={currentTheme === 'light' ? faSun : faMoon}
           className='text-center'
         />
-        <p className='text-sm'>
-          {currentTheme === 'light' ? 'ljust läge' : 'mörkt läge'}
-        </p>
+         {/* <p className='text-sm'> */}
+          {/* {currentTheme === 'light' ? 'ljust läge' : 'mörkt läge'} */}
+        {/* </p>  */}
       </button>
     </div>
   )

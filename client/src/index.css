@@ -4,21 +4,30 @@
 body {
   font-family: 'montserrat', sans-serif;
   font-weight: 400;
+  font-size: 1.125rem;
   font-style: normal;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
 
 :root {
-  --bg-color: #efe5df;
-  --text-color: #42383f;
+
+  --bg-color: #f6f0e9;
+  /* --bg-color: #e1dfdd; */
+  /* --bg-color: #efe5df; */
+  --text-color: #022530;
+  /* --text-color: #42383f; */
 }
 
 .dark {
-  --bg-color: #181417; 
+  /* --bg-color: #002C2F;  */
+  --bg-color: #022530; 
+  /* --bg-color: #3b1b2b;  */
+  /* --bg-color: #181417;  
   /* --bg-color: #241e22;  */
   /* --bg-color: #42383f; */
-  --text-color: #efe5df;
+  --text-color: #f6f0e9;
+  /* --text-color: #efe5df; */
 }
 
 @tailwind base;
