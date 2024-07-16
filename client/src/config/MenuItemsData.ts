@@ -28,7 +28,7 @@ export const navRoutes: Route[] = [
     url: '/',
   },
   {
-    title: 'Projekt',
+    title: 'Portfolio',
     url: '/',
     icon: faCaretDown,
     subMenu: [

@@ -19,7 +19,7 @@ const DropdownMenu = ({ submenus, dropdown, depthLevel}: DropdownMenuProps) => {
       } lg:absolute lg:min-w-[7rem] bg-dark-green lg:py-4 lg:shadow-md rounded-sm mb-4`}
     >
       {submenus.map((submenu, index) => (
-        <li key={index} className="relative">
+        <li key={index} className="relative mb-4">
           <MenuItems items={submenu} depthLevel={newDepthLevel} />
         </li>
       ))}
