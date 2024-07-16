@@ -20,6 +20,8 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
     setDropdown(false)
   }
 
+
+
   return (
     <li
       className='relative group'
@@ -33,8 +35,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
             {items.icon && (
               <FontAwesomeIcon
                 icon={items.icon}
-                className='ml-1 h-[0.8em] text-center'
-              />
+                className='ml-1 h-[0.8em] text-center'/>
             )}
           </button>
           <DropdownMenu
@@ -47,7 +48,8 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
         <>
           <NavLink
             to={items.url}
-            className='mt-6 px-4 py-4 font-title tracking-wider text-xl font-bold text-white hover:text-gray-300'>
+            className='mt-6 px-4 py-4 font-title tracking-wider text-xl font-bold text-white hover:text-gray-300'
+            >
             {items.title.toUpperCase()}
           </NavLink>
         </>

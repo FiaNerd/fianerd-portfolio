@@ -38,6 +38,10 @@ export const navRoutes: Route[] = [
         icon: faCaretRight,
         subMenu: [
           {
+            title: 'Alla projekt',
+            url: '/alla-projekt',
+          },
+          {
             title: 'Frontend',
             url: '/frontend',
           },

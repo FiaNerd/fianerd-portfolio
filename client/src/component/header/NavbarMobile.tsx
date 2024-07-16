@@ -6,18 +6,18 @@ import MenuItems from './MenuItems'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const NavbarMobile = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
   const ref = useRef(null)
 
-  useClickAway(ref, () => setIsOpen(false))
+  useClickAway(ref, () => setShowMenu(false))
 
   return (
     <div ref={ref} className='lg:hidden'>
       <div className='z-50'>
-        <Hamburger toggled={isOpen} size={40} toggle={setIsOpen} />
+        <Hamburger toggled={showMenu} size={40} toggle={setShowMenu} />
       </div>
       <AnimatePresence>
-        {isOpen && (
+        {showMenu && (
           <>
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
@@ -28,7 +28,7 @@ const NavbarMobile = () => {
                 damping: 20,
               }}
               exit={{ opacity: 0, x: -100 }}
-              className='fixed h-full bg-dark-green left-0 lg:shadow-4xl right-0 pt-5'>
+              className='fixed h-full bg-dark-green left-0 lg:shadow-4xl right-0 pt-12 lg:pt-5'>
               <ul className='grid gap-12'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems
