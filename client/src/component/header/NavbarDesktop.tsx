@@ -1,10 +1,10 @@
 import { navRoutes } from '../../config/MenuItemsData'
 import MenuItems from './MenuItems'
 
-const Navbar = () => {
+const NavbarDesktop = () => {
   return (
-    <nav className='bg-dark-green py-2 '>
-      <ul className='flex flex-row gap-12 justify-center'>
+    <nav className='bg-dark-green py-2'>
+      <ul className='hidden lg:flex lg:flex-row gap-12 justify-center'>
         {navRoutes.map((menu, index) => (
           <MenuItems
             key={index}
@@ -17,4 +17,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavbarDesktop

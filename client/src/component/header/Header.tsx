@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Navbar from './Navbar'
+import NavbarDesktop from './NavbarDesktop'
 import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import ThemeSwitch from '../ThemeSwitch'
+import NavbarMobile from './NavbarMobile'
 
 const Header = () => {
   return (
     <>
-      <header className="mb-8">
+      <header className='mb-8 md:mb-12'>
         <div className='font-title text-xl h-[5.4em] flex flex-row-4 items-center justify-between sticky'>
           <NavLink to={'/'} className='px-4'>
             <h1 className='text-5xl font-bold'>[ FIA NERD ]</h1>
@@ -16,12 +17,13 @@ const Header = () => {
             </p>
           </NavLink>
 
-           <Navbar />
+          <NavbarDesktop />
 
+          <NavbarMobile />
 
           <div className='flex gap-6 p-4'>
-             <ThemeSwitch /> 
-            
+            <ThemeSwitch />
+
             <div className='flex flex-row gap-2 items-center'>
               <FontAwesomeIcon icon={faGlobe} className='text-center' />
               <div className='flex flex-row items-center'>

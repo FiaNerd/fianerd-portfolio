@@ -24,7 +24,8 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
     <li
       className='relative group'
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
+      onMouseLeave={handleMouseLeave}
+      >
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
           <NavLink

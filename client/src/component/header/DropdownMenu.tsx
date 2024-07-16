@@ -16,7 +16,7 @@ const DropdownMenu = ({ submenus, dropdown, depthLevel}: DropdownMenuProps) => {
     <ul
       className={`dropdown ${dropdownClass} ${dropdown ? "block" : "hidden"} ${
         newDepthLevel > 1 ? "left-full top-0" : "left-0 top-full"
-      } absolute min-w-[7rem] bg-dark-green py-4 shadow-md rounded-sm`}
+      } lg:absolute lg:min-w-[7rem] bg-dark-green lg:py-4 lg:shadow-md rounded-sm mb-4`}
     >
       {submenus.map((submenu, index) => (
         <li key={index} className="relative">
