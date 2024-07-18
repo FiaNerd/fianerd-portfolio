@@ -3,19 +3,33 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
+      // LIGHT
       white: '#efe5df',
-      black: '#000000',
-      purple: '#544758',
-      pink: '#6c1a51',
+      black: '#1c2226',
+      'dark-red': '#2f1628',
+      pink: '#ffaaab',
+      'coral-pink': '#ff5e6c',
+      yellow: '#feb300',
+
+      // DARK
+
+      // purple: '#544758',
+
+      // pink: '#6c1a51',
       // mainText: '#42383f',
       dark: '#42383f',
-      red: '#420202',
-      'dark-red': '#230c0a',
+
+      // red: '#420202',
+      // 'dark-red': '#2e192c',
+      // 'dark-red': '#230c0a',
       'dark-green': '#022530',
     },
     fontFamily: {
-      title: ['bebas-neue-pro', 'sans-serif'],
-      'sub-title': ['playfair-display', 'serif'],
+      heading: ['playfair-display', 'serif'],
+      'sub-heading': ['merriweather', 'sans-serif'],
+      paragraph: ['source-sans-pro', 'sans-serif'],
+      // 'sub-heading': ['bebas-neue-pro', 'sans-serif'],
+      // 'sub-heading': ['cormorant-garamond', 'serif'],
     },
     extend: {},
   },

@@ -9,10 +9,10 @@ const Header = () => {
   return (
     <>
       <header className='mb-8 md:mb-12'>
-        <div className='font-title text-xl h-[5.4em] flex flex-row-4 items-center justify-between sticky'>
+        <div className='font-heading text-xl h-[5.4em] flex flex-row-4 items-center justify-between sticky'>
           <NavLink to={'/'} className='px-4'>
             <h1 className='text-5xl font-bold'>[ FIA NERD ]</h1>
-            <p className='font-sub-title font-bold tracking-wider'>
+            <p className='font-sub-heading font-bold tracking-wider'>
               Sofia Mattiasson
             </p>
           </NavLink>
