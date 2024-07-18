@@ -33,8 +33,11 @@ h2 {
 }
 
 body.dark {
-  --bg-color:radial-gradient(ellipse at 48.1% -49.6%, #000000 35%, #1b063c 100.2%);
-
+  --bg-color: radial-gradient(
+    ellipse at 48.1% -49.6%,
+    #000000 35%,
+    #1b063c 100.2%
+  );
 
   /* --bg-color: #14031c;  */
   /* --bg-color: #1c0d0b;  */
