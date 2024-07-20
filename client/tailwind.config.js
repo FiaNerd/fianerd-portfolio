@@ -10,19 +10,18 @@ export default {
       pink: '#ffaaab',
       'coral-pink': '#ff5e6c',
       yellow: '#feb300',
-
+      
       // DARK
+      dark: '#42383f',
+      'dark-purple': '#1b063c',
 
       // purple: '#544758',
-
+      // 'dark-green': '#022530',
       // pink: '#6c1a51',
       // mainText: '#42383f',
-      dark: '#42383f',
-
       // red: '#420202',
       // 'dark-red': '#2e192c',
       // 'dark-red': '#230c0a',
-      'dark-green': '#022530',
     },
     fontFamily: {
       heading: ['playfair-display', 'serif'],

@@ -8,20 +8,18 @@ import NavbarMobile from './NavbarMobile'
 const Header = () => {
   return (
     <>
-      <header className='mb-8 md:mb-12'>
-        <div className='font-heading text-xl h-[5.4em] flex flex-row-4 items-center justify-between sticky'>
+      <header className='mb-8 md:mb-12 h-[5.4em] px-4 py-2'>
+        <div className='font-heading text-xl  flex flex-row-4 items-center justify-between sticky'>
           <NavLink to={'/'} className='px-4'>
-            <h1 className='text-5xl font-bold'>[ FIA NERD ]</h1>
-            <p className='font-sub-heading font-bold tracking-wider'>
+            <h1 className='text-lg md:text-5xl font-bold'>[ FIA NERD ]</h1>
+            <p className='text-base font-sub-heading md:font-bold tracking-wider'>
               Sofia Mattiasson
             </p>
           </NavLink>
 
           <NavbarDesktop />
 
-          <NavbarMobile />
-
-          <div className='flex gap-6 p-4'>
+          <div className=' flex gap-6'>
             <ThemeSwitch />
 
             <div className='flex flex-row gap-2 items-center'>
@@ -35,6 +33,9 @@ const Header = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className='flex justify-end lg:hidden w-full'>
+          <NavbarMobile />
         </div>
       </header>
     </>
