@@ -1,15 +1,23 @@
-import { useRef, useState } from 'react'
-import { Sling as Hamburger } from 'hamburger-react'
-import { useClickAway } from 'react-use'
-import { navRoutes } from '../../config/MenuItemsData'
-import MenuItems from './MenuItems'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useRef, useState, useEffect } from 'react';
+import { Sling as Hamburger } from 'hamburger-react';
+import { useClickAway } from 'react-use';
+import { navRoutes } from '../../config/MenuItemsData';
+import MenuItems from './MenuItems';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useContext } from 'react';
+import ThemeContext from '../../context/ThemeContext';
 
 const NavbarMobile = () => {
-  const [showMenu, setShowMenu] = useState(false)
-  const ref = useRef(null)
+  const [showMenu, setShowMenu] = useState(false);
+  const ref = useRef(null);
 
-  useClickAway(ref, () => setShowMenu(false))
+  const { currentTheme } = useContext(ThemeContext);
+
+  useClickAway(ref, () => setShowMenu(false));
+
+  useEffect(() => {
+    document.body.classList.toggle('dark', currentTheme === 'dark');
+  }, [currentTheme]);
 
   return (
     <div ref={ref} className='lg:hidden'>
@@ -28,8 +36,8 @@ const NavbarMobile = () => {
                 damping: 20,
               }}
               exit={{ opacity: 0, x: -100 }}
-              className='mobile-menu fixed h-full left-0 lg:shadow-4xl right-0 pt-12 lg:pt-5'>
-              <ul className='grid gap-12'>
+              className='mobile-menu fixed h-full left-0 lg:shadow-4xl right-0 pt-6 pb-12 lg:pt-5 overflow-y-auto'>
+              <ul className='grid gap-6'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems
                     key={index}
@@ -43,7 +51,7 @@ const NavbarMobile = () => {
         )}
       </AnimatePresence>
     </div>
-  )
-}
+  );
+};
 
-export default NavbarMobile
+export default NavbarMobile;

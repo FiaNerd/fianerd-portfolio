@@ -25,7 +25,7 @@ const Header = () => {
             <div className='flex flex-row gap-2 items-center'>
               <FontAwesomeIcon icon={faGlobe} className='text-center' />
               <div className='flex flex-row items-center'>
-                <p className='text-md'>SV</p>
+                <p className='text-base'>SV</p>
                 <FontAwesomeIcon
                   icon={faCaretDown}
                   className='ml-1 h-[0.8em] text-center font-bold'

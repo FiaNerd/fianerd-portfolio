@@ -64,6 +64,14 @@ body.dark {
 .mobile-menu {
   background: var(--menu-bg-color);
   color: var(--menu-text-color);
+  overflow-y: auto;
+}
+
+.dropdown {
+  background: var(--menu-bg-color);
+  color: var(--menu-text-color);
+  white-space: nowrap; /* Prevent text from wrapping */
+  width: auto; /* Allow width to adapt to content */
 }
 
 @tailwind base;
