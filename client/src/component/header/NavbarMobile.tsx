@@ -1,10 +1,9 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useContext } from 'react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { useClickAway } from 'react-use';
 import { navRoutes } from '../../config/MenuItemsData';
 import MenuItems from './MenuItems';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useContext } from 'react';
 import ThemeContext from '../../context/ThemeContext';
 
 const NavbarMobile = () => {
@@ -26,17 +25,24 @@ const NavbarMobile = () => {
       </div>
       <AnimatePresence>
         {showMenu && (
-          <>
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{
-                type: 'spring',
-                stiffness: 260,
-                damping: 20,
-              }}
-              exit={{ opacity: 0, x: -100 }}
-              className='mobile-menu fixed h-full left-0 lg:shadow-4xl right-0 pt-6 pb-12 lg:pt-5 overflow-y-auto'>
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 260,
+              damping: 20,
+            }}
+            exit={{ opacity: 0, x: -100 }}
+            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-6 pb-12 lg:pt-5 flex flex-col'
+          >
+            <button
+              onClick={() => setShowMenu(false)}
+              className='absolute top-4 right-4 z-50 text-white bg-black p-2 rounded-full'
+            >
+              X
+            </button>
+            <div className="flex-grow overflow-y-auto">
               <ul className='grid gap-6'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems
@@ -46,8 +52,12 @@ const NavbarMobile = () => {
                   />
                 ))}
               </ul>
-            </motion.div>
-          </>
+            </div>
+            <div className="flex-shrink-0 flex flex-row gap-4 justify-center p-4 bg-gray-100">
+              <p>Hej</p>
+              <p>Hej</p>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

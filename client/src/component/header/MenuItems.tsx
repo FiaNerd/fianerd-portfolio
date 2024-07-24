@@ -20,8 +20,6 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
     setDropdown(false)
   }
 
-
-
   return (
     <li
       className='relative group'
@@ -31,7 +29,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
         <>
           <button
             className={`px-4 text-xl font-bold font-heading tracking-wider`}>
-            {items.title.toLocaleUpperCase()}{' '}
+            {items.title.toUpperCase()}{' '}
             {items.icon && (
               <FontAwesomeIcon
                 icon={items.icon}
