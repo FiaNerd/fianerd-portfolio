@@ -28,7 +28,7 @@ const NavbarMobile = () => {
                 damping: 20,
               }}
               exit={{ opacity: 0, x: -100 }}
-              className='fixed h-full bg-dark-purple left-0 lg:shadow-4xl right-0 pt-12 lg:pt-5'>
+              className='mobile-menu fixed h-full left-0 lg:shadow-4xl right-0 pt-12 lg:pt-5'>
               <ul className='grid gap-12'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems

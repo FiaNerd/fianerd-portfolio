@@ -30,7 +30,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
           <button
-            className={`px-4 text-xl font-bold text-white font-title tracking-wider hover:text-gray-300`}>
+            className={`px-4 text-xl font-bold font-heading tracking-wider hover:text-gray-300`}>
             {items.title.toLocaleUpperCase()}{' '}
             {items.icon && (
               <FontAwesomeIcon
@@ -48,7 +48,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
         <>
           <NavLink
             to={items.url}
-            className='mt-6 px-4 py-4 font-title tracking-wider text-xl font-bold text-white hover:text-gray-300'
+            className='mt-6 px-4 py-4 font-heading tracking-wider text-xl font-bold hover:text-gray-300'
             >
             {items.title.toUpperCase()}
           </NavLink>

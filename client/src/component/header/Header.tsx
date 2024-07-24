@@ -9,9 +9,9 @@ const Header = () => {
   return (
     <>
       <header className='mb-8 md:mb-12 h-[5.4em] px-4 py-2'>
-        <div className='font-heading text-xl  flex flex-row-4 items-center justify-between sticky'>
-          <NavLink to={'/'} className='px-4'>
-            <h1 className='text-lg md:text-5xl font-bold'>[ FIA NERD ]</h1>
+        <div className='font-heading flex flex-row items-center justify-between sticky'>
+          <NavLink to={'/'} className='flex flex-col items-center px-4'>
+            <h1 className='text-lg md:text-4xl font-bold'>[ FIA NERD ]</h1>
             <p className='text-base font-sub-heading md:font-bold tracking-wider'>
               Sofia Mattiasson
             </p>

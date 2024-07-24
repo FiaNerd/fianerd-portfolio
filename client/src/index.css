@@ -30,23 +30,43 @@ h2 {
   --bg-color: #fff5d7;
   --h1-color: #2f1628;
   --text-color: #1c2226;
+  --menu-bg-color: "#ffffff";
+  --menu-text-color: "#000000";
 }
 
+:root {
+  --bg-color: #fff5d7;
+  --h1-color: #2f1628;
+  --text-color: #1c2226;
+  --menu-bg-color: #fff5d7;
+  --menu-text-color: #2f1628;
+}
+
+/* Dark mode variables */
 body.dark {
   --bg-color: radial-gradient(
     ellipse at 48.1% -49.6%,
     #000000 35%,
     #1b063c 100.2%
   );
-
+  --h1-color: rgb(184, 140, 21);
+  --text-color: #f6f0e9;
+  --menu-bg-color: #1b063c;
+  --menu-text-color: #ffffff;
   /* --bg-color: #14031c;  */
   /* --bg-color: #1c0d0b;  */
   /* --bg-color: #2e1827;  */
   /* --bg-color: #0f0216;  */
-  --text-color: #f6f0e9;
-  --h1-color: rgb(184, 140, 21);
+}
+
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  background: var(--menu-bg-color);
+  color: var(--menu-text-color);
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
