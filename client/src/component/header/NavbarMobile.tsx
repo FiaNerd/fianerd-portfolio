@@ -5,6 +5,8 @@ import { navRoutes } from '../../config/MenuItemsData'
 import MenuItems from './MenuItems'
 import { AnimatePresence, motion } from 'framer-motion'
 import ThemeContext from '../../context/ThemeContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -21,7 +23,7 @@ const NavbarMobile = () => {
   return (
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
-      <div className='absolute z-50' style={{ right: '10px' }}> 
+      <div className='absolute z-50' style={{ right: '0.63em' }}> 
         <Hamburger toggled={showMenu} size={40} toggle={setShowMenu} />
       </div>
 
@@ -36,7 +38,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-12 lg:pt-5 flex flex-col z-40'>
+            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col z-40'>
 
             <div className='flex-grow overflow-y-auto mt-[4em]'>
               <ul className='grid gap-6'>
@@ -50,8 +52,8 @@ const NavbarMobile = () => {
               </ul>
             </div>
             <div className='flex-shrink-0 flex flex-row gap-4 justify-center p-4 bg-gray-100'>
-              <p>Hej</p>
-              <p>Hej</p>
+            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faLinkedin} />
             </div>
           </motion.div>
         )}

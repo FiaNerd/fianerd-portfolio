@@ -28,7 +28,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
           <button
-            className={`px-4 text-xl font-bold font-heading tracking-wider`}>
+            className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
             {items.title.toUpperCase()}{' '}
             {items.icon && (
               <FontAwesomeIcon
@@ -46,7 +46,7 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
         <>
           <NavLink
             to={items.url}
-            className='mt-6 px-4 py-4 font-heading tracking-wider text-xl font-bold hover:yellow'
+            className='btn-menu mt-6 px-4 py-4 font-heading tracking-wider text-xl'
             >
             {items.title.toUpperCase()}
           </NavLink>

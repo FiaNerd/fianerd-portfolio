@@ -30,16 +30,9 @@ h2 {
   --bg-color: #fff5d7;
   --h1-color: #2f1628;
   --text-color: #1c2226;
-  --menu-bg-color: '#ffffff';
-  --menu-text-color: '#000000';
-}
-
-:root {
-  --bg-color: #fff5d7;
-  --h1-color: #2f1628;
-  --text-color: #1c2226;
   --menu-bg-color: #fff5d7;
   --menu-text-color: #2f1628;
+  --menu-hover-color: #ff5e6c;
 }
 
 /* Dark mode variables */
@@ -53,13 +46,16 @@ body.dark {
   --text-color: #f6f0e9;
   --menu-bg-color: #1b063c;
   --menu-text-color: #ffffff;
-  /* --bg-color: #14031c;  */
-  /* --bg-color: #1c0d0b;  */
-  /* --bg-color: #2e1827;  */
-  /* --bg-color: #0f0216;  */
+  --menu-hover-color: rgb(184, 140, 21);
 }
 
+
+
 /* Mobile Menu Styles */
+.btn-menu:hover{
+  color:  var(--menu-hover-color);
+}
+
 .mobile-menu {
   background: var(--menu-bg-color);
   color: var(--menu-text-color);
@@ -67,8 +63,8 @@ body.dark {
 }
 
 .mobile-menu button {
-  top: 16px;
-  right: 16px;
+  top: 1em;
+  right: 1em;
   z-index: 50;
 }
 
