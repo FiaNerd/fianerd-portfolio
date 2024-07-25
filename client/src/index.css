@@ -30,8 +30,8 @@ h2 {
   --bg-color: #fff5d7;
   --h1-color: #2f1628;
   --text-color: #1c2226;
-  --menu-bg-color: "#ffffff";
-  --menu-text-color: "#000000";
+  --menu-bg-color: '#ffffff';
+  --menu-text-color: '#000000';
 }
 
 :root {
@@ -59,7 +59,6 @@ body.dark {
   /* --bg-color: #0f0216;  */
 }
 
-
 /* Mobile Menu Styles */
 .mobile-menu {
   background: var(--menu-bg-color);
@@ -69,19 +68,17 @@ body.dark {
 
 .mobile-menu button {
   top: 16px;
-  right: 16px; 
+  right: 16px;
   z-index: 50;
 }
-
 
 .dropdown {
   background: var(--menu-bg-color);
   color: var(--menu-text-color);
   white-space: nowrap;
-  width: auto; /* Allow width to adapt to content */
+  width: auto;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
