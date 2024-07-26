@@ -45,7 +45,7 @@ body.dark {
   /* --h1-color: #747336; */
   /* --h1-color: #A62F03; */
   /* --h1-color: #F26716; */
-  --h1-color: #cc842b;
+  --h1-color: #f3c36f;
   --text-color: #fff5d7;
   /* --menu-bg-color: #2b161b; */
   --menu-text-color: #fff5d7;
@@ -72,7 +72,6 @@ body.dark {
 
 .dropdown {
   background: var(--menu-bg-color);
-  /* background: var(--menu-bg-color); */
   color: var(--menu-text-color);
   white-space: nowrap;
   width: auto;

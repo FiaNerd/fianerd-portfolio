@@ -10,7 +10,7 @@ export default {
       pink: '#ffaaab',
       'coral-pink': '#ff5e6c',
       yellow: '#feb300',
-      
+
       // DARK
       dark: '#42383f',
       'dark-purple': '#1b063c',
@@ -29,6 +29,14 @@ export default {
       paragraph: ['source-sans-pro', 'sans-serif'],
       // 'sub-heading': ['bebas-neue-pro', 'sans-serif'],
       // 'sub-heading': ['cormorant-garamond', 'serif'],
+    },
+    breakpoints: {
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+      xxl: '1440px',
+      custom: '703px',
     },
     extend: {},
   },
