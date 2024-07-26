@@ -40,16 +40,16 @@ body.dark {
   --bg-color: radial-gradient(
     ellipse at 48.1% -49.6%,
     #000000 30%,
-    #260101 100.2% /* #1b063c 100.2% */
+    #1b063c 100.2% /* #1b063c 100.2% */
   );
   /* --h1-color: #747336; */
   /* --h1-color: #A62F03; */
   /* --h1-color: #F26716; */
-  --h1-color: #CC842B;
+  --h1-color: #cc842b;
   --text-color: #fff5d7;
-  --menu-bg-color: #2b161b;
-  --menu-text-color: #ffffff;
-  /* --menu-bg-color: #1b063c; */
+  /* --menu-bg-color: #2b161b; */
+  --menu-text-color: #fff5d7;
+  --menu-bg-color: #1b063c;
   --menu-hover-color: #e7a66f;
 }
 
