@@ -8,6 +8,7 @@ import ThemeContext from '../../context/ThemeContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { NavLink } from 'react-router-dom'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -52,14 +53,18 @@ const NavbarMobile = () => {
                 ))}
               </ul>
             </div>
-            <div className='flex-shrink-0 flex flex-row gap-4 justify-center p-4 bg-gray-100'>
-            <NavLink to="https://github.com/FiaNerd" target='_blank'>
-              <FontAwesomeIcon icon={faGithub} />
-            </NavLink>
-            <NavLink to="https://www.linkedin.com/in/sofia-mattiasson-fianerd/" target="_blank">
-             <FontAwesomeIcon icon={faLinkedin} />
-            </NavLink>
+            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 bg-gray-100 border-t'>
+              <NavLink to="https://github.com/FiaNerd" target='_blank'>
+                <FontAwesomeIcon icon={faGithub} />
+              </NavLink>
+              <NavLink to="https://www.linkedin.com/in/sofia-mattiasson-fianerd/" target="_blank">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </NavLink>
+                <FontAwesomeIcon icon={faEnvelope} />
             </div>
+            <p className='font-heading text-sm mx-auto'>
+            &copy; FiaNerd | Sofia Mattiasson
+          </p>
           </motion.div>
         )}
       </AnimatePresence>
