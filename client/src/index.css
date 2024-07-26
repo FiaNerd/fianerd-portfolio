@@ -39,21 +39,23 @@ h2 {
 body.dark {
   --bg-color: radial-gradient(
     ellipse at 48.1% -49.6%,
-    #000000 35%,
-    #1b063c 100.2%
+    #000000 30%,
+    #260101 100.2% /* #1b063c 100.2% */
   );
-  --h1-color: rgb(184, 140, 21);
-  --text-color: #f6f0e9;
-  --menu-bg-color: #1b063c;
+  /* --h1-color: #747336; */
+  /* --h1-color: #A62F03; */
+  /* --h1-color: #F26716; */
+  --h1-color: #CC842B;
+  --text-color: #fff5d7;
+  --menu-bg-color: #2b161b;
   --menu-text-color: #ffffff;
-  --menu-hover-color: rgb(184, 140, 21);
+  /* --menu-bg-color: #1b063c; */
+  --menu-hover-color: #e7a66f;
 }
 
-
-
 /* Mobile Menu Styles */
-.btn-menu:hover{
-  color:  var(--menu-hover-color);
+.btn-menu:hover {
+  color: var(--menu-hover-color);
 }
 
 .mobile-menu {
@@ -70,6 +72,7 @@ body.dark {
 
 .dropdown {
   background: var(--menu-bg-color);
+  /* background: var(--menu-bg-color); */
   color: var(--menu-text-color);
   white-space: nowrap;
   width: auto;
