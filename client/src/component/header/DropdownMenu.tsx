@@ -28,7 +28,7 @@ const DropdownMenu = ({
           <MenuItems
             items={submenu}
             depthLevel={newDepthLevel}
-            closeMenu={() => closeMenu}
+            closeMenu={closeMenu}
           />
         </li>
       ))}

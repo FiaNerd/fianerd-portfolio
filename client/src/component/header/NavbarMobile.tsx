@@ -49,7 +49,7 @@ const NavbarMobile = () => {
                     key={index}
                     items={{ ...menu, subMenu: menu.subMenu || [] }}
                     depthLevel={0}
-                    closeMenu={() => showMenu(false)}
+                    closeMenu={() => setShowMenu(false)}
                   />
                 ))}
               </ul>
