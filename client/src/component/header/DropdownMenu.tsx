@@ -22,12 +22,13 @@ const DropdownMenu = ({
       className={`dropdown ${dropdownClass} ${dropdown ? 'block' : 'hidden'} ${
         newDepthLevel > 1 ? 'left-full top-0' : 'left-0 top-full'
       } lg:absolute no-wrap lg:py-4 lg:shadow-md rounded-sm mt-4 lg:mt-0 ml-6 lg:ml-0`}>
+        
       {submenus.map((submenu, index) => (
         <li key={index} className='relative mb-4'>
           <MenuItems
             items={submenu}
             depthLevel={newDepthLevel}
-            closeMenu={closeMenu}
+            closeMenu={() => closeMenu}
           />
         </li>
       ))}
