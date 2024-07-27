@@ -53,7 +53,7 @@ const NavbarMobile = () => {
                 ))}
               </ul>
             </div>
-            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 bg-gray-100 border-t'>
+            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'>
               <NavLink to="https://github.com/FiaNerd" target='_blank'>
                 <FontAwesomeIcon icon={faGithub} />
               </NavLink>
