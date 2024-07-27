@@ -1,74 +1,72 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/config/Navigation.ts
-
 import {
   faCaretDown,
   faCaretRight,
   IconDefinition,
-} from '@fortawesome/free-solid-svg-icons'
-import HomePage from '../pages/HomePage'
+} from '@fortawesome/free-solid-svg-icons';
+import HomePage from '../pages/HomePage';
 
 export interface Route {
-  url: string
-  title: string
-  nav?: React.ComponentType<any>
-  subMenu?: Route[]
-  dropdown?: Route[]
-  icon?: IconDefinition
+  url: string;
+  title: string; // This will be a translation key now
+  nav?: React.ComponentType<any>;
+  subMenu?: Route[];
+  dropdown?: Route[];
+  icon?: IconDefinition;
 }
 
 export const navRoutes: Route[] = [
   {
-    title: 'Hem',
+    title: 'home', // Use translation key
     url: '/',
     nav: HomePage,
   },
   {
-    title: 'Om mig',
+    title: 'about', // Use translation key
     url: '/',
   },
   {
-    title: 'Portfolio',
+    title: 'portfolio', // Use translation key
     url: '/',
     icon: faCaretDown,
     subMenu: [
       {
-        title: 'Webb',
+        title: 'webb', // Use translation key
         url: '/web-dev',
         icon: faCaretRight,
         subMenu: [
           {
-            title: 'Alla projekt',
+            title: 'alla_projekt', // Use translation key
             url: '/alla-projekt',
           },
           {
-            title: 'Frontend',
+            title: 'frontend', // Use translation key
             url: '/frontend',
           },
           {
-            title: 'Backend',
+            title: 'backend', // Use translation key
             url: '/backend',
           },
           {
-            title: 'Fullstack',
+            title: 'fullstack', // Use translation key
             url: '/fullstack',
           },
         ],
         dropdown: [
           {
-            title: 'Extra Menu',
+            title: 'extra_menu', // You need to add this key to i18n if you haven't
             url: '/extra-menu',
           },
         ],
       },
       {
-        title: 'Grafisk',
+        title: 'grafisk', // Use translation key
         url: '/graphic-design',
       },
     ],
   },
   {
-    title: 'Kontakt',
+    title: 'kontakt', // Use translation key
     url: '/',
   },
-]
+];

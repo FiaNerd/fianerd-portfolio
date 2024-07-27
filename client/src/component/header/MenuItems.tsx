@@ -1,8 +1,10 @@
+// src/components/menu/MenuItems.tsx
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import DropdownMenu from './DropdownMenu'; // Adjust the import based on your directory structure
-import { Route } from '../../config/MenuItemsData'; // Adjust this import based on your data structure
+import DropdownMenu from './DropdownMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
+import { Route } from '../../config/MenuItemsData';
 
 interface MenuItemsProps {
   items: Route;
@@ -10,8 +12,9 @@ interface MenuItemsProps {
   closeMenu: () => void;
 }
 
-const MenuItems = ({ items, depthLevel, closeMenu }: MenuItemsProps) => {
+const MenuItems: React.FC<MenuItemsProps> = ({ items, depthLevel, closeMenu }) => {
   const [dropdown, setDropdown] = useState(false);
+  const { t } = useTranslation();
 
   const handleMouseEnter = () => {
     setDropdown(true);
@@ -28,9 +31,8 @@ const MenuItems = ({ items, depthLevel, closeMenu }: MenuItemsProps) => {
       onMouseLeave={handleMouseLeave}>
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
-          <button
-            className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
-            {items.title.toUpperCase()}{' '}
+          <button className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
+            {t(items.title)}{' '}
             {items.icon && (
               <FontAwesomeIcon
                 icon={items.icon}
@@ -49,7 +51,7 @@ const MenuItems = ({ items, depthLevel, closeMenu }: MenuItemsProps) => {
           to={items.url}
           className='btn-menu mt-6 px-4 py-4 font-heading tracking-wider text-xl'
           onClick={closeMenu}>
-          {items.title.toUpperCase()}
+          {t(items.title)}
         </NavLink>
       )}
     </li>

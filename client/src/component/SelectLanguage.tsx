@@ -1,17 +1,24 @@
+// src/components/SelectLanguage.tsx
+import React from 'react';
 import { LANGUAGES } from "../constants/Languages";
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useTranslation } from 'react-i18next';
 
 const SelectLanguage = () => {
-  return (
-    <select defaultValue={"sv"}> 
-        {LANGUAGES.map(({ code, label }) => (
-          <option key={code} value={code}>
-            {label}
-          </option>
-        ))}
-    </select>
-  )
-}
+  const { i18n } = useTranslation();
 
-export default SelectLanguage
+  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
+  return (
+    <select defaultValue={i18n.language} onChange={handleChangeLanguage} className='select-language font-bold text-sm'>
+      {LANGUAGES.map(({ code, label }) => (
+        <option key={code} value={code}>
+          {label}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+export default SelectLanguage;

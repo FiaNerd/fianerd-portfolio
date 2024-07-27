@@ -1,3 +1,4 @@
+// src/components/header/Header.tsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavbarDesktop from './NavbarDesktop';
 import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -5,12 +6,14 @@ import { NavLink } from 'react-router-dom';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarMobile from './NavbarMobile';
 import SelectLanguage from '../SelectLanguage';
+import { useTranslation } from 'react-i18next';
 
 // Function to handle active class
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getClassName = ({ isActive }: any) => `link ${isActive ? 'active' : ''}`;
 
 const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <header className='mb-8 md:mb-12 h-[3.4em] py-2 lg:border-b'>
