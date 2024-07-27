@@ -26,8 +26,8 @@ const NavbarMobile = () => {
   return (
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
-      <div className='absolute z-50' style={{ right: '0em' }}>
-        <Hamburger toggled={showMenu} size={35} toggle={setShowMenu} />
+      <div className='absolute z-50 mt-4' style={{ right: '0em' }}>
+        <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
       </div>
 
       <AnimatePresence>
@@ -41,7 +41,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col z-60'>
+            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
             <div className='flex-grow overflow-y-auto mt-[4em]'>
               <ul className='grid gap-6'>
                 {navRoutes.map((menu, index) => (
@@ -54,7 +54,7 @@ const NavbarMobile = () => {
                 ))}
               </ul>
             </div>
-            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'>
+            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 '>
               <NavLink to='https://github.com/FiaNerd' target='_blank' >
                 <FontAwesomeIcon icon={faGithub} />
               </NavLink>

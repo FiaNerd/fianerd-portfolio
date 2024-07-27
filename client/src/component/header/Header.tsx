@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavbarDesktop from './NavbarDesktop';
-import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarMobile from './NavbarMobile';
@@ -24,21 +24,17 @@ const Header = () => {
 
         <NavbarDesktop />
 
-        <div className='flex items-center gap-6'>
+        <div className='flex items-center gap-2 lg:gap-6 text-sm'>
           <ThemeSwitch />
           <div className='relative flex items-center'>
             <FontAwesomeIcon icon={faGlobe} className='text-center' />
             <SelectLanguage />
-            <FontAwesomeIcon
-              icon={faCaretDown}
-              className='ml-1 h-[0.8em] text-center font-bold'
-            />
+            <NavbarMobile />
           </div>
+      
         </div>
       </nav>
-      <div className='flex justify-end lg:hidden w-full'>
-        <NavbarMobile />
-      </div>
+
     </header>
   );
 };
