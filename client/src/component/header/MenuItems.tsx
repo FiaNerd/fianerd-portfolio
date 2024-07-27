@@ -1,24 +1,25 @@
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
-import DropdownMenu from './DropdownMenu' // Adjust the import based on your directory structure
-import { Route } from '../../config/MenuItemsData' // Adjust this import based on your data structure
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import DropdownMenu from './DropdownMenu'; // Adjust the import based on your directory structure
+import { Route } from '../../config/MenuItemsData'; // Adjust this import based on your data structure
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface MenuItemsProps {
-  items: Route
-  depthLevel: number
+  items: Route;
+  depthLevel: number;
+  closeMenu: () => void;
 }
 
-const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
-  const [dropdown, setDropdown] = useState(false)
+const MenuItems = ({ items, depthLevel, closeMenu }: MenuItemsProps) => {
+  const [dropdown, setDropdown] = useState(false);
 
   const handleMouseEnter = () => {
-    setDropdown(true)
-  }
+    setDropdown(true);
+  };
 
   const handleMouseLeave = () => {
-    setDropdown(false)
-  }
+    setDropdown(false);
+  };
 
   return (
     <li
@@ -40,20 +41,19 @@ const MenuItems = ({ items, depthLevel }: MenuItemsProps) => {
             submenus={items.subMenu}
             dropdown={dropdown}
             depthLevel={depthLevel}
+            closeMenu={closeMenu}
           />
         </>
       ) : (
-        <>
-          <NavLink
-            to={items.url}
-            className='btn-menu mt-6 px-4 py-4 font-heading tracking-wider text-xl'
-            >
-            {items.title.toUpperCase()}
-          </NavLink>
-        </>
+        <NavLink
+          to={items.url}
+          className='btn-menu mt-6 px-4 py-4 font-heading tracking-wider text-xl'
+          onClick={closeMenu}>
+          {items.title.toUpperCase()}
+        </NavLink>
       )}
     </li>
-  )
-}
+  );
+};
 
-export default MenuItems
+export default MenuItems;

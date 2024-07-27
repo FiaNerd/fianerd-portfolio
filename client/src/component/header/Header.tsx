@@ -8,7 +8,7 @@ import NavbarMobile from './NavbarMobile'
 const Header = () => {
   return (
     <>
-      <header className='mb-8 md:mb-12 h-[3.4em] py-2 border-b'>
+      <header className='mb-8 md:mb-12 h-[3.4em] py-2 lg:border-b'>
         <div className='font-heading flex flex-row items-center justify-between sticky'>
           <NavLink to={'/'} className='flex flex-col'>
             <h1 className='text-lg md:text-4xl font-bold'>[ FIA NERD ]</h1>

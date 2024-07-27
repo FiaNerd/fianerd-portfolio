@@ -16,6 +16,7 @@ const NavbarMobile = () => {
 
   const { currentTheme } = useContext(ThemeContext)
 
+
   useClickAway(ref, () => setShowMenu(false))
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const NavbarMobile = () => {
   return (
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
-      <div className='absolute z-50' style={{ right: '0.63em' }}> 
+      <div className='absolute z-50' style={{ right: '0.63em' }}>
         <Hamburger toggled={showMenu} size={40} toggle={setShowMenu} />
       </div>
 
@@ -41,7 +42,6 @@ const NavbarMobile = () => {
               damping: 20,
             }}
             className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col z-40'>
-
             <div className='flex-grow overflow-y-auto mt-[4em]'>
               <ul className='grid gap-6'>
                 {navRoutes.map((menu, index) => (
@@ -49,22 +49,32 @@ const NavbarMobile = () => {
                     key={index}
                     items={{ ...menu, subMenu: menu.subMenu || [] }}
                     depthLevel={0}
+                    closeMenu={() => showMenu(false)}
                   />
                 ))}
               </ul>
             </div>
             <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'>
-              <NavLink to="https://github.com/FiaNerd" target='_blank'>
+              <NavLink to='https://github.com/FiaNerd' target='_blank' >
                 <FontAwesomeIcon icon={faGithub} />
               </NavLink>
-              <NavLink to="https://www.linkedin.com/in/sofia-mattiasson-fianerd/" target="_blank">
+              <NavLink
+                to='https://www.linkedin.com/in/sofia-mattiasson-fianerd/'
+                target='_blank'>
                 <FontAwesomeIcon icon={faLinkedin} />
               </NavLink>
-                <FontAwesomeIcon icon={faEnvelope} />
+              <NavLink
+                to='mailto:fianerd.developer@gmail.com'
+                className='btn-menu mt-2 mb-2'>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className='btn-menu mt-2 mb-2'
+                />
+              </NavLink>
             </div>
             <p className='font-heading text-sm mx-auto'>
-            &copy; FiaNerd | Sofia Mattiasson
-          </p>
+              &copy; FiaNerd | Sofia Mattiasson
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

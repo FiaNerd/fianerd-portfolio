@@ -1,7 +1,7 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -19,11 +19,11 @@ const Footer = () => {
           className='btn-menu mt-2 mb-2'>
           <FontAwesomeIcon icon={faLinkedin} />
         </NavLink>
-        <Link
+        <NavLink
           to='mailto:fianerd.developer@gmail.com'
           className='btn-menu mt-2 mb-2'>
           <FontAwesomeIcon icon={faEnvelope} className='btn-menu mt-2 mb-2' />
-        </Link>
+        </NavLink>
       </div>
       <p className='font-heading text-sm mx-auto pb-4 mt-2'>
         &copy; FiaNerd | Sofia Mattiasson
