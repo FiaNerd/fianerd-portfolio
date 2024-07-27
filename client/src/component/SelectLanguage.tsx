@@ -1,7 +1,9 @@
 // src/components/CustomDropdown.tsx
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LANGUAGES } from '../constants/Languages'
 import { useTranslation } from 'react-i18next'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 const CustomDropdown = () => {
   const { i18n } = useTranslation()
@@ -21,7 +23,9 @@ const CustomDropdown = () => {
       <button className='dropdown-button' onClick={toggleDropdown}>
         {LANGUAGES.find((lang) => lang.code === selectedLanguage)?.label ||
           'Select Language'}
-        <span className='dropdown-arrow'>&#9660;</span>
+        <span className='dropdown-arrow'>   <FontAwesomeIcon
+                  icon={faCaretDown}
+                /></span>
       </button>
       {isOpen && (
         <div className='dropdown-menu'>

@@ -7,15 +7,15 @@ const ThemeSwitch = () => {
   const { currentTheme, toggleTheme } = useContext(ThemeContext)
 
   return (
-    <div className={`flex flex-col `}>
+    <div className={`flex items-center`}>
       <button
         data-testid='switch-theme-btn'
         onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
-        className='p-2 rounded-full focus:outline-none'>
+        className='rounded-full focus:outline-none flex items-center'>
         {/* Conditional rendering for the icon */}
         <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}
-          className='text-center'
+          className='items-center text-sm'
         />
          {/* <p className='text-sm'> */}
           {/* {currentTheme === 'light' ? 'ljust läge' : 'mörkt läge'} */}
