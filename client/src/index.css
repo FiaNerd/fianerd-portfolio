@@ -53,15 +53,74 @@ body.dark {
   --menu-hover-color: #e7a66f;
 }
 
+/* src/components/CustomDropdown.css */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdown-arrow {
+  margin-left: 0.5rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--menu-bg-color);
+  color: var(--menu-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: var(--menu-hover-color);
+  color:  #fff5d7;
+
+}
+
+@media (max-width: 600px) {
+  .dropdown-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .dropdown-menu {
+    width: auto; /* Adjust the width for mobile */
+  }
+}
+
 /* Mobile Menu Styles */
 .btn-menu:hover {
   color: var(--menu-hover-color);
+ 
 }
 
 .mobile-menu {
   background: var(--menu-bg-color);
   color: var(--menu-text-color);
   overflow-y: auto;
+   position: relative;
 }
 
 .mobile-menu button {

@@ -1,33 +1,33 @@
-import { useRef, useState, useEffect, useContext } from 'react'
-import { Sling as Hamburger } from 'hamburger-react'
-import { useClickAway } from 'react-use'
-import { navRoutes } from '../../config/MenuItemsData'
-import MenuItems from './MenuItems'
-import { AnimatePresence, motion } from 'framer-motion'
-import ThemeContext from '../../context/ThemeContext'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { NavLink } from 'react-router-dom'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+// src/components/NavbarMobile.tsx
+import { useRef, useState, useEffect, useContext } from 'react';
+import { Sling as Hamburger } from 'hamburger-react';
+import { useClickAway } from 'react-use';
+import { navRoutes } from '../../config/MenuItemsData';
+import MenuItems from './MenuItems';
+import { AnimatePresence, motion } from 'framer-motion';
+import ThemeContext from '../../context/ThemeContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { NavLink } from 'react-router-dom';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const NavbarMobile = () => {
-  const [showMenu, setShowMenu] = useState(false)
-  const ref = useRef(null)
+  const [showMenu, setShowMenu] = useState(false);
+  const ref = useRef(null);
 
-  const { currentTheme } = useContext(ThemeContext)
+  const { currentTheme } = useContext(ThemeContext);
 
-
-  useClickAway(ref, () => setShowMenu(false))
+  useClickAway(ref, () => setShowMenu(false));
 
   useEffect(() => {
-    document.body.classList.toggle('dark', currentTheme === 'dark')
-  }, [currentTheme])
+    document.body.classList.toggle('dark', currentTheme === 'dark');
+  }, [currentTheme]);
 
   return (
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
-      <div className='absolute z-50' style={{ right: '0.63em' }}>
-        <Hamburger toggled={showMenu} size={40} toggle={setShowMenu} />
+      <div className='absolute z-50' style={{ right: '0em' }}>
+        <Hamburger toggled={showMenu} size={35} toggle={setShowMenu} />
       </div>
 
       <AnimatePresence>
@@ -41,7 +41,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col z-40'>
+            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col z-60'>
             <div className='flex-grow overflow-y-auto mt-[4em]'>
               <ul className='grid gap-6'>
                 {navRoutes.map((menu, index) => (
@@ -79,7 +79,7 @@ const NavbarMobile = () => {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 
-export default NavbarMobile
+export default NavbarMobile;

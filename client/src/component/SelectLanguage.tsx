@@ -1,24 +1,42 @@
-// src/components/SelectLanguage.tsx
-import React from 'react';
-import { LANGUAGES } from "../constants/Languages";
+// src/components/CustomDropdown.tsx
+import { useState } from 'react';
+import { LANGUAGES } from '../constants/Languages';
 import { useTranslation } from 'react-i18next';
 
-const SelectLanguage = () => {
+const CustomDropdown = () => {
   const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
-  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(e.target.value);
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const handleLanguageChange = (code: string) => {
+    i18n.changeLanguage(code);
+    setSelectedLanguage(code);
+    setIsOpen(false);
   };
 
   return (
-    <select defaultValue={i18n.language} onChange={handleChangeLanguage} className='select-language font-bold text-sm'>
-      {LANGUAGES.map(({ code, label }) => (
-        <option key={code} value={code}>
-          {label}
-        </option>
-      ))}
-    </select>
+    <div className='dropdown-container'>
+      <button className='dropdown-button' onClick={toggleDropdown}>
+        {LANGUAGES.find(lang => lang.code === selectedLanguage)?.label || 'Select Language'}
+        <span className='dropdown-arrow'>&#9660;</span>
+      </button>
+      {isOpen && (
+        <div className='dropdown-menu'>
+          {LANGUAGES.map(({ code, label }) => (
+            <div 
+              key={code} 
+              className='dropdown-item text-sm'
+              onClick={() => handleLanguageChange(code)}
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
-export default SelectLanguage;
+export default CustomDropdown;
