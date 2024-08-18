@@ -1,27 +1,27 @@
 // src/components/NavbarMobile.tsx
-import { useRef, useState, useEffect, useContext } from 'react';
-import { Sling as Hamburger } from 'hamburger-react';
-import { useClickAway } from 'react-use';
-import { navRoutes } from '../../config/MenuItemsData';
-import MenuItems from './MenuItems';
-import { AnimatePresence, motion } from 'framer-motion';
-import ThemeContext from '../../context/ThemeContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { NavLink } from 'react-router-dom';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { useRef, useState, useEffect, useContext } from 'react'
+import { Sling as Hamburger } from 'hamburger-react'
+import { useClickAway } from 'react-use'
+import { navRoutes } from '../../config/MenuItemsData'
+import MenuItems from './MenuItems'
+import { AnimatePresence, motion } from 'framer-motion'
+import ThemeContext from '../../context/ThemeContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { NavLink } from 'react-router-dom'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const NavbarMobile = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const ref = useRef(null);
+  const [showMenu, setShowMenu] = useState(false)
+  const ref = useRef(null)
 
-  const { currentTheme } = useContext(ThemeContext);
+  const { currentTheme } = useContext(ThemeContext)
 
-  useClickAway(ref, () => setShowMenu(false));
+  useClickAway(ref, () => setShowMenu(false))
 
   useEffect(() => {
-    document.body.classList.toggle('dark', currentTheme === 'dark');
-  }, [currentTheme]);
+    document.body.classList.toggle('dark', currentTheme === 'dark')
+  }, [currentTheme])
 
   return (
     <div ref={ref} className='lg:hidden relative'>
@@ -55,7 +55,7 @@ const NavbarMobile = () => {
               </ul>
             </div>
             <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 '>
-              <NavLink to='https://github.com/FiaNerd' target='_blank' >
+              <NavLink to='https://github.com/FiaNerd' target='_blank'>
                 <FontAwesomeIcon icon={faGithub} />
               </NavLink>
               <NavLink
@@ -65,11 +65,8 @@ const NavbarMobile = () => {
               </NavLink>
               <NavLink
                 to='mailto:fianerd.developer@gmail.com'
-                className='btn-menu mt-2 mb-2'>
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className='btn-menu mt-2 mb-2'
-                />
+                className='btn-menu'>
+                <FontAwesomeIcon icon={faEnvelope} className='btn-menu' />
               </NavLink>
             </div>
             <p className='font-heading text-sm mx-auto'>
@@ -79,7 +76,7 @@ const NavbarMobile = () => {
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 }
 
-export default NavbarMobile;
+export default NavbarMobile
