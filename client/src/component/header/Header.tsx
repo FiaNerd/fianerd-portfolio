@@ -28,7 +28,7 @@ const Header = () => {
         <div className='flex items-center gap-4 lg:gap-6'>
           <ThemeSwitch />
           <div className='flex items-center'>
-            <FontAwesomeIcon icon={faGlobe} className='text-sm' />
+            <FontAwesomeIcon icon={faGlobe} className='text-md' />
             <SelectLanguage />
           </div>
           <NavbarMobile />

@@ -1,6 +1,15 @@
 /* Import Adobe Fonts styles or define font-face */
 @import url('https://use.typekit.net/bwg5bhb.css');
 
+:root {
+  --bg-color: #fff5d7;
+  --h1-color: #2f1628;
+  --text-color: #1c2226;
+  --menu-bg-color: #fff5d7;
+  --menu-text-color: #2f1628;
+  --menu-hover-color: #ff5e6c;
+}
+
 body {
   font-family: 'montserrat', sans-serif;
   font-weight: 400;
@@ -10,7 +19,7 @@ body {
   background: var(--bg-color);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   --bg-color: #fff5d7;
   --h1-color: #2f1628;
   --text-color: #1c2226;
@@ -24,15 +33,6 @@ h1 {
 h2 {
   font-family: 'merriweather', sans-serif;
   color: var(--text-color);
-}
-
-:root {
-  --bg-color: #fff5d7;
-  --h1-color: #2f1628;
-  --text-color: #1c2226;
-  --menu-bg-color: #fff5d7;
-  --menu-text-color: #2f1628;
-  --menu-hover-color: #ff5e6c;
 }
 
 /* Dark mode variables */
@@ -62,7 +62,7 @@ body.dark {
 .dropdown-button {
   background: none;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   display: flex;
@@ -96,8 +96,7 @@ body.dark {
 
 .dropdown-item:hover {
   background: var(--menu-hover-color);
-  color:  #fff5d7;
-
+  color: #fff5d7;
 }
 
 @media (max-width: 600px) {
@@ -114,14 +113,13 @@ body.dark {
 /* Mobile Menu Styles */
 .btn-menu:hover {
   color: var(--menu-hover-color);
- 
 }
 
 .mobile-menu {
   background: var(--menu-bg-color);
   color: var(--menu-text-color);
   overflow-y: auto;
-   position: relative;
+  position: relative;
 }
 
 .mobile-menu button {

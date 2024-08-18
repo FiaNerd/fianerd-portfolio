@@ -15,11 +15,8 @@ const ThemeSwitch = () => {
         {/* Conditional rendering for the icon */}
         <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}
-          className='items-center text-sm'
+          className='items-center text-md'
         />
-         {/* <p className='text-sm'> */}
-          {/* {currentTheme === 'light' ? 'ljust läge' : 'mörkt läge'} */}
-        {/* </p>  */}
       </button>
     </div>
   )

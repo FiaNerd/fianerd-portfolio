@@ -6,14 +6,14 @@ import Footer from './component/Footer'
 function App() {
   return (
     <>
-      <div className='flex flex-col min-h-screen px-6'>
+      <div className='flex flex-col min-h-screen px-6 bg-red'>
         <Header />
         <main className='flex-grow max-w-screen-xl w-full mx-auto'>
           <Routes>
             <Route path='/' element={<HomePage />} />
           </Routes>
         </main>
-          <Footer />
+        <Footer />
       </div>
     </>
   )
