@@ -1,28 +1,32 @@
 // src/components/menu/MenuItems.tsx
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
-import DropdownMenu from './DropdownMenu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useTranslation } from 'react-i18next';
-import { Route } from '../../config/MenuItemsData';
+import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import DropdownMenu from './DropdownMenu'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslation } from 'react-i18next'
+import { Route } from '../../config/MenuItemsData'
 
 interface MenuItemsProps {
-  items: Route;
-  depthLevel: number;
-  closeMenu: () => void;
+  items: Route
+  depthLevel: number
+  closeMenu: () => void
 }
 
-const MenuItems: React.FC<MenuItemsProps> = ({ items, depthLevel, closeMenu }) => {
-  const [dropdown, setDropdown] = useState(false);
-  const { t } = useTranslation();
+const MenuItems: React.FC<MenuItemsProps> = ({
+  items,
+  depthLevel,
+  closeMenu,
+}) => {
+  const [dropdown, setDropdown] = useState(false)
+  const { t } = useTranslation()
 
   const handleMouseEnter = () => {
-    setDropdown(true);
-  };
+    setDropdown(true)
+  }
 
   const handleMouseLeave = () => {
-    setDropdown(false);
-  };
+    setDropdown(false)
+  }
 
   return (
     <li
@@ -31,12 +35,14 @@ const MenuItems: React.FC<MenuItemsProps> = ({ items, depthLevel, closeMenu }) =
       onMouseLeave={handleMouseLeave}>
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
-          <button className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
+          <button
+            className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
             {t(items.title)}{' '}
             {items.icon && (
               <FontAwesomeIcon
                 icon={items.icon}
-                className='ml-1 h-[0.8em] text-center'/>
+                className='ml-1 h-[0.8em] text-center'
+              />
             )}
           </button>
           <DropdownMenu
@@ -55,7 +61,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ items, depthLevel, closeMenu }) =
         </NavLink>
       )}
     </li>
-  );
-};
+  )
+}
 
-export default MenuItems;
+export default MenuItems

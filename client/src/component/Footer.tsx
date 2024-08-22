@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <div className='mobile-menu z-[-50] flex flex-row gap-8 justify-center items-center border-t'>
+      <div className=' z-[-50] bg-none flex flex-row gap-8 justify-center items-center border-t p-2'>
         <NavLink
           to='https://github.com/FiaNerd'
           target='_blank'
@@ -19,8 +19,8 @@ const Footer = () => {
           className='btn-menu'>
           <FontAwesomeIcon icon={faLinkedin} />
         </NavLink>
-        <NavLink to='mailto:fianerd.developer@gmail.com' className='btn-menu'>
-          <FontAwesomeIcon icon={faEnvelope} className='btn-menu' />
+        <NavLink to='mailto:fianerd.developer@gmail.com' className='btn-menu items-center'>
+          <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
       </div>
       <p className='font-heading text-sm mx-auto pb-4 mt-2'>

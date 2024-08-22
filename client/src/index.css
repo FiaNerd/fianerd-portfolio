@@ -111,15 +111,17 @@ body.dark {
 }
 
 /* Mobile Menu Styles */
+´
+
 .btn-menu:hover {
   color: var(--menu-hover-color);
+  cursor: pointer;
 }
 
 .mobile-menu {
-  background: var(--menu-bg-color);
-  color: var(--menu-text-color);
   overflow-y: auto;
   position: relative;
+  background: var(--menu-bg-color);
 }
 
 .mobile-menu button {

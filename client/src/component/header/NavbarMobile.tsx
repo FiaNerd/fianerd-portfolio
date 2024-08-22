@@ -26,7 +26,9 @@ const NavbarMobile = () => {
   return (
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
-      <div className='absolute z-50 mt-4' style={{ right: '0em' }}>
+      <div
+        className={`z-50  ${showMenu ? 'fixed' : 'absolute'}`}
+        style={{ right: '1em', top: '1em' }}>
         <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
       </div>
 
@@ -54,7 +56,7 @@ const NavbarMobile = () => {
                 ))}
               </ul>
             </div>
-            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 '>
+            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'>
               <NavLink to='https://github.com/FiaNerd' target='_blank'>
                 <FontAwesomeIcon icon={faGithub} />
               </NavLink>
