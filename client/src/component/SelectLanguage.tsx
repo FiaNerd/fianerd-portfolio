@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LANGUAGES } from '../constants/Languages'
 import { useTranslation } from 'react-i18next'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const CustomDropdown = () => {
   const { i18n } = useTranslation()
@@ -20,19 +20,23 @@ const CustomDropdown = () => {
 
   return (
     <div className='dropdown-container z-90'>
-      <button className='dropdown-button' onClick={toggleDropdown}>
+      <button className='dropdown-button text-md' onClick={toggleDropdown}>
+      <FontAwesomeIcon icon={faGlobe} className='text-[1.60em] pr-2' />
+
         {LANGUAGES.find((lang) => lang.code === selectedLanguage)?.label ||
           'Select Language'}
-        <span className='dropdown-arrow'>   <FontAwesomeIcon
+        <span className='dropdown-arrow'>   
+          <FontAwesomeIcon
                   icon={faCaretDown}
                 /></span>
       </button>
+
       {isOpen && (
         <div className='dropdown-menu'>
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
-              className='dropdown-item text-sm'
+              className='dropdown-item-language text-sm'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </div>

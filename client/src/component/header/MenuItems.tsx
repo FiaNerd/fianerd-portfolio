@@ -38,6 +38,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   }
 
   return (
+    <ul>
     <li
       className='relative group'
       onMouseEnter={handleMouseEnter}
@@ -71,6 +72,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         </NavLink>
       )}
     </li>
+    </ul>
   )
 }
 

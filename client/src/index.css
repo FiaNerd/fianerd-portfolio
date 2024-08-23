@@ -91,12 +91,12 @@ body.dark {
   flex-direction: column;
 }
 
-.dropdown-item {
+.dropdown-item-language {
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
-.dropdown-item:hover {
+.dropdown-item-language:hover {
   background: var(--menu-hover-color);
   color: #fff5d7;
 }
