@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavbarDesktop from './NavbarDesktop'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import ThemeSwitch from '../ThemeSwitch'
 import NavbarMobile from './NavbarMobile'

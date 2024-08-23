@@ -8,6 +8,24 @@
   --menu-bg-color: #fff5d7;
   --menu-text-color: #2f1628;
   --menu-hover-color: #ff5e6c;
+  --btn-color: #ff5e6c;
+  --btn-text: #fff5d7;
+}
+
+/* Dark mode variables */
+body.dark {
+  --bg-color: radial-gradient(
+    ellipse at 48.1% -49.6%,
+    #000000 30%,
+    #1b063c 100.2% /* #1b063c 100.2% */
+  );
+  --h1-color: #f3c36f;
+  --text-color: #fff5d7;
+  --menu-text-color: #fff5d7;
+  --menu-bg-color: #1b063c;
+  --menu-hover-color: #e7a66f;
+  --btn-text: #2f1628;
+  --btn-color: #feb300;
 }
 
 body {
@@ -35,23 +53,7 @@ h2 {
   color: var(--text-color);
 }
 
-/* Dark mode variables */
-body.dark {
-  --bg-color: radial-gradient(
-    ellipse at 48.1% -49.6%,
-    #000000 30%,
-    #1b063c 100.2% /* #1b063c 100.2% */
-  );
-  /* --h1-color: #747336; */
-  /* --h1-color: #A62F03; */
-  /* --h1-color: #F26716; */
-  --h1-color: #f3c36f;
-  --text-color: #fff5d7;
-  /* --menu-bg-color: #2b161b; */
-  --menu-text-color: #fff5d7;
-  --menu-bg-color: #1b063c;
-  --menu-hover-color: #e7a66f;
-}
+
 
 /* src/components/CustomDropdown.css */
 .dropdown-container {
@@ -91,34 +93,49 @@ body.dark {
   flex-direction: column;
 }
 
+/* .dropdown-menu:hover{
+  background: var(--btn-color);
+  color: var(--btn-text);
+  cursor: pointer;
+} */
+
 .dropdown-item-language {
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
 .dropdown-item-language:hover {
-  background: var(--menu-hover-color);
-  color: #fff5d7;
+  background: var(--btn-color);
+  color: var(--btn-text);
 }
 
-@media (max-width: 600px) {
-  .dropdown-button {
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  }
 
-  .dropdown-menu {
-    width: auto; /* Adjust the width for mobile */
-  }
+.btn-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em; /* Ensure consistent padding */
+  margin: 0; /* Remove any default margins */
+  text-align: center;
+  vertical-align: middle; /* Align with text baseline */
 }
 
-/* Mobile Menu Styles */
-´
-
-.btn-menu:hover {
-  color: var(--menu-hover-color);
+.btn-contact {
+  background: var(--btn-color);
+  color: var(--btn-text);
+  padding: 0.5em 2em;
+  margin: 0.5em;
   cursor: pointer;
 }
+
+.btn-contact:hover{
+  color: var(--btn-text);
+  opacity: 70%;
+}
+
+
+/* Mobile Menu Styles */
+
 
 .mobile-menu {
   overflow-y: auto;
@@ -140,6 +157,22 @@ body.dark {
   color: var(--menu-text-color);
   white-space: nowrap;
   width: auto;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  .dropdown-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .dropdown-menu {
+    width: auto; /* Adjust the width for mobile */
+    
+  }
 }
 
 @tailwind base;

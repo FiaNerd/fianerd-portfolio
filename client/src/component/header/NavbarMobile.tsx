@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const NavbarMobile = () => {
-  const [ showMenu, setShowMenu ] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
   const ref = useRef(null)
 
@@ -28,7 +28,9 @@ const NavbarMobile = () => {
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
       <div
-        className={`z-50  ${showMenu ? 'fixed left-[12em] top-0' : 'absolute '}`}
+        className={`z-50  ${
+          showMenu ? 'fixed left-[12em] top-0' : 'absolute '
+        }`}
         style={{ right: '0', top: '1em' }}>
         <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
       </div>
@@ -44,7 +46,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
+            className='mobile-menu fixed left-0 right-0 top-0 bottom-0 sm:w-2/4 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
             <div className='flex-grow overflow-y-auto mt-[4em]'>
               <ul className='grid gap-6'>
                 {navRoutes.map((menu, index) => (
