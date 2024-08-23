@@ -1,4 +1,3 @@
-// src/components/menu/MenuItems.tsx
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import DropdownMenu from './DropdownMenu'
@@ -28,6 +27,16 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     setDropdown(false)
   }
 
+  const handleButtonClick = () => {
+    // Toggle dropdown if the item has a submenu
+    if (items.subMenu && items.subMenu.length > 0) {
+      setDropdown(prev => !prev)
+    } else {
+      // Close the entire menu
+      closeMenu()
+    }
+  }
+
   return (
     <li
       className='relative group'
@@ -36,6 +45,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       {items.subMenu && items.subMenu.length > 0 ? (
         <>
           <button
+            onClick={handleButtonClick} // Add onClick handler to toggle dropdown or close menu
             className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
             {t(items.title)}{' '}
             {items.icon && (

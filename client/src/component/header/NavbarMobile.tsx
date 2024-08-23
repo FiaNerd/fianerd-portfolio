@@ -12,7 +12,8 @@ import { NavLink } from 'react-router-dom'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const NavbarMobile = () => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [ showMenu, setShowMenu ] = useState(false)
+
   const ref = useRef(null)
 
   const { currentTheme } = useContext(ThemeContext)
@@ -27,8 +28,8 @@ const NavbarMobile = () => {
     <div ref={ref} className='lg:hidden relative'>
       {/* Hamburger Menu Button */}
       <div
-        className={`z-50  ${showMenu ? 'fixed' : 'absolute'}`}
-        style={{ right: '1em', top: '1em' }}>
+        className={`z-50  ${showMenu ? 'fixed left-[12em] top-0' : 'absolute '}`}
+        style={{ right: '0', top: '1em' }}>
         <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
       </div>
 

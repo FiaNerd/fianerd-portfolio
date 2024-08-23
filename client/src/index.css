@@ -76,6 +76,8 @@ body.dark {
   margin-left: 0.5rem;
 }
 
+
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -121,6 +123,10 @@ body.dark {
 .mobile-menu {
   overflow-y: auto;
   position: relative;
+  background: var(--menu-bg-color);
+}
+
+.mobile-menu:hover {
   background: var(--menu-bg-color);
 }
 
