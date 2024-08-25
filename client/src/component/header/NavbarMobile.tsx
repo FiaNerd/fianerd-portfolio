@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/components/NavbarMobile.tsx
 import { useRef, useState, useEffect, useContext } from 'react'
 import { Sling as Hamburger } from 'hamburger-react'
@@ -10,9 +11,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { NavLink } from 'react-router-dom'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from 'react-i18next'
+import Footer from '../Footer'
+
+const getClassName = ({ isActive }: any) =>
+  `link ${isActive ? 'active contact' : ''}`
 
 const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const { t } = useTranslation()
 
   const ref = useRef(null)
 
@@ -47,8 +54,8 @@ const NavbarMobile = () => {
               damping: 20,
             }}
             className='mobile-menu fixed left-0 right-0 top-0 bottom-0 sm:w-2/4 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
-            <div className='flex-grow overflow-y-auto mt-[4em]'>
-              <ul className='grid gap-6'>
+            <div className='flex-grow overflow-y-auto mt-[3em]'>
+              <ul className='grid gap-2'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems
                     key={index}
@@ -58,9 +65,19 @@ const NavbarMobile = () => {
                   />
                 ))}
               </ul>
+
             </div>
-            <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'>
-              <NavLink to='https://github.com/FiaNerd' target='_blank'>
+
+              <NavLink
+                to='/contact'
+                className={`${getClassName} contact rounded-sm text-lg mx-auto text-align mb-8 lg:mb-0`}>
+                {t('contact')}{' '}
+              </NavLink>
+
+              <Footer />
+
+            {/* <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'> */}
+              {/* <NavLink to='https://github.com/FiaNerd' target='_blank'>
                 <FontAwesomeIcon icon={faGithub} />
               </NavLink>
               <NavLink
@@ -68,15 +85,15 @@ const NavbarMobile = () => {
                 target='_blank'>
                 <FontAwesomeIcon icon={faLinkedin} />
               </NavLink>
+
               <NavLink
-                to='mailto:fianerd.developer@gmail.com'
-                className='btn-menu'>
-                <FontAwesomeIcon icon={faEnvelope} className='btn-menu' />
+                to='mailto:fianerd.developer@gmail.com'>
+                <FontAwesomeIcon icon={faEnvelope}  />
               </NavLink>
             </div>
             <p className='font-heading text-sm mx-auto'>
               &copy; FiaNerd | Sofia Mattiasson
-            </p>
+            </p> */}
           </motion.div>
         )}
       </AnimatePresence>

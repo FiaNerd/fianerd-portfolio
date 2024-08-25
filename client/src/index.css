@@ -11,7 +11,7 @@
   --btn-color: #ff5e6c;
   --btn-text: #fff5d7;
 }
-
+/* #feb300 */
 /* Dark mode variables */
 body.dark {
   --bg-color: radial-gradient(
@@ -25,7 +25,7 @@ body.dark {
   --menu-bg-color: #1b063c;
   --menu-hover-color: #e7a66f;
   --btn-text: #2f1628;
-  --btn-color: #feb300;
+  --btn-color: #f3c36f;
 }
 
 body {
@@ -53,8 +53,6 @@ h2 {
   color: var(--text-color);
 }
 
-
-
 /* src/components/CustomDropdown.css */
 .dropdown-container {
   position: relative;
@@ -78,8 +76,6 @@ h2 {
   margin-left: 0.5rem;
 }
 
-
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -93,12 +89,6 @@ h2 {
   flex-direction: column;
 }
 
-/* .dropdown-menu:hover{
-  background: var(--btn-color);
-  color: var(--btn-text);
-  cursor: pointer;
-} */
-
 .dropdown-item-language {
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -109,33 +99,45 @@ h2 {
   color: var(--btn-text);
 }
 
-
 .btn-menu {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5em 1em; /* Ensure consistent padding */
-  margin: 0; /* Remove any default margins */
+  padding: 0.5em 0em;
+  margin: 0;
   text-align: center;
-  vertical-align: middle; /* Align with text baseline */
+  vertical-align: middle;
 }
 
-.btn-contact {
-  background: var(--btn-color);
-  color: var(--btn-text);
-  padding: 0.5em 2em;
-  margin: 0.5em;
+
+.contact {
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color);
+  padding: 0.4em 0.8em;
   cursor: pointer;
 }
 
-.btn-contact:hover{
+.contact:hover {
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--btn-text);
+  cursor: pointer;
+}
+
+.btn-contact:hover {
   color: var(--btn-text);
   opacity: 70%;
 }
 
+.dropdown:hover {
+  background: var(--menu-bg-color);
+}
 
 /* Mobile Menu Styles */
 
+.btn-links:hover {
+  color: var(--btn-color);
+}
 
 .mobile-menu {
   overflow-y: auto;
@@ -159,11 +161,7 @@ h2 {
   width: auto;
 }
 
-
-
-
-
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .dropdown-button {
     font-size: 0.875rem;
     padding: 0.5rem;
@@ -171,7 +169,30 @@ h2 {
 
   .dropdown-menu {
     width: auto; /* Adjust the width for mobile */
-    
+  }
+  .contact {
+    /* background: var(--btn-color); */
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
+    padding: 0.4em 0.8em;
+    margin: 0.5em;
+    cursor: pointer;
+  }
+
+  .contact:Hover {
+    /* background: var(--btn-color); */
+    border: 1px solid var(--btn-color);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn-profile {
+    color: var(--menu-text-color);
+  }
+
+  .btn-profile:hover {
+    color: var(--btn-color);
   }
 }
 

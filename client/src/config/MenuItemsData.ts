@@ -37,7 +37,7 @@ export const navRoutes: Route[] = [
         icon: faCaretRight,
         subMenu: [
           {
-            title: 'alla_projekt', // Use translation key
+            title: 'allProjects', // Use translation key
             url: '/alla-projekt',
           },
           {
@@ -55,19 +55,19 @@ export const navRoutes: Route[] = [
         ],
         dropdown: [
           {
-            title: 'extra_menu', // You need to add this key to i18n if you haven't
+            title: 'extra_menu', 
             url: '/extra-menu',
           },
         ],
       },
       {
-        title: 'grafisk', // Use translation key
+        title: 'grafisk',
         url: '/graphic-design',
       },
     ],
   },
-  {
-    title: 'kontakt', // Use translation key
-    url: '/',
-  },
+  // {
+  //   title: 'kontakt', // Use translation key
+  //   url: '/',
+  // },
 ];

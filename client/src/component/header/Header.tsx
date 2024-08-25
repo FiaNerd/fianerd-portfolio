@@ -3,15 +3,19 @@ import { NavLink } from 'react-router-dom'
 import ThemeSwitch from '../ThemeSwitch'
 import NavbarMobile from './NavbarMobile'
 import SelectLanguage from '../SelectLanguage'
+import { useTranslation } from 'react-i18next'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const getClassName = ({ isActive }: any) => `link ${isActive ? 'active' : ''}`
+const getClassName = ({ isActive }: any) =>
+  `link ${isActive ? 'active contact' : ''}`
 
 const Header = () => {
+  const { t } = useTranslation()
+
   return (
-    <header className='mb-8 md:mb-12 h-[3.4em] py-2 lg:border-b'>
-      <nav className='font-heading flex flex-row items-center justify-between sticky top-0 left-0 right-0'>
-        <NavLink to='/' className={getClassName}>
+    <header className='mb-8 md:mb-12 h-[3.4em] py-2'>
+      <nav className='flex flex-row font-heading items-center lg:border-b justify-between sticky top-0 left-0 right-0'>
+        <NavLink to='/'>
           <div className='flex flex-col'>
             <h1 className='text-lg md:text-4xl font-bold'>[ FIA NERD ]</h1>
             <p className='text-base font-sub-heading md:font-bold tracking-wider'>
@@ -23,11 +27,18 @@ const Header = () => {
         {/* NavbarDesktop Component */}
         <NavbarDesktop />
 
+
         <div className='flex items-center gap-4 lg:gap-6'>
           <ThemeSwitch />
           <div className='flex items-center'>
             <SelectLanguage />
           </div>
+          <NavLink
+            to='/contact'
+            
+            className={`${getClassName} contact hidden md:block rounded-sm text-lg`}>
+            {t('contact')}{' '}
+          </NavLink>
           <NavbarMobile />
         </div>
       </nav>

@@ -42,7 +42,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <button
           onClick={handleButtonClick}
-          className=' btn-contact px-4 py-4 font-heading tracking-wider text-xl rounded-md '>
+          className=' btn-contact px-4 py-2 font-heading tracking-wider text-xl rounded-md '>
           {t(items.title)}
         </button>
       )
@@ -50,7 +50,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <NavLink
           to={items.url}
-          className='btn-menu px-4 py-4 font-heading tracking-wider text-xl'
+          className='btn-menu btn-links px-4 py-[0.6em] font-heading tracking-wider text-xl'
           onClick={closeMenu}>
           {t(items.title)}
         </NavLink>
@@ -59,9 +59,9 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   }
 
   return (
-    <ul className='flex items-center space-x-4'> {/* Flexbox for alignment */}
+    <ul className='btn-portfolio flex items-center space-x-4 '> {/* Flexbox for alignment */}
       <li
-        className='relative group'
+        className='relative group btn-links'
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {items.subMenu && items.subMenu.length > 0 ? (
@@ -83,6 +83,8 @@ const MenuItems: React.FC<MenuItemsProps> = ({
               depthLevel={depthLevel}
               closeMenu={closeMenu}
             />
+
+
           </>
         ) : (
           renderLinkOrButton()

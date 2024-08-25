@@ -1,6 +1,6 @@
 // src/i18n.ts
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
 i18n.use(initReactI18next).init({
   lng: 'sv',
@@ -17,12 +17,12 @@ i18n.use(initReactI18next).init({
         about: 'Om Mig',
         portfolio: 'Portfolio',
         webb: 'Webb',
-        alla_projekt: 'Alla projekt',
+        allProjects: 'Alla projekt',
         frontend: 'Frontend',
         backend: 'Backend',
         fullstack: 'Fullstack',
         grafisk: 'Grafisk',
-        kontakt: 'Kontakt',
+        contact: 'Kontakta mig',
       },
     },
     en: {
@@ -32,16 +32,16 @@ i18n.use(initReactI18next).init({
         home: 'Home',
         about: 'About Me',
         portfolio: 'Portfolio',
-        webb: 'Web Development',
-        alla_projekt: 'All Projects',
+        webb: 'Web',
+        allProjects: 'All Projects',
         frontend: 'Frontend',
         backend: 'Backend',
         fullstack: 'Fullstack',
-        grafisk: 'Graphic Design',
-        kontakt: 'Contact',
+        grafisk: 'Graphic',
+        contact: 'Contact me',
       },
     },
   },
-});
+})
 
-export default i18n;
+export default i18n

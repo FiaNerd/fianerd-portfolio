@@ -15,16 +15,15 @@ const DropdownMenu = ({
   closeMenu,
 }: DropdownMenuProps) => {
   const newDepthLevel = depthLevel + 1
-  const dropdownClass = newDepthLevel > 1 ? 'mt-4' : ''
+  const dropdownClass = newDepthLevel > 1 ? 'mt-2' : ''
 
   return (
     <ul
       className={`dropdown ${dropdownClass} ${dropdown ? 'block' : 'hidden'} ${
         newDepthLevel > 1 ? 'left-full top-0' : 'left-0 top-full'
-      } lg:absolute no-wrap lg:py-4 lg:shadow-md rounded-sm mt-4 lg:mt-0 ml-6 lg:ml-0`}>
-        
+      } lg:absolute no-wrap lg:shadow-md rounded-sm lg:mt-0 ml-6 lg:ml-0 `}>
       {submenus.map((submenu, index) => (
-        <li key={index} className='relative mb-4'>
+        <li key={index} className='btn-profile relative'>
           <MenuItems
             items={submenu}
             depthLevel={newDepthLevel}
