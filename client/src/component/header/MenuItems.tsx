@@ -50,7 +50,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <NavLink
           to={items.url}
-          className='btn-menu btn-links px-4 py-[0.6em] font-heading tracking-wider text-xl'
+          className='btn-menu  px-4 py-[0.6em] font-heading tracking-wider text-xl'
           onClick={closeMenu}>
           {t(items.title)}
         </NavLink>
@@ -61,14 +61,14 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   return (
     <ul className='btn-portfolio flex items-center space-x-4 '> {/* Flexbox for alignment */}
       <li
-        className='relative group btn-links'
+        className='relative group '
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {items.subMenu && items.subMenu.length > 0 ? (
           <>
             <button
               onClick={handleButtonClick}
-              className={`btn-menu px-4 text-xl font-heading tracking-wider`}>
+              className={`btn-menu px-4 py-4 text-xl font-heading tracking-wider`}>
               {t(items.title)}{' '}
               {items.icon && (
                 <FontAwesomeIcon
