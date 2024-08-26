@@ -96,12 +96,13 @@ p {
 
 .dropdown-item-language {
   padding: 0.5rem 1rem;
-  color: var(--white-text);
+  color: var(--btn-text);
   cursor: pointer;
 }
 
 .dropdown-item-language:hover {
   background: var(--btn-color);
+  color: var(--white-text)
 }
 
 .btn-menu {
