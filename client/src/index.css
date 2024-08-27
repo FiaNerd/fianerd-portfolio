@@ -10,8 +10,13 @@
   --btn-text: #2f1628;
   --bg-opacity: rgb(254, 245, 215, 0.5);
   --white-text: #fff5d7;
+  --hover-color:   #ff5e6c;
+  --dropdown-hover:  rgb(255, 170, 171, 0.5);
+  
 }
 /* #feb300 */
+/* #ffaaab; */
+/* #ff5e6c */
 /* Dark mode variables */
 body.dark {
   --bg-color: radial-gradient(
@@ -26,6 +31,8 @@ body.dark {
   --btn-color: #c2205b;
   --bg-opacity: rgb(6 9 20 / 40%);
   --white-text: #fff5d7;
+  --hover-color: #c2205b;
+  --dropdown-hover:#f3c36f;
 }
 
 body {
@@ -187,8 +194,12 @@ p {
   }
 
   .btn-profile:hover {
-    background: var(--btn-color);
-    color: var(--white-text);
+    background: var(--dropdown-hover);
+    color: var(--hover-color);
+  }
+
+  .btn-menu:hover{
+    color: var(--hover-color);
   }
 }
 

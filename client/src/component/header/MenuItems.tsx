@@ -42,7 +42,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <button
           onClick={handleButtonClick}
-          className=' btn-contact px-4 py-2 font-heading tracking-wider text-xl rounded-md '>
+          className='btn-contact px-4 py-2 font-heading tracking-wider text-xl rounded-md'>
           {t(items.title)}
         </button>
       )
@@ -50,7 +50,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <NavLink
           to={items.url}
-          className='btn-menu  px-4 py-[0.6em] font-heading tracking-wider text-xl'
+          className='btn-menu px-4 py-[0.6em] font-heading tracking-wider text-xl'
           onClick={closeMenu}>
           {t(items.title)}
         </NavLink>
@@ -83,8 +83,6 @@ const MenuItems: React.FC<MenuItemsProps> = ({
               depthLevel={depthLevel}
               closeMenu={closeMenu}
             />
-
-
           </>
         ) : (
           renderLinkOrButton()

@@ -10,8 +10,7 @@ const NavbarDesktop = () => {
   }
 
   return (
-    <nav className='py-2'>
-      <ul className='hidden lg:flex lg:flex-row gap-8 justify-center '>
+    <nav className='hidden lg:flex lg:flex-row gap-8 justify-center py-2'>
         {navRoutes.map((menu, index) => (
           <MenuItems
             key={index}
@@ -20,7 +19,6 @@ const NavbarDesktop = () => {
             closeMenu={handleCloseMenu}
           />
         ))}
-      </ul>
     </nav>
   )
 }
