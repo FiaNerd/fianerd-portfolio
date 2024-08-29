@@ -6,11 +6,12 @@
   --heading-color: #2f1628;
   --text-color: #1c2226;
   --menu-bg-color: #fff5d7;
-  --btn-color: #ff5e6c;
+  --btn-color: #ef5207;
+  /* --btn-color: #ff5e6c; */
   --btn-text: #2f1628;
   --bg-opacity: rgb(254, 245, 215, 0.5);
   --white-text: #fff5d7;
-  --hover-color:   #ff5e6c;
+  --hover-color:   #ef5207;
   --dropdown-hover:  rgb(255, 170, 171, 0.5);
   
 }
@@ -26,13 +27,14 @@ body.dark {
   );
   --heading-color: #f3c36f;
   --text-color: #fff5d7;
-  --menu-bg-color: #060914;
+  --menu-bg-color: #1f0926;
   --btn-text: #fff5d7;
-  --btn-color: #c2205b;
+  --btn-color: #e7a63b;
+  /* --btn-color: #c2205b; */
   --bg-opacity: rgb(6 9 20 / 40%);
-  --white-text: #fff5d7;
-  --hover-color: #c2205b;
-  --dropdown-hover:#f3c36f;
+  --white-text: #1f0926;
+  --hover-color: #e7a63b;
+  --dropdown-hover:#1f0926;
 }
 
 body {
@@ -53,6 +55,7 @@ body {
 h1 {
   font-family: 'playfair-display', serif;
   color: var(--heading-color);
+  font-size: 1.8rem;
 }
 
 h2 {
@@ -63,6 +66,7 @@ h2 {
 p {
   font-family: 'source-sans-pro', 'sans-serif';
   color: var(--text-color);
+  font-size: 1rem;
 }
 
 /* src/components/CustomDropdown.css */
@@ -84,6 +88,9 @@ p {
   z-index: 100;
 }
 
+.icon-language:hover {
+  color: var(--hover-color);
+}
 .dropdown-arrow {
   margin-left: 0.5rem;
 }

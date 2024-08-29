@@ -27,7 +27,6 @@ const Header = () => {
         {/* NavbarDesktop Component */}
         <NavbarDesktop />
 
-
         <div className='flex items-center gap-4 lg:gap-6'>
           <ThemeSwitch />
           <div className='flex items-center'>
@@ -35,7 +34,6 @@ const Header = () => {
           </div>
           <NavLink
             to='/contact'
-            
             className={`${getClassName} contact hidden md:block rounded-sm text-lg`}>
             {t('contact')}{' '}
           </NavLink>

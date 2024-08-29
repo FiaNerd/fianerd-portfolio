@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-// src/components/NavbarMobile.tsx
-import { useRef, useState, useEffect, useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Sling as Hamburger } from 'hamburger-react'
-import { useClickAway } from 'react-use'
 import { navRoutes } from '../../config/MenuItemsData'
 import MenuItems from './MenuItems'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -10,19 +7,18 @@ import ThemeContext from '../../context/ThemeContext'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Footer from '../Footer'
+import { useClickOutside } from '../../hook/useClickOutSide'
 
-const getClassName = ({ isActive }: any) =>
+const getClassName = ({ isActive }: { isActive: boolean }) =>
   `link ${isActive ? 'active contact' : ''}`
 
 const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false)
   const { t } = useTranslation()
 
-  const ref = useRef(null)
-
   const { currentTheme } = useContext(ThemeContext)
 
-  useClickAway(ref, () => setShowMenu(false))
+  const ref = useClickOutside(() => setShowMenu(false))
 
   useEffect(() => {
     document.body.classList.toggle('dark', currentTheme === 'dark')
@@ -30,7 +26,6 @@ const NavbarMobile = () => {
 
   return (
     <div ref={ref} className='lg:hidden relative'>
-      {/* Hamburger Menu Button */}
       <div
         className={`z-50  ${
           showMenu ? 'fixed left-[12em] top-0' : 'absolute '
@@ -62,35 +57,15 @@ const NavbarMobile = () => {
                   />
                 ))}
               </ul>
-
             </div>
 
-              <NavLink
-                to='/contact'
-                className={`${getClassName} contact rounded-sm text-lg mx-auto text-align mb-8 lg:mb-0`}>
-                {t('contact')}{' '}
-              </NavLink>
+            <NavLink
+              to='/contact'
+              className={`${getClassName} contact rounded-sm text-lg mx-auto text-align mb-8 lg:mb-0`}>
+              {t('contact')}{' '}
+            </NavLink>
 
-              <Footer />
-
-            {/* <div className='flex-shrink-0 flex flex-row gap-4 justify-center items-center p-4 border-t'> */}
-              {/* <NavLink to='https://github.com/FiaNerd' target='_blank'>
-                <FontAwesomeIcon icon={faGithub} />
-              </NavLink>
-              <NavLink
-                to='https://www.linkedin.com/in/sofia-mattiasson-fianerd/'
-                target='_blank'>
-                <FontAwesomeIcon icon={faLinkedin} />
-              </NavLink>
-
-              <NavLink
-                to='mailto:fianerd.developer@gmail.com'>
-                <FontAwesomeIcon icon={faEnvelope}  />
-              </NavLink>
-            </div>
-            <p className='font-heading text-sm mx-auto'>
-              &copy; FiaNerd | Sofia Mattiasson
-            </p> */}
+            <Footer />
           </motion.div>
         )}
       </AnimatePresence>

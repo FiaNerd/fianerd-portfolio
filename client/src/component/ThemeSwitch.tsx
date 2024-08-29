@@ -11,7 +11,7 @@ const ThemeSwitch = () => {
       <button
         data-testid='switch-theme-btn'
         onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
-        className='rounded-full focus:outline-none flex items-center'>
+        className='icon-language  rounded-full focus:outline-none flex items-center'>
         {/* Conditional rendering for the icon */}
         <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}
