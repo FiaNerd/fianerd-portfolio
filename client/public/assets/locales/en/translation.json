@@ -1,0 +1,18 @@
+{
+  "title": "Multi-language app",
+  "label": "Select another language!",
+  "home": "Home",
+  "about": "About Me",
+  "portfolio": "Portfolio",
+  "webb": "Web",
+  "allProjects": "All Projects",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "fullstack": "Fullstack",
+  "grafisk": "Graphic",
+  "contact": "Contact me",
+  "languages": {
+    "sv": "Swedish",
+    "en": "English"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Multi-language app",
+  "label": "Välj ett annat språk!",
+  "home": "Hem",
+  "about": "Om Mig",
+  "portfolio": "Portfolio",
+  "webb": "Webb",
+  "allProjects": "Alla projekt",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "fullstack": "Fullstack",
+  "grafisk": "Grafisk",
+  "contact": "Kontakta mig",
+  "languages": {
+    "sv": "Svenska",
+    "en": "Engelska"
+  }
+}
+
