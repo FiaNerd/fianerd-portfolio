@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons'
-import { useClickOutside } from '../hook/useClickOutSide'
+import { useClickOutside } from '../hook/useClickOutside'
 
 const SelectLanguage = () => {
   const { i18n, t } = useTranslation()
