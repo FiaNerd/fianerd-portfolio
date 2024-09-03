@@ -10,7 +10,7 @@ const getClassName = ({ isActive }: any) =>
   `link ${isActive ? 'active contact' : ''}`
 
 const Header = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('translation')
 
   return (
     <header className='mb-8 md:mb-12 h-[3.4em] py-2'>

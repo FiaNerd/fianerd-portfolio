@@ -17,7 +17,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   closeMenu,
 }) => {
   const [dropdown, setDropdown] = useState(false)
-  const { t } = useTranslation()
+  const { t } = useTranslation('translation')
 
   const handleMouseEnter = () => {
     setDropdown(true)
