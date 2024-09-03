@@ -19,10 +19,6 @@ const SelectLanguage = () => {
     setIsOpen(false)
   }
 
-  // Debug the translations
-  console.log('Swedish:', t('languages.sv')) // Should log "Svenska"
-  console.log('English:', t('languages.en')) // Should log "English"
-
   // Define language options with translations for dropdown
   const LANGUAGES = [
     { code: 'sv', label: t('languages.sv') },

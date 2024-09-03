@@ -7,7 +7,7 @@ import ThemeContext from '../../context/ThemeContext'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Footer from '../Footer'
-import { useClickOutside } from '../../hook/useClickOutSide'
+import { useClickOutside } from '../../hook/useClickOutside'
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
   `link ${isActive ? 'active contact' : ''}`
