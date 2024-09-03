@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useTranslation } from 'react-i18next'
-import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons'
-import { useClickOutside } from '../hook/useClickOutside'
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
+import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
 
 const SelectLanguage = () => {
-  const { i18n, t } = useTranslation()
-  const [isOpen, setIsOpen] = useState(false)
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language)
+  const { i18n, t } = useTranslation('translation');
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
-  const toggleDropdown = () => setIsOpen(!isOpen)
+  const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const ref = useClickOutside(() => setIsOpen(false))
+  // Close dropdown when clicking outside
+  const ref = useClickOutside(() => setIsOpen(false));
 
   const handleLanguageChange = (code: string) => {
-    i18n.changeLanguage(code)
-    setSelectedLanguage(code)
-    setIsOpen(false)
-  }
+    i18n.changeLanguage(code);
+    setSelectedLanguage(code);
+    setIsOpen(false);
+  };
 
   // Define language options with translations for dropdown
   const LANGUAGES = [
     { code: 'sv', label: t('languages.sv') },
     { code: 'en', label: t('languages.en') },
-  ]
+  ];
 
   // Display short language code in header button
   const selectedLanguageLabel =
-    LANGUAGES.find(
-      (lang) => lang.code === selectedLanguage
-    )?.code.toUpperCase() || 'Select'
+    LANGUAGES.find((lang) => lang.code === selectedLanguage)?.code.toUpperCase() || 'Select';
 
   return (
     <div className='dropdown-container z-90' ref={ref}>
@@ -58,7 +57,7 @@ const SelectLanguage = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SelectLanguage
+export default SelectLanguage;

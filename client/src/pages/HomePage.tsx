@@ -7,7 +7,8 @@ const HomePage = () => {
       <h1 className='md:text-4xl font-heading font-black'>
         {t('title')}
       </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perspiciatis alias a doloremque! Ipsam sed deserunt aliquam ab consectetur veniam fugiat quasi iste fugit, distinctio, et aperiam? Voluptatem, odit incidunt.</p>
+      <h2>{t('intro')}</h2>
+      <p>{t('bio')}</p>
     </>
   )
 }
