@@ -1,213 +1,39 @@
 /* Import Adobe Fonts styles or define font-face */
 @import url('https://use.typekit.net/bwg5bhb.css');
 
+/* Light mode variables */
 :root {
-  --bg-color: #fff5d7;
-  --heading-color: #2f1628;
-  --text-color: #1c2226;
-  --menu-bg-color: #fff5d7;
-  --btn-color: #ef5207;
-  /* --btn-color: #ff5e6c; */
-  --btn-text: #2f1628;
-  --bg-opacity: rgb(254, 245, 215, 0.5);
-  --white-text: #fff5d7;
-  --hover-color:   #ef5207;
-  --dropdown-hover:  rgb(255, 170, 171, 0.5);
-  
+  --color-bg-primary: #fff5d7;
+  --color-bg-secondary: #ffaaab;
+  --color-text-primary: #2f1628;
+  --color-text-secondary: #1c2226;
+  --color-btn-primary: #ef5207;
+  --color-btn-secondary: rgb(255, 170, 171, 0.5);
 }
-/* #feb300 */
-/* #ffaaab; */
-/* #ff5e6c */
+
 /* Dark mode variables */
-body.dark {
-  --bg-color: radial-gradient(
+.dark {
+  --color-bg-primary: radial-gradient(
     ellipse at 48.1% -49.6%,
     #060914 30%,
     #23092a 100.2% /* #1b063c 100.2% */
   );
-  --heading-color: #f3c36f;
-  --text-color: #fff5d7;
-  --menu-bg-color: #1f0926;
-  --btn-text: #fff5d7;
-  --btn-color: #e7a63b;
-  /* --btn-color: #c2205b; */
-  --bg-opacity: rgb(6 9 20 / 40%);
-  --white-text: #1f0926;
-  --hover-color: #e7a63b;
-  --dropdown-hover:#1f0926;
+  --color-bg-secondary: #3e1e4b;
+  --color-text-primary: #f3c36f;
+  --color-text-secondary: #fff5d7;
+  --color-btn-primary: #e7a63b;
+  --color-btn-secondary: #c2205b;
 }
 
 body {
+  background: var(--color-bg-primary);
   font-family: 'montserrat', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   font-style: normal;
-  color: var(--text-color);
-  background: var(--bg-color);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  --bg-color: #fff5d7;
-  --heading-color: #2f1628;
-  --text-color: #1c2226;
-}
-
-h1 {
-  font-family: 'playfair-display', serif;
-  color: var(--heading-color);
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-family: 'merriweather', sans-serif;
-  color: var(--text-color);
-}
-
-p {
-  font-family: 'source-sans-pro', 'sans-serif';
-  color: var(--text-color);
-  font-size: 1rem;
-}
-
-/* src/components/CustomDropdown.css */
-.dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-button {
-  background: none;
-  border: none;
-  padding: 0.5rem 0rem 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 100;
-}
-
-.icon-language:hover {
-  color: var(--hover-color);
-}
-.dropdown-arrow {
-  margin-left: 0.5rem;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: var(--menu-bg-color);
-  color: var(--heading-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-item-language {
-  padding: 0.5rem 1rem;
-  color: var(--btn-text);
-  cursor: pointer;
-}
-
-.dropdown-item-language:hover {
-  background: var(--btn-color);
-  color: var(--white-text)
-}
-
-.btn-menu {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5em;
-  margin: 0;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.contact {
-  border: 1px solid var(--btn-color);
-  color: var(--btn-color);
-  padding: 0.4em 0.8em;
-  cursor: pointer;
-}
-
-.contact:hover {
-  background: var(--btn-color);
-  border: 1px solid var(--btn-color);
-  color: var(--btn-text);
-  cursor: pointer;
-}
-
-.dropdown:hover {
-  background: var(--menu-bg-color);
-}
-
-/* Mobile Menu Styles */
-
-.mobile-menu {
-  overflow-y: auto;
-  position: relative;
-  background: var(--menu-bg-color);
-}
-
-.mobile-menu:hover {
-  background: var(--menu-bg-color);
-}
-
-.mobile-menu button {
-  top: 1em;
-  right: 1em;
-}
-
-.dropdown {
-  background: var(--menu-bg-color);
-  color: var(--text-color);
-  white-space: nowrap;
-  width: auto;
-}
-
-@media (min-width: 600px) {
-  .dropdown-button {
-    font-size: 0.875rem;
-    padding: 0.5rem;
-  }
-
-  .dropdown-menu {
-    width: auto; /* Adjust the width for mobile */
-  }
-  .contact {
-    border: 1px solid var(--btn-color);
-    color: var(--btn-color);
-    background-color: var(--bg-opacity);
-    padding: 0.4em 0.8em;
-    margin: 0.5em;
-    cursor: pointer;
-  }
-
-  .contact:hover {
-    border: 1px solid var(--btn-color);
-    color: var(--white-text);
-  }
-}
-
-@media (min-width: 1024px) {
-  .btn-profile {
-    color: var(--btn-text);
-  }
-
-  .btn-profile:hover {
-    background: var(--dropdown-hover);
-    color: var(--hover-color);
-  }
-
-  .btn-menu:hover{
-    color: var(--hover-color);
-  }
 }
 
 @tailwind base;

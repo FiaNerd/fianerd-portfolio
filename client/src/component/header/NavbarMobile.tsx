@@ -1,33 +1,41 @@
-import { useState, useEffect, useContext } from 'react'
-import { Sling as Hamburger } from 'hamburger-react'
-import { navRoutes } from '../../config/MenuItemsData'
-import MenuItems from './MenuItems'
-import { AnimatePresence, motion } from 'framer-motion'
-import ThemeContext from '../../context/ThemeContext'
-import { NavLink } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import Footer from '../Footer'
-import { useClickOutside } from '../../hook/useClickOutside'
+import { useState, useEffect, useContext } from 'react';
+import { Sling as Hamburger } from 'hamburger-react';
+import { navRoutes } from '../../config/MenuItemsData';
+import MenuItems from './MenuItems';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ThemeContext } from '../../context/ThemeContext'; // Ensure this path is correct
+import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import Footer from '../Footer';
+import { useClickOutside } from '../../hook/useClickOutside';
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
-  `link ${isActive ? 'active contact' : ''}`
+  `link ${isActive ? 'active contact' : ''}`;
 
 const NavbarMobile = () => {
-  const [showMenu, setShowMenu] = useState(false)
-  const { t } = useTranslation()
+  const [showMenu, setShowMenu] = useState(false);
+  const { t } = useTranslation();
 
-  const { currentTheme } = useContext(ThemeContext)
+  // Access the ThemeContext
+  const context = useContext(ThemeContext);
 
-  const ref = useClickOutside(() => setShowMenu(false))
+  if (!context) {
+    // Handle context not being available
+    throw new Error('ThemeContext must be used within a ThemeProvider');
+  }
+
+  const { currentTheme } = context;
+
+  const ref = useClickOutside(() => setShowMenu(false));
 
   useEffect(() => {
-    document.body.classList.toggle('dark', currentTheme === 'dark')
-  }, [currentTheme])
+    document.body.classList.toggle('dark', currentTheme === 'dark');
+  }, [currentTheme]);
 
   return (
     <div ref={ref} className='lg:hidden relative'>
       <div
-        className={`z-50  ${
+        className={`z-50 ${
           showMenu ? 'fixed left-[12em] top-0' : 'absolute '
         }`}
         style={{ right: '0', top: '1em' }}>
@@ -70,7 +78,7 @@ const NavbarMobile = () => {
         )}
       </AnimatePresence>
     </div>
-  )
-}
+  );
+};
 
-export default NavbarMobile
+export default NavbarMobile;
