@@ -1,5 +1,6 @@
 /* Import Adobe Fonts styles or define font-face */
 @import url('https://use.typekit.net/bwg5bhb.css');
+@import './global.css';
 
 /* Light mode variables */
 :root {
@@ -35,6 +36,10 @@ body {
   background-size: cover;
   height: 100%;
 }
+
+/* h1 {
+  @apply bg-primary text-primary  text-2xl font-black font-heading md:text-4xl; 
+} */
 
 @tailwind base;
 @tailwind components;
