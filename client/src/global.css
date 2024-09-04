@@ -1,15 +1,14 @@
-/* src/global.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   h1 {
-    @apply text-2xl text-primary font-bold font-heading mb-2 md:text-3xl lg:text-4xl;
+    @apply text-2xl text-text-primary font-bold font-heading mb-2 md:text-3xl lg:text-4xl;
   }
 
   h2 {
-    @apply text-xl text-secondary font-semibold mb-4  md:text-2xl lg:text-3xl;
+    @apply text-xl text-text-secondary font-semibold mb-4  md:text-2xl lg:text-3xl;
   }
 
   h3 {
@@ -17,7 +16,7 @@
   }
   
   p {
-    @apply text-base text-secondary mb-4 md:text-lg lg:text-xl;
+    @apply text-base text-text-secondary mb-4 md:text-lg lg:text-xl;
   }
 
 }

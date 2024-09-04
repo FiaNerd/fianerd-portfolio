@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <div className='bg-none flex flex-row place-content-evenly  items-center border-t p-2'>
+      <div className='bg-none flex flex-row place-content-evenly text-center border-t p-2'>
         <div className='flex place-content-evenly '>
           <NavLink
             to='https://github.com/FiaNerd'

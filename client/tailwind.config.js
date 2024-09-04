@@ -3,13 +3,11 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      backgroundColor: {
-        primary: 'var(--color-bg-primary)',
+      colors: {
+        'bg-primary': 'var(--color-bg-primary)',
         'bg-secondary': 'var(--color-bg-secondary)',
-      },
-      textColor:{
-        primary: 'var(--color-text-primary)',
-        secondary: 'var(--color-text-secondary)',
+        'text-primary': 'var(--color-text-primary)',
+        'text-secondary': 'var(--color-text-secondary)',
         'btn-primary': 'var(--color-btn-primary)',
         'btn-secondary': 'var(--color-btn-secondary)',
       },

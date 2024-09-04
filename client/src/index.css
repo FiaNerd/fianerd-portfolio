@@ -5,7 +5,8 @@
 /* Light mode variables */
 :root {
   --color-bg-primary: #fff5d7;
-  --color-bg-secondary: #ffaaab;
+  --color-bg-secondary: #fff5d7;
+  /* --color-bg-secondary: #ffaaab; */
   --color-text-primary: #2f1628;
   --color-text-secondary: #1c2226;
   --color-btn-primary: #ef5207;
@@ -19,7 +20,7 @@
     #060914 30%,
     #23092a 100.2% /* #1b063c 100.2% */
   );
-  --color-bg-secondary: #3e1e4b;
+  --color-bg-secondary: #23092a;
   --color-text-primary: #f3c36f;
   --color-text-secondary: #fff5d7;
   --color-btn-primary: #e7a63b;
