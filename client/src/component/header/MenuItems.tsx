@@ -1,14 +1,15 @@
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
-import DropdownMenu from './DropdownMenu'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useTranslation } from 'react-i18next'
-import { Route } from '../../config/MenuItemsData'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
+import { Route } from '../../config/MenuItemsData';
+import { useClickOutside } from '../../hook/useClickOutside'; // Import the custom hook
+import DropdownMenu from './DropdownMenu';
 
 interface MenuItemsProps {
-  items: Route
-  depthLevel: number
-  closeMenu: () => void
+  items: Route;
+  depthLevel: number;
+  closeMenu: () => void;
 }
 
 const MenuItems: React.FC<MenuItemsProps> = ({
@@ -16,26 +17,32 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   depthLevel,
   closeMenu,
 }) => {
-  const [dropdown, setDropdown] = useState(false)
-  const { t } = useTranslation('translation')
-
+  const [dropdown, setDropdown] = useState(false);
+  const { t } = useTranslation('translation');
+  
+  // Create a ref using the custom hook
+  const ref = useClickOutside<HTMLLIElement>(() => {
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      setDropdown(false);
+    }
+  })
   const handleMouseEnter = () => {
-    setDropdown(true)
-  }
+    setDropdown(true);
+  };
 
   const handleMouseLeave = () => {
-    setDropdown(false)
-  }
+    if (!items.subMenu || items.subMenu.length === 0) {
+      setDropdown(false);
+    }
+  };
 
   const handleButtonClick = () => {
-    // Toggle dropdown if the item has a submenu
     if (items.subMenu && items.subMenu.length > 0) {
-      setDropdown((prev) => !prev)
+      setDropdown((prev) => !prev);
     } else {
-      // Close the entire menu
-      closeMenu()
+      closeMenu();
     }
-  }
+  };
 
   const renderLinkOrButton = () => {
     if (items.title.toLowerCase() === 'kontakt') {
@@ -45,7 +52,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           className='btn-contact px-4 py-2 font-heading tracking-wider text-xl rounded-md'>
           {t(items.title)}
         </button>
-      )
+      );
     } else {
       return (
         <NavLink
@@ -54,21 +61,22 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           onClick={closeMenu}>
           {t(items.title)}
         </NavLink>
-      )
+      );
     }
-  }
+  };
 
   return (
-    <ul className='btn-portfolio text-text-primary flex items-center space-x-4 hover:text-text-secondary'> {/* Flexbox for alignment */}
-      <li
-        className='relative group '
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}>
+    <ul
+      className='btn-portfolio text-text-primary flex items-center space-x-4 hover:text-text-secondary'
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <li ref={ref} className='relative group'>
         {items.subMenu && items.subMenu.length > 0 ? (
           <>
             <button
               onClick={handleButtonClick}
-              className={`btn-menu px-4 py-4 text-xl font-heading tracking-wider`}>
+              className='btn-menu px-4 py-4 text-xl font-heading tracking-wider'>
               {t(items.title)}{' '}
               {items.icon && (
                 <FontAwesomeIcon
@@ -89,7 +97,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         )}
       </li>
     </ul>
-  )
-}
+  );
+};
 
-export default MenuItems
+export default MenuItems;

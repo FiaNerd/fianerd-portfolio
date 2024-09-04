@@ -1,13 +1,13 @@
-import { useState, useEffect, useContext } from 'react';
-import { Sling as Hamburger } from 'hamburger-react';
-import { navRoutes } from '../../config/MenuItemsData';
-import MenuItems from './MenuItems';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ThemeContext } from '../../context/ThemeContext'; // Ensure this path is correct
-import { NavLink } from 'react-router-dom';
+import { Sling as Hamburger } from 'hamburger-react';
+import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Footer from '../Footer';
+import { NavLink } from 'react-router-dom';
+import { navRoutes } from '../../config/MenuItemsData';
+import { ThemeContext } from '../../context/ThemeContext'; // Ensure this path is correct
 import { useClickOutside } from '../../hook/useClickOutside';
+import Footer from '../Footer';
+import MenuItems from './MenuItems';
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
   `link ${isActive ? 'active contact' : ''}`;
@@ -26,7 +26,7 @@ const NavbarMobile = () => {
 
   const { currentTheme } = context;
 
-  const ref = useClickOutside(() => setShowMenu(false));
+  const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
 
   useEffect(() => {
     document.body.classList.toggle('dark', currentTheme === 'dark');

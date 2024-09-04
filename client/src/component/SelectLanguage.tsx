@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useTranslation } from 'react-i18next';
 import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
 
 const SelectLanguage = () => {
@@ -12,7 +12,7 @@ const SelectLanguage = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   // Close dropdown when clicking outside
-  const ref = useClickOutside(() => setIsOpen(false));
+  const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
 
   const handleLanguageChange = (code: string) => {
     i18n.changeLanguage(code);
