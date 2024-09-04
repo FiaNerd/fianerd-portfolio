@@ -2,36 +2,30 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    colors: {
-      // LIGHT
-      white: '#efe5df',
-      black: '#1c2226',
-      'dark-red': '#2f1628',
-      pink: '#ffaaab',
-      'coral-pink': '#ff5e6c',
-      yellow: '#feb300',
-
-      // DARK
-      dark: '#42383f',
-      'dark-purple': '#1b063c',
+    extend: {
+      colors: {
+        'bg-primary': 'var(--color-bg-primary)',
+        'bg-secondary': 'var(--color-bg-secondary)',
+        'text-primary': 'var(--color-text-primary)',
+        'text-secondary': 'var(--color-text-secondary)',
+        'btn-primary': 'var(--color-btn-primary)',
+        'btn-secondary': 'var(--color-btn-secondary)',
+      },
+      fontFamily: {
+        heading: ['playfair-display', 'serif'],
+        'sub-heading': ['merriweather', 'sans-serif'],
+        paragraph: ['source-sans-pro', 'sans-serif'],
+      },
+      breakpoints: {
+        sm: '576px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        xxl: '1440px',
+        custom: '703px',
+      },
     },
-    fontFamily: {
-      heading: ['playfair-display', 'serif'],
-      'sub-heading': ['merriweather', 'sans-serif'],
-      paragraph: ['source-sans-pro', 'sans-serif'],
-      // 'sub-heading': ['bebas-neue-pro', 'sans-serif'],
-      // 'sub-heading': ['cormorant-garamond', 'serif'],
-    },
-    breakpoints: {
-      sm: '576px',
-      md: '768px',
-      lg: '992px',
-      xl: '1200px',
-      xxl: '1440px',
-      custom: '703px',
-    },
-    extend: {},
   },
   plugins: [],
-  darkMode: 'class',
+  darkMode: 'class', // Enable dark mode support
 }

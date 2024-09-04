@@ -21,7 +21,7 @@ const DropdownMenu = ({
     <ul
       className={`dropdown ${dropdownClass} ${dropdown ? 'block' : 'hidden'} ${
         newDepthLevel > 1 ? 'left-full top-0' : 'left-0 top-full'
-      } lg:absolute no-wrap lg:shadow-md rounded-sm lg:mt-0 ml-6 lg:ml-0 `}>
+      } lg:absolute no-wrap bg-bg-secondary align-middle py-2 lg:shadow-md rounded-sm lg:mt-0 ml-6 lg:ml-0 `}>
       {submenus.map((submenu, index) => (
         <li key={index} className='btn-profile relative'>
           <MenuItems
