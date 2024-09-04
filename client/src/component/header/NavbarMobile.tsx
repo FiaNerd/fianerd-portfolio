@@ -14,7 +14,7 @@ const getClassName = ({ isActive }: { isActive: boolean }) =>
 
 const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
 
   // Access the ThemeContext
   const context = useContext(ThemeContext);
@@ -70,7 +70,7 @@ const NavbarMobile = () => {
               <div className="flex w-10/12 mx-auto border rounded-sm border-btn-primary mb-8 p-2">
               <NavLink
                 to='/contact'
-                className={`${getClassName} cursor mx-auto text-btn-primary text-align  lg:mb-0`}>
+                className={`${getClassName} cursor mx-auto text-btn-primary text-align lg:mb-0`}>
                 {t('contact')}{' '}
               </NavLink>
 

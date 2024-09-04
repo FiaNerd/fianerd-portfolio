@@ -34,11 +34,11 @@ const SelectLanguage = () => {
     <div className='dropdown-container z-90' ref={ref}>
       {/* Dropdown button showing the short code */}
       <button
-        className='dropdown-button text-md icon-language'
+        className='dropdown-button text-md icon-language text-text-primary hover:text-btn-primary'
         onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={faGlobe} className='text-[1.60em] pr-2' />
+        <FontAwesomeIcon icon={faGlobe} className='pr-2' />
+        <span className='dropdown-arrow text-md'>
         {selectedLanguageLabel}
-        <span className='dropdown-arrow'>
           <FontAwesomeIcon icon={faCaretDown} />
         </span>
       </button>

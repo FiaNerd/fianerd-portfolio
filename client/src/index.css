@@ -21,7 +21,9 @@
     #23092a 100.2% /* #1b063c 100.2% */
   );
   --color-bg-secondary: #23092a;
+  /* --color-text-primary: rgb(255, 245, 215, 0.8); */
   --color-text-primary: #f3c36f;
+  /* --color-text-primary: #684257; */
   --color-text-secondary: #fff5d7;
   --color-btn-primary: #e7a63b;
   --color-btn-secondary: #c2205b;

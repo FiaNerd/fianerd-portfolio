@@ -59,7 +59,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   }
 
   return (
-    <ul className='btn-portfolio flex items-center space-x-4 '> {/* Flexbox for alignment */}
+    <ul className='btn-portfolio text-text-primary flex items-center space-x-4 hover:text-text-secondary'> {/* Flexbox for alignment */}
       <li
         className='relative group '
         onMouseEnter={handleMouseEnter}

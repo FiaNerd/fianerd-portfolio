@@ -13,7 +13,7 @@ const ThemeSwitch: React.FC = () => {
   const { currentTheme, toggleTheme } = themeContext;
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center text-text-primary hover:text-btn-primary">
       <button
         data-testid="switch-theme-btn"
         onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}

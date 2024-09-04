@@ -34,7 +34,7 @@ const Header = () => {
           </div>
           <NavLink
             to='/contact'
-            className={`${getClassName} contact hidden md:block rounded-sm text-lg`}>
+            className={`${getClassName} hidden md:block border border px-4 py-2 rounded-sm border-btn-primary text-btn-primary text-lg`}>
             {t('contact')}{' '}
           </NavLink>
           <NavbarMobile />

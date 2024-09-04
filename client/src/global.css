@@ -8,7 +8,7 @@
   }
 
   h2 {
-    @apply text-xl text-text-secondary font-semibold mb-4  md:text-2xl lg:text-3xl;
+    @apply text-lg text-text-secondary font-semibold mb-4  lg:text-2xl;
   }
 
   h3 {
