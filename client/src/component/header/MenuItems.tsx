@@ -67,7 +67,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
 
   return (
     <ul
-      className='btn-portfolio text-text-primary flex items-center space-x-4 hover:text-text-secondary'
+      className='btn-portfolio text-text-primary flex items-center space-x-4hover:text-text-secondary'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
