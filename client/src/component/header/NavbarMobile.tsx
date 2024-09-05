@@ -1,42 +1,42 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Sling as Hamburger } from 'hamburger-react';
-import { useContext, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
-import { navRoutes } from '../../config/MenuItemsData';
-import { ThemeContext } from '../../context/ThemeContext'; // Ensure this path is correct
-import { useClickOutside } from '../../hook/useClickOutside';
-import Footer from '../Footer';
-import MenuItems from './MenuItems';
+import { AnimatePresence, motion } from 'framer-motion'
+import { Sling as Hamburger } from 'hamburger-react'
+import { useContext, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
+import { navRoutes } from '../../config/MenuItemsData'
+import { ThemeContext } from '../../context/ThemeContext' // Ensure this path is correct
+import { useClickOutside } from '../../hook/useClickOutside'
+import Footer from '../Footer'
+import MenuItems from './MenuItems'
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
-  `link ${isActive ? 'active contact' : ''}`;
+  `link ${isActive ? 'active contact' : ''}`
 
 const NavbarMobile = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const { t } = useTranslation('translation');
+  const [showMenu, setShowMenu] = useState(false)
+  const { t } = useTranslation('translation')
 
   // Access the ThemeContext
-  const context = useContext(ThemeContext);
+  const context = useContext(ThemeContext)
 
   if (!context) {
     // Handle context not being available
-    throw new Error('ThemeContext must be used within a ThemeProvider');
+    throw new Error('ThemeContext must be used within a ThemeProvider')
   }
 
-  const { currentTheme } = context;
+  const { currentTheme } = context
 
-  const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
+  const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false))
 
   useEffect(() => {
-    document.body.classList.toggle('dark', currentTheme === 'dark');
-  }, [currentTheme]);
+    document.body.classList.toggle('dark', currentTheme === 'dark')
+  }, [currentTheme])
 
   return (
     <div ref={ref} className='lg:hidden relative'>
       <div
         className={`z-50 ${
-          showMenu ? 'fixed left-[12em] top-0 text-btn-primary' : 'absolute '
+          showMenu ? 'fixed left-[12em] top-0 text-accent-primary' : 'absolute '
         }`}
         style={{ right: '0', top: '1em' }}>
         <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
@@ -67,22 +67,20 @@ const NavbarMobile = () => {
               </ul>
             </div>
 
-              <div className="flex w-10/12 mx-auto border rounded-sm border-btn-primary mb-8 p-2">
+            <div className='flex w-10/12 mx-auto border rounded-sm border-accent-primary hover:border-btn-primary hover:bg-accent-primary mb-8 p-2'>
               <NavLink
                 to='/contact'
-                className={`${getClassName} cursor mx-auto text-btn-primary text-align lg:mb-0`}>
+                className={`${getClassName} cursor mx-auto text-accent-primary hover:text-bg-primary text-align lg:mb-0`}>
                 {t('contact')}{' '}
               </NavLink>
-
-              </div>
-
+            </div>
 
             <Footer />
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
-export default NavbarMobile;
+export default NavbarMobile

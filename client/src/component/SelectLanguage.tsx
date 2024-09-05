@@ -1,55 +1,57 @@
-import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
+import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useClickOutside } from '../hook/useClickOutside' // Ensure this hook is defined properly
 
 const SelectLanguage = () => {
-  const { i18n, t } = useTranslation('translation');
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+  const { i18n, t } = useTranslation('translation')
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language)
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => setIsOpen(!isOpen)
 
   // Close dropdown when clicking outside
-  const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
+  const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false))
 
   const handleLanguageChange = (code: string) => {
-    i18n.changeLanguage(code);
-    setSelectedLanguage(code);
-    setIsOpen(false);
-  };
+    i18n.changeLanguage(code)
+    setSelectedLanguage(code)
+    setIsOpen(false)
+  }
 
   // Define language options with translations for dropdown
   const LANGUAGES = [
     { code: 'sv', label: t('languages.sv') },
     { code: 'en', label: t('languages.en') },
-  ];
+  ]
 
   // Display short language code in header button
   const selectedLanguageLabel =
-    LANGUAGES.find((lang) => lang.code === selectedLanguage)?.code.toUpperCase() || 'Select';
+    LANGUAGES.find(
+      (lang) => lang.code === selectedLanguage
+    )?.code.toUpperCase() || 'Select'
 
   return (
     <div className='dropdown-container z-90' ref={ref}>
       {/* Dropdown button showing the short code */}
       <button
-        className='dropdown-button text-md icon-language text-text-primary hover:text-btn-primary'
+        className='dropdown-button text-md icon-language mb-2 text-text-primary hover:text-accent-secondary'
         onClick={toggleDropdown}>
         <FontAwesomeIcon icon={faGlobe} className='pr-2' />
-        <span className='dropdown-arrow text-md'>
-        {selectedLanguageLabel}
+        <span className='dropdown-arrow text-[1.3rem]'>
+          {selectedLanguageLabel}
           <FontAwesomeIcon icon={faCaretDown} />
         </span>
       </button>
 
       {/* Dropdown menu showing full language names */}
       {isOpen && (
-        <div className='dropdown-menu'>
+        <div className='dropdown-menu absolute'>
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
-              className='dropdown-item-language text-sm'
+              className='dropdown-item-language bg-bg-secondary text-[1.2rem] text-text-primary hover:text-accent-secondary py-1 px-2'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </div>
@@ -57,7 +59,7 @@ const SelectLanguage = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default SelectLanguage;
+export default SelectLanguage

@@ -13,11 +13,11 @@ const ThemeSwitch: React.FC = () => {
   const { currentTheme, toggleTheme } = themeContext;
 
   return (
-    <div className="flex items-center text-text-primary hover:text-btn-primary">
+    <div className="flex items-center">
       <button
         data-testid="switch-theme-btn"
         onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
-        className="icon-language rounded-full focus:outline-none flex items-center"
+        className="icon-language rounded-full focus:outline-none flex items-center  text-text-primary hover:text-accent-secondary"
       >
         <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}

@@ -27,7 +27,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   return (
     <ul className={dropdownClass}>
       {submenus.map((submenu, index) => (
-        <li key={index} className='btn-profile relative'>
+        <li key={index} className='btn-profile relative '>
           <MenuItems
             items={submenu}
             depthLevel={newDepthLevel}

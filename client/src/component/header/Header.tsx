@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className='mb-8 md:mb-12 h-[3.4em] py-2'>
-      <nav className='flex flex-row font-heading items-centerlg:border-b justify-between sticky top-0 left-0 right-0'>
+      <nav className='flex flex-row font-heading items-center lg:border-b justify-between sticky top-0 left-0 right-0'>
         <NavLink to='/'>
           <div className='flex flex-col'>
             <h1 className='text-lg md:text-4xl font-bold'>[ FIA NERD ]</h1>
@@ -34,7 +34,7 @@ const Header = () => {
           </div>
           <NavLink
             to='/contact'
-            className={`${getClassName} hidden md:block border  px-4 py-2 rounded-sm border-accent-primary text-accent-primary hover:bg-accent-primary hover:border-accent-primary hover:text-bg-primary text-lg`}>
+            className={`${getClassName} hidden md:block border px-4 py-2 rounded-sm border-accent-primary text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-text-primary text-lg`}>
             {t('contact')}{' '}
           </NavLink>
           <NavbarMobile />
