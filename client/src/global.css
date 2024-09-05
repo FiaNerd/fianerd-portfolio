@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-2xl text-text-primary font-bold font-heading mb-2 md:text-3xl lg:text-4xl;
+    @apply text-2xl text-text-secondary font-bold font-heading mb-2 md:text-3xl lg:text-4xl;
   }
 
   h2 {

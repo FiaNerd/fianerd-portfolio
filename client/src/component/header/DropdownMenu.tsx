@@ -21,7 +21,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   
   // Set a responsive width that adapts to text size and prevent overlap
   const dropdownClass = `dropdown ${marginLeftClass} ${dropdown ? 'block' : 'hidden'} ${
-    newDepthLevel > 1 ? 'left-full top-0' : 'left-0 top-full'
+    newDepthLevel > 1 ? 'left-[4.6em] top-0' : 'left-0 top-full'
   } lg:absolute bg-bg-secondary py-2 px-4 lg:shadow-md  ml-4 rounded-sm lg:mt-0 w-max max-w-[20em] z-30`;
 
   return (

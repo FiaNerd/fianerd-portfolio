@@ -4,9 +4,9 @@
 
 /* Light mode variables */
 :root {
+  --color-accent-primary: #E94E77;
   --color-bg-primary: #fff5d7;
   --color-bg-secondary: #fff5d7;
-  /* --color-bg-secondary: #ffaaab; */
   --color-text-primary: #2f1628;
   --color-text-secondary: #1c2226;
   --color-btn-primary: #ef5207;
@@ -15,33 +15,22 @@
 
 /* Dark mode variables */
 .dark {
-  /* --color-bg-primary: radial-gradient(
-    farthest-corner at 40px 10px 40px,
-    #582d47 0%,
-    #301533 50%,
-    #170626 100%
-  ); */
-
-  /* background: rgb(88,45,71); */
-  /* --color-bg-primary: linear-gradient(166deg, rgb(49, 17, 57) 0%, rgba(48,21,51,1) 36%, rgba(6,9,20,1) 100%); */
-  /* --color-bg-primary: radial-gradient(
-    ellipse at 48.1% -49.6%,
-    rgba(88,45,71,1) 0%, rgba(48,21,51,1) 36%, rgba(23,6,38,1) 100%); */
-  /* --color-bg-primary: linear-gradient(160deg,  rgb(64, 26, 48) 0%, rgba(48,21,51,1) 26%, #060914 100%); */
- 
-
+  --color-accent-primary: #E94E77;
+  --color-accent-secondary: #4FC3F7;
   --color-bg-primary: radial-gradient(
     ellipse at 88.1% 69.6%,
     #060914 40%,
-    #23092a 100.2% 
+    #23092a 100.2%
   );
   --color-bg-secondary: #23092a;
-  /* --color-text-primary: rgb(255, 245, 215, 0.8); */
-  --color-text-primary: #f3c36f;
-  /* --color-text-primary: #684257; */
+  --color-text-primary: #F5F5F5;
   --color-text-secondary: #fff5d7;
-  --color-btn-primary: #e7a63b;
-  --color-btn-secondary: #c2205b;
+  --color-btn-primary: #8BC34A;
+  --color-btn-secondary: #e7a63b;
+  --color-primary: #00BCD4;
+  --color-secondary: #9C27B0;
+  --color-hover-primary: #FF4081;
+  --color-hover-secondary: #00E676;
 }
 
 body {
@@ -55,10 +44,86 @@ body {
   height: 100%;
 }
 
-/* h1 {
-  @apply bg-primary text-primary  text-2xl font-black font-heading md:text-4xl; 
-} */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Import Adobe Fonts styles or define font-face */
+/* @import url('https://use.typekit.net/bwg5bhb.css');
+@import './global.css'; */
+
+/* Light mode variables */
+/* :root {
+  --color-accent-primary: #E94E77;
+  --color-bg-primary: #fff5d7;
+  --color-bg-secondary: #fff5d7; */
+  /* --color-bg-secondary: #ffaaab; */
+  /* --color-text-primary: #2f1628;
+  --color-text-secondary: #1c2226;
+  --color-btn-primary: #ef5207;
+  --color-btn-secondary: rgb(255, 170, 171, 0.5);
+} */
+
+/* Dark mode variables */
+/* .dark {
+  --color-accent-primary: #E94E77;
+  --color-accent-secondary: #4FC3F7;
+  --color-bg-primary: radial-gradient(
+    ellipse at 88.1% 69.6%,
+    #060914 40%,
+    #23092a 100.2% 
+  ); */
+  /* --color-bg-secondary:     #23092a; */
+  /* --color-text-primary: rgb(255, 245, 215, 0.8); */
+  /* --color-text-primary: ##F5F5F5; */
+  /* --color-text-primary: #f3c36f; */
+  /* --color-text-primary: #684257; */
+  /* --color-text-secondary: #fff5d7;
+  --color-btn-primary: #8BC34A;
+  --color-btn-secondary: #FF5722; */
+  /* --color-btn-secondary: #FF5722; */
+  /* --color-primary: #00BCD4;
+  --color-secondary: #9C27B0;
+  --color-hover-primary: #FF4081;
+  --color-hover-secondary: #00E676 */
+  /* --color-text-secondary: #fff5d7;
+  --color-btn-primary: #e7a63b;
+  --color-btn-secondary: #c2205b; */
+/* } */
+
+/* body {
+  background: var(--color-bg-primary);
+  font-family: 'montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+} */
+
+/* h1 {
+  @apply bg-primary text-primary  text-2xl font-black font-heading md:text-4xl; 
+} */
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+ /* --color-bg-primary: radial-gradient(
+    farthest-corner at 40px 10px 40px,
+    #582d47 0%,
+    #301533 50%,
+    #170626 100%
+  ); */
+
+  /* background: rgb(88,45,71); */
+  /* --color-bg-primary: linear-gradient(166deg, rgb(49, 17, 57) 0%, rgba(48,21,51,1) 36%, rgba(6,9,20,1) 100%); */
+  /* --color-bg-primary: radial-gradient(
+    ellipse at 48.1% -49.6%,
+    rgba(88,45,71,1) 0%, rgba(48,21,51,1) 36%, rgba(23,6,38,1) 100%); */
+  /* --color-bg-primary: linear-gradient(160deg,  rgb(64, 26, 48) 0%, rgba(48,21,51,1) 26%, #060914 100%); */
+
+ 
