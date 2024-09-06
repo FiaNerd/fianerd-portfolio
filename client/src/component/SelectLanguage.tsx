@@ -51,7 +51,7 @@ const SelectLanguage = () => {
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
-              className='dropdown-item-language bg-bg-secondary text-[1.2rem] text-text-primary hover:text-accent-secondary py-1 px-2'
+              className='dropdown-item-language bg-bg-secondary text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary py-1 px-2'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </div>

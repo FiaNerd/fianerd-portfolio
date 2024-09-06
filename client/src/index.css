@@ -8,16 +8,18 @@
   --color-accent-secondary: #e94e779c;
   --color-bg-primary: #fff5d7;
   --color-bg-secondary: #fff5d7;
-  --color-text-primary: #2f1628;
-  --color-text-secondary: #1c2226;
+  --color-text-primary: #5e203c;
+  --color-text-secondary: #1c2022;
   --color-btn-primary: #e94e779c;
   /* --color-btn-primary: #ef5207; */
   --color-btn-secondary: rgb(255, 170, 171, 0.5);
+  --color-hover-primary: #ff4081;
+  --color-hover-text: #fff5d7;
 }
 
 /* Dark mode variables */
 .dark {
-  --color-accent-primary: #e94e77;
+  --color-accent-primary: #ff2f67;
   --color-accent-secondary: #d1748d;
   --color-bg-primary: radial-gradient(
     ellipse at 88.1% 69.6%,
@@ -33,7 +35,8 @@
   --color-primary: #00bcd4;
   --color-secondary: #9c27b0;
   --color-hover-primary: #ff4081;
-  --color-hover-secondary: #00e676;
+  --color-hover-text: #cecbc5;
+  /* --color-hover-text: #00e676; */
 }
 
 body {

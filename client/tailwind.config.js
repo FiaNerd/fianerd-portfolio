@@ -15,7 +15,7 @@ export default {
         'primary': 'var(--color-primary)',
         'secondary': 'var(--color-secondary)',
         'hover-primary': 'var(--color-hover-primary)',
-        'hover-secondary': 'var(--color-hover-secondary)',
+        'hover-text': 'var(--color-hover-text)'
       },
     //   colors: {
     //     // 'accent-primary': 'var(--color-accent-primary)',
