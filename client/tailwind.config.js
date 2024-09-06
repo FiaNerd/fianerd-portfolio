@@ -8,6 +8,7 @@ export default {
         'accent-secondary': 'var(--color-accent-secondary)',
         'bg-primary': 'var(--color-bg-primary)',
         'bg-secondary': 'var(--color-bg-secondary)',
+        'text-heading': 'var(--color-text-heading)',
         'text-primary': 'var(--color-text-primary)',
         'text-secondary': 'var(--color-text-secondary)',
         'btn-primary': 'var(--color-btn-primary)',
