@@ -18,6 +18,9 @@ export default {
         'hover-primary': 'var(--color-hover-primary)',
         'hover-text': 'var(--color-hover-text)'
       },
+      zIndex: {
+        '100': '100',
+      },
     //   colors: {
     //     // 'accent-primary': 'var(--color-accent-primary)',
     //     // 'bg-primary': 'var(--color-bg-primary)',

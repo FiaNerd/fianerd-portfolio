@@ -36,7 +36,9 @@ const NavbarMobile = () => {
     <div ref={ref} className='lg:hidden relative'>
       <div
         className={`z-50 ${
-          showMenu ? 'fixed left-[12em] top-0 text-accent-primary' : 'absolute '
+          showMenu
+            ? 'fixed left-[12em] top-0 text-accent-primary'
+            : 'absolute text-text-primary'
         }`}
         style={{ right: '0', top: '1em' }}>
         <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
@@ -67,10 +69,10 @@ const NavbarMobile = () => {
               </ul>
             </div>
 
-            <div className='flex w-10/12 mx-auto border rounded-sm border-accent-primary hover:border-btn-primary hover:bg-accent-primary mb-8 p-2'>
+            <div className='flex w-10/12 mt-8 mb-8 p-2 mx-auto border rounded-sm border-accent-primary hover:border-accent-primary hover:bg-accent-primary'>
               <NavLink
                 to='/contact'
-                className={`${getClassName} cursor mx-auto text-accent-primary hover:text-bg-primary text-align lg:mb-0`}>
+                className={`${getClassName} cursor mx-auto text-[1.2rem] text-accent-primary text-align lg:mb-0 hover:text-hover-text`}>
                 {t('contact')}{' '}
               </NavLink>
             </div>

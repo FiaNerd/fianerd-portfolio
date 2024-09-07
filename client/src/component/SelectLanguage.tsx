@@ -33,10 +33,10 @@ const SelectLanguage = () => {
     )?.code.toUpperCase() || 'Select'
 
   return (
-    <div className='dropdown-container z-90' ref={ref}>
+    <div className='dropdown-container' ref={ref}>
       {/* Dropdown button showing the short code */}
       <button
-        className='dropdown-button text-md icon-language mb-2 text-text-primary hover:text-accent-secondary'
+        className='dropdown-button text-md icon-language mb-2 text-text-primary hover:text-accent-primary'
         onClick={toggleDropdown}>
         <FontAwesomeIcon icon={faGlobe} className='pr-2' />
         <span className='dropdown-arrow text-[1.3rem]'>
@@ -47,7 +47,7 @@ const SelectLanguage = () => {
 
       {/* Dropdown menu showing full language names */}
       {isOpen && (
-        <div className='dropdown-menu absolute'>
+        <div className='dropdown-menu absolute z-100'>
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}

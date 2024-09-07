@@ -17,7 +17,7 @@ const ThemeSwitch: React.FC = () => {
       <button
         data-testid="switch-theme-btn"
         onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
-        className="icon-language rounded-full focus:outline-none flex items-center  text-text-primary hover:text-accent-secondary"
+        className="icon-language rounded-full focus:outline-none flex items-center text-text-primary hover:text-accent-primary"
       >
         <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}
