@@ -2,7 +2,7 @@
   "title": "Multi-language app",
   "label": "Välj ett annat språk!",
   "home": "Hem",
-  "about": "Om Mig",
+  "about": "Bakom Tangenterna ",
   "portfolio": "Portfolio",
   "webb": "Webb",
   "allProjects": "Alla projekt",
@@ -10,6 +10,7 @@
   "backend": "Backend",
   "fullstack": "Fullstack",
   "grafisk": "Grafisk",
+  "news" : "Just Nu",
   "contact": "Kontakta mig",
   "languages": {
     "sv": "Svenska",

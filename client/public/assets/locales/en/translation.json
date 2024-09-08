@@ -2,7 +2,7 @@
   "title": "Multi-language app",
   "label": "Select another language!",
   "home": "Home",
-  "about": "About Me",
+  "about": "Behind the Keys",
   "portfolio": "Portfolio",
   "webb": "Web",
   "allProjects": "All Projects",
@@ -11,6 +11,7 @@
   "fullstack": "Fullstack",
   "grafisk": "Graphic",
   "contact": "Contact me",
+  "news" : "Right Now",
   "languages": {
     "sv": "Swedish",
     "en": "English"

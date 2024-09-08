@@ -66,8 +66,12 @@ export const navRoutes: Route[] = [
       },
     ],
   },
+  {
+    title: 'news',
+    url: '/',
+  },
   // {
-  //   title: 'kontakt', // Use translation key
+  //   title: 'contact', // Use translation key
   //   url: '/',
   // },
 ];

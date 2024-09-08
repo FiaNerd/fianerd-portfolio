@@ -1,8 +1,8 @@
-import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useClickOutside } from '../hook/useClickOutside' // Ensure this hook is defined properly
+import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
 
 const SelectLanguage = () => {
   const { i18n, t } = useTranslation('translation')
@@ -51,7 +51,7 @@ const SelectLanguage = () => {
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
-              className='dropdown-item-language bg-bg-secondary text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary py-1 px-2'
+              className='bg-bg-secondary text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary py-2 px-2'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </div>
