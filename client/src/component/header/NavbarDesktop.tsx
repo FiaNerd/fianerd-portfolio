@@ -10,7 +10,7 @@ const NavbarDesktop = () => {
   }
 
   return (
-    <nav className='hidden lg:flex lg:flex-row gap-8  items-baseline  justify-center py-2'>
+    <nav className='hidden lg:flex lg:flex-row gap-8 items-baseline  justify-center py-2'>
         {navRoutes.map((menu, index) => (
           <MenuItems
             key={index}

@@ -1,14 +1,18 @@
 import { useTranslation } from "react-i18next";
+import AboutMe from "../component/AboutMe";
 
 const HomePage = () => {
   const { t } = useTranslation('home');
   return (
     <>
+      <div className="text-center mb-8">
       <h1>
         {t('title')}
+        <span className="text-accent-primary ml-2">{t('question')}</span>
       </h1>
-      <h2>{t('intro')}</h2>
-      <p>{t('bio')}</p>
+      <h3>{t('intro')}</h3>
+      </div>
+      <AboutMe />
     </>
   );
 };

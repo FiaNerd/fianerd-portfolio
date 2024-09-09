@@ -16,7 +16,8 @@ export default {
         'primary': 'var(--color-primary)',
         'secondary': 'var(--color-secondary)',
         'hover-primary': 'var(--color-hover-primary)',
-        'hover-text': 'var(--color-hover-text)'
+        'hover-text': 'var(--color-hover-text)',
+        'bg-plate': 'var(--color-bg-plate)',
       },
       zIndex: {
         '100': '100',
