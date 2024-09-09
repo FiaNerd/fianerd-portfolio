@@ -1,9 +1,9 @@
-import NavbarDesktop from './NavbarDesktop'
-import { NavLink } from 'react-router-dom'
-import ThemeSwitch from '../ThemeSwitch'
-import NavbarMobile from './NavbarMobile'
-import SelectLanguage from '../SelectLanguage'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
+import SelectLanguage from '../SelectLanguage'
+import ThemeSwitch from '../ThemeSwitch'
+import NavbarDesktop from './NavbarDesktop'
+import NavbarMobile from './NavbarMobile'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getClassName = ({ isActive }: any) =>
@@ -34,7 +34,7 @@ const Header = () => {
           </div>
           <NavLink
             to='/contact'
-            className={`${getClassName} hidden md:block border px-4 py-2 rounded-sm border-accent-primary text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text text-lg`}>
+            className={`${getClassName} hidden md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text text-lg`}>
             {t('contact')}{' '}
           </NavLink>
           <NavbarMobile />

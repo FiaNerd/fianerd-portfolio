@@ -46,7 +46,8 @@ export default {
       fontFamily: {
         heading: ['playfair-display', 'serif'],
         'sub-heading': ['merriweather', 'sans-serif'],
-        paragraph: ['source-sans-pro', 'sans-serif'],
+        paragraph: ['Poppins', 'sans-serif'],
+        // paragraph: ['source-sans-pro', 'sans-serif'],
       },
       breakpoints: {
         sm: '576px',
