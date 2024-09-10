@@ -11,7 +11,7 @@ const AboutMe = () => {
      style={{ backgroundImage: "url('/assets/images/bg-img.jpg')" }}
  >       */}
   <div className="max-w-[1200px] mx-auto grid grid-cols-1 p-4 md:gap-10 md:grid-cols-2">
-        <img src="./public/assets/images/me.jpeg" alt="Fia nerd" className="" />
+        <img src="./public/assets/images/me.jpeg" alt="Fia nerd" />
         <div>
           <h2>{t("title")}</h2>
           <p>{t("intro")}</p>
