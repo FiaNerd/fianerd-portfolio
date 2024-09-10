@@ -2,8 +2,7 @@
   "title": "Multi-language app",
   "label": "Välj ett annat språk!",
   "home": "Hem",
-  "about:": "Om mig",
-  "about": "Vem är jag?",
+  "about": "Vem är jag<span class='text-accent-primary font-medium'>?</span>",
   "portfolio": "Portfolio",
   "webb": "Webb",
   "allProjects": "Alla projekt",
@@ -18,4 +17,3 @@
     "en": "Engelska"
   }
 }
-

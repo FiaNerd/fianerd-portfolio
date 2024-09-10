@@ -1,24 +1,23 @@
 export interface RouteAbout {
     title: string;
     url: string;
-    
 }
 
-export const NavRoutAbout: RouteAbout[] = [
+export const navRoutsAbout: RouteAbout[] = [
     {
-        'title': 'Me',
+        'title': 'me',
         'url': '/',
     },
     {
-        'title': 'Skills',
+        'title': 'skills',
         'url': '/',
     },
     {
-        'title': 'Experience',
+        'title': 'experience',
         'url': '/',
     },
     {
-        'title': 'Education',
+        'title': 'education',
         'url': '/',
     },
 ]

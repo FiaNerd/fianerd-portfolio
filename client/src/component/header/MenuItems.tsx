@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Route } from '../../config/MenuItemsData'
-import { useClickOutside } from '../../hook/useClickOutside' // Import the custom hook
+import { useClickOutside } from '../../hook/useClickOutside'; // Import the custom hook
 import DropdownMenu from './DropdownMenu'
 
 interface MenuItemsProps {
@@ -26,6 +26,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       setDropdown(false)
     }
   })
+
   const handleMouseEnter = () => {
     setDropdown(true)
   }
@@ -50,21 +51,21 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         <button
           onClick={handleButtonClick}
           className='px-4 py-2 font-heading tracking-wider text-xl rounded-md'>
-          {t(items.title)}
+          <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </button>
       )
     } else {
       return (
         <NavLink
           to={items.url}
-          className='px-4 py-[0.6em] font-heading tracking-wider text-xl'
+          className='px-4 py-[0.6em] font-heading tracking-wider text-xl hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary'
           onClick={closeMenu}>
-          {t(items.title)}
+          <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </NavLink>
       )
     }
   }
-
+  
   return (
     <ul
       className='text-text-primary hover:text-accent-primary flex items-center space-x-4 '
@@ -75,8 +76,8 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <>
             <button
               onClick={handleButtonClick}
-              className='px-4 py-[0.6em] text-xl font-heading tracking-wider '>
-              {t(items.title)}{' '}
+              className='px-4 py-[0.6em] text-xl font-heading tracking-wider     hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary'>
+              <Trans>{t(items.title)}</Trans>
               {items.icon && (
                 <FontAwesomeIcon
                   icon={items.icon}

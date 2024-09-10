@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import AboutMe from "../component/AboutMe";
+import AboutNav from "../component/AboutNav";
 
 const HomePage = () => {
   const { t } = useTranslation('home');
@@ -12,6 +13,7 @@ const HomePage = () => {
       </h1>
       <h3>{t('intro')}</h3>
       </div>
+      <AboutNav />
       <AboutMe />
     </>
   );

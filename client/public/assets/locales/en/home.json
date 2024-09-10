@@ -2,5 +2,8 @@
   "title": "THIS IS ME",
   "question": "?",
   "intro": "Behind the keyboard",
-  "bio": "lorem Ipsum"
+  "me": "Me",
+  "skills": "Skills",
+  "experience": "Experience",
+  "education": "Education"
 }
