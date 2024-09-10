@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { navRoutes } from '../../config/MenuItemsData'
-import { ThemeContext } from '../../context/ThemeContext' // Ensure this path is correct
+import { ThemeContext } from '../../context/ThemeContext'; // Ensure this path is correct
 import { useClickOutside } from '../../hook/useClickOutside'
 import Footer from '../Footer'
 import MenuItems from './MenuItems'

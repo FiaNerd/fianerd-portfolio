@@ -1,18 +1,20 @@
-import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import Header from './component/header/Header'
+import { Route, Routes } from 'react-router-dom'
 import Footer from './component/Footer'
+import Header from './component/header/Header'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
     <>
-      <div className='flex flex-col min-h-screen px-6'>
+      <div className='flex flex-col min-h-screen '>
         <Header />
-        <main className='flex-grow max-w-screen-xl w-full mx-auto mb-12'>
+        {/* <main className='flex-grow max-w-7xl  w-full mx-auto mb-12'> */}
+          <main>
           <Routes>
             <Route path='/' element={<HomePage />} />
           </Routes>
-        </main>
+            </main>
+        {/* </main> */}
         <Footer />
       </div>
     </>

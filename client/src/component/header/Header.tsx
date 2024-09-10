@@ -13,8 +13,8 @@ const Header = () => {
   const { t } = useTranslation('translation')
 
   return (
-    <header className='mb-8 md:mb-12 h-[3.4em] py-2'>
-      <nav className='flex flex-row font-heading items-center lg:border-b justify-between sticky top-0 left-0 right-0'>
+    <header className='w-full mb-8 py-2 bg-bg-plate px-4 md:mb-12'>
+      <nav className='max-w-[1600px] mx-auto flex flex-row font-heading items-center justify-between sticky top-0 left-0 right-0'>
         <NavLink to='/'>
           <div className='flex flex-col'>
             <h1 className='text-lg md:text-4xl font-bold'>[ FIA NERD ]</h1>
@@ -34,7 +34,7 @@ const Header = () => {
           </div>
           <NavLink
             to='/contact'
-            className={`${getClassName} hidden md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text text-lg`}>
+            className={`${getClassName} hidden text-lg md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text `}>
             {t('contact')}{' '}
           </NavLink>
           <NavbarMobile />
