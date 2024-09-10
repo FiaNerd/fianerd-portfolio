@@ -1,27 +1,29 @@
-
 interface SectionProps {
-    bgColor: string
+    bgColor?: string
     bgImage?: string
     className?: string
     children: React.ReactNode
-}
-const Section = ({bgColor, bgImage, className, children, ...props} : SectionProps) => {
-    const sectionStyle = {
-        backgroundColor: bgColor || 'transparent',
-        backgroundImage: bgImage ? `url(${bgImage})` : 'none',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }
+  }
+  
+  const Section = ({
+    bgColor = 'transparent', 
+    bgImage, 
+    className = '', 
+    children, 
+    ...props
+  }: SectionProps) => {
 
-  return (
-    <section 
-        className={`w-full ${className}`} 
-        style={sectionStyle} 
+  
+    return (
+        <section
+        className={`${bgColor} ${bgImage ? `bg-cover bg-center bg-no-repeat` : ''} ${className}`}
+        style={bgImage ? { backgroundImage: `url(${bgImage})` } : {}}
         {...props}
-    >
-            {children}
-    </section>
-  )
-}
-
-export default Section
+      >
+        {children}
+      </section>
+    )
+  }
+  
+  export default Section
+  
