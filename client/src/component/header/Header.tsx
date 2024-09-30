@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <>
       <HeroSection />
-    <header className="w-full sticky top-0 mb-8 py-2 px-4 md:mb-12 bg-color-bg-primary">
+    <header className="w-full sticky top-0 mb-8 py-2 px-4 md:mb-12 bg-bg-primary">
       <nav className='max-w-[1600px] mx-auto flex flex-row font-heading items-center justify-between sticky top-0 left-0 right-0'>
         <NavLink to='/'>
           <div className='flex flex-col'>
