@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import AboutMe from "../component/AboutMe";
-import AboutNav from "../component/AboutNav";
+import AboutMe from "../component/about/AboutMe";
+import AboutNav from "../component/about/AboutNav";
 
 const HomePage = () => {
   const { t } = useTranslation('home');

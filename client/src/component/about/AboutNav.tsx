@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import { navRoutsAbout } from "../config/MenuAboutMeData";
+import { navRoutsAbout } from "../../config/MenuAboutMeData";
 
 const AboutNav = () => {
     const { t } = useTranslation('home');

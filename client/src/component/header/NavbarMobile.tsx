@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { navRoutes } from '../../config/MenuItemsData'
 import { ThemeContext } from '../../context/ThemeContext'; // Ensure this path is correct
 import { useClickOutside } from '../../hook/useClickOutside'
-import Footer from '../Footer'
+import Footer from '../footer/Footer'
 import MenuItems from './MenuItems'
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>

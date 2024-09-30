@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import Button from "./Partial/Button";
-import Section from "./Partial/Section";
+import Button from "../Partial/Button";
+import Section from "../Partial/Section";
 
 const AboutMe = () => {
   const { t } = useTranslation("aboutMe");
