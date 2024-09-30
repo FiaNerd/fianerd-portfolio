@@ -7,7 +7,7 @@ const AboutNav = () => {
 
     return (
         <section className="">
-        <ul className="max-w-[1200px] flex flex-wrap gap-6 md:gap-20 justify-center mb-12">
+        <ul className="max-w-[1200px] flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12">
             {navRoutsAbout.map((item) => (
                 <li key={item.title} className="flex">
                     <NavLink
