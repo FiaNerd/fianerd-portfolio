@@ -29,21 +29,25 @@ const NavbarMobile = () => {
   const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false))
 
   useEffect(() => {
-    document.body.classList.toggle('dark', currentTheme === 'dark')
-  }, [currentTheme])
+    document.body.classList.toggle('dark', currentTheme === 'dark');
+
+    // Prevent background scrolling when the menu is open
+    if (showMenu) {
+      document.body.style.overflow = 'hidden'; 
+    } else {
+      document.body.style.overflow = ''; 
+    }
+
+    return () => {
+      document.body.style.overflow = ''; // Clean up on unmount
+    };
+  }, [currentTheme, showMenu]);
+
+
 
   return (
     <div ref={ref} className='lg:hidden relative'>
-      <div
-        className={`z-50 ${
-          showMenu
-            ? 'fixed left-[12em] top-0 text-accent-primary'
-            : 'absolute text-text-primary'
-        }`}
-        style={{ right: '0', top: '1em' }}>
-        <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
-      </div>
-
+  
       <AnimatePresence>
         {showMenu && (
           <motion.div
@@ -55,7 +59,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='mobile-menu bg-bg-secondary text-text-primary fixed left-0 right-0 top-0 bottom-0 sm:w-2/4 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
+            className='h-screen bg-bg-secondary text-text-primary fixed left-0 right-0 top-0 bottom-0 sm:w-2/4 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
             <div className='flex-grow overflow-y-auto mt-[3em]'>
               <ul className='grid gap-2'>
                 {navRoutes.map((menu, index) => (
@@ -81,6 +85,16 @@ const NavbarMobile = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <div
+        className={`z-50 ${
+          showMenu
+            ? 'fixed left-[12em] text-accent-primary'
+            : 'text-text-primary'
+        }`}
+        style={{ right: '0', top: '1em',}}>
+        <Hamburger toggled={showMenu} size={25} toggle={setShowMenu} />
+      </div>
+
     </div>
   )
 }

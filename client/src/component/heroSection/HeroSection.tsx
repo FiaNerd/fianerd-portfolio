@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next"
 function HeroSection() {
     const { t } = useTranslation('heroSection')
   return (
-    <div className="grid grid-cols-2 gap-4 bg-cover bg-[url('/assets/images/bg-light-img.jpg')] dark:bg-[url('/assets/images/bg-dark-img.jpg')] ">
-       <div className="flex flex-col justify-center mx-auto p-12 gap-8">
+    <div className="grid grid-rows-1 md:grid-cols-2 bg-cover bg-[url('/assets/images/bg-light-img.jpg')] dark:bg-[url('/assets/images/bg-dark-img.jpg')] ">
+       <div className="flex flex-col justify-center mx-auto p-4 md:p-12 gap-4">
        <h1>{t('title')}</h1>
        <h3>{t('subtitle')}</h3>
         </div>
