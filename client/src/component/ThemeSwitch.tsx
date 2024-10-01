@@ -21,7 +21,7 @@ const ThemeSwitch: React.FC = () => {
       >
         <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}
-          className="items-center text-md"
+          className="items-center text-[1.4rem]"
         />
       </button>
     </div>

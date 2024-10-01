@@ -38,8 +38,8 @@ const SelectLanguage = () => {
       <button
         className='dropdown-button text-md icon-language mb-2 text-text-primary hover:text-accent-primary'
         onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={faGlobe} className='pr-2' />
-        <span className='dropdown-arrow text-[1.3rem]'>
+        <FontAwesomeIcon icon={faGlobe} className='pr-2 text-[1.4rem]' />
+        <span className='dropdown-arrow text-[1.1rem]'>
           {selectedLanguageLabel}
           <FontAwesomeIcon icon={faCaretDown} />
         </span>
