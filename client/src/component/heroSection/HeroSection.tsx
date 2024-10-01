@@ -1,14 +1,19 @@
 import { useTranslation } from "react-i18next"
+import ResponsiveHeroImage from "./ResponsiveHeroImage"
 
 function HeroSection() {
-    const { t } = useTranslation('heroSection')
+  const { t } = useTranslation('heroSection')
+
+  // bg-[url('/assets/images/bg-light-img.jpg')] dark:bg-[url('/assets/images/bg-dark-img.jpg')]
   return (
-    <div className="grid grid-rows-1 md:grid-cols-2 bg-cover bg-[url('/assets/images/bg-light-img.jpg')] dark:bg-[url('/assets/images/bg-dark-img.jpg')] ">
-       <div className="flex flex-col justify-center mx-auto p-4 md:p-12 gap-4">
-       <h1>{t('title')}</h1>
-       <h3>{t('subtitle')}</h3>
-        </div>
-        <img src="/assets/images/heroImage_desktop.png" alt="hero image Sofia" className="bg-cover w-full"/>
+    <div className="w-screen h-auto  bg-center md:grid-cols-2 object-cover mb-12">
+      <div className="flex flex-col justify-center mx-auto">
+        {/* <h1 className="text-3xl md:text-5xl font-bold">{t('title')}</h1>
+        <h3 className="text-xl md:text-3xl">{t('subtitle')}</h3> */}
+      </div>
+
+      <ResponsiveHeroImage />
+
     </div>
   )
 }
