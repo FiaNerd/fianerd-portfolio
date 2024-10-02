@@ -22,30 +22,11 @@ export default {
       zIndex: {
         '100': '100',
       },
-    //   colors: {
-    //     // 'accent-primary': 'var(--color-accent-primary)',
-    //     // 'bg-primary': 'var(--color-bg-primary)',
-    //     // 'bg-secondary': 'var(--color-bg-secondary)',
-    //     // 'text-primary': 'var(--color-text-primary)',
-    //     // 'text-secondary': 'var(--color-text-secondary)',
-    //     // 'btn-primary': 'var(--color-btn-primary)',
-    //     // 'btn-secondary': 'var(--color-btn-secondary)',
-
-    //     'accent-secondary': 'var(--color-accent-secondary)',
-    //     'bg-primary': 'var(--color-bg-primary)',
-    //     'bg-secondary': 'var(--color-bg-secondary)',
-    //     'text-primary': 'var(--color-text-primary)',
-    //     'text-secondary': 'var(--color-text-secondary)',
-    //     'btn-primary': 'var(--color-btn-primary)',
-    //     'btn-secondary': 'var(--color-btn-secondary)',
-    //     primary: 'var(--color-primary)',
-    //     secondary: 'var(--color-secondary)',
-    //     'hover-primary': 'var(--color-hover-primary)',
-    //     'hover-secondary': 'var(--color-hover-secondary)',
-    //   },
       fontFamily: {
-        heading: ['playfair-display', 'serif'],
-        'sub-heading': ['merriweather', 'sans-serif'],
+        heading: ["proxima-nova", 'sans-serif'],
+        // heading: ['playfair-display', 'serif'],
+        'sub-heading': ["proxima-nova", 'sans-serif'],
+        // 'sub-heading': ['merriweather', 'sans-serif'],
         paragraph: ['Poppins', 'sans-serif'],
         // paragraph: ['source-sans-pro', 'sans-serif'],
       },
@@ -60,5 +41,5 @@ export default {
     },
   },
   plugins: [],
-  darkMode: 'class', // Enable dark mode support
+  darkMode: 'class', 
 }

@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <div className="text-center mb-8">
       <h1>
-        {t('title').toUpperCase()}
+        {t('title')}
         <span className="text-accent-primary ml-2">{t('question')}</span>
       </h1>
       <h3>{t('intro')}</h3>

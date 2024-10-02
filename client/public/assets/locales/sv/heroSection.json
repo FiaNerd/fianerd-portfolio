@@ -1,4 +1,15 @@
 {
-    "title": "Fullstackutvecklare | Passionerad om ren kod och användarcentrerad design",
-    "subtitle": "Hej, jag heter Sofia Mattiasson, en mjukvaruutvecklare med en passion för att skapa digitala upplevelser som gör skillnad."
+    "smallTitle": "fullstack",
+    "title": "developer.",
+    "subtitleMobile": "en rad kod i taget.",
+    "name": "sofia mattiasson",
+    "titleName": "halloj,",
+    "titleSpan": "mitt namn är",
+    "subTitleName": " – jag kodar, så slipper du!",
+    "subtitle": "kolla in mitt",
+    "cv": "cv",
+    "seYa": "Vi hörs!",
+    "cvSubtitle": " Jag är som en espresso – stark och redo att kickstarta ditt projekt!",
+    "buttonCV": "Ladda ner CV",
+    "contact": "kontakt mig"
 }

@@ -12,7 +12,7 @@ const AboutNav = () => {
                 <li key={item.title} className="flex">
                     <NavLink
                         to={item.url}
-                        className="text-base md:text-lg lg:text-xl font-heading text-text-primary hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary"
+                        className="text-base font-medium md:text-lg lg:text-xl font-heading text-text-primary hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary"
                     >
                         {t(item.title)}
                     </NavLink>
