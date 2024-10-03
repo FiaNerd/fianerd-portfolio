@@ -39,7 +39,7 @@ const NavbarMobile = () => {
     }
 
     return () => {
-      document.body.style.overflow = ''; // Clean up on unmount
+      document.body.style.overflow = '';
     };
   }, [currentTheme, showMenu]);
 
@@ -59,7 +59,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='h-screen bg-bg-secondary text-text-primary fixed left-0 right-0 top-0 bottom-0 sm:w-2/4 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
+            className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 sm:w-2/4 lg:shadow-4xl pt-4 pb-6 lg:pt-5 flex flex-col '>
             <div className='flex-grow overflow-y-auto mt-[3em]'>
               <ul className='grid gap-2'>
                 {navRoutes.map((menu, index) => (

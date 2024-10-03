@@ -13,23 +13,25 @@ const ResponsiveHeroImage = () => {
   }, []);
 
   return (
-  <picture>
+  <picture className="">
       {/* Mobile image */}
       <source
         media="(max-width: 768px)" 
         srcSet="/assets/images/heroImage_mobile.png 300w, /assets/images/heroImage_mobile.png 768w"
+        className="object-cover w-full h-full"
       />
       {/* Desktop image */}
       <source
         media="(min-width: 769px)"
         srcSet="/assets/images/heroImage_desktop.jpg"
+        className="object-cover w-full h-full"
       />
       {/* Fallback image */}
       <img 
         src="/assets/images/heroImage_desktop.jpg" 
         alt="Hero Image"
-        loading="lazy" // Optional for performance
-        className="object-cover w-full h-full "
+        loading="lazy"
+        className="object-cover w-full h-full"
       />
     </picture>
   )

@@ -5,7 +5,7 @@ function HeroSection() {
   const { t } = useTranslation('heroSection')
 
   return (
-    <div className="relative w-full mb-12 h-full">
+    <div className="relative w-screen mb-12 h-full ">
       <div className="absolute pl-4 pr-4 inset-0 flex flex-col md:justify-center mt-2 gap-2 md:gap-8 z-10 text-center lg:max-w-[18em] md:pl-4">
         <div className=" items-center">
           <p className="absolute ml-[7.7em] mt-2 font-heading text-2xl font-light leading-0 text-right">{t('smallTitle')}</p>
@@ -24,16 +24,19 @@ function HeroSection() {
           <h2 className="text-5xl text-accent-secondary text-right font-bold">{t('cv')}</h2>
         </div>
 
-        <div className="flex font-heading gap-4 justify-center text-[1.6rem]">
-          <button className="color-btn-primary">{t('buttonCV')}</button>
-          <button className="color-btn-primary">{t('contact')}</button>
+        <div className="flex font-heading gap-11 justify-center text-[1.3rem] top-[calc(100% - 40rem)]">
+          <button className="bg-accent-primary text-white py-2 px-4 rounded-md">{t('buttonCV')}</button>
+          <button className="bg-accent-secondary py-2 px-4 rounded-md text-white">{t('contact')}</button>
         </div>
 
-        <p>{t('cvSubtitle')}</p>
+<div className="bg-black bg-opacity-60 py-2 px-2">
+        <p className="text-white  leading-0 mb-0 text-sm">{t('cvSubtitle')}</p>
+
+</div>
       </div>
 
-
       <ResponsiveHeroImage />
+
     </div>
   )
 }

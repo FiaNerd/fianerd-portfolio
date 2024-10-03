@@ -1,23 +1,23 @@
 {
   "title": "Multi-language app",
   "label": "Välj ett annat språk!",
-  "home": "Hem",
+  "home": "Home",
   "about": "Who am I<span class='text-accent-primary font-medium'>?</span>",
   "portfolio": "Portfolio",
   "webb": "Webb",
-  "allProjects": "Alla projekt",
+  "allProjects": "All projekt",
   "frontend": "Frontend",
   "backend": "Backend",
   "fullstack": "Fullstack",
   "grafisk": "Grafisk",
-  "news" : "Just Nu",
-  "contact": "Kontakta mig",
+  "news" : "Right now",
+  "contact": "Contact me",
   "languages": {
-    "sv": "Svenska",
-    "en": "Engelska"
+    "sv": "Swedish",
+    "en": "English"
   },
-  "me": "Jag",
-  "skills": "Kompetens",
-  "experience": "Erfarenhet",
-  "education": "Utbildning"
+  "me": "Me",
+  "skills": "Skills",
+  "experience": "Experience",
+  "education": "Education"
 }

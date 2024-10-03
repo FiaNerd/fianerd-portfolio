@@ -51,7 +51,7 @@ const SelectLanguage = () => {
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
-              className='bg-bg-secondary text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary py-2 px-2'
+              className='bg-bg-primary text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary py-2 px-2'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </div>

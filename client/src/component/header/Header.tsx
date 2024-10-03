@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import SelectLanguage from '../SelectLanguage';
@@ -9,6 +10,8 @@ import NavbarMobile from './NavbarMobile';
 const Header = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   let lastScrollY = window.scrollY;
+
+  const { t } = useTranslation('translation');
 
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
@@ -59,7 +62,7 @@ const Header = () => {
           <ThemeSwitch  />
           <SelectLanguage />
           <NavLink to='/contact' className='hidden text-lg md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text'>
-            Contact
+            {t('contact')}
           </NavLink>
           <NavbarMobile />
         </div>

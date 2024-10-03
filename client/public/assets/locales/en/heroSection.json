@@ -1,4 +1,15 @@
 {
-    "title": "Full-Stack Developer | Passionate About Clean Code and User-Centered Design",
-    "subtitle": "Hi, I'm Sofia Mattiasson, a software developer with a passion for creating impactful digital experiences."
+    "smallTitle": "fullstack",
+    "title": "developer.",
+    "subtitleMobile": "one line of code at a time.",
+    "name": "sofia mattiasson",
+    "titleName": "hello,",
+    "titleSpan": "my name is",
+    "subTitleName": " – I code, so you don't have to!",
+    "subtitle": "check out my",
+    "cv": "resume",
+    "seYa": "See you!",
+    "cvSubtitle": "I'm like an espresso – strong and ready to kickstart your project!",
+    "buttonCV": "Download CV",
+    "contact": "contact me"
 }

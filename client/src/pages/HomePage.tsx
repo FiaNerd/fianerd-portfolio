@@ -25,7 +25,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div style={{ paddingTop: `${headerHeight}px` }}>
+      <div style={{ paddingTop: `${headerHeight}px` }} className="bg-blend-multiply">
         <div style={{ minHeight: `calc(100% - ${headerHeight}px)` }} className="relative">
           <HeroSection />
         </div>
