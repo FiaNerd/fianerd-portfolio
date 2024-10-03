@@ -24,7 +24,7 @@ const ResponsiveHeroImage = () => {
                  (max-width: 768px) 50vw, 
                  100vw" 
           alt="hero image Sofia"
-          className="object-cover w-full md:h-auto"
+          className="object-cover w-full h-full md:h-auto"
         />
       );
     }

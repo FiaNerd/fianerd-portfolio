@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-import HeroSection from '../heroSection/HeroSection'
 import SelectLanguage from '../SelectLanguage'
 import ThemeSwitch from '../ThemeSwitch'
 import NavbarDesktop from './NavbarDesktop'
@@ -35,17 +34,18 @@ const Header = () => {
 
   return (
     <>
+
       <header
         className={`fixed w-full top-0 z-50 transition-transform duration-300 
         ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'} 
         backdrop-blur-[100px]`}>
-        <nav className='max-w-[1600px] mx-auto flex flex-row font-heading items-center justify-between top-0 left-0 right-0 px-4 md:px-8'>
+        <nav className='max-w-[1600px] mx-auto flex flex-row font-heading items-center justify-between top-0 left-0 right-0 py-2 px-4 md:px-8'>
           <NavLink to='/'>
             <div className='flex flex-col'>
-              <h1 className='text-lg md:text-4xl font-bold'>[ FIA NERD ]</h1>
-              <p className='text-base font-sub-heading md:font-bold tracking-wider'>
-                Sofia Mattiasson
-              </p>
+              <img
+                src='/assets/images/logos/logo_light.svg'
+                alt='Logo'
+                className='h-16 w-auto' />
             </div>
           </NavLink>
       
@@ -67,18 +67,11 @@ const Header = () => {
               {t('contact')}{' '}
             </NavLink>
 
-        
               <NavbarMobile />
-        
-
           </div>
         </nav>
        
       </header>
-        
-      <div className="pt-[72px] md:pt-[88px]">
-        <HeroSection />
-      </div>
     </>
   )
 }
