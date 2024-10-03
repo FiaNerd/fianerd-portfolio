@@ -24,12 +24,12 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
     dropdown ? 'block' : 'hidden'
   } ${
     newDepthLevel > 1 ? 'left-[4.6em] top-0' : 'left-0 top-full'
-  } lg:absolute bg-bg-secondary pt-2 pb-[0.6em] px-4 lg:shadow-md ml-4 rounded-sm lg:mt-0 w-max max-w-[20em] z-30`
+  } lg:absolute bg-bg-primary pt-2 pb-[0.6em] px-4 lg:shadow-md ml-4 rounded-sm lg:mt-0 w-max max-w-[20em] z-30`
 
   return (
     <ul className={dropdownClass}>
       {submenus.map((submenu, index) => (
-        <li key={index} className='btn-profile relative'>
+        <li key={index} className='relative'>
           <MenuItems
             items={submenu}
             depthLevel={newDepthLevel}

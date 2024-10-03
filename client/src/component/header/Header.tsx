@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ThemeContext } from '../../context/ThemeContext';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
-import { ThemeContext } from '../../context/ThemeContext';
 
 const Header = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false); // Initialize dark mode state
   let lastScrollY = window.scrollY;
 
   const themeContext = useContext(ThemeContext);
@@ -35,17 +34,19 @@ const Header = () => {
       <nav className='max-w-[1600px] mx-auto flex items-center justify-between py-2 px-4 md:px-8'>
         <NavLink to='/'>
           {currentTheme == 'dark' ? (
+           
             <img
-              src='/assets/images/logos/LogoLight.svg'
-              alt='Logo'
-              className='h-16 w-auto' 
-            />
+            src='/assets/images/logos/LogoDark.svg'
+            alt='Logo'
+            className='h-16 w-auto' 
+          />
           ) : (
             <img
-              src='/assets/images/logos/LogoDark.svg'
-              alt='Logo'
-              className='h-16 w-auto' 
-            />
+            src='/assets/images/logos/LogoLight.svg'
+            alt='Logo'
+            className='h-16 w-auto' 
+          />
+
           )}
         </NavLink>
 

@@ -8,7 +8,7 @@
 
 
 body {
-  background: var(--color-bg-primary);
+  background: var(--color-bg-mode);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -21,6 +21,15 @@ body {
 
 /* Light mode variables */
 :root {
+  /* --color-bg-mode: #fff5d7; */
+
+  --color-bg-mode:radial-gradient(
+    ellipse at 88.1% 69.6%,
+     #d5cbae 40%,
+     #fff5d7 100.2%
+  );
+
+
   --color-accent-primary: #b12454;
   --color-accent-secondary: #d46763;
   
@@ -48,13 +57,17 @@ body {
 
 /* Dark mode variables */
 .dark {
-  --color-accent-primary: #ff2f67;
-  --color-accent-secondary: #d1748d;
-  --color-bg-primary: radial-gradient(
+  --color-bg-mode:radial-gradient(
     ellipse at 88.1% 69.6%,
     #060914 40%,
     #332437 100.2%
   );
+
+  --color-accent-primary: #ff2f67;
+  --color-accent-secondary: #9b5959;
+
+  --color-bg-primary: #23092a; 
+ 
   --color-bg-secondary: #23092a;
   --color-text-heading: #DAA520;
   --color-text-primary: #f5f5f5;

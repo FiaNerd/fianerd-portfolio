@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        'bg-mode': 'var(--color-bg-mode)',
         'accent-primary': 'var(--color-accent-primary)',
         'accent-secondary': 'var(--color-accent-secondary)',
         'bg-primary': 'var(--color-bg-primary)',
