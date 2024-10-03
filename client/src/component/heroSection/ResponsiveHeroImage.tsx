@@ -3,7 +3,6 @@ import { useEffect } from "react";
 const ResponsiveHeroImage = () => {
   useEffect(() => {
     const handleResize = () => {
-      // Trigger a re-render or a state change if needed
       console.log('Window resized:', window.innerWidth);
     };
     window.addEventListener('resize', handleResize);
@@ -12,21 +11,29 @@ const ResponsiveHeroImage = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  
-  return (
-        <img
-        src="/assets/images/heroImage_mobile.png?v=1.0"
 
-          srcSet="/assets/images/heroImage_mobile.png 300w, 
-                  /assets/images/heroImage_mobile.png 768w, 
-                  /assets/images/heroImage_desktop.jpg 1280w"
-          sizes="(max-width: 480px) 100vw, 
-                 (max-width: 768px) 50vw, 
-                 100vw" 
-          alt="hero image Sofia"
-          className="object-cover w-full h-full md:h-auto"
-        />
-      );
+  return (
+  <picture>
+      {/* Mobile image */}
+      <source
+        media="(max-width: 768px)" 
+        srcSet="/assets/images/heroImage_mobile.png 300w, /assets/images/heroImage_mobile.png 768w"
+      />
+      {/* Desktop image */}
+      <source
+        media="(min-width: 769px)"
+        srcSet="/assets/images/heroImage_desktop.jpg"
+      />
+      {/* Fallback image */}
+      <img 
+        src="/assets/images/heroImage_desktop.jpg" 
+        alt="Hero Image"
+        loading="lazy" // Optional for performance
+        className="object-cover w-full h-full "
+      />
+    </picture>
+  )
+
     }
     
     export default ResponsiveHeroImage;

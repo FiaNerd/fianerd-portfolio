@@ -24,7 +24,7 @@ function HeroSection() {
           <h2 className="text-5xl text-accent-secondary text-right font-bold">{t('cv')}</h2>
         </div>
 
-        <div className="flex font-heading gap-4 justify-center text-md">
+        <div className="flex font-heading gap-4 justify-center text-[1.6rem]">
           <button className="color-btn-primary">{t('buttonCV')}</button>
           <button className="color-btn-primary">{t('contact')}</button>
         </div>
