@@ -1,6 +1,6 @@
 /* Import Adobe Fonts styles or define font-face */
 @import url("https://use.typekit.net/bwg5bhb.css");
-@import './global.css';
+@import './styles/global.css';
 
 @tailwind base;
 @tailwind components;
@@ -72,11 +72,48 @@ body {
   --color-text-heading: #DAA520;
   --color-text-primary: #f5f5f5;
   --color-text-secondary: #cecbc5;
+
   --color-btn-primary: #9A51FF;
   --color-btn-secondary: #e7a63b;
+
   --color-primary: #00bcd4;
-  --color-secondary: #9c27b0;
+  /* --color-secondary: #9c27b0; */
   --color-hover-primary: #ff4081;
   --color-hover-text: #cecbc5;
   --color-bg-plate: #1e162abf;
 }
+
+
+@media (max-width: 480px) {
+  .title-fullstack {
+  }
+}
+
+@media (max-width: 768px) {
+  .title-fullstack {
+    left: 0%;
+    /* top: 4%; */
+
+    font-size: 5rem;
+  }
+
+  .heading-dev{
+    left: 40%
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  
+}
+
+
+/* Media Queries */
+@media (max-width: 1080px) {
+  
+}
+
+@media (max-width: 	1536px) {
+  
+}
+

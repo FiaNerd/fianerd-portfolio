@@ -1,17 +1,17 @@
 {
   "title": "Multi-language app",
   "label": "Välj ett annat språk!",
-  "home": "Home",
-  "about": "Who am I<span class='text-accent-primary font-medium'>?</span>",
-  "portfolio": "Portfolio",
+  "home": "home",
+  "profile": "profile",
+ 
   "webb": "Webb",
-  "allProjects": "All projekt",
-  "frontend": "Frontend",
-  "backend": "Backend",
-  "fullstack": "Fullstack",
-  "grafisk": "Grafisk",
-  "news" : "Right now",
-  "contact": "Contact me",
+  "allProjects": "all projekt",
+  "frontend": "frontend",
+  "backend": "backend",
+  "fullstack": "fullstack",
+  "grafisk": "graphic",
+  "news" : "right now<span class='text-accent-primary font-medium'>!</span>",
+  "contact": "contact me",
   "languages": {
     "sv": "Swedish",
     "en": "English"
@@ -20,4 +20,5 @@
   "skills": "Skills",
   "experience": "Experience",
   "education": "Education"
+
 }

@@ -1,44 +1,50 @@
-import { useTranslation } from "react-i18next"
-import ResponsiveHeroImage from "./ResponsiveHeroImage"
+import { useTranslation } from "react-i18next";
+import styles from '../../styles/HeroSection.module.css';
+import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 function HeroSection() {
-  const { t } = useTranslation('heroSection')
+  const { t } = useTranslation('heroSection');
 
   return (
-    <div className="relative w-screen mb-12 h-full ">
-      <div className="absolute pl-4 pr-4 inset-0 flex flex-col md:justify-center mt-2 gap-2 md:gap-8 z-10 text-center lg:max-w-[18em] md:pl-4">
-        <div className=" items-center">
-          <p className="absolute ml-[7.7em] mt-2 font-heading text-2xl font-light leading-0 text-right">{t('smallTitle')}</p>
-          <h1 className="text-accent-secondary mb-0 mt-6">{t('title')}</h1>
+    <div className="relative mb-12 w-full h-full">
+      {/* Responsiv bild som fyller hela containern */}
+      <ResponsiveHeroImage />
+      
+      {/* Wrapper for text with relative positioning */}
+      <div className={`container absolute inset-0 mx-auto sm:mx-0 flex flex-col z-10`}>
+       <div className="flex flex-col max-w-[7.5em] mx-auto leading-0">
+       <p className={`${styles['title-fullstack']} font-heading text-2xl sm:text-4xl md:text-2xl font-light leading-0`}>
+          {t('smallTitle')}
+        </p>
+        <h1 className={`${styles['heading-dev']} text-accent-secondary sm:text-7xl md:text-5xl`}>
+          {t('title')}
+        </h1>
+       </div>
+
+        <div className="font-heading text-center">
+          <p className="font-bold">
+            {t('titleName')} <span className="font-normal">{t('titleSpan')}</span>
+          </p>
+          <h2 className="text-4xl mt-4 font-bold text-accent-secondary tracking-tighter">{t('name')}</h2>
+          <p className="font-heading font-light">{t('subTitleName')}</p>
         </div>
 
-        <div className="font-heading">
-          <p className="absolute font-bold">{t('titleName')} <span className="font-normal">{t('titleSpan')}</span></p>
-          <h2 className="text-4xl mt-4 font-bold text-accent-secondary text-left tracking-tighter">{t('name')}</h2>
-          <p className="absolute font-heading font-light left-[4.8em] top-[calc(100%-27.5rem)] md:top-[calc(100%+1rem)] lg:top-[calc(100%+1.5rem)]">{t('subTitleName')}</p>
-
+        <div className="text-center">
+          <p className="font-heading">{t('subtitle')}</p>
+          <h2 className="text-5xl text-accent-secondary font-bold">{t('cv')}</h2>
         </div>
 
-        <div >
-          <p className="absolute top-[calc(100%-26rem)] left-[17.4rem] font-heading">{t('subtitle')}</p>
-          <h2 className="text-5xl text-accent-secondary text-right font-bold">{t('cv')}</h2>
-        </div>
-
-        <div className="flex font-heading gap-11 justify-center text-[1.3rem] top-[calc(100% - 40rem)]">
+        <div className="flex font-heading gap-11 justify-center text-[1.3rem] mt-28 md:mt-16">
           <button className="bg-accent-primary text-white py-2 px-4 rounded-md">{t('buttonCV')}</button>
           <button className="bg-accent-secondary py-2 px-4 rounded-md text-white">{t('contact')}</button>
         </div>
 
-<div className="bg-black bg-opacity-60 py-2 px-2">
-        <p className="text-white  leading-0 mb-0 text-sm">{t('cvSubtitle')}</p>
-
-</div>
+        <div className="bg-bg-secondary py-2 px-2 mt-4 md:mt-8">
+          <p className="text-secondary leading-0 mb-0 text-sm">{t('cvSubtitle')}</p>
+        </div>
       </div>
-
-      <ResponsiveHeroImage />
-
     </div>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

@@ -23,7 +23,7 @@ export const navRoutes: Route[] = [
     nav: HomePage,
   },
   {
-    title: 'about', // Use translation key
+    title: 'profile', // Use translation key
     url: '/',
   },
   {

@@ -1,0 +1,53 @@
+.container {
+     /* Höjd på hela viewporten */
+    gap: 1em; /* Avstånd mellan kolumnerna */
+    position: relative; /* Lägger till position: relative för att kunna använda z-index */
+}
+
+.title-fullstack {
+    position: absolute;
+    top: 0.2em;
+    margin-bottom: 0;
+    align-self: end; /* Centrera vertikalt */
+    text-align: end;/* Centrera texten horisontellt om så önskas */
+}
+
+.heading-dev {
+    margin-top: 0.4em;
+    align-self: center; /* Centrera vertikalt */
+    margin-bottom: 0;
+}
+
+/* Justeringar för mindre skärmar */
+@media (min-width: 640px) {
+    .title-fullstack {
+        top: 1%;
+        left: 53%;
+        background: rgb(211, 108, 108);
+    }
+    .heading-dev {
+        margin-top: 0.4em;
+        align-self: center; /* Centrera vertikalt */
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .title-fullstack {
+        top: 14%;
+        left: 29%;
+        background: red; /* Ändra bakgrund vid större skärm */
+    }
+    .heading-dev{
+        position: absolute;
+        top: 14%;
+        left: 14%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .title-fullstack {
+        background: rgb(140, 36, 119); 
+    }
+}
