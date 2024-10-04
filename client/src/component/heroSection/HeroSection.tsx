@@ -12,8 +12,8 @@ function HeroSection() {
       
       {/* Wrapper for text with relative positioning */}
       <div className={`container absolute inset-0 mx-auto sm:mx-0 flex flex-col z-10`}>
-       <div className="flex flex-col max-w-[7.5em] mx-auto leading-0">
-       <p className={`${styles['title-fullstack']} font-heading text-2xl sm:text-4xl md:text-2xl font-light leading-0`}>
+       <div className="flex flex-col font-heading max-w-[7.5em] mx-auto leading-0">
+       <p className={`${styles['title-fullstack']} text-2xl text-slate-200 sm:text-4xl md:text-2xl xl:text-3xl font-light leading-0`}>
           {t('smallTitle')}
         </p>
         <h1 className={`${styles['heading-dev']} text-accent-secondary sm:text-7xl md:text-5xl xl:text-6xl`}>

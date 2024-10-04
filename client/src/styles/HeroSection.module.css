@@ -1,20 +1,17 @@
 .container {
-     /* Höjd på hela viewporten */
-    gap: 1em; /* Avstånd mellan kolumnerna */
-    position: relative; /* Lägger till position: relative för att kunna använda z-index */
+    gap: 1em; 
+    position: relative; 
 }
-
 .title-fullstack {
     position: absolute;
     top: 0.2em;
     margin-bottom: 0;
-    align-self: end; /* Centrera vertikalt */
-    text-align: end;/* Centrera texten horisontellt om så önskas */
+    align-self: end; 
+    text-align: end;
 }
-
 .heading-dev {
     margin-top: 0.4em;
-    align-self: center; /* Centrera vertikalt */
+    align-self: center; 
     margin-bottom: 0;
 }
 
@@ -23,7 +20,6 @@
     .title-fullstack {
         top: 1%;
         left: 53%;
-        background: rgb(211, 108, 108);
     }
     .heading-dev {
         margin-top: 0.4em;
@@ -37,7 +33,6 @@
     .title-fullstack {
         top: 14%;
         left: 29%;
-        background: red; /* Ändra bakgrund vid större skärm */
     }
     .heading-dev{
         position: absolute;
@@ -51,7 +46,6 @@
     .title-fullstack {
         top: 14%;
         left: 25%;
-        background: rgb(140, 36, 119);  /* Ändra bakgrund vid större skärm */
     }
     .heading-dev{
         top: 14%;
@@ -63,8 +57,7 @@
   
     .title-fullstack {
         top: 14%;
-        left: 25.7%;
-        background: rgb(4, 187, 50);  /* Ändra bakgrund vid större skärm */
+        left: 24%; 
     }
     .heading-dev{
         top: 13%;
@@ -74,13 +67,12 @@
 
 @media (min-width: 1536px) {
     .title-fullstack {
-        top: 14%;
-        left: 23.6%;
-        background: rgb(187, 92, 4);  /* Ändra bakgrund vid större skärm */
+        top: 13.5%;
+        left: 28.3%; 
     }
     .heading-dev{
         top: 13%;
-        left: 13%;;
+        left: 19%;;
     }
 }
 

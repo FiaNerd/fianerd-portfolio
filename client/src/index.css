@@ -46,7 +46,7 @@ body {
 
   --color-hover-primary: #cb6360;
 
-  --color-hover-text: #fff5d7;
+  --color-hover-text: hsl(45, 100%, 92%);
   --color-bg-plate: #e5dcc1;
 
   /* --color-bg-plate: #c7d9bd; */
@@ -80,40 +80,5 @@ body {
   /* --color-secondary: #9c27b0; */
   --color-hover-primary: #ff4081;
   --color-hover-text: #cecbc5;
-  --color-bg-plate: #1e162abf;
+  --color-bg-plate: #1b1525bf;
 }
-
-
-@media (max-width: 480px) {
-  .title-fullstack {
-  }
-}
-
-@media (max-width: 768px) {
-  .title-fullstack {
-    left: 0%;
-    /* top: 4%; */
-
-    font-size: 5rem;
-  }
-
-  .heading-dev{
-    left: 40%
-  }
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-  
-}
-
-
-/* Media Queries */
-@media (max-width: 1080px) {
-  
-}
-
-@media (max-width: 	1536px) {
-  
-}
-
