@@ -47,7 +47,40 @@
 }
 
 @media (min-width: 1024px) {
+  
     .title-fullstack {
-        background: rgb(140, 36, 119); 
+        top: 14%;
+        left: 25%;
+        background: rgb(140, 36, 119);  /* Ändra bakgrund vid större skärm */
+    }
+    .heading-dev{
+        top: 14%;
+        left: 14%;
     }
 }
+
+@media (min-width: 1280px) {
+  
+    .title-fullstack {
+        top: 14%;
+        left: 25.7%;
+        background: rgb(4, 187, 50);  /* Ändra bakgrund vid större skärm */
+    }
+    .heading-dev{
+        top: 13%;
+        left: 13%;;
+    }
+}
+
+@media (min-width: 1536px) {
+    .title-fullstack {
+        top: 14%;
+        left: 23.6%;
+        background: rgb(187, 92, 4);  /* Ändra bakgrund vid större skärm */
+    }
+    .heading-dev{
+        top: 13%;
+        left: 13%;;
+    }
+}
+

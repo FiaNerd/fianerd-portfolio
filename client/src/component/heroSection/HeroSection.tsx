@@ -16,7 +16,7 @@ function HeroSection() {
        <p className={`${styles['title-fullstack']} font-heading text-2xl sm:text-4xl md:text-2xl font-light leading-0`}>
           {t('smallTitle')}
         </p>
-        <h1 className={`${styles['heading-dev']} text-accent-secondary sm:text-7xl md:text-5xl`}>
+        <h1 className={`${styles['heading-dev']} text-accent-secondary sm:text-7xl md:text-5xl xl:text-6xl`}>
           {t('title')}
         </h1>
        </div>
