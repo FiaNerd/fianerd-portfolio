@@ -8,17 +8,26 @@ import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
 
 const Header = () => {
-  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
   let lastScrollY = window.scrollY;
 
   const { t } = useTranslation(['translation']);
-
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrollingUp(window.scrollY < lastScrollY);
+      setScrollY(window.scrollY);
+
+      // Check if the scroll position is greater than 121px
+      if (window.scrollY > 121) {
+        setHeaderVisible(window.scrollY < lastScrollY);
+      } else {
+        setHeaderVisible(true); // Show header if above 121px
+      }
+
+      // Update last scroll position
       lastScrollY = window.scrollY;
     };
 
@@ -30,29 +39,26 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 dark:bg-[url('/assets/images/bg-dark-img.jpg')] transition-transform duration-300 
-      ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'} 
-      backdrop-blur-[100px]`}
-    >
-      <div className='bg-bg-primary'>
-        <p className='text-slate-300 pt-2 pb-2 text-text-primary mb-0 text-sm leading-normal text-center'>{t('headerTitle')}</p>
+      className={`fixed w-full top-0 z-50 transition-transform duration-300 
+        ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        
+      {/* Full Color Header Title */}
+      <div className={`bg-bg-primary transition-transform duration-300`}>
+        <p className='text-slate-300 pt-2 pb-2 text-text-primary mb-0 text-sm leading-normal text-center'>
+          {t('headerTitle')}
+        </p>
       </div>
-      <nav className='max-w-[1600px] mx-auto flex justify-between py-2 px-4 md:px-8'>
-        <NavLink to='/'>
-          {currentTheme == 'dark' ? (
-           
-            <img
-            src='/assets/images/logos/LogoDark.svg'
-            alt='Logo'
-            className='h-16 w-auto' 
-          />
-          ) : (
-            <img
-            src='/assets/images/logos/LogoLight.svg'
-            alt='Logo'
-            className='h-16 w-auto' 
-          />
 
+      {/* Navigation */}
+      <nav className={`max-w-[1600px] mx-auto flex justify-between py-2 px-4 md:px-8 transition-transform duration-300 
+        ${headerVisible ? 'translate-y-0' : '-translate-y-full'} 
+        backdrop-blur-[100px] ${scrollY > 0 ? "dark:bg-[url('/assets/images/bg-dark-img.jpg')] dark:opacity-90" : "dark:bg-[url('/assets/images/bg-dark-img.jpg')]"}`}>
+        
+        <NavLink to='/'>
+          {currentTheme === 'dark' ? (
+            <img src='/assets/images/logos/LogoDark.svg' alt='Logo' className='h-16 w-auto' />
+          ) : (
+            <img src='/assets/images/logos/LogoLight.svg' alt='Logo' className='h-16 w-auto' />
           )}
         </NavLink>
 
@@ -61,10 +67,10 @@ const Header = () => {
         </div>
 
         <div className='flex items-center gap-4 lg:gap-6'>
-          {/* Pass the toggle function to ThemeSwitch */}
-          <ThemeSwitch  />
+          <ThemeSwitch />
           <SelectLanguage />
-          <NavLink to='/contact' className='hidden cursor-pointer text-lg md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text'>
+          <NavLink to='/contact' className={`hidden cursor-pointer text-lg md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text
+            ${scrollY > 0 ? 'opacity-80' : 'opacity-100'}`}>
             {t('contact')}
           </NavLink>
           <NavbarMobile />
