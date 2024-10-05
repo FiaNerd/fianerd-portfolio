@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-transform duration-300 
+      className={`fixed w-full top-0 z-50 dark:bg-[url('/assets/images/bg-dark-img.jpg')] transition-transform duration-300 
       ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'} 
       backdrop-blur-[100px]`}
     >

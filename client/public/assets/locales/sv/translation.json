@@ -10,7 +10,7 @@
   "backend": "Backend",
   "fullstack": "Fullstack",
   "grafisk": "Grafisk",
-  "news" : "Just nu<span class='text-accent-primary font-medium'>?</span>",
+  "news" : "Just nu<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
   "languages": {
     "sv": "Svenska",

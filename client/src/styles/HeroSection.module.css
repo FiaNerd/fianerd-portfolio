@@ -1,4 +1,4 @@
-.container {
+/* .container {
     gap: 1em; 
     position: relative; 
 }
@@ -226,6 +226,204 @@
     .cv{
         top: 52%;
         margin-left: 36%;
+    }
+}
+ */
+
+
+
+
+.title-fullstack {
+    position: absolute;
+    top: 0.2em;
+    margin-bottom: 0;
+    align-self: end; 
+    text-align: end;
+}
+.heading-dev {
+    margin-top: 0.4em;
+    margin-bottom: 0;
+}
+
+.hello{
+    position: absolute;
+    top: 4.4em;
+    left: 1em;
+}
+.myName{
+    margin-top: 0.6em;
+    margin-bottom: 0;
+}
+.iCode{
+    position: absolute;
+    top: 7.4em;
+    left: 4.87em;
+}
+
+.subCv{
+    position: absolute;
+    top: 9.1em;
+    right: 0.9em;
+}
+.cv{
+    margin-top: 0.6em;
+    text-align: end;
+}
+
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 480px) {
+    .title-fullstack {
+        top: 0.8em;
+    }
+    .heading-dev {
+        margin-top: 0.7em;
+    }
+        
+         .hello{
+        top: 7.4em;
+    }
+    .myName{
+        margin-top: 1.6em;
+    }
+    .iCode{
+        top: 10.6em;
+    }
+
+    .subCv{
+        top: 12.3em;
+    }
+    .cv{
+        margin-top: 0.6em;
+        text-align: end;
+    }
+
+}
+
+@media (min-width: 640px) {
+    .title-fullstack {
+        top: 1%;
+        left: 53%;
+    }
+    .heading-dev {
+        margin-top: 0.4em;
+        align-self: center; 
+        margin-bottom: 0;
+    }
+
+    .hello{
+        top: 10em;
+        left: 2em;
+    }
+    .myName{
+        margin-top: 1.7em;
+    }
+    .iCode{
+        top: 13.8em;
+        left: 11em;
+    }
+    
+    .subCv{
+        top: 16em;
+        right: 0.6em;
+    }
+    .cv{
+        margin-top: 0.5em;
+        text-align: end;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-fullstack {
+        position: static;
+    }
+    .heading-dev{
+        position: static;
+    }
+
+    .hello{
+        position: static;
+    }
+    .myName{
+        position: static;
+    }
+    .iCode{
+        position: static;
+    }
+    
+    .subCv{
+        position: static;
+    }
+    .cv{
+        position: static;
+    }
+}
+
+@media (min-width: 1024px) {
+  
+    .title-fullstack {
+        position: static;
+    }
+    .heading-dev{
+        position: static;
+    }
+
+    .hello{
+        position: static;
+    }
+    .myName{
+        position: static;
+    }
+    .iCode{
+        position: static;
+    }
+    
+    .subCv{
+        position: static;
+    }
+    .cv{
+        position: static;
+    }
+}
+
+@media (min-width: 1280px) {
+  
+    .title-fullstack {
+        position: static; 
+    }
+    .heading-dev{
+        position: static;
+    }
+    .espresso{
+        position: static;
+    }
+}
+
+@media (min-width: 1536px) {
+    .title-fullstack {
+        position: static;
+    }
+    .heading-dev{
+        position: static;
+    }
+
+    .hello{
+        position: static;
+    }
+    .myName{
+        position: static;
+    }
+    .iCode{
+        position: static;
+    }
+    
+    .subCv{
+        position: static;
+    }
+    .cv{
+        position: static;
     }
 }
 
