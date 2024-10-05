@@ -11,11 +11,66 @@
 }
 .heading-dev {
     margin-top: 0.4em;
-    align-self: center; 
     margin-bottom: 0;
 }
 
-/* Justeringar för mindre skärmar */
+.hello{
+    position: absolute;
+    top: 4.4em;
+    left: 1em;
+}
+.myName{
+    margin-top: 0.6em;
+    margin-bottom: 0;
+}
+.iCode{
+    position: absolute;
+    top: 7.4em;
+    left: 4.87em;
+}
+
+.subCv{
+    position: absolute;
+    top: 9.1em;
+    right: 0.9em;
+}
+.cv{
+    margin-top: 0.6em;
+    text-align: end;
+}
+
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 480px) {
+    .title-fullstack {
+        top: 0.8em;
+    }
+    .heading-dev {
+        margin-top: 0.7em;
+    }
+        
+         .hello{
+        top: 7.4em;
+    }
+    .myName{
+        margin-top: 1.6em;
+    }
+    .iCode{
+        top: 10.6em;
+    }
+
+    .subCv{
+        top: 12.3em;
+    }
+    .cv{
+        margin-top: 0.6em;
+        text-align: end;
+    }
+
+}
+
 @media (min-width: 640px) {
     .title-fullstack {
         top: 1%;
@@ -23,21 +78,66 @@
     }
     .heading-dev {
         margin-top: 0.4em;
-        align-self: center; /* Centrera vertikalt */
+        align-self: center; 
         margin-bottom: 0;
     }
+
+    .hello{
+        top: 10em;
+        left: 2em;
+    }
+    .myName{
+        margin-top: 1.7em;
+    }
+    .iCode{
+        top: 13.8em;
+        left: 11em;
+    }
     
+    .subCv{
+        top: 16em;
+        right: 0.6em;
+    }
+    .cv{
+        margin-top: 0.5em;
+        text-align: end;
+    }
 }
 
 @media (min-width: 768px) {
     .title-fullstack {
-        top: 14%;
-        left: 29%;
+        top: 13.2%;
+        left: 30%;
     }
     .heading-dev{
         position: absolute;
-        top: 14%;
-        left: 14%;
+        top: 13%;
+        left: 15%;
+    }
+
+    .hello{
+        top: 29%;
+        left: 5%;
+    }
+    .myName{
+        position: absolute;
+        margin-top: 0;
+        top: 33.3%;
+        left: 5%;
+    }
+    .iCode{
+        top: 40%;
+        left: 13%;
+    }
+    
+    .subCv{
+        top: 49%;
+        right: 58%;
+    }
+    .cv{
+        position: absolute;
+        top: 44%;
+        margin-left: 30%;
     }
 }
 
@@ -62,6 +162,13 @@
     .heading-dev{
         top: 13%;
         left: 13%;;
+    }
+    .espresso{
+        position: absolute;
+        top: 3%;
+        left: 10%;
+        max-width: 30%;
+        align-items: center;
     }
 }
 

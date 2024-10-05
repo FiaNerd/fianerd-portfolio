@@ -11,7 +11,7 @@ const Header = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   let lastScrollY = window.scrollY;
 
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation(['translation']);
 
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
@@ -34,7 +34,10 @@ const Header = () => {
       ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'} 
       backdrop-blur-[100px]`}
     >
-      <nav className='max-w-[1600px] mx-auto flex items-center justify-between py-2 px-4 md:px-8'>
+      <div className='bg-bg-primary'>
+        <p className='text-slate-300 pt-2 pb-2 text-text-primary mb-0 text-sm leading-normal text-center'>{t('headerTitle')}</p>
+      </div>
+      <nav className='max-w-[1600px] mx-auto flex justify-between py-2 px-4 md:px-8'>
         <NavLink to='/'>
           {currentTheme == 'dark' ? (
            
@@ -61,7 +64,7 @@ const Header = () => {
           {/* Pass the toggle function to ThemeSwitch */}
           <ThemeSwitch  />
           <SelectLanguage />
-          <NavLink to='/contact' className='hidden text-lg md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text'>
+          <NavLink to='/contact' className='hidden cursor-pointer text-lg md:block border border-accent-primary px-4 py-2 rounded-sm text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text'>
             {t('contact')}
           </NavLink>
           <NavbarMobile />

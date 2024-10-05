@@ -3,13 +3,12 @@
     "title": "developer.",
     "subtitleMobile": "one line of code at a time.",
     "name": "sofia mattiasson",
-    "titleName": "hello,",
-    "titleSpan": "my name is",
-    "subTitleName": " – I code, so you don't have to!",
-    "subtitle": "check out my",
+    "helloName": "hello,",
+    "helloSpan": "my name is",
+    "iCode": " – I code, so you don't have to!",
+    "subCv": "check out my",
     "cv": "resume",
     "seYa": "See you!",
-    "cvSubtitle": "I'm like an espresso – strong and ready to kickstart your project!",
     "buttonCV": "Download CV",
     "contact": "contact me"
 }

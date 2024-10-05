@@ -16,13 +16,13 @@ const ResponsiveHeroImage = () => {
   <picture className="">
       {/* Mobile image */}
       <source
-        media="(max-width: 768px)" 
+        media="(max-width: 767px)" 
         srcSet="/assets/images/heroImage_mobile.png 300w, /assets/images/heroImage_mobile.png 768w"
         className="object-cover w-full h-full"
       />
       {/* Desktop image */}
       <source
-        media="(min-width: 769px)"
+        media="(min-width: 768px)"
         srcSet="/assets/images/heroImage_desktop.jpg"
         className="object-cover w-full h-full"
       />
