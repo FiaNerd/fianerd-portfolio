@@ -197,12 +197,35 @@
 
 @media (min-width: 1536px) {
     .title-fullstack {
-        top: 14.9%;
-        left: 24%; 
+        top: 14.4%;
+        left: 27%; 
     }
     .heading-dev{
         top: 13%;
-        left: 9%;
+        left: 12%;
+    }
+
+    .hello{
+        top: 34.6%;
+        left: 5%;
+    }
+    .myName{
+        margin-top: 0;
+        top: 37.6%;
+        left: 5%;
+    }
+    .iCode{
+        top: 43%;
+        left: 13.6%;
+    }
+    
+    .subCv{
+        top: 56%;
+        right: 55.4%;
+    }
+    .cv{
+        top: 52%;
+        margin-left: 36%;
     }
 }
 

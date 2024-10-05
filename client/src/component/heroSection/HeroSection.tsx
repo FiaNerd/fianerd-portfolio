@@ -22,16 +22,16 @@ function HeroSection() {
         </div>
 
         <div className="font-heading flex flex-col text-start pl-4 sm:pl-8 md:pl-4">
-          <p className={`${styles['hello']} font-bold  mb-0`}>
+          <p className={`${styles['hello']} font-bold 2xl:text-2xl mb-0`}>
             {t('helloName')} <span className="font-normal">{t('helloSpan')}</span>
           </p>
-          <h2 className={`${styles['myName']} text-4xl sm:text-5xl md:text-4xl lg:text-3xl font-bold mb-0 text-accent-secondary tracking-tighter`}>{t('name')}</h2>
-          <p className={`${styles['iCode']} font-heading mb-0 font-light`}>{t('iCode')}</p>
+          <h2 className={`${styles['myName']} text-4xl sm:text-5xl md:text-4xl lg:text-3xl 2xl:text-6xl  font-bold mb-0 text-accent-secondary tracking-tighter`}>{t('name')}</h2>
+          <p className={`${styles['iCode']} font-heading 2xl:text-2xl mb-0 font-light`}>{t('iCode')}</p>
         </div>
 
         <div className="flex flex-col">
-          <p className={`${styles['subCv']} font-heading mb-0`}>{t('subCv')}</p>
-          <h2 className={`${styles['cv']} text-5xl sm:text-6xl text-accent-secondary pr-4 sm:pl-8 font-bold`}>{t('cv')}</h2>
+          <p className={`${styles['subCv']} font-heading 2xl:text-2xl mb-0`}>{t('subCv')}</p>
+          <h2 className={`${styles['cv']} text-5xl sm:text-6xl 2xl:text-8xl text-accent-secondary pr-4 sm:pl-8 font-bold`}>{t('cv')}</h2>
         </div>
 
         <div className="flex font-heading gap-11 justify-center text-[1.3rem] mt-28 md:mt-16">
