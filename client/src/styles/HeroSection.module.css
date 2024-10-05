@@ -126,7 +126,7 @@
         left: 5%;
     }
     .iCode{
-        top: 40%;
+        top: 39%;
         left: 13%;
     }
     
@@ -151,6 +151,29 @@
         top: 14%;
         left: 14%;
     }
+
+    .hello{
+        top: 30.6%;
+        left: 5%;
+    }
+    .myName{
+        margin-top: 0;
+        top: 34%;
+        left: 5%;
+    }
+    .iCode{
+        top: 38.9%;
+        left: 7%;
+    }
+    
+    .subCv{
+        top: 49.7%;
+        right: 63.7%;
+    }
+    .cv{
+        top: 46%;
+        margin-left: 27%;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -174,12 +197,12 @@
 
 @media (min-width: 1536px) {
     .title-fullstack {
-        top: 13.5%;
-        left: 28.3%; 
+        top: 14.9%;
+        left: 24%; 
     }
     .heading-dev{
         top: 13%;
-        left: 19%;;
+        left: 9%;
     }
 }
 
