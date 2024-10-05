@@ -49,7 +49,6 @@ const Header = () => {
         </p>
       </div>
 
-      {/* Navigation */}
       <nav className={`max-w-[1600px] mx-auto flex justify-between py-2 px-4 md:px-8 transition-transform duration-300 
         ${headerVisible ? 'translate-y-0' : '-translate-y-full'} 
         backdrop-blur-[100px] ${scrollY > 0 ? "dark:bg-[url('/assets/images/bg-dark-img.jpg')] dark:opacity-90" : "dark:bg-[url('/assets/images/bg-dark-img.jpg')]"}`}>
