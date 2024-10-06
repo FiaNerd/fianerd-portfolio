@@ -12,8 +12,8 @@
 
 .hello{
     position: absolute;
-    top: 4.4em;
-    left: 1em;
+    top: 0em;
+    left: 0.2em;
 }
 .myName{
     margin-top: 0.6em;
@@ -21,13 +21,13 @@
 }
 .iCode{
     position: absolute;
-    top: 7.4em;
-    left: 4.87em;
+    top: 3.4em;
+    left: 0.2em;
 }
 
 .subCv{
     position: absolute;
-    top: 9.1em;
+    top: 9.5em;
     right: 0.9em;
 }
 .cv{
@@ -35,8 +35,14 @@
     text-align: end;
 }
 
+.container-btn{
+    margin-top: 10em;
+}
+
 @media (min-width: 320px) {
-    
+    .container-btn{
+        margin-top: 6em;
+    }
 }
 
 @media (min-width: 480px) {
@@ -47,14 +53,14 @@
         margin-top: 0.7em;
     }
         
-         .hello{
-        top: 7.4em;
+    .hello{
+        top: 2.2em;
     }
     .myName{
         margin-top: 1.6em;
     }
     .iCode{
-        top: 10.6em;
+        top: 5.6em;
     }
 
     .subCv{
@@ -65,6 +71,9 @@
         text-align: end;
     }
 
+    .container-btn{
+        margin-top: 17em;
+    }
 }
 
 @media (min-width: 640px) {
@@ -79,20 +88,20 @@
     }
 
     .hello{
-        top: 10em;
-        left: 2em;
+        top: 3.5em;
+        left: 0.2em;
     }
     .myName{
         margin-top: 1.7em;
     }
     .iCode{
-        top: 13.8em;
-        left: 11em;
+        top: 7.8em;
+        left: 10em;
     }
     
     .subCv{
         top: 16em;
-        right: 0.6em;
+        right: 2em;
     }
     .cv{
         margin-top: 0.5em;
