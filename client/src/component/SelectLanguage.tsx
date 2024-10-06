@@ -41,7 +41,7 @@ const SelectLanguage = () => {
         <FontAwesomeIcon icon={faGlobe} className='pr-2 text-[1.4rem]' />
         <span className='dropdown-arrow text-[1.1rem]'>
           {selectedLanguageLabel}
-          <FontAwesomeIcon icon={faCaretDown} />
+          <FontAwesomeIcon icon={faCaretDown} className='pl-[0.2em]'/>
         </span>
       </button>
 

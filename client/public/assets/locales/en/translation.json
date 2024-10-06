@@ -4,7 +4,7 @@
   "home": "home",
   "profile": "profile",
  
-  "webb": "Webb",
+  "webb": "webb",
   "allProjects": "all projekt",
   "frontend": "frontend",
   "backend": "backend",
@@ -16,10 +16,10 @@
     "sv": "Swedish",
     "en": "English"
   },
-  "me": "Me",
-  "skills": "Skills",
-  "experience": "Experience",
-  "education": "Education",
+  "me": "me",
+  "skills": "skills",
+  "experience": "experience",
+  "education": "education",
   "headerTitle": "I'm like an espresso – strong and ready to kickstart your project!"
 
 }
