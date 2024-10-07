@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from '../../styles/HeroSection.module.css';
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
@@ -9,16 +10,24 @@ function HeroSection() {
     <div className="relative font-heading mb-12 md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
       {/* Wrapper for text with relative positioning */}
       <div className={`flex flex-col absolute md:static inset-0 mx-auto md:justify-between md:mx-0 z-10 pl-4 pr-4 sm:pr-[1.3em] md:gap-4 md:pr-4 md:pl-4 md:pt-[1em]`}>
-       <div className="flex flex-col mx-auto leading-0 ">
+       <motion.div 
+        initial={{  x: '-100vw', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{stiffness: 50, damping: 30, duration: 1}}
+        className="flex flex-col mx-auto leading-0 ">
         <p className={`${styles['title-fullstack']} flex text-2xl font-light leading-none sm:text-4xl  sm:-ml-[0.3em] md:pl-[0.8em] md:text-4xl xl:text-3xl 2xl:text-5xl`}>
             {t('smallTitle')}
           </p>
           <h1 className={`${styles['heading-dev']} text-accent-secondary md:-mt-[0.2em] sm:text-7xl md:text-6xl lg:text-7xl xl:text-6xl 2xl:text-8xl `}>
             {t('title')}
           </h1>
-        </div>
+        </motion.div>
 
-        <div className="relative flex flex-col">
+        <motion.div 
+           initial={{  x: '-100vw', opacity: 0 }}
+           animate={{ x: 0, opacity: 1 }}
+           transition={{stiffness: 50, damping: 30, duration: 2}}
+          className="relative flex flex-col">
           <p className={`${styles['hello']} font-bold md:text-2xl md:mb-[0.5em] 2xl:text-2xl`}>
             {t('helloName')} <span className="font-normal">{t('helloSpan')}</span>
           </p>
@@ -28,13 +37,17 @@ function HeroSection() {
           <p className={`${styles['iCode']} 2xl:text-2xl font-light tracking-tight md:text-xl`}>
             {t('iCode')}
           </p>
-        </div>
+        </motion.div>
 
 
-        <div className="flex flex-col">
+        <motion.div 
+         initial={{  y: '-100vh', opacity: 0 }}
+         animate={{ y: 0, opacity: 1 }}
+         transition={{stiffness: 50, damping: 30, duration: 3}}
+          className="flex flex-col">
           <p className={`${styles['subCv']} md:text-right md:text-2xl 2xl:text-2xl mb-0 leading-none`}>{t('subCv')}</p>
           <h2 className={`${styles['cv']} text-5xl md:-mt-[0.3em] sm:text-6xl md:text-6xl 2xl:text-8xl text-accent-secondary font-bold leading-none`}>{t('cv')}</h2>
-        </div>
+        </motion.div>
 
         <div className={`${styles['container-btn']} flex flex-col sm:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
             <button className="bg-accent-primary text-slate-100 py-2 px-4 sm:py-3 sm:px-6 rounded-md w-full sm:w-auto">
