@@ -7,7 +7,7 @@ function HeroSection() {
   const { t } = useTranslation('heroSection');
 
   return (
-    <div className="relative font-heading mb-12 md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
+    <div className="relative font-heading md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
       {/* Wrapper for text with relative positioning */}
       <div className={`flex flex-col absolute md:static inset-0 mx-auto md:justify-between md:mx-0 z-10 pl-4 pr-4 sm:pr-[1.3em] md:gap-4 md:pr-4 md:pl-4 md:pt-[1em]`}>
        <motion.div 
@@ -56,7 +56,7 @@ function HeroSection() {
             <button className="bg-accent-secondary py-2 px-4 sm:py-3 sm:px-6 rounded-md text-slate-100 w-full sm:w-auto">
                 {t('contact')}
             </button>
-</div>
+        </div>
 
         {/* <div className="bg-bg-secondary">
           <p className={`${styles['espresso']} text-white leading-0 mb-0 text-sm`}>{t('cvSubtitle')}</p>
