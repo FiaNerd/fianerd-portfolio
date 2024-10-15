@@ -1,10 +1,25 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from '../../styles/HeroSection.module.css';
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 function HeroSection() {
   const { t } = useTranslation('heroSection');
+  const [userIsDesktop, setUserIsDesktop] = useState(window.innerWidth > 768); 
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setUserIsDesktop(window.innerWidth > 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="relative font-heading md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
@@ -49,6 +64,15 @@ function HeroSection() {
           <h2 className={`${styles['cv']} text-5xl md:-mt-[0.3em] sm:text-6xl md:text-6xl 2xl:text-8xl text-accent-secondary font-bold leading-none`}>{t('cv')}</h2>
         </motion.div>
 
+     
+        {userIsDesktop && (
+      <div className="flex flex-col gap-6 mx-auto justify-center items-center text-md max-w-[80%] -mb-24">
+        <p className="text-center">{t('desktopText')}</p>
+        <p className="text-text-primary text-center">{t('desktopDonwload')}</p>
+      </div>
+    )}
+
+
         <div className={`${styles['container-btn']} flex flex-col sm:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
             <button className="bg-accent-primary text-slate-100 py-2 px-4 sm:py-3 sm:px-6 rounded-md w-full sm:w-auto">
                 {t('buttonCV')}
@@ -58,9 +82,7 @@ function HeroSection() {
             </button>
         </div>
 
-        {/* <div className="bg-bg-secondary">
-          <p className={`${styles['espresso']} text-white leading-0 mb-0 text-sm`}>{t('cvSubtitle')}</p>
-        </div> */}
+
       </div>
 
       <div className="w-full object-cover">
