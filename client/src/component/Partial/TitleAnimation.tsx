@@ -1,6 +1,5 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import useAnimateIn from "../../hook/useAnimation";
 
 interface IProps {
   text: string;
@@ -8,41 +7,14 @@ interface IProps {
 }
 
 const TitleAnimation = ({ text, dot }: IProps) => {
-  
-  const ctrls = useAnimation();
-
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
+  const { ref, ctrls, vars } = useAnimateIn({
+    delay: 0,
+    distance: '1rem', 
+    duration: 1,
+    repeat: false,
+    threshold: 1, 
   });
 
-  useEffect(() => {
-    if (inView) {
-      ctrls.start("visible");
-    } else {
-      ctrls.start("hidden");
-    }
-  }, [ctrls, inView]);
-
-  const wordAnimation = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const characterAnimation = {
-    hidden: {
-      opacity: 0,
-      y: `0.25em`,
-    },
-    visible: {
-      opacity: 1,
-      y: `0em`,
-      transition: {
-        duration: 1,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  };
 
   return (
     <motion.h1
@@ -50,18 +22,15 @@ const TitleAnimation = ({ text, dot }: IProps) => {
       aria-label={text}
       role="heading"
       initial="hidden"
-      animate="visible" 
+      animate={ctrls} 
       className="text-5xl text-text-heading font-bold font-heading mb-2 lg:text-[102px] tracking-tighter"
-      variants={wordAnimation}
     >
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}
-          initial="hidden"
-          animate="visible"
-          variants={wordAnimation}
+          variants={vars} 
           transition={{
-            delayChildren: index * 0.25,
+            delayChildren: index * 0.75,
             staggerChildren: 0.05,
           }}
           className="inline-block"
@@ -70,7 +39,7 @@ const TitleAnimation = ({ text, dot }: IProps) => {
             <motion.span
               aria-hidden="true"
               key={charIndex}
-              variants={characterAnimation}
+              variants={vars} 
               className="inline-block"
             >
               {character}
@@ -79,15 +48,12 @@ const TitleAnimation = ({ text, dot }: IProps) => {
         </motion.span>
       ))}
       <motion.span
-        initial="hidden"
-        animate="visible"
-        variants={characterAnimation}
+        variants={vars} 
         className="text-[6rem] lg:text-[12rem] ml-[-0.04em] inline-block"
       >
         {dot}
       </motion.span>
     </motion.h1>
-
   );
 };
 

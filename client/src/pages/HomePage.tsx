@@ -34,12 +34,12 @@ const HomePage = () => {
 
 
       <div className="text-center mb-8 text-text-heading md:mt-[2em] ">
-      <TitleAnimation text={t('title')} dot={(t('titleDot'))}/>
-   
+    
+            <TitleAnimation text={t('profile')} dot="." />
+ 
+          <h3 className="-mt-[1em]">{t('intro')}</h3>
+        </div>
 
-
-        <h3 className="-mt-[1em]">{t('intro')}</h3>
-      </div>
       <AboutNav />
       <AboutMe />
     </>

@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import useFadeIn from "../../hook/useFadeIn";
+import useMousePosition from "../../hook/useMousePosition";
 import styles from '../../styles/HeroSection.module.css';
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 function HeroSection() {
   const { t } = useTranslation('heroSection');
   const [userIsDesktop, setUserIsDesktop] = useState(window.innerWidth > 768); 
+  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
+  const mousePosition = useMousePosition(); 
   
   useEffect(() => {
     const handleResize = () => {
@@ -66,10 +70,10 @@ function HeroSection() {
 
      
         {userIsDesktop && (
-      <div className="flex flex-col gap-6 mx-auto justify-center items-center text-md max-w-[80%] -mb-24">
+      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="flex flex-col gap-6 mx-auto justify-center items-center text-md max-w-[80%] -mb-24">
         <p className="text-center">{t('desktopText')}</p>
         <p className="text-text-primary text-center">{t('desktopDonwload')}</p>
-      </div>
+      </motion.div>
     )}
 
         <div className={`${styles['container-btn']} flex flex-col sm:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
