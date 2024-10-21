@@ -72,7 +72,6 @@ function HeroSection() {
       </div>
     )}
 
-
         <div className={`${styles['container-btn']} flex flex-col sm:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
             <button className="bg-accent-primary text-slate-100 py-2 px-4 sm:py-3 sm:px-6 rounded-md w-full sm:w-auto">
                 {t('buttonCV')}
@@ -81,8 +80,6 @@ function HeroSection() {
                 {t('contact')}
             </button>
         </div>
-
-
       </div>
 
       <div className="w-full object-cover">

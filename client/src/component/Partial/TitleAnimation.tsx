@@ -8,7 +8,9 @@ interface IProps {
 }
 
 const TitleAnimation = ({ text, dot }: IProps) => {
+  
   const ctrls = useAnimation();
+
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,

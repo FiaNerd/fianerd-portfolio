@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { navRoutsAbout } from "../../config/MenuAboutMeData";
+import Section from "../Partial/Section";
 
 const AboutNav = () => {
     const { t } = useTranslation('home');
 
     return (
-        <section className="">
+        <Section>
         <ul className="max-w-[1200px] flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12">
             {navRoutsAbout.map((item) => (
                 <li key={item.title} className="flex">
@@ -19,7 +20,7 @@ const AboutNav = () => {
                 </li>
             ))}
         </ul>
-        </section>
+        </Section>
     );
 }
 

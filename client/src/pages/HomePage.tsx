@@ -35,10 +35,9 @@ const HomePage = () => {
 
       <div className="text-center mb-8 text-text-heading md:mt-[2em] ">
       <TitleAnimation text={t('title')} dot={(t('titleDot'))}/>
-      {/* <h1 className="inline-block tracking-tight">
-        {t('title')}
-        <span className="text-[6rem] lg:text-[12rem] ml-[-0.04em]">{t('titleDot')}</span>
-      </h1> */}
+   
+
+
         <h3 className="-mt-[1em]">{t('intro')}</h3>
       </div>
       <AboutNav />
