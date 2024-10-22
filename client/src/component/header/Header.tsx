@@ -42,9 +42,8 @@ const Header = () => {
       className={`fixed w-full top-0 z-50 transition-transform duration-300 
         ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         
-      {/* Full Color Header Title */}
       <div className={`bg-bg-primary transition-transform duration-300`}>
-        <p className='text-slate-300 pt-2 pb-2 text-text-primary mb-0 text-sm leading-normal text-center'>
+        <p className='pt-2 pb-2 text-text-secondary mb-0 text-sm leading-normal text-center'>
           {t('headerTitle')}
         </p>
       </div>

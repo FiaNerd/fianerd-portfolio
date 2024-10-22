@@ -12,6 +12,7 @@ export default {
         'text-heading': 'var(--color-text-heading)',
         'text-primary': 'var(--color-text-primary)',
         'text-secondary': 'var(--color-text-secondary)',
+        'text-tertiary': 'var(--color-text-tertiary)',
         'btn-primary': 'var(--color-btn-primary)',
         'btn-secondary': 'var(--color-btn-secondary)',
         'primary': 'var(--color-primary)',

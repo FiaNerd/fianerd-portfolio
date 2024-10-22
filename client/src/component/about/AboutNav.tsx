@@ -28,7 +28,7 @@ const AboutNav = () => {
                         >
                             <NavLink
                                 to={item.url}
-                                className="text-base font-medium md:text-lg lg:text-xl font-heading text-text-primary hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary"
+                                className="text-base font-medium md:text-lg lg:text-xl font-heading text-text-primary hover:underline hover:text-accent-secondary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary"
                             >
                                 {t(item.title)}
                             </NavLink>

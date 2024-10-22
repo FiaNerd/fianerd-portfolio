@@ -58,7 +58,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <NavLink
           to={items.url}
-          className='px-4 py-[0.6em] font-heading tracking-wider text-xl hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary'
+          className='px-4 py-[0.6em] font-heading tracking-wider text-xl hover:underline hover:text-accent-secondary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary'
           onClick={closeMenu}>
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </NavLink>
@@ -68,7 +68,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   
   return (
     <ul
-      className='text-text-primary font-medium hover:text-accent-primary flex items-center space-x-4 '
+      className='text-text-primary font-medium hover:text-accent-secondary flex items-center space-x-4 '
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <li ref={ref} className='relative group'>
@@ -76,7 +76,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <>
             <button
               onClick={handleButtonClick}
-              className='px-4 py-[0.6em]  text-xl font-heading tracking-wider hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-primary'>
+              className='px-4 py-[0.6em]  text-xl font-heading tracking-wider hover:underline hover:text-accent-secondary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary'>
               <Trans>{t(items.title)}</Trans>
               {items.icon && (
                 <FontAwesomeIcon
