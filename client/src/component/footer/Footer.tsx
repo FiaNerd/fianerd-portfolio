@@ -6,37 +6,33 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <div className='bg-none text-text-primary flex flex-row place-content-evenly text-center border-t p-2'>
-        <div className='flex place-content-evenly '>
+      <div className='bg-none text-text-primary flex flex-row place-content-evenly text-center border-t p-4'>
+
           <NavLink
             to='https://github.com/FiaNerd'
             target='_blank'
-            className='btn-menu flex-col gap-2 cursor-pointer'>
+            className='flex flex-col gap-2 cursor-pointer hover:text-accent-secondary'>
             <FontAwesomeIcon icon={faGithub} />
-            <p className="text-sm">GitHub</p>
+            <span className='text-sm font-medium'>GitHub</span>
           </NavLink>
-        </div>
 
-        <div className='flex'>
           <NavLink
             to='https://www.linkedin.com/in/sofia-mattiasson-fianerd/'
             target='_blank'
-            className='btn-menu flex-col gap-2 cursor-pointer'>
+            className='flex flex-col gap-2 cursor-pointer hover:text-accent-secondary'>
             <FontAwesomeIcon icon={faLinkedin} />
-            <p className="text-sm">LinkedIn</p>
+            <span className="text-sm font-medium">LinkedIn</span>
           </NavLink>
-        </div>
+
         
-        <div className='flex'>
           <NavLink
             to='mailto:fianerd.developer@gmail.com'
-            className='btn-menu flex-col gap-2 cursor-pointer'>
+            className='flex flex-col gap-2 cursor-pointer hover:text-accent-secondary'>
             <FontAwesomeIcon icon={faEnvelope} />
-            <p className="text-sm">e-mail</p>
+            <span className="text-sm font-medium">e-mail</span>
           </NavLink>
-        </div>
       </div>
-      <p className='font-heading text-sm mx-auto pb-4 mt-2'>
+      <p className='font-heading text-text-primary text-sm mx-auto pb-4 mt-2'>
         &copy; FiaNerd | Sofia Mattiasson
       </p>
     </>

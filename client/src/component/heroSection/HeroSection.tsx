@@ -6,7 +6,7 @@ import styles from '../../styles/HeroSection.module.css';
 import Button from "../Partial/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
-function HeroSection() {
+const HeroSection = () => {
   const { t } = useTranslation('heroSection');
   const [userIsDesktop, setUserIsDesktop] = useState(window.innerWidth > 768); 
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
@@ -26,7 +26,7 @@ function HeroSection() {
 
   return (
     <div className="relative font-heading md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
-      <div className={`flex flex-col absolute md:static inset-0 mx-auto md:justify-between md:mx-0 z-10 pl-4 pr-4 sm:pr-[1.3em] md:gap-4 md:pr-4 md:pl-4 md:pt-[1em]`}>
+      <div className={`flex flex-col absolute md:static inset-0 mx-auto md:justify-between md:mx-0 z-10 pl-4 pr-4 sm:pr-[1.3em] md:gap-4 md:pr-8 md:pl-8 md:pt-[1em]`}>
        <motion.div 
         initial={{  x: '-100vw', opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -75,10 +75,10 @@ function HeroSection() {
         )}
 
           <div className={`${styles['container-btn']} flex flex-col sm:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
-              <Button className="bg-accent-primary text-bg-primary border border-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-md w-full sm:w-auto">
+              <Button className="bg-accent-primary text-bg-primary border border-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('buttonCV')}
               </Button>
-              <Button className="bg-accent-secondary border border-accent-secondary hover:bg-inherit hover:border hover:text-accent-primary hover:border-accent-primary py-2 px-4 sm:py-3 sm:px-6 rounded-md text-slate-100 w-full sm:w-auto">
+              <Button className="bg-accent-secondary border border-accent-secondary hover:bg-inherit hover:border hover:text-accent-primary hover:border-accent-primary py-2 px-4 sm:py-3 sm:px-6 rounded-full text-slate-100 w-full sm:w-auto">
                   {t('contact')}
               </Button>
           </div>

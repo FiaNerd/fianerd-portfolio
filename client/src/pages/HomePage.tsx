@@ -61,7 +61,7 @@ const HomePage = () => {
           dot="." 
           onComplete={() => setAnimationComplete(true)} 
         />
-        <h3 className="-mt-[1.5em]">{t('intro')}</h3>
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em]">{t('intro')}</h3>
       </motion.div>
 
       <AboutNav />
