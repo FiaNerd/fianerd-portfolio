@@ -78,7 +78,7 @@ const HeroSection = () => {
               <Button className="bg-accent-primary text-bg-primary border border-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('buttonCV')}
               </Button>
-              <Button className="bg-accent-secondary border border-accent-secondary hover:bg-inherit hover:border hover:text-accent-primary hover:border-accent-primary py-2 px-4 sm:py-3 sm:px-6 rounded-full text-slate-100 w-full sm:w-auto">
+              <Button className="border border-accent-secondary text-accent-primary hover:bg-accent-secondary hover:text-text-primary py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('contact')}
               </Button>
           </div>
