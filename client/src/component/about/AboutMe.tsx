@@ -7,10 +7,13 @@ import Section from "../Partial/Section";
 
 const AboutMe = () => {
   const { t } = useTranslation("aboutMe");
-  const [ isVisible, setIsVisible ] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
+  const handleToggleText = () => {
+    setIsExpanded(!isExpanded);
+  }
 
   return (
     <Section bgColor="bg-bg-plate">
@@ -23,8 +26,17 @@ const AboutMe = () => {
         <p className="italic">{t('intro')}</p>
         <p>{t('introBio')}</p>
         <h3 className="text-text-heading text-h3 font-bold not-italic">{t('myBackgroundTitle')}</h3>
-        <p>{t('myBackgroundText')}</p>
-        { isVisible && (
+        
+        <p
+            className={`${
+              isExpanded ? "line-clamp-none" : "line-clamp-5"
+            }`} 
+          >
+            {t('myBackgroundText')}
+          </p>
+        
+               
+        { isExpanded && (
           <>
            <h3 className="text-h3 m-0 font-bold text-text-heading not-italic">{t('myJourneyTitle')}</h3>
            <p>{t('myJourneyText')}</p>
@@ -38,8 +50,13 @@ const AboutMe = () => {
            <p>{t('createTogheterText')}</p>
           </>
         )}
-   
-          <Button className="text-xl text-accent-primary hover:text-accent-secondary text-end" onClick={() => setIsVisible(!isVisible)}>{t('cta')}</Button>
+
+        <Button
+            className="text-xl text-accent-primary hover:text-accent-secondary text-end"
+            onClick={handleToggleText}
+          >
+            {isExpanded ? t('ctaLess') : t('cta')}
+          </Button>  
         </motion.div>
       </div>
     </Section>
