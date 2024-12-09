@@ -1,7 +1,21 @@
 {
     "title": "Mitt livs historia",
     "intro": "Ett liv fyllt av passion och en portfolio med mening",
-    "bio": "Här är berättelsen om hur jag kom in i webbutveckling och vad som driver mig bakom tangenterna. Jag har alltid haft en passion för teknik och kreativt arbete, och denna sektion ger dig en inblick i min resa och vad jag brinner för.\nMin resa började med en fascination för datorer och kreativt arbete, vilket ledde mig till studier inom webdesign och grafisk design. Efter att ha arbetat inom tryckteknik i många år, insåg jag att min verkliga passion låg i webbprogrammering. Jag fördjupade mig i .NET-utveckling på EC-utbildningen i Helsingborg, där jag fick en solid grund för att skapa innovativa och funktionella webblösningar. Min portfolio är en reflektion av denna resa, fylld med projekt som visar både min tekniska kompetens och kreativa förmåga.",
-    "cta": "Läs mer!"
-  }
-  
+    "introBio": "Jag är en nyfiken problemlösare med en passion för programmering och kreativitet i blodet. Det jag älskar mest är att ta idéer och förvandla dem till användarvänliga digitala upplevelser.",
+    "myBackgroundTitle": "Min resa inom IT",
+    "myBackgroundText": "Min resa in i webbutveckling började med en fascination för datorer och grafisk design, en passion som öppnade dörrar till spännande projekt.Redan 2008 designade jag logotyp, affischer, programblad och flyers för teatergruppen Stumpenensemblen, ett samarbete som fortfarande pågår. Sedan dess har jag arbetat med flera andra teatergrupper och företag, där jag har fått kombinera mitt kreativa öga med praktiskt skapande. Efter flera år inom tryckteknik insåg jag att min verkliga drivkraft låg i att skapa funktionella och innovativa webblösningar.",
+    "myJourneyTitle": "Min tekniska resa",
+    "myJourneyText": "Min tekniska resa tog fart inom backend-utveckling med .NET, där jag lärde mig att bygga skalbara och hållbara system. Nyfikenheten för frontend-utveckling ledde mig till teknologier som JavaScript, React och TypeScript. Kombinationen av backend- och frontend-kunskaper gör det möjligt för mig att skapa kompletta lösningar – från robusta API:er i Node.js till snygga och responsiva gränssnitt. Min portfolio speglar denna resa – en blandning av teknisk kompetens och kreativt tänkande.",
+    "myFilosofiTitle": "Min arbetsfilosofi",
+    "myFilosofiSubtitle": "Jag strävar alltid efter att: ",
+    "myFilosofiText1": "Skriva ren och hållbar kod.",
+    "myFilosofiText2": "Lägga stort fokus på användarupplevelsen.",
+    "myFilosofiText3": "Lösa problem med ett öppet sinne och ett öga för detaljer.",
+    "myFilosofiText4": "Mitt mål är att skapa lösningar som inte bara fungerar – utan som sticker ut.",
+    "createTogheterTitle": "Låt oss skapa något fantastiskt tillsammans!",
+    "createTogheterText": "Är du nyfiken på ett samarbete eller har ett spännande projekt på gång? Tveka inte att höra av dig – jag ser fram emot att utforska nya möjligheter och skapa något fantastiskt tillsammans!"
+}
+
+
+
+

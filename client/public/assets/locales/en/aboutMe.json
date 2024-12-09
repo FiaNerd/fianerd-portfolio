@@ -1,6 +1,17 @@
 {
     "title": "The Story of My Life",
-    "intro": "A life filled with passion and a portfolio with purpose",
-    "bio": "This is the story of how I got into web development and what drives me behind the keyboard. I've always had a passion for technology and creative work, and this section gives you an insight into my journey and what I am passionate about. My journey began with a fascination for computers and creative work, which led me to studies in web design and graphic design. After working in print technology for many years, I realized that my true passion lay in web programming. I deepened my knowledge in .NET development at EC Education in Helsingborg, where I gained a solid foundation for creating innovative and functional web solutions. My portfolio is a reflection of this journey, filled with projects that showcase both my technical skills and creative abilities.",
-    "cta": "Read more!"
+    "intro": "A life full of passion and a portfolio with purpose",
+    "introBio": "I am a curious problem-solver with a passion for programming and creativity at heart. What I love most is turning ideas into user-friendly digital experiences.",
+    "myBackgroundTitle": "My Background in IT",
+    "myBackgroundText": "My journey into web development began with a fascination for computers and graphic design, a passion that opened doors to exciting projects. In 2008, I designed the logo, posters, programs, and flyers for the theater group Stumpenensemblen, a collaboration that continues to this day. Since then, I have worked with several other theater groups and companies, combining my creative eye with practical craftsmanship. After several years in print technology, I realized my true drive was in creating functional and innovative web solutions.",
+    "myJourneyTitle": "My Technical Journey",
+    "myJourneyText": "My technical journey took off with backend development in .NET, where I learned to build scalable and sustainable systems. My curiosity for frontend development led me to technologies like JavaScript, React, and TypeScript. The combination of backend and frontend skills allows me to create complete solutions – from robust APIs in Node.js to sleek and responsive interfaces. My portfolio reflects this journey – a blend of technical expertise and creative thinking.",
+    "myFilosofiTitle": "My Work Philosophy",
+    "myFilosofiSubtitle": "I always strive to: ",
+    "myFilosofiText1": "Write clean and maintainable code.",
+    "myFilosofiText2": "Focus heavily on user experience.",
+    "myFilosofiText3": "Solve problems with an open mind and an eye for detail.",
+    "myFilosofiText4": "My goal is to create solutions that not only work – but stand out.",
+    "createTogheterTitle": "Let’s Create Something Amazing Together!",
+    "createTogheterText": "Are you curious about collaborating or have an exciting project in mind? Don’t hesitate to reach out – I look forward to exploring new possibilities and creating something amazing together!"
 }

@@ -68,7 +68,7 @@ const Header = () => {
           <ThemeSwitch />
           <SelectLanguage />
           <NavLink to='/contact' className={`hidden cursor-pointer text-lg md:block border rounded-full border-accent-primary px-4 py-2 text-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text
-            ${scrollY > 0 ? 'opacity-80' : 'opacity-100'}`}>
+            hover:opacity-100`}>
             {t('contact')}
           </NavLink>
           <NavbarMobile />

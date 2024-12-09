@@ -19,7 +19,7 @@ const AboutMe = () => {
           <img src="/assets/images/me.jpeg" alt="Fia nerd" />
         </div>
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="flex flex-col">
-        <h2>{t('title')}</h2>
+        <h2 className="m-0">{t('title')}</h2>
         <p>{t('intro')}</p>
         { isVisible && (
           <>

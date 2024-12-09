@@ -25,7 +25,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative font-heading md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
+    <div className="relative font-heading lg:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full h-full md:grid md:grid-cols-2">
       <div className={`flex flex-col absolute md:static inset-0 mx-auto md:justify-between md:mx-0 z-10 pl-4 pr-4 sm:pr-[1.3em] md:gap-4 md:pr-8 md:pl-8 md:pt-[1em]`}>
        <motion.div 
         initial={{  x: '-100vw', opacity: 0 }}
@@ -78,7 +78,7 @@ const HeroSection = () => {
               <Button className="bg-accent-primary text-bg-primary border border-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('buttonCV')}
               </Button>
-              <Button className="border border-accent-secondary text-accent-primary hover:bg-accent-secondary hover:text-text-primary py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
+              <Button className="border border-accent-secondary text-accent-primary hover:bg-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('contact')}
               </Button>
           </div>
