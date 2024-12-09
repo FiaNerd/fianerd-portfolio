@@ -75,10 +75,10 @@ const HeroSection = () => {
         )}
 
           <div className={`${styles['container-btn']} flex flex-col sm:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
-              <Button className="bg-accent-primary text-bg-primary border border-accent-primary hover:bg-accent-secondary hover:border-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
+              <Button className="bg-accent-secondary text-bg-primary border border-accent-secondary hover:bg-accent-primary hover:border-accent-primary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('buttonCV')}
               </Button>
-              <Button className="border border-accent-secondary text-accent-primary hover:bg-accent-secondary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
+              <Button className="border-2 border-accent-secondary text-accent-secondary hover:border-accent-primary hover:bg-accent-primary hover:text-hover-text py-2 px-4 sm:py-3 sm:px-6 rounded-full w-full sm:w-auto">
                   {t('contact')}
               </Button>
           </div>

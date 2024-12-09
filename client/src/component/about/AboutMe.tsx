@@ -52,7 +52,7 @@ const AboutMe = () => {
         )}
 
         <Button
-            className="text-xl text-accent-primary hover:text-accent-secondary text-end"
+            className="text-xl text-accent-secondary hover:text-accent-primary text-end"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}
