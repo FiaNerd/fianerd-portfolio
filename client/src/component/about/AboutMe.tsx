@@ -19,11 +19,23 @@ const AboutMe = () => {
           <img src="/assets/images/me.jpeg" alt="Fia nerd" />
         </div>
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="flex flex-col">
-        <h2 className="m-0">{t('title')}</h2>
-        <p>{t('intro')}</p>
+        <h2 className="text-h2 m-0 font-bold text-text-heading not-italic">{t('title')}</h2>
+        <p className="italic">{t('intro')}</p>
+        <p>{t('introBio')}</p>
+        <h3 className="text-text-heading text-h3 font-bold not-italic">{t('myBackgroundTitle')}</h3>
+        <p>{t('myBackgroundText')}</p>
         { isVisible && (
           <>
-           <p>{t('bio')}</p>
+           <h3 className="text-h3 m-0 font-bold text-text-heading not-italic">{t('myJourneyTitle')}</h3>
+           <p>{t('myJourneyText')}</p>
+           <h4 className="text-h4 m-0 font-bold text-text-heading not-italic">{t('myFilosofiTitle')}</h4>
+           <h4 className="text-h4 not-italic m-0">{t('myFilosofiSubtitle')}</h4>
+           <p className="m-0">{t('myFilosofiText1')}</p>
+           <p className="m-0">{t('myFilosofiText2')}</p>
+           <p>{t('myFilosofiText3')}</p>
+           <p>{t('myFilosofiText4')}</p>
+           <h3 className="text-h3 font-bold text-text-tertiary">{t('createTogheterTitle')}</h3>
+           <p>{t('createTogheterText')}</p>
           </>
         )}
    
