@@ -17,11 +17,17 @@ const AboutMe = () => {
 
   return (
     <Section bgColor="bg-bg-plate">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 p-4 md:gap-10 md:grid-cols-2">
-        <div>
-          <img src="/assets/images/me.jpeg" alt="Fia nerd" />
-        </div>
-        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="flex flex-col">
+      <div className="max-w-[1200px] mx-auto grid grid-col-1 p-4 md:gap-10">
+        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
+
+          <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
+      
+
+        {/* <picture>
+          <source srcSet="/assets/images/profile-img-mobile.jpg" media="(min-width:md)" />
+          <img src="/assets/images/profile-img-desktop.jpg" alt="Description" className="mx-auto md:float-left mb-8 md:pr-8 max-w-full h-auto object-cover"/>
+        </picture> */}
+
         <h2 className="text-h2 m-0 font-bold text-text-heading not-italic">{t('title')}</h2>
         <p className="italic">{t('intro')}</p>
         <p>{t('introBio')}</p>
@@ -29,17 +35,18 @@ const AboutMe = () => {
         
         <p
             className={`${
-              isExpanded ? "line-clamp-none" : "line-clamp-5"
+              isExpanded ? "line-clamp-none" : "line-clamp-5 lg:line-clamp-[10]"
             }`} 
           >
             {t('myBackgroundText')}
           </p>
-        
                
         { isExpanded && (
           <>
-           <h3 className="text-h3 m-0 font-bold text-text-heading not-italic">{t('myJourneyTitle')}</h3>
-           <p>{t('myJourneyText')}</p>
+
+          <h3 className="text-h3 m-0 font-bold text-text-heading not-italic">{t('myJourneyTitle')}</h3>
+          <p>{t('myJourneyText')}</p>
+           {/* <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="hidden lg:block mx-auto lg:float-right mb-8 md:mb-0 md:pr-8 max-w-sm h-auto object-cover "/> */}
            <h4 className="text-h4 m-0 font-bold text-text-heading not-italic">{t('myFilosofiTitle')}</h4>
            <h4 className="text-h4 not-italic m-0">{t('myFilosofiSubtitle')}</h4>
            <p className="m-0">{t('myFilosofiText1')}</p>
@@ -52,7 +59,7 @@ const AboutMe = () => {
         )}
 
         <Button
-            className="text-xl text-accent-secondary hover:text-accent-primary text-end"
+            className="float-right text-lg md:text-xl text-accent-secondary hover:text-accent-primary "
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}
