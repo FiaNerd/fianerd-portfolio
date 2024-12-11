@@ -45,6 +45,8 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     }
   }
 
+
+
   const renderLinkOrButton = () => {
     if (items.title.toLowerCase() === 'kontakt') {
       return (
@@ -54,7 +56,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </button>
       )
-    } else {
+    } else  {
       return (
         <NavLink
           to={items.url}

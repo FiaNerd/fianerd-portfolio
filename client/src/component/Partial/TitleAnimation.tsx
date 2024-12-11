@@ -4,7 +4,7 @@ import useAnimateIn from "../../hook/useAnimation";
 interface IProps {
   text: string;
   dot: string;
-  onComplete: () => void; // New prop to notify when animation is complete
+  onComplete?: () => void; // New prop to notify when animation is complete
 }
 
 const TitleAnimation = ({ text, dot, onComplete }: IProps) => {

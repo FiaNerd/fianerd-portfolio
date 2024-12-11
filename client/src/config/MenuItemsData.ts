@@ -19,12 +19,12 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home', // Use translation key
-    url: '/',
+    url: '/#home',
     nav: HomePage,
   },
   {
     title: 'profile', // Use translation key
-    url: '/',
+    url: '/#profile',
   },
   {
     title: 'portfolio', // Use translation key
@@ -68,7 +68,7 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'news',
-    url: '/',
+    url: '/news',
   },
   // {
   //   title: 'contact', // Use translation key

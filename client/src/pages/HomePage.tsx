@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
+import { t } from "i18next";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import AboutMe from "../component/about/AboutMe";
 import AboutNav from "../component/about/AboutNav";
 import HeroSection from "../component/heroSection/HeroSection";
+import Section from "../component/Partial/Section";
 import TitleAnimation from "../component/Partial/TitleAnimation";
-import useMousePosition from "../hook/useMousePosition";
 
 const HomePage = () => {
-  const { t } = useTranslation('home');
+  const location = useLocation();
   const [headerHeight, setHeaderHeight] = useState(0);
-  const [animationComplete, setAnimationComplete] = useState(false); // Track animation completion
-  const mousePosition = useMousePosition();
 
+  // Dynamically adjust header height
   useEffect(() => {
-    const header = document.querySelector('header');
+    const header = document.querySelector("header");
 
     const handleResize = () => {
       if (header) {
@@ -23,45 +23,47 @@ const HomePage = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Handle scroll position
-  const [scrollY, setScrollY] = useState(0);
+  // Handle scrolling to sections
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
+    const scrollToSection = () => {
+      const targetId = location.hash.replace("#", ""); // Extract the hash part (e.g., "profile")
+      if (targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    scrollToSection();
+  }, [location]);
 
   return (
     <>
-      <div style={{ paddingTop: `${headerHeight}px` }} className="bg-blend-multiply">
-        <div style={{ minHeight: `calc(100% - ${headerHeight}px)` }} className="relative">
+      <div
+        style={{ paddingTop: `${headerHeight}px` }}
+        className="bg-blend-multiply"
+      >
+        <Section
+          id="home"
+          style={{ minHeight: `calc(100% - ${headerHeight}px)` }}
+          className="relative"
+        >
           <HeroSection />
-        </div>
+        </Section>
       </div>
 
-      <motion.div 
+      <motion.div
+        id="profile"
         className="text-center mb-8 text-text-heading md:mt-[2em]"
-        // style={{
-        //   transform: animationComplete 
-        //     ? `translate(${mousePosition.x * 0}px, ${mousePosition.y * 0.1}px) translateY(${scrollY * 0.1}px)`
-        //     : 'none',
-        //   transition: 'transform 0.1s ease-out',
-        // }}
       >
-        <TitleAnimation 
-          text={t('profile')} 
-          dot="." 
-          onComplete={() => setAnimationComplete(true)} 
-        />
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em]">{t('intro')}</h3>
+        <TitleAnimation text={t("profile")} dot="." />
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em]">{t("intro")}</h3>
       </motion.div>
 
       <AboutNav />
