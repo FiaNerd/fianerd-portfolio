@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { t } from "i18next";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import AboutMe from "../component/about/AboutMe";
 import AboutNav from "../component/about/AboutNav";
 import HeroSection from "../component/heroSection/HeroSection";
@@ -10,10 +9,8 @@ import TitleAnimation from "../component/Partial/TitleAnimation";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {
-  const location = useLocation();
   const [headerHeight, setHeaderHeight] = useState(0);
 
-  // Dynamically adjust header height
   useEffect(() => {
     const header = document.querySelector("header");
 
@@ -29,32 +26,18 @@ const HomePage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // // Handle scrolling to sections
-  // useEffect(() => {
-  //   const scrollToSection = () => {
-  //     const targetId = location.hash.replace("#", "");
-  //     if (targetId) {
-  //       const targetElement = document.getElementById(targetId);
-  //       if (targetElement) {
-  //         targetElement.scrollIntoView({ behavior: "smooth" });
-  //       }
-  //     }
-  //   };
-
-  //   scrollToSection();
-  // }, [location]);
-
   useSmoothScroll();
 
   return (
     <>
       <div
-        style={{ paddingTop: `${headerHeight}px` }}
+        style={{ paddingTop: `${headerHeight}px`,  transition: "padding-top 0.3s ease", }}
+        
         className="bg-blend-multiply"
       >
         <Section
           id="home"
-          style={{ minHeight: `calc(100% - ${headerHeight}px)` }}
+          style={{ height: `calc(100vh - ${headerHeight}px)` }}
           className="relative"
         >
           <HeroSection />
