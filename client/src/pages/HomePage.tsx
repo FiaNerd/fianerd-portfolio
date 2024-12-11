@@ -7,6 +7,7 @@ import AboutNav from "../component/about/AboutNav";
 import HeroSection from "../component/heroSection/HeroSection";
 import Section from "../component/Partial/Section";
 import TitleAnimation from "../component/Partial/TitleAnimation";
+import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {
   const location = useLocation();
@@ -28,20 +29,22 @@ const HomePage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Handle scrolling to sections
-  useEffect(() => {
-    const scrollToSection = () => {
-      const targetId = location.hash.replace("#", ""); // Extract the hash part (e.g., "profile")
-      if (targetId) {
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    };
+  // // Handle scrolling to sections
+  // useEffect(() => {
+  //   const scrollToSection = () => {
+  //     const targetId = location.hash.replace("#", "");
+  //     if (targetId) {
+  //       const targetElement = document.getElementById(targetId);
+  //       if (targetElement) {
+  //         targetElement.scrollIntoView({ behavior: "smooth" });
+  //       }
+  //     }
+  //   };
 
-    scrollToSection();
-  }, [location]);
+  //   scrollToSection();
+  // }, [location]);
+
+  useSmoothScroll();
 
   return (
     <>
