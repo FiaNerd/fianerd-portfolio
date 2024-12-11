@@ -37,7 +37,7 @@ const HomePage = () => {
       >
         <Section
           id="home"
-          style={{ height: `calc(100vh - ${headerHeight}px)` }}
+          style={{ height: `calc(100% - ${headerHeight}px)` }}
           className="relative"
         >
           <HeroSection />
