@@ -35,7 +35,6 @@ const HomePage = () => {
     <>
       <div
         style={{ paddingTop: `${headerHeight}px`,  transition: "padding-top 0.3s ease", }}
-        
         className="bg-blend-multiply"
       >
         <Section
@@ -52,11 +51,11 @@ const HomePage = () => {
         className="text-center mb-8 text-text-heading md:mt-[2em]"
       >
         <TitleAnimation title={t("titleProfile")} dot="." />
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em]">{t("intro")}</h3>
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[5rem]">{t("intro")}</h3>
       </motion.div>
 
       <AboutNav />
-      <Section bgColor="bg-bg-plate">
+      <Section bgColor="bg-bg-plate mb-8">
          <AboutMe />
       </Section>
       

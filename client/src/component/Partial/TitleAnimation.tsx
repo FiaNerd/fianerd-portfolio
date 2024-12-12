@@ -45,7 +45,6 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
   };
 
   const words = title.split(" ");
-  console.log(words)
 
   return (
     <motion.h1
@@ -56,14 +55,14 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
     initial="hidden"
     animate={ctrls}
     onAnimationComplete={onComplete}
-    className="text-5xl text-text-heading font-bold font-heading mb-2 lg:text-[102px] tracking-tighter"
+    className="text-5xl text-center text-text-heading font-bold font-heading mb-2 lg:text-[102px] tracking-tighter md:whitespace-pre-line leading-[3rem] sm:leading-[3rem] md:leading-[6rem]"
     style={style}
   >
     <motion.div
       variants={container}
       initial="hidden"
       animate="visible"
-      className="texte-center inline"
+      className="texte-center inline leading-[1rem]"
     >
       {/* Map over words */}
       {words.map((word, wordIndex) => (
@@ -74,12 +73,11 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
           className="inline"
         >
           {word}
-          {wordIndex < words.length - 1 && " "}
         </motion.span>
       ))}
       <motion.span
         variants={child}
-        className="text-[6rem] lg:text-[12rem] ml-[-0.04em] inline"
+        className="text-[6rem] lg:text-[12rem] ml-[-0.04em] inline "
       >
         {dot}
       </motion.span>
