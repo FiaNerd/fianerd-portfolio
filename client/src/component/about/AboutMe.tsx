@@ -16,7 +16,7 @@ const AboutMe = () => {
   }
 
   return (
-    <Section bgColor="bg-bg-plate">
+
       <div className="max-w-[1200px] mx-auto grid grid-col-1 p-4 md:gap-10">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
@@ -66,7 +66,6 @@ const AboutMe = () => {
           </Button>  
         </motion.div>
       </div>
-    </Section>
   );
 };
 

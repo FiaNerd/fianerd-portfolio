@@ -16,7 +16,7 @@ i18n
     backend: {
       loadPath: '/assets/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['home'],
+    ns: ['home', 'heroSection', 'abouMe', "skills"],
     defaultNS: 'home',
   })
 

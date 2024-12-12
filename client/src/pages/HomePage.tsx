@@ -7,6 +7,7 @@ import Section from "../component/Partial/Section";
 import TitleAnimation from "../component/Partial/TitleAnimation";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
+import Skills from "../component/Skills";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -50,12 +51,17 @@ const HomePage = () => {
         id="profile"
         className="text-center mb-8 text-text-heading md:mt-[2em]"
       >
-        <TitleAnimation text={t("titleProfile")} dot="." />
+        <TitleAnimation title={t("titleProfile")} dot="." />
         <h3 className="-mt-[0.8em] lg:-mt-[1.5em]">{t("intro")}</h3>
       </motion.div>
 
       <AboutNav />
-      <AboutMe />
+      <Section bgColor="bg-bg-plate">
+         <AboutMe />
+      </Section>
+      
+      <Skills />
+
     </>
   );
 };

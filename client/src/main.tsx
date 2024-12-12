@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import '../public/assets/i18n/translation.ts'
+import '../public/assets/i18n/i18n.ts'
 import { I18nextProvider } from 'react-i18next'
-import translation from '../public/assets/i18n/translation.ts'
+import translation from '../public/assets/i18n/i18n.ts'
 import { ThemeProvider } from './context/ThemeContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
