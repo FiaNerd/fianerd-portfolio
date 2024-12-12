@@ -14,6 +14,7 @@ const TitleAnimation = ({ text, dot, onComplete }: IProps) => {
   useEffect(() => {
     setAnimationKey(prev => prev + 1);
   }, [text]);
+  
   const characterCount = text.length + 1; 
   const durationPerChar = 0.1; 
   const totalDuration = characterCount * durationPerChar; 
@@ -31,7 +32,8 @@ const TitleAnimation = ({ text, dot, onComplete }: IProps) => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: durationPerChar, 
+        staggerChildren: durationPerChar,
+        when: "beforeChildren",
       },
     },
   };
