@@ -55,11 +55,11 @@ const HomePage = () => {
       </motion.div>
 
       <AboutNav />
-      <Section bgColor="bg-bg-plate mb-8">
+      <Section id="me" bgColor="bg-bg-plate mb-8">
         <AboutMe />
       </Section>
       
-      <section className="text-center">
+      <section id="skills" className="text-center">
         <TitleAnimation title={t('skills:titleSkills')} dot="." />
       </section>
          <Skills />
