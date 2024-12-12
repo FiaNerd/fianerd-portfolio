@@ -13,7 +13,7 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
-    setAnimationKey(prev => prev + 1);
+    setAnimationKey((prev) => prev + 1);
   }, [title]);
 
   const characterCount = title.length + 1;
@@ -48,42 +48,43 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
 
   return (
     <motion.h1
-    key={animationKey}
-    ref={ref}
-    aria-label={title}
-    role="heading"
-    initial="hidden"
-    animate={ctrls}
-    onAnimationComplete={onComplete}
-    className="text-5xl text-center text-text-heading font-bold font-heading mb-2 lg:text-[102px] tracking-tighter md:whitespace-pre-line leading-[3rem] sm:leading-[3rem] md:leading-[6rem]"
-    style={style}
-  >
-    <motion.div
-      variants={container}
+      key={animationKey}
+      ref={ref}
+      aria-label={title}
+      role="heading"
       initial="hidden"
-      animate="visible"
-      className="texte-center inline leading-[1rem]"
+      animate={ctrls}
+      onAnimationComplete={onComplete}
+      className="text-5xl font-bold font-heading mb-2 lg:text-[102px] tracking-tighter whitespace-break-spaces"
+      style={style}
     >
-      {/* Map over words */}
-      {words.map((word, wordIndex) => (
-        <motion.span
-          aria-hidden="true"
-          key={wordIndex}
-          variants={child}
-          className="inline"
-        >
-          {word}
-        </motion.span>
-      ))}
-      <motion.span
-        variants={child}
-        className="text-[6rem] lg:text-[12rem] ml-[-0.04em] inline "
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="inline"
       >
-        {dot}
-      </motion.span>
-    </motion.div>
-  </motion.h1>
-  
+        {/* Map over words */}
+        {words.map((word, wordIndex) => (
+          <motion.span
+            aria-hidden="true"
+            key={wordIndex}
+            variants={child}
+            className="inline"
+          >
+            {word}
+            {/* Add a space between the words */}
+            {wordIndex < words.length - 1 && " "}
+          </motion.span>
+        ))}
+        <motion.span
+          variants={child}
+          className="text-[6rem] lg:text-[12rem] ml-[-0.04em] leading-[1rem]"
+        >
+          {dot}
+        </motion.span>
+      </motion.div>
+    </motion.h1>
   );
 };
 

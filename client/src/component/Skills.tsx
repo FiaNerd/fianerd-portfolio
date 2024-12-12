@@ -7,7 +7,9 @@ const Skills = () => {
   
   return (
     <>
-      <TitleAnimation title={t('titleSkills')} dot="."/>
+    <section className="max-w-[1200px] mx-auto grid grid-rows-2 md:grid-cols-2">
+      <p>text</p>
+    </section>
 
     </>
   );

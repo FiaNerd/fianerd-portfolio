@@ -12,7 +12,7 @@ import Skills from "../component/Skills";
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
 
-  const {t} = useTranslation('home');
+  const { t } = useTranslation(['home', 'skills']); // Access both home and skills translations
 
   useEffect(() => {
     const header = document.querySelector("header");
@@ -34,7 +34,7 @@ const HomePage = () => {
   return (
     <>
       <div
-        style={{ paddingTop: `${headerHeight}px`,  transition: "padding-top 0.3s ease", }}
+        style={{ paddingTop: `${headerHeight}px`, transition: "padding-top 0.3s ease" }}
         className="bg-blend-multiply"
       >
         <Section
@@ -48,18 +48,21 @@ const HomePage = () => {
 
       <motion.div
         id="profile"
-        className="text-center mb-8 text-text-heading md:mt-[2em]"
+        className="text-center mb-8 md:mt-[2em]"
       >
-        <TitleAnimation title={t("titleProfile")} dot="." />
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[5rem]">{t("intro")}</h3>
+        <TitleAnimation title={t("home:titleProfile")} dot="." />
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[5rem]">{t("home:intro")}</h3>
       </motion.div>
 
       <AboutNav />
       <Section bgColor="bg-bg-plate mb-8">
-         <AboutMe />
+        <AboutMe />
       </Section>
       
-      <Skills />
+      <section className="text-center">
+        <TitleAnimation title={t('skills:titleSkills')} dot="." />
+      </section>
+         <Skills />
 
     </>
   );
