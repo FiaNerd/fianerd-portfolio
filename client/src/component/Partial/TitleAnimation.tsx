@@ -1,59 +1,80 @@
 import { motion } from "framer-motion";
 import useAnimateIn from "../../hook/useAnimation";
+import { useEffect, useState } from "react";
 
 interface IProps {
   text: string;
   dot: string;
-  onComplete?: () => void; // New prop to notify when animation is complete
+  onComplete?: () => void;
 }
 
 const TitleAnimation = ({ text, dot, onComplete }: IProps) => {
-  const { ref, ctrls, vars } = useAnimateIn({
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    setAnimationKey(prev => prev + 1);
+  }, [text]);
+  const characterCount = text.length + 1; 
+  const durationPerChar = 0.1; 
+  const totalDuration = characterCount * durationPerChar; 
+
+  const { ref, ctrls } = useAnimateIn({
     delay: 0,
     distance: '1rem',
-    duration: 1,
+    duration: totalDuration,
     repeat: false,
     threshold: 1,
   });
 
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: durationPerChar, 
+      },
+    },
+  };
+
+  const child = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <motion.h1
+      key={animationKey} 
       ref={ref}
       aria-label={text}
       role="heading"
       initial="hidden"
       animate={ctrls}
-      onAnimationComplete={onComplete} // Call onComplete when the animation is finished
+      onAnimationComplete={onComplete}
       className="text-5xl text-text-heading font-bold font-heading mb-2 lg:text-[102px] tracking-tighter"
     >
-      {text.split(" ").map((word, index) => (
-        <motion.span
-          key={index}
-          variants={vars}
-          transition={{
-            delayChildren: index * 0.75,
-            staggerChildren: 0.05,
-          }}
-          className="inline-block"
-        >
-          {word.split("").map((character, charIndex) => (
-            <motion.span
-              aria-hidden="true"
-              key={charIndex}
-              variants={vars}
-              className="inline-block"
-            >
-              {character}
-            </motion.span>
-          ))}
-        </motion.span>
-      ))}
-      <motion.span
-        variants={vars}
-        className="text-[6rem] lg:text-[12rem] ml-[-0.04em] inline-block"
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="inline-block"
       >
-        {dot}
-      </motion.span>
+        {text.split("").map((character, charIndex) => (
+          <motion.span
+            aria-hidden="true"
+            key={charIndex}
+            variants={child}
+            className="inline-block"
+          >
+            {character}
+          </motion.span>
+        ))}
+        <motion.span
+          variants={child}
+          className="text-[6rem] lg:text-[12rem] ml-[-0.04em] inline-block"
+        >
+          {dot}
+        </motion.span>
+      </motion.div>
     </motion.h1>
   );
 };

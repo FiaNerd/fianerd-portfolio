@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { t } from "i18next";
 import { useEffect, useState } from "react";
 import AboutMe from "../component/about/AboutMe";
 import AboutNav from "../component/about/AboutNav";
@@ -7,9 +6,12 @@ import HeroSection from "../component/heroSection/HeroSection";
 import Section from "../component/Partial/Section";
 import TitleAnimation from "../component/Partial/TitleAnimation";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
+
+  const {t} = useTranslation('home');
 
   useEffect(() => {
     const header = document.querySelector("header");
@@ -48,7 +50,7 @@ const HomePage = () => {
         id="profile"
         className="text-center mb-8 text-text-heading md:mt-[2em]"
       >
-        <TitleAnimation text={t("profile")} dot="." />
+        <TitleAnimation text={t("titleProfile")} dot="." />
         <h3 className="-mt-[0.8em] lg:-mt-[1.5em]">{t("intro")}</h3>
       </motion.div>
 

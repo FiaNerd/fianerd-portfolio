@@ -15,8 +15,6 @@ const AboutNav = () => {
         <Section id="me">
             <ul className="max-w-[1200px] flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12">
                 {navRoutsAbout.map((item) => {
-                    // Use your custom hook for each nav item
-
                     return (
                         <motion.li 
                             ref={ref} 
