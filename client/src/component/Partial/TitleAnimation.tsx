@@ -55,7 +55,7 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
       initial="hidden"
       animate={ctrls}
       onAnimationComplete={onComplete}
-      className="text-5xl font-bold font-heading mb-2 lg:text-[102px] tracking-tighter whitespace-break-spaces"
+      className="text-5xl font-bold font-heading mb-2 lg:text-[102px] tracking-tighter whitespace-break-spaces leading-[6rem]"
       style={style}
     >
       <motion.div
@@ -64,7 +64,6 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
         animate="visible"
         className="inline"
       >
-        {/* Map over words */}
         {words.map((word, wordIndex) => (
           <motion.span
             aria-hidden="true"
@@ -73,7 +72,6 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
             className="inline"
           >
             {word}
-            {/* Add a space between the words */}
             {wordIndex < words.length - 1 && " "}
           </motion.span>
         ))}

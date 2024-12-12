@@ -7,7 +7,7 @@ import Section from "../component/Partial/Section";
 import TitleAnimation from "../component/Partial/TitleAnimation";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
-import Skills from "../component/Skills";
+import Skills from "../component/skills/Skills";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -61,7 +61,9 @@ const HomePage = () => {
       
       <section id="skills" className="text-center">
         <TitleAnimation title={t('skills:titleSkills')} dot="." />
+        <h3>{t('skills:subTitleSkills')}</h3>
       </section>
+      
          <Skills />
 
     </>
