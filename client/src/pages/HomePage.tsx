@@ -59,7 +59,7 @@ const HomePage = () => {
         <AboutMe />
       </Section>
       
-      <section id="skills" className="text-center">
+      <section id="skills" className="text-center mb-8">
         <TitleAnimation title={t('skills:titleSkills')} dot="." />
         <h3>{t('skills:subTitleSkills')}</h3>
       </section>
