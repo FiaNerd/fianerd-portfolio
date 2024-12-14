@@ -17,10 +17,13 @@ const WebSkills = () => {
             </div>
             <div className="whitespace-break-spaces	">
                 <h4 className="text-center text-text-sub-heading not-italic font-bold">{t('textTitleGoal')}</h4>
-                <h5 dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
+                <h5 className="not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
                 <p dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
-                <h5 dangerouslySetInnerHTML={{__html: t('titleFE')}}></h5>
+                <h5 className="not-italic mb-0" dangerouslySetInnerHTML={{__html: t('titleFE')}}></h5>
                 <p dangerouslySetInnerHTML={{ __html: t('textFE') }}></p>
+                <p dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
+                <p dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
+                <p className="italic font-light text-zinc-500	">{t('textGoal')}</p>
             </div>
         </motion.div>
     );
