@@ -47,7 +47,7 @@ const HomePage = () => {
         </Section>
       </div>
 
-      <Title id={"profile"} title={t("home:titleProfile")} dot={t(".")} children={t("home:intro")} />
+      <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} />
 
       {/* <motion.div
         id="profile"
@@ -63,12 +63,8 @@ const HomePage = () => {
         <AboutMe />
       </Section>
       
-    
-      <motion.div id="skills" className="text-center mb-8 ">
-        <TitleAnimation title={t('skills:titleSkills')} dot="."/>
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[3rem] lg:leading-[5rem]">{t('skills:subTitleSkills')}</h3>
-      </motion.div>
-      
+      <Title id={"skills"} title={t('skills:titleSkills')} dot={t('skills:dot')} children={t('skills:subTitleSkills')} />
+
          <Skills />
 
     </>
