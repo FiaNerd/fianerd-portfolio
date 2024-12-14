@@ -7,16 +7,18 @@ const WebSkills = () => {
     const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
     return (
-        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-rows-1 md:grid-cols-2 pl-4 pr-4">
-            <h1 className="text-text-sub-heading font-bold text-center mb-8 whitespace-break-spaces leading-[2.8rem]">
+        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className=" grid grid-row-2 md:grid-cols-2 gap-4 pl-4 pr-8">
+          <div className="items-center">
+            <h1 className="text-text-sub-heading mb-4 font-bold text-center mb-0 whitespace-break-spaces">
                 {t("skills:titleWeb")}
             </h1>
+                <h5 className="text-center text-text-sub-heading not-italic whitespace-break-spaces	font-bold">{t('textTitleGoal')}</h5>
+          </div>
             <div>
-                <h2 className="text-text-sub-heading font-bold text-center mb-0 ">{t('titleWebDev')}</h2>
-                <h3 className="text-text-sub-heading font-bold text-center leading-[1rem]">{t('subTitleWebDev')}</h3>
+                <h2 className="text-text-sub-heading mb-0 font-bold text-center leading-[2.5rem]">{t('titleWebDev')}</h2>
+                <h3 className="text-text-sub-heading font-bold text-center">{t('subTitleWebDev')}</h3>
             </div>
             <div className="whitespace-break-spaces	">
-                <h4 className="text-center text-text-sub-heading not-italic font-bold">{t('textTitleGoal')}</h4>
                 <h5 className="not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
                 <p dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
                 <h5 className="not-italic mb-0" dangerouslySetInnerHTML={{__html: t('titleFE')}}></h5>

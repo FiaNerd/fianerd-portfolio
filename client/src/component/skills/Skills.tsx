@@ -4,7 +4,7 @@ const Skills = () => {
   
   return (
     <>
-    <section className="max-w-[1200px] mx-auto ">
+    <section className="mx-auto ">
       <WebSkills/>
     </section>
     </>

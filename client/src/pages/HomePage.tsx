@@ -52,21 +52,21 @@ const HomePage = () => {
       {/* <motion.div
         id="profile"
         className="text-center mb-8 md:mt-[2em] "
-      >
+        >
         <TitleAnimation title={t("home:titleProfile")} dot="." />
         <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[3rem] lg:leading-[5rem]">{t("home:intro")}</h3>
-      </motion.div> */}
+        </motion.div> */}
 
       <AboutNav />
 
       <Section id="me" bgColor="bg-bg-plate mb-8">
         <AboutMe />
       </Section>
-      
-      <Title id={"skills"} title={t('skills:titleSkills')} dot={t('skills:dot')} children={t('skills:subTitleSkills')} />
+      <section className="max-w-screen-xl mx-auto">
+        <Title id={"skills"} title={t('skills:titleSkills')} dot={t('skills:dot')} children={t('skills:subTitleSkills')} />
 
-         <Skills />
-
+        <Skills />
+      </section>
     </>
   );
 };
