@@ -8,6 +8,7 @@ import TitleAnimation from "../component/Partial/TitleAnimation";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import Skills from "../component/skills/Skills";
+import Title from "../component/Partial/Title";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -46,23 +47,27 @@ const HomePage = () => {
         </Section>
       </div>
 
-      <motion.div
+      <Title id={"profile"} title={t("home:titleProfile")} dot={t(".")} children={t("home:intro")} />
+
+      {/* <motion.div
         id="profile"
-        className="text-center mb-8 md:mt-[2em]"
+        className="text-center mb-8 md:mt-[2em] "
       >
         <TitleAnimation title={t("home:titleProfile")} dot="." />
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[5rem]">{t("home:intro")}</h3>
-      </motion.div>
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[3rem] lg:leading-[5rem]">{t("home:intro")}</h3>
+      </motion.div> */}
 
       <AboutNav />
+
       <Section id="me" bgColor="bg-bg-plate mb-8">
         <AboutMe />
       </Section>
       
-      <section id="skills" className="text-center mb-8">
-        <TitleAnimation title={t('skills:titleSkills')} dot="." />
-        <h3>{t('skills:subTitleSkills')}</h3>
-      </section>
+    
+      <motion.div id="skills" className="text-center mb-8 ">
+        <TitleAnimation title={t('skills:titleSkills')} dot="."/>
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[3rem] lg:leading-[5rem]">{t('skills:subTitleSkills')}</h3>
+      </motion.div>
       
          <Skills />
 
