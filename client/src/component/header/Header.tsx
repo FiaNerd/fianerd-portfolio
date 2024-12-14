@@ -67,7 +67,7 @@ const Header = () => {
         <div className='flex items-center gap-4 lg:gap-6'>
           <ThemeSwitch />
           <SelectLanguage />
-          <NavLink to='/contact' className={`hidden cursor-pointer text-lg md:block border-2 rounded-full border-accent-primary px-4 py-2 text-accent-secondary hover:bg-accent-primary hover:border-accent-primary hover:text-hover-text
+          <NavLink to='/contact' className={`hidden cursor-pointer text-lg md:block border-2 rounded-full border-accent-secondary px-4 py-2 text-accent-secondary hover:bg-accent-primary hover:border-accent-primary hover:text-hover-text
             hover:opacity-100`}>
             {t('contact')}
           </NavLink>

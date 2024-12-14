@@ -18,6 +18,7 @@ export default {
         'primary': 'var(--color-primary)',
         'secondary': 'var(--color-secondary)',
         'hover-primary': 'var(--color-hover-primary)',
+        'hover-text': 'var(--color-hover-text)',
         'text-sub-heading': 'var(--color-text-subHeading)',
         'bg-plate': 'var(--color-bg-plate)',
       },
