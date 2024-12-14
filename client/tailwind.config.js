@@ -26,18 +26,8 @@ export default {
         '100': '100',
       },
       fontFamily: {
-        heading: ["proxima-nova", 'sans-serif'],
-        // heading: ['playfair-display', 'serif'],
+        heading: ['playfair-display', 'serif'],
         'sub-heading': ["proxima-nova", 'sans-serif'],
-        // 'sub-heading': ['merriweather', 'sans-serif'],
-        paragraph: ['Poppins', 'sans-serif'],
-        // paragraph: ['source-sans-pro', 'sans-serif'],
-      },
-      fontSize: {
-        h1: ['48px', '1.2'], 
-        h2: ['36px', '1.3'], 
-        h3: ['24px', '1.4'], 
-        h4: ['20px', '1.6'],
       },
       breakpoints: {
         sm: '576px',

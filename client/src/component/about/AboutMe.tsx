@@ -30,7 +30,7 @@ const AboutMe = () => {
         <h2 className="text-h2 m-0 font-bold text-text-sub-heading not-italic">{t('title')}</h2>
         <p className="italic">{t('intro')}</p>
         <p>{t('introBio')}</p>
-        <h3 className="text-text-sub-heading text-h3 font-bold not-italic">{t('myBackgroundTitle')}</h3>
+        <h3 className="text-text-sub-heading font-bold not-italic">{t('myBackgroundTitle')}</h3>
         
         <p
             className={`${
@@ -43,16 +43,16 @@ const AboutMe = () => {
         { isExpanded && (
           <>
 
-          <h3 className="text-h3 m-0 font-bold text-text-sub-heading not-italic">{t('myJourneyTitle')}</h3>
+          <h3 className="m-0 font-bold text-text-sub-heading not-italic">{t('myJourneyTitle')}</h3>
           <p>{t('myJourneyText')}</p>
            {/* <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="hidden lg:block mx-auto lg:float-right mb-8 md:mb-0 md:pr-8 max-w-sm h-auto object-cover "/> */}
-           <h4 className="text-h4 m-0 font-bold text-text-sub-heading not-italic">{t('myFilosofiTitle')}</h4>
-           <h4 className="text-h4 not-italic m-0">{t('myFilosofiSubtitle')}</h4>
+           <h4 className=" m-0 font-bold text-text-sub-heading not-italic">{t('myFilosofiTitle')}</h4>
+           <h4 className=" not-italic m-0">{t('myFilosofiSubtitle')}</h4>
            <p className="m-0">{t('myFilosofiText1')}</p>
            <p className="m-0">{t('myFilosofiText2')}</p>
            <p>{t('myFilosofiText3')}</p>
            <p>{t('myFilosofiText4')}</p>
-           <h3 className="text-h3 font-bold text-text-sub-heading">{t('createTogheterTitle')}</h3>
+           <h3 className="font-bold text-text-sub-heading">{t('createTogheterTitle')}</h3>
            <p>{t('createTogheterText')}</p>
           </>
         )}

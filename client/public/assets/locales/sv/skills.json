@@ -4,6 +4,14 @@
     "subTitleSkills": "Skapande Utan Gränser",
     "titleWeb": "Behärska Konsten\nav Programmering",
     "titleWebDev": "Ett kodblock i taget",
-    "subTitleWebDev": "– framtidens utvecklare"
+    "subTitleWebDev": "– framtidens utvecklare", 
+    "textTitleGoal": "Mål och Fokus i Utveckling 2025",
+    "titleBE": "<b>Backend: </b>",
+    "textBE": "<b>C#, ASP.Net Core:</b> Förbättra min expertis i C# och ASP.Net Core för att utveckla säkra, skalbara och återanvändbara backend-applikationer.\nAzure: Fördjupa min kunskap och erfarenhet av molntjänster för att bygga robusta moln-native applikationer, och utnyttja tjänster som Azure Functions, App Services och Azure SQL Database.",
+    "titleFE": "Frontend: ",
+    "textFE": "<b>React:</b> Skapa högresponsiva och återanvändbara komponenter för att bygga interaktiva användargränssnitt.\n<b>Vue.js:</b> Utforska Vue.js möjligheter för att förstå dess fördelar och integrera det i projekt där det är tillämpligt.",
+    "textCMS": "<b>Umbraco:</b> Utöka mina färdigheter i Umbraco CMS för att effektivt hantera och distribuera dynamiskt webbinnehåll.",
+    "textAzure": "<b>Molntjänster:</b> Utnyttja Azures kraftfulla kapaciteter inom infrastrukturförvaltning, applikationsprestanda och moln-native utveckling för att bygga robusta applikationer.",
+    "textGoal": "Det enda hindret är tiden, så strategisk planering och fokuserade ansträngningar kommer att vara avgörande för att nå dessa mål."
   }
   

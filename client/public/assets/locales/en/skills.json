@@ -4,6 +4,14 @@
     "subTitleSkills": "Creativity Without Limits",
     "titleWeb": "Mastering the Art\nof Programming",
     "titleWebDev": "One code block at a time\n ",
-    "subTitleWebDev": "– Developer in the making"
+    "subTitleWebDev": "– Developer in the making",
+    "textTitleGoal": "Goals and Focus in Development 2025",
+    "titleBE": "<b>Backend:</b>",
+    "textBE": "C#, ASP.Net Core: Enhance my expertise in C# and ASP.Net Core to develop secure, scalable, and reusable backend applications.\nAzure: Deepen my knowledge and experience with cloud services to build robust cloud-native applications, leveraging services like Azure Functions, App Services, and Azure SQL Database.",
+    "titleFE": "Frontend: ",
+    "textFE": "<b>React:</b> Create highly responsive and reusable components to build interactive user interfaces.\nVue.js: Explore the capabilities of Vue.js to understand its advantages and integrate it into projects where applicable.",
+    "textCMS": "Umbraco: Expand my skills in Umbraco CMS to efficiently manage and deploy dynamic web content.",
+    "textAzure": "Cloud Services: Leverage Azure's powerful capabilities in infrastructure management, application performance enhancement, and cloud-native development to build robust applications.",
+    "textGoal": "The only obstacle is time, so strategic planning and focused efforts will be essential to achieve these goals."
   }
   
