@@ -62,7 +62,7 @@ const HeroSection = () => {
          animate={{ y: 0, opacity: 1 }}
          transition={{stiffness: 50, damping: 30, duration: 3}}
           className="flex flex-col">
-          <p className={`${styles['subCv']} md:text-right md:text-2xl 2xl:text-2xl mb-2 leading-none`}>{t('subCv')}</p>
+          <p className={`${styles['subCv']} md:text-right md:text-2xl 2xl:text-2xl mb-0 leading-none`}>{t('subCv')}</p>
           <h2 className={`${styles['cv']} text-5xl md:-mt-[0.3em] sm:text-6xl md:text-6xl 2xl:text-8xl text-text-heading font-bold leading-none`}>{t('cv')}</h2>
         </motion.div>
 

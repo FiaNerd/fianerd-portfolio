@@ -7,7 +7,7 @@ const WebSkills = () => {
     const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
     return (
-        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className=" grid grid-row-2 md:grid-cols-2 gap-4 pl-4 pr-8">
+        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-row-2 md:grid-cols-2 gap-4 pl-4 pr-8 mb-8">
           <div className="items-center">
             <h1 className="text-text-sub-heading mb-4 font-bold text-center mb-0 whitespace-break-spaces">
                 {t("skills:titleWeb")}

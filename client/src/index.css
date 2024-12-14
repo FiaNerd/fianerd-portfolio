@@ -100,3 +100,12 @@
   --color-hover-text: #200121;
   --color-bg-plate: #1b1525bf;
 }
+
+@media (min-width: 768px) {
+  .md\\:h-25 {
+    height: 25px;
+  }
+  .md\\:w-25 {
+    width: 25px;
+  }
+}
