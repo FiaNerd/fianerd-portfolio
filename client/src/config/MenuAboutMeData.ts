@@ -6,7 +6,7 @@ export interface RouteAbout {
 export const navRoutsAbout: RouteAbout[] = [
     {
         'title': 'me',
-        'url': '/#me',
+        'url': '/#profile',
     },
     {
         'title': 'skills',

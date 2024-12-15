@@ -12,6 +12,7 @@ const WebSkills = () => {
       { name: 'ASP.Net Core', percentage: 60 },
       { name: 'Sql Server', percentage: 60 },
       { name: 'React', percentage: 80 },
+      { name: 'TypeScript', percentage: 80 },
       { name: 'Tailwind CSS', percentage: 90 },
       { name: 'Node js', percentage: 40 },
       { name: 'Git / terminal', percentage: 90 },

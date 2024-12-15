@@ -20,11 +20,10 @@ const Header = () => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
 
-      // Check if the scroll position is greater than 121px
       if (window.scrollY > 121) {
         setHeaderVisible(window.scrollY < lastScrollY);
       } else {
-        setHeaderVisible(true); // Show header if above 121px
+        setHeaderVisible(true); 
       }
 
       // Update last scroll position
