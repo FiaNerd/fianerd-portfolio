@@ -77,6 +77,7 @@
   --color-btn-secondary: #db9c73;
   --color-hover-primary: #cb6360;
   --color-text-subHeading: #4a1a3e;
+  /* --color-text-subHeading: #451A03; */
   --color-hover-text: hsl(45, 100%, 92%);
   --color-bg-plate: #e5dcc1;
 }
@@ -95,7 +96,7 @@
   --color-bg-secondary: #23092a;
   --color-text-heading: #9b5959;
   --color-text-primary: #f5f5f5;
-  --color-text-secondary: #cecbc5;
+  --color-text-secondary: #bebcb7;
   --color-text-subHeading: #9b6a59;
   --color-hover-text: #200121;
   --color-bg-plate: #1b1525bf;

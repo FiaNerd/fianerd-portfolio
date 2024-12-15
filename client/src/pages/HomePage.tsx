@@ -9,6 +9,7 @@ import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import Skills from "../component/skills/Skills";
 import Title from "../component/Partial/Title";
+import ProgressBar from "../component/skills/ProgressBar";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -67,6 +68,7 @@ const HomePage = () => {
 
         <Skills />
       </section>
+            
     </>
   );
 };

@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <>
     <section className="mx-auto ">
-      <WebSkills/>
+      <WebSkills />
     </section>
     </>
   );
