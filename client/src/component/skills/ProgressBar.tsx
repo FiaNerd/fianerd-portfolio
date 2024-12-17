@@ -26,7 +26,7 @@ const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
         });
       }, 20);
     } else {
-      setCompleted(15);
+      setCompleted(20);
     }
 
     return () => {
@@ -45,10 +45,11 @@ const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
         transition={{ duration: 1.5, ease: 'easeInOut' }}
       >
         <motion.span
-          className="absolute inset-y-0 inset-x-[12px] flex items-center text-sm text-bg-primary font-semibold"
+          className="absolute h-full flex items-center text-sm text-white font-semibold"
           initial={{ x: 0 }}
           animate={{ x: `${completed}%` }}
           transition={{ duration: 1.5, ease: 'easeInOut' }}
+          style={{ left: '55%', transform: 'translateX(-100%)' }}
         >
           {completed}%
         </motion.span>

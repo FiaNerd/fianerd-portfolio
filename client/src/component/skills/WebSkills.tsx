@@ -30,7 +30,9 @@ const WebSkills = () => {
             {t('textTitleGoal')}
           </h5>
         </div>
-        //TODO: Add a small litle picture her for the desktop verison and it will dissapear for mobile
+
+        {/* TODO: Add a small litle picture her for the desktop verison and it will dissapear for mobile */}
+
         {/* <div>
           <h2 className="text-amber-950 dark:text-text-heading mb-0 font-bold text-center leading-[2.5rem]">
             {t('titleWebDev')}
@@ -58,7 +60,7 @@ const WebSkills = () => {
           </div>
           <div className="col-span-2 md:col-span-1">
           <div>
-          <h2 className="text-amber-950 dark:text-text-heading mb-0 font-bold text-center leading-[2.5rem]">
+          <h2 className="text-amber-950 dark:text-text-heading mb-0 font-bold text-center md:leading-[2.5rem]">
             {t('titleWebDev')}
           </h2>
           <h3 className="text-text-sub-heading font-bold text-center">
@@ -66,7 +68,7 @@ const WebSkills = () => {
           </h3>
         </div>
             {skills.map(skill => (
-              <div key={skill.name} className="mb-4">
+              <div key={skill.name} className="mb-8">
                 <h2 className="text-sm text-amber-950 dark:text-text-secondary font-semibold mb-[0.15em]">{skill.name}</h2>
                 <ProgressBar percentage={skill.percentage} />
               </div>
