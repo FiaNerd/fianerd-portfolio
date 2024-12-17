@@ -49,7 +49,7 @@ const Header = () => {
 
       <nav className={` mx-auto flex justify-between py-2 px-4 md:px-8 2xl:px-20 transition-transform duration-300 
         ${headerVisible ? 'translate-y-0' : '-translate-y-full'} 
-        backdrop-blur-[100px] ${scrollY > 0 ? "dark:bg-[url('/assets/images/bg-dark-img.jpg')] dark:opacity-90 object-cover w-full" : "dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full object-cover"}`}>
+        backdrop-blur-[100px] ${scrollY > 0 ? " dark:bg-[url('/assets/images/bg-dark-img.jpg')] dark:opacity-90 object-cover w-full" : " dark:bg-[url('/assets/images/bg-dark-img.jpg')] w-full object-cover"}`}>
         
         <NavLink to='/'>
           {currentTheme === 'dark' ? (

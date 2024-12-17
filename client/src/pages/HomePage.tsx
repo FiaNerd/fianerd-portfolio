@@ -63,7 +63,7 @@ const HomePage = () => {
       <Section id="me" bgColor="bg-bg-plate mb-8">
         <AboutMe />
       </Section>
-      <section className="max-w-screen-xl mx-auto">
+      <section className="max-w-screen-xl mx-auto pl-4 pr-4">
         <Title id={"skills"} title={t('skills:titleSkills')} dot={t('skills:dot')} children={t('skills:subTitleSkills')} />
         <AboutNav />
         <Skills />

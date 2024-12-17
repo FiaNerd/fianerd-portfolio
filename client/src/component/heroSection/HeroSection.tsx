@@ -25,7 +25,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative font-heading md:bg-[url('/assets/images/bg-light-img.jpg')] md:dark:bg-[url('/assets/images/bg-dark-img.jpg')] max-w-full h-full md:grid md:grid-cols-2">
+    <div className="relative font-heading bg-[url('/assets/images/bg-light-img.jpg')] dark:bg-[url('\public\assets\images\bg-dark-img.jpg')] max-w-full h-full md:grid md:grid-cols-2">
       <div className={`flex flex-col absolute md:static inset-0 mx-auto md:justify-between md:mx-0 z-10 pl-4 pr-4 sm:pr-[1.3em] md:gap-4 md:pr-8 md:pl-8 md:pt-[1em]`}>
        <motion.div 
         initial={{  x: '-100vw', opacity: 0 }}
@@ -88,6 +88,8 @@ const HeroSection = () => {
         <ResponsiveHeroImage />
         </div>
       </div>
+
+
   );
 }
 

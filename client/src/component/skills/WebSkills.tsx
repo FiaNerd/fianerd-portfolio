@@ -4,23 +4,23 @@ import useFadeIn from "../../hook/useFadeIn";
 import ProgressBar from "./ProgressBar";
 
 const WebSkills = () => {
-    const { t } = useTranslation("skills");
-    const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
+  const { t } = useTranslation("skills");
+  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
-    const skills = [
-      { name: 'C#', percentage: 70 },
-      { name: 'ASP.Net Core', percentage: 60 },
-      { name: 'Sql Server', percentage: 60 },
-      { name: 'React', percentage: 80 },
-      { name: 'TypeScript', percentage: 80 },
-      { name: 'Tailwind CSS', percentage: 90 },
-      { name: 'Node js', percentage: 40 },
-      { name: 'Git / terminal', percentage: 90 },
-    ];
+  const skills = [
+    { name: 'C#', percentage: 70 },
+    { name: 'ASP.Net Core', percentage: 60 },
+    { name: 'Sql Server', percentage: 60 },
+    { name: 'React', percentage: 80 },
+    { name: 'TypeScript', percentage: 80 },
+    { name: 'Tailwind CSS', percentage: 90 },
+    { name: 'Node js', percentage: 40 },
+    { name: 'Git / terminal', percentage: 90 },
+  ];
 
-    console.log(skills.map(x => x.percentage))
-    return (
-      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-row-2 md:grid-cols-2 gap-4 pl-4 pr-8 mb-4">
+  return (
+    <>
+      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-8 mb-4">
         <div className="items-center">
           <h1 className="text-amber-950 dark:text-text-heading mb-4 font-bold text-center mb-0 whitespace-break-spaces">
             {t("skills:titleWeb")}
@@ -37,28 +37,38 @@ const WebSkills = () => {
             {t('subTitleWebDev')}
           </h3>
         </div>
-        <div className=" whitespace-break-spaces">
-          <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
-          <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
-          <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleFE') }}></h5>
-          <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textFE') }}></p>
-          <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
-          <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
-          <p className="text-text-sub-heading italic font-light">
-            {t('textGoal')}
-          </p>
-        </div>
-        <div className="md:pl-8">
-          {/* <h1 className="text-2xl text-text-sub-heading font-bold mb-4">My Skills</h1> */}
-          {skills.map(skill => (
-            <div key={skill.name}>
-              <h2 className="text-sm text-amber-950 dark:text-text-secondary font-semibold mb-[0.15em]">{skill.name}</h2>
-              <ProgressBar percentage={skill.percentage} />
-            </div>
-          ))}
+      </motion.div>
+
+      <motion.div>
+        <div className="whitespace-break-spaces grid  grid-cols-[5%_1fr] md:grid-cols-[auto_50%_1fr] gap-4">
+          <div className="flex items-center justify-center">
+            <h1 className="font-black transform rotate-180 [writing-mode:vertical-lr]">
+              {t('webbDev').toUpperCase()}
+            </h1>
+          </div>
+          <div className="sm:col-span-1 md:pr-8">
+            <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
+            <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
+            <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleFE') }}></h5>
+            <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textFE') }}></p>
+            <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
+            <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
+            <p className="text-text-sub-heading italic font-light">
+              {t('textGoal')}
+            </p>
+          </div>
+          <div className="col-span-2 md:col-span-1">
+            {skills.map(skill => (
+              <div key={skill.name} className="mb-4">
+                <h2 className="text-sm text-amber-950 dark:text-text-secondary font-semibold mb-[0.15em]">{skill.name}</h2>
+                <ProgressBar percentage={skill.percentage} />
+              </div>
+            ))}
+          </div>
         </div>
       </motion.div>
-    );
+    </>
+  );
 };
 
 export default WebSkills;
