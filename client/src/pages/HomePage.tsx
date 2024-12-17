@@ -4,12 +4,10 @@ import AboutMe from "../component/about/AboutMe";
 import AboutNav from "../component/about/AboutNav";
 import HeroSection from "../component/heroSection/HeroSection";
 import Section from "../component/Partial/Section";
-import TitleAnimation from "../component/Partial/TitleAnimation";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import Skills from "../component/skills/Skills";
 import Title from "../component/Partial/Title";
-import ProgressBar from "../component/skills/ProgressBar";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);

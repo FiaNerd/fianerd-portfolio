@@ -7,9 +7,10 @@ interface IProps {
   dot: string;
   onComplete?: () => void;
   style?: React.CSSProperties;
+  className: string
 }
 
-const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
+const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) => {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -69,7 +70,7 @@ const TitleAnimation = ({ title, dot, onComplete, style }: IProps) => {
             aria-hidden="true"
             key={wordIndex}
             variants={child}
-            className="inline"
+            className={className}
           >
             {word}
             {wordIndex < words.length - 1 && " "}
