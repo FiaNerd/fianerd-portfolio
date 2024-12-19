@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { navRoutsAbout } from "../../config/MenuAboutMeData";
 import useAnimateIn from "../../hook/useAnimation";
-import Section from "../Partial/Section";
+import SectionPlate from "../Partial/SectionPlate";
 
 const AboutNav = () => {
     const { t } = useTranslation('home');
@@ -12,7 +12,7 @@ const AboutNav = () => {
     });
 
     return (
-        <Section>
+        <SectionPlate>
             <ul className=" flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12">
                 {navRoutsAbout.map((item) => {
                     return (
@@ -34,7 +34,7 @@ const AboutNav = () => {
                     );
                 })}
             </ul>
-        </Section>
+        </SectionPlate>
     );
 }
 

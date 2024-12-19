@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { motion } from "-motion";
 import { useEffect, useState } from "react";
 import AboutMe from "../component/about/AboutMe";
 import AboutNav from "../component/about/AboutNav";
 import HeroSection from "../component/heroSection/HeroSection";
-import Section from "../component/Partial/Section";
+import SectionPlate from "../component/Partial/SectionPlate";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import Skills from "../component/skills/Skills";
@@ -37,13 +37,13 @@ const HomePage = () => {
         style={{ paddingTop: `${headerHeight}px`, transition: "padding-top 0.3s ease" }}
         className="bg-blend-multiply"
       >
-        <Section
+        <SectionPlate
           id="home"
           style={{ height: `calc(100% - ${headerHeight}px)` }}
           className="relative"
         >
           <HeroSection />
-        </Section>
+        </SectionPlate>
       </div>
 
       <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} />
@@ -58,9 +58,9 @@ const HomePage = () => {
 
       <AboutNav />
 
-      <Section id="me" bgColor="bg-bg-plate mb-8">
+      <SectionPlate id="me" bgColor="bg-bg-plate mb-8">
         <AboutMe />
-      </Section>
+      </SectionPlate>
 
       <section >
         <Skills />

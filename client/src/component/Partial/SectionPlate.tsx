@@ -1,6 +1,6 @@
 import React from "react";
 
-interface SectionProps {
+interface IProps {
   bgColor?: string;
   bgImage?: string;
   className?: string;
@@ -9,7 +9,7 @@ interface SectionProps {
   id?: string
 }
 
-const Section = ({
+const SectionPlate = ({
   bgColor = "transparent",
   bgImage,
   className = "",
@@ -17,7 +17,7 @@ const Section = ({
   style = {},
   id,
   ...props
-}: SectionProps) => {
+}: IProps) => {
   return (
     <section
     id={id}
@@ -33,4 +33,4 @@ const Section = ({
   );
 };
 
-export default Section;
+export default SectionPlate;

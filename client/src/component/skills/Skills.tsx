@@ -1,5 +1,5 @@
 
-import Section from "../Partial/Section";
+import SectionPlate from "../Partial/SectionPlate";
 import GraphicSkills from "./GraphicSkills";
 import WebSkills from "./WebSkills";
 
@@ -10,9 +10,9 @@ const Skills = () => {
     <>
     <section className="mx-auto mb-8">
       <WebSkills />
-      <Section className="bg-bg-plate pt-8 pb-8 w-full p-4">
+      <SectionPlate className="bg-bg-plate pt-8 pb-4 w-full p-4">
         <GraphicSkills />
-      </Section>
+      </SectionPlate>
     </section>
     </>
   );
