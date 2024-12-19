@@ -24,7 +24,7 @@ const WebSkills = () => {
     <>
       <Title id={"skills"} title={t('webSkills:titleSkills')} dot={t('webSkills:dot')} children={t('webSkills:subTitleSkills')} />
       <AboutNav />
-      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4  mb-4">
+      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 mb-4">
         <div className="items-center">
           <h1 className="text-amber-950 dark:text-text-heading mb-4 font-bold text-center mb-0 whitespace-break-spaces">
             {t("webSkills:titleWeb")}
@@ -44,9 +44,9 @@ const WebSkills = () => {
             {t('subTitleWebDev')}
           </h3>
         </div> */}
-        </motion.div>
-       < motion.div >
-        <div className="whitespace-break-spaces grid  grid-cols-[5%_1fr] md:grid-cols-[auto_50%_1fr] gap-4">
+        </motion.div>8
+       < motion.div className="whitespace-break-spaces grid  grid-cols-[5%_1fr] md:grid-cols-[auto_50%_1fr] gap-4 mb-8">
+
           <div className="flex items-center justify-center">
             <h1  className="font-semibold transform rotate-180 [writing-mode:vertical-lr]">{t('webbDev').toUpperCase()} </h1>
           </div>
@@ -77,7 +77,7 @@ const WebSkills = () => {
               </div>
             ))}
           </div>
-        </div>
+
       </motion.div>
     </>
   );

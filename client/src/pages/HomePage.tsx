@@ -61,8 +61,8 @@ const HomePage = () => {
       <Section id="me" bgColor="bg-bg-plate mb-8">
         <AboutMe />
       </Section>
-      <section className="max-w-screen-xl mx-auto pl-4 pr-4">
-        
+
+      <section >
         <Skills />
       </section>
             

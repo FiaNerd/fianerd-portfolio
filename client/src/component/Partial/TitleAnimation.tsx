@@ -7,7 +7,7 @@ interface IProps {
   dot: string;
   onComplete?: () => void;
   style?: React.CSSProperties;
-  className: string
+  className?: string
 }
 
 const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) => {
