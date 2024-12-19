@@ -42,7 +42,7 @@ const Header = () => {
         ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         
       <div className={`bg-bg-primary transition-transform duration-300`}>
-        <p className='pt-2 pb-2 text-text-secondary mb-0 text-sm leading-normal text-center'>
+        <p className='pt-2 pb-2 text-text-secondary mb-0 text-xs md:text-sm leading-normal text-center'>
           {t('headerTitle')}
         </p>
       </div>

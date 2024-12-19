@@ -62,8 +62,7 @@ const HomePage = () => {
         <AboutMe />
       </Section>
       <section className="max-w-screen-xl mx-auto pl-4 pr-4">
-        <Title id={"skills"} title={t('skills:titleSkills')} dot={t('skills:dot')} children={t('skills:subTitleSkills')} />
-        <AboutNav />
+        
         <Skills />
       </section>
             

@@ -2,29 +2,32 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../hook/useFadeIn";
 import ProgressBar from "./ProgressBar";
-import TitleAnimation from "../Partial/TitleAnimation";
+import Title from "../Partial/Title";
+import AboutNav from "../about/AboutNav";
 
 const WebSkills = () => {
-  const { t } = useTranslation("skills");
+  const { t } = useTranslation("webSkills");
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
-  const skills = [
+  const webSkills = [
     { name: 'C#', percentage: 70 },
     { name: 'ASP.Net Core', percentage: 60 },
     { name: 'Sql Server', percentage: 60 },
     { name: 'React', percentage: 80 },
     { name: 'TypeScript', percentage: 80 },
-    { name: 'Tailwind CSS', percentage: 90 },
+    { name: 'HTML / CSS and Tailwind CSS', percentage: 90 },
     { name: 'Node js', percentage: 40 },
     { name: 'Git / terminal', percentage: 90 },
   ];
 
   return (
     <>
+      <Title id={"skills"} title={t('webSkills:titleSkills')} dot={t('webSkills:dot')} children={t('webSkills:subTitleSkills')} />
+      <AboutNav />
       <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4  mb-4">
         <div className="items-center">
           <h1 className="text-amber-950 dark:text-text-heading mb-4 font-bold text-center mb-0 whitespace-break-spaces">
-            {t("skills:titleWeb")}
+            {t("webSkills:titleWeb")}
           </h1>
           <h5 className="text-center text-text-sub-heading not-italic whitespace-break-spaces font-bold">
             {t('textTitleGoal')}
@@ -48,7 +51,7 @@ const WebSkills = () => {
             <h1  className="font-semibold transform rotate-180 [writing-mode:vertical-lr]">{t('webbDev').toUpperCase()} </h1>
           </div>
           <div className="sm:col-span-1 md:pr-8">
-            <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
+              <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
             <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
             <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleFE') }}></h5>
             <p className="text-amber-950 dark:text-text-secondary " dangerouslySetInnerHTML={{ __html: t('textFE') }}></p>
@@ -67,7 +70,7 @@ const WebSkills = () => {
             {t('subTitleWebDev')}
           </h3>
         </div>
-            {skills.map(skill => (
+            {webSkills.map(skill => (
               <div key={skill.name} className="mb-8">
                 <h2 className="text-sm text-amber-950 dark:text-text-secondary font-semibold mb-[0.15em]">{skill.name}</h2>
                 <ProgressBar percentage={skill.percentage} />

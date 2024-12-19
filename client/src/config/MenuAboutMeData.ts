@@ -20,4 +20,8 @@ export const navRoutsAbout: RouteAbout[] = [
         'title': 'education',
         'url': '/',
     },
+    {
+        'title': 'hobbies',
+        'url': '/' ,
+    }
 ]
