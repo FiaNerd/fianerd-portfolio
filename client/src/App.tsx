@@ -1,24 +1,31 @@
-import { Route, Routes } from 'react-router-dom'
-import Footer from './component/footer/Footer'
-import Header from './component/header/Header'
-import HomePage from './pages/HomePage'
+import { Route, Routes } from 'react-router-dom';
+import Footer from './component/footer/Footer';
+import Header from './component/header/Header';
+import HomePage from './pages/HomePage';
+import SocialMediaAndContact from './component/SocialMediaAndContact';
 
 function App() {
   return (
     <>
-      <div className='flex flex-col min-h-screen '>
-        <Header />
-        {/* <main className='flex-grow max-w-7xl  w-full mx-auto mb-12'> */}
-          <main >
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-          </Routes>
-            </main>
-        {/* </main> */}
-        <Footer />
+      <div className="min-h-screen grid grid-cols-[auto,1fr]">
+        {/* Social Media Column */}
+        <div className="flex flex-col items-center py-8">
+          <SocialMediaAndContact />
+        </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col">
+          <Header />
+          <main className="mx-auto flex-rows">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

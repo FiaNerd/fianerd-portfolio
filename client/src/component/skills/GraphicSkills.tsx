@@ -16,7 +16,7 @@ const GraphicSkills = () => {
     ];
 
   return (
-   <>
+   <div className="max-w-screen-xl mx-auto">
       <AboutNav />
       <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 mb-4 ">
         <div className="items-center">
@@ -72,7 +72,7 @@ const GraphicSkills = () => {
           </div>
           
       </motion.div>
-   </>
+   </div>
   );
 };
 

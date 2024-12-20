@@ -19,7 +19,7 @@ const HomePage = () => {
 
     const handleResize = () => {
       if (header) {
-        setHeaderHeight(header.offsetHeight);
+        setHeaderHeight(header.offsetHeight); 
       }
     };
 

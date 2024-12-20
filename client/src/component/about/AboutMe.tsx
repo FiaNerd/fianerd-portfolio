@@ -16,7 +16,7 @@ const AboutMe = () => {
 
   return (
 
-      <div className="max-w-screen-xl	 mx-auto grid grid-col-1 p-4 md:gap-10">
+      <div className="max-w-screen-xl	mx-auto grid grid-col-1 p-4 md:gap-10">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
           <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
