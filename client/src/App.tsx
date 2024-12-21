@@ -7,22 +7,29 @@ import SocialMediaAndContact from './component/SocialMediaAndContact';
 function App() {
   return (
     <>
-      <div className="min-h-screen grid grid-cols-[auto,1fr]">
-        {/* Social Media Column */}
-        <div className="flex flex-col items-center py-8">
-          <SocialMediaAndContact />
-        </div>
+      <div className="min-h-screen w-full flex flex-col">
+        {/* Header */}
+        <Header />
 
         {/* Main Content */}
-        <div className="flex flex-col">
-          <Header />
-          <main className="mx-auto flex-rows">
+        <div className="flex-grow relative flex">
+          {/* Social Media & Contact */}
+          <div className="sticky top-0 h-screen bg-accent-primary flex items-center text-amber-100	">
+            <div className="p-2 md:p-4">
+              <SocialMediaAndContact />
+            </div>
+          </div>
+
+          {/* Main Content Area */}
+          <main className="flex-grow">
             <Routes>
               <Route path="/" element={<HomePage />} />
             </Routes>
           </main>
-          <Footer />
         </div>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </>
   );
