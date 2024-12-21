@@ -68,7 +68,7 @@
   );
 
   /* --color-accent-primary: #b12454; */
-  --color-accent-primary: #5e203c;
+  --color-accent-primary: #4a1a3e;
   /* --color-accent-primary:  rgb(69 26 3 / var(--tw-text-opacity, 1));; */
   --color-accent-secondary: #d46763;
   --color-bg-primary: #fff5d7;
@@ -78,7 +78,8 @@
   --color-text-secondary: #1c2022;
   --color-btn-primary: #e94e779c;
   --color-btn-secondary: #db9c73;
-  --color-hover-primary: #cb6360;
+  --color-hover-primary: #b12454;
+  /* --color-hover-primary: #cb6360; */
   --color-text-subHeading: #4a1a3e;
   /* --color-text-subHeading: #451A03; */
   --color-hover-text: hsl(45, 100%, 92%);

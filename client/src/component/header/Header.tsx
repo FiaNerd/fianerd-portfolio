@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-transform duration-300 
+      className={`fixed w-full top-0 z-50 transition-transform duration-300
         ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         
       <div className={`bg-bg-primary transition-transform duration-300`}>

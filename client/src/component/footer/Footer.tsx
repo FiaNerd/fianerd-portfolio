@@ -10,7 +10,7 @@ const Footer = () => {
           <NavLink
             to='https://github.com/FiaNerd'
             target='_blank'
-            className='flex flex-col gap-2 cursor-pointer hover:text-accent-secondary'>
+            className='flex flex-col gap-2 cursor-pointer hover:text-hover-primary'>
             <FontAwesomeIcon icon={faGithub} />
             <span className='text-xs font-medium'>GitHub</span>
           </NavLink>
@@ -18,7 +18,7 @@ const Footer = () => {
           <NavLink
             to='https://www.linkedin.com/in/sofia-mattiasson-fianerd/'
             target='_blank'
-            className='flex flex-col gap-2 cursor-pointer hover:text-accent-secondary'>
+            className='flex flex-col gap-2 cursor-pointer hover:text-hover-primary'>
             <FontAwesomeIcon icon={faLinkedin} />
             <span className="text-sm font-medium">LinkedIn</span>
           </NavLink>
@@ -26,12 +26,12 @@ const Footer = () => {
         
           <NavLink
             to='mailto:fianerd.developer@gmail.com'
-            className='flex flex-col gap-2 cursor-pointer hover:text-accent-secondary'>
+            className='flex flex-col gap-2 cursor-pointer hover:text-hover-primary'>
             <FontAwesomeIcon icon={faEnvelope} />
             <span className="text-sm font-medium">e-mail</span>
           </NavLink>
       </div>
-      <p className='font-heading text-text-primary text-sm text-center pb-4 mt-2'>
+      <p className='font-heading text-text-primary text-sm text-center mt-2'>
         &copy; FiaNerd | Sofia Mattiasson
       </p>
     </>

@@ -14,7 +14,7 @@ function App() {
         {/* Main Content */}
         <div className="flex-grow relative flex">
           {/* Social Media & Contact */}
-          <div className="sticky top-0 h-screen bg-accent-primary flex items-center text-amber-100	">
+          <div className="sticky top-0 h-screen bg-accent-primary flex items-center text-amber-100 dark:text-amber-950">
             <div className="p-2 md:p-4">
               <SocialMediaAndContact />
             </div>
