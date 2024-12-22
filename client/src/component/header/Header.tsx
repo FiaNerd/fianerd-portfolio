@@ -57,8 +57,7 @@ const Header = () => {
         } backdrop-blur-md bg-white/70 dark:bg-black/70`}
         style={{
           left: `${sidebarWidth}px`,
-          width: `calc(100% - ${sidebarWidth}px)`,
-          height: '100px', // Set the height of the header
+          width: `calc(100% - ${sidebarWidth}px)`
         }}
       >
       {/* Top Announcement Bar */}
