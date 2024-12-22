@@ -50,18 +50,19 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`fixed top-0 z-50 transition-transform duration-300 ${
-        headerVisible ? 'translate-y-0' : '-translate-y-full'
-      } backdrop-blur-md bg-white/70 dark:bg-black/70`}
-      style={{
-        left: `${sidebarWidth}px`, // Dynamically update left padding
-        width: `calc(100% - ${sidebarWidth}px)`,
-      }}
-    >
+        <div
+        className={`fixed top-0 z-50 transition-transform duration-300 ${
+          headerVisible ? 'translate-y-0' : '-translate-y-full'
+        } backdrop-blur-md bg-white/70 dark:bg-black/70`}
+        style={{
+          left: `${sidebarWidth}px`,
+          width: `calc(100% - ${sidebarWidth}px)`,
+          height: '100px', // Set the height of the header
+        }}
+      >
       {/* Top Announcement Bar */}
       <div className="bg-orange-100 dark:bg-black">
-        <p className="text-xs py-2 md:text-sm text-center text-amber-950 dark:text-amber-100">
+        <p className="text-xs py-2 md:text-sm text-center text-amber-950 dark:text-amber-100 mb-0">
           {t('headerTitle')}
         </p>
       </div>
