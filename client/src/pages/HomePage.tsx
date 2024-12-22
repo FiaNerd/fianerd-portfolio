@@ -1,4 +1,3 @@
-import { motion } from "-motion";
 import { useEffect, useState } from "react";
 import AboutMe from "../component/about/AboutMe";
 import AboutNav from "../component/about/AboutNav";
@@ -33,28 +32,18 @@ const HomePage = () => {
 
   return (
     <>
+      {/* Apply paddingTop to the wrapper div to ensure HeroSection is below the header */}
       <div
         style={{ paddingTop: `${headerHeight}px`, transition: "padding-top 0.3s ease" }}
-        className="bg-blend-multiply"
+        className="bg-blend-multiply header"
       >
-        <SectionPlate
-          id="home"
-          style={{ height: `calc(100% - ${headerHeight}px)` }}
-          className="relative"
-        >
+        {/* Removed height calc and simplified the structure */}
+        <SectionPlate id="home" className="relative">
           <HeroSection />
         </SectionPlate>
       </div>
 
       <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} />
-
-      {/* <motion.div
-        id="profile"
-        className="text-center mb-8 md:mt-[2em] "
-        >
-        <TitleAnimation title={t("home:titleProfile")} dot="." />
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-[2rem] md:leading-[3rem] lg:leading-[5rem]">{t("home:intro")}</h3>
-        </motion.div> */}
 
       <AboutNav />
 
@@ -65,7 +54,6 @@ const HomePage = () => {
       <section >
         <Skills />
       </section>
-            
     </>
   );
 };

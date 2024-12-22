@@ -16,7 +16,7 @@ const AnimatedHamburgerButton = ({ isActive, toggleMenu }: IProps) => {
         initial={false}
         animate={isActive ? "open" : "closed"}
         onClick={() => toggleMenu((prev:any ) => !prev)}
-        className="relative flex h-[5rem] w-[5rem] rounded-full bg-white/0 transition-colors hover:bg-white/20"
+        className="relative flex h-[3.8rem] w-[4rem] rounded-full bg-white/0 transition-colors hover:bg-white/10"
       >
         <motion.span
           variants={VARIANTS.top}
