@@ -11,6 +11,8 @@ const HeroSection = () => {
   const [userIsDesktop, setUserIsDesktop] = useState(window.innerWidth > 768);
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
 
+  
+
   useEffect(() => {
     const handleResize = () => {
       setUserIsDesktop(window.innerWidth > 768);

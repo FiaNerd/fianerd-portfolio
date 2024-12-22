@@ -51,7 +51,8 @@ const Header = () => {
 
   return (
         <div
-        className={`fixed top-0 z-50 transition-transform duration-300 ${
+        id="header"
+        className={`fixed top-0 z-50 transition-transform duration-300${
           headerVisible ? 'translate-y-0' : '-translate-y-full'
         } backdrop-blur-md bg-white/70 dark:bg-black/70`}
         style={{
@@ -68,7 +69,7 @@ const Header = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="mx-auto flex items-center justify-between px-4">
+      <nav className="mx-auto flex items-center justify-between py-2 px-4">
         {/* Logo */}
         <NavLink to="/" className="flex-shrink-0">
           {currentTheme === 'dark' ? (

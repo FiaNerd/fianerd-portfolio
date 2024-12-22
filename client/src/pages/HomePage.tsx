@@ -10,34 +10,42 @@ import Title from "../component/Partial/Title";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
-
   const { t } = useTranslation(['home', 'skills']); // Access both home and skills translations
 
   useEffect(() => {
-    const header = document.querySelector("header");
+    const header = document.getElementById("header");
 
     const handleResize = () => {
       if (header) {
-        setHeaderHeight(header.offsetHeight); 
+        const height = header.getBoundingClientRect().height;
+        console.log("Header Height:", height); // Debug log to check the height
+        setHeaderHeight(height); // Update the header height state
       }
     };
 
+    // Set the initial header height on mount
     handleResize();
+
+    // Add resize event listener to handle window resizing
     window.addEventListener("resize", handleResize);
 
+    // Cleanup event listener on unmount
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, []); // Empty dependency array ensures this only runs on mount
 
   useSmoothScroll();
 
   return (
     <>
-      {/* Apply paddingTop to the wrapper div to ensure HeroSection is below the header */}
+      {/* Apply dynamic paddingTop to the wrapper div to ensure HeroSection is below the header */}
       <div
-        style={{ paddingTop: `${headerHeight}px`, transition: "padding-top 0.3s ease" }}
-        className="bg-blend-multiply header"
+        style={{
+          paddingTop: `${headerHeight}px`, // Apply dynamic padding based on header height
+          transition: "padding-top 0.3s ease", // Smooth transition for padding change
+        }}
+        className="bg-blend-multiply"
       >
-        {/* Removed height calc and simplified the structure */}
+        {/* Hero Section */}
         <SectionPlate id="home" className="relative">
           <HeroSection />
         </SectionPlate>
@@ -51,7 +59,7 @@ const HomePage = () => {
         <AboutMe />
       </SectionPlate>
 
-      <section >
+      <section>
         <Skills />
       </section>
     </>
