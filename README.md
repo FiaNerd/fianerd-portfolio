@@ -1,22 +1,30 @@
-# FIA NERD PROFILE
-## System developer - HTML & CSS, JavaScript, React, React Native Tailwindcss, node.js, C#, .NET, ASP.NET Core 
+# React + TypeScript + Vite
 
-## About me
-I have develop four years now. Have been studying booth backend within .NET and frontend with advanced JavaScript React. 
-I love developing, it's one of my bigest passion in life next to graphic design. 
-So i wanna create a profile site that show my skills and diffrent project i have done booth in web but also in graphic design. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## About the project
-This is my profile site
+Currently, two official plugins are available:
 
-## Open the project
-Clone the repository from github
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Clone Projecyt:
-git clone <my repro>
+## Expanding the ESLint configuration
 
-Install Dependencies:
-npm install
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-Run Project: 
-npm run dev
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
