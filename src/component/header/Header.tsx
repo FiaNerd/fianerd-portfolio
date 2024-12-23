@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -9,21 +9,24 @@ import NavbarMobile from './NavbarMobile';
 
 const Header = () => {
   const [headerVisible, setHeaderVisible] = useState(true);
-  const [sidebarWidth, setSidebarWidth] = useState(37); // Default mobile width
+  const [sidebarWidth, setSidebarWidth] = useState(37); 
   const { t } = useTranslation(['translation']);
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
+  const lastScrollY = useRef(window.scrollY);
 
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 121) {
-        setHeaderVisible(window.scrollY < lastScrollY);
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 121) {
+        setHeaderVisible(currentScrollY < lastScrollY.current);
       } else {
         setHeaderVisible(true);
       }
-      lastScrollY = window.scrollY;
+
+      lastScrollY.current = currentScrollY;
     };
 
     const handleResize = () => {
@@ -32,16 +35,14 @@ const Header = () => {
         const sidebarWidth = sidebar.getBoundingClientRect().width;
         setSidebarWidth(sidebarWidth > 37 ? 55 : 37);
       } else {
-        setSidebarWidth(window.innerWidth >= 768 ? 55 : 37); 
+        setSidebarWidth(window.innerWidth >= 768 ? 55 : 37);
       }
     };
 
-    // Attach event listeners
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
-    // Initial setup
-    handleResize();
+    handleResize(); // Initial setup
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -50,16 +51,16 @@ const Header = () => {
   }, []);
 
   return (
-        <div
-        id="header"
-        className={`fixed top-0 z-50 transition-transform duration-300${
-          headerVisible ? 'translate-y-0' : '-translate-y-full'
-        } backdrop-blur-md bg-bg-primary/10  dark:bg-black/70`}
-        style={{
-          left: `${sidebarWidth}px`,
-          width: `calc(100% - ${sidebarWidth}px)`
-        }}
-      >
+    <div
+      id="header"
+      className={`fixed top-0 z-50 transition-transform duration-300 ${
+        headerVisible ? 'translate-y-0' : '-translate-y-full'
+      } backdrop-blur-md bg-bg-primary/5 dark:bg-black/70`}
+      style={{
+        left: `${sidebarWidth}px`,
+        width: `calc(100% - ${sidebarWidth}px)`
+      }}
+    >
       {/* Top Announcement Bar */}
       <div className="bg-orange-100 dark:bg-black">
         <p className="text-xs py-2 md:text-sm text-center text-amber-950 dark:text-amber-100 mb-0">
