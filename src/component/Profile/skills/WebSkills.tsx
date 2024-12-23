@@ -22,10 +22,10 @@ const WebSkills = () => {
   ];
 
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="max-w-screen-xl mx-auto px-4 md:px-10 py-8 md:py-12">
       <Title id={"skills"} title={t('webSkills:titleSkills')} dot={t('webSkills:dot')} children={t('webSkills:subTitleSkills')} />
       <AboutNav />
-      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4 mb-4">
+      <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <div className="items-center">
           <h1 className="text-amber-950 dark:text-text-heading font-bold text-center mb-0 whitespace-break-spaces">
             {t("webSkills:titleWeb")}
@@ -36,17 +36,8 @@ const WebSkills = () => {
         </div>
 
         {/* TODO: Add a small litle picture her for the desktop verison and it will dissapear for mobile */}
-
-        {/* <div>
-          <h2 className="text-amber-950 dark:text-text-heading mb-0 font-bold text-center leading-[2.5rem]">
-            {t('titleWebDev')}
-          </h2>
-          <h3 className="text-text-sub-heading font-bold text-center">
-            {t('subTitleWebDev')}
-          </h3>
-        </div> */}
         </motion.div>
-       < motion.div className="whitespace-break-spaces grid  grid-cols-[5%_1fr] md:grid-cols-[auto_50%_1fr] gap-4 pl-4 pr-4  mb-8">
+       < motion.div className="whitespace-break-spaces grid  grid-cols-[5%_1fr] md:grid-cols-[auto_50%_1fr] gap-4 mb-8">
 
           <div className="flex items-center justify-center">
             <h1  className="font-semibold transform rotate-180 [writing-mode:vertical-lr]">{t('webbDev').toUpperCase()} </h1>

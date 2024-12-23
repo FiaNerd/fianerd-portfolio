@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import useAnimateIn from "../../hook/useAnimation";
 import { useEffect, useState } from "react";
+import useAnimateIn from "../../hook/useAnimation";
 
 interface IProps {
   title: string;
@@ -56,7 +56,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
       initial="hidden"
       animate={ctrls}
       onAnimationComplete={onComplete}
-      className="text-5xl font-bold font-heading mb-2 lg:text-[102px] tracking-tighter whitespace-break-spaces leading-[3rem] lg:leading-[6rem]"
+      className="text-5xl font-bold font-heading lg:text-[102px] tracking-tighter leading-10 whitespace-break-spaces mt-8 md:mt-20"
       style={style}
     >
       <motion.div
@@ -78,7 +78,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
         ))}
         <motion.span
           variants={child}
-          className="text-[6rem] lg:text-[12rem] ml-[-0.04em] leading-[1rem]"
+          className="text-[6rem] lg:text-[12rem] ml-[-0.04em] "
         >
           {dot}
         </motion.span>

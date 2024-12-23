@@ -56,17 +56,17 @@ const HomePage = () => {
 
       <AboutNav />
 
-      <SectionPlate id="me" bgColor="bg-bg-plate mb-8">
+      <SectionPlate id="me" bgColor="bg-bg-plate">
         <AboutMe />
       </SectionPlate>
 
-      <section>
+      <section >
         <Skills />
       </section>
 
-      <SectionPlate id="contact" bgColor="bg-bg-plate">
+      <section >
         <WorkExperience />
-      </SectionPlate>
+      </section>
     </>
   );
 };

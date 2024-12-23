@@ -2,35 +2,39 @@
     "titleWorkExperience": "Erfarenheter i Rörelse",
     "dot": ".",
     "subTitleWorkExperience": "- Varje jobb är ett steg mot mer erfarenhet",
+    "titleWorkingAction": "Arbete i Aktivitet",
+    "checkOut": "Kolla in mina projekt",
+    "checkoutText": "Utforska mina skapelser – Se vad jag har byggt och hur jag har utvecklats som utvecklare!",
+    "exploreBtn": "Upptäck Nu",
 
+    "dateWorkBrutal": "Mars 2024 - pågående",
     "titleBrutal": "Brutal Beats",
     "workTitleBrutal": "Webbutveckling - fullstack",
     "descriptionProjectBrutal": "<b>Sido-projekt</b> - Webbplats för bokningshantering",
     "techBrutal": "<b>Tekniker:</b> React, TypeScript, Tailwindcss, Node.js",
-    "dateWorkBrutal": "2024/03 - pågående",
-
+    
+    "dateWorkProdigies": "Januari 2024 - Augusti 2024",
     "titleProdigies": "Prodigies",
     "workTitleProdigies": "Apputveckling - fullstack",
     "descriptionProjectProdigies": "<b>Sido-projekt</b> - App för studenter att hitta den perfekta utbildningen",
     "techProdigies": "<b>Tekniker:</b> React Native, TypeScript, SQLite, Firebase",
-    "dateWorkProdigies": "2024/01 - 2024/08",
     
+    "dateWorkSlowfashion": "November 2023 - Maj 2024",
     "titleSlowfashion": "Slowfashion",
     "workTitleSlowfashion": "Backend App Utveckling",
     "descriptionProjectSlowfashion": "<b>Sido-projekt</b> - App för shopping av varumärken",
     "techSlowfashion": "<b>Tekniker:</b> ASP.Net Core web API och C#",
-    "dateWorkSlowfashion": "2023/11 - 2024/05",
 
+    "dateWorkOmegapoint": "September 2023 - December 2024",
     "titleOmegapoint": "Omegapoint",
     "workTitleOmegapoint": "Frontend utveckling",
     "descriptionProjectOmegapoint": "<b>LIA</b> - Byggde ett PIM-system",
     "techOmegapoint": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma",
-    "dateWorkOmegapoint": "2023/09 - 2024/12",
    
+    "dateWorkPrintagon": "2023/09 - 2024/12",
     "titlePrintagon": "Printagon Graphics",
     "workTitlePrintagon": "Tryckning/Bokbindning/Lager, Systemintegration",
     "workDescriptionPrintagon": "Maskinoperatör i bokbindning, assistent inom tryckning och lager",
     "descriptionProjectPrintagon": "<b>LIA</b> - Byggde ett PIM-system",
-    "techPrintagon": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma",
-    "dateWorkPrintagon": "2023/09 - 2024/12"
+    "techPrintagon": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma"
 }

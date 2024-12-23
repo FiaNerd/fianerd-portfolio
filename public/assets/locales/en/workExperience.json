@@ -2,35 +2,39 @@
     "titleWorkExperience": "Experience in Action",
     "dot": ".",
     "subTitleWorkExperience": "- Every Job is a Step Toward more Experince",
-
+    "titleWorkingAction": "Working Action",
+    "checkOut": "Check out my projects",
+    "checkoutText": "Take a Journey Through My Creations – See What I've Built and How I’ve Grown as a Developer!", 
+    "exploreBtn": "Explore Now",
+    
+    "dateWorkBrutal": "March 2024- ongoing",
     "titleBrutal": "Brutal Beats",
     "workTitleBrutal": "Webdevelopment -fullstack",
     "descriptionProjectBrutal": "<b>Side project</b> - Website for booking m anagemant",
     "techBrutal": "<b>Technologies:</b> React, TypeScript, Tailwindcss, Node.js",
-    "dateWorkBrutal": " 2024/03 - ongoing",
 
+    "dateWorkProdigies": "January 2024 - August 2024",
     "titleProdigies": "Prodigies",
     "workTitleProdigies": "App development - fullstack",
     "descriptionProjectProdigies": "<b>Side project</b> - App for student to find the perfect education",
     "techProdigies": "<b>Technologies:</b> React Native, TypeScript, SQLite, Firebase",
-    "dateWorkProdigies": "2024/01 - 2024/08",
     
+    "dateWorkSlowfashion  ": "November 2023 - May 2024",
     "titleSlowfashion  ": "Prodigies",
     "workTitleSlowfashion  ": "Backend App Development",
     "descriptionProjectSlowfashion  ": "<b>Side project</b> - App for shopping brands",
     "techSlowfashion  ": "<b>Technologies:</b> ASP.Net Core web api and C#",
-    "dateWorkSlowfashion  ": "2023/11 - 2024/05",
 
+    "dateWorkOmegapoint": "2023/09 - 2024/12",
     "titleOmegapoint ": "Omegapoint",
     "workTitleOmegapoint": "Frontend development",
     "descriptionProjectOmegapoint": "<b>LIA</b> - build a PIM-systems",
     "techOmegapoint": "<b>Technologies:</b>  React, TypeScript, React Qury, Axios, figma",
-    "dateWorkOmegapoint": "2023/09 - 2024/12",
    
+    "dateWorkPrintagon": "2023/09 - 2024/12",
     "titlePrintagon": "Printagon Graphics",
     "workTitlePrintagon": "Printing/Bookbinding/Warehouse, System Integration",
     "workDescriptionPrintagon": "Machine operator in bookbinding, assistant in printin, warehouse",
     "descriptionProjectPrintagon": "<b>LIA</b> - build a PIM-systems",
-    "techPrintagon": "<b>Technologies:</b>  React, TypeScript, React Qury, Axios, figma",
-    "dateWorkPrintagon": "2023/09 - 2024/12"
+    "techPrintagon": "<b>Technologies:</b>  React, TypeScript, React Qury, Axios, figma"
 }

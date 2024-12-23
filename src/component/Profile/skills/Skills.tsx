@@ -8,12 +8,12 @@ const Skills = () => {
   
   return (
     <>
-    <section className="mx-auto mb-8">
+    <div className="mx-auto">
       <WebSkills />
-      <SectionPlate className="bg-bg-plate pt-8 pb-4 w-full p-4">
+      <SectionPlate className="bg-bg-plate  w-full ">
         <GraphicSkills />
       </SectionPlate>
-    </section>
+    </div>
     </>
   );
 };

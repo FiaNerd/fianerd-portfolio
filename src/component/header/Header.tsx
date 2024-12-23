@@ -62,7 +62,7 @@ const Header = () => {
       }}
     >
       {/* Top Announcement Bar */}
-      <div className="bg-orange-100 dark:bg-black">
+      <div className="bg-[#cb7f2c] dark:bg-black">
         <p className="text-xs py-2 md:text-sm text-center text-amber-950 dark:text-amber-100 mb-0">
           {t('headerTitle')}
         </p>
@@ -98,7 +98,7 @@ const Header = () => {
           <SelectLanguage />
           <NavLink
             to="/contact"
-            className="hidden md:block text-sm md:text-lg border-2 rounded-full border-accent-secondary px-3 py-1 md:px-4 md:py-2 text-accent-secondary hover:bg-accent-primary hover:border-accent-primary hover:text-hover-text"
+            className="hidden md:block text-sm md:text-lg border-2 rounded border-accent-secondary px-3 py-1 md:px-4 md:py-2 text-accent-secondary hover:bg-accent-primary hover:border-accent-primary hover:text-hover-text"
           >
             {t('contact')}
           </NavLink>
