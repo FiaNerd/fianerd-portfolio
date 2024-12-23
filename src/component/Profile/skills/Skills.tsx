@@ -1,5 +1,5 @@
 
-import SectionPlate from "../Partial/SectionPlate";
+import SectionPlate from "../../Partial/SectionPlate";
 import GraphicSkills from "./GraphicSkills";
 import WebSkills from "./WebSkills";
 

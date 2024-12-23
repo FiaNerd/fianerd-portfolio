@@ -3,7 +3,8 @@ import { navRoutes } from '../../config/MenuItemsData'
 import MenuItems from './MenuItems'
 
 const NavbarDesktop = () => {
-  const [showMenu, setShowMenu] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_showMenu, setShowMenu] = useState(false)
 
   const handleCloseMenu = () => {
     setShowMenu(false)

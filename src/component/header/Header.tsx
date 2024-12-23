@@ -54,7 +54,7 @@ const Header = () => {
         id="header"
         className={`fixed top-0 z-50 transition-transform duration-300${
           headerVisible ? 'translate-y-0' : '-translate-y-full'
-        } backdrop-blur-md bg-white/70 dark:bg-black/70`}
+        } backdrop-blur-md bg-bg-primary/10  dark:bg-black/70`}
         style={{
           left: `${sidebarWidth}px`,
           width: `calc(100% - ${sidebarWidth}px)`

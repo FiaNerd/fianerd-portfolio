@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from './component/header/Header';
-import HomePage from './pages/HomePage';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
 
       {/* Sidebar */}
-      <div className="sticky top-0 h-screen bg-orange-100 py-2 text-amber-950 dark:bg-black dark:text-amber-100 z-50 pointer-events-auto">
+      <div className="sticky top-0 h-screen mx-auto bg-orange-100 text-amber-950 dark:bg-black dark:text-amber-100 z-50 pointer-events-auto">
         <SocialMediaAndContact />
       </div>
 

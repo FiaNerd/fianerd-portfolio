@@ -1,6 +1,6 @@
-import { useTranslation } from "react-i18next";
-import useFadeIn from "../../hook/useFadeIn";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import useFadeIn from "../../../hook/useFadeIn";
 import AboutNav from "../about/AboutNav";
 import ProgressBar from "./ProgressBar";
 

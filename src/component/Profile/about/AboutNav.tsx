@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import { navRoutsAbout } from "../../config/MenuAboutMeData";
-import useAnimateIn from "../../hook/useAnimation";
-import SectionPlate from "../Partial/SectionPlate";
+import { navRoutsAbout } from "../../../config/MenuAboutMeData";
+import useAnimateIn from "../../../hook/useAnimation";
+import SectionPlate from "../../Partial/SectionPlate";
 
 const AboutNav = () => {
     const { t } = useTranslation('home');

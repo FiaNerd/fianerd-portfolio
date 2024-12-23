@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import useVisibility from '../../hook/useVisibility';
+import React, { useEffect, useState } from 'react';
+import useVisibility from '../../../hook/useVisibility';
 
 interface IProps {
   percentage: number;

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import AboutMe from "../component/about/AboutMe";
-import AboutNav from "../component/about/AboutNav";
 import HeroSection from "../component/heroSection/HeroSection";
 import SectionPlate from "../component/Partial/SectionPlate";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 import { useTranslation } from "react-i18next";
-import Skills from "../component/skills/Skills";
 import Title from "../component/Partial/Title";
+import AboutMe from "../component/Profile/about/AboutMe";
+import AboutNav from "../component/Profile/about/AboutNav";
+import Skills from "../component/Profile/skills/Skills";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);

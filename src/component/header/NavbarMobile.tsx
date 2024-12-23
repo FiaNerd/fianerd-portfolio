@@ -7,8 +7,8 @@ import { navRoutes } from '../../config/MenuItemsData';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useClickOutside } from '../../hook/useClickOutside';
 import Footer from '../footer/Footer';
-import MenuItems from './MenuItems';
 import AnimatedHamburgerButton from './AnimatedHamburgerButton';
+import MenuItems from './MenuItems';
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
   `link ${isActive ? 'active contact' : ''}`
@@ -60,7 +60,7 @@ const NavbarMobile = () => {
             className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 w-full pt-4 pb-6 lg:pt-5 flex flex-col '
           >
             <div className='flex-grow overflow-y-auto mt-[3em]'>
-              <ul className='grid gap-2'>
+              <ul className='grid gap-2 pl-8'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems
                     key={index}

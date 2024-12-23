@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import useFadeIn from "../../hook/useFadeIn";
-import ProgressBar from "./ProgressBar";
-import Title from "../Partial/Title";
+import useFadeIn from "../../../hook/useFadeIn";
+import Title from "../../Partial/Title";
 import AboutNav from "../about/AboutNav";
+import ProgressBar from "./ProgressBar";
 
 const WebSkills = () => {
   const { t } = useTranslation("webSkills");
