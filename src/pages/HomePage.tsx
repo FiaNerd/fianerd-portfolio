@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import HeroSection from "../component/heroSection/HeroSection";
 import SectionPlate from "../component/Partial/SectionPlate";
-import { useSmoothScroll } from "../hook/useSmoothScroll";
-import { useTranslation } from "react-i18next";
 import Title from "../component/Partial/Title";
 import AboutMe from "../component/Profile/about/AboutMe";
 import AboutNav from "../component/Profile/about/AboutNav";
+import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
+import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -62,6 +63,10 @@ const HomePage = () => {
       <section>
         <Skills />
       </section>
+
+      <SectionPlate id="contact" bgColor="bg-bg-plate">
+        <WorkExperience />
+      </SectionPlate>
     </>
   );
 };

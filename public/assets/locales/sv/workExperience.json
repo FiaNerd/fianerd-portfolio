@@ -1,0 +1,36 @@
+{
+    "titleWorkExperience": "Erfarenheter i Rörelse",
+    "dot": ".",
+    "subTitleWorkExperience": "- Varje jobb är ett steg mot mer erfarenhet",
+
+    "titleBrutal": "Brutal Beats",
+    "workTitleBrutal": "Webbutveckling - fullstack",
+    "descriptionProjectBrutal": "<b>Sido-projekt</b> - Webbplats för bokningshantering",
+    "techBrutal": "<b>Tekniker:</b> React, TypeScript, Tailwindcss, Node.js",
+    "dateWorkBrutal": "2024/03 - pågående",
+
+    "titleProdigies": "Prodigies",
+    "workTitleProdigies": "Apputveckling - fullstack",
+    "descriptionProjectProdigies": "<b>Sido-projekt</b> - App för studenter att hitta den perfekta utbildningen",
+    "techProdigies": "<b>Tekniker:</b> React Native, TypeScript, SQLite, Firebase",
+    "dateWorkProdigies": "2024/01 - 2024/08",
+    
+    "titleSlowfashion": "Slowfashion",
+    "workTitleSlowfashion": "Backend App Utveckling",
+    "descriptionProjectSlowfashion": "<b>Sido-projekt</b> - App för shopping av varumärken",
+    "techSlowfashion": "<b>Tekniker:</b> ASP.Net Core web API och C#",
+    "dateWorkSlowfashion": "2023/11 - 2024/05",
+
+    "titleOmegapoint": "Omegapoint",
+    "workTitleOmegapoint": "Frontend utveckling",
+    "descriptionProjectOmegapoint": "<b>LIA</b> - Byggde ett PIM-system",
+    "techOmegapoint": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma",
+    "dateWorkOmegapoint": "2023/09 - 2024/12",
+   
+    "titlePrintagon": "Printagon Graphics",
+    "workTitlePrintagon": "Tryckning/Bokbindning/Lager, Systemintegration",
+    "workDescriptionPrintagon": "Maskinoperatör i bokbindning, assistent inom tryckning och lager",
+    "descriptionProjectPrintagon": "<b>LIA</b> - Byggde ett PIM-system",
+    "techPrintagon": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma",
+    "dateWorkPrintagon": "2023/09 - 2024/12"
+}

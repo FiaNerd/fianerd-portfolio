@@ -9,6 +9,7 @@ const WebSkills = () => {
   const { t } = useTranslation("webSkills");
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
+
   const webSkills = [
     { name: 'C#', percentage: 70 },
     { name: 'ASP.Net Core', percentage: 60 },
@@ -26,7 +27,7 @@ const WebSkills = () => {
       <AboutNav />
       <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4 mb-4">
         <div className="items-center">
-          <h1 className="text-amber-950 dark:text-text-heading mb-4 font-bold text-center mb-0 whitespace-break-spaces">
+          <h1 className="text-amber-950 dark:text-text-heading font-bold text-center mb-0 whitespace-break-spaces">
             {t("webSkills:titleWeb")}
           </h1>
           <h5 className="text-center text-text-sub-heading not-italic whitespace-break-spaces font-bold">
