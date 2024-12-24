@@ -14,7 +14,7 @@ export const navRoutsAbout: RouteAbout[] = [
     },
     {
         'title': 'experience',
-        'url': '/',
+        'url': '/#work-experience',
     },
     {
         'title': 'education',

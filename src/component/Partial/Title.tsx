@@ -10,9 +10,9 @@ interface IProps {
 
 const Title = ({id , title, dot, children} : IProps) => {
   return (
-    <motion.div id={id} className={"text-center md:mt-[2em] "}>
+    <motion.div id={id} className={"text-center md:mt-[2em] pt-4"}>
         <TitleAnimation title={title} dot={dot} />
-        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-9 md:leading-[2.5em] lg:leading-[4.6em]">{children}</h3>
+        <h3 className="-mt-[0.8em] lg:-mt-[1.5em] leading-9 md:leading-[2.5em] lg:leading-[4.6em] ">{children}</h3>
     </motion.div>
   );
 };
