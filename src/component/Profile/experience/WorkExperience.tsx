@@ -43,7 +43,7 @@ const WorkExperience = () => {
                 <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkBrutal")}</p>
-                    <h4 className="mb-0 text-accent-primaryfont-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleBrutal")}</h4>
+                    <h4 className="mb-0 font-bold text-accent-primaryfont-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleBrutal")}</h4>
                     <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
                       {t("workTitleBrutal")}
                     </p>
@@ -72,43 +72,70 @@ const WorkExperience = () => {
               <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                 <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-[#cb7f2c]"> {t("dateWorkSlowfashion")}</p>
-                    <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleSlowfashion")}</h4>
+                    <p className="mb-3 text-base text-[#cb7f2c]"> {t("dateWorkOmegapoint")}</p>
+                    <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleOmegapoint")}</h4>
                     <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
-                      {t("workTitleSlowfashion")}
+                      {t("workTitleOmegapoint")}
                     </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary  text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectSlowfashion')}}></p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techSlowfashion')}}></p>
-                    
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary  text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectOmegapoint')}}></p>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techOmegapoint')}}></p>
+
                   </div>
                 </div>
 
               <div className="mb-8 flex justify-between items-center w-full right-timeline">
                 <div className="order-1 w-5/12"></div>
                   <div className="order-1  w-5/12 px-1 py-4">
-                    <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkOmegapoint")}</p>
-                    <h4 className="mb-3 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl text-left">{t("titleOmegapoint")}</h4>
+                    <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkAllaTiders")}</p>
+                    <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl text-left">{t("titleAllaTiders")}</h4>
                     <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
-                      {t("workTitleOmegapoint")}
+                      {t("workTitleAllaTiders")}
                     </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectOmegapoint')}}></p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techOmegapoint')}}></p>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectAllaTiders')}}></p>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techAllaTiders')}}></p>
                   </div>
               </div>
 
                 <div className="order-1 w-5/12"></div>
                   <div className="order-1  w-5/12 px-1 py-4 text-left">
-                    <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkProdigies")}</p>
-                    <h4 className="mb-3 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleProdigies")}</h4>
+                    <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkSlowfashion")}</p>
+                    <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleSlowfashion")}</h4>
                     <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
-                      {t("workTitleProdigies")}
+                      {t("workTitleSlowfashion")}
                     </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectProdigies')}}>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectSlowfashion')}}>
                     </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techProdigies')}}>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techSlowfashion')}}>
+                    </p>
+                  </div>
+                      
+                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div className="order-1 w-5/12"></div>
+                      <div className="order-1  w-5/12 px-1 py-4">
+                        <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkPrintagon")}</p>
+                        <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl text-left">{t("titlePrintagon")}</h4>
+                        <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
+                          {t("workTitlePrintagon")}
+                        </p>
+                        <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectPrintagon')}}></p>
+                        <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techPrintagon')}}></p>
+                      </div>
+                  </div>
+
+              <div className="order-1 w-5/12"></div>
+                  <div className="order-1  w-5/12 px-1 py-4 text-left">
+                    <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkStumpen")}</p>
+                    <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleStumpen")}</h4>
+                    <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
+                      {t("workTitleStumpen")}
+                    </p>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectStumpen')}}>
+                    </p>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techStumpen')}}>
                     </p>
                   </div>
               </div>          
+              
           {/* TODO: Add a small litle picture her under the line */}
             </div>
           </div>

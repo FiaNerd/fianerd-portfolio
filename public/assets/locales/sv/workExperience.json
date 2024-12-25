@@ -18,6 +18,13 @@
     "workTitleProdigies": "Apputveckling - fullstack",
     "descriptionProjectProdigies": "<b>Sido-projekt</b> - App för studenter att hitta den perfekta utbildningen",
     "techProdigies": "<b>Tekniker:</b> React Native, TypeScript, SQLite, Firebase",
+
+
+    "dateWorkOmegapoint": "September 2023 - December 2024",
+    "titleOmegapoint": "Omegapoint",
+    "workTitleOmegapoint": "Frontend utveckling",
+    "descriptionProjectOmegapoint": "<b>LIA</b> - Byggde ett PIM-system",
+    "techOmegapoint": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma",
     
     "dateWorkSlowfashion": "November 2023 - Maj 2024",
     "titleSlowfashion": "Slowfashion",
@@ -25,16 +32,24 @@
     "descriptionProjectSlowfashion": "<b>Sido-projekt</b> - App för shopping av varumärken",
     "techSlowfashion": "<b>Tekniker:</b> ASP.Net Core web API och C#",
 
-    "dateWorkOmegapoint": "September 2023 - December 2024",
-    "titleOmegapoint": "Omegapoint",
-    "workTitleOmegapoint": "Frontend utveckling",
-    "descriptionProjectOmegapoint": "<b>LIA</b> - Byggde ett PIM-system",
-    "techOmegapoint": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma",
+    "dateWorkAllaTiders": "September 2023 - pågående",
+    "titleAllaTiders": "Alla Tiders Teater",
+    "workTitleAllaTiders": "Graisk designer",
+    "workDescriptionAllaTiders": "Grafisk designer - skapar affischer, logotyper och annat grafiskt material",
+    "descriptionProjectAllaTiders": "<b>Sido projekt</b> - skapar deras design för diverse föreställningar",
+    "techAllaTiders": "<b>Tekniker:</b> Phtoshop, Illustrator & InDesign",
    
-    "dateWorkPrintagon": "2023/09 - 2024/12",
+    "dateWorkPrintagon": "September 2023 - December 2024",
     "titlePrintagon": "Printagon Graphics",
-    "workTitlePrintagon": "Tryckning/Bokbindning/Lager, Systemintegration",
-    "workDescriptionPrintagon": "Maskinoperatör i bokbindning, assistent inom tryckning och lager",
-    "descriptionProjectPrintagon": "<b>LIA</b> - Byggde ett PIM-system",
-    "techPrintagon": "<b>Tekniker:</b> React, TypeScript, React Query, Axios, Figma"
+    "workTitlePrintagon": "Printing/Bookbinding/Warehouse, System Integration",
+    "workDescriptionPrintagon": "Machine operator in bookbinding, assistant in printing, and warehouse operations",
+    "descriptionProjectPrintagon": "<b>Side Project</b> - Building a management and inventory system with Blazor to streamline warehouse operations",
+    "techPrintagon": "<b>Technologies:</b> React, TypeScript, Axios, C#, ASP.NET Core, Figma",
+
+    "dateWorkStumpen": "Mars 2008 - pågående",
+    "titleStumpen": "Stumpen Ensemblen",
+    "workTitleStumpen": "Graisk designer",
+    "workDescriptionStumpen": "Grafisk designer - skapar affischer, logotyper och annat grafiskt material",
+    "descriptionProjectStumpen": "<b>Sido projekt</b> - skapar deras design för diverse föreställningar",
+    "techStumpen": "<b>Tekniker:</b> Phtoshop, Illustrator & InDesign"
 }
