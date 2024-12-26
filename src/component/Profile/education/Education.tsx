@@ -9,7 +9,6 @@ const Education = () => {
     <>
     <Title id="work-experience" title={t("titleWorkExperience")} dot={t("dot")} children={t("subTitleWorkExperience")}/>
 
-        
     <div className="dark:bg-black dark:text-text-primary py-8">
       <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
         <div className="flex flex-col w-full lg:sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
@@ -105,41 +104,16 @@ const Education = () => {
                     <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWedesign")}</p>
                     <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleWedesign")}</h4>
                     <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
-                      {t("edutacationCoursesWebdesign")}
+                      {t("edutacationCoursesWedesign")}
                     </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectSlowfashion')}}>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('placeWedesign')}}>
                     </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techSlowfashion')}}>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionEducationWedesign')}}>
                     </p>
-                  </div>
-                      
-                  <div className="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div className="order-1 w-5/12"></div>
-                      <div className="order-1  w-5/12 px-1 py-4">
-                        <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWorkPrintagon")}</p>
-                        <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl text-left">{t("titlePrintagon")}</h4>
-                        <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
-                          {t("workTitlePrintagon")}
-                        </p>
-                        <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectPrintagon')}}></p>
-                        <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techPrintagon')}}></p>
-                      </div>
-                  </div>
-
-              <div className="order-1 w-5/12"></div>
-                  <div className="order-1  w-5/12 px-1 py-4 text-left">
-                    <p className="mb-3 text-base text-[#cb7f2c]">{t("dateWedesign")}</p>
-                    <h4 className="mb-0 font-bold text-amber-950 dark:text-text-heading text-lg md:text-2xl">{t("titleWebdesign")}</h4>
-                    <p className="text-sm md:text-base leading-snug text-amber-950 dark:text-text-secondary text-opacity-100">
-                      {t("workTitleStumpen")}
-                    </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectStumpen')}}>
-                    </p>
-                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techStumpen')}}>
+                    <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techEducationWedesign')}}>
                     </p>
                   </div>
-              </div>          
-              
+                  </div>
           {/* TODO: Add a small litle picture her under the line */}
             </div>
           </div>

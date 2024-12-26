@@ -18,7 +18,12 @@ const GraphicSkills = () => {
   return (
     <div className="container mx-auto px-4 md:px-10 py-8 md:py-12">
       <AboutNav />
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <motion.div 
+           ref={ref} 
+           initial="hidden" 
+           animate={ctrls} 
+           variants={vars} 
+           className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
 
              <div className="items-center">
               <h1 className="text-amber-950 dark:text-text-heading font-bold text-center mb-0 whitespace-break-spaces">
