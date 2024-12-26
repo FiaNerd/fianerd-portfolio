@@ -8,6 +8,7 @@ import AboutNav from "../component/Profile/about/AboutNav";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
+import Education from "../component/Profile/education/Education";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -67,6 +68,10 @@ const HomePage = () => {
       <section >
         <WorkExperience />
       </section>
+
+      <section >
+        <Education />
+      </ section>
     </>
   );
 };
