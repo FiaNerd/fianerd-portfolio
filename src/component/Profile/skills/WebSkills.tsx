@@ -30,7 +30,7 @@ const WebSkills = () => {
           variants={vars} 
           className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <div>
-            <h1 className="text-[#535437] dark:text-[#a7a05c] md:mb-4 font-bold text-center md:leading-[2.5rem]">
+            <h1 className="text-[#535437] dark:text-[#69864e] md:mb-4 font-bold text-center md:leading-[2.5rem]">
               {t('titleWeb')}
             </h1>
             <h3 className="text-text-secondary font-normal text-center">
@@ -39,7 +39,7 @@ const WebSkills = () => {
           </div>
 
             <div>
-              <h2 className="text-[#535437] dark:text-[#a7a05c] md:mb-4 font-bold text-center md:leading-[2.5rem]">
+              <h2 className="text-[#535437] dark:text-[#69864e] md:mb-4 font-bold text-center md:leading-[2.5rem]">
                 {t('titleWebDev')}
               </h2>
               <h3 className="text-text-sub-heading text-text-secondary font-normal text-center">
@@ -57,7 +57,7 @@ const WebSkills = () => {
         >
           {/* Vertical Text Column */}
           <div className="flex items-center justify-center">
-            <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#a7a05c]  transform rotate-180 [writing-mode:vertical-lr] text-center">
+            <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#69864e]  transform rotate-180 [writing-mode:vertical-lr] text-center">
               {t('webbDev')}
             </h1>
           </div>
@@ -73,7 +73,7 @@ const WebSkills = () => {
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textVue') }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
           <p className="text-text-primary mg-8" dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
-          <p className="text-hover-text dark:text-bg-primary italic font-normal py-2 px-4 bg-[#535437] dark:bg-[#a7a05c] p-2 rounded-md">
+          <p className="text-hover-text dark:text-bg-primary italic font-normal py-2 px-4 bg-[#535437] dark:bg-[#69864e] p-2 rounded-md">
             {t('textGoal')}
           </p>
         </div>
