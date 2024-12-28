@@ -83,9 +83,10 @@ const HeroSection = () => {
         )}
 
         <div className={`${styles['container-btn']} flex flex-col lg:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
-          <Button className="bg-btn-bg text-bg-primary border-btn-bg hover:bg-accent-secondary hover:border-accent-secondary hover:opcaity-100 py-2 px-4 sm:py-3 sm:px-6  w-full sm:w-auto">
-            {t('buttonCV')}
-          </Button> 
+        <Button className="bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover py-2 px-4 sm:py-3 sm:px-6 w-full sm:w-auto">
+          {t('buttonCV')}
+        </Button>
+
           <NavLink to="#" className="border-btn-bg text-btn-bg border-2 hover:border-bg-hover tracking-wider hover:bg-bg-hover hover:text-bg-primary py-2 px-4 sm:py-3 sm:px-6 rounded w-full sm:w-auto">
             {t('contact')}
           </NavLink>

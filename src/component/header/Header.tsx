@@ -98,7 +98,7 @@ const Header = () => {
           <SelectLanguage />
           <NavLink
             to="/contact"
-            className="hidden font-heading font-medium md:block text-sm md:text-lg border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-hover-text"
+            className="hidden font-heading font-medium md:block text-sm md:text-lg border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
             {t('contact')}
           </NavLink>
