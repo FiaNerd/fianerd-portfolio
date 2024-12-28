@@ -64,16 +64,16 @@ const WebSkills = () => {
 
         {/* Middle Column */}
         <div className="sm:col-span-1 md:pr-8">
-          <h5 className="text-text-secondary dark:text-[#a7a05c]  not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
-          <p className="text-text-[#a7a05c] " dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
-          <p className="text-text-[#a7a05c] " dangerouslySetInnerHTML={{ __html: t('textDB') }}></p>
-          <p className="text-text-[#a7a05c] " dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
-          <h5 className="text-text-secondary dark:text-[#a7a05c]  not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleFE') }}></h5>
+          <h5 className="text-text-secondary not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
+          <p dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
+          <p dangerouslySetInnerHTML={{ __html: t('textDB') }}></p>
+          <p dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
+          <h5 className="text-text-secondary not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleFE') }}></h5>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textFE') }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textVue') }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
-          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
-          <p className="text-text-secondary italic font-light">
+          <p className="text-text-primary mg-8" dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
+          <p className="text-hover-text dark:text-bg-primary italic font-normal py-2 px-4 bg-[#535437] dark:bg-[#a7a05c] p-2 rounded-md">
             {t('textGoal')}
           </p>
         </div>
@@ -82,7 +82,7 @@ const WebSkills = () => {
         <div className="col-span-2 md:col-span-1">
           {webSkills.map(skill => (
             <div key={skill.name}>
-              <h2 className="text-sm text-text-secondary dark:text-[#a7a05c] ]font-semibold mb-[0.15em]">{skill.name}</h2>
+              <h2 className="text-sm text-text-secondary font-semibold mb-[0.15em]">{skill.name}</h2>
               <ProgressBar percentage={skill.percentage} />
             </div>
           ))}

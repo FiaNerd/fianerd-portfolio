@@ -32,8 +32,8 @@ const SocialMediaAndContact = () => {
       </div>
 
       {/* Decorative Line and Contact Text */}
-      <div className="inline-block h-[2em] min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-amber-100"></div>
-      <p className='rotate-180 [writing-mode:vertical-lr] tracking-widest text-text-secondary dark:text-amber-100 mx-auto md:pt-12'>
+      <div className="inline-block h-[2em] min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent"></div>
+      <p className='rotate-180 [writing-mode:vertical-lr] tracking-widest text-text-secondary dark:text-text-accent mx-auto md:pt-12'>
         {t("contact")}
       </p>
     </div>

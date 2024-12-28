@@ -24,7 +24,7 @@ const GraphicSkills = () => {
            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 
              <div className="items-center">
-              <h1 className="text-[#64b770] font-bold text-center mb-2 whitespace-break-spaces">
+              <h1 className="text-[#4b1718] dark:text-bg-secondary  font-bold text-center mb-2 whitespace-break-spaces">
                 {t("graphicSkills:titleGraphic")}
               </h1>
               <h3 className="text-center text-text-secondary not-italic font-light whitespace-break-spaces ">
@@ -33,7 +33,7 @@ const GraphicSkills = () => {
             </div>
 
             <div>
-              <h1 className="text-[#64b770] mb-4 leading-10 font-bold text-center md:leading-[3rem]">
+              <h1 className="text-[#4b1718] dark:text-bg-secondary  mb-4 leading-10 font-bold text-center md:leading-[3rem]">
                 {t('titleGraphicSkills')}
               </h1>
               <h3 className="text-text-secondary font-light text-center">
@@ -54,7 +54,7 @@ const GraphicSkills = () => {
         
         {/* Vertical Text Column */}
         <div className="flex items-center justify-center">
-          <h1 className="text-[#64b770] font-semibold transform rotate-180 [writing-mode:vertical-lr] text-center">
+          <h1 className="text-[#4b1718] dark:text-bg-secondary font-semibold transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t("graphicTitle").toUpperCase()}
           </h1>
         </div>
@@ -64,8 +64,8 @@ const GraphicSkills = () => {
           <p className="text-text-sub-heading not-italic mb-4" dangerouslySetInnerHTML={{ __html: t("textPS") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textAI") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textID") }}></p>
-          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textUX/UI") }}></p>
-          <p className="text-text-primary italic font-light">
+          <p className="text-text-primary mb-8" dangerouslySetInnerHTML={{ __html: t("textUX/UI") }}></p>
+          <p className="text-hover-text dark:text-bg-primary italic font-normal py-2 px-4 bg-[#4b1718] dark:bg-bg-secondary">
             {t("textGoal")}
           </p>
         </div>

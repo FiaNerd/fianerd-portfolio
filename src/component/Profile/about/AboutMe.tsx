@@ -58,7 +58,7 @@ const AboutMe = () => {
         )}
 
         <Button
-            className="float-right text-lg md:text-xl text-btn-bg border-btn-bg hover:text-bg-primary active:text-bg-primary   hover:border-bg-hover hover:bg-bg-hover"
+            className="float-right text-lg md:text-xl text-btn-bg border-btn-bg hover:text-bg-primary active:text-bg-primary hover:border-bg-hover hover:bg-bg-hover"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}

@@ -10,7 +10,7 @@ function App() {
       <Header />
 
       {/* Sidebar */}
-      <div className="sticky top-0 h-screen mx-auto bg-bg-secondary text-text-secondary dark:bg-black dark:text-amber-100 z-50 pointer-events-auto">
+      <div className="sticky top-0 h-screen mx-auto bg-bg-secondary text-text-secondary dark:bg-black dark:text-text-accent z-50 pointer-events-auto">
         <SocialMediaAndContact />
       </div>
 
