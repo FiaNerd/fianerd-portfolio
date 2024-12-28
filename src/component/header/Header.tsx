@@ -62,8 +62,8 @@ const Header = () => {
       }}
     >
       {/* Top Announcement Bar */}
-      <div className="bg-accent-primary dark:bg-[#3a1b1b]">
-        <p className="text-xs py-2 md:text-sm text-center text-hover-text mb-0">
+      <div className="bg-accent-primary dark:bg-bg-primary">
+        <p className="text-xs py-2 md:text-sm text-center text-hover-text dark:text-text-secondary mb-0">
           {t('headerTitle')}
         </p>
       </div>

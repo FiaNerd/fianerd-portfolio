@@ -13,8 +13,8 @@ const WorkExperience = () => {
     <div className="py-8">
       <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
         <div className="flex flex-col w-full lg:sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
-          <p className="ml-2 text-bg-secondary dark:text-[#aa7339] uppercase tracking-loose">{t("titleWorkingAction")}</p>
-          <p className="text-3xl text-bg-secondary dark:dark:text-[#aa7339] md:text-4xl leading-normal md:leading-relaxed mb-2">{t("checkOut")}</p>
+          <p className="text-bg-secondary dark:text-text-accent uppercase -mb-2 tracking-loose">{t("titleWorkingAction")}</p>
+          <p className="text-3xl text-bg-secondary dark:text-text-accent md:text-4xl leading-normal md:leading-relaxed mb-2">{t("checkOut")}</p>
           <p className="text-sm md:text-base text-text-secondary mb-8">
             {t("checkoutText")}
           </p>
@@ -26,23 +26,13 @@ const WorkExperience = () => {
       <div className="flex mx-auto md:ml-12 lg:w-2/3 sticky">
         <div className="container mx-auto w-full h-full">
           <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 py-20 lg:p-10 h-full">
-            <div className="border-2-2 border-bg-secondary absolute h-full border"
-              style={{
-                right: "50%", 
-                border:" 2px solid #cb7f2c",
-                borderRadius: "1%"}}></div>
-            <div className="border-2-2 border-bg-secondary absolute h-full border"
-              style={{
-                left: "50%", 
-                border: "2px solid #cb7f2c",
-                 borderRadius: "1%"
-            }}></div>
+          <div className="absolute h-full border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
 
               <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                 <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
-                    <p className="mb-3 text-base text-bg-secondary dark:dark:text-[#aa7339]">{t("dateWorkBrutal")}</p>
-                    <h4 className="mb-0 font-bold text-bg-secondary dark:dark:text-[#aa7339] dark:text-text-heading text-lg md:text-2xl">{t("titleBrutal")}</h4>
+                    <p className="mb-3 text-base text-bg-secondary dark:text-text-accent">{t("dateWorkBrutal")}</p>
+                    <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading text-lg md:text-2xl">{t("titleBrutal")}</h4>
                     <p className="text-sm md:text-base leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                       {t("workTitleBrutal")}
                     </p>
@@ -56,9 +46,9 @@ const WorkExperience = () => {
               <div className="mb-8 flex justify-between items-center w-full right-timeline">
                 <div className="order-1 w-5/12"></div>
                 <div className="order-1  w-5/12 px-1 py-4 text-left">
-                  <p className="mb-3 text-base text-bg-secondary dark:dark:text-[#aa7339]">{t("dateWorkProdigies")}</p>
-                  <h4 className="mb-0 font-bold text-bg-secondary dark:dark:text-[#aa7339] dark:text-text-heading text-lg md:text-2xl">{t("titleProdigies")}</h4>
-                  <p className="text-sm md:text-base leading-snug text-text-secondary dark:dark:text-[#aa7339]dark:text-text-seondary text-opacity-100">
+                  <p className="mb-3 text-base text-bg-secondary dark:text-text-accent">{t("dateWorkProdigies")}</p>
+                  <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading text-lg md:text-2xl">{t("titleProdigies")}</h4>
+                  <p className="text-sm md:text-base leading-snug text-text-secondary dark:text-text-accentdark:text-text-seondary text-opacity-100">
                     {t("workTitleProdigies")}
                   </p>
                   <p className="text-sm md:text-base leading-snug dark:text-text-primary text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectProdigies')}}>
