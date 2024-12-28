@@ -21,7 +21,7 @@
     @apply font-bold font-heading mb-2 tracking-tighter;
     font-size: clamp(24px, 5vw, 48px); 
     line-height: 1.2;
-    color: var(--color-text-heading);
+    /* color: var(--color-text-accent); */
   }
 
   h2 {
@@ -35,27 +35,27 @@
     @apply font-light font-sub-heading italic mb-4;
     font-size: clamp(18px, 3vw, 30px); 
     line-height: 1.4;
-    color: var(--color-text-secondary);
+    /* color: var(--color-text-secondary); */
   }
   
   h4 {
     @apply font-medium italic mb-4;
     font-size: clamp(16px, 2.5vw, 24px); 
     line-height: 1.5;
-    color: var(--color-text-secondary);
+    /* color: var(--color-text-secondary); */
   }
   
   h5 {
     @apply font-medium italic mb-4;
     font-size: clamp(14px, 2vw, 20px); 
     line-height: 1.6;
-    color: var(--color-text-secondary);
+    /* color: var(--color-text-secondary); */
   }
   
   p {
     @apply leading-7 mb-4;
     font-size: clamp(14px, 2.5vw, 18px); 
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
   }
 }
 
@@ -68,55 +68,47 @@
 :root {
   --color-bg-mode: radial-gradient(
     ellipse at 88.1% 69.6%, 
-    #d5cbae 40%, 
-    #fff5d7 100.2%
+    #fff5d7 40%, 
+    /* #d5cbae 40%,  */
+    #edd8bf 100.2%
+    /* #fff5d7 100.2% */
   );
 
-  /* --color-accent-primary: #b12454; */
-  --color-accent-primary: #4a1a3e;
-  /* --color-accent-primary:  rgb(69 26 3 / var(--tw-text-opacity, 1));; */
-  --color-accent-secondary: #d46763;
-  --color-bg-primary: #fff5d7;
-  --color-bg-secondary: #eee79b;
-  --color-text-heading: #5e203c;
-  /* --color-text-heading: #183426; */
-  --color-text-primary: #5e203c;
-  --color-text-secondary: #1c2022;
-  --color-btn-primary: #e94e779c;
-  --color-btn-secondary: #db9c73;
-  --color-hover-primary: #b12454;
-  /* --color-hover-primary: #cb6360; */
-  --color-text-subHeading: #4a1a3e;
-  /* --color-text-subHeading: #451A03; */
-  --color-hover-text: hsl(45, 100%, 92%);
-  --color-bg-plate: #e5dcc1;
-}
+    --color-bg-primary: #f7ece0;
+    --color-bg-secondary: #cb7f2c;
+    --color-accent-primary: #b94c0c; /* Huvudfärg för accenter */
+    --color-accent-secondary: #b33c38; /* Sekundära accenter */
+    /* --color-accent-secondary: #d46763; Sekundära accenter */
+    --color-text-accent: #501842; /* För rubriker */
+    --color-text-secondary: #592208ed;
+    --color-text-primary: #0d2938; /* Neutral för brödtext */
+    --color-btn-bg: #e63946;
+    --color-bg-hover: #b1424c;
+    --color-hover-text: hsl(45, 100%, 92%);
+  }
+  
 
-/* Dark mode variables */
+  /* Dark mode variables */
 .dark {
-  --color-bg-mode: radial-gradient(
-    ellipse at 88.1% 69.6%, 
-    #060914 20%, 
-    #200121 100.2%
-  );
-
-  --color-accent-primary: #a87e13;
-  --color-accent-secondary: #DAA520;
-  --color-bg-primary: #200121;
-  --color-bg-secondary: #23092a;
-  --color-text-heading: #9b5959;
-  --color-text-primary: #f5f5f5;
-  --color-text-secondary: #bebcb7;
-  --color-text-subHeading: #9b6a59;
-  --color-hover-text: #200121;
-  --color-bg-plate: #1b1525bf;
-}
-
-@media (min-width: 768px) {
-  .md\\:h-25 {
-    height: 25px;
+    --color-bg-mode: radial-gradient(
+      ellipse at 88.1% 69.6%, 
+      #1b0909   20%, 
+      #240313 100.2%
+      /* #200121 100.2% */
+    );
+}  
+  /* Dark mode variables */
+  .dark {
+    --color-bg-primary: #240313;
+    --color-bg-secondary: #a54a6e;
+    --color-accent-primary: #cb7f2c;
+    --color-accent-secondary: #d2b79f;
+    --color-text-primary: #e7c78e;
+    --color-text-accent:#d57d7d;
+    --color-text-secondary: #fffbd4;
+    /* --color-text-secondary: #2f060e; */
+    --color-btn-bg: #5aaf85;
+    --color-bg-hover: #5aaf85;
+    --color-hover-text: #e2e2d9;
   }
-  .md\\:w-25 {
-    width: 25px;
-  }
-}
+  

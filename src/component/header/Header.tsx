@@ -55,15 +55,15 @@ const Header = () => {
       id="header"
       className={`fixed top-0 z-50 transition-transform duration-300 ${
         headerVisible ? 'translate-y-0' : '-translate-y-full'
-      } backdrop-blur-md bg-bg-primary/5 dark:bg-black/70`}
+      } backdrop-blur-2xl bg-bg-primary/5 dark:bg-bg-secondary/10`}
       style={{
         left: `${sidebarWidth}px`,
         width: `calc(100% - ${sidebarWidth}px)`
       }}
     >
       {/* Top Announcement Bar */}
-      <div className="bg-[#cb7f2c] dark:bg-black">
-        <p className="text-xs py-2 md:text-sm text-center text-amber-950 dark:text-amber-100 mb-0">
+      <div className="bg-accent-primary dark:bg-[#3a1b1b]">
+        <p className="text-xs py-2 md:text-sm text-center text-hover-text mb-0">
           {t('headerTitle')}
         </p>
       </div>
@@ -87,7 +87,7 @@ const Header = () => {
           )}
         </NavLink>
 
-        {/* Desktop Navbar */}
+        {/* Desktop Navbar */} 
         <div className="hidden md:flex">
           <NavbarDesktop />
         </div>
@@ -98,7 +98,7 @@ const Header = () => {
           <SelectLanguage />
           <NavLink
             to="/contact"
-            className="hidden md:block text-sm md:text-lg border-2 rounded border-accent-secondary px-3 py-1 md:px-4 md:py-2 text-accent-secondary hover:bg-accent-primary hover:border-accent-primary hover:text-hover-text"
+            className="hidden font-heading font-medium md:block text-sm md:text-lg border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-hover-text"
           >
             {t('contact')}
           </NavLink>

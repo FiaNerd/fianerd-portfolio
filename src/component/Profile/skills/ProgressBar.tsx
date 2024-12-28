@@ -37,15 +37,15 @@ const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
   }, [isVisible, percentage]);
 
   return (
-    <div ref={ref} className={`relative w-full bg-gray-400 rounded-full h-4 mb-[1em] ${className}`}>
+    <div ref={ref} className={`relative w-full bg-bg-secondary rounded-full h-4 mb-[1em] ${className}`}>
       <motion.div
-        className="absolute top-0 left-0 bg-gradient-to-r from-amber-950 dark:from-hover-text to-text-sub-heading dark:to-accent-primary h-full"
+        className="absolute top-0 left-0 bg-gradient-to-r from-text-secondary dark:from-hover-text to-text-sub-heading dark:to-accent-primary h-full"
         initial={{ width: 0 }}
         animate={{ width: `${completed}%` }}
         transition={{ duration: 1.5, ease: 'easeInOut' }}
       >
         <motion.span
-          className="absolute h-full flex items-center text-sm text-white font-semibold"
+          className="absolute h-full flex items-center text-sm text-bg-primary font-semibold"
           initial={{ x: 0 }}
           animate={{ x: `${completed}%` }}
           transition={{ duration: 1.5, ease: 'easeInOut' }}

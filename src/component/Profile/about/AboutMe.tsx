@@ -16,7 +16,7 @@ const AboutMe = () => {
 
   return (
 
-      <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 md:top-36 px-4 md:px-10 py-8 md:py-12">
+      <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10  px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
           <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
@@ -27,10 +27,10 @@ const AboutMe = () => {
           <img src="/assets/images/profile-img-desktop.jpg" alt="Description" className="mx-auto md:float-left mb-8 md:pr-8 max-w-full h-auto object-cover"/>
         </picture> */}
 
-        <h2 className="text-h2 m-0 font-bold text-text-sub-heading not-italic">{t('title')}</h2>
+        <h2 className="text-h2 m-0 font-bold text-text-accent not-italic">{t('title')}</h2>
         <p className="italic">{t('intro')}</p>
         <p>{t('introBio')}</p>
-        <h3 className="text-text-sub-heading font-bold not-italic">{t('myBackgroundTitle')}</h3>
+        <h3 className="text-text-accent font-bold not-italic">{t('myBackgroundTitle')}</h3>
         
         <p
             className={`${
@@ -43,22 +43,22 @@ const AboutMe = () => {
         { isExpanded && (
           <>
 
-          <h3 className="m-0 font-bold text-text-sub-heading not-italic">{t('myJourneyTitle')}</h3>
+          <h3 className="m-0 font-bold text-text-accent not-italic">{t('myJourneyTitle')}</h3>
           <p>{t('myJourneyText')}</p>
            {/* <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="hidden lg:block mx-auto lg:float-right mb-8 md:mb-0 md:pr-8 max-w-sm h-auto object-cover "/> */}
-           <h4 className=" m-0 font-bold text-text-sub-heading not-italic">{t('myFilosofiTitle')}</h4>
-           <h4 className=" not-italic m-0">{t('myFilosofiSubtitle')}</h4>
+           <h4 className=" m-0 font-bold text-text-accent not-italic">{t('myFilosofiTitle')}</h4>
+           <h5 className=" not-italic font-semibold text-text-accent m-0">{t('myFilosofiSubtitle')}</h5>
            <p className="m-0">{t('myFilosofiText1')}</p>
            <p className="m-0">{t('myFilosofiText2')}</p>
            <p>{t('myFilosofiText3')}</p>
            <p>{t('myFilosofiText4')}</p>
-           <h3 className="font-bold text-text-sub-heading">{t('createTogheterTitle')}</h3>
+           <h3 className="font-bold text-bg-secondary">{t('createTogheterTitle')}</h3>
            <p>{t('createTogheterText')}</p>
           </>
         )}
 
         <Button
-            className="float-right text-lg md:text-xl text-accent-secondary hover:text-accent-primary "
+            className="float-right text-lg md:text-xl text-btn-bg border-btn-bg hover:text-hover-text hover:border-bg-hover hover:bg-bg-hover"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}

@@ -5,29 +5,23 @@ export default {
     extend: {
       colors: {
         'bg-mode': 'var(--color-bg-mode)',
-        'accent-primary': 'var(--color-accent-primary)',
-        'accent-secondary': 'var(--color-accent-secondary)',
         'bg-primary': 'var(--color-bg-primary)',
         'bg-secondary': 'var(--color-bg-secondary)',
-        'text-heading': 'var(--color-text-heading)',
+        'accent-primary': 'var(--color-accent-primary)',
         'text-primary': 'var(--color-text-primary)',
         'text-secondary': 'var(--color-text-secondary)',
-        'text-tertiary': 'var(--color-text-tertiary)',
-        'btn-primary': 'var(--color-btn-primary)',
-        'btn-secondary': 'var(--color-btn-secondary)',
-        'primary': 'var(--color-primary)',
-        'secondary': 'var(--color-secondary)',
-        'hover-primary': 'var(--color-hover-primary)',
+        'text-accent': 'var(--color-text-accent)',
+        'accent-secondary': 'var(--color-accent-secondary)',
+        'btn-bg': 'var(--color-btn-bg)',
+        'bg-hover': 'var(--color-bg-hover)',
         'hover-text': 'var(--color-hover-text)',
-        'text-sub-heading': 'var(--color-text-subHeading)',
-        'bg-plate': 'var(--color-bg-plate)',
-      },
-      zIndex: {
-        '100': '100',
       },
       fontFamily: {
         heading: ['playfair-display', 'serif'],
         'sub-heading': ["proxima-nova", 'sans-serif'],
+      },
+      zIndex: {
+        '100': '100',
       },
       breakpoints: {
         sm: '576px',

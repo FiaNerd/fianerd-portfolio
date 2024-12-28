@@ -5,14 +5,14 @@ import SectionPlate from "../component/Partial/SectionPlate";
 import Title from "../component/Partial/Title";
 import AboutMe from "../component/Profile/about/AboutMe";
 import AboutNav from "../component/Profile/about/AboutNav";
+import Education from "../component/Profile/education/Education";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
-import Education from "../component/Profile/education/Education";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const { t } = useTranslation(['home', 'skills']); // Access both home and skills translations
+  const { t } = useTranslation(['home', 'skills']); 
 
   useEffect(() => {
     const header = document.getElementById("header");
@@ -20,7 +20,6 @@ const HomePage = () => {
     const handleResize = () => {
       if (header) {
         const height = header.getBoundingClientRect().height;
-        console.log("Header Height:", height); // Debug log to check the height
         setHeaderHeight(height); // Update the header height state
       }
     };
@@ -53,11 +52,13 @@ const HomePage = () => {
         </SectionPlate>
       </div>
 
-      <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} />
+      <SectionPlate bgColor="bg-[#973929] dark:bg-[#1b0909]" className="pb-4">
+        <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} className="text-[#e681aa] dark:text-accent-primary "/>
+        <AboutNav />
+      </SectionPlate>
 
-      <AboutNav />
 
-      <SectionPlate id="me" bgColor="bg-bg-plate">
+      <SectionPlate id="me" className="">
         <AboutMe />
       </SectionPlate>
 
