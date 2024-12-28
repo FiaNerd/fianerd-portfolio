@@ -46,7 +46,7 @@ const AboutMe = () => {
           <h3 className="m-0 font-bold text-text-accent not-italic">{t('myJourneyTitle')}</h3>
           <p>{t('myJourneyText')}</p>
            {/* <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="hidden lg:block mx-auto lg:float-right mb-8 md:mb-0 md:pr-8 max-w-sm h-auto object-cover "/> */}
-           <h4 className=" m-0 font-bold text-text-accent not-italic">{t('myFilosofiTitle')}</h4>
+           <h4 className=" m-0 font-bold text-text-secondary not-italic">{t('myFilosofiTitle')}</h4>
            <h5 className=" not-italic font-semibold text-text-accent m-0">{t('myFilosofiSubtitle')}</h5>
            <p className="m-0">{t('myFilosofiText1')}</p>
            <p className="m-0">{t('myFilosofiText2')}</p>
@@ -58,7 +58,7 @@ const AboutMe = () => {
         )}
 
         <Button
-            className="float-right text-lg md:text-xl text-btn-bg border-btn-bg hover:text-hover-text hover:border-bg-hover hover:bg-bg-hover"
+            className="float-right text-lg md:text-xl text-btn-bg border-btn-bg hover:text-bg-primary active:text-bg-primary   hover:border-bg-hover hover:bg-bg-hover"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}

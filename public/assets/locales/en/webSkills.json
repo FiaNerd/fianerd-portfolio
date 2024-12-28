@@ -8,11 +8,13 @@
     "subTitleWebDev": "– Developer in the making",
     "textTitleGoal": "Goals and Focus in Development 2025",
     "titleBE": "<b>Backend:</b>",
-    "textBE": "<b>C#, ASP.Net Core:</b> Enhance my expertise in C# and ASP.Net Core to develop secure, scalable, and reusable backend applications.\n<b>Azure:</b> Deepen my knowledge and experience with cloud services to build robust cloud-native applications, leveraging services like Azure Functions, App Services, and Azure SQL Database.",
-    "titleFE": "<b>Frontend:</b> ",
-    "textFE": "<b>React:</b> Create highly responsive and reusable components to build interactive user interfaces.\n<b>Vue.js:</b> Explore the capabilities of Vue.js to understand its advantages and integrate it into projects where applicable.",
-    "textCMS": "<b>Umbraco:</b> Expand my skills in Umbraco CMS to efficiently manage and deploy dynamic web content.",
+    "textBE": "<b>C#, ASP.Net Core:</b> Enhance my expertise in C# and ASP.Net Core to develop secure, scalable, and reusable backend applications.",
+    "textDB": "<b>SQL Server:</b> Master SQL Server to design and manage databases efficiently and ensure data integrity.",
     "textAzure": "<b>Cloud Services:</b> Leverage Azure's powerful capabilities in infrastructure management, application performance enhancement, and cloud-native development to build robust applications.",
+    "titleFE": "<b>Frontend:</b> ",
+    "textFE": "<b>React:</b> Create highly responsive and reusable components to build interactive user interfaces.",
+    "textVue": "<b>Vue.js:</b> n<b>Vue.js:</b> Explore the capabilities of Vue.js to understand its advantages and integrate it into projects where applicable.",
+    "textCMS": "<b>Umbraco:</b> Expand my skills in Umbraco CMS to efficiently manage and deploy dynamic web content.",
     "textGoal": "The only obstacle is time, so strategic planning and focused efforts will be essential to achieve these goals."
   }
   

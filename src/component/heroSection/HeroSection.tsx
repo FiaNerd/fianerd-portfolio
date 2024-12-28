@@ -10,7 +10,7 @@ import ResponsiveHeroImage from "./ResponsiveHeroImage";
 const HeroSection = () => {
   const { t } = useTranslation('heroSection');
   const [userIsDesktop, setUserIsDesktop] = useState(window.innerWidth > 768);
-  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
+  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
 
   
 
@@ -37,7 +37,7 @@ const HeroSection = () => {
           <p className={`${styles['title-fullstack']} text-text-secondary dark:text-[#d57d7d] flex text-2xl font-light leading-none sm:text-4xl sm:-ml-[0.3em] md:pl-[0.8em] md:text-4xl xl:text-3xl 2xl:text-5xl`}>
             {t('smallTitle')}
           </p>
-          <h1 className={`${styles['heading-dev']} text-[#ef273e]  dark:text-[#e7c78e] uppercase text-text-heading mt-[1.8em] md:-mt-[0em] sm:text-7xl md:text-6xl lg:text-7xl xl:text-6xl 2xl:text-8xl`}>
+          <h1 className={`${styles['heading-dev']} text-[#ef273e]  dark:text-text-accent uppercase text-text-heading mt-[1.8em] md:-mt-[0em] sm:text-7xl md:text-6xl lg:text-7xl xl:text-6xl 2xl:text-8xl`}>
             {t('title')}
           </h1>
         </motion.div>
@@ -50,7 +50,7 @@ const HeroSection = () => {
           <p className={`${styles['hello']}  text-text-secondary dark:text-[#d57d7d] font-bold md:text-2xl md:mb-[0.5em] 2xl:text-2xl`}>
             {t('helloName')} <span className="font-normal">{t('helloSpan')}</span>
           </p>
-          <h2 className={`${styles['myName']} text-[#ef273e] dark:text-text-primary uppercase text-4xl md:-mt-[0.2em] sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold text-text-heading tracking-tighter`}>
+          <h2 className={`${styles['myName']} text-[#ef273e] dark:text-text-accent uppercase text-4xl md:-mt-[0.2em] sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold text-text-heading tracking-tighter`}>
             {t('name')}
           </h2>
           <p className={`${styles['iCode']} text-text-secondary dark:text-[#d57d7d] 2xl:text-2xl font-light tracking-tight md:text-xl`}>
@@ -66,7 +66,7 @@ const HeroSection = () => {
           <p className={`${styles['subCv']} text-text-secondary dark:text-[#d57d7d] md:text-right md:text-2xl 2xl:text-2xl mb-2 leading-none`}>
             {t('subCv')}
           </p>
-          <h2 className={`${styles['cv']} text-[#ef273e] dark:text-text-primary uppercase text-5xl md:-mt-[0.3em] sm:text-6xl md:text-6xl 2xl:text-8xl text-text-heading font-bold leading-none`}>
+          <h2 className={`${styles['cv']} text-[#ef273e] dark:text-text-accent uppercase text-5xl md:-mt-[0.3em] sm:text-6xl md:text-6xl 2xl:text-8xl text-text-heading font-bold leading-none`}>
             {t('cv')}
           </h2>
         </motion.div>

@@ -21,10 +21,10 @@ const GraphicSkills = () => {
            initial="hidden" 
            animate={ctrls} 
            variants={vars} 
-           className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 
              <div className="items-center">
-              <h1 className="text-[#64b770] font-bold text-center mb-0 whitespace-break-spaces">
+              <h1 className="text-[#64b770] font-bold text-center mb-2 whitespace-break-spaces">
                 {t("graphicSkills:titleGraphic")}
               </h1>
               <h3 className="text-center text-text-secondary not-italic font-light whitespace-break-spaces ">
@@ -33,7 +33,7 @@ const GraphicSkills = () => {
             </div>
 
             <div>
-              <h1 className="text-[#64b770] mb-0 font-bold text-center md:leading-[2.5rem]">
+              <h1 className="text-[#64b770] mb-4 leading-10 font-bold text-center md:leading-[3rem]">
                 {t('titleGraphicSkills')}
               </h1>
               <h3 className="text-text-secondary font-light text-center">
@@ -48,7 +48,7 @@ const GraphicSkills = () => {
         initial="hidden"
         animate={ctrls}
         variants={vars}
-        className="grid grid-cols-1 md:grid-cols-[5%_45%_auto] gap-4 mb-8"
+        className="grid grid-cols-1 md:grid-cols-[5%_50%_auto] gap-4 mb-8"
       >
 
         
@@ -61,7 +61,7 @@ const GraphicSkills = () => {
 
         {/* Middle Column */}
         <div className="sm:col-span-1 md:pr-8">
-          <h5 className="text-text-sub-heading not-italic mb-0" dangerouslySetInnerHTML={{ __html: t("textPS") }}></h5>
+          <p className="text-text-sub-heading not-italic mb-4" dangerouslySetInnerHTML={{ __html: t("textPS") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textAI") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textID") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textUX/UI") }}></p>

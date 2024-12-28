@@ -30,19 +30,19 @@ const WebSkills = () => {
           variants={vars} 
           className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <div>
-            <h1 className="text-[#535437] dark:text-[#a7a05c]  mb-0 font-bold text-center md:leading-[2.5rem]">
+            <h1 className="text-[#535437] dark:text-[#a7a05c] md:mb-4 font-bold text-center md:leading-[2.5rem]">
               {t('titleWeb')}
             </h1>
-            <h3 className="text-text-secondary dark:text-[#b0cab4] font-normal text-center">
+            <h3 className="text-text-secondary font-normal text-center">
               {t('titleWebDev')}
             </h3>
           </div>
 
             <div>
-              <h2 className="text-[#535437] dark:text-[#a7a05c]  mb-0 font-bold text-center md:leading-[2.5rem]">
+              <h2 className="text-[#535437] dark:text-[#a7a05c] md:mb-4 font-bold text-center md:leading-[2.5rem]">
                 {t('titleWebDev')}
               </h2>
-              <h3 className="text-text-sub-heading text-text-secondary dark:text-[#a7a05c] font-normal text-center">
+              <h3 className="text-text-sub-heading text-text-secondary font-normal text-center">
                   {t('subTitleWebDev')}
               </h3>
             </div>
@@ -53,7 +53,7 @@ const WebSkills = () => {
           initial="hidden" 
           animate={ctrls} 
           variants={vars} 
-          className="grid grid-cols-1 md:grid-cols-[5%_45%_auto] gap-4 mb-8"
+          className="grid grid-cols-1 md:grid-cols-[5%_50%_auto] gap-8 mb-8"
         >
           {/* Vertical Text Column */}
           <div className="flex items-center justify-center">
@@ -66,8 +66,11 @@ const WebSkills = () => {
         <div className="sm:col-span-1 md:pr-8">
           <h5 className="text-text-secondary dark:text-[#a7a05c]  not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleBE') }}></h5>
           <p className="text-text-[#a7a05c] " dangerouslySetInnerHTML={{ __html: t('textBE') }}></p>
+          <p className="text-text-[#a7a05c] " dangerouslySetInnerHTML={{ __html: t('textDB') }}></p>
+          <p className="text-text-[#a7a05c] " dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
           <h5 className="text-text-secondary dark:text-[#a7a05c]  not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('titleFE') }}></h5>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textFE') }}></p>
+          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textVue') }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
           <p className="text-text-secondary italic font-light">
