@@ -54,17 +54,17 @@ const GraphicSkills = () => {
         
         {/* Vertical Text Column */}
         <div className="flex items-center justify-center">
-          <h1 className="text-[#4b1718] dark:text-bg-secondary font-semibold transform rotate-180 [writing-mode:vertical-lr] text-center">
+          <h1 className="text-[#4b1718] dark:text-bg-secondary font-semibold tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t("graphicTitle").toUpperCase()}
           </h1>
         </div>
 
         {/* Middle Column */}
-        <div className="sm:col-span-1 md:pr-8">
-          <p className="text-text-sub-heading not-italic mb-4" dangerouslySetInnerHTML={{ __html: t("textPS") }}></p>
+        <div className="sm:col-span-1 md:pr-8 flex flex-col justify-between	">
+          <p className="text-text-sub-heading not-italic" dangerouslySetInnerHTML={{ __html: t("textPS") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textAI") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textID") }}></p>
-          <p className="text-text-primary mb-8" dangerouslySetInnerHTML={{ __html: t("textUX/UI") }}></p>
+          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textUX/UI") }}></p>
           <p className="text-hover-text dark:text-bg-primary italic font-normal py-2 px-4 bg-[#4b1718] dark:bg-bg-secondary">
             {t("textGoal")}
           </p>

@@ -18,7 +18,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName }: IPr
     >
       <TitleAnimation title={title} dot={dot} />
       <h3
-        className={`-mt-[0em] lg:-mt-[0.3em] leading-0 md:leading-[2.5em] lg:leading-[4.6em] ${
+        className={`-mt-[0.6em] lg:-mt-[0.3em] leading-0 md:leading-[2.5em] lg:leading-[3.1em] ${
           subHeadingClassName || "text-text-secondary"
         }`}
       >

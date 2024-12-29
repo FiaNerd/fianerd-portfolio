@@ -52,8 +52,8 @@ const HomePage = () => {
         </SectionPlate>
       </div>
 
-      <SectionPlate bgColor="bg-[#973929] dark:bg-[#1b0909]" className="pb-4">
-        <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} className="text-[#e681aa] dark:text-accent-primary "/>
+      <SectionPlate bgColor="bg-[#973929] dark:bg-[#1b0909]">
+        <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} className="text-[#e681aa] dark:text-accent-primary " subHeadingClassName="text-hover-text dark:text-text-secondary"/>
         <AboutNav />
       </SectionPlate>
 

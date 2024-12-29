@@ -57,7 +57,7 @@ const WebSkills = () => {
         >
           {/* Vertical Text Column */}
           <div className="flex items-center justify-center">
-            <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#69864e]  transform rotate-180 [writing-mode:vertical-lr] text-center">
+            <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#69864e] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
               {t('webbDev')}
             </h1>
           </div>
