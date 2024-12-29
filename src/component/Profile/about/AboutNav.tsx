@@ -13,7 +13,7 @@ const AboutNav = () => {
 
     return (
         <SectionPlate>
-            <ul className=" flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12">
+            <ul className=" flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12 pb-8">
                 {navRoutsAbout.map((item) => {
                     return (
                         <motion.li 

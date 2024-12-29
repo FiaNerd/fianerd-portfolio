@@ -12,7 +12,7 @@ const Skills = () => {
   return (
     <>
     <div className="mx-auto">
-    <Title id={"skills"} title={t('webSkills:titleSkills')} dot={t('webSkills:dot')} children={t('webSkills:subTitleSkills')} className="text-[#535437] dark:text-accent-primary"/>
+    <Title id={"skills"} title={t('webSkills:titleSkills')} dot={t('webSkills:dot')} children={t('webSkills:subTitleSkills')} className="text-[#535437] dark:text-accent-primary" sticky={true}/>
     {/* <AboutNav /> */}
       <WebSkills />
         <GraphicSkills />

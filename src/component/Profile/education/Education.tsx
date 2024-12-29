@@ -7,14 +7,14 @@ const Education = () => {
 
   return (
     <>
+    <Title id="education" title={t("titleWorkExperience")} dot={t("dot")} children={t("subTitleWorkExperience")} className="text-text-accent dark:text-[#b5685c]" sticky={true}/>
     <div className="text-text-accent">
 
-    <Title id="work-experience" title={t("titleWorkExperience")} dot={t("dot")} children={t("subTitleWorkExperience")} className="text-text-accent dark:text-[#b5685c]"/>
     </div>
 
     <div className="py-8">
       <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
-        <div className="flex flex-col w-full lg:sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
+        <div className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
           <p className="-mb-2 text-text-accent dark:text-[#b5685c] uppercase tracking-loose">{t("titleWorkingAction")}</p>
           <p className="text-3xl text-text-accent dark:text-[#b5685c] md:text-4xl leading-normal md:leading-relaxed mb-2">{t("checkOut")}</p>
           <p className="text-sm md:text-base text-text-secondary mb-8">

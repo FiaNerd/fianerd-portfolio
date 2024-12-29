@@ -15,22 +15,22 @@ const AnimatedHamburgerButton = ({ isActive, toggleMenu }: IProps) => {
       <motion.button
         initial={false}
         animate={isActive ? "open" : "closed"}
-        onClick={() => toggleMenu((prev:any ) => !prev)}
+        onClick={() => toggleMenu((prev:unknown ) => !prev)}
         className="relative flex h-[3.8rem] w-[4rem] rounded-full bg-white/0 transition-colors hover:bg-white/10"
       >
         <motion.span
           variants={VARIANTS.top}
-          className="absolute h-1 w-10 bg-text-primary"
+          className="absolute h-1 w-10 bg-text-accent"
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={VARIANTS.middle}
-          className="absolute h-1 w-10 bg-text-primary"
+          className="absolute h-1 w-10 bg-text-accent"
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={VARIANTS.bottom}
-          className="absolute h-1 w-5 bg-text-primary"
+          className="absolute h-1 w-5 bg-text-accent"
           style={{
             x: "-50%",
             y: "50%",

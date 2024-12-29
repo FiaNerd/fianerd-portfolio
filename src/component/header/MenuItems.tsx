@@ -4,6 +4,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Route } from '../../config/MenuItemsData'
 import { useClickOutside } from '../../hook/useClickOutside'; // Import the custom hook
+import Button from '../Partial/Button'
 import DropdownMenu from './DropdownMenu'
 
 interface MenuItemsProps {
@@ -50,11 +51,11 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   const renderLinkOrButton = () => {
     if (items.title.toLowerCase() === 'kontakt') {
       return (
-        <button
+        <Button
           onClick={handleButtonClick}
           className='px-4 py-2 font-heading tracking-wider text-xl rounded-md'>
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
-        </button>
+        </Button>
       )
     } else  {
       return (

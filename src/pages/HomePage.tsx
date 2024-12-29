@@ -4,7 +4,6 @@ import HeroSection from "../component/heroSection/HeroSection";
 import SectionPlate from "../component/Partial/SectionPlate";
 import Title from "../component/Partial/Title";
 import AboutMe from "../component/Profile/about/AboutMe";
-import AboutNav from "../component/Profile/about/AboutNav";
 import Education from "../component/Profile/education/Education";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
@@ -52,19 +51,14 @@ const HomePage = () => {
         </SectionPlate>
       </div>
 
-      <SectionPlate bgColor="bg-[#973929] dark:bg-[#1b0909]">
-        <Title id={"profile"} title={t("home:titleProfile")} dot={t("home:dot")} children={t("home:intro")} className="text-[#e681aa] dark:text-accent-primary " subHeadingClassName="text-hover-text dark:text-text-secondary"/>
-        <AboutNav />
-      </SectionPlate>
 
-
-      <SectionPlate id="me" className="">
+      <SectionPlate id="me" className="" style={{top: "-5em"}}>
         <AboutMe />
       </SectionPlate>
 
-      <section >
+      <SectionPlate style={{top: ""}}>
         <Skills />
-      </section>
+      </SectionPlate>
 
       <section >
         <WorkExperience />

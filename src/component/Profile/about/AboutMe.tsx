@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
 import Button from "../../Partial/Button";
+import Title from "../../Partial/Title";
 
 const AboutMe = () => {
   const { t } = useTranslation("aboutMe");
@@ -15,6 +16,16 @@ const AboutMe = () => {
   }
 
   return (
+      <>
+         <Title
+              id="profile-title"
+              title={t("home:titleProfile")}
+              dot={t("home:dot")}
+              children={t("home:intro")}
+              className="text-[#e681aa] dark:text-accent-primary"
+              subHeadingClassName="text-hover-text dark:text-text-secondary"
+              sticky={true}
+            />
 
       <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10  px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
@@ -65,6 +76,7 @@ const AboutMe = () => {
           </Button>  
         </motion.div>
       </div>
+      </>
   );
 };
 

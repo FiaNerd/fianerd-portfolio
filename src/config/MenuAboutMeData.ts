@@ -18,10 +18,10 @@ export const navRoutsAbout: RouteAbout[] = [
     },
     {
         'title': 'education',
-        'url': '/',
+        'url': '/#education',
     },
     {
         'title': 'hobbies',
-        'url': '/' ,
+        'url': '/#hobbies',
     }
 ]

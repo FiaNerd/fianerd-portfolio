@@ -57,7 +57,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 w-full pt-4 pb-6 lg:pt-5 flex flex-col '
+            className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 w-full pt-4 pb-6 lg:pt-5 flex flex-col'
           >
             <div className='flex-grow overflow-y-auto mt-[3em]'>
               <ul className='grid gap-2 pl-8'>
@@ -74,7 +74,7 @@ const NavbarMobile = () => {
 
             <div className='flex w-10/12 mt-8 mb-8 p-2 mx-auto border rounded-sm border-accent-primary hover:border-accent-primary hover:bg-accent-primary'>
               <NavLink
-                to='/contact'
+                to='/'
                 className={`${getClassName} cursor mx-auto text-[1.2rem] text-accent-primary text-align lg:mb-0 hover:text-hover-text`}
               >
                 {t('contact')}

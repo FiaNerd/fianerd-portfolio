@@ -33,9 +33,9 @@ const Header = () => {
       const sidebar = document.querySelector('.sidebar');
       if (sidebar) {
         const sidebarWidth = sidebar.getBoundingClientRect().width;
-        setSidebarWidth(sidebarWidth > 37 ? 55 : 37);
+        setSidebarWidth(sidebarWidth > 37 ? 50 : 37);
       } else {
-        setSidebarWidth(window.innerWidth >= 768 ? 55 : 37);
+        setSidebarWidth(window.innerWidth >= 768 ? 50 : 37);
       }
     };
 
@@ -63,7 +63,7 @@ const Header = () => {
     >
       {/* Top Announcement Bar */}
       <div className="bg-accent-primary dark:bg-bg-primary">
-        <p className="text-xs py-2 md:text-sm text-center text-hover-text dark:text-text-secondary mb-0">
+        <p className="text-xs py-2 px-4 md:text-sm text-center text-hover-text dark:text-text-secondary mb-0">
           {t('headerTitle')}
         </p>
       </div>
@@ -71,7 +71,7 @@ const Header = () => {
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
         {/* Logo */}
-        <NavLink to="/" className="flex-shrink-0">
+        <NavLink to="/#home" className="flex-shrink-0">
           {currentTheme === 'dark' ? (
             <img
               src="/assets/images/logos/LogoDark.svg"
