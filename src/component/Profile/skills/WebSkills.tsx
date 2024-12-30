@@ -5,7 +5,7 @@ import ProgressBar from "./ProgressBar";
 
 const WebSkills = () => {
   const { t } = useTranslation("webSkills");
-  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
+  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
 
 
   const webSkills = [
@@ -28,9 +28,9 @@ const WebSkills = () => {
           initial="hidden" 
           animate={ctrls} 
           variants={vars} 
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         <div>
-            <h1 className="text-[#535437] dark:text-[#69864e] md:mb-4 font-bold text-center md:leading-[2.5rem]">
+            <h1 className="font-textImportant text-4xl md:text-5xl text-[#535437] dark:text-[#69864e] md:mb-4 font-bold text-center">
               {t('titleWeb')}
             </h1>
             <h3 className="text-text-secondary font-normal text-center">
@@ -39,10 +39,10 @@ const WebSkills = () => {
           </div>
 
             <div>
-              <h2 className="text-[#535437] dark:text-[#69864e] md:mb-4 font-bold text-center md:leading-[2.5rem]">
-                {t('titleWebDev')}
+              <h2 className="font-textImportant text-4xl md:text-5xl text-[#535437] dark:text-[#69864e] md:mb-4 font-bold text-center md:leading-[3.7rem]">
+                {t('titleCode')}
               </h2>
-              <h3 className="text-text-sub-heading text-text-secondary font-normal text-center">
+              <h3 className="text-text-sub-heading leading-4 text-text-secondary font-normal text-center">
                   {t('subTitleWebDev')}
               </h3>
             </div>

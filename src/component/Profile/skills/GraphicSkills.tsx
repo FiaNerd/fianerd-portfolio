@@ -5,7 +5,7 @@ import ProgressBar from "./ProgressBar";
 
 const GraphicSkills = () => {
   const { t } = useTranslation("graphicSkills");
-  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
+  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
 
   const skillsGraphic = [
     { name: "PhotoShop", percentage: 80 },
@@ -24,8 +24,8 @@ const GraphicSkills = () => {
            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 
              <div className="items-center">
-              <h1 className="text-[#4b1718] dark:text-bg-secondary  font-bold text-center mb-2 whitespace-break-spaces">
-                {t("graphicSkills:titleGraphic")}
+              <h1 className="text-[#4b1718] font-textImportant text-4xl md:text-5xl dark:text-bg-secondary  font-bold text-center mb-2 whitespace-break-spaces">
+                {t("titleGraphic")}
               </h1>
               <h3 className="text-center text-text-secondary not-italic font-light whitespace-break-spaces ">
                 {t('titleGraphicSkills')}
@@ -33,10 +33,10 @@ const GraphicSkills = () => {
             </div>
 
             <div>
-              <h1 className="text-[#4b1718] dark:text-bg-secondary  mb-4 leading-10 font-bold text-center md:leading-[3rem]">
-                {t('titleGraphicSkills')}
-              </h1>
-              <h3 className="text-text-secondary font-light text-center">
+              <h2 className="text-[#4b1718] font-textImportant text-4xl md:text-5xl dark:text-bg-secondary  mb-4 leading-10 font-bold text-center md:leading-[3rem]">
+                {t('titleDesign')}
+              </h2>
+              <h3 className="text-text-secondary font-light leading-3 text-center">
                 {t('subTitleGraphic')}
               </h3>
             </div>

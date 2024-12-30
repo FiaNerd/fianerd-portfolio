@@ -27,7 +27,7 @@ const AboutMe = () => {
               sticky={true}
             />
 
-      <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10  px-4 md:px-10 py-8 md:py-12">
+      <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
           <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
@@ -63,7 +63,7 @@ const AboutMe = () => {
            <p className="m-0">{t('myFilosofiText2')}</p>
            <p>{t('myFilosofiText3')}</p>
            <p>{t('myFilosofiText4')}</p>
-           <h3 className="font-bold text-bg-secondary">{t('createTogheterTitle')}</h3>
+           <h3 className="font-textImportant not-italic text-4xl md:text-6xl font-bold text-bg-secondary mt-8 mb-8">{t('createTogheterTitle')}</h3>
            <p>{t('createTogheterText')}</p>
           </>
         )}

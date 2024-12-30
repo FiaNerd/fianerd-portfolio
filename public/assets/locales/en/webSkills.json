@@ -1,11 +1,13 @@
 {
-    "titleSkills": "Skills in Action",
+    "titleSkills": "Digital Skills",
     "dot": ".",
     "webbDev": "Web Developer",
     "subTitleSkills": "Creativity Without Limits",
     "titleWeb": "One code block at a time\n ",
     "titleWebDev": "Mastering the Art \nof Programming",
+    "titleCode": "Turning Ideas Into\nClean Code",
     "subTitleWebDev": "– Developer in the making",
+
     "textTitleGoal": "Goals and Focus in Development 2025",
     "titleBE": "<b>Backend:</b>",
     "textBE": "<b>C#, ASP.Net Core:</b> Enhance my expertise in C# and ASP.Net Core to develop secure, scalable, and reusable backend applications.",

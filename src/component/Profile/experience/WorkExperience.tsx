@@ -21,7 +21,7 @@ const WorkExperience = () => {
       <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
         <div className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
           <p className="text-bg-secondary dark:text-text-accent uppercase -mb-2 tracking-loose">{t("titleWorkingAction")}</p>
-          <p className="text-3xl text-bg-secondary dark:text-text-accent md:text-4xl leading-normal md:leading-relaxed mb-2">{t("checkOut")}</p>
+          <h4 className="not-italic text-bg-secondary dark:text-text-accent md:text-4xl leading-normal md:leading-relaxed mb-2">{t("checkOut")}</h4>
           <p className="text-sm md:text-base text-text-secondary mb-8">
             {t("checkoutText")}
           </p>
@@ -39,7 +39,7 @@ const WorkExperience = () => {
                 <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-bg-secondary dark:text-text-accent">{t("dateWorkBrutal")}</p>
-                    <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading text-lg md:text-2xl">{t("titleBrutal")}</h4>
+                    <h4 className="mb-0 text-bg-secondary dark:text-text-accent dark:text-text-heading text-lg md:text-2xl">{t("titleBrutal")}</h4>
                     <p className="text-sm md:text-base leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                       {t("workTitleBrutal")}
                     </p>

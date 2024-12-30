@@ -1,12 +1,15 @@
 {
-  "titleSkills": "Färdigheter i Aktion",
+  "titleSkills": "Digitala Färdigheter",
   "dot": ".",
   "webbDev": "Webbutvecklare",
   "subTitleSkills": "Kreativitet utan gränser",
   "titleWeb": "En kodblock i taget\n",
   "titleWebDev": "Att bemästra konsten \nav programmering",
+  
+  "titleCode": "Förvandlar idéer till\nren kod",
   "subTitleWebDev": "– Utvecklare på väg",
   "textTitleGoal": "Mål och fokus inom utveckling 2025",
+
   "titleBE": "<b>Backend:</b>",
   "textBE": "<b>C#, ASP.Net Core:</b> Fördjupa min expertis inom C# och ASP.Net Core för att utveckla säkra, skalbara och återanvändbara backend-applikationer.",
   "textDB": "<b>SQL Server:</b> Bemästra SQL Server för att designa och hantera databaser effektivt och säkerställa dataintegritet.",
