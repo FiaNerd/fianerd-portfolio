@@ -17,7 +17,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
     <motion.div
       id={id}
       className={`text-center pt-2 md:pt-20 md:mb-20 px-4 pb-2 lg:pb-0${className || ""} ${
-        sticky ? "sticky z-10 top-[-1.5rem] md:top-[-5rem] lg:top-[-8rem]" : ""
+        sticky ? "sticky z-10 top-[-1.5rem] sm:text-[-8rem] md:top-[-3rem] lg:top-[-3rem]" : ""
       }`}
       style={style}
     >
@@ -25,7 +25,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
       <h3
         className={`-mt-[0em] ${
         // className={`-mt-[0em] lg:-mt-[0.9em] md:pb-0 leading-0 md:leading-[-0.9em] lg:leading-[1em] xl:leadig-[3em]${
-          subHeadingClassName || "text-text-secondary"n
+          subHeadingClassName || "text-text-secondary"
         }`}
       >
         {children}

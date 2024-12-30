@@ -26,7 +26,7 @@ const WorkExperience = () => {
             {t("checkoutText")}
           </p>
           <NavLink to="#"
-          className="bg-transparent mr-auto text-btn-bg text-xl font-medium hover:shadow-lg border-2 hover:bg-bg-hover font-heading tracking-wider hover:text-bg-primary rounded shadow py-2 px-4 border-btn-bg hover:border-transparent">
+          className="font-sub-heading bg-transparent mr-auto text-btn-bg text-2xl font-medium hover:shadow-lg border-2 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow py-2 px-4 border-btn-bg hover:border-transparent">
           {t("exploreBtn")}</NavLink>
         </div>
 
