@@ -25,7 +25,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
       <h3
         className={`-mt-[0em] ${
         // className={`-mt-[0em] lg:-mt-[0.9em] md:pb-0 leading-0 md:leading-[-0.9em] lg:leading-[1em] xl:leadig-[3em]${
-          subHeadingClassName || "text-text-secondary"
+          subHeadingClassName || "text-text-primary dark:text-text-secondary"
         }`}
       >
         {children}
