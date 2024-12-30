@@ -66,14 +66,8 @@
 
 /* Light mode variables */
 :root {
-  --color-bg-mode: radial-gradient(
-    ellipse at 88.1% 69.6%, 
-    #fff5d7 40%, 
-    /* #d5cbae 40%,  */
-    #edd8bf 100.2%
-    /* #fff5d7 100.2% */
-  );
-
+    --color-bg-mode: radial-gradient(ellipse at 88.1% 69.6%, #fff5d7 40%, #edd8bf 100.2%);
+    
     --color-bg-primary: #f7ece0;
     --color-bg-secondary: #cb7f2c;
     --color-accent-primary: #b94c0c; /* Huvudfärg för accenter */
@@ -89,16 +83,9 @@
   
 
   /* Dark mode variables */
-.dark {
-    --color-bg-mode: radial-gradient(
-      ellipse at 88.1% 69.6%, 
-      #1b0909   20%, 
-      #240313 100.2%
-      /* #200121 100.2% */
-    );
-}  
-  /* Dark mode variables */
   .dark {
+    --color-bg-mode: radial-gradient(ellipse at 88.1% 69.6%, #1b0909 20%, #240313 100.2%);
+
     --color-bg-primary: #2d0116;
     --color-bg-secondary: #d57d7d;
     --color-accent-primary: #cb7f2c;

@@ -8,7 +8,14 @@ const WorkExperience = () => {
     
   return ( 
     <>
-    <Title id="work-experience" title={t("titleWorkExperience")} dot={t("dot")} children={t("subTitleWorkExperience")} className="text-bg-secondary dark:text-[#cb7f2c]" sticky={true}/>
+      <Title
+        id="work-experience"
+        title={t("titleWorkExperience")}
+        dot={t("dot")}
+        children={t("subTitleWorkExperience")}
+        className="text-bg-secondary dark:text-[#cb7f2c] bg-[#fff5d7] dark:bg-[#1b0909]"
+        sticky={true}
+      />
 
     <div className="py-8">
       <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">

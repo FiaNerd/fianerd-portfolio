@@ -22,7 +22,7 @@ const AboutMe = () => {
               title={t("home:titleProfile")}
               dot={t("home:dot")}
               children={t("home:intro")}
-              className="text-[#e681aa] dark:text-accent-primary"
+              className="text-[#e681aa] dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
               subHeadingClassName="text-hover-text dark:text-text-secondary"
               sticky={true}
             />

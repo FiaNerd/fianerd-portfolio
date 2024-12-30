@@ -7,7 +7,12 @@ const Education = () => {
 
   return (
     <>
-    <Title id="education" title={t("titleWorkExperience")} dot={t("dot")} children={t("subTitleWorkExperience")} className="text-text-accent dark:text-[#b5685c]" sticky={true}/>
+    <Title 
+      id="education" 
+      title={t("titleWorkExperience")} 
+      dot={t("dot")} children={t("subTitleWorkExperience")} 
+      className="text-text-accent dark:text-[#b5685c]  bg-[#fff5d7] dark:bg-[#1b0909]" 
+      sticky={true}/>
     <div className="text-text-accent">
 
     </div>
