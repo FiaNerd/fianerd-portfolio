@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import HeroSection from "../component/heroSection/HeroSection";
+import Hobbies from "../component/hobbies/Hobbies";
 import SectionPlate from "../component/Partial/SectionPlate";
 import AboutMe from "../component/Profile/about/AboutMe";
 import Education from "../component/Profile/education/Education";
@@ -66,6 +67,10 @@ const HomePage = () => {
       <section >
         <Education />
       </ section>
+
+      <section>
+        <Hobbies />
+      </section>
     </>
   );
 };
