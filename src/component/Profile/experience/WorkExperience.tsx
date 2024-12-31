@@ -13,7 +13,7 @@ const WorkExperience = () => {
         title={t("titleWorkExperience")}
         dot={t("dot")}
         children={t("subTitleWorkExperience")}
-        className="text-bg-secondary dark:text-[#cb7f2c] bg-[#fff5d7] dark:bg-[#1b0909]"
+        className="text-bg-secondary dark:text-text-accent bg-[#fff5d7] dark:bg-[#1b0909]"
         sticky={true}
       />
 

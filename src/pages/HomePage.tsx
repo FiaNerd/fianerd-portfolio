@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import HeroSection from "../component/heroSection/HeroSection";
 import SectionPlate from "../component/Partial/SectionPlate";
-import Title from "../component/Partial/Title";
 import AboutMe from "../component/Profile/about/AboutMe";
 import Education from "../component/Profile/education/Education";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
@@ -52,7 +51,7 @@ const HomePage = () => {
       </div>
 
 
-      <SectionPlate id="me" className="" style={{top: "-5em"}}>
+      <SectionPlate id="me">
         <AboutMe />
       </SectionPlate>
 

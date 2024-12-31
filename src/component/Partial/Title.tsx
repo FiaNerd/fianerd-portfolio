@@ -16,16 +16,15 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
   return (
     <motion.div
       id={id}
-      className={`text-center pt-2 md:pt-20 md:mb-20 px-4 pb-2 lg:pb-0${className || ""} ${
-        sticky ? "sticky z-10 top-[-1.5rem] sm:text-[-8rem] md:top-[-3rem] lg:top-[-3rem]" : ""
+      className={`flex flex-col items-center text-center mb-12 md:mb-20 ${className || ""} ${
+        sticky ? "sticky z-10 top-0" : ""
       }`}
       style={style}
     >
       <TitleAnimation title={title} dot={dot} />
       <h3
-        className={`-mt-[0em] ${
-        // className={`-mt-[0em] lg:-mt-[0.9em] md:pb-0 leading-0 md:leading-[-0.9em] lg:leading-[1em] xl:leadig-[3em]${
-          subHeadingClassName || "text-text-primary dark:text-text-secondary"
+        className={`${
+          subHeadingClassName || "text-text-secondary dark:text-text-secondary"
         }`}
       >
         {children}

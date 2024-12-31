@@ -26,6 +26,7 @@ const AboutMe = () => {
               subHeadingClassName="text-hover-text dark:text-text-secondary"
               sticky={true}
             />
+            
 
       <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
