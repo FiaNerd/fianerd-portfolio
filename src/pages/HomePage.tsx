@@ -68,7 +68,7 @@ const HomePage = () => {
         <Education />
       </ section>
 
-      <section>
+      <section >
         <Hobbies />
       </section>
     </>
