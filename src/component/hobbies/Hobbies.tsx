@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 import Title from '../Partial/Title';
 
 const Hobbies = () => {
@@ -39,10 +40,13 @@ const Hobbies = () => {
                 </div>
             </div>
 
-          <div className='max-w-[80%] mx-auto'>
-            <h2 className='font-textImportant text-6xl md:text-8xl text-center'>{t('thanksHobbie')}</h2>
+          <div className='flex flex-col items-center max-w-[80%] md:max-w-[60%] mx-auto mb-12'>
+            <h2 className='font-textImportant mx-auto text-6xl md:text-8xl text-center text-accent-secondary dark:text-accent-primary'>{t('thanksHobbie')}</h2>
             <h2 className='font-textImportant text-4xl md:text-6xl text-center'>{t("thanksIntro")}</h2>
-            <p className='font-sub-heading text-center '>{t('thanksEnd')}</p>
+            <p className='font-sub-heading text-2xl text-center mb-8 md:mb-12'>{t('thanksEnd')}</p>
+            <NavLink to="#"
+          className="font-sub-heading bg-transparent items-start text-btn-bg text-2xl md:text-4xl font-medium hover:shadow-lg border-2 md:border-4 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow py-2 md:py-4 px-4 md:px-8 border-btn-bg hover:border-transparent">
+          {t("contactHobbie")}</NavLink>
           </div>
         </>
     );
