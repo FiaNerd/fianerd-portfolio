@@ -16,32 +16,38 @@ const GraphicSkills = () => {
 
   return (
     <div className="container mx-auto px-4 md:px-10 py-8 md:py-12">
-        <motion.div 
-           ref={ref} 
-           initial="hidden" 
-           animate={ctrls} 
-           variants={vars} 
-           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+      <motion.div 
+        ref={ref} 
+        initial="hidden" 
+        animate={ctrls} 
+        variants={vars} 
+        className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-20 mb-8"
+      >
+        {/* H1 in the first row, first column */}
+        <h1 className="text-center text-hover-text text-2xl md:text-7xl bg-[#4b1718]  dark:bg-bg-secondary dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
+          {t('graphicTitle')}
+        </h1>
 
-             <div className="items-center">
-              <h1 className="text-[#4b1718] font-textImportant text-4xl md:text-5xl dark:text-bg-secondary  font-bold text-center mb-2 whitespace-break-spaces">
-                {t("titleGraphic")}
-              </h1>
-              <h3 className="text-center text-text-secondary not-italic font-light whitespace-break-spaces ">
-                {t('titleGraphicSkills')}
-              </h3>
-            </div>
+          <div className="items-center md:row-start-2 md:col-start-1">
+          <h2 className="text-[#4b1718] font-textImportant text-4xl md:text-5xl dark:text-bg-secondary mb-4 leading-10 font-bold text-center md:leading-[3rem]">
+            {t('titleDesign')}
+          </h2>
+          <h3 className="text-text-secondary font-light leading-3 text-center">
+            {t('subTitleGraphic')}
+          </h3>
+        </div>
 
-            <div>
-              <h2 className="text-[#4b1718] font-textImportant text-4xl md:text-5xl dark:text-bg-secondary  mb-4 leading-10 font-bold text-center md:leading-[3rem]">
-                {t('titleDesign')}
-              </h2>
-              <h3 className="text-text-secondary font-light leading-3 text-center">
-                {t('subTitleGraphic')}
-              </h3>
-            </div>
+        <div className="items-center md:row-start-2 md:col-start-2">
+          <h1 className="text-[#4b1718] font-textImportant text-4xl md:text-5xl dark:text-bg-secondary font-bold text-center mb-2 whitespace-break-spaces">
+            {t("titleGraphic")}
+          </h1>
+          <h3 className="text-center text-text-secondary not-italic font-light whitespace-break-spaces ">
+            {t('titleGraphicSkills')}
+          </h3>
+        </div>
 
-          </motion.div>
+      </motion.div>
+
 
       <motion.div
         ref={ref}
