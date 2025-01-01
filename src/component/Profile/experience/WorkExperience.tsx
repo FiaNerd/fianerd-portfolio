@@ -9,7 +9,7 @@ const WorkExperience = () => {
   return ( 
     <>
       <Title
-        id="work-experience"
+        id="experience"
         title={t("titleWorkExperience")}
         dot={t("dot")}
         children={t("subTitleWorkExperience")}

@@ -8,11 +8,11 @@ import HomePage from '../pages/HomePage';
 
 export interface Route {
   url: string;
-  title: string; // This will be a translation key now
+  title: string; // This is translation key
   nav?: React.ComponentType<any>;
   subMenu?: Route[];
   dropdown?: Route[];
-  subMenuProfile?: Route[];
+  // subMenuProfile?: Route[];
   skillsSubMenu?: Route[];
   experienceSubMenu?: Route[];
   icon?: IconDefinition;
@@ -21,44 +21,39 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/#home',
+    url: '/', // Home route
     nav: HomePage,
   },
   {
     title: 'profile',
-    url: '/#profile',
+    url: '/#profile', 
     icon: faCaretRight,
-    subMenuProfile: [
+    subMenu: [
       {
-        title: 'skills', 
+        title: 'me',
+        url: '/#me',
+      },
+      {
+        title: 'skills',
         url: '/#skills',
-        skillsSubMenu: [
+        icon: faCaretRight,
+        subMenu: [
           {
-            title: 'skillsWeb', 
-            url: '/skills/web',
+            title: 'skillsWeb',
+            url: '/#web',
           },
           {
             title: 'skillsGraphic',
-            url: '/skills/graphic',
+            url: '/#graphic',
           },
         ],
       },
       {
         title: 'experience',
-        url: '/#work-experience',
-        experienceSubMenu: [ 
-          {
-            title: 'experienceWeb',
-            url: '/experience/web',
-          },
-          {
-            title: 'experienceGraphic',
-            url: '/experience/graphic',
-          },
-        ],
+        url: '/#experience', 
       },
       {
-        title: 'education', 
+        title: 'education',
         url: '/#education',
       },
       {
@@ -69,11 +64,11 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'portfolio',
-    url: '/',
+    url: '/portfolio', 
     icon: faCaretDown,
     subMenu: [
       {
-        title: 'webb', 
+        title: 'webb',
         url: '/web-dev',
         icon: faCaretRight,
         subMenu: [
@@ -82,7 +77,7 @@ export const navRoutes: Route[] = [
             url: '/alla-projekt',
           },
           {
-            title: 'frontend', 
+            title: 'frontend',
             url: '/frontend',
           },
           {
@@ -90,7 +85,7 @@ export const navRoutes: Route[] = [
             url: '/backend',
           },
           {
-            title: 'fullstack', 
+            title: 'fullstack',
             url: '/fullstack',
           },
         ],

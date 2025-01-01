@@ -18,7 +18,7 @@ const AboutMe = () => {
   return (
       <>
          <Title
-              id="profile"
+              id="me"
               title={t("home:titleProfile")}
               dot={t("home:dot")}
               children={t("home:intro")}

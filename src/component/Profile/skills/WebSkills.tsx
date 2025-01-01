@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
-import Title from "../../Partial/Title";
 import ProgressBar from "./ProgressBar";
 
 const WebSkills = () => {
@@ -22,15 +21,9 @@ const WebSkills = () => {
 
   return (
     <>
-    <Title 
-      id={"skills"} 
-      title={t('webSkills:titleSkills')} 
-      dot={t('webSkills:dot')} 
-      children={t('webSkills:subTitleSkills')} 
-      className="text-[#535437] dark:text-[#69864e] bg-[#fff5d7] dark:bg-[#1b0909]" 
-      sticky={true}/>
+  
        
-       <div className="container mx-auto px-4 md:px-10 py-8 md:py-12">
+       <div id="web" className="container mx-auto px-4 md:px-10 py-8 md:py-12">
       <motion.div 
         ref={ref} 
         initial="hidden" 

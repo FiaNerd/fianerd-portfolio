@@ -1,25 +1,27 @@
 {
+  "headerTitle": "I'm like an espresso – strong and ready to kickstart your project!",
   "title": "Multi-language app",
-  "label": "Välj ett annat språk!",
-  "home": "home",
-  "profile": "profile",
- 
-  "webb": "webb",
-  "allProjects": "all projekt",
-  "frontend": "frontend",
-  "backend": "backend",
-  "fullstack": "fullstack",
-  "grafisk": "graphic",
-  "news" : "right now<span class='text-accent-primary font-medium'>!</span>",
-  "contact": "contact me",
+  "label": "Choose another language!",
+  "home": "Home",
+  "profile": "Profile",
+  "me": "About Me",
+  "skills": "Skills",
+  "skillsWeb": "Web",
+  "skillsGraphic": "Graphic",
+  "experience": "Experience",
+  "education": "Education",
+  "hobbies": "Hobbies",
+  "portfolio": "Portfolio",
+  "webb": "Web",
+  "allProjects": "All projects",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "fullstack": "Fullstack",
+  "grafisk": "Graphic",
+  "news": "Right now<span class='text-accent-primary font-medium'>!</span>",
+  "contact": "Contact me",
   "languages": {
     "sv": "Swedish",
     "en": "English"
-  },
-  "me": "me",
-  "skills": "skills",
-  "experience": "experience",
-  "education": "education",
-  "headerTitle": "I'm like an espresso – strong and ready to kickstart your project!"
-
+  }
 }

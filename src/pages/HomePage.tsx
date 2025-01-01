@@ -7,9 +7,14 @@ import Education from "../component/Profile/education/Education";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
+import Title from "../component/Partial/Title";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
+  const {t } = useTranslation(['webSkills']);
+
+
   useEffect(() => {
     const header = document.getElementById("header");
 
@@ -47,27 +52,27 @@ const HomePage = () => {
           <HeroSection />
         </SectionPlate>
       </div>
+        <SectionPlate id="profile">
+          
+          <AboutMe />
+        </SectionPlate>
 
+        <SectionPlate id="skills">
+          <Skills />
+        </SectionPlate>
 
-      <SectionPlate id="me">
-        <AboutMe />
-      </SectionPlate>
+        <SectionPlate id="work-experience">
+          <WorkExperience />
+        </SectionPlate>
 
-      <SectionPlate style={{top: ""}}>
-        <Skills />
-      </SectionPlate>
+        <SectionPlate id="education">
+          <Education />
+        </SectionPlate>
 
-      <section >
-        <WorkExperience />
-      </section>
+        <SectionPlate id="hobbies">
+          <Hobbies />
+        </SectionPlate>
 
-      <section >
-        <Education />
-      </ section>
-
-      <section >
-        <Hobbies />
-      </section>
     </>
   );
 };

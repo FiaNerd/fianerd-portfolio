@@ -6,24 +6,20 @@ import WebSkills from "./WebSkills";
 
 const Skills = () => {
 
-  const { t } = useTranslation('webSkills'); 
-
+    const {t } = useTranslation(['webSkills']);
   
   return (
-    <>
     <div className="mx-auto">
-    {/* <Title 
-      id={"skills"} 
-      title={t('webSkills:titleSkills')} 
-      dot={t('webSkills:dot')} 
-      children={t('webSkills:subTitleSkills')} 
-      className="text-[#535437] dark:text-accent-primary bg-[#fff5d7] dark:bg-[#1b0909]" 
-      sticky={true}/> */}
-    {/* <AboutNav /> */} 
+       <Title 
+            id="profile"
+            title={t('webSkills:titleSkills')} 
+            dot={t('webSkills:dot')} 
+            children={t('webSkills:subTitleSkills')} 
+            className="text-[#535437] dark:text-[#69864e] bg-[#fff5d7] dark:bg-[#1b0909]" 
+            sticky={true}/>
       <WebSkills />
-        <GraphicSkills />
+      <GraphicSkills />
     </div>
-    </>
   );
 };
 
