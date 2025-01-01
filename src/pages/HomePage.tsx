@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import HeroSection from "../component/heroSection/HeroSection";
 import Hobbies from "../component/hobbies/Hobbies";
 import SectionPlate from "../component/Partial/SectionPlate";
@@ -11,8 +10,6 @@ import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const { t } = useTranslation(['home', 'skills']); 
-
   useEffect(() => {
     const header = document.getElementById("header");
 

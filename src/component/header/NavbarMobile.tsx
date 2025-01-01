@@ -57,7 +57,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 w-full pt-4 pb-6 lg:pt-5 flex flex-col'
+            className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 w-full flex flex-col'
           >
             <div className='flex-grow overflow-y-auto mt-[3em]'>
               <ul className='grid gap-2 pl-8'>

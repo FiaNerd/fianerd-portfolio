@@ -20,6 +20,11 @@ function App() {
             <Route path="/" element={<HomePage />} />
           </Routes>
         </main>
+
+        {/* <div className="w-full flex justify-center flex-col">
+
+        <Footer />
+        </div> */}
     </div>
   );
 }

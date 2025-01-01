@@ -1,40 +1,13 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { NavLink } from 'react-router-dom'
+// import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <>
-      <div className='bg-none text-text-primary flex flex-row place-content-evenly text-center border-t p-4 '>
-          <NavLink
-            to='https://github.com/FiaNerd'
-            target='_blank'
-            className='flex flex-col gap-2 cursor-pointer hover:text-hover-primary'>
-            <FontAwesomeIcon icon={faGithub} />
-            <span className='text-xs font-medium'>GitHub</span>
-          </NavLink>
-
-          <NavLink
-            to='https://www.linkedin.com/in/sofia-mattiasson-fianerd/'
-            target='_blank'
-            className='flex flex-col gap-2 cursor-pointer hover:text-hover-primary'>
-            <FontAwesomeIcon icon={faLinkedin} />
-            <span className="text-sm font-medium">LinkedIn</span>
-          </NavLink>
-
-        
-          <NavLink
-            to='mailto:fianerd.developer@gmail.com'
-            className='flex flex-col gap-2 cursor-pointer hover:text-hover-primary'>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span className="text-sm font-medium">e-mail</span>
-          </NavLink>
-      </div>
-      <p className='font-heading text-text-primary text-sm text-center mt-2'>
-        &copy; FiaNerd | Sofia Mattiasson
+      <p className='font-heading bg-accent-primary dark:bg-bg-primary text-hover-text dark:text-text-secondary text-sm text-center py-2 mb-0'>
+          &copy; FiaNerd | Sofia Mattiasson
       </p>
-    </>
   )
 }
 
