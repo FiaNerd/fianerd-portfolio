@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// src/config/Navigation.ts
 import {
   faCaretDown,
   faCaretRight,
@@ -13,50 +12,86 @@ export interface Route {
   nav?: React.ComponentType<any>;
   subMenu?: Route[];
   dropdown?: Route[];
+  subMenuProfile?: Route[];
+  skillsSubMenu?: Route[];
+  experienceSubMenu?: Route[];
   icon?: IconDefinition;
 }
 
 export const navRoutes: Route[] = [
   {
-    title: 'home', // Use translation key
+    title: 'home',
     url: '/#home',
     nav: HomePage,
   },
   {
-    title: 'profile', // Use translation key
+    title: 'profile',
     url: '/#profile',
+    icon: faCaretRight,
+    subMenuProfile: [
+      {
+        title: 'skills', 
+        url: '/#skills',
+        skillsSubMenu: [
+          {
+            title: 'skillsWeb', 
+            url: '/skills/web',
+          },
+          {
+            title: 'skillsGraphic',
+            url: '/skills/graphic',
+          },
+        ],
+      },
+      {
+        title: 'experience',
+        url: '/#work-experience',
+        experienceSubMenu: [ 
+          {
+            title: 'experienceWeb',
+            url: '/experience/web',
+          },
+          {
+            title: 'experienceGraphic',
+            url: '/experience/graphic',
+          },
+        ],
+      },
+      {
+        title: 'education', 
+        url: '/#education',
+      },
+      {
+        title: 'hobbies',
+        url: '/#hobbies',
+      },
+    ],
   },
   {
-    title: 'portfolio', // Use translation key
+    title: 'portfolio',
     url: '/',
     icon: faCaretDown,
     subMenu: [
       {
-        title: 'webb', // Use translation key
+        title: 'webb', 
         url: '/web-dev',
         icon: faCaretRight,
         subMenu: [
           {
-            title: 'allProjects', // Use translation key
+            title: 'allProjects',
             url: '/alla-projekt',
           },
           {
-            title: 'frontend', // Use translation key
+            title: 'frontend', 
             url: '/frontend',
           },
           {
-            title: 'backend', // Use translation key
+            title: 'backend',
             url: '/backend',
           },
           {
-            title: 'fullstack', // Use translation key
+            title: 'fullstack', 
             url: '/fullstack',
-          },
-        ],
-        dropdown: [
-          {
-            title: 'extra_menu', 
-            url: '/extra-menu',
           },
         ],
       },
@@ -70,8 +105,4 @@ export const navRoutes: Route[] = [
     title: 'news',
     url: '/news',
   },
-  // {
-  //   title: 'contact', // Use translation key
-  //   url: '/',
-  // },
 ];
