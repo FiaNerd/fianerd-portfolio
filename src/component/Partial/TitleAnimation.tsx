@@ -25,7 +25,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
     delay: 0,
     distance: "1rem",
     duration: totalDuration,
-    repeat: false,
+    repeat: true,
     threshold: 1,
   });
 
@@ -56,7 +56,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
       initial="hidden"
       animate={ctrls}
       onAnimationComplete={onComplete}
-      className="text-[2.6rem]  md:text-[5rem] lg:text-[5rem] xl:text-[7rem] font-bold pt-8 md:pt-12em"
+      className="text-[2.6rem] leading-4  md:text-[5rem] lg:text-[5rem] xl:text-[7rem] font-bold pt-8 md:pt-12em"
       style={style}
     >
       <motion.div

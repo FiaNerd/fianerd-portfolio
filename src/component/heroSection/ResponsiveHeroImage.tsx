@@ -3,9 +3,9 @@ import { useEffect } from "react";
 const ResponsiveHeroImage = () => {
   useEffect(() => {
     const handleResize = () => {
-      console.log('Window resized:', window.innerWidth);
+      // console.log('Window resized:', window.innerWidth);
+      window.addEventListener('resize', handleResize);
     };
-    window.addEventListener('resize', handleResize);
   
     return () => {
       window.removeEventListener('resize', handleResize);
