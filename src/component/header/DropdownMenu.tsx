@@ -6,6 +6,8 @@ interface IProps {
   dropdown: boolean
   depthLevel: number
   closeMenu: () => void
+  onMouseEnter?: () => void 
+  onMouseLeave?: () => void 
 }
 
 const DropdownMenu = ({
@@ -13,23 +15,31 @@ const DropdownMenu = ({
   dropdown,
   depthLevel,
   closeMenu,
+  onMouseEnter,
+  onMouseLeave,
 }: IProps) => {
+  // Increase the depth level by 1 for nested dropdowns
   const newDepthLevel = depthLevel + 1;
 
-  // Apply predefined margin classes based on depthLevel
-  const marginLeftClass = newDepthLevel > 1 ? `ml-${newDepthLevel * 4}` : 'ml-0'; // Adjust multiplier as needed
+  // Define the margin left based on the depth level, adjusting multiplier as needed
+  const marginLeftClass = newDepthLevel > 1 ? `ml-${newDepthLevel * 2}` : 'ml-0'; // Adjust multiplier to 4 for better spacing
 
+  // Define the dropdown positioning class, with adjustments for deeper levels
   const dropdownClass = `dropdown ${dropdown ? 'block' : 'hidden'} ${
     newDepthLevel > 1 ? 'left-full top-0' : 'left-0 top-full'
   } lg:absolute bg-bg-primary pt-2 pb-[0.6em] px-4 lg:shadow-md rounded-sm w-max max-w-[20em] z-30`;
 
   return (
-    <ul className={`${dropdownClass} ${marginLeftClass}`}>
+    <ul
+      className={`${dropdownClass} ${marginLeftClass}`}
+      onMouseEnter={onMouseEnter} 
+      onMouseLeave={onMouseLeave}  
+    >
       {submenus.map((submenu, index) => (
         <li key={index} className="relative">
           <MenuItems
             items={submenu}
-            depthLevel={newDepthLevel}
+            depthLevel={newDepthLevel}  
             closeMenu={closeMenu}
           />
         </li>

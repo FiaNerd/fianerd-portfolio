@@ -38,15 +38,22 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     }
   }
 
+  const handleSubMenuMouseEnter = () => {
+    setDropdown(true)
+  }
+
+  const handleSubMenuMouseLeave = () => {
+    setDropdown(false)
+  }
+
   const handleButtonClick = () => {
+    // Toggle dropdown for the button that has a submenu
     if (items.subMenu && items.subMenu.length > 0) {
       setDropdown((prev) => !prev)
     } else {
       closeMenu()
     }
   }
-
-
 
   const renderLinkOrButton = () => {
     if (items.title.toLowerCase() === 'kontakt') {
@@ -57,7 +64,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </Button>
       )
-    } else  {
+    } else {
       return (
         <NavLink
           to={items.url}
@@ -68,10 +75,10 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       )
     }
   }
-  
+
   return (
     <ul
-      className='text-text-primary font-medium flex items-center space-x-4 '
+      className='text-text-primary font-medium flex items-center space-x-4'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <li ref={ref} className='relative group'>
@@ -79,7 +86,9 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <>
             <button
               onClick={handleButtonClick}
-              className='px-4 py-[0.6em] text-xl font-heading tracking-wider hover:underline hover:text-text-secondary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary'>
+              className='px-4 py-[0.6em] text-xl font-heading tracking-wider hover:underline hover:text-text-secondary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}>
               <Trans>{t(items.title)}</Trans>
               {items.icon && (
                 <FontAwesomeIcon
@@ -93,6 +102,8 @@ const MenuItems: React.FC<MenuItemsProps> = ({
               dropdown={dropdown}
               depthLevel={depthLevel}
               closeMenu={closeMenu}
+              onMouseEnter={handleSubMenuMouseEnter}
+              onMouseLeave={handleSubMenuMouseLeave}
             />
           </>
         ) : (
