@@ -31,21 +31,19 @@ export const navRoutes: Route[] = [
         url: '/#me',
         description: 'meDescription',
       },
+      // {
+      //   title: 'skills',
+      //   url: '/#skills',  
+      // },
       {
-        title: 'skills',
-        url: '/#skills',
-        subMenu: [
-          {
-            title: 'skillsWeb',
-            url: '/#web',
-            description: 'skillsWebDescription',
-          },
-          {
-            title: 'skillsGraphic',
-            url: '/#graphic',
-            description: 'skillsGraphicDescription',
-          },
-        ],
+        title: 'skillsWeb',
+        url: '/#web',
+        description: 'skillsWebDescription',
+      },
+      {
+        title: 'skillsGraphic',
+        url: '/#graphic',
+        description: 'skillsGraphicDescription',
       },
       {
         title: 'experience',
@@ -69,35 +67,57 @@ export const navRoutes: Route[] = [
     url: '/portfolio', 
     icon: faCaretDown,
     subMenu: [
+      // {
+      //   title: 'webb',
+      //   url: '/web-dev',
+      // },
       {
-        title: 'webb',
-        url: '/web-dev',
-        subMenu: [
-          {
-            title: 'allProjects',
-            url: '/alla-projekt',
-            description: 'allProjectsDescription',
-          },
-          {
-            title: 'frontend',
-            url: '/frontend',
-            description: 'frontendDescription',
-          },
-          {
-            title: 'backend',
-            url: '/backend',
-            description: 'backendDescription',
-          },
-          {
-            title: 'fullstack',
-            url: '/fullstack',
-            description: 'fullstackDescription',
-          },
-        ],
+        title: 'allProjects',
+        url: '/alla-projekt',
+        description: 'allProjectsDescription',
       },
+      {
+        title: 'frontend',
+        url: '/frontend',
+        description: 'frontendDescription',
+      },
+      {
+        title: 'backend',
+        url: '/backend',
+        description: 'backendDescription',
+      },
+      {
+        title: 'fullstack',
+        url: '/fullstack',
+        description: 'fullstackDescription',
+      },
+        // subMenu: [
+        //   {
+        //     title: 'allProjects',
+        //     url: '/alla-projekt',
+        //     description: 'allProjectsDescription',
+        //   },
+        //   {
+        //     title: 'frontend',
+        //     url: '/frontend',
+        //     description: 'frontendDescription',
+        //   },
+        //   {
+        //     title: 'backend',
+        //     url: '/backend',
+        //     description: 'backendDescription',
+        //   },
+        //   {
+        //     title: 'fullstack',
+        //     url: '/fullstack',
+        //     description: 'fullstackDescription',
+        //   },
+        // ],
+      // },
       {
         title: 'grafisk',
         url: '/graphic-design',
+        description: 'grafiskDescription',
       },
     ],
   },
