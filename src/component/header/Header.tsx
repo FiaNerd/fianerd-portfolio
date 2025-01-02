@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -6,49 +6,15 @@ import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
+import { useHeaderVisibility } from '../../hook/useHeaderVisibility';
+import { useSidebarWidth } from '../../hook/useSidebarWidth';
 
 const Header = () => {
-  const [headerVisible, setHeaderVisible] = useState(true);
-  const [sidebarWidth, setSidebarWidth] = useState(37); 
   const { t } = useTranslation(['translation']);
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
-
-  const lastScrollY = useRef(window.scrollY);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 121) {
-        setHeaderVisible(currentScrollY < lastScrollY.current);
-      } else {
-        setHeaderVisible(true);
-      }
-
-      lastScrollY.current = currentScrollY;
-    };
-
-    const handleResize = () => {
-      const sidebar = document.querySelector('.sidebar');
-      if (sidebar) {
-        const sidebarWidth = sidebar.getBoundingClientRect().width;
-        setSidebarWidth(sidebarWidth > 37 ? 50 : 37);
-      } else {
-        setSidebarWidth(window.innerWidth >= 768 ? 50 : 37);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
-    handleResize(); // Initial setup
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const headerVisible = useHeaderVisibility();
+  const sidebarWidth = useSidebarWidth();
 
   return (
     <div
@@ -58,7 +24,7 @@ const Header = () => {
       } backdrop-blur-2xl bg-bg-primary/5 dark:bg-bg-secondary/10`}
       style={{
         left: `${sidebarWidth}px`,
-        width: `calc(100% - ${sidebarWidth}px)`
+        width: `calc(100% - ${sidebarWidth}px)`,
       }}
     >
       {/* Top Announcement Bar */}
@@ -70,35 +36,24 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-        {/* Logo */}
         <NavLink to="/#home" className="flex-shrink-0">
-          {currentTheme === 'dark' ? (
-            <img
-              src="/assets/images/logos/LogoDark.svg"
-              alt="Logo"
-              className="h-10 md:h-12"
-            />
-          ) : (
-            <img
-              src="/assets/images/logos/LogoLight.svg"
-              alt="Logo"
-              className="h-10 md:h-12"
-            />
-          )}
+          <img
+            src={`/assets/images/logos/Logo${currentTheme === 'dark' ? 'Dark' : 'Light'}.svg`}
+            alt="Logo"
+            className="h-10 md:h-12"
+          />
         </NavLink>
 
-        {/* Desktop Navbar */} 
         <div className="hidden md:flex">
           <NavbarDesktop />
         </div>
 
-        {/* Mobile Navbar and Controls */}
         <div className="flex items-center gap-4">
           <ThemeSwitch />
           <SelectLanguage />
           <NavLink
             to="/contact"
-            className="hidden font-sub-heading text-xl md:text-2xl font-medium md:block  border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
+            className="hidden font-sub-heading text-xl md:text-2xl font-medium md:block border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
             {t('contact')}
           </NavLink>

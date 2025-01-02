@@ -60,7 +60,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <Button
           onClick={handleButtonClick}
-          className='px-4 py-2 font-heading tracking-wider text-xl rounded-md'>
+          className='px-4 font-sub-heading tracking-wider text-xl rounded-md'>
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </Button>
       )
@@ -68,7 +68,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <NavLink
           to={items.url}
-          className='px-4 py-[0.6em] font-heading tracking-wider text-xl hover:underline hover:text-accent-primary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary'
+          className='px-4 font-sub-heading tracking-wider text-xl hover:text-accent-primary dark:hover:text-bg-secondary focus:underline focus:underline-offset-8 focus:text-hover-text'
           onClick={closeMenu}>
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </NavLink>
@@ -81,12 +81,12 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       className='text-text-primary font-medium flex items-center space-x-4'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
-      <li ref={ref} className='relative group'>
+      <li ref={ref} className='relative group hover:text-text-primary'>
         {items.subMenu && items.subMenu.length > 0 ? (
           <>
             <button
               onClick={handleButtonClick}
-              className='px-4 py-[0.6em] text-xl font-heading tracking-wider hover:underline hover:text-text-secondary hover:underline-offset-8 focus:underline focus:underline-offset-8 focus:text-accent-secondary'
+              className='px-4 text-xl hover:text-accent-secondary dark:hover:text-bg-secondary font-sub-heading tracking-wider focus:underline focus:text-bg-secondary'
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}>
               <Trans>{t(items.title)}</Trans>

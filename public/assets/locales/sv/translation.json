@@ -1,5 +1,5 @@
 {
-  "headerTitle": "Jag är som en espresso – stark och redo att kickstarta ditt projekt!",
+  "headerTitle": "Jag är som en espresso – intensiv, energifylld och redo att kickstarta ditt projekt!",
   "title": "Flerspråkig app",
   "label": "Välj ett annat språk!",
   "home": "Hem",
@@ -8,9 +8,10 @@
   "skills": "Färdigheter",
   "skillsWeb": "Webb",
   "skillsGraphic": "Grafisk",
+  "otherSkills": "Övriga kvalifikationer",
   "experience": "Erfarenhet",
   "education": "Utbildning",
-  "hobbies": "Hobbyer",
+  "hobbies": "Hobbies",
   "portfolio": "Portfolio",
   "webb": "Webb",
   "allProjects": "Alla projekt",
@@ -18,7 +19,7 @@
   "backend": "Backend",
   "fullstack": "Fullstack",
   "grafisk": "Grafisk",
-  "news": "Just Nu<span class='text-accent-primary font-medium'>!</span>",
+  "news": "Senaste nytt<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
   "languages": {
     "sv": "Svenska",
