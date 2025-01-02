@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { createPortal } from 'react-dom';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
 
@@ -18,32 +17,37 @@ const NavigationMenu = () => {
       setNavigationMenu('');
     }, navigationMenuCloseDelay);
   };
-
+  
+  const navigationMenuClearCloseTimeout = () => {
+    if (navigationMenuCloseTimeout) {
+      clearTimeout(navigationMenuCloseTimeout);
+      navigationMenuCloseTimeout = null;
+    }
+  };
+  
   const navigationMenuReposition = (navElement: HTMLElement) => {
     const rect = navElement.getBoundingClientRect();
     const submenuWidth = 500;
-
+  
     setSubmenuPosition({
-      top: rect.bottom + window.scrollY,
-      left: rect.left + rect.width / 2 - submenuWidth / 2,
+      top: rect.bottom + window.scrollY, 
+      left: rect.left + rect.width / 2 - submenuWidth / 2 + window.scrollX, 
     });
   };
+  
 
-  const navigationMenuClearCloseTimeout = () => {
-    if (navigationMenuCloseTimeout !== null) {
-      clearTimeout(navigationMenuCloseTimeout);
-    }
-  };
 
   return (
     <>
-      <nav className="relative z-10 w-auto">
-        <ul className="flex items-center justify-center flex-1 p-1 gap-0 md:gap-0 lg:gap-6 xl:gap-20 list-none border rounded-md text-text-primary group">
+      <div className="relative z-10 w-auto">
+        <ul className="flex items-center justify-center flex-1 p-1 gap-0 md:gap-0 lg:gap-6 xl:gap-20 list-none text-text-primary group">
           {navRoutes.map((menu, index) => (
             <li key={index}>
               <button
-                className={`inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors rounded-md ${
-                  navigationMenu === menu.title ? 'text-text-primary' : 'hover:text-bg-secondary active:text-bg-secondary'
+                className={`inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors ${
+                  navigationMenu === menu.title
+                    ? 'text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary'
+                    : ' active:text-bg-secondary'
                 }`}
                 onMouseEnter={(e) => {
                   setNavigationMenuOpen(true);
@@ -52,8 +56,8 @@ const NavigationMenu = () => {
                 }}
                 onMouseLeave={navigationMenuLeave}
               >
-                <Trans><span dangerouslySetInnerHTML={{ __html: t(menu.title) }} /></Trans>
-
+                <span dangerouslySetInnerHTML={{ __html: t(menu.title) }} />
+            
                 {menu.icon && (
                   <svg
                     className={`relative top-[1px] ml-1 h-4 w-4 ease-out duration-300 ${
@@ -75,82 +79,68 @@ const NavigationMenu = () => {
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
 
-      {navigationMenuOpen &&
-        createPortal(
-            <div
-            className="absolute z-10 bg-bg-primary shadow-sm py-4 pl-4"
-            style={{
-              top: submenuPosition.top,
-              left: submenuPosition.left,
-              width: 'max-content', 
-            //   padding: '0 0.2em', 
-            }}
-            onMouseEnter={navigationMenuClearCloseTimeout}
-            onMouseLeave={navigationMenuLeave}
+      {navigationMenuOpen && (navigationMenu === 'profile' || navigationMenu === 'portfolio') ? (
+
+<div
+className="absolute z-10 bg-bg-primary shadow-sm p-6 rounded-l mt-[4em]"
+onMouseEnter={navigationMenuClearCloseTimeout}
+onMouseLeave={navigationMenuLeave}
+>
+{navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.length ? (
+  <div className="flex max-w-[50em] gap-8">
+    {/* Profile or Portfolio Section */}
+    <div
+      className={`w-1/3 rounded p-4 ${
+        navigationMenu === 'profile'
+          ? 'bg-gradient-to-br from-neutral-800 to-black'
+          : 'bg-gradient-to-br from-blue-800 to-blue-500'
+      }`}
+    >
+      <img
+        src={
+          navigationMenu === 'profile'
+            ? 'path-to-profile-image.jpg'
+            : 'path-to-portfolio-image.jpg'
+        }
+        alt={navigationMenu}
+        className="w-full h-auto rounded-lg mb-4"
+      />
+      <span className="block font-bold text-base">
+        {navigationMenu === 'profile' ? 'Profile' : 'Portfolio'}
+      </span>
+      <span className="block text-sm opacity-70">
+        {navigationMenu === 'profile'
+          ? 'A personal profile showcasing my skills'
+          : 'A collection of my best works'}
+      </span>
+    </div>
+
+    {/* Submenu Section */}
+    <div className="w-2/3 grid gap-6 grid-cols-1 xl:grid-cols-2">
+      {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.map((subMenuItem, subIndex) => (
+        <div key={subIndex} className="flex flex-col py-2">
+          <NavLink
+            to={subMenuItem.url}
+            className="text-sm font-medium text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
+            onClick={() => setNavigationMenuOpen(false)}
           >
-          
-            {navRoutes.find((route) => route.title === navigationMenu)?.subMenu && (
-              <div className="flex max-w-auto mt-6 gap-4"> 
+            {t(subMenuItem.title)}
+          </NavLink>
+          <span className="block text-xs text-text-secondary font-light leading-6 opacity-60">
+            {/* Optional description for submenu items */}
+            Some small description about the submenu item here
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+) : null}
+</div>
 
-                {/* Profile or Portfolio Section */}
-                <div
-                  className={`w-1/3 rounded p-4 max-w-[8em] ${
-                    navigationMenu === 'profile'
-                      ? 'bg-gradient-to-br from-neutral-800 to-black grid grid-cols-1 xl:grid-cols-2'
-                      : 'bg-gradient-to-br from-blue-800 to-blue-500 grid grid-cols-1'
-                  }`}
-                >
-                  <img
-                    src={
-                      navigationMenu === 'profile'
-                        ? 'path-to-profile-image.jpg'
-                        : 'path-to-portfolio-image.jpg'
-                    }
-                    alt={navigationMenu}
-                    className="h-auto w-full rounded mb-2"
-                  />
-                  <span className="block font-bold text-sm">
-                    {navigationMenu === 'profile' ? 'Profile' : 'Portfolio'}
-                  </span>
-                  <span className="block text-xs opacity-60">
-                    {navigationMenu === 'profile'
-                      ? 'A personal profile showcasing my skills'
-                      : 'A collection of my best works'}
-                  </span>
-                </div>
-
-                {/* Submenu Section */}
-                <div
-                  className={`w-2/3 grid gap-4 ${
-                    navigationMenu === 'profile'
-                      ? 'grid-cols-1 xl:grid-cols-2'
-                      : 'grid-cols-1'
-                  }`}
-                >
-                  {navRoutes
-                    .find((route) => route.title === navigationMenu)
-                    ?.subMenu?.map((subMenuItem, subIndex) => (
-                      <div key={subIndex} className="flex flex-col py-1">
-                        <NavLink
-                          to={subMenuItem.url}
-                          className="text-sm font-medium hover:text-hover-text dark:hover:text-bg-secondary"
-                          onClick={() => setNavigationMenuOpen(false)}
-                        >
-                          {t(subMenuItem.title)}
-                        </NavLink>
-                        <span className="block text-xs font-light leading-5 opacity-50 line-clamp-2">
-                          Som small description about the submenu item here
-                        </span>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            )}
-          </div>,
-          document.body
-        )}
+      
+      ): null}
     </>
   );
 };

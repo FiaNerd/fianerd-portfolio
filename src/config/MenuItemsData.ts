@@ -13,8 +13,8 @@ export interface Route {
   subMenu?: Route[];
   dropdown?: Route[];
   // subMenuProfile?: Route[];
-  skillsSubMenu?: Route[];
-  experienceSubMenu?: Route[];
+  // skillsSubMenu?: Route[];
+  // experienceSubMenu?: Route[] | undefined;
   icon?: IconDefinition;
 }
 
@@ -27,7 +27,7 @@ export const navRoutes: Route[] = [
   {
     title: 'profile',
     url: '/#profile', 
-    icon: faCaretDown,
+    icon: true,
     subMenu: [
       {
         title: 'me',

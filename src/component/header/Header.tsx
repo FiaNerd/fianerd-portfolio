@@ -2,12 +2,12 @@ import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
+import { useHeaderVisibility } from '../../hook/useHeaderVisibility';
+import { useSidebarWidth } from '../../hook/useSidebarWidth';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
-import { useHeaderVisibility } from '../../hook/useHeaderVisibility';
-import { useSidebarWidth } from '../../hook/useSidebarWidth';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);
@@ -57,7 +57,8 @@ const Header = () => {
           >
             {t('contact')}
           </NavLink>
-          <div className="md:hidden">
+
+          <div className="lg:hidden">
             <NavbarMobile />
           </div>
         </div>
