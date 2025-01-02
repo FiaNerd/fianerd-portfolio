@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   faCaretDown,
-  faCaretRight,
-  IconDefinition,
+  IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 import HomePage from '../pages/HomePage';
 
@@ -21,13 +20,13 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/', // Home route
+    url: '/#home', // Home route
     nav: HomePage,
   },
   {
     title: 'profile',
     url: '/#profile', 
-    icon: true,
+    icon: faCaretDown,
     subMenu: [
       {
         title: 'me',
@@ -36,7 +35,6 @@ export const navRoutes: Route[] = [
       {
         title: 'skills',
         url: '/#skills',
-        icon: faCaretRight,
         subMenu: [
           {
             title: 'skillsWeb',
@@ -70,7 +68,6 @@ export const navRoutes: Route[] = [
       {
         title: 'webb',
         url: '/web-dev',
-        icon: faCaretRight,
         subMenu: [
           {
             title: 'allProjects',

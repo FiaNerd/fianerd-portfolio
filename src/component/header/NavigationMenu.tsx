@@ -34,8 +34,15 @@ const NavigationMenu = () => {
       left: rect.left + rect.width / 2 - submenuWidth / 2 + window.scrollX, 
     });
   };
-  
 
+  // Function to handle scroll behavior for home
+  const handleScroll = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -55,6 +62,7 @@ const NavigationMenu = () => {
                   setNavigationMenu(menu.title);
                 }}
                 onMouseLeave={navigationMenuLeave}
+                onClick={(e) => menu.title === 'home' && handleScroll(e, 'home')}
               >
                 <span dangerouslySetInnerHTML={{ __html: t(menu.title) }} />
             
@@ -82,74 +90,72 @@ const NavigationMenu = () => {
       </div>
 
       {navigationMenuOpen && (navigationMenu === 'profile' || navigationMenu === 'portfolio') ? (
-  <div
-    className="absolute z-10 bg-bg-primary shadow-sm p-6 rounded-l mt-[4em]"
-    onMouseEnter={navigationMenuClearCloseTimeout}
-    onMouseLeave={navigationMenuLeave}
-  >
-    {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.length ? (
-      <div
-        className={`grid gap-8 ${
-          navigationMenu === 'profile' ? 'grid-cols-2 xl:grid-cols-2' : 'grid-cols-2 '
-        } max-w-[50em]`}
-      >
-        {/* Profile or Portfolio Section */}
         <div
-          className={`rounded p-4 ${
-            navigationMenu === 'profile'
-              ? 'bg-gradient-to-br from-neutral-800 to-black'
-              : 'bg-gradient-to-br from-blue-800 to-blue-500'
-          }`}
+          className="absolute z-10 bg-bg-primary shadow-sm p-6 rounded-l mt-[4em]"
+          onMouseEnter={navigationMenuClearCloseTimeout}
+          onMouseLeave={navigationMenuLeave}
         >
-          <img
-            src={
-              navigationMenu === 'profile'
-                ? 'path-to-profile-image.jpg'
-                : 'path-to-portfolio-image.jpg'
-            }
-            alt={navigationMenu}
-            className="w-full h-auto rounded-lg mb-4"
-          />
-          <span className="block font-bold text-base">
-            {navigationMenu === 'profile' ? 'Profile' : 'Portfolio'}
-          </span>
-          <span className="block text-sm opacity-70">
-            {navigationMenu === 'profile'
-              ? 'A personal profile showcasing my skills'
-              : 'A collection of my best works'}
-          </span>
-        </div>
-
-        {/* Submenu Section */}
-        <div
-          className={`grid gap-6 ${
-            navigationMenu === 'profile' ? 'grid-cols-1 xl:grid-cols-2' : 'grid-cols-1'
-          }`}
-        >
-          {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.map(
-            (subMenuItem, subIndex) => (
-              <div key={subIndex} className="flex flex-col py-2">
-                <NavLink
-                  to={subMenuItem.url}
-                  className="text-sm font-medium text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
-                  onClick={() => setNavigationMenuOpen(false)}
-                >
-                  {t(subMenuItem.title)}
-                </NavLink>
-                <span className="block text-xs text-text-secondary font-light leading-6 opacity-60">
-                  {/* Optional description for submenu items */}
-                  Some small description about the submenu item here
+          {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.length ? (
+            <div
+              className={`grid gap-8 ${
+                navigationMenu === 'profile' ? 'grid-cols-2 xl:grid-cols-2' : 'grid-cols-2 '
+              } max-w-[50em]`}
+            >
+              {/* Profile or Portfolio Section */}
+              <div
+                className={`rounded p-4 ${
+                  navigationMenu === 'profile'
+                    ? 'bg-gradient-to-br from-neutral-800 to-black'
+                    : 'bg-gradient-to-br from-blue-800 to-blue-500'
+                }`}
+              >
+                <img
+                  src={
+                    navigationMenu === 'profile'
+                      ? 'path-to-profile-image.jpg'
+                      : 'path-to-portfolio-image.jpg'
+                  }
+                  alt={navigationMenu}
+                  className="w-full h-auto rounded-lg mb-4"
+                />
+                <span className="block font-bold text-base">
+                  {navigationMenu === 'profile' ? 'Profile' : 'Portfolio'}
+                </span>
+                <span className="block text-sm opacity-70">
+                  {navigationMenu === 'profile'
+                    ? 'A personal profile showcasing my skills'
+                    : 'A collection of my best works'}
                 </span>
               </div>
-            )
-          )}
+
+              {/* Submenu Section */}
+              <div
+                className={`grid gap-6 ${
+                  navigationMenu === 'profile' ? 'grid-cols-1 xl:grid-cols-2' : 'grid-cols-1'
+                }`}
+              >
+                {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.map(
+                  (subMenuItem, subIndex) => (
+                    <div key={subIndex} className="flex flex-col py-2">
+                      <NavLink
+                        to={subMenuItem.url}
+                        className="text-sm font-medium text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
+                        onClick={() => setNavigationMenuOpen(false)}
+                      >
+                        {t(subMenuItem.title)}
+                      </NavLink>
+                      <span className="block text-xs text-text-secondary font-light leading-6 opacity-60">
+                        {/* Optional description for submenu items */}
+                        Some small description about the submenu item here
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          ) : null}
         </div>
-      </div>
-    ) : null}
-  </div>
-) : null}
-
-
+      ) : null}
     </>
   );
 };
