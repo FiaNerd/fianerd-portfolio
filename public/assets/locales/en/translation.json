@@ -19,7 +19,7 @@
   "backend": "Backend",
   "fullstack": "Fullstack",
   "grafisk": "Graphic",
-  "news": "Latest News<span class='text-accent-primary font-medium'>!</span>",
+  "news": "News<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Contact Me",
   "languages": {
     "sv": "Swedish",

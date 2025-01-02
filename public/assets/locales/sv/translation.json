@@ -19,7 +19,7 @@
   "backend": "Backend",
   "fullstack": "Fullstack",
   "grafisk": "Grafisk",
-  "news": "Senaste nytt<span class='text-accent-primary font-medium'>!</span>",
+  "news": "Nyheter<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
   "languages": {
     "sv": "Svenska",

@@ -44,7 +44,7 @@ const Header = () => {
           />
         </NavLink>
 
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <NavbarDesktop />
         </div>
 
