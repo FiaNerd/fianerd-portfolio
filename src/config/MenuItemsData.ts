@@ -11,10 +11,8 @@ export interface Route {
   nav?: React.ComponentType<any>;
   subMenu?: Route[];
   dropdown?: Route[];
-  // subMenuProfile?: Route[];
-  // skillsSubMenu?: Route[];
-  // experienceSubMenu?: Route[] | undefined;
   icon?: IconDefinition;
+  description?: string;
 }
 
 export const navRoutes: Route[] = [
@@ -31,6 +29,7 @@ export const navRoutes: Route[] = [
       {
         title: 'me',
         url: '/#me',
+        description: 'meDescription',
       },
       {
         title: 'skills',
@@ -39,24 +38,29 @@ export const navRoutes: Route[] = [
           {
             title: 'skillsWeb',
             url: '/#web',
+            description: 'skillsWebDescription',
           },
           {
             title: 'skillsGraphic',
             url: '/#graphic',
+            description: 'skillsGraphicDescription',
           },
         ],
       },
       {
         title: 'experience',
         url: '/#experience', 
+        description: 'experienceDescription',
       },
       {
         title: 'education',
         url: '/#education',
+        description: 'educationDescription',
       },
       {
         title: 'hobbies',
         url: '/#hobbies',
+        description: 'hobbiesDescription',
       },
     ],
   },
@@ -72,18 +76,22 @@ export const navRoutes: Route[] = [
           {
             title: 'allProjects',
             url: '/alla-projekt',
+            description: 'allProjectsDescription',
           },
           {
             title: 'frontend',
             url: '/frontend',
+            description: 'frontendDescription',
           },
           {
             title: 'backend',
             url: '/backend',
+            description: 'backendDescription',
           },
           {
             title: 'fullstack',
             url: '/fullstack',
+            description: 'fullstackDescription',
           },
         ],
       },
