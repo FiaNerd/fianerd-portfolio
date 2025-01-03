@@ -1,4 +1,4 @@
-import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -34,24 +34,39 @@ const SelectLanguage = () => {
 
   return (
     <div ref={ref}>
-      {/* Dropdown button showing the short code */}
-      <button
-        className='text-md icon-language text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary'
+     <button
+        className='flex flex-row items-center text-md gap-2 font-sub-heading icon-language text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary'
         onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={faGlobe} className='pr-2 text-[1.4rem]' />
-        <span className='dropdown-arrow text-[1.1rem]'>
+        <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem]' />
+
+        <span className="text-xl flex items-center justify-center mt-0.5">
           {selectedLanguageLabel}
-          <FontAwesomeIcon icon={faCaretDown} className='pl-[0.2em]'/>
         </span>
+              
+
+        <svg
+          className={`h-5 w-5 ease-out duration-300`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </button>
+
 
       {/* Dropdown menu showing full language names */}
       {isOpen && (
-        <ul className='absolute z-100'>
+        <ul className='absolute z-100 mt-4'>
           {LANGUAGES.map(({ code, label }) => (
             <li
               key={code}
-              className='bg-bg-primary text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary dark:hover:bg-bg-secondary py-2 px-4'
+              className='bg-bg-primary font-sub-heading text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary dark:hover:bg-bg-secondary py-2 px-4'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </li>

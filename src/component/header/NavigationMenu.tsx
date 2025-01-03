@@ -37,9 +37,9 @@ const NavigationMenu = () => {
   return (
     <>
       <div className="relative z-10">
-        <ul className="flex items-center justify-center flex-1 p-1 gap-6 xl:gap-20 list-none text-text-primary group">
+        <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-6 xl:gap-20 list-none text-text-primary group">
           {navRoutes.map((menu, index) => (
-            <li key={index} className="text-2xl">
+            <li key={index} className="text-[1.4rem]">
               <button
                 className={`inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors ${
                   navigationMenu === menu.title
@@ -53,10 +53,10 @@ const NavigationMenu = () => {
                 onMouseLeave={navigationMenuLeave}
                 onClick={(e) => menu.title === 'home' && handleScroll(e, 'home')}
               >
-                <span dangerouslySetInnerHTML={{ __html: t(menu.title) }} />
+                <span dangerouslySetInnerHTML={{ __html: t(menu.title) }} className='md:text-[1.4rem]'/>
                 {menu.icon && (
                   <svg
-                    className={`relative top-[1px] ml-1 h-4 w-4 ease-out duration-300 ${
+                    className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${
                       navigationMenuOpen && navigationMenu === menu.title ? '-rotate-180' : ''
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
