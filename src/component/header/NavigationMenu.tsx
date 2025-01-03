@@ -1,25 +1,28 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom'; // Using NavLink to handle navigation
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenu from './NavigationSubMenu';
 
 const NavigationMenu = () => {
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const { t } = useTranslation('translation');
 
   const navigationMenuCloseDelay = 200;
   let navigationMenuCloseTimeout: NodeJS.Timeout | null = null;
 
-  const navigationMenuClearCloseTimeout = () => {
+  const clearCloseTimeout = () => {
     if (navigationMenuCloseTimeout) {
       clearTimeout(navigationMenuCloseTimeout);
       navigationMenuCloseTimeout = null;
     }
   };
 
-  const navigationMenuLeave = () => {
+  const handleMouseLeave = () => {
     navigationMenuCloseTimeout = setTimeout(() => {
       setNavigationMenuOpen(false);
       setNavigationMenu('');
@@ -33,6 +36,23 @@ const NavigationMenu = () => {
       window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
     }
   };
+  
+  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+ 
+    if (url.includes('#')) {
+      const [path, sectionId] = url.split('#');
+
+      if (location.pathname === path) {
+        e.preventDefault();
+        handleScroll(e, sectionId); 
+        
+      } else {
+        navigate(path); 
+      }
+    } else {
+      navigate(url); 
+    }
+  };
 
   return (
     <>
@@ -41,23 +61,20 @@ const NavigationMenu = () => {
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">
               <NavLink
-                to={menu.url} // NavLink will handle page navigation
-                className={`inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors ${
-                  navigationMenu === menu.title
-                    ? ' dark:text-bg-secondary hover:text-accent-secondary active:text-btn-bg'
-                    : 'text-text-accent dark:text-bg-secondary dark:hover:text-accent-primary active:text-btn-bg'
-                }`}
+                to={menu.url}
+                className={({ isActive }) =>
+                  `inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'dark:text-bg-secondary hover:text-accent-secondary active:text-btn-bg'
+                      : 'text-text-accent dark:text-bg-secondary dark:hover:text-accent-primary active:text-btn-bg'
+                  }`
+                }
                 onMouseEnter={() => {
                   setNavigationMenuOpen(true);
                   setNavigationMenu(menu.title);
                 }}
-                onMouseLeave={navigationMenuLeave}
-                onClick={(e) => {
-                  if (menu.url.includes('#')) {
-                    const sectionId = menu.url.split('#')[1];
-                    handleScroll(e, sectionId);
-                  }
-                }}
+                onMouseLeave={handleMouseLeave}
+                onClick={(e) => handleMenuClick(e, menu.url)}
               >
                 <span
                   dangerouslySetInnerHTML={{ __html: t(menu.title) }}
@@ -89,8 +106,8 @@ const NavigationMenu = () => {
       {navigationMenuOpen && (
         <NavigationSubMenu
           navigationMenu={navigationMenu}
-          onMouseEnter={navigationMenuClearCloseTimeout}
-          onMouseLeave={navigationMenuLeave}
+          onMouseEnter={clearCloseTimeout}
+          onMouseLeave={handleMouseLeave}
         />
       )}
     </>
