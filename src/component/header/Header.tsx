@@ -17,7 +17,6 @@ const Header = () => {
   const headerVisible = useHeaderVisibility();
   const sidebarWidth = useSidebarWidth();
 
-  // Apply smooth scroll globally by using the custom hook
   useSmoothScroll(); 
 
   return (

@@ -20,7 +20,6 @@ const SelectLanguage = () => {
     setIsOpen(false)
   }
 
-  // Define language options with translations for dropdown
   const LANGUAGES = [
     { code: 'sv', label: t('languages.sv') },
     { code: 'en', label: t('languages.en') },
@@ -43,9 +42,8 @@ const SelectLanguage = () => {
           {selectedLanguageLabel}
         </span>
                
-
         <svg
-          className={`h-5 w-5 ease-out duration-300`}
+          className={`h-5 w-5 ease-out duration-300 ${isOpen ? '-rotate-180' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"

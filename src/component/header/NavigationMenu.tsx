@@ -48,10 +48,13 @@ const NavigationMenu = () => {
         
       } else {
         navigate(path); 
+        setNavigationMenuOpen(false);
       }
     } else {
       navigate(url); 
     }
+
+    setNavigationMenuOpen(false);
   };
 
   return (
@@ -108,6 +111,7 @@ const NavigationMenu = () => {
           navigationMenu={navigationMenu}
           onMouseEnter={clearCloseTimeout}
           onMouseLeave={handleMouseLeave}
+          closeMenuOnClick={() => setNavigationMenuOpen(false)}
         />
       )}
     </>

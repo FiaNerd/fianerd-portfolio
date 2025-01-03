@@ -6,12 +6,14 @@ interface IProps {
   navigationMenu: string;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  closeMenuOnClick: () => void;
 }
 
 const NavigationSubMenu = ({
   navigationMenu,
   onMouseEnter,
   onMouseLeave,
+  closeMenuOnClick,
 }: IProps) => {
   const { t } = useTranslation('translation');
   const currentRoute = navRoutes.find((route) => route.title === navigationMenu);
@@ -63,6 +65,7 @@ const NavigationSubMenu = ({
               <NavLink
                 to={subMenuItem.url}
                 className="text-sm font-medium text-text-accent dark:text-accent-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
+                onClick={closeMenuOnClick}
               >
                 {t(subMenuItem.title)}
               </NavLink>
