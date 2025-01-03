@@ -62,12 +62,12 @@ const NavigationSubMenu = ({
             <div key={subIndex} className="flex flex-col">
               <NavLink
                 to={subMenuItem.url}
-                className="text-sm font-medium text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
+                className="text-sm font-medium text-text-accent dark:text-accent-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
               >
                 {t(subMenuItem.title)}
               </NavLink>
               {subMenuItem.description && (
-                <span className="block text-xs text-text-secondary font-light leading-6 opacity-60">
+                <span className="block text-xs text-text-primary font-light leading-6 opacity-70">
                   {t(subMenuItem.description)}
                 </span>
               )}

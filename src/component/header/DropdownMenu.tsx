@@ -27,7 +27,7 @@ const DropdownMenu = ({
   // Define the dropdown positioning class, with adjustments for deeper levels
   const dropdownClass = `${dropdown ? 'block' : 'hidden'} ${
     newDepthLevel > 1 ? 'left-full top-0' : 'left-0 top-full'
-  } lg:absolute lg:shadow-md bg-bg-primary rounded-sm w-max max-w-[20em] z-30`;
+  } lg:absolute lg:shadow-md rounded-sm w-max max-w-[20em] z-30 y`;
 
   return (
     <ul
@@ -36,7 +36,7 @@ const DropdownMenu = ({
       onMouseLeave={onMouseLeave} 
     >
       {submenus.map((submenu, index) => (
-        <li key={index} className="relative text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary dark:hover:bg-bg-secondary py-2">
+        <li key={index} className="relative text-[1.2rem] cursor-pointer py-2 px-4">
           <MenuItems
             items={submenu}
             depthLevel={newDepthLevel}  
@@ -47,5 +47,5 @@ const DropdownMenu = ({
     </ul>
   );
 };
-
+// text-text-primary hover:bg-accent-secondary dark:hover:bg-bg-secondary 
 export default DropdownMenu;

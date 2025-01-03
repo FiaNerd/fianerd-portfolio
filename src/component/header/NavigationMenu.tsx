@@ -37,14 +37,14 @@ const NavigationMenu = () => {
   return (
     <>
       <div className="relative z-10">
-        <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-6 xl:gap-20 list-none text-text-primary group">
+        <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-6 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">
               <button
                 className={`inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors ${
                   navigationMenu === menu.title
-                    ? 'text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary'
-                    : ' active:text-bg-secondary'
+                    ? ' dark:text-bg-secondary hover:text-accent-secondary active:text-btn-bg'
+                    : 'text-text-accent dark:text-bg-secondary dark:hover:text-accent-primary active:text-btn-bg'
                 }`}
                 onMouseEnter={() => {
                   setNavigationMenuOpen(true);

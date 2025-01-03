@@ -35,14 +35,14 @@ const SelectLanguage = () => {
   return (
     <div ref={ref}>
      <button
-        className='flex flex-row items-center text-md gap-2 font-sub-heading icon-language text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary'
+        className='flex flex-row items-center text-md font-sub-heading icon-language text-text-accent  dark:text-accent-primary dark:lg:text-bg-secondary hover:text-accent-secondary dark:hover:text-accent-primary'
         onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem]' />
+        <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem] pr-2' />
 
         <span className="text-xl flex items-center justify-center mt-0.5">
           {selectedLanguageLabel}
         </span>
-              
+               
 
         <svg
           className={`h-5 w-5 ease-out duration-300`}
@@ -66,7 +66,7 @@ const SelectLanguage = () => {
           {LANGUAGES.map(({ code, label }) => (
             <li
               key={code}
-              className='bg-bg-primary font-sub-heading text-[1.2rem] cursor-pointer text-text-primary hover:text-hover-text hover:bg-accent-secondary dark:hover:bg-bg-secondary py-2 px-4'
+              className='bg-hover-text font-sub-heading text-[1.2rem] cursor-pointer text-text-accent dark:text-text-primary dark:bg-bg-primary hover:text-hover-text hover:bg-accent-secondary dark:hover:text-bg-primary dark:hover:bg-bg-secondary py-2 px-4'
               onClick={() => handleLanguageChange(code)}>
               {label}
             </li>

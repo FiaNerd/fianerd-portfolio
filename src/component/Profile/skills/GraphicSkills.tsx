@@ -21,10 +21,10 @@ const GraphicSkills = () => {
         initial="hidden" 
         animate={ctrls} 
         variants={vars} 
-        className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap- mb-8"
+        className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-20 mb-8"
       >
         {/* H1 in the first row, first column */}
-        <h1 className="text-center text-hover-text text-2xl md:text-7xl bg-[#4b1718]  dark:bg-bg-secondary dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
+        <h1 className="text-center text-hover-text text-2xl md:text-5xl bg-[#4b1718]  dark:bg-bg-secondary dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
           {t('graphicTitle')}
         </h1>
 

@@ -57,7 +57,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className='h-screen bg-bg-primary text-text-primary fixed left-0 right-0 top-0 bottom-0 w-full flex flex-col'
+            className='h-screen bg-bg-primary text-text-accent dark:text-bg-primary fixed left-0 right-0 top-0 bottom-0 w-full flex flex-col'
           >
             <div className='flex-grow overflow-y-auto mt-[3em]'>
               <ul className='grid gap-2 pl-8'>
@@ -72,10 +72,10 @@ const NavbarMobile = () => {
               </ul>
             </div>
 
-            <div className='flex w-10/12 mt-8 mb-8 p-2 mx-auto border rounded-sm border-accent-primary hover:border-accent-primary hover:bg-accent-primary'>
+            <div className='flex w-8/12 mt-8 mb-8 p-2 mx-auto border rounded text-btn-bg border-btn-bg hover:border-bg-hover hover:bg-bg-hover hover:text-bg-primary'>
               <NavLink
                 to='/'
-                className={`${getClassName} cursor mx-auto text-[1.2rem] text-accent-primary text-align lg:mb-0 hover:text-hover-text`}
+                className={`${getClassName} text-sub-heading cursor mx-auto text-[1.2rem] t text-align lg:mb-0 `}
               >
                 {t('contact')}
               </NavLink>
@@ -87,7 +87,7 @@ const NavbarMobile = () => {
       </AnimatePresence>
       <div
         className={`z-50 ${
-          showMenu ? 'fixed w-2/10 sm:w-2/12 text-accent-primary mr-4' : 'text-text-primary'
+          showMenu ? 'fixed w-2/10 sm:w-2/12 text-accent-primary mr-4' : 'text-text-primary y'
         }`}
         style={{ right: '0', top: '1em' }}
       >
