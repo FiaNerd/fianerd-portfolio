@@ -17,18 +17,7 @@ const AboutMe = () => {
 
   return (
       <>
-         {/* <Title
-              id="me"
-              title={t("titleProfile")}
-              dot={t("dot")}
-              children={t("intro")}
-              className="text-[#ca5b87] dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
-              subHeadingClassName="text-hover-text dark:text-text-secondary"
-              sticky={true}
-            />
-             */}
-
-      <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
+      <section className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
           <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
@@ -76,7 +65,7 @@ const AboutMe = () => {
             {isExpanded ? t('ctaLess') : t('cta')}
           </Button>  
         </motion.div>
-      </div>
+      </section>
       </>
   );
 };
