@@ -7,24 +7,18 @@ import Education from "../component/Profile/education/Education";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
-import Title from "../component/Partial/Title";
-import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const {t } = useTranslation(['webSkills']);
-
 
   useEffect(() => {
     const header = document.getElementById("header");
 
-    const handleResize = () => {
-      if (header) {
-        const height = header.getBoundingClientRect().height;
-        setHeaderHeight(height); // Update the header height state
-      }
-    };
-
+      const handleResize = () => {
+        const height = header?.getBoundingClientRect().height || 0;
+        setHeaderHeight(height);
+      };
+    
     // Set the initial header height on mount
     handleResize();
 
@@ -37,10 +31,16 @@ const HomePage = () => {
 
   useSmoothScroll();
 
+  useEffect(() => {
+    if (location.pathname === '/') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <>
       {/* Apply dynamic paddingTop to the wrapper div to ensure HeroSection is below the header */}
-      <div
+      <div 
         style={{
           paddingTop: `${headerHeight}px`, // Apply dynamic padding based on header height
           transition: "padding-top 0.3s ease", // Smooth transition for padding change
@@ -48,12 +48,12 @@ const HomePage = () => {
         className="bg-blend-multiply"
       >
         {/* Hero Section */}
-        <SectionPlate id="home" className="relative">
-          <HeroSection />
-        </SectionPlate>
+          <SectionPlate id="home" className="relative">
+              <HeroSection />
+            </SectionPlate>
       </div>
+
         <SectionPlate id="profile">
-          
           <AboutMe />
         </SectionPlate>
 

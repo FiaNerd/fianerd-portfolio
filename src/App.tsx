@@ -1,9 +1,17 @@
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
 
 function App() {
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+   
   return (
     <div className="min-h-screen flex">
       {/* Header */}

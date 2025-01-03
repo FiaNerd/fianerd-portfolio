@@ -18,7 +18,7 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/#home', // Home route
+    url: '/#home', 
     nav: HomePage,
   },
   {
@@ -31,10 +31,6 @@ export const navRoutes: Route[] = [
         url: '/#me',
         description: 'meDescription',
       },
-      // {
-      //   title: 'skills',
-      //   url: '/#skills',  
-      // },
       {
         title: 'skillsWeb',
         url: '/#web',
@@ -67,10 +63,6 @@ export const navRoutes: Route[] = [
     url: '/portfolio', 
     icon: faCaretDown,
     subMenu: [
-      // {
-      //   title: 'webb',
-      //   url: '/web-dev',
-      // },
       {
         title: 'allProjects',
         url: '/alla-projekt',
@@ -91,29 +83,6 @@ export const navRoutes: Route[] = [
         url: '/fullstack',
         description: 'fullstackDescription',
       },
-        // subMenu: [
-        //   {
-        //     title: 'allProjects',
-        //     url: '/alla-projekt',
-        //     description: 'allProjectsDescription',
-        //   },
-        //   {
-        //     title: 'frontend',
-        //     url: '/frontend',
-        //     description: 'frontendDescription',
-        //   },
-        //   {
-        //     title: 'backend',
-        //     url: '/backend',
-        //     description: 'backendDescription',
-        //   },
-        //   {
-        //     title: 'fullstack',
-        //     url: '/fullstack',
-        //     description: 'fullstackDescription',
-        //   },
-        // ],
-      // },
       {
         title: 'grafisk',
         url: '/graphic-design',

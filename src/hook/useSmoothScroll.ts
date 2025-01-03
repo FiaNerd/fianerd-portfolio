@@ -6,7 +6,7 @@ export const useSmoothScroll = () => {
 
   useEffect(() => {
     const hash = location.hash.replace("#", "");
-    const header = document.querySelector("header");
+    const header = document.getElementById("header");
     const headerHeight = header ? header.offsetHeight : 0;
 
     if (hash) {
