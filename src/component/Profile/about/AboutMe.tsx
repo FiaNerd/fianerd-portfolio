@@ -17,16 +17,16 @@ const AboutMe = () => {
 
   return (
       <>
-         <Title
+         {/* <Title
               id="me"
-              title={t("home:titleProfile")}
-              dot={t("home:dot")}
-              children={t("home:intro")}
+              title={t("titleProfile")}
+              dot={t("dot")}
+              children={t("intro")}
               className="text-[#ca5b87] dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
               subHeadingClassName="text-hover-text dark:text-text-secondary"
               sticky={true}
             />
-            
+             */}
 
       <div className="max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">

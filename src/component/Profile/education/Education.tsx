@@ -1,18 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import Title from "../../Partial/Title";
 
 const Education = () => {
     const { t } = useTranslation("education");
 
   return (
     <>
-    <Title 
-      id="education" 
-      title={t("titleWorkExperience")} 
-      dot={t("dot")} children={t("subTitleWorkExperience")} 
-      className="text-text-accent dark:text-[#b5685c]  bg-[#fff5d7] dark:bg-[#1b0909]" 
-      sticky={true}/>
  
     <div className="py-8">
       <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
