@@ -56,7 +56,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
       initial="hidden"
       animate={ctrls}
       onAnimationComplete={onComplete}
-      className="text-[2.6rem] leading-4  md:text-[3rem] lg:text-[4rem] xl:text-[5rem] font-bold pt-8 md:pt-4"
+      className="text-[2.6rem] md:text-[4rem] lg:text-[5rem] font-bold pt-8 md:pt-0"
       style={style}
     >
       <motion.div

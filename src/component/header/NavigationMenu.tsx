@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
+import NavigationSubMenu from './NavigationSubMenu';
 
 const NavigationMenu = () => {
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
-  const [submenuPosition, setSubmenuPosition] = useState({ top: 0, left: 0 });
   const { t } = useTranslation('translation');
   const navigationMenuCloseDelay = 200;
   let navigationMenuCloseTimeout: NodeJS.Timeout | null = null;
+
+  const navigationMenuClearCloseTimeout = () => {
+    if (navigationMenuCloseTimeout) {
+      clearTimeout(navigationMenuCloseTimeout);
+      navigationMenuCloseTimeout = null;
+    }
+  };
 
   const navigationMenuLeave = () => {
     navigationMenuCloseTimeout = setTimeout(() => {
@@ -17,30 +23,12 @@ const NavigationMenu = () => {
       setNavigationMenu('');
     }, navigationMenuCloseDelay);
   };
-  
-  const navigationMenuClearCloseTimeout = () => {
-    if (navigationMenuCloseTimeout) {
-      clearTimeout(navigationMenuCloseTimeout);
-      navigationMenuCloseTimeout = null;
-    }
-  };
-  
-  const navigationMenuReposition = (navElement: HTMLElement) => {
-    const rect = navElement.getBoundingClientRect();
-    const submenuWidth = 4000;
-    
-    const newPosition = {
-      top: rect.bottom + window.scrollY, 
-      left: rect.left + rect.width / 2 - submenuWidth / 2 + window.scrollX,
-    };
-  
-    setSubmenuPosition(newPosition);
-  };
-  
-  // Function to handle scroll behavior for home
+
   const handleScroll = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
+
     const element = document.getElementById(sectionId);
+
     if (element) {
       window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
     }
@@ -51,23 +39,21 @@ const NavigationMenu = () => {
       <div className="relative z-10">
         <ul className="flex items-center justify-center flex-1 p-1 gap-6 xl:gap-20 list-none text-text-primary group">
           {navRoutes.map((menu, index) => (
-            <li key={index}>
+            <li key={index} className="text-2xl">
               <button
                 className={`inline-flex items-center justify-center h-auto px-4 py-2 text-sm font-medium transition-colors ${
                   navigationMenu === menu.title
                     ? 'text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary'
                     : ' active:text-bg-secondary'
                 }`}
-                onMouseEnter={(e) => {
+                onMouseEnter={() => {
                   setNavigationMenuOpen(true);
-                  navigationMenuReposition(e.target as HTMLElement);
                   setNavigationMenu(menu.title);
                 }}
                 onMouseLeave={navigationMenuLeave}
                 onClick={(e) => menu.title === 'home' && handleScroll(e, 'home')}
               >
                 <span dangerouslySetInnerHTML={{ __html: t(menu.title) }} />
-            
                 {menu.icon && (
                   <svg
                     className={`relative top-[1px] ml-1 h-4 w-4 ease-out duration-300 ${
@@ -91,74 +77,13 @@ const NavigationMenu = () => {
         </ul>
       </div>
 
-      {navigationMenuOpen && (navigationMenu === 'profile' || navigationMenu === 'portfolio') ? (
-        <div
-        className="absolute z-10 bg-bg-primary shadow-sm p-6 rounded-l mt-[4em]"
-        onMouseEnter={navigationMenuClearCloseTimeout}
-        onMouseLeave={navigationMenuLeave}
-      >
-          {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.length ? (
-           <div
-           className={`grid gap-8 ${
-             navigationMenu === 'profile' ? 'grid-cols-3' : 'grid-cols-3 '
-           } max-w-[45em]`}
-         >
-           {/* Profile or Portfolio Section */}
-           <div
-             className={`rounded p-4 col-span-1 ${
-               navigationMenu === 'profile'
-                 ? 'bg-gradient-to-br from-neutral-800 to-black'
-                 : 'bg-gradient-to-br from-blue-800 to-blue-500'
-             }`}
-           >
-             <img
-               src={
-                 navigationMenu === 'profile'
-                   ? 'path-to-profile-image.jpg'
-                   : 'path-to-portfolio-image.jpg'
-               }
-               alt={navigationMenu}
-               className="w-24 h-24 object-cover rounded-lg mb-4"  // Adjust width and height here
-             />
-             <span className="block font-bold text-base">
-               {navigationMenu === 'profile' ? 'Profile' : 'Portfolio'}
-             </span>
-             <span className="block text-sm opacity-70">
-               {navigationMenu === 'profile'
-                 ? 'A personal profile showcasing my skills'
-                 : 'A collection of my best works'}
-             </span>
-           </div>
-         
-           {/* Submenu Section */}
-           <div
-             className={`col-span-2 grid gap-6 ${
-               navigationMenu === 'profile' ? 'grid-cols-2 xl:grid-cols-2' : 'grid-cols-2 xl:grid-cols-2'
-             }`}
-           >
-             {navRoutes.find((route) => route.title === navigationMenu)?.subMenu?.map(
-               (subMenuItem, subIndex) => (
-                 <div key={subIndex} className="flex flex-col py-2">
-                   <NavLink
-                     to={subMenuItem.url}
-                     className="text-sm font-medium text-text-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
-                     onClick={() => setNavigationMenuOpen(false)}
-                   >
-                     {t(subMenuItem.title)}
-                   </NavLink>
-                   <span className="block text-xs text-text-secondary font-light leading-6 opacity-60">
-                     {/* Optional description for submenu items */}
-                     {subMenuItem.description ? t(subMenuItem.description) : ''}
-                   </span>
-                 </div>
-               )
-             )}
-           </div>
-         </div>
-         
-          ) : null}
-        </div>
-      ) : null}
+      {navigationMenuOpen && (
+        <NavigationSubMenu
+          navigationMenu={navigationMenu}
+          onMouseEnter={navigationMenuClearCloseTimeout}
+          onMouseLeave={navigationMenuLeave}
+        />
+      )}
     </>
   );
 };

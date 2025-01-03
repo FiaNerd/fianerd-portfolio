@@ -53,7 +53,7 @@ const Header = () => {
           <SelectLanguage />
           <NavLink
             to="/contact"
-            className="hidden font-sub-heading text-xl md:text-2xl font-medium md:block border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
+            className="hidden font-sub-heading text-xl md:text-xl font-medium md:block border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
             {t('contact')}
           </NavLink>
