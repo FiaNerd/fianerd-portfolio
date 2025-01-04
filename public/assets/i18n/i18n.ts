@@ -1,14 +1,15 @@
 import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
-import LanguageDetector from 'i18next-browser-languagedetector' // Import LanguageDetector module
+import { initReactI18next } from 'react-i18next'
+
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: 'sv',
+    lng: undefined,
     fallbackLng: ['en', 'sv'],
     interpolation: {
       escapeValue: false,
@@ -16,8 +17,20 @@ i18n
     backend: {
       loadPath: '/assets/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['home', 'heroSection', 'abouMe', "webSkills", "graphicSkills"],
-    defaultNS: 'home',
+    ns: ['home', 
+         'heroSection', 
+          'abouMe', 
+          "webSkills", 
+          "graphicSkills", 
+          'Skills', 
+          "Profile/Skills/otherSkills", 
+          "WebSkills"
+      ],
+      defaultNS: 'HeroSection', 
+      detection: {
+        order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
+        caches: ['localStorage', 'cookie'], 
+      },
   })
 
 export default i18n

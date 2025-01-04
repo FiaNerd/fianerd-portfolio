@@ -15,7 +15,7 @@ const GraphicSkills = () => {
   ];
 
   return (
-    <section id="graphic" className="container mx-auto px-4 md:px-10 py-8 md:py-12">
+    <section id="graphic" className="max-w-screen-xl mx-auto px-4 md:px-10 py-8 md:py-12">
       <motion.div 
         ref={ref} 
         initial="hidden" 

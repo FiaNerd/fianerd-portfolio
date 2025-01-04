@@ -53,7 +53,7 @@ const HomePage = () => {
         </SectionPlate>
       </div>
 
-      <SectionPlate id="profile">
+      <SectionPlate id="profile" >
         <Title
           id="me"
           title={t("profileTitle:titleProfile")}
@@ -72,7 +72,7 @@ const HomePage = () => {
           title={t("skillsTitle:titleSkills")}
           dot={t("skillsTitle:dot")}
           children={t("skillsTitle:subTitleSkills")}
-          className="text-[#535437] dark:text-[#69864e] bg-[#fff5d7] dark:bg-[#1b0909]"
+          className="text-[#535437] dark:text-[#489c80] bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky
         />
         <Skills />

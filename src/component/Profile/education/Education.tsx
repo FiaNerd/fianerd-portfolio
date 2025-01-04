@@ -6,7 +6,7 @@ const Education = () => {
 
   return (
     <section className="py-8">
-      <div className="container mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
+      <div className="max-w-screen-xl	mx-auto px-4 flex flex-col items-start lg:flex-row mb-24">
         <div className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
           <p className="-mb-2 text-text-accent dark:text-[#b5685c] uppercase tracking-loose">{t("titleWorkingAction")}</p>
           <h3 className="text-3xl not-italic text-text-accent dark:text-[#b5685c] md:text-4xl leading-normal md:leading-relaxed mb-2">{t("checkOut")}</h3>

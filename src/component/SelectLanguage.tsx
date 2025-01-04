@@ -1,5 +1,6 @@
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
@@ -16,6 +17,7 @@ const SelectLanguage = () => {
 
   const handleLanguageChange = (code: string) => {
     i18n.changeLanguage(code)
+    localStorage.setItem('i18nextLng', code)
     setSelectedLanguage(code)
     setIsOpen(false)
   }
@@ -25,15 +27,22 @@ const SelectLanguage = () => {
     { code: 'en', label: t('languages.en') },
   ]
 
-  // Display short language code in header button
   const selectedLanguageLabel =
-    LANGUAGES.find(
-      (lang) => lang.code === selectedLanguage
-    )?.code.toUpperCase() || 'Select'
+  LANGUAGES.find((lang) => lang.code === selectedLanguage)?.code.toUpperCase() || t('languages.select');
+
+
+const dropdownItemClass = clsx(
+  'bg-hover-text font-sub-heading text-[1.2rem] cursor-pointer',
+  'py-2 px-4 hover:text-hover-text hover:bg-accent-secondary',
+  'dark:text-text-primary dark:bg-bg-primary',
+  'dark:hover:text-bg-primary dark:hover:bg-bg-secondary'
+);
+
 
   return (
     <div ref={ref}>
      <button
+        aria-expanded={isOpen}
         className='flex flex-row items-center text-md font-sub-heading icon-language text-text-accent  dark:text-accent-primary dark:lg:text-bg-secondary hover:text-accent-secondary dark:hover:text-accent-primary'
         onClick={toggleDropdown}>
         <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem] pr-2' />
@@ -64,7 +73,7 @@ const SelectLanguage = () => {
           {LANGUAGES.map(({ code, label }) => (
             <li
               key={code}
-              className='bg-hover-text font-sub-heading text-[1.2rem] cursor-pointer text-text-accent dark:text-text-primary dark:bg-bg-primary hover:text-hover-text hover:bg-accent-secondary dark:hover:text-bg-primary dark:hover:bg-bg-secondary py-2 px-4'
+              className={dropdownItemClass}
               onClick={() => handleLanguageChange(code)}>
               {label}
             </li>
@@ -75,4 +84,4 @@ const SelectLanguage = () => {
   )
 }
 
-export default SelectLanguage
+export default SelectLanguage;

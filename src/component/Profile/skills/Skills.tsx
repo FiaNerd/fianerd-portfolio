@@ -1,5 +1,6 @@
 
 import GraphicSkills from "./GraphicSkills";
+import { OtherSkills } from "./OtherSkills";
 import WebSkills from "./WebSkills";
 
 const Skills = () => {
@@ -8,6 +9,7 @@ const Skills = () => {
     <div className="mx-auto">
       <WebSkills />
       <GraphicSkills />
+      <OtherSkills />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const WebSkills = () => {
   ];
 
   return (
-       <section id="web" className="container mx-auto px-4 md:px-6 lg:px-10 py-8 md:py-12">
+       <section id="web" className="max-w-screen-xl	mx-auto px-4 md:px-6 lg:px-10 py-8 md:py-12">
         <motion.div 
           ref={ref} 
           initial="hidden" 
@@ -29,7 +29,7 @@ const WebSkills = () => {
           className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-20 mb-8"
         >
 
-          <h1 className="text-center text-hover-text text-2xl md:text-3xl lg:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718]  py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
+          <h1 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718]  py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
             {t('webbDev')}
           </h1>
 
