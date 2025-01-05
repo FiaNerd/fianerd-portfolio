@@ -32,11 +32,6 @@ export const navRoutes: Route[] = [
         description: 'meDescription',
       },
       {
-        title: 'otherSkills',
-        url: '/#otherSkills',
-        description: 'otherSkillsDescription',
-      },
-      {
         title: 'skillsWeb',
         url: '/#web',
         description: 'skillsWebDescription',
@@ -45,6 +40,16 @@ export const navRoutes: Route[] = [
         title: 'skillsGraphic',
         url: '/#graphic',
         description: 'skillsGraphicDescription',
+      },
+      {
+        title: 'otherSkills',
+        url: '/#otherSkills',
+        description: 'otherSkillsDescription',
+      },
+      {
+        title: 'programsAndSoftwares',
+        url: '/#programsAndSoftwares',
+        description: 'programsAndSoftwaresDescription',
       },
       {
         title: 'experience',

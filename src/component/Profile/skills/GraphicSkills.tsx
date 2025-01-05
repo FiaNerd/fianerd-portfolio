@@ -72,7 +72,7 @@ const GraphicSkills = () => {
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textAI") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("textID") }}></p>
           <p className="text-text-primary mb-12" dangerouslySetInnerHTML={{ __html: t("textUX/UI") }}></p>
-          <p className="text-[#4b1718] dark:text-text-secondary font-sub-heading outline-dashed outline-2 outline-[#4b1718] dark:outline-bg-secondary outline-offset-4 italic font-normal py-2 px-4 p-2 rounded-md">
+          <p className="text-[#4b1718] dark:text-text-secondary font-sub-heading outline-dashed outline-2 outline-[#4b1718] dark:outline-bg-secondary outline-offset-4 italic font-normal py-2 px-4 p-2 rounded">
             {t('textGoal')}
           </p>
         </div>

@@ -79,7 +79,7 @@ const WebSkills = () => {
             <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textVue') }}></p>
             <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('textCMS') }}></p>
             <p className="text-text-primary mb-12" dangerouslySetInnerHTML={{ __html: t('textAzure') }}></p>
-            <p className="text-text-secondary font-sub-heading outline-dashed outline-2 outline-text-secondary dark:outline-[#69864e] outline-offset-4 italic font-normal py-2 px-4 p-2 rounded-md">
+            <p className="text-text-secondary font-sub-heading outline-dashed outline-2 outline-text-secondary dark:outline-[#69864e] outline-offset-4 italic font-normal py-2 px-4 p-2 rounded">
               {t('textGoal')}
             </p>
 
