@@ -26,7 +26,7 @@ const WebSkills = () => {
           initial="hidden" 
           animate={ctrls} 
           variants={vars} 
-          className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-20 mb-8"
+          className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8"
         >
 
           <h1 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718]  py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">

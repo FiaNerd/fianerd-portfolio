@@ -3,7 +3,6 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
 import { initReactI18next } from 'react-i18next'
 
-
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -15,22 +14,25 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: '/assets/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/assets/locales/{{lng}}/{{ns}}.json', // Dynamic loading of translation files
     },
-    ns: ['home', 
-         'heroSection', 
-          'abouMe', 
-          "webSkills", 
-          "graphicSkills", 
-          'Skills', 
-          "Profile/Skills/otherSkills", 
-          "WebSkills"
-      ],
-      defaultNS: 'HeroSection', 
-      detection: {
-        order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
-        caches: ['localStorage', 'cookie'], 
-      },
+    ns: [
+      'home', 
+      'heroSection', 
+      'aboutMe', 
+      "webSkills", 
+      "graphicSkills", 
+      'Skills', 
+      "Profile/Skills/goalsWebSkills", 
+      "Profile/Skills/otherSkills",   
+      "Profile/Skills/skills/programsAndSoftwares",   
+      "WebSkills"
+    ],
+    defaultNS: 'HeroSection', // Default namespace
+    detection: {
+      order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
+      caches: ['localStorage', 'cookie'],
+    },
   })
 
 export default i18n

@@ -32,6 +32,11 @@ export const navRoutes: Route[] = [
         description: 'meDescription',
       },
       {
+        title: 'otherSkills',
+        url: '/#otherSkills',
+        description: 'otherSkillsDescription',
+      },
+      {
         title: 'skillsWeb',
         url: '/#web',
         description: 'skillsWebDescription',

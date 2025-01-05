@@ -1,6 +1,6 @@
 
 import GraphicSkills from "./GraphicSkills";
-import { OtherSkills } from "./OtherSkills";
+import OtherSkills from "./OtherSkills";
 import WebSkills from "./WebSkills";
 
 const Skills = () => {
