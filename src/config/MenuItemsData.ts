@@ -43,7 +43,7 @@ export const navRoutes: Route[] = [
       },
       {
         title: 'otherSkills',
-        url: '/#otherSkills',
+        url: '/#other-skills',
         description: 'otherSkillsDescription',
       },
       {

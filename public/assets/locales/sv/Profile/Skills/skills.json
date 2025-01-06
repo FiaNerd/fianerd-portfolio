@@ -1,4 +1,21 @@
 {
+    "graphicSkills": {
+        "graphicSkillsTitle": "Grafiska färdigheter",
+        "subTitleSkills": "Kreativitet utan gränser",
+        "graphicTitle": "Grafisk design",
+        "subTitleGraphicSkills": "Konst möter syfte",
+        "titleGraphic": "En pixel i taget",
+        "titleGraphicSkills": "Behärska kreativitet inom design",
+        "titleDesign": "Designa drömmar\nPixel för pixel",
+        "subTitleGraphic": "– Omvandla idéer till design",
+        "textTitleGraphicGoal": "Mål och fokus inom grafisk design 2025",
+
+        "textPS": "<b>Photoshop:</b> Kontinuerligt upptäcka nya tekniker och förfina mina färdigheter för att skapa visuellt imponerande designer.",
+        "textAI": "<b>Illustrator:</b> Ge liv åt idéer genom vektorbaserad konst och design.",
+        "textID": "<b>InDesign:</b> Skapa visuellt övertygande layouter för tryckta och digitala medier, med fokus på typografi, komposition och visuell berättande.",
+        "textUX/UI": "<b>UX / UI:</b> Fördjupa min förståelse för användbarhet, interaktionsdesign och skapa intuitiva, användarcentrerade upplevelser som binder samman funktionalitet och estetik.",
+        "textGoal": "För att uppnå mina designmål 2025 krävs en balans mellan kreativitet och struktur, där varje projekt blir ett steg mot att förfina mina färdigheter och skapa meningsfulla, visuella upplevelser."
+    },
     "otherSkills": {
         "otherSkillsTitle": "Övriga färdigheter",
         "otherSkillsTitleLanguageAndDriving": "Språk och körkort",

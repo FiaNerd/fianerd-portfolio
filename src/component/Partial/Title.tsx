@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import TitleAnimation from "./TitleAnimation";
 
 interface IProps {
-  id: string;
+  id?: string;
   title: string;
   dot: string;
   children: string;

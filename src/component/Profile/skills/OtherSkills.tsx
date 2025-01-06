@@ -8,8 +8,8 @@ import ProgramAndSoftware from "./ProgramAndSoftware";
     const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
 
 return (
+    <section>
         <motion.div  
-            id="otherSkills"
             ref={ref} 
             initial="hidden" 
             animate={ctrls} 
@@ -54,6 +54,7 @@ return (
                 </section>
             </div>
         </motion.div>
+        </section>
     );
 };
 

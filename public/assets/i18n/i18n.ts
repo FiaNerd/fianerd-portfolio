@@ -21,10 +21,10 @@ i18n
       'heroSection', 
       'aboutMe', 
       "webSkills", 
-      "graphicSkills", 
+      "Profile/Skills/skills/graphicSkills", 
       'Skills', 
       "Profile/Skills/goalsWebSkills", 
-      "Profile/Skills/otherSkills",   
+      "Profile/Skills/skills/otherSkills",   
       "Profile/Skills/skills/programsAndSoftwares",   
       "WebSkills"
     ],
