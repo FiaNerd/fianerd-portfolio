@@ -14,7 +14,7 @@ const Skills = () => {
         <Title
           title={t("webSkills.webSkillsTitle")}
           dot="."
-          children="Skills related to web development."
+          children={t("webSkills.subTitleWebSkills")}
           className="text-[#535437] dark:text-[#489c80] bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky
         />

@@ -20,7 +20,7 @@ i18n
       'home', 
       'heroSection', 
       'aboutMe', 
-      "webSkills", 
+      "Profile/Skills/skills/webSkills", 
       "Profile/Skills/skills/graphicSkills", 
       'Skills', 
       "Profile/Skills/goalsWebSkills", 
