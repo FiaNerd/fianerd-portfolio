@@ -5,15 +5,15 @@ import ProgramAndSoftware from "./ProgramAndSoftware";
 
  const OtherSkills = () => {
     const { t } = useTranslation(["Profile/Skills/skills"]);
-    const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
+    //   const { ref: ref1, ctrls: ctrls1, vars: vars1 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
 
 return (
-    <section >
-        <motion.div  
-            ref={ref} 
-            initial="hidden" 
-            animate={ctrls} 
-            variants={vars} 
+    <div >
+        <div  
+            // ref={ref1} 
+            // initial="hidden" 
+            // animate={ctrls1} 
+            // variants={vars1} 
             className="max-w-screen-xl mx-auto px-4 md:px-10 md:py-12 grid grid-rows-1 lg:grid-cols-2 gap-8 xl:px-20 text-center mb-12 lg:mb-20 justify-center "
             >
                 <div>
@@ -51,8 +51,8 @@ return (
                 <section id="programsAndSoftwares" >
                     <ProgramAndSoftware />
                 </section>
-        </motion.div>
-        </section>
+        </div>
+        </div>
     );
 };
 

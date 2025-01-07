@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import { navRoutsAbout } from "../../../config/MenuAboutMeData";
+import { NavLink, To } from "react-router-dom";
+
 import useAnimateIn from "../../../hook/useAnimation";
 import SectionPlate from "../../Partial/SectionPlate";
+import { navRoutes } from "../../../config/MenuItemsData";
 
 const AboutNav = () => {
     const { t } = useTranslation('home');
@@ -14,7 +15,7 @@ const AboutNav = () => {
     return (
         <SectionPlate>
             <ul className=" flex flex-wrap gap-6 md:gap-20 justify-center mx-auto mb-12 pb-8">
-                {navRoutsAbout.map((item) => {
+                {navRoutes.map((item: { title: any; url: To; }) => {
                     return (
                         <motion.li 
                             ref={ref} 

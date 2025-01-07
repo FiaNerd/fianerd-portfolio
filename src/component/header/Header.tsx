@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useLayoutEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -18,51 +18,55 @@ const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavigating, setIsNavigating] = useState(false);
+  const headerRef = useRef<HTMLDivElement | null>(null)
+
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  useLayoutEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight);
+    }
+  }, [isHidden]);
 
   // Detect navigation between pages
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
     setIsNavigating(true);
-
-    const timer = setTimeout(() => setIsNavigating(false), 800);
+    const timer = setTimeout(() => setIsNavigating(false), 500);
     return () => clearTimeout(timer);
   }, [location]);
 
-
-useEffect(() => {
-  if (!isNavigating) {
-    const initialScrollY = window.scrollY;
-    if (initialScrollY > 50) {
-      setIsHidden(true); 
+  useEffect(() => {
+    if (!isNavigating) {
+      const initialScrollY = window.scrollY;
+      if (initialScrollY > 0) {
+        setIsHidden(true); 
+      }
     }
-  }
-}, [isNavigating]);
+  }, [isNavigating]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isNavigating) return;
+      const currentScrollY = window.scrollY;
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (isNavigating) return;
+      if (currentScrollY > lastScrollY && currentScrollY > 0) {
+        setIsHidden(true); // Hide header when scrolling down
+      } else if (currentScrollY < lastScrollY) {
+        setIsHidden(false); // Show header when scrolling up
+      }
+      setLastScrollY(currentScrollY);
+    };
 
-    const currentScrollY = window.scrollY;
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, isNavigating]);
 
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      setIsHidden(true); // Hide header when scrolling down
-    } else if (currentScrollY < lastScrollY) {
-      setIsHidden(false); // Show header when scrolling up
-    }
-
-    setLastScrollY(currentScrollY);
-  };
-
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, [lastScrollY, isNavigating]);
-
-
-  useSmoothScroll(isHidden ? 0 : 100);
+  useSmoothScroll(isHidden ? 0 : headerHeight);
 
   return (
     <div
+      ref={headerRef}
       id="header"
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         isHidden ? '-translate-y-full' : 'translate-y-0'

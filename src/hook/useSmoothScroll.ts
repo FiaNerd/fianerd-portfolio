@@ -18,7 +18,7 @@ export const useSmoothScroll = (headerHeight: number) => {
             top: element.offsetTop - headerHeight,
             behavior: "smooth",
           });
-        }, 100);
+        });
       }
     }
   }, [location, headerHeight]); 

@@ -9,7 +9,7 @@ const Skills = () => {
 
   return (
     <div className="mx-auto top-0 left-0 ">
-      <div id="web">
+      <section id="web">
         <Title
           title={t("webSkills.webSkillsTitle")}
           dot="."
@@ -18,20 +18,20 @@ const Skills = () => {
           sticky
         />
         <WebSkills />
-      </div>
+      </section>
 
-      <div id="graphic" className="top-0 left-0">
+      <section id="graphic" className="top-0 left-0">
         <Title
           title={t('graphicSkills.graphicSkillsTitle')}
           dot="."
           children={t("graphicSkills.subTitleGraphicSkills")}
-          className="text-[#ca5b87] dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
+          className="text-[#4b1718] dark:text-bg-secondary  bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky
         />
         <GraphicSkills />
-      </div>
+      </section>
 
-      <div id="other-skills" className="top-0 left-0">
+      <section id="other-skills" className="top-0 left-0">
         <Title
           title="Other Skills"
           dot="."
@@ -40,7 +40,7 @@ const Skills = () => {
           sticky
         />
         <OtherSkills />
-      </div>
+      </section>
     </div>
   );
 };

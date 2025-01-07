@@ -26,8 +26,34 @@ const HomePage = () => {
     }
   }, []);
 
-
   useSmoothScroll(headerHeight);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          window.history.replaceState(null, '', `/#${entry.target.id}`);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <div
@@ -38,51 +64,50 @@ const HomePage = () => {
       className="bg-blend-multiply"
     >
       {/* Hero Section */}
-      <div id="home" className="relative">
+      <section id="home" className="relative">
         <HeroSection />
-      </div>
+      </section>
 
       {/* Profile Section */}
-      <div id="profile">
+      <section id="profile">
         <Title
           id="me"
           title={t("profileTitle:titleProfile")}
           dot={t("profileTitle:dot")}
           children={t("profileTitle:intro")}
-          className="text-[#ca5b87] top-0 dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
+          className="section text-[#ca5b87] top-0 dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
           // style={{
-          //   paddingTop: `${headerHeight -100}px`,
+          //   paddingTop: `${headerHeight - 100}px`,
           //   transition: "padding-top 0.3s ease",
           // }}
           sticky
         />
         <AboutMe />
-      </div>
+      </section>
 
       {/* Skills Section */}
-      <div id="skills" className="top-0 ">
+      <section id="skills" className="section top-0 ">
         <Skills />
-      </div>
+      </section>
 
       {/* Work Experience Section */}
-      <div id="work-experience">
+      <section id="work-experience">
         <Title
           id="experience"
           title={t("workTitle:titleWorkExperience")}
           dot={t("workTitle:dot")}
           children={t("workTitle:subTitleWorkExperience")}
           className="text-bg-secondary dark:text-text-accent bg-[#fff5d7] dark:bg-[#1b0909]"
-          // style={{ paddingTop: `${headerHeight + 100}px` }}
+          // style={{ paddingTop: `${headerHeight}px` }}
           sticky
         />
         <WorkExperience />
-      </div>
+      </section>
 
       {/* Education Section */}
-      <div id="education">
+      <section id="education">
         <Title
-          id="education"
           title={t("educationTitle:titleEducation")}
           dot={t("educationTitle:dot")}
           children={t("educationTitle:subTitleEducation")}
@@ -91,12 +116,11 @@ const HomePage = () => {
           sticky
         />
         <Education />
-      </div>
+      </section>
 
       {/* Hobbies Section */}
-      <div id="hobbies">
+      <section id="hobbies">
         <Title
-          id="hobbies"
           title={t("hobbiesTitle:titleHobbie")}
           dot={"!"}
           children={t("hobbiesTitle:subTitleHobbie")}
@@ -109,7 +133,7 @@ const HomePage = () => {
           sticky
         />
         <Hobbies />
-      </div>
+      </section>
     </div>
   );
 };

@@ -5,7 +5,8 @@ import ProgressBar from "./ProgressBar";
 
 const GraphicSkills = () => {
   const { t } = useTranslation("Profile/Skills/skills");
-  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
+    // const { ref: ref1, ctrls: ctrls1, vars: vars1 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
+    // const { ref: ref2, ctrls: ctrls2, vars: vars2 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
 
   const skillsGraphic = [
     { name: "PhotoShop", percentage: 80 },
@@ -15,12 +16,12 @@ const GraphicSkills = () => {
   ];
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4 md:px-10 py-8 md:py-12">
-      <motion.div 
-        ref={ref} 
-        initial="hidden" 
-        animate={ctrls} 
-        variants={vars} 
+    <div className="max-w-screen-xl mx-auto px-4 md:px-10 py-8 md:py-12">
+      <div 
+        // ref={ref1} 
+        // initial="hidden" 
+        // animate={ctrls1} 
+        // variants={vars1} 
         className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8"
       >
         {/* H1 in the first row, first column */}
@@ -46,14 +47,14 @@ const GraphicSkills = () => {
           </h3>
         </div>
 
-      </motion.div>
+      </div>
 
 
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={ctrls}
-        variants={vars}
+      <div
+        // ref={ref2}
+        // initial="hidden"
+        // animate={ctrls2}
+        // variants={vars2}
         className="grid grid-cols-1 lg:grid-cols-[5%_50%_auto] gap-4 mb-8"
       >
 
@@ -89,8 +90,8 @@ const GraphicSkills = () => {
             </div>
           ))}
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </div>
   );
 };
 
