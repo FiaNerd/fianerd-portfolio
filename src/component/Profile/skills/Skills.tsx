@@ -36,7 +36,7 @@ const Skills = () => {
           title="Other Skills"
           dot="."
           children="Other technical and soft skills."
-          className="text-text-accent dark:text-[#b5685c] bg-[#fff5d7] dark:bg-[#1b0909]"
+          className="text-text-accent dark:text-[#48a07a] bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky
         />
         <OtherSkills />

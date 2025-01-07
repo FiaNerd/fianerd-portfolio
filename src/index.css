@@ -10,13 +10,24 @@
 @layer base {
   body {
     @apply bg-no-repeat bg-cover h-full;
+    scroll-padding-top: var(--header-height); 
     background: var(--color-bg-mode);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     font-style: normal;
   }
-
+/* 
+  #header {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+   */
   h1 {
     @apply font-bold font-heading mb-2 tracking-wider;
     font-size: clamp(24px, 5vw, 48px); 

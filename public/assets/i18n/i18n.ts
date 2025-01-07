@@ -22,7 +22,6 @@ i18n
       'aboutMe', 
       "Profile/Skills/skills/webSkills", 
       "Profile/Skills/skills/graphicSkills", 
-      'Skills', 
       "Profile/Skills/goalsWebSkills", 
       "Profile/Skills/skills/otherSkills",   
       "Profile/Skills/skills/programsAndSoftwares",   

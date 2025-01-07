@@ -8,7 +8,6 @@ import ProgramAndSoftware from "./ProgramAndSoftware";
     //   const { ref: ref1, ctrls: ctrls1, vars: vars1 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
 
 return (
-    <div >
         <div  
             // ref={ref1} 
             // initial="hidden" 
@@ -16,7 +15,7 @@ return (
             // variants={vars1} 
             className="max-w-screen-xl mx-auto px-4 md:px-10 md:py-12 grid grid-rows-1 lg:grid-cols-2 gap-8 xl:px-20 text-center mb-12 lg:mb-20 justify-center "
             >
-                <div>
+                <section>
                     <h1 className="text-center text-hover-text mb-8 text-2xl md:text-3xl lg:text-5xl bg-[#4b1718] dark:bg-[#48a07a] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
                         {t('otherSkills.otherSkillsTitle')}
                     </h1>
@@ -46,12 +45,11 @@ return (
                                     {t('otherSkills.otherSkillsDrivingTitle').split(":")[1]}
                             </p>
                         </div>
-                    </div>
+                    </section>
 
                 <section id="programsAndSoftwares" >
                     <ProgramAndSoftware />
                 </section>
-        </div>
         </div>
     );
 };

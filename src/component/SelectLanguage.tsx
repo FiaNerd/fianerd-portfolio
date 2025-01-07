@@ -43,7 +43,7 @@ const dropdownItemClass = clsx(
     <div ref={ref}>
      <button
         aria-expanded={isOpen}
-        className='flex flex-row items-center text-md font-sub-heading icon-language text-text-accent  dark:text-accent-primary dark:lg:text-bg-secondary hover:text-accent-secondary dark:hover:text-accent-primary'
+        className='flex flex-row items-center text-md font-sub-heading icon-language text-text-accent dark:text-accent-primary dark:lg:text-bg-secondary hover:text-accent-secondary dark:hover:text-accent-primary'
         onClick={toggleDropdown}>
         <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem] pr-2' />
 
