@@ -1,23 +1,25 @@
+
+
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-export const useSmoothScroll = () => {
+export const useSmoothScroll = (headerHeight: number) => {
   const location = useLocation();
 
   useEffect(() => {
     const hash = location.hash.replace("#", "");
-    const header = document.getElementById("header");
-    const headerHeight = header ? header.offsetHeight : 0;
-
+    
     if (hash) {
       const element = document.getElementById(hash);
-
+      
       if (element) {
-        window.scrollTo({
-          top: element.offsetTop - headerHeight,
-          behavior: "smooth",
-        });
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - headerHeight,
+            behavior: "smooth",
+          });
+        }, 100);
       }
     }
-  }, [location]);
+  }, [location, headerHeight]); 
 };

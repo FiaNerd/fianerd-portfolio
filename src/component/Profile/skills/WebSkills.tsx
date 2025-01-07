@@ -20,7 +20,7 @@ const WebSkills = () => {
   ];
 
   return (
-       <section  className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-10 py-8 md:py-12">
+       <section  className="max-w-screen-xl mx-auto top-0 left-0 px-4 md:px-6 lg:px-10 py-8 md:py-12">
         <motion.div 
           ref={ref} 
           initial="hidden" 

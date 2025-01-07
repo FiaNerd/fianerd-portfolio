@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import SectionPlate from "../../Partial/SectionPlate";
 import Title from "../../Partial/Title";
 import GraphicSkills from "./GraphicSkills";
 import OtherSkills from "./OtherSkills";
@@ -9,8 +8,8 @@ const Skills = () => {
   const { t } = useTranslation(["Profile/Skills/skills"]);
 
   return (
-    <div className="mx-auto">
-      <SectionPlate id="web">
+    <div className="mx-auto top-0 left-0 ">
+      <div id="web">
         <Title
           title={t("webSkills.webSkillsTitle")}
           dot="."
@@ -19,9 +18,9 @@ const Skills = () => {
           sticky
         />
         <WebSkills />
-      </SectionPlate>
+      </div>
 
-      <SectionPlate id="graphic">
+      <div id="graphic" className="top-0 left-0">
         <Title
           title={t('graphicSkills.graphicSkillsTitle')}
           dot="."
@@ -30,9 +29,9 @@ const Skills = () => {
           sticky
         />
         <GraphicSkills />
-      </SectionPlate>
+      </div>
 
-      <SectionPlate id="other-skills">
+      <div id="other-skills" className="top-0 left-0">
         <Title
           title="Other Skills"
           dot="."
@@ -41,7 +40,7 @@ const Skills = () => {
           sticky
         />
         <OtherSkills />
-      </SectionPlate>
+      </div>
     </div>
   );
 };

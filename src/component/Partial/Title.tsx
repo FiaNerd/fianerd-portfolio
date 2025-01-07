@@ -16,8 +16,8 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
   return (
     <motion.div
       id={id}
-      className={`flex flex-col items-center text-center mb-12 md:mb-20 ${className || ""} ${
-        sticky ? "sticky z-10 top-0" : ""
+      className={`flex flex-col top-0 items-center text-center mb-12 md:mb-20 ${className || ""} ${
+        sticky ? "sticky z-10 top-0 left-0" : ""
       }`}
       style={style}
     >

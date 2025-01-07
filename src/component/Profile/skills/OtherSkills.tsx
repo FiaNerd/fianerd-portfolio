@@ -8,7 +8,7 @@ import ProgramAndSoftware from "./ProgramAndSoftware";
     const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: false });
 
 return (
-    <section>
+    <section >
         <motion.div  
             ref={ref} 
             initial="hidden" 

@@ -20,16 +20,13 @@ const Header = () => {
   const [isNavigating, setIsNavigating] = useState(false);
 
   useEffect(() => {
-    setIsHidden(false); 
+    setIsHidden(false);
     setIsNavigating(true);
-  
-    const timer = setTimeout(() => setIsNavigating(false), 800); 
+    window.scrollTo(0, 0); // Ensure the page scrolls to the top
+    const timer = setTimeout(() => setIsNavigating(false), 800);
     return () => clearTimeout(timer);
   }, [location]);
   
-  useEffect(() => {
-    setIsHidden(false);
-  }, [location])
   
   
   useEffect(() => {
