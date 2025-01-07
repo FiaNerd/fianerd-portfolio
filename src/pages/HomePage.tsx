@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import HeroSection from "../component/heroSection/HeroSection";
 import Hobbies from "../component/hobbies/Hobbies";
@@ -19,14 +19,22 @@ const HomePage = () => {
     "hobbiesTitle",
   ]);
 
+  useLayoutEffect(() => {
+    const header = document.getElementById("header");
+    if (header) {
+      setHeaderHeight(header.getBoundingClientRect().height);
+    }
+  }, []);
+
+
   useSmoothScroll(headerHeight);
 
   return (
     <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: "padding-top 0.3s ease",
-      }}
+      // style={{
+      //   paddingTop: `${headerHeight}px`,
+      //   transition: "padding-top 0.3s ease",
+      // }}
       className="bg-blend-multiply"
     >
       {/* Hero Section */}
@@ -43,14 +51,17 @@ const HomePage = () => {
           children={t("profileTitle:intro")}
           className="text-[#ca5b87] top-0 dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
-          style={{ paddingTop: `${headerHeight + 20}px` }} // Adjust for header height
+          // style={{
+          //   paddingTop: `${headerHeight -100}px`,
+          //   transition: "padding-top 0.3s ease",
+          // }}
           sticky
         />
         <AboutMe />
       </div>
 
       {/* Skills Section */}
-      <div id="skills" className="top-0 bg-[#fff5d7] dark:bg-[#df4848]">
+      <div id="skills" className="top-0 ">
         <Skills />
       </div>
 
@@ -62,7 +73,7 @@ const HomePage = () => {
           dot={t("workTitle:dot")}
           children={t("workTitle:subTitleWorkExperience")}
           className="text-bg-secondary dark:text-text-accent bg-[#fff5d7] dark:bg-[#1b0909]"
-          style={{ paddingTop: `${headerHeight + 20}px` }}
+          // style={{ paddingTop: `${headerHeight + 100}px` }}
           sticky
         />
         <WorkExperience />
@@ -76,7 +87,7 @@ const HomePage = () => {
           dot={t("educationTitle:dot")}
           children={t("educationTitle:subTitleEducation")}
           className="text-text-accent dark:text-[#b5685c] bg-[#fff5d7] dark:bg-[#1b0909]"
-          style={{ paddingTop: `${headerHeight + 20}px` }}
+          // style={{ paddingTop: `${headerHeight + 20}px` }}
           sticky
         />
         <Education />
@@ -91,10 +102,10 @@ const HomePage = () => {
           children={t("hobbiesTitle:subTitleHobbie")}
           className="text-hover-text top-0 dark:text-accent-primary bg-slate-900 dark:bg-stone-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary px-4"
-          style={{
-            paddingTop: `${headerHeight + 20}px`,
-            transition: "padding-top 0.3s ease",
-          }}
+          // style={{
+          //   paddingTop: `${headerHeight + 20}px`,
+          //   transition: "padding-top 0.3s ease",
+          // }}
           sticky
         />
         <Hobbies />

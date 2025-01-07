@@ -1,5 +1,4 @@
 
-
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -13,6 +12,7 @@ export const useSmoothScroll = (headerHeight: number) => {
       const element = document.getElementById(hash);
       
       if (element) {
+        // Wait for the headerHeight to be updated
         setTimeout(() => {
           window.scrollTo({
             top: element.offsetTop - headerHeight,

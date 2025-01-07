@@ -19,38 +19,44 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavigating, setIsNavigating] = useState(false);
 
+  // Detect navigation between pages
   useEffect(() => {
-    setIsHidden(false);
+    window.scrollTo(0, 0);
     setIsNavigating(true);
-    window.scrollTo(0, 0); // Ensure the page scrolls to the top
+
     const timer = setTimeout(() => setIsNavigating(false), 800);
     return () => clearTimeout(timer);
   }, [location]);
-  
-  
-  
+
+  useEffect(() => {
+    if (!isNavigating) {
+      const initialScrollY = window.scrollY;
+      if (initialScrollY > 50) {
+        setIsHidden(true); 
+      }
+    }
+  }, [isNavigating]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (isNavigating) return;
-  
+
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
+        setIsHidden(true); // Hide header when scrolling down
+      } else if (currentScrollY < lastScrollY) {
+        setIsHidden(false); // Show header when scrolling up
       }
-  
+
       setLastScrollY(currentScrollY);
     };
-  
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, isNavigating]);
-  
-  
 
-  useSmoothScroll();
+  useSmoothScroll(isHidden ? 0 : 100);
 
   return (
     <div
