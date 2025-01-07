@@ -28,33 +28,36 @@ const Header = () => {
     return () => clearTimeout(timer);
   }, [location]);
 
-  useEffect(() => {
-    if (!isNavigating) {
-      const initialScrollY = window.scrollY;
-      if (initialScrollY > 50) {
-        setIsHidden(true); 
-      }
+
+useEffect(() => {
+  if (!isNavigating) {
+    const initialScrollY = window.scrollY;
+    if (initialScrollY > 50) {
+      setIsHidden(true); 
     }
-  }, [isNavigating]);
+  }
+}, [isNavigating]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isNavigating) return;
 
-      const currentScrollY = window.scrollY;
+useEffect(() => {
+  const handleScroll = () => {
+    if (isNavigating) return;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsHidden(true); // Hide header when scrolling down
-      } else if (currentScrollY < lastScrollY) {
-        setIsHidden(false); // Show header when scrolling up
-      }
+    const currentScrollY = window.scrollY;
 
-      setLastScrollY(currentScrollY);
-    };
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      setIsHidden(true); // Hide header when scrolling down
+    } else if (currentScrollY < lastScrollY) {
+      setIsHidden(false); // Show header when scrolling up
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isNavigating]);
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, [lastScrollY, isNavigating]);
+
 
   useSmoothScroll(isHidden ? 0 : 100);
 
