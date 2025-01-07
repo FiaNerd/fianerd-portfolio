@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
 import Button from "../../Partial/Button";
-import Title from "../../Partial/Title";
 
 const AboutMe = () => {
   const { t } = useTranslation("aboutMe");

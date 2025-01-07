@@ -20,40 +20,56 @@ const HomePage = () => {
     "hobbiesTitle",
   ]);
 
+  // useEffect(() => {
+  //   const header = document.getElementById("header");
+
+  //   const handleResize = () => {
+  //     const height = header?.getBoundingClientRect().height || 0;
+  //     setHeaderHeight(height);
+  //   };
+
+  //   handleResize(); // Initial calculation
+  //   window.addEventListener("resize", handleResize); // Recalculate on window resize
+
+  //   return () => window.removeEventListener("resize", handleResize); // Cleanup
+  // }, []);
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
+
   useEffect(() => {
-    const header = document.getElementById("header");
-
-    const handleResize = () => {
-      const height = header?.getBoundingClientRect().height || 0;
+    const header = document.getElementById('header');
+    if (header) {
+      const height = header.getBoundingClientRect().height;
       setHeaderHeight(height);
-    };
+    }
+  }, [headerHeight]);
+  
 
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Use smooth scroll
   useSmoothScroll();
 
   return (
-    <>
-      <div
-        style={{
-          paddingTop: `${headerHeight}px`,
-          transition: "padding-top 0.3s ease",
-        }}
-        className="bg-blend-multiply"
-      >
-        <SectionPlate id="home" className="relative">
-          <HeroSection />
-        </SectionPlate>
-      </div>
+    <div
+      style={{
+        paddingTop: `${headerHeight}px`, // Adds space below header
+        transition: "padding-top 0.3s ease",
+      }}
+      className="bg-blend-multiply"
+    >
+      {/* Hero Section */}
+      <SectionPlate id="home" className="relative">
+        <HeroSection />
+      </SectionPlate>
 
-      <SectionPlate id="profile" >
+      {/* Profile Section */}
+      <SectionPlate
+        id="profile"
+        // style={{
+        //   marginTop: `calc(${headerHeight}px + 20px)`,
+        // }}
+      >
         <Title
           id="me"
           title={t("profileTitle:titleProfile")}
@@ -62,16 +78,19 @@ const HomePage = () => {
           className="text-[#ca5b87] dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
           sticky
+          // style={{
+          //   marginTop: `calc(${headerHeight}px + 20px)`,
+          // }}
         />
         <AboutMe />
       </SectionPlate>
 
-     
-
+      {/* Skills Section */}
       <SectionPlate id="skills">
         <Skills />
       </SectionPlate>
 
+      {/* Work Experience Section */}
       <SectionPlate id="work-experience">
         <Title
           id="experience"
@@ -84,6 +103,7 @@ const HomePage = () => {
         <WorkExperience />
       </SectionPlate>
 
+      {/* Education Section */}
       <SectionPlate id="education">
         <Title
           id="education"
@@ -91,11 +111,15 @@ const HomePage = () => {
           dot={t("educationTitle:dot")}
           children={t("educationTitle:subTitleEducation")}
           className="text-text-accent dark:text-[#b5685c] bg-[#fff5d7] dark:bg-[#1b0909]"
+          // style={{
+          //   marginTop: `calc(${headerHeight} - 20em )`,
+          // }}
           sticky
         />
         <Education />
       </SectionPlate>
 
+      {/* Hobbies Section */}
       <SectionPlate id="hobbies">
         <Title
           id="hobbies"
@@ -108,7 +132,7 @@ const HomePage = () => {
         />
         <Hobbies />
       </SectionPlate>
-    </>
+    </div>
   );
 };
 

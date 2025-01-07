@@ -48,11 +48,9 @@ return (
                         </div>
                     </div>
 
-            <div>
-                <section id="programsAndSoftwares" className="">
+                <section id="programsAndSoftwares" >
                     <ProgramAndSoftware />
                 </section>
-            </div>
         </motion.div>
         </section>
     );

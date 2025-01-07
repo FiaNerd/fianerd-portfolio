@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const useVisibility = (options: IntersectionObserverInit = {}) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -6,6 +6,7 @@ const useVisibility = (options: IntersectionObserverInit = {}) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
+
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setIsVisible(true);

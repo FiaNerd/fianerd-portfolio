@@ -69,7 +69,7 @@ const WebSkills = () => {
 
           {/* Middle Column */}
           <div className="sm:col-span-1 order-last lg:order-none md:pr-8">
-            <p className="italic font-medium underline decoration-wavy text-center underline-offset-8 derocation-text-secondary dark:decoration-text-secondary text-md md:text-2xl md:mb-8 text-[#535437] dark:text-[#69864e]">{t('textTitleDevGoal')}</p>
+            <p className="italic font-medium underline decoration-wavy text-center underline-offset-8 derocation-text-secondary dark:decoration-text-secondary text-md md:text-2xl md:mb-8 text-[#535437] dark:text-[#69864e]">{t('webSkills.textTitleDevGoal')}</p>
             <h5 className="text-text-secondary not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('webSkills.titleBE') }}></h5>
             <p dangerouslySetInnerHTML={{ __html: t('webSkills.textBE') }}></p>
             <p dangerouslySetInnerHTML={{ __html: t('webSkills.textDB') }}></p>

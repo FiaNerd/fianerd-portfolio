@@ -1,10 +1,9 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
-import { useHeaderVisibility } from '../../hook/useHeaderVisibility';
 import { useSidebarWidth } from '../../hook/useSidebarWidth';
-import { useSmoothScroll } from '../../hook/useSmoothScroll'; // Import smooth scroll hook
+import { useSmoothScroll } from '../../hook/useSmoothScroll';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
@@ -14,16 +13,53 @@ const Header = () => {
   const { t } = useTranslation(['translation']);
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
-  const headerVisible = useHeaderVisibility();
   const sidebarWidth = useSidebarWidth();
+  const location = useLocation();
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isNavigating, setIsNavigating] = useState(false);
 
-  useSmoothScroll(); 
+  useEffect(() => {
+    setIsHidden(false); 
+    setIsNavigating(true);
+  
+    const timer = setTimeout(() => setIsNavigating(false), 800); 
+    return () => clearTimeout(timer);
+  }, [location]);
+  
+  useEffect(() => {
+    setIsHidden(false);
+  }, [location])
+  
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isNavigating) return;
+  
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+  
+      setLastScrollY(currentScrollY);
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, isNavigating]);
+  
+  
+
+  useSmoothScroll();
 
   return (
     <div
       id="header"
-      className={`fixed top-0 z-50 transition-transform duration-300 ${
-        headerVisible ? 'translate-y-0' : '-translate-y-full'
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+        isHidden ? '-translate-y-full' : 'translate-y-0'
       } backdrop-blur-2xl bg-bg-primary/5 dark:bg-bg-secondary/10`}
       style={{
         left: `${sidebarWidth}px`,
@@ -39,7 +75,7 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-        <NavLink  to="/" className="flex-shrink-0">
+        <NavLink to="/" className="flex-shrink-0">
           <img
             src={`/assets/images/logos/Logo${currentTheme === 'dark' ? 'Dark' : 'Light'}.svg`}
             alt="Logo"
@@ -47,7 +83,7 @@ const Header = () => {
           />
         </NavLink>
 
-        <div className="hidde lg:flex">
+        <div className="hidden lg:flex">
           <NavbarDesktop />
         </div>
 
@@ -56,7 +92,7 @@ const Header = () => {
           <SelectLanguage />
           <NavLink
             to="/contact"
-            className="hidden lg:flex font-sub-heading text-lg lg:text-xl font-medium  border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
+            className="hidden lg:flex font-sub-heading text-lg lg:text-xl font-medium border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
             {t('contact')}
           </NavLink>
