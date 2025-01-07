@@ -18,7 +18,7 @@ const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavigating, setIsNavigating] = useState(false);
-  const headerRef = useRef<HTMLDivElement | null>(null)
+  const headerRef = useRef<HTMLDivElement | null>(null);
 
   const [headerHeight, setHeaderHeight] = useState(0);
 
@@ -26,9 +26,8 @@ const Header = () => {
     if (headerRef.current) {
       setHeaderHeight(headerRef.current.offsetHeight);
     }
-  }, [isHidden]);
+  }, [isHidden]);  // This should only trigger if the header's visibility changes
 
-  // Detect navigation between pages
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
     setIsNavigating(true);
@@ -62,15 +61,13 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, isNavigating]);
 
-  useSmoothScroll(isHidden ? 0 : headerHeight);
+  useSmoothScroll(headerHeight);
 
   return (
     <div
       ref={headerRef}
       id="header"
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
-        isHidden ? '-translate-y-full' : 'translate-y-0'
-      } backdrop-blur-2xl bg-bg-primary/5 dark:bg-bg-secondary/10`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} backdrop-blur-2xl bg-bg-primary/5 dark:bg-bg-secondary/10`}
       style={{
         left: `${sidebarWidth}px`,
         width: `calc(100% - ${sidebarWidth}px)`,
@@ -116,4 +113,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header
