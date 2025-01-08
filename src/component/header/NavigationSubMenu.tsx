@@ -22,7 +22,7 @@ const NavigationSubMenu = ({
 
   return (
     <div
-      className="absolute z-10 bg-bg-primary shadow-sm p-6 rounded-l mt-[3.8em] "
+      className="absolute z-10 bg-hover-text shadow-sm p-6 rounded-l mt-[3.8em] "
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

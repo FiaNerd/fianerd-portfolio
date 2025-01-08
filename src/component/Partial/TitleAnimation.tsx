@@ -78,7 +78,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
         ))}
         <motion.span
           variants={child}
-          className="text-6xl md:text-[6rem] lg:leading-[11.4rem] lg:text-[12rem] ml-[-0.04em]"
+          className="text-6xl md:text-[6rem] lg:leading-[6rem] lg:text-[12rem] ml-[-0.04em]"
         >
           {dot}
         </motion.span>
