@@ -87,7 +87,7 @@ const NavbarMobile = () => {
       </AnimatePresence>
       <div
         className={`z-50 ${
-          showMenu ? 'fixed w-2/10 sm:w-2/12 text-accent-primary mr-4' : 'text-text-primary y'
+          showMenu ? 'fixed w-2/10 sm:w-2/12 text-accent-primary mr-4' : 'text-text-primary '
         }`}
         style={{ right: '0', top: '1em' }}
       >

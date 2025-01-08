@@ -68,7 +68,7 @@ const GraphicSkills = () => {
 
         {/* Middle Column */}
         <div className="sm:col-span-1 order-last lg:order-none md:pr-8 flex flex-col justify-between	">
-           <p className="italic font-medium font-sub-heading underline decoration-wavy text-[#4b1718] dark:text-bg-secondary dark:decoration-text-secondary underline-offset-8 text-md md:text-xl mb-6">{t('textTitleGraphicGoal')}</p>
+           <p className="italic font-medium font-sub-heading underline decoration-wavy text-[#4b1718] dark:text-bg-secondary dark:decoration-text-secondary underline-offset-8 text-md md:text-xl mb-6">{t('graphicSkills.textTitleGraphicGoal')}</p>
           <p className="text-text-sub-heading not-italic" dangerouslySetInnerHTML={{ __html: t("graphicSkills.textPS") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("graphicSkills.textAI") }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t("graphicSkills.textID") }}></p>

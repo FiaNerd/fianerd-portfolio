@@ -6,6 +6,7 @@ import { Route } from '../../config/MenuItemsData'
 import { useClickOutside } from '../../hook/useClickOutside'; // Import the custom hook
 import Button from '../Partial/Button'
 import DropdownMenu from './DropdownMenu'
+import Arrow from '../../assets/svg/Arrow'
 
 interface MenuItemsProps {
   items: Route
@@ -78,7 +79,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
 
   return (
     <ul
-      className='text-text-accent font-medium flex items-center space-x-4'
+      className='text-text-accent font-sub-heading font-medium flex items-center space-x-4'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <li ref={ref} className='relative group '>
@@ -86,15 +87,14 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <>
             <button
               onClick={handleButtonClick}
-              className='px-4 text-xl hover:text-accent-secondary dark:hover:text-bg-secondary tracking-wider '
+              className='flex items-center px-4 text-xl hover:text-accent-secondary dark:hover:text-bg-secondary tracking-wider '
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}>
               <Trans>{t(items.title)}</Trans>
               {items.icon && (
-                <FontAwesomeIcon
-                  icon={items.icon}
-                  className='ml-1 h-[0.8em] text-center'
-                />
+                <div className='flex items-center'>
+                  <Arrow navigationMenuOpen={false} />
+                </div>
               )}
             </button>
             <DropdownMenu  

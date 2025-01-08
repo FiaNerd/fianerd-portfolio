@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
+import Arrow from '../assets/svg/Arrow';
 
 const SelectLanguage = () => {
   const { i18n, t } = useTranslation('translation')
@@ -50,8 +51,10 @@ const dropdownItemClass = clsx(
         <span className="text-xl flex items-center justify-center mt-0.5">
           {selectedLanguageLabel}
         </span>
+
+        <Arrow navigationMenuOpen={isOpen} />
                
-        <svg
+        {/* <svg
           className={`h-5 w-5 ease-out duration-300 ${isOpen ? '-rotate-180' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -63,7 +66,7 @@ const dropdownItemClass = clsx(
           aria-hidden="true"
         >
           <polyline points="6 9 12 15 18 9" />
-        </svg>
+        </svg> */}
       </button>
 
 

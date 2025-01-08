@@ -56,11 +56,11 @@ const WebSkills = () => {
         // initial="hidden" 
         // animate={ctrls2} 
         // variants={vars2} 
-        className="grid grid-cols-1 md:order-0 lg:grid-cols-[5%_50%_auto] gap-8 mb-8"
+        className="grid grid-cols-1 md:order-0 lg:grid-cols-[5%_50%_auto] gap-4 mb-8"
       >
         {/* Vertical Text Column */}
         <div className="hidden lg:block items-center justify-center">
-          <h1 className="uppercase font-semibold font-sub-heading whitespace-pre-line text-[#535437] dark:text-[#69864e] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
+          <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#69864e] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t('webSkills.webbDev')}
           </h1>
         </div>
