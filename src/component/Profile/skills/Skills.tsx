@@ -5,7 +5,7 @@ import OtherSkills from "./OtherSkills";
 import WebSkills from "./WebSkills";
 
 const Skills = () => {
-  const { t } = useTranslation(["Profile/Skills/skills"]);
+  const { t } = useTranslation(["Profile/skills"]);
 
   return (
     <div className="mx-auto top-0 left-0 ">

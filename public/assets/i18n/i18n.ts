@@ -20,11 +20,10 @@ i18n
       'home', 
       'heroSection', 
       'aboutMe', 
-      "Profile/Skills/skills/webSkills", 
-      "Profile/Skills/skills/graphicSkills", 
-      "Profile/Skills/goalsWebSkills", 
-      "Profile/Skills/skills/otherSkills",   
-      "Profile/Skills/skills/programsAndSoftwares",   
+      "Profile/skills/webSkills", 
+      "Profile/skills/graphicSkills", 
+      "Profile/skills/otherSkills",   
+      "Profile/skills/programsAndSoftwares",   
       "WebSkills"
     ],
     defaultNS: 'HeroSection', // Default namespace
