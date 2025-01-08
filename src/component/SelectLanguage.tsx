@@ -44,7 +44,7 @@ const dropdownItemClass = clsx(
     <div ref={ref}>
      <button
         aria-expanded={isOpen}
-        className='flex flex-row items-center text-md font-sub-heading icon-language text-text-accent dark:text-accent-primary dark:lg:text-bg-secondary hover:text-accent-secondary dark:hover:text-accent-primary'
+        className='flex flex-row items-center text-md font-sub-heading icon-language text-nav-text hover:text-nav-hover'
         onClick={toggleDropdown}>
         <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem] pr-2' />
 
@@ -53,20 +53,6 @@ const dropdownItemClass = clsx(
         </span>
 
         <Arrow navigationMenuOpen={isOpen} />
-               
-        {/* <svg
-          className={`h-5 w-5 ease-out duration-300 ${isOpen ? '-rotate-180' : ''}`}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg> */}
       </button>
 
 

@@ -69,7 +69,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       return (
         <NavLink
           to={items.url}
-          className='px-4 font-sub-heading tracking-wider text-xl hover:text-bg-secondary  focus:text-bg-secondary'
+          className='px-4 font-sub-heading tracking-wider text-xl hover:text-nav-hover focus:text-nav-hover'
           onClick={closeMenu}>
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </NavLink>
@@ -79,7 +79,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
 
   return (
     <ul
-      className='text-text-accent font-sub-heading font-medium flex items-center space-x-4'
+      className='text-nav-text font-sub-heading font-medium flex items-center space-x-4'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <li ref={ref} className='relative group '>
@@ -87,7 +87,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           <>
             <button
               onClick={handleButtonClick}
-              className='flex items-center px-4 text-xl hover:text-accent-secondary dark:hover:text-bg-secondary tracking-wider '
+              className='flex items-center px-4 text-xl hover:text-nav-hover dark:hover:text-nav-hover tracking-wider '
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}>
               <Trans>{t(items.title)}</Trans>

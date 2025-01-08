@@ -15,6 +15,8 @@ export default {
         'btn-bg': 'var(--color-btn-bg)',
         'bg-hover': 'var(--color-bg-hover)',
         'hover-text': 'var(--color-hover-text)',
+        'nav-text': 'var(--color-nav-text)',
+        'nav-hover': 'var(--color-nav-hover)'
       },
       fontFamily: {
         // heading: ['veneer', 'sans-serif'],

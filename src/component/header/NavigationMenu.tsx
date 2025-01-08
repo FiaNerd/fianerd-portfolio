@@ -67,10 +67,10 @@ const NavigationMenu = () => {
               <NavLink
                 to={menu.url}
                 className={({ isActive }) =>
-                  `inline-flex items-center justify-center text-text-accent h-auto px-4 py-2 text-sm font-medium transition-colors ${
+                  `inline-flex items-center justify-center text-nav-text h-auto px-4 py-2 text-sm font-medium transition-colors ${
                     isActive
-                      ? 'dark:text-bg-secondary hover:text-accent-secondary active:text-btn-bg'
-                      : 'text-text-accent dark:text-bg-secondary dark:hover:text-accent-primary active:text-btn-bg'
+                      ? 'text-nav-text hover:text-nav-hover active:text-nav-hover'
+                      : 'text-nav-text hover:text-nav-hover active:text-nav-hover'
                   }`
                 }
                 onMouseEnter={() => {

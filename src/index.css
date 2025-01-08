@@ -90,6 +90,8 @@
     --color-btn-bg: #e63946;
     --color-bg-hover: #b1424c;
     --color-hover-text: hsl(45, 100%, 92%);
+    --color-nav-text: #204726;
+    --color-nav-hover: #e63605;
   }
   
 
@@ -108,5 +110,7 @@
     --color-btn-bg: #5aaf85;
     --color-bg-hover: #71c79c;
     --color-hover-text: #e2e2d9;
+    --color-nav-text: #d57d7d;
+    --color-nav-hover: #c65514;
   }
   
