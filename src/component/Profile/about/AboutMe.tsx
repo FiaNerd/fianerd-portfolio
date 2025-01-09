@@ -5,7 +5,7 @@ import useFadeIn from "../../../hook/useFadeIn";
 import Button from "../../Partial/Button";
 
 const AboutMe = () => {
-  const { t } = useTranslation("aboutMe");
+  const { t } = useTranslation("Profile/aboutMe");
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });

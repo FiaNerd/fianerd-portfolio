@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 const Education = () => {
-    const { t } = useTranslation("education");
+    const { t } = useTranslation("Profile/education");
 
   return (
     <section className="py-8">

@@ -19,12 +19,15 @@ i18n
     ns: [
       'home', 
       'heroSection', 
-      'aboutMe', 
+      'Profile/aboutMe', 
       "Profile/skills/webSkills", 
       "Profile/skills/graphicSkills", 
       "Profile/skills/otherSkills",   
       "Profile/skills/programsAndSoftwares",   
-      "WebSkills"
+      "Profile/skills/webSkills",
+      "Profile/experience",
+      "Profile/education",
+      "Profile/hobbies"
     ],
     defaultNS: 'HeroSection', // Default namespace
     detection: {

@@ -2,37 +2,34 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
 const Hobbies = () => {
-    const { t } = useTranslation("hobbies");
+    const { t } = useTranslation("Profile/hobbies");
 
     return (
         <section className='max-w-screen-xl	mx-auto'>
             <p className='md:text-xl px-4 pb-8 justify-center mx-auto max-w-[80%] text-text-secondary'>{t('introHobbie')}</p>
 
             <div className="grid grid-rows-1 sm:grid-cols-1 xl:grid-cols-3 gap-4 px-4 xl:px-20 text-center mb-12 jusity-center items-center">
-{/* Musik */}
-<div className="lg:col-start-1 lg:row-start-2 ">
-    <p className='flex items-center justify-center font-textImportant text-xl md:text-4xl text-[#b67076] bg-[#3e3a19] dark:bg-accent-primary py-2 md:py-4 px-4 border-2 dark:border-accent-primary rounded '>
-        {t("music")}
-    </p>
-</div>
-
-{/* Konsert & Festival */}
-<div className="lg:col-start-2 lg:row-start-1">
-    <p className='flex items-center justify-center font-textImportant text-xl md:text-4xl text-[#b67076] bg-[#3e3a19] dark:bg-accent-primary py-2 md:py-4 px-4 border-2 rounded dark:border-accent-primary '>
-        {t("consertAndFestival")}
-    </p>
-</div>
-
-{/* Film & Serier */}
-<div className="lg:col-start-3 lg:row-start-3">
-    <p className='flex items-center justify-center font-textImportant text-xl md:text-4xl text-[#b67076] bg-[#3e3a19] dark:bg-accent-primary py-2 md:py-4 px-4 border-2 rounded dark:border-accent-primary '>
-        {t("filmAndSeries")}
-    </p>
-</div>
-
-
-
+            {/* Musik */}
+            <div className="lg:col-start-1 lg:row-start-2 ">
+                <p className='flex items-center justify-center font-textImportant text-xl md:text-4xl text-[#b67076] bg-[#3e3a19] dark:bg-accent-primary py-2 md:py-4 px-4 border-2 dark:border-accent-primary rounded '>
+                    {t("music")}
+                </p>
             </div>
+
+            {/* Konsert & Festival */}
+            <div className="lg:col-start-2 lg:row-start-1">
+                <p className='flex items-center justify-center font-textImportant text-xl md:text-4xl text-[#b67076] bg-[#3e3a19] dark:bg-accent-primary py-2 md:py-4 px-4 border-2 rounded dark:border-accent-primary '>
+                    {t("consertAndFestival")}
+                </p>
+            </div>
+
+            {/* Film & Serier */}
+            <div className="lg:col-start-3 lg:row-start-3">
+                <p className='flex items-center justify-center font-textImportant text-xl md:text-4xl text-[#b67076] bg-[#3e3a19] dark:bg-accent-primary py-2 md:py-4 px-4 border-2 rounded dark:border-accent-primary '>
+                    {t("filmAndSeries")}
+                </p>
+            </div>
+         </div>
 
           <div className='flex flex-col items-center max-w-[80%] md:max-w-[60%] mx-auto mb-12'>
             <h2 className='font-textImportant mx-auto text-6xl md:text-8xl text-center text-accent-secondary dark:text-accent-primary'>{t('thanksHobbie')}</h2>

@@ -46,7 +46,7 @@ const ProgramAndSoftware = () => {
                 </span>  
             </p>
             <p className='font-textImportant text-2xl text-[#035d44] dark:text-[#a05a48] outline-dashed outline-2 [#035d44] dark:outline-[#a05a48] outline-offset-4 py-2 md:py-4 px-4'>
-                {t("dataRequest").split("-")[0]}
+                {t("programsAndSoftwares.dataRequest").split("-")[0]}
                 <span className="font-sub-heading text-xl text-text-secondary">
                     {t("programsAndSoftwares.dataRequest").split("-")[1]}
                 </span>

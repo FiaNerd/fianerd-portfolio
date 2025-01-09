@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 const WorkExperience = () => {
-    const { t } = useTranslation("workExperience");
+    const { t } = useTranslation("Profile/experience");
     // const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
     
   return ( 
