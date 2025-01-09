@@ -59,7 +59,7 @@ const WorkExperience = () => {
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-bg-secondary dark:dark:text-[#aa7339]"> {t("dateWorkOmegapoint")}</p>
                     <h4 className="mb-0 font-bold text-bg-secondary dark:dark:text-[#aa7339] text-lg md:text-2xl">{t("titleOmegapoint")}</h4>
-                    <p className="text-sm md:text-base leading-snug text-text-accent dark:dark:text-[#aa7339] text-opacity-100">
+                    <p className="text-sm md:text-base leading-snug text-text-secondary dark:dark:text-[#aa7339] text-opacity-100">
                       {t("workTitleOmegapoint")}
                     </p>
                     <p className="text-sm md:text-base leading-snug text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectOmegapoint')}}></p>

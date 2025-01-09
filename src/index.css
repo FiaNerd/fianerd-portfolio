@@ -74,7 +74,7 @@
     --color-accent-primary: #b94c0c; 
     --color-accent-secondary: #b33c38; 
     /* --color-accent-secondary: #d46763; Sekundära accenter */
-    --color-text-accent: #501842;
+    --color-text-accent: #501842; /* För rubriker */
     --color-text-secondary: #592208ed;
     --color-text-primary: #2d1a23; /* Neutral för brödtext */
     --color-btn-bg: #e63946;
