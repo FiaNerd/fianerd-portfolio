@@ -34,7 +34,7 @@ const SelectLanguage = () => {
 
 const dropdownItemClass = clsx(
   'bg-hover-text font-sub-heading text-[1.2rem] cursor-pointer',
-  'py-2 px-4 hover:text-hover-text hover:bg-accent-secondary',
+  'py-2 px-4 hover:text-hover-text hover:bg-nav-text',
   'dark:text-text-primary dark:bg-bg-primary',
   'dark:hover:text-bg-primary dark:hover:bg-bg-secondary'
 );

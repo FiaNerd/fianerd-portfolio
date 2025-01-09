@@ -22,12 +22,12 @@ const NavigationSubMenu = ({
 
   return (
     <div
-      className="absolute z-10 bg-hover-text shadow-sm p-6 rounded-l mt-[3.8em] "
+      className="absolute z-10 bg-nav-text dark:bg-[#1b0909] shadow-sm p-4 rounded mt-[3.8em] "
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <div
-        className={`grid gap-8 ${
+        className={`grid gap-4 ${
           navigationMenu === 'profile' ? 'grid-cols-3' : 'grid-cols-3'
         } max-w-[45em]`}
       >
@@ -59,12 +59,12 @@ const NavigationSubMenu = ({
         </div>
 
         {/* Submenu Section */}
-        <div className="col-span-2 grid gap-3 grid-cols-2 xl:grid-cols-2">
+        <div className="col-span-2 grid gap-6 grid-cols-2 xl:grid-cols-2 p-4 bg-bg-primary">
           {currentRoute.subMenu.map((subMenuItem, subIndex) => (
             <div key={subIndex} className="flex flex-col">
               <NavLink
                 to={subMenuItem.url}
-                className="text-sm font-medium text-text-accent dark:text-accent-primary hover:text-accent-secondary dark:hover:text-bg-secondary"
+                className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
                 onClick={closeMenuOnClick}
               >
                 {t(subMenuItem.title)}

@@ -61,6 +61,8 @@ const NavigationMenu = () => {
   return (
     <>
       <div className="relative z-10">
+     
+
         <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-6 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">

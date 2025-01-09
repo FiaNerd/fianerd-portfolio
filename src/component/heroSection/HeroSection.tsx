@@ -82,7 +82,7 @@ const HeroSection = () => {
           </motion.div>
         )}
 
-        <div className={`${styles['container-btn']} font-heading flex flex-col lg:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-32 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
+        <div className={`${styles['container-btn']} font-heading flex flex-col xl:flex-row gap-4 sm:gap-24 md:gap-12 lg:gap-8 xl:gap-40 justify-center text-lg sm:text-2xl md:text-lg lg:text-xl sm:mt-[18em] md:pb-[2em] md:mb-4 md:static md:mt-16 cursor-pointer`}>
         <Button className=" bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover py-2 px-4 sm:py-3 sm:px-6 w-full sm:w-auto">
           {t('buttonCV')}
         </Button>

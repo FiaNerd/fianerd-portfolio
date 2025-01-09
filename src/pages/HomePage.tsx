@@ -8,6 +8,7 @@ import Education from "../component/Profile/education/Education";
 import WorkExperience from "../component/Profile/experience/WorkExperience";
 import Skills from "../component/Profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -30,17 +31,19 @@ const HomePage = () => {
 
   return (
     <div
-      // style={{
-      //   paddingTop: `${headerHeight}px`,
-      //   transition: "padding-top 0.3s ease",
-      // }}
+      style={{
+        paddingTop: `${headerHeight}px`,
+        transition: "padding-top 0.3s ease",
+      }}
       className="bg-blend-multiply"
     >
+     
       {/* Hero Section */}
       <section id="home" className="relative">
         <HeroSection />
       </section>
 
+    
       {/* Profile Section */}
       <section id="profile">
         <Title
@@ -97,7 +100,7 @@ const HomePage = () => {
           title={t("hobbiesTitle:titleHobbie")}
           dot={"!"}
           children={t("hobbiesTitle:subTitleHobbie")}
-          className="text-hover-text top-0 dark:text-accent-primary bg-slate-900 dark:bg-stone-950"
+          className="text-[#b67076] top-0 dark:text-accent-primary bg-[#3e3a19] dark:bg-stone-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary px-4"
           // style={{
           //   paddingTop: `${headerHeight + 20}px`,

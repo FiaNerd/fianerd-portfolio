@@ -75,7 +75,7 @@ const NavbarMobile = () => {
             <div className='flex w-8/12 mt-8 mb-8 p-2 mx-auto border rounded text-btn-bg border-btn-bg hover:border-bg-hover hover:bg-bg-hover hover:text-bg-primary'>
               <NavLink
                 to='/'
-                className={`${getClassName} text-sub-heading cursor mx-auto text-[1.2rem] t text-align lg:mb-0 `}
+                className={`${getClassName} font-sub-heading cursor mx-auto text-[1.2rem] text-align lg:mb-0 `}
               >
                 {t('contact')}
               </NavLink>

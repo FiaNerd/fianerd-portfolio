@@ -15,7 +15,7 @@
         "textAzure": "<b>Cloud Services:</b> Leverage Azure's powerful capabilities in infrastructure management, application performance enhancement, and cloud-native development to build robust applications.",
         "titleFE": "<b>Frontend:</b> ",
         "textFE": "<b>React:</b> Create highly responsive and reusable components to build interactive user interfaces.",
-        "textVue": "<b>Vue.js:</b> n<b>Vue.js:</b> Explore the capabilities of Vue.js to understand its advantages and integrate it into projects where applicable.",
+        "textVue": "<b>Vue.js:</b> Explore the capabilities of Vue.js to understand its advantages and integrate it into projects where applicable.",
         "textCMS": "<b>Umbraco:</b> Expand my skills in Umbraco CMS to efficiently manage and deploy dynamic web content.",
         "textGoal": "The only obstacle is time, so strategic planning and focused efforts will be essential to achieve these goals."
     },

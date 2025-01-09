@@ -20,17 +20,17 @@ const AnimatedHamburgerButton = ({ isActive, toggleMenu }: IProps) => {
       >
         <motion.span
           variants={VARIANTS.top}
-          className="absolute h-1 w-10 bg-text-accent dark:bg-accent-primary"
+          className="absolute h-1 w-10 bg-nav-text dark:bg-accent-primary"
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={VARIANTS.middle}
-          className="absolute h-1 w-10 bg-text-accent dark:bg-accent-primary"
+          className="absolute h-1 w-10 bg-nav-text dark:bg-accent-primary"
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={VARIANTS.bottom}
-          className="absolute h-1 w-5 bg-text-accent dark:bg-accent-primary"
+          className="absolute h-1 w-5 bg-nav-text dark:bg-accent-primary"
           style={{
             x: "-50%",
             y: "50%",
