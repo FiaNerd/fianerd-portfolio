@@ -32,13 +32,12 @@ export default {
       zIndex: {
         '100': '100',
       },
-      breakpoints: {
-        sm: '576px',
-        md: '768px',
-        lg: '992px',
-        xl: '1200px',
-        xxl: '1440px',
-        custom: '703px',
+      screens: {
+        sm: '640px',  
+        md: '768px', 
+        lg: '1024px',
+        xl: '1280px', 
+        '2xl': '1536px', 
       },
       lineClamp: {
         7: '7',

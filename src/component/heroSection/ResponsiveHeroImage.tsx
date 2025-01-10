@@ -24,14 +24,14 @@ const ResponsiveHeroImage = () => {
     {/* Tablet image for screens between 768px and 1023px */}
     <source
       media="(min-width: 768px) and (max-width: 1142px)"
-      srcSet="/assets/images/heroImage_tablet.png"
+      srcSet="/assets/images/heroImage_tablet.webp"
       className="object-cover w-full h-full"
     />
   
     {/* Desktop image for screens 1024px and wider */}
     <source
-      media="(min-width: 1143px)"
-      srcSet="/assets/images/heroImage_desktop.png"
+      media="(min-width: 1025px)"
+      srcSet="/assets/images/heroImage_desktop.webp"
       className="object-cover w-full h-full"
     />
   

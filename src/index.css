@@ -72,12 +72,13 @@
     --color-bg-primary: #f7ece0;
     --color-bg-secondary: #cb7f2c;
     --color-accent-primary: #b94c0c; 
-    --color-accent-secondary: #b33c38; 
+    --color-accent-secondary: #913727; 
     /* --color-accent-secondary: #d46763; Sekundära accenter */
     --color-text-accent: #501842; /* För rubriker */
     --color-text-secondary: #592208ed;
     --color-text-primary: #2d1a23; /* Neutral för brödtext */
-    --color-btn-bg: #e63946;
+    --color-btn-bg: #b7253d;
+    /* --color-btn-bg: #e63946; */
     --color-bg-hover: #b1424c;
     --color-hover-text: hsl(45, 100%, 92%);
     --color-nav-text: #06314f;
