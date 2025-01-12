@@ -17,7 +17,7 @@ const ResponsiveHeroImage = () => {
     {/* Mobile image for screens up to 767px */}
     <source
       media="(max-width: 767px)" 
-      srcSet="/assets/images/heroImage_mobile.png 300w, /assets/images/heroImage_mobile.png 768w"
+      srcSet="/assets/images/heroImage_mobile.webp 300w, /assets/images/heroImage_mobile.webp 768w"
       className="object-cover w-full h-full"
     />
     

@@ -77,7 +77,8 @@
     --color-text-accent: #501842; /* För rubriker */
     --color-text-secondary: #592208ed;
     --color-text-primary: #2d1a23; /* Neutral för brödtext */
-    --color-btn-bg: #b7253d;
+    /* --color-btn-bg: #b7253d; */
+    --color-btn-bg: #e63946;
     /* --color-btn-bg: #e63946; */
     --color-bg-hover: #b1424c;
     --color-hover-text: hsl(45, 100%, 92%);
