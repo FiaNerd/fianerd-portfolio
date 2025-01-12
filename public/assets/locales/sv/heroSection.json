@@ -1,8 +1,9 @@
 {
-    "title": "<span>Halloj,</span> jag är Sofia Travnicek Mattiasson.",
-    "subTitle": "Välkommen till mitt kreativa rum.",
-    "textIntro": "Utvecklar med passion. Designar med mening.",
+    "title": "<span class='outlined-text font-medium font-heading text-btn-bg dark:text-btn-bg'>Halloj,</span> jag heter Sofia Travnicek Mattiasson.",
+    "myName": "Sofia Travnicek Mattiasson",
+    "subTitle": "Välkommen till mitt kreativa utrymme.",
+    "textIntro": "Utvecklar med passion. Designar med syfte.",
     "text": "Utforska mitt arbete och låt oss skapa något fantastiskt tillsammans.",
-    "buttonCV": "Ladda ner CV",
-    "contact": "Utforska portfolio"
+    "ctaButtonCV": "Ladda ner CV",
+    "ctaButtonPortfolio": "Utforska portfolio"
 }

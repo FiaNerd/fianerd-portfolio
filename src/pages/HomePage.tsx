@@ -37,7 +37,7 @@ const HomePage = () => {
     >
      
       {/* Hero Section */}
-      <section id="home" className="relative">
+      <section id="home" className="relative items-center">
         <HeroSection />
       </section>
 

@@ -7,6 +7,8 @@ import { navRoutes } from '../../config/MenuItemsData';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useClickOutside } from '../../hook/useClickOutside';
 import Footer from '../footer/Footer';
+import SelectLanguage from '../SelectLanguage';
+import ThemeSwitch from '../ThemeSwitch';
 import AnimatedHamburgerButton from './AnimatedHamburgerButton';
 import MenuItems from './MenuItems';
 
@@ -59,7 +61,12 @@ const NavbarMobile = () => {
             }}
             className='h-screen bg-bg-primary text-text-accent dark:text-bg-primary fixed left-0 right-0 top-0 bottom-0 w-full flex flex-col'
           >
+             <div className='flex gap-4 items-center p-4'>
+              <ThemeSwitch />
+              <SelectLanguage />
+            </div> 
             <div className='flex-grow overflow-y-auto mt-[3em]'>
+           
               <ul className='grid gap-2 pl-8'>
                 {navRoutes.map((menu, index) => (
                   <MenuItems
@@ -70,8 +77,11 @@ const NavbarMobile = () => {
                   />
                 ))}
               </ul>
+
+              
             </div>
 
+           
             <div className='flex w-8/12 mt-8 mb-8 p-2 mx-auto border rounded text-btn-bg border-btn-bg hover:border-bg-hover hover:bg-bg-hover hover:text-bg-primary'>
               <NavLink
                 to='/'
@@ -80,6 +90,8 @@ const NavbarMobile = () => {
                 {t('contact')}
               </NavLink>
             </div>
+
+          
 
             <Footer />
           </motion.div>

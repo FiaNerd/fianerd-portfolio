@@ -64,6 +64,34 @@
   max-width: calc(100% - 20%); 
 } */
 
+.outlined-text  {
+  color: transparent; 
+  -webkit-text-stroke: 0.6px #edd8bf;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+
+@media (min-width: 640px) {
+  .outlined-text {
+    font-size: 4rem; 
+    line-height: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .outlined-text {
+    font-size: 3rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .outlined-text {
+    font-size: 4rem; 
+   
+  }
+}
+
 
 /* Light mode variables */
 :root {

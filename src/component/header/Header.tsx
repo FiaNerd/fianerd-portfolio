@@ -100,8 +100,10 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <ThemeSwitch />
-          <SelectLanguage />
+          <div className='hidden lg:flex items-center gap-4'>
+            <ThemeSwitch />
+            <SelectLanguage />
+          </div>
           <NavLink
             to="/contact"
             className="hidden lg:flex font-sub-heading text-lg lg:text-xl font-medium border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
