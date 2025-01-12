@@ -1,45 +1,60 @@
-import { useEffect } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const ResponsiveHeroImage = () => {
-  useEffect(() => {
-    const handleResize = () => {
-      console.log('Window resized:', window.innerWidth);
-    };
+  const themeContext = useContext(ThemeContext);
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  if (!themeContext) {
+    return null; // or handle the error as needed
+  }
+
+  const { currentTheme } = themeContext;
+
+  const isDarkMode = currentTheme === "dark";
 
   return (
     <picture>
-      {/* Mobile image for screens up to 767px */}
+      {/* Mobile image */}
       <source
         media="(max-width: 767px)"
-        srcSet="/assets/images/heroImage_mobile.webp 300w, /assets/images/heroImage_mobile.webp 768w"
+        srcSet={
+          isDarkMode
+            ? "/assets/images/heroImage_mobile_dark.webp"
+            : "/assets/images/heroImage_mobile.webp"
+        }
         className="object-cover w-full h-full"
       />
 
-      {/* Tablet image for screens between 768px and 1535px */}
+      {/* Tablet image */}
       <source
         media="(min-width: 768px) and (max-width: 1535px)"
-        srcSet="/assets/images/heroImage_tablet.webp"
+        srcSet={
+          isDarkMode
+            ? "/assets/images/heroImage_tablet_dark.webp"
+            : "/assets/images/heroImage_tablet.webp"
+        }
         className="object-cover w-full h-full"
       />
 
-      {/* Desktop image for screens 1024px and wider */}
+      {/* Desktop image */}
       <source
         media="(min-width: 1536px)"
-        srcSet="/assets/images/heroImage_desktop.webp"
+        srcSet={
+          isDarkMode
+            ? "/assets/images/heroImage_desktop_dark.webp"
+            : "/assets/images/heroImage_desktop.webp"
+        }
         className="object-cover w-full h-full"
       />
 
-      {/* Fallback image for older browsers */}
+      {/* Fallback image */}
       <img
-        src="/assets/images/heroImage_desktop.webp"
+        src={
+          isDarkMode
+            ? "/assets/images/heroImage_desktop_dark.webp"
+            : "/assets/images/heroImage_desktop.webp"
+        }
         alt="Hero Image"
-        loading="lazy"
         className="object-cover w-full h-full"
       />
     </picture>
