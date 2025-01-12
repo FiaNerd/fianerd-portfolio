@@ -26,9 +26,7 @@ const HeroSection = () => {
     <div className="relative w-full h-full flex items-center justify-center">
     <p className="absolute top-6 left-8 transform -translate-x-1-translate-y-1/2 text-center text-4xl md:text-6xl text-[#b7253d] dark:text-accent-primary font-textImportant">
 TEST
-    </p>
-    
-        <ResponsiveHeroImage />
+    </p> <ResponsiveHeroImage />
     </div>
      
   );

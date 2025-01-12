@@ -59,10 +59,10 @@
     color: var(--color-text-primary);
   }
 }
-
+/* 
 .header-container {
   max-width: calc(100% - 20%); 
-}
+} */
 
 
 /* Light mode variables */

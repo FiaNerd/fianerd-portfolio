@@ -37,7 +37,7 @@ const ResponsiveHeroImage = () => {
   
     {/* Fallback image for older browsers */}
     <img 
-      src="/assets/images/heroImage_desktop.png" 
+      src="/assets/images/heroImage_desktop.wepbp" 
       alt="Hero Image"
       loading="lazy"
       className="object-cover w-full h-full"

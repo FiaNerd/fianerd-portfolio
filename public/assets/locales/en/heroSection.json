@@ -1,14 +1,8 @@
 {
-    "smallTitle": "fullstack",
-    "title": "developer.",
-    "subtitleMobile": "one line of code at a time.",
-    "name": "sofia mattiasson",
-    "helloName": "Hello,",
-    "helloSpan": "my name is",
-    "iCode": " – creative, ambitious, curious",
-    "subCv": "check out my",
-    "cv": "resume",
-    "seYa": "See you!",
+    "title": "<span>Hello,</span> I'm Sofia Travnicek Mattiasson.",
+    "subTitle": "Welcome to my creative space.",
+    "textIntro": "Developing with passion. Designing with purpose.",
+    "text": "Explore my work and let’s create something amazing together.",
     "buttonCV": "Download CV",
-    "contact": "Get In Touch"
+    "contact": "Explore portfolio"
 }

@@ -14,7 +14,8 @@ const HomePage = () => {
   const { t } = useTranslation([
     "Profile/aboutMe",
     "Profile/experience",
-    "Profile/education"
+    "Profile/education",
+    "Profile/hobbies"
   ]);
 
   useLayoutEffect(() => {

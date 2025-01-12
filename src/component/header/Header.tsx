@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useLayoutEffect, useRef } from 'react';
+import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -38,6 +38,7 @@ const Header = () => {
   useEffect(() => {
     if (!isNavigating) {
       const initialScrollY = window.scrollY;
+
       if (initialScrollY > 0) {
         setIsHidden(true); 
       }
@@ -46,8 +47,11 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isNavigating) return;
-      const currentScrollY = window.scrollY;
+      if (isNavigating) {
+        return
+      }
+
+      const currentScrollY = window.scrollY
 
       if (currentScrollY > lastScrollY && currentScrollY > 0) {
         setIsHidden(true); // Hide header when scrolling down
@@ -58,6 +62,7 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, isNavigating]);
 
@@ -86,7 +91,7 @@ const Header = () => {
           <img
             src={`/assets/images/logos/Logo${currentTheme === 'dark' ? 'Dark' : 'Light'}.svg`}
             alt="Logo"
-            className="h-10 md:h-12"
+            className="w-[6em]"
           />
         </NavLink>
 
