@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import useFadeIn from "../../../hook/useFadeIn";
 import ProgramAndSoftware from "./ProgramAndSoftware";
 
  const OtherSkills = () => {
@@ -47,7 +45,7 @@ return (
                         </div>
                     </section>
 
-                <section id="programsAondSoftwares" >
+                <section id="other-skills" >
                     <ProgramAndSoftware />
                 </section>
         </div>

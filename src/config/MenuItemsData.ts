@@ -48,7 +48,7 @@ export const navRoutes: Route[] = [
       },
       {
         title: 'programsAndSoftwares',
-        url: '/#programsAndSoftwares',
+        url: '/#other-skills',
         description: 'programsAndSoftwaresDescription',
       },
       {
