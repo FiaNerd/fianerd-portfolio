@@ -1,6 +1,7 @@
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -16,7 +17,9 @@ export default {
         'bg-hover': 'var(--color-bg-hover)',
         'hover-text': 'var(--color-hover-text)',
         'nav-text': 'var(--color-nav-text)',
-        'nav-hover': 'var(--color-nav-hover)'
+        'nav-hover': 'var(--color-nav-hover)',
+        outlinedLight: '#e63946',
+        outlinedDark: '#dbf5d5',
       },
       fontFamily: {
         // heading: ['veneer', 'sans-serif'],

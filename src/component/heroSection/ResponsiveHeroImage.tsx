@@ -5,7 +5,7 @@ const ResponsiveHeroImage = () => {
   const themeContext = useContext(ThemeContext);
 
   if (!themeContext) {
-    return null; // or handle the error as needed
+    return null; 
   }
 
   const { currentTheme } = themeContext;

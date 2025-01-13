@@ -64,12 +64,31 @@
   max-width: calc(100% - 20%); 
 } */
 
-.outlined-text  {
-  color: transparent; 
-  -webkit-text-stroke: 0.6px #dbf5d5;
+.outlined-text {
+  color: #25021c;
+  -webkit-text-stroke: 0.6px #c81560;
   font-size: 2.5rem;
   line-height: 3rem;
+  text-shadow:
+    -1px -1px 0 #c81560,
+    1px -1px 0 #c81560,
+    -1px 1px 0 #c81560,
+    1px 1px 0 #c81560; 
+  
 }
+
+.dark .outlined-text {
+  color: #cb7f2c;
+  -webkit-text-stroke: 0.6px #dbf5d5; 
+  text-shadow:
+  -1px -1px 0 #cb7f2c,
+  1px -1px 0 #cb7f2c,
+  -1px 1px 0 #cb7f2c,
+  1px 1px 0 #cb7f2c; 
+
+}
+
+
 
 
 @media (min-width: 640px) {
