@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import useFadeIn from "../../hook/useFadeIn";
 import Button from "../Partial/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const [userIsDesktop, setUserIsDesktop] = useState(window.innerWidth > 768);
-  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
+  const setUserIsDesktop = useState(window.innerWidth > 768)[1];
 
 
   useEffect(() => {

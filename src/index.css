@@ -1,5 +1,8 @@
 /* Import Adobe Fonts styles or define font-face */
 @import url("https://use.typekit.net/bwg5bhb.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 
 /* Tailwind CSS setup */

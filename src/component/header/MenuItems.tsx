@@ -1,12 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
-import { Trans, useTranslation } from 'react-i18next'
-import { NavLink } from 'react-router-dom'
-import { Route } from '../../config/MenuItemsData'
+import { useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
+import Arrow from '../../assets/svg/Arrow';
+import { Route } from '../../config/MenuItemsData';
 import { useClickOutside } from '../../hook/useClickOutside'; // Import the custom hook
-import Button from '../Partial/Button'
-import DropdownMenu from './DropdownMenu'
-import Arrow from '../../assets/svg/Arrow'
+import Button from '../Partial/Button';
+import DropdownMenu from './DropdownMenu';
 
 interface MenuItemsProps {
   items: Route

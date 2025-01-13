@@ -1,12 +1,8 @@
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import useFadeIn from "../../../hook/useFadeIn";
 import ProgressBar from "./ProgressBar";
 
 const WebSkills = () => {
   const { t } = useTranslation("Profile/skills");
-  // const { ref: ref1, ctrls: ctrls1, vars: vars1 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
-  // const { ref: ref2, ctrls: ctrls2, vars: vars2 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
 
   const webSkills = [
     { name: 'C#', percentage: 70 },
@@ -22,10 +18,6 @@ const WebSkills = () => {
   return (
     <section className="max-w-screen-xl mx-auto top-0 left-0 px-4 md:px-6 lg:px-10 py-8 md:py-12">
       <div 
-        // ref={ref1} 
-        // initial="hidden" 
-        // animate={ctrls1} 
-        // variants={vars1} 
         className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8"
       >
         <h1 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
@@ -52,10 +44,6 @@ const WebSkills = () => {
       </div>     
 
       <div 
-        // ref={ref2} 
-        // initial="hidden" 
-        // animate={ctrls2} 
-        // variants={vars2} 
         className="grid grid-cols-1 md:order-0 lg:grid-cols-[5%_50%_auto] gap-4 mb-8"
       >
         {/* Vertical Text Column */}
