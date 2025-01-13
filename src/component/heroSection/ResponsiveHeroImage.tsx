@@ -19,8 +19,8 @@ const ResponsiveHeroImage = () => {
         media="(max-width: 767px)"
         srcSet={
           isDarkMode
-            ? "/assets/images/heroImage_mobile_dark.webp"
-            : "/assets/images/heroImage_mobile.webp"
+            ? "/assets/images/hero-img/heroImage_mobile_dark.webp"
+            : "/assets/images/hero-img/heroImage_mobile.webp"
         }
         className="object-cover w-full h-full"
       />
@@ -30,8 +30,8 @@ const ResponsiveHeroImage = () => {
         media="(min-width: 768px) and (max-width: 1535px)"
         srcSet={
           isDarkMode
-            ? "/assets/images/heroImage_tablet_dark.webp"
-            : "/assets/images/heroImage_tablet.webp"
+            ? "/assets/images/hero-img/heroImage_tablet_dark.webp"
+            : "/assets/images/hero-img/heroImage_tablet.webp"
         }
         className="object-cover w-full h-full"
       />
@@ -41,8 +41,8 @@ const ResponsiveHeroImage = () => {
         media="(min-width: 1536px)"
         srcSet={
           isDarkMode
-            ? "/assets/images/heroImage_desktop_dark.webp"
-            : "/assets/images/heroImage_desktop.webp"
+            ? "/assets/images/hero-img/heroImage_desktop_dark.webp"
+            : "/assets/images/hero-img/heroImage_desktop.webp"
         }
         className="object-cover w-full h-full"
       />
@@ -51,8 +51,8 @@ const ResponsiveHeroImage = () => {
       <img
         src={
           isDarkMode
-            ? "/assets/images/heroImage_desktop_dark.webp"
-            : "/assets/images/heroImage_desktop.webp"
+            ? "/assets/images/hero-img/heroImage_desktop_dark.webp"
+            : "/assets/images/hero-img/heroImage_desktop.webp"
         }
         alt="Hero Image"
         className="object-cover w-full h-full"

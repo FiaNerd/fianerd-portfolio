@@ -36,5 +36,11 @@
   "languages": {
     "sv": "Svenska",
     "en": "Engelska"
+  },
+  "submenu": {
+   "titleProfile": "Profil",
+    "titlePortfolio": "Portfolio",
+    "subTitleProfile": "En personlig profil som visar mina färdigheter",
+    "subTitlePortfolio": "En samling av mina bästa verk"
   }
 }

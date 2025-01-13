@@ -35,27 +35,28 @@ const NavigationSubMenu = ({
         <div
           className={`rounded p-4 col-span-1 ${
             navigationMenu === 'profile'
-              ? 'bg-gradient-to-br from-neutral-800 to-black'
-              : 'bg-gradient-to-br from-blue-800 to-blue-500'
+              ? 'bg-gradient-to-br from-[#fff5d7] to-[#edd8bf] dark:from-[#1b0909] dark:to-[#240313]'
+              : 'bg-gradient-to-br from-[#fff5d7] to-[#edd8bf] dark:from-[#1b0909] dark:to-[#240313]'
           }`}
         >
           <img
             src={
               navigationMenu === 'profile'
-                ? 'path-to-profile-image.jpg'
-                : 'path-to-portfolio-image.jpg'
+                ? '/assets/images/profile-img.jpg'
+                : '/assets/images/portfolio-img.jpg'
             }
             alt={navigationMenu}
-            className="w-24 h-24 object-cover rounded-lg mb-4"
+            className="w-full h-auto object-cover rounded-lg mb-4"
           />
-          <span className="block font-bold text-base">
-            {navigationMenu === 'profile' ? 'Profile' : 'Portfolio'}
-          </span>
-          <span className="block text-sm opacity-70">
+          <p className="block font-bold text-base">
+            {navigationMenu === 'profile' ? t('subMenu.titleProfile') : t('subMenu.titlePortfolio')}
+          </p>
+          <p className="block text-sm opacity-70 text-accent-primary">
             {navigationMenu === 'profile'
-              ? 'A personal profile showcasing my skills'
-              : 'A collection of my best works'}
-          </span>
+              ? t('subMenu.subTitleProfile')
+              : t('subMenu.subTitlePortfolio')
+            }
+          </p>
         </div>
 
         {/* Submenu Section */}
