@@ -12,7 +12,7 @@ const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
   const [completed, setCompleted] = useState(0);
 
   useEffect(() => {
-    let intervalId: NodeJS.Timeout;
+    let intervalId: ReturnType<typeof setTimeout>;
 
     if (isVisible) {
       intervalId = setInterval(() => {
