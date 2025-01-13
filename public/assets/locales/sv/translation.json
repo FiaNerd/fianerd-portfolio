@@ -37,7 +37,7 @@
     "sv": "Svenska",
     "en": "Engelska"
   },
-  "submenu": {
+  "subMenu": {
    "titleProfile": "Profil",
     "titlePortfolio": "Portfolio",
     "subTitleProfile": "En personlig profil som visar mina färdigheter",

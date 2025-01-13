@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
-
 interface IProps {
   navigationMenu: string;
   onMouseEnter: () => void;
@@ -19,6 +18,7 @@ const NavigationSubMenu = ({
   const currentRoute = navRoutes.find((route) => route.title === navigationMenu);
 
   if (!currentRoute?.subMenu?.length) return null;
+
 
   return (
     <div
