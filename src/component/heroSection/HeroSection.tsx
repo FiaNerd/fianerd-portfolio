@@ -18,7 +18,7 @@ const HeroSection = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [setUserIsDesktop]);
 
   return (
     <div className="relative w-full h-full flex justify-center">
