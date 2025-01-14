@@ -33,7 +33,7 @@ const SocialMediaAndContact = () => {
 
 
     {/* Icons Section */}
-      <div className="flex flex-col justify-end space-y-4 pb-12 text-[0.8em] md:text-[0.9em] mx-auto z-1000">
+      <div className="flex flex-col justify-end space-y-4 pb-20 md:pb-12 text-[0.8em] md:text-[0.9em] mx-auto z-1000">
         {/* Icons Section */}
         <div className="flex flex-col space-y-8"> 
           <NavLink
