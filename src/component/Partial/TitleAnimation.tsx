@@ -56,14 +56,14 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
       initial="hidden"
       animate={ctrls}
       onAnimationComplete={onComplete}
-      className="text-[2.6rem] md:text-[3.6rem] lg:text-[4.6rem] font-bold pt-8 md:pt-0"
+      className="text-[2.4rem] md:text-[3.6rem] lg:text-[4.6rem] font-bold mb-0 pt-4"
       style={style}
     >
       <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="inline"
+        className="inline pb-2"
       >
         {words.map((word, wordIndex) => (
           <motion.span
@@ -78,7 +78,7 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
         ))}
         <motion.span
           variants={child}
-          className="text-6xl md:text-[6rem] lg:leading-[6rem] lg:text-[12rem] ml-[-0.04em]"
+          className="text-6xl leading-4 md:text-[6rem] lg:leading-[6rem] lg:text-[12rem] ml-[-0.04em]"
         >
           {dot}
         </motion.span>
