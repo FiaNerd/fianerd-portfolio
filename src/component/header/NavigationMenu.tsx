@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenu from './NavigationSubMenu';
-import Arrow from '../../assets/svg/Arrow';
 
 const NavigationMenu = () => {
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);

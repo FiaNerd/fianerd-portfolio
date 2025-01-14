@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
+import PortfolioPage from './pages/PortfolioPage';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
           </Routes>
         </main>
 

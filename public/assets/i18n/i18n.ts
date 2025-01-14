@@ -27,7 +27,8 @@ i18n
       "Profile/skills/webSkills",
       "Profile/experience",
       "Profile/education",
-      "Profile/hobbies"
+      "Profile/hobbies", 
+      "portfolio",
     ],
     defaultNS: 'HeroSection', // Default namespace
     detection: {

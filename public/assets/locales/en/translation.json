@@ -4,7 +4,7 @@
   "label": "Choose a different language!",
   "home": "Home",
   "profile": "Profile",
-  "me": "About Me",
+  "me": "Who Am I<span class='text-btn-bg font-medium'>?</span>",
   "meDescription": "Learn more about me and how I got into system development and graphic design.",
   "skillsWeb": "Web Skills",
   "skillsWebDescription": "Explore my skills in web technology",
