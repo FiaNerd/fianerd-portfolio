@@ -1,24 +1,9 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "../Partial/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const setUserIsDesktop = useState(window.innerWidth > 768)[1];
-
-
-  useEffect(() => {
-    const handleResize = () => {
-      setUserIsDesktop(window.innerWidth > 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [setUserIsDesktop]);
 
   return (
     <div className="relative w-full h-full flex justify-center">
