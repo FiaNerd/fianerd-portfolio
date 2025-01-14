@@ -69,9 +69,9 @@
 
 .outlined-text {
   color: #25021c;
-  -webkit-text-stroke: 0.6px #c81560;
-  font-size: 2.5rem;
-  line-height: 3rem;
+  -webkit-text-stroke: 0.4px #c81560;
+  font-size: 2.2rem;
+  line-height: 2.5rem;
   text-shadow:
     -1px -1px 0 #c81560,
     1px -1px 0 #c81560,
@@ -82,7 +82,7 @@
 
 .dark .outlined-text {
   color: #cb7f2c;
-  -webkit-text-stroke: 0.6px #dbf5d5; 
+  -webkit-text-stroke: 0.4px #dbf5d5; 
   text-shadow:
   -1px -1px 0 #cb7f2c,
   1px -1px 0 #cb7f2c,
@@ -94,8 +94,8 @@
 
 @media (min-width: 640px) {
   .outlined-text {
-    font-size: 3rem; 
-    line-height: 6rem;
+    font-size: 2rem; 
+    line-height: 5rem;
   }
 }
 
