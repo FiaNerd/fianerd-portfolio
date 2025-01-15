@@ -38,20 +38,24 @@ const AboutMe = () => {
         <h2 className="text-h2 m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('title')}</h2>
         <p className="italic">{t('intro')}</p>
         <p>{t('introBio')}</p>
-        <h3 className="text-[#ca5b87] dark:text-accent-primary font-bold not-italic">{t('myBackgroundTitle')}</h3>
         
         <p
             className={`${
               isExpanded ? "line-clamp-none" : "line-clamp-5 lg:line-clamp-[10]"
             }`} 
-          >
-            {t('myBackgroundText')}
-          </p>
+            dangerouslySetInnerHTML={{ __html: t('mainIntroProfile') }}
+          />
+            {/* {t('mainIntroProfile')} */}
+          {/* </p> */}
                
         { isExpanded && (
           <>
+          <h3 className="text-[#ca5b87] dark:text-accent-primary font-bold not-italic">{t('myBackgroundTitle')}</h3>
 
           <h3 className="m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('myJourneyTitle')}</h3>
+          <p>
+              {t('myBackgroundText')}
+            </p>
           <p>{t('myJourneyText')}</p>
            {/* <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="hidden lg:block mx-auto lg:float-right mb-8 md:mb-0 md:pr-8 max-w-sm h-auto object-cover "/> */}
            <h4 className=" m-0 font-bold ttext-[#ca5b87] dark:text-accent-primary not-italic">{t('myFilosofiTitle')}</h4>
