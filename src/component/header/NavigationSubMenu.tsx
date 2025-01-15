@@ -17,7 +17,11 @@ const NavigationSubMenu = ({
   const { t } = useTranslation('translation');
   const currentRoute = navRoutes.find((route) => route.title === navigationMenu);
 
-  if (!currentRoute?.subMenu?.length) return null;
+  if (!currentRoute?.subMenu?.length){
+    return null
+  }
+
+  console.log('currentRoute', currentRoute);
 
 
   return (

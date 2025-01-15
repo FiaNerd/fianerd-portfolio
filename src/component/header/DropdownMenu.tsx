@@ -22,7 +22,7 @@ const DropdownMenu = ({
   const newDepthLevel = depthLevel + 1;
 
   // Define the margin left based on the depth level, adjusting multiplier as needed
-  const marginLeftClass = newDepthLevel > 1 ? `ml-${newDepthLevel * 2}` : 'ml-0'; // Adjust multiplier to 4 for better spacing
+  const marginLeftClass = newDepthLevel > 1 ? `ml-${newDepthLevel * 2}` : 'ml-0';
 
   // Define the dropdown positioning class, with adjustments for deeper levels
   const dropdownClass = `${dropdown ? 'block' : 'hidden'} ${
@@ -36,13 +36,13 @@ const DropdownMenu = ({
       onMouseLeave={onMouseLeave} 
     >
       {submenus.map((submenu, index) => (
-        <li key={index} className="relative text-[1.2rem] cursor-pointer py-2 px-4">
-          <MenuItems
-            items={submenu}
-            depthLevel={newDepthLevel}  
-            closeMenu={closeMenu}
-          />
-        </li>
+          <li key={index} className="relative text-[1.2rem] cursor-pointer py-2 px-4">
+            <MenuItems
+              items={submenu}
+              depthLevel={newDepthLevel}  
+              closeMenu={closeMenu}
+              />
+          </li>
       ))}
     </ul>
   );

@@ -1,7 +1,8 @@
-const allProjects = () => {
+
+const AllProjects = () => {
   return (
     <div>allProjects</div>
   )
 }
 
-export default allProjects
+export default AllProjects

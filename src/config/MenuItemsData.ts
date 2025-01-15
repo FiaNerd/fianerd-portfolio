@@ -75,32 +75,32 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/top5best-projects',
-        description: 'allProjectsDescription',
+        url: '/portfolio/top5best-projects',
+        description: 'top5best-projectsDescription',
       },
       {
         title: 'allProjects',
-        url: '/alla-projekt',
+        url: '/portfolio/alla-projekt',
         description: 'allProjectsDescription',
       },
       {
         title: 'frontend',
-        url: '/frontend',
+        url: '/portfolio/frontend',
         description: 'frontendDescription',
       },
       {
         title: 'backend',
-        url: '/backend',
+        url: '/portfolio/backend',
         description: 'backendDescription',
       },
       {
         title: 'fullstack',
-        url: '/fullstack',
+        url: '/portfolio/fullstack',
         description: 'fullstackDescription',
       },
       {
         title: 'grafisk',
-        url: '/graphic-design',
+        url: '/portfolio/graphic-design',
         description: 'grafiskDescription',
       },
     ],
