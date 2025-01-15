@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Button from "../Partial/Button";
+import Button from "../partial/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {

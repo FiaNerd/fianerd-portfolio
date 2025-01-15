@@ -2,11 +2,11 @@ import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import HeroSection from "../component/heroSection/HeroSection";
 import Hobbies from "../component/hobbies/Hobbies";
-import Title from "../component/Partial/Title";
-import AboutMe from "../component/Profile/about/AboutMe";
-import Education from "../component/Profile/education/Education";
-import WorkExperience from "../component/Profile/experience/WorkExperience";
-import Skills from "../component/Profile/skills/Skills";
+import Title from "../component/partial/Title";
+import AboutMe from "../component/profile/about/AboutMe";
+import Education from "../component/profile/education/Education";
+import WorkExperience from "../component/profile/experience/WorkExperience";
+import Skills from "../component/profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {

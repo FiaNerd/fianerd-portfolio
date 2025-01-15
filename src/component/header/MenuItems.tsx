@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
 import { Route } from '../../config/MenuItemsData';
 import { useClickOutside } from '../../hook/useClickOutside'; // Import the custom hook
-import Button from '../Partial/Button';
+import Button from '../partial/Button';
 import DropdownMenu from './DropdownMenu';
 
 interface MenuItemsProps {

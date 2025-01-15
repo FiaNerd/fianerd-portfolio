@@ -21,6 +21,8 @@
   "hobbies": "Hobbyer",
   "hobbiesDescription": "Utforska mina fritidsintressen",
   "portfolio": "Portfolio",
+  "top5best-projects": "Top 5 Best Projects",
+  "top5best-projectsDescription": "Explore my top <span class='text-accent-primary font bold'>5</span> best projects",
   "allProjects": "Alla projekt",
   "allProjectsDescription": "Bläddra bland alla mina utvalda projekt",
   "frontend": "Frontend",

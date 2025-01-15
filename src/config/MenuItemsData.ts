@@ -74,6 +74,11 @@ export const navRoutes: Route[] = [
     icon: faCaretDown,
     subMenu: [
       {
+        title: 'top5best-projects',
+        url: '/top5best-projects',
+        description: 'allProjectsDescription',
+      },
+      {
         title: 'allProjects',
         url: '/alla-projekt',
         description: 'allProjectsDescription',

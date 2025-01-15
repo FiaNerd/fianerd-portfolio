@@ -68,7 +68,6 @@ const NavigationSubMenu = ({
                 className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
                 onClick={closeMenuOnClick}
               >
-                {/* {t(subMenuItem.title)} */}
                  <span
                   dangerouslySetInnerHTML={{ __html: t(subMenuItem.title) }}
                 />

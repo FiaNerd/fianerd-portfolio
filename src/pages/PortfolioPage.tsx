@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Title from "../component/Partial/Title";
+import Title from "../component/partial/Title";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const PortfolioPage = () => {
