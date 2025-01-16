@@ -18,18 +18,19 @@ const PortfolioPage = () => {
     useSmoothScroll(headerHeight ? 0 : headerHeight);
 
     return (
-        <div>
-            {/* <Top5projects /> */}
+        <>
             <Title
                 id="portfolio"
-                title={'TEST'}
+                title={t('titlePortfolio')}
                 dot="."
                 children={t('subTitlePortfolio')}
-                className="mt-10"
-                />
-
-                <p>Portfolio page</p>
-        </div>
+                className="text-[#f39058] dark:text-[#cb384c] bg-[#436e74] dark:bg-[#16443e] mt-[10em]"
+                subHeadingClassName="text-hover-text dark:text-text-secondary"
+            />
+            <div className="px-4 max-w-screen-xl">
+                <p className="font-semibold tracking-wide">{t('introPortfolio')}</p>
+            </div>
+        </>
     );
 };
 

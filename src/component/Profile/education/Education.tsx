@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button from "../../partial/Button";
 
 const Education = () => {
     const { t } = useTranslation("Profile/education");
+    const navigate = useNavigate();
 
   return (
     <section className="py-8">
@@ -13,9 +15,9 @@ const Education = () => {
           <p className="text-sm md:text-base text-text-secondary mb-8">
             {t("checkoutText")}
           </p>
-          <NavLink to="#"
+          <Button onClick={() => navigate('/portfolio')}
           className="bg-transparent mr-auto text-btn-bg text-2xl font-medium hover:shadow-lg border-2 hover:bg-bg-hover font-sub-heading tracking-wider hover:text-bg-primary rounded shadow py-2 px-4 border-btn-bg hover:border-transparent">
-          {t("exploreBtn")}</NavLink>
+          {t("exploreBtn")}</Button>
         </div>
 
       <div className="flex mx-auto md:ml-12 lg:w-2/3 sticky">

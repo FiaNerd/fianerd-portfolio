@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
-import PortfolioLayout from './pages/portfolio/PortfolioLayout';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
 import Top5projects from './pages/portfolio/Top5projects';
 
@@ -28,10 +27,10 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/portfolio" element={<PortfolioLayout />}>
-            <Route index element={<PortfolioPage />} />
+          {/* <Route path="/portfolio" element={<PortfolioLayout />}> */}
+            <Route path='/portfolio' element={<PortfolioPage />} />
             <Route path="/portfolio/top5best-projects" element={<Top5projects />} />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </main>
     </div>

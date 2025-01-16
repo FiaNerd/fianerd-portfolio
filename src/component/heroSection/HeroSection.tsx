@@ -1,14 +1,16 @@
 import { useTranslation } from "react-i18next";
 import Button from "../partial/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
+  const navigate = useNavigate();
 
   return (
     <div className="relative w-full h-full flex justify-center">
       <div className="absolute grid grid-cols-1 md:grid-cols-[80%] lg:grid-cols-[60%] 2xl:grid-cols-[50%] w-full h-full z-10">
-        {/* Text Section */}
+     
         <div className="flex flex-col justify-center items-start px-6 md:px-12 text-left md:text-left z-10 w-full h-full">
           <div className={"bg-slate-50/40 dark:bg-black/40 p-6 rounded"}>
           <h1
@@ -18,12 +20,12 @@ const HeroSection = () => {
             <h2 className="text-[#5c1e64] dark:text-accent-primary text-xl sm:text-2xl md:text-2xl lg:text-3xl mb-0">{t("subTitle")}</h2>
             <h3 className="text-[#350712]/80 dark:text-text-accent text-lg sm:text-xl md:text-xl mb-4">{t("textIntro")}</h3>
             <p className="text-[#350712] dark:text-text-primary text-sm sm:text-base md:text-md mb-4 lg:mb-8">{t("text")}</p>
-            {/* Buttons */}
+          
             <div className="flex flex-col md:flex-row gap-8">
               <Button className="bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
                 {t("ctaButtonCV")}
               </Button>
-              <Button className=" border-3 bg-[#350712] dark:bg-transparent text-bg-primary dark:text-btn-bg border-[#350712] tracking-wide font-semibold dark:border-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover">
+              <Button onClick={() => navigate('/portfolio')} className=" border-3 bg-[#350712] dark:bg-transparent text-bg-primary dark:text-btn-bg border-[#350712] tracking-wide font-semibold dark:border-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover">
                 {t("ctaButtonPortfolio")}
               </Button>
             </div>

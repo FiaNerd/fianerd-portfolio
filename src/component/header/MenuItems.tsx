@@ -110,7 +110,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
               )}
             </button>
             <DropdownMenu
-              submenus={isMobile ? [{ title: t('linkPortfolio'), url: '/portfolio', description: 'Go to My Portfolio' }, ...items.subMenu] : items.subMenu}
+              submenus={isMobile ? [{ title: t('linkPortfolio'), url: '/portfolio' }, ...items.subMenu] : items.subMenu}
               dropdown={dropdown}
               depthLevel={depthLevel}
               closeMenu={closeMenu}

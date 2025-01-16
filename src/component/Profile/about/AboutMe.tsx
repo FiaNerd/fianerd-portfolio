@@ -37,7 +37,7 @@ const AboutMe = () => {
 
         <h2 className="text-h2 m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('title')}</h2>
         <p className="italic">{t('intro')}</p>
-        <p>{t('introBio')}</p>
+        <p className="font-semibold tracking-wide">{t('introBio')}</p>
         
         <p
             className={`${
@@ -52,7 +52,7 @@ const AboutMe = () => {
           <>
           <h3 className="text-[#ca5b87] dark:text-accent-primary font-bold not-italic">{t('myBackgroundTitle')}</h3>
 
-          <h3 className="m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('myJourneyTitle')}</h3>
+          <h3 className="m-0 font-medium text-[#ca5b87] dark:text-accent-primary not-italic">{t('myJourneyTitle')}</h3>
           <p>
               {t('myBackgroundText')}
             </p>
