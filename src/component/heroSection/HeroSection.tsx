@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Button from "../partial/Button";
-import ResponsiveHeroImage from "./ResponsiveHeroImage";
+import ResponsiveHeroImage from "../partial/ResponsiveHeroImage";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
