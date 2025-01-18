@@ -19,12 +19,13 @@ const PortfolioPage = () => {
 
     return (
         <>
+            <img  src="/assets/images/portfolio/hero-portfolio-desktop.webp" alt="Portfolio" className="mx-auto w-full h-auto object-cover mt-[100px]" />
             <Title
                 id="portfolio"
                 title={t('titlePortfolio')}
                 dot="."
                 children={t('subTitlePortfolio')}
-                className="text-[#f39058] dark:text-[#cb384c] bg-[#436e74] dark:bg-[#16443e] mt-[10em]"
+                className="text-[#f39058] dark:text-[#cb384c] bg-[#436e74] dark:bg-[#16443e]"
                 subHeadingClassName="text-hover-text dark:text-text-secondary"
             />
             <div className="px-4 max-w-screen-xl">
