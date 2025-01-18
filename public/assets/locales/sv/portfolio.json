@@ -1,5 +1,10 @@
 {
+    "portfolioSection": {
     "titlePortfolio": "Portfolio",
     "subTitlePortfolio": "Där kod möter kreativitet",
-    "introPortfolio": "Detta är ett bevis på min passion för kodning och design. Jag har skapat några projekt som jag är stolt över och jag letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig."
+    "mainSectionTitle": "När idéer blir verklighet",
+    "introPortfolio": "Detta är ett bevis på min passion för kodning och design. Jag har skapat några projekt som jag är stolt över och jag letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
+    "conatctMe": "Kontakta mig"
+    }
 }
+    
