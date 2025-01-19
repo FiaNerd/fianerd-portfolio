@@ -47,7 +47,7 @@ const NavigationSubMenu = ({
             src={
               navigationMenu === 'profile'
                 ? '/assets/images/profile-img.jpg'
-                : '/assets/images/portfolio-img.jpg'
+                : '/assets/images/portfolio/portfolio-img.jpg'
             }
             alt={navigationMenu}
             className="w-full h-auto object-cover rounded-lg mb-4"

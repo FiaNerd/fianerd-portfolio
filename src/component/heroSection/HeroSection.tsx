@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import Button from "../partial/Button";
 import ResponsiveHeroImage from "../partial/ResponsiveHeroImage";
-import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
@@ -25,7 +25,7 @@ const HeroSection = () => {
               <Button className="bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
                 {t("ctaButtonCV")}
               </Button>
-              <Button onClick={() => navigate('/portfolio')} className=" border-3 bg-[#350712] dark:bg-transparent text-bg-primary dark:text-btn-bg border-[#350712] tracking-wide font-semibold dark:border-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover">
+              <Button onClick={() => navigate('/portfolio')} className=" border-3  border-[#350712] bg-[#350712] dark:bg-transparent text-bg-primary dark:text-btn-bg  tracking-wide font-semibold  hover:bg-bg-hover  hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover">
                 {t("ctaButtonPortfolio")}
               </Button>
             </div>
