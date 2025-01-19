@@ -4,7 +4,6 @@ import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
-import Top5projects from './component/portfolio/Top5projects';
 
 function App() {
   useEffect(() => {
@@ -29,7 +28,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           {/* <Route path="/portfolio" element={<PortfolioLayout />}> */}
             <Route path='/portfolio' element={<PortfolioPage />} />
-            <Route path="/portfolio/top5best-projects" element={<Top5projects />} />
           {/* </Route> */}
         </Routes>
       </main>

@@ -25,9 +25,13 @@ const HeroSection = () => {
               <Button className="bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
                 {t("ctaButtonCV")}
               </Button>
-              <Button onClick={() => navigate('/portfolio')} className=" border-3  border-[#350712] bg-[#350712] dark:bg-transparent text-bg-primary dark:text-btn-bg  tracking-wide font-semibold  hover:bg-bg-hover  hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover">
+              <Button 
+                onClick={() => navigate('/portfolio')} 
+                className="border-2 border-[#350712] bg-[#350712] dark:bg-transparent dark:border-btn-bg text-bg-primary dark:text-btn-bg tracking-wide font-semibold hover:bg-bg-hover hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover"
+              >
                 {t("ctaButtonPortfolio")}
               </Button>
+
             </div>
           </div>
         </div>

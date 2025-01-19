@@ -68,7 +68,7 @@ const PortfolioPage = () => {
                     <SvgWaves colorLight={"#436e74"} colorDark={"#16443e"} />
             </div>
 
-            <section id="top5projects" className="section top-0">
+            <section className="section top-0">
                 <Title
                     id="top5projects"
                     title={t('top5PortfolioSection.titleTop5Portfolio')}

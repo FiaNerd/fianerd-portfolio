@@ -72,39 +72,39 @@ export const navRoutes: Route[] = [
     title: 'portfolio',
     url: '/portfolio', 
     icon: faCaretDown,
-    subMenu: [
-      {
-        title: 'top5best-projects',
-        url: '/portfolio/top5best-projects',
-        description: 'top5best-projectsDescription',
-      },
-      {
-        title: 'allProjects',
-        url: '/portfolio/alla-projekt',
-        description: 'allProjectsDescription',
-      },
-      {
-        title: 'frontend',
-        url: '/portfolio/frontend',
-        description: 'frontendDescription',
-      },
-      {
-        title: 'backend',
-        url: '/portfolio/backend',
-        description: 'backendDescription',
-      },
-      {
-        title: 'fullstack',
-        url: '/portfolio/fullstack',
-        description: 'fullstackDescription',
-      },
-      {
-        title: 'grafisk',
-        url: '/portfolio/graphic-design',
-        description: 'grafiskDescription',
-      },
-    ],
-  },
+      subMenu: [
+        {
+          title: 'top5best-projects',
+          url: '/portfolio/#top5projects',
+          description: 'top5best-projectsDescription',
+        },
+        {
+          title: 'allProjects',
+          url: '/portfolio/#alla-projekt',
+          description: 'allProjectsDescription',
+        },
+        {
+          title: 'frontend',
+          url: '/portfolio/#frontend',
+          description: 'frontendDescription',
+        },
+        {
+          title: 'backend',
+          url: '/portfolio/#backend',
+          description: 'backendDescription',
+        },
+        {
+          title: 'fullstack',
+          url: '/portfolio/#fullstack',
+          description: 'fullstackDescription',
+        },
+        {
+          title: 'grafisk',
+          url: '/portfolio/#graphic-design',
+          description: 'grafiskDescription',
+        },
+      ],
+    },
   {
     title: 'news',
     url: '/news',
