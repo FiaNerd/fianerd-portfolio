@@ -10,5 +10,11 @@
         "portfolioIntro": "This is a show case of my passion for coding and design. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
         "ctaButtonCV": "Download CV",
         "ctaButtonContactMe": "Get In Touch"
+    },
+    "top5PortfolioSection": {
+        "titleTop5Portfolio": "Top 5 Projects",
+        "subTitleTop5Portfolio": "Projects that I am proud of",
+        "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
+        "ctaButtonViewAll": "View All Projects"
     }
 } 

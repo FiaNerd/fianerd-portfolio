@@ -4,7 +4,7 @@ import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
-import Top5projects from './pages/portfolio/Top5projects';
+import Top5projects from './component/portfolio/Top5projects';
 
 function App() {
   useEffect(() => {
