@@ -21,7 +21,13 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
       }`}
       style={style}
     >
-      <TitleAnimation title={title} dot={dot} />
+      <TitleAnimation 
+        title={title + dot} 
+        dot={dot}
+        dangerouslyHTML={title} 
+        onComplete={() => {}}
+      />
+
       <h3
         className={`${
           subHeadingClassName || "text-text-secondary dark:text-text-secondary"

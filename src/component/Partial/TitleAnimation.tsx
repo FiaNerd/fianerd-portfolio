@@ -5,12 +5,13 @@ import useAnimateIn from "../../hook/useAnimation";
 interface IProps {
   title: string;
   dot: string;
+  dangerouslyHTML?: string; 
   onComplete?: () => void;
   style?: React.CSSProperties;
-  className?: string
+  className?: string;
 }
 
-const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) => {
+const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, className }: IProps) => {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -65,17 +66,25 @@ const TitleAnimation = ({ title, dot, onComplete, style, className }: IProps) =>
         animate="visible"
         className="inline pb-2"
       >
-        {words.map((word, wordIndex) => (
-          <motion.span
-            aria-hidden="true"
-            key={wordIndex}
-            variants={child}
+        {dangerouslyHTML ? (
+          <span
+            dangerouslySetInnerHTML={{ __html: dangerouslyHTML }}
             className={className}
-          >
-            {word}
-            {wordIndex < words.length - 1 && " "}
-          </motion.span>
-        ))}
+          />
+        ) : (
+          words.map((word, wordIndex) => (
+            <motion.span
+              aria-hidden="true"
+              key={wordIndex}
+              variants={child}
+              className={className}
+            >
+              {word}
+              {wordIndex < words.length - 1 && " "}
+            </motion.span>
+          ))
+        )}
+
         <motion.span
           variants={child}
           className="text-6xl leading-2 md:text-[3rem] lg:leading-[4rem] lg:text-[12rem] ml-[-0.04em]"
