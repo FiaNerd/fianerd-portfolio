@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { startTransition, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
@@ -22,6 +22,7 @@ const NavigationMenu = () => {
       navigationMenuCloseTimeout = null;
     }
   };
+  
 
   const handleMouseLeave = () => {
     navigationMenuCloseTimeout = setTimeout(() => {
@@ -30,33 +31,77 @@ const NavigationMenu = () => {
     }, navigationMenuCloseDelay);
   };
 
-  const handleScroll = (e: React.MouseEvent, sectionId: string) => {
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
-    }
-  };
-  
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
- 
-    if (url.includes('#')) {
-      const [path, sectionId] = url.split('#');
-
-      if (location.pathname === path) {
-        e.preventDefault();
-        handleScroll(e, sectionId); 
-        
-      } else {
-        navigate(path); 
-        setNavigationMenuOpen(false);
+  // const handleScroll = (e: React.MouseEvent, sectionId: string) => {
+  //   e.preventDefault();
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     // window.scrollTop({ top: element.offsetTop, behavior: 'smooth' });
+  //     // window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }; 
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const sectionId = location.hash.replace('#', '');
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.warn(`Section with ID "${sectionId}" not found.`);
+        }
       }
-    } else {
-      navigate(url); 
-    }
+    };
+  
+    handleHashNavigation();
+  }, [location]);
+  
+  
+  // useEffect(() => {
+  //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  //   const [_, sectionId] = location.hash.split('#');
+    
+  //   if (sectionId) {
+  //     handleScroll(undefined, sectionId); // Scroll to section after the page has changed
+  //   }
+  // }, [location]);  // This will trigger on every location change (including hash change)
+  
+  // const handleScroll = (e: React.MouseEvent | undefined, sectionId: string) => {
+  //   if (e) {
+  //     e.preventDefault(); 
+  //   }
+  
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   } else {
+  //     console.error(`Section ${sectionId} not found!`);
+  //   }
+  // };
 
+
+  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+    e.preventDefault(); // Prevent default link behavior
+    
+    const [path, sectionId] = url.split('#');
+    
+    // Wrap navigation in startTransition
+    startTransition(() => {
+      if (sectionId) {
+        if (location.pathname === path) {
+          handleScroll(undefined, sectionId); // Scroll to section if on the same page
+        } else {
+          navigate(path); // Navigate to the path
+        }
+      } else {
+        navigate(path); // Navigate without section ID
+      }
+    });
+    
+    // Close the navigation menu after clicking
     setNavigationMenuOpen(false);
   };
+  
 
   return (
     <>
@@ -67,7 +112,7 @@ const NavigationMenu = () => {
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">
               <NavLink
-                to={menu.url}
+                to={menu.url.replace('#', '')}
                 className={({ isActive }) =>
                   `inline-flex items-center justify-center text-nav-text h-auto px-4 py-2 text-sm font-medium transition-colors ${
                     isActive

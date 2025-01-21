@@ -34,7 +34,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Create a ref using the custom hook
+  // Create a ref using the custom hook 
   const ref = useClickOutside<HTMLLIElement>(() => {
     if (!window.matchMedia('(max-width: 768px)').matches) {
       setDropdown(false);

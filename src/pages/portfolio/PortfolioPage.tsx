@@ -33,9 +33,8 @@ const PortfolioPage = () => {
         }}
         className="bg-blend-multiply "
       >
-        <section id="portfolio" className="bg-[#436e74] dark:bg-[#16443e]">
+        <section id="portfolio"  className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
-            id="portfolio"
             title={t('portfolioSection.titlePortfolio')}
             dot="."
             children={t('portfolioSection.subTitlePortfolio')}
@@ -75,9 +74,8 @@ const PortfolioPage = () => {
         <SvgWaves colorLight={"#436e74"} colorDark={"#16443e"} />
       </div>
 
-      <section className="section top-0">
+      <section id="top5projects" className="top-0">
         <Title
-          id="top5projects"
           title={t('top5PortfolioSection.titleTop5Portfolio')}
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}

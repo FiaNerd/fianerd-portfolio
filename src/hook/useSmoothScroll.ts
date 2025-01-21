@@ -18,7 +18,7 @@ export const useSmoothScroll = (headerHeight: number) => {
             top: element.offsetTop - headerHeight,
             behavior: "smooth",
           });
-        }, 100); // You can adjust the timeout value if needed
+        }, 200); 
       }
     }
   }, [location.hash, headerHeight]); // Use `location.hash` instead of `location` to avoid unnecessary re-renders

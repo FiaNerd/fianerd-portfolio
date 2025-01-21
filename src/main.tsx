@@ -12,12 +12,12 @@ import { ThemeProvider } from './context/ThemeContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <I18nextProvider i18n={translation}>
       <ThemeProvider>
+    <I18nextProvider i18n={translation}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </ThemeProvider>
     </I18nextProvider>
+      </ThemeProvider>
   </React.StrictMode>
 )
