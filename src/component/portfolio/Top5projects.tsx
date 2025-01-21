@@ -1,58 +1,65 @@
-import { useTranslation } from "react-i18next"
-import { NavLink } from "react-router-dom"
+import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
-const Top5projects = () => {
-  const { t } = useTranslation("portfolio")
+const Top5Projects = () => {
+  const { t } = useTranslation("portfolio");
+  const items = t("top5PortfolioSection.itemsTop5", { returnObjects: true }) as { image: string; title: string; subTitle:string; description: string }[];
+
   return (
     <div className="max-w-screen-xl mx-auto px-4">
-      <p >{t('top5PortfolioSection.introTop5Portfolio')}</p>
+      <p>{t("top5PortfolioSection.introTop5Portfolio")}</p>
+      <section className="mb-12">
+        <div className="py-4 px-2 mx-auto sm:py-4">
+          {/* Grid container */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 h-full">
+            {items.map((item, index) => {
+              let columnSpan = "";
 
-      <section className=" mb-12">
-        <div className="py-4 px-2 mx-auto sm:py-4 lg:px-6 ">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
-            <div className="col-span-2 sm:col-span-1 md:col-span-2  h-auto md:h-full flex flex-col">
-            <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
-              <img src="/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg" alt="" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" />
-              <h3 className="bg-[#000]/80 z-10 text-md font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 p-4 xs:text-xl md:text-xl">
-              Skjort Kravaller <br /> <span className="text-slate-400 text-sm">graphic</span>
-              </h3>
-            </NavLink>
+              // Grid layout for index 0
+              if (index === 0) {
+                columnSpan = "lg:col-span-2 lg:row-span-2";  
+                // rowSpan = "md:row-span-2"; 
+              }
+              // Grid layout for index 1 and 2
+              else if (index === 1 || index === 2) {
+                columnSpan = "lg:col-span-1"; 
+              }
+              // Grid layout for index 3
+              else if (index === 3) {
+                columnSpan = "lg:col-span-2 lg:row-span-1";
+              }
 
-            </div>
-            <div className="col-span-2 sm:col-span-1 md:col-span-2">
-              <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4">
-                <img src="/assets/images/portfolio/frontend/bb/brutal-hero.jpg" alt="" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" />
-                {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div> */}
-                <h3 className="bg-[#000]/80 z-10 text-md font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 p-4 xs:text-xl md:text-xl">Brutal Beats <br /> <span className="text-slate-400 text-sm">frontend</span></h3>
-              </NavLink>
+              else if (index === 4) {
+                columnSpan = "lg:col-span-1 lg:row-span-2 lg:col-start-5 lg:row-start-1"; 
+              }
 
-              <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
-                <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
-                  <img src="/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg" alt="" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" />
-                  {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div> */}
-                  <h3 className="bg-[#000]/80 z-10 text-md font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 p-4 xs:text-xl md:text-xl">MSB  <br /> <span className="text-slate-400 text-sm">graphic & CSS & HTML</span></h3>
-                </NavLink>
+              return (
+                <div key={index} className={`${columnSpan} h-auto lg:h-full flex flex-col`}>
+                  <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+                    {/* Image */}
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    />
+                    
+                    <h3 className="bg-[#000]/80 rounded-br-lg z-10 text-lg font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 py-2 px-4 xs:text-xl md:text-xl group-hover:hidden">
+                      {item.title} <br />
+                      <span className="text-slate-400 text-sm">{t(item.subTitle)}</span>
+                    </h3>
 
-                <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
-                  <img src="/assets/images/portfolio/fullstack/pg/pg-login.jpg" alt="" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" />
-                  {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div> */}
-                  <h3 className="bg-[#000]/80 w-full z-10 text-lg font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 p-4 xs:text-xl md:textxl">Printagon <br /> <span className="text-slate-400 text-sm">fullstack</span></h3>
-                </NavLink>
-              </div>
-            </div>
-            <div className="col-span-2 sm:col-span-1 md:col-span-1 h-auto md:h-full flex flex-col">
-              <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
-                <img src="/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg" alt="graphic - Tyckte jag hörde hundar" className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out" />
-                {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div> */}
-                <h3 className="bg-[#000]/80 w-full z-10 text-lg font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 p-4 xs:text-xl md:textxl">Tyckte Jag Hörde Hundar  <br /> <span className="text-slate-400 text-sm">graphic</span></h3>
-              </NavLink>
-            </div>
+                    <div className="absolute inset-0 bg-black/80 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                      <p className="text-white px-4">{t(item.description)}</p>
+                    </div>
+                  </NavLink>
+                </div>
+              );
+            })}
           </div>
-        </div> 
-    </section>
-      
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Top5projects
+export default Top5Projects;

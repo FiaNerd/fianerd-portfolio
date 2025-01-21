@@ -11,7 +11,44 @@
     "titleTop5Portfolio": "Topp 5 Projekt",
     "subTitleTop5Portfolio": "Projekt jag är stolt över",
     "introTop5Portfolio": "Här är de projekt jag är mest stolt över. De är en blandning av kreativitet och funktionalitet. Jag letar alltid efter nya utmaningar och ser fram emot vad framtiden har att erbjuda.",
-    "ctaButtonViewAll": "Visa alla projekt"
+    "ctaButtonViewAll": "Visa alla projekt",
+        "itemsTop5": [
+            {
+                "titleSkjort": "Skjort kravallerna",
+                "subTitle": "Grafisk",
+                "description": "Photoshop and Illustrator",
+                "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+                "ctaButton": "Kolla in projektet"
+            },
+            {
+                "title": "BrutalBeats",
+                "subTitle": "Frontend",
+                "description": "React and Tailwind CSS",
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "ctaButton": "Kolla in projektet"
+            },
+            {
+                "title": "MSB",
+                "subTitle": "Grafisk & Frontend",
+                "description": "Photoshop, Illustrator and HTML & CSS",
+                "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
+                "ctaButton": "Kolla in projektet"
+            },
+            {
+                "title": "Printagon",
+                "subTitle": "Fullstack",
+                "description": "ASP.NET, SQL, React and Material-UI",
+                "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+                "ctaButton": "Kolla in projektet"
+            },
+            {
+                "title": "Tyckte jag hörde hundar",
+                "subTitle": "Grafisk",
+                "description": "Photoshop and Illustrator",
+                "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+                "ctaButton": "Kolla in projektet"
+            }
+        ]
 }
 
 }
