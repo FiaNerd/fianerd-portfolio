@@ -18,7 +18,7 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/#home', 
+    url: '/', 
     nav: HomePage,
   },
   {

@@ -33,13 +33,14 @@ const PortfolioPage = () => {
         }}
         className="bg-blend-multiply "
       >
-        <div className="bg-[#436e74] dark:bg-[#16443e]">
+        <section id="portfolio" className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
             id="portfolio"
             title={t('portfolioSection.titlePortfolio')}
             dot="."
             children={t('portfolioSection.subTitlePortfolio')}
-            className="text-[#f39058] dark:text-[#cbbc38] mb-6 md:mb-8 lg:mb-10"
+            className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#cbbc38] mb-6 md:mb-8 lg:mb-10 "
+            sticky
             // subHeadingClassName="text-hover-text dark:text-text-secondary"
           />
           <div className="px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">
@@ -69,7 +70,7 @@ const PortfolioPage = () => {
               />
             </div>
           </div>
-        </div>
+        </section>
 
         <SvgWaves colorLight={"#436e74"} colorDark={"#16443e"} />
       </div>
@@ -80,9 +81,9 @@ const PortfolioPage = () => {
           title={t('top5PortfolioSection.titleTop5Portfolio')}
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
-          className="text-[#2ea25f] dark:text-[#cb384c] mb-6 md:mb-8 lg:mb-10"
+          className="bg-[#fff5d7] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md:mb-12 lg:mb-20"
+          sticky
         />
-
         <Top5projects />
       </section> 
     </>

@@ -49,7 +49,7 @@ const HomePage = () => {
           title={t("Profile/aboutMe:titleProfile")}
           dot={t("Profile/aboutMe:dot")}
           children={t("Profile/aboutMe:subTitle")}
-          className="section text-[#ca5b87] top-0 dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
+          className="text-[#ca5b87] top-0 dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
           sticky
         />
@@ -85,11 +85,11 @@ const HomePage = () => {
         </section>
 
         {/* Hobbies Section */}
-        <section id="hobbies">
+        <section id="hobbies" className="mb-20">
           <Title
-            title={t("Profile/hobbies:titleHobbie")} // Corrected here
+            title={t("Profile/hobbies:titleHobbie")}
             dot={"!"}
-            children={t("Profile/hobbies:subTitleHobbie")} // Corrected here
+            children={t("Profile/hobbies:subTitleHobbie")}
             className="text-[#b67076] top-0 dark:text-accent-primary bg-[#3e3a19] dark:bg-stone-950"
             subHeadingClassName="text-hover-text dark:text-text-secondary px-4"
             sticky
