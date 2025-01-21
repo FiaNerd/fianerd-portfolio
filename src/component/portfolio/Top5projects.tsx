@@ -31,7 +31,7 @@ const Top5Projects = () => {
               }
 
               else if (index === 4) {
-                columnSpan = "lg:col-span-1 lg:row-span-2 lg:col-start-5 lg:row-start-1"; 
+                columnSpan = "sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-5 lg:row-start-1"; 
               }
 
               return (
