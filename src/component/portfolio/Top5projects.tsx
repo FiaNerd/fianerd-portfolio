@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import Button from "../partial/Button";
 
 const Top5Projects = () => {
   const { t } = useTranslation("portfolio");
-  const items = t("top5PortfolioSection.itemsTop5", { returnObjects: true }) as { image: string; title: string; subTitle:string; description: string }[];
+  const items = t("top5PortfolioSection.itemsTop5", { returnObjects: true }) as { image: string; title: string; subTitle:string; description: string; ctaButton: string}[];
 
   return (
     <div className="max-w-screen-xl mx-auto px-4">
@@ -49,7 +50,12 @@ const Top5Projects = () => {
                     </h3>
 
                     <div className="absolute inset-0 bg-black/80 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p className="text-white px-4">{t(item.description)}</p>
+                      <div className="flex flex-col md:flex-col items-center mx-auto gap-8">
+                         <p className="text-white text-sm px-4 flex items-end justify-end">{t(item.description)}</p>
+                        <Button className="bg-btn-bg hover:bg-bg-hover px-8" >
+                          {t(item.ctaButton)}
+                          </Button>
+                      </div>
                     </div>
                   </NavLink>
                 </div>

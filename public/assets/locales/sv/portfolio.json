@@ -14,39 +14,39 @@
     "ctaButtonViewAll": "Visa alla projekt",
         "itemsTop5": [
             {
-                "titleSkjort": "Skjort kravallerna",
+                "title": "Skjort kravallerna",
                 "subTitle": "Grafisk",
                 "description": "Photoshop and Illustrator",
                 "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
-                "ctaButton": "Kolla in projektet"
+                "ctaButton": "Visa projekt"
             },
             {
                 "title": "BrutalBeats",
                 "subTitle": "Frontend",
                 "description": "React and Tailwind CSS",
                 "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
-                "ctaButton": "Kolla in projektet"
+                "ctaButton": "Visa projekt"
             },
             {
                 "title": "MSB",
                 "subTitle": "Grafisk & Frontend",
                 "description": "Photoshop, Illustrator and HTML & CSS",
                 "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
-                "ctaButton": "Kolla in projektet"
+                "ctaButton": "Visa projekt"
             },
             {
                 "title": "Printagon",
                 "subTitle": "Fullstack",
                 "description": "ASP.NET, SQL, React and Material-UI",
                 "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-                "ctaButton": "Kolla in projektet"
+                "ctaButton": "Visa projekt"
             },
             {
                 "title": "Tyckte jag hörde hundar",
                 "subTitle": "Grafisk",
                 "description": "Photoshop and Illustrator",
                 "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
-                "ctaButton": "Kolla in projektet"
+                "ctaButton": "Visa projekt"
             }
         ]
 }
