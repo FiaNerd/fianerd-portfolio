@@ -1,5 +1,4 @@
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '@iconify/react/dist/iconify.js';
 import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
@@ -27,6 +26,7 @@ const ThemeSwitch: React.FC = () => {
     }
   }, [currentTheme]);
 
+
   return (
     <div className="flex items-center">
       <button
@@ -34,10 +34,12 @@ const ThemeSwitch: React.FC = () => {
         onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
         className="icon-language rounded-full cursor-pointer focus:outline-none flex items-center text-nav-text g:text-nav-text hover:text-nav-hover"
       >
-        <FontAwesomeIcon
+      
+        <Icon icon={currentTheme === 'light' ? "line-md:moon-rising-filled-alt-loop" : "line-md:sun-rising-filled-loop"} width="30" height="30" />
+        {/* <FontAwesomeIcon
           icon={currentTheme === 'light' ? faSun : faMoon}
           className="items-center text-[1.4rem]"
-        />
+        /> */}
       </button>
     </div>
   );

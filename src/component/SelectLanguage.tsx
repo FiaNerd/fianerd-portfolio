@@ -1,10 +1,9 @@
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '@iconify/react/dist/iconify.js';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
 import Arrow from '../assets/svg/Arrow';
+import { useClickOutside } from '../hook/useClickOutside'; // Ensure this hook is defined properly
 
 const SelectLanguage = () => {
   const { i18n, t } = useTranslation('translation')
@@ -46,7 +45,7 @@ const dropdownItemClass = clsx(
         aria-expanded={isOpen}
         className='flex flex-row items-center text-md font-sub-heading icon-language text-nav-text hover:text-nav-hover'
         onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={faGlobe} className='text-[1.4rem] pr-2' />
+        <Icon icon="ic:twotone-language" width="30" height="30" className='mr-[0.2em]'/>
 
         <span className="text-xl flex items-center justify-center mt-0.5">
           {selectedLanguageLabel}

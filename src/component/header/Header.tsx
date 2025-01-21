@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react/dist/iconify.js';
 import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
@@ -106,9 +107,9 @@ const Header = () => {
           </div>
           <NavLink
             to="/contact"
-            className="hidden lg:flex font-sub-heading text-lg lg:text-xl font-medium border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
+            className="hidden lg:flex justify-center items-center font-sub-heading text-lg gap-2 lg:text-xl font-medium border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
-            {t('contact')}
+           <Icon icon="line-md:email-twotone" width="24" height="24" /> {t('contact')}
           </NavLink>
 
           <div className="lg:hidden">

@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import SvgWaves from "../../assets/svg/SvgWaves";
@@ -23,7 +24,9 @@ const PortfolioPage = () => {
 
   return (
     <>
-      <div
+
+
+ <div
         style={{
           paddingTop: `${headerHeight}px`,
           transition: "padding-top 0.3s ease",
@@ -49,11 +52,11 @@ const PortfolioPage = () => {
                   {t('portfolioSection.introPortfolio')}
                 </p>
                 <div className="flex flex-col w-full md:flex-row items-center mx-auto md:mt-8 gap-8">
-                  <Button className="bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-                    {t("portfolioSection.ctaButtonCV")}
+                  <Button className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
+                     <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolioSection.ctaButtonCV")}
                   </Button>
-                  <Button className="bg-[#350712] border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary">
-                    {t("portfolioSection.ctaButtonContactMe")}
+                  <Button className="flex flex-row justify-center items-center gap-4 bg-[#350712] border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary">
+                  <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolioSection.ctaButtonContactMe")}
                   </Button>
                 </div>
               </div>
@@ -81,7 +84,7 @@ const PortfolioPage = () => {
         />
 
         <Top5projects />
-      </section>
+      </section> 
     </>
   );
 };

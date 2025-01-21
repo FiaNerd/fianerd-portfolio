@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react/dist/iconify.js';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
@@ -37,8 +38,8 @@ const Hobbies = () => {
             <p className='font-sub-heading text-2xl md:text-3xl text-center text-text-secondary mb-8 md:mb-12'  
                 dangerouslySetInnerHTML={{__html: t('thanksEnd')}}></p>
             <NavLink to="#"
-          className="font-sub-heading bg-transparent items-start text-btn-bg text-2xl md:text-4xl font-medium hover:shadow-lg border-2 md:border-4 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow py-2 md:py-4 px-4 md:px-8 border-btn-bg hover:border-transparent">
-          {t("contactHobbie")}</NavLink>
+                className="flex flex-row items-center gap-4 justify-center font-sub-heading bg-transparent  text-btn-bg text-2xl md:text-4xl font-medium hover:shadow-lg border-2 md:border-4 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow py-2 md:py-4 px-4 md:px-8 border-btn-bg hover:border-transparent">
+                <Icon icon="line-md:email-twotone" width="35" height="35" /> {t("contactHobbie")}</NavLink>
           </div>
         </section>
     );

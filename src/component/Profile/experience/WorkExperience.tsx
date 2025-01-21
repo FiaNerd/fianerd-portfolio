@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Button from "../../partial/Button";
@@ -16,8 +17,8 @@ const WorkExperience = () => {
             {t("checkoutText")}
           </p>
           <Button onClick={() => navigate('/portfolio')}
-          className="font-sub-heading bg-transparent mr-auto text-btn-bg text-2xl font-medium hover:shadow-lg border-2 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow py-2 px-4 border-btn-bg hover:border-transparent">
-          {t("exploreBtn")}</Button>
+          className="flex flex-row gap-4 justify-center items-center text-5xl font-sub-heading bg-transparent mr-auto text-btn-bg font-bold hover:shadow-lg border-2 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow border-btn-bg hover:border-transparent">
+         <Icon icon="ix:explore" width="30" height="30" /> {t("exploreBtn")}</Button>
         </div>
 
       <div className="flex mx-auto md:ml-12 lg:w-2/3 sticky">
