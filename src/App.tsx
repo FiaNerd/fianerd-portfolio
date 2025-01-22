@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Header from './component/header/Header';
-import ErrorFallback from './component/partial/errors/ErrorFallback';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
+import { useSmoothScroll } from './hook/useSmoothScroll';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
+import ErrorFallback from './component/partial/errors/ErrorFallback';
 
 function App() {
   const navigate = useNavigate();
@@ -21,8 +22,8 @@ function App() {
   }, []);
 
   
-  // const headerHeight = document.getElementById('header')?.clientHeight || 0;
-  // useSmoothScroll(headerHeight);
+  const headerHeight = document.getElementById('header')?.clientHeight || 0;
+  useSmoothScroll(headerHeight);
 
   return (
     <div className="min-h-screen flex">
