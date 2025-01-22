@@ -23,22 +23,21 @@ const PortfolioPage = () => {
   useSmoothScroll(headerHeight ? 0 : headerHeight);
 
   return (
-<>
- <div
+    <>
+      <div
         style={{
           paddingTop: `${headerHeight}px`,
           transition: "padding-top 0.3s ease",
         }}
         className="bg-blend-multiply "
       >
-        <section id="portfolio"  className="bg-[#436e74] dark:bg-[#16443e]">
+        <section id="portfolio" className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
             title={t('portfolioSection.titlePortfolio')}
             dot="."
             children={t('portfolioSection.subTitlePortfolio')}
             className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#cbbc38] mb-6 md:mb-8 lg:mb-10 "
             sticky
-            // subHeadingClassName="text-hover-text dark:text-text-secondary"
           />
           <div className="px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">
             <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-8">
@@ -51,10 +50,10 @@ const PortfolioPage = () => {
                 </p>
                 <div className="flex flex-col w-full md:flex-row items-center mx-auto md:mt-8 gap-8">
                   <Button className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-                     <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolioSection.ctaButtonCV")}
+                    <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolioSection.ctaButtonCV")}
                   </Button>
                   <Button className="flex flex-row justify-center items-center gap-4 bg-[#350712] border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary">
-                  <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolioSection.ctaButtonContactMe")}
+                    <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolioSection.ctaButtonContactMe")}
                   </Button>
                 </div>
               </div>
@@ -82,11 +81,11 @@ const PortfolioPage = () => {
         />
 
         <Suspense fallback={<div>Loading...</div>}>
-            <Top5projects />
+          <Top5projects />
         </Suspense>
 
       </section>
-      </> 
+    </>
   );
 };
 
