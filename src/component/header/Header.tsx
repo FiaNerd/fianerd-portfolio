@@ -1,14 +1,14 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Suspense, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useSidebarWidth } from '../../hook/useSidebarWidth';
-import { useSmoothScroll } from '../../hook/useSmoothScroll';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
+import { useSmoothScroll } from '../../hook/useSmoothScroll';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);
@@ -32,7 +32,7 @@ const Header = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
     setIsNavigating(true);
-    const timer = setTimeout(() => setIsNavigating(false), 500);
+    const timer = setTimeout(() => setIsNavigating(false), 200);
     return () => clearTimeout(timer);
   }, [location]);
 
@@ -97,7 +97,7 @@ const Header = () => {
         </NavLink>
 
         <div className="hidden lg:flex">
-          <NavbarDesktop />
+            <NavbarDesktop />
         </div>
 
         <div className="flex items-center gap-4">

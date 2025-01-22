@@ -20,6 +20,10 @@ function App() {
     }
   }, []);
 
+  
+  // const headerHeight = document.getElementById('header')?.clientHeight || 0;
+  // useSmoothScroll(headerHeight);
+
   return (
     <div className="min-h-screen flex">
       {/* Header */}

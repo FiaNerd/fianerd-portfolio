@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useLayoutEffect, useState } from "react";
+import { Suspense, useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../component/partial/Button";
@@ -23,9 +23,7 @@ const PortfolioPage = () => {
   useSmoothScroll(headerHeight ? 0 : headerHeight);
 
   return (
-    <>
-
-
+<>
  <div
         style={{
           paddingTop: `${headerHeight}px`,
@@ -82,9 +80,13 @@ const PortfolioPage = () => {
           className="bg-[#fff5d7] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md:mb-12 lg:mb-20"
           sticky
         />
-        <Top5projects />
-      </section> 
-    </>
+
+        <Suspense fallback={<div>Loading...</div>}>
+            <Top5projects />
+        </Suspense>
+
+      </section>
+      </> 
   );
 };
 

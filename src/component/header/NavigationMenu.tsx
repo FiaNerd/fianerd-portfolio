@@ -1,4 +1,4 @@
-import { startTransition, useEffect, useState } from 'react';
+import { startTransition, Suspense, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
@@ -22,7 +22,6 @@ const NavigationMenu = () => {
       navigationMenuCloseTimeout = null;
     }
   };
-  
 
   const handleMouseLeave = () => {
     navigationMenuCloseTimeout = setTimeout(() => {
@@ -31,15 +30,6 @@ const NavigationMenu = () => {
     }, navigationMenuCloseDelay);
   };
 
-  // const handleScroll = (e: React.MouseEvent, sectionId: string) => {
-  //   e.preventDefault();
-  //   const element = document.getElementById(sectionId);
-  //   if (element) {
-  //     // window.scrollTop({ top: element.offsetTop, behavior: 'smooth' });
-  //     // window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
-  //     element.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // }; 
   useEffect(() => {
     const handleHashNavigation = () => {
       const sectionId = location.hash.replace('#', '');
@@ -52,62 +42,37 @@ const NavigationMenu = () => {
         }
       }
     };
-  
+
     handleHashNavigation();
   }, [location]);
-  
-  
-  // useEffect(() => {
-  //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  //   const [_, sectionId] = location.hash.split('#');
-    
-  //   if (sectionId) {
-  //     handleScroll(undefined, sectionId); // Scroll to section after the page has changed
-  //   }
-  // }, [location]);  // This will trigger on every location change (including hash change)
-  
-  // const handleScroll = (e: React.MouseEvent | undefined, sectionId: string) => {
-  //   if (e) {
-  //     e.preventDefault(); 
-  //   }
-  
-  //   const element = document.getElementById(sectionId);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: 'smooth' });
-  //   } else {
-  //     console.error(`Section ${sectionId} not found!`);
-  //   }
-  // };
-
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault(); // Prevent default link behavior
-    
+
     const [path, sectionId] = url.split('#');
-    
-    // Wrap navigation in startTransition
+
     startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
-          handleScroll(undefined, sectionId); // Scroll to section if on the same page
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
         } else {
-          navigate(path); // Navigate to the path
+          navigate(`${path}#${sectionId}`, { replace: true });
         }
       } else {
         navigate(path); // Navigate without section ID
       }
     });
-    
+
     // Close the navigation menu after clicking
     setNavigationMenuOpen(false);
   };
-  
 
   return (
     <>
       <div className="relative z-10">
-     
-
         <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-6 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">
@@ -141,12 +106,14 @@ const NavigationMenu = () => {
       </div>
 
       {navigationMenuOpen && (
-        <NavigationSubMenu
-          navigationMenu={navigationMenu}
-          onMouseEnter={clearCloseTimeout}
-          onMouseLeave={handleMouseLeave}
-          closeMenuOnClick={() => setNavigationMenuOpen(false)}
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <NavigationSubMenu
+            navigationMenu={navigationMenu}
+            onMouseEnter={clearCloseTimeout}
+            onMouseLeave={handleMouseLeave}
+            closeMenuOnClick={() => setNavigationMenuOpen(false)}
+          />
+        </Suspense>
       )}
     </>
   );

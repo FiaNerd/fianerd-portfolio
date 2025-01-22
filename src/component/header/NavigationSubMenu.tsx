@@ -1,5 +1,6 @@
+import { startTransition } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
 interface IProps {
   navigationMenu: string;
@@ -15,15 +16,50 @@ const NavigationSubMenu = ({
   closeMenuOnClick,
 }: IProps) => {
   const { t } = useTranslation('translation');
-  const currentRoute = navRoutes.find((route) => route.title === navigationMenu);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  if (!currentRoute?.subMenu?.length){
-    return null
+  const handleScroll = (e: React.MouseEvent | undefined, sectionId: string) => {
+    if (e) {
+      e.preventDefault();
+    }
+
+    startTransition(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  };
+
+  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+    e.preventDefault();
+
+    const [path, sectionId] = url.split('#');
+
+    startTransition(() => {
+      if (sectionId) {
+        if (location.pathname === path) {
+          handleScroll(undefined, sectionId);
+        } else {
+          navigate(`${path}#${sectionId}`, { replace: true });
+          setTimeout(() => {
+            handleScroll(undefined, sectionId);
+          }, 0);
+        }
+      } else {
+        navigate(path); 
+      }
+    });
+
+    closeMenuOnClick();
+  };
+
+  const currentMenu = navRoutes.find((menu) => menu.title === navigationMenu);
+
+  if (!currentMenu || !currentMenu.subMenu) {
+    return null;
   }
-
-  console.log('currentRoute', currentRoute);
-
-
   return (
     <div
       className="absolute z-10 bg-nav-text dark:bg-[#1b0909] shadow-sm p-4 rounded mt-[3.8em] "
@@ -65,20 +101,20 @@ const NavigationSubMenu = ({
 
         {/* Submenu Section */}
         <div className="col-span-2 grid gap-6 grid-cols-2 xl:grid-cols-2 p-4 bg-bg-primary">
-          {currentRoute.subMenu.map((subMenuItem, subIndex) => (
-            <div key={subIndex} className="flex flex-col">
+        {currentMenu.subMenu.map((subMenu, index) => (
+            <div key={index} className="flex flex-col">
               <NavLink
-                to={subMenuItem.url}
+                to={subMenu.url}
                 className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
-                onClick={closeMenuOnClick}
+                onClick={(e) => handleMenuClick(e, subMenu.url)}
               >
                  <span
-                  dangerouslySetInnerHTML={{ __html: t(subMenuItem.title) }}
+                  dangerouslySetInnerHTML={{ __html: t(subMenu.title) }}
                 />
               </NavLink>
-              {subMenuItem.description && (
+              {subMenu.description && (
                 <span className="block text-xs text-text-primary font-light leading-6 opacity-70">
-                  {t(subMenuItem.description)}
+                  {t(subMenu.description)}
                 </span>
               )}
             </div>
