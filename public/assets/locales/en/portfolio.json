@@ -55,8 +55,8 @@
         ]
     },
     "frontendPortfolioSection": {
-        "titleFrontendPortfolio": "Frontend projects",
-        "subTitleFrontendPortfolio": "Code with an eye for design",
+        "titleFrontendPortfolio": "Frontend portfolio",
+        "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
         "introFrontendPortfolio": "I love creating beautiful and functional websites. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
         "ctaButtonViewAll": "View All Projects"
     }

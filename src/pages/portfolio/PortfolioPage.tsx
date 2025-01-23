@@ -1,13 +1,14 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import SvgLine from "../../assets/svg/SvgLine";
 import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../component/partial/Button";
 import Title from "../../component/partial/Title";
 import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
 import Top5projects from "../../component/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
+import RippedPaperTop from "../../assets/svg/RippedPaperTop";
+import RippedPaperBottom from "../../assets/svg/RippedPaperBottom";
 
 const PortfolioPage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -83,18 +84,21 @@ const PortfolioPage = () => {
         />
           <Top5projects />
       </section>
-
-      <SvgLine colorLight={"#f69497"} colorDark={"#522b28"} />
-        <section id="frontend" className="bg-[#f69497] dark:bg-[#522b28] mb-">
-          <Title 
-            title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
-            dot={"."} 
-            children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
-            className=" text-[#d60d20] dark:text-[#2a5530] mt-0 mb-6 md:mb-12 lg:mb-20"
-          />
-          <FrontendPortfolio />
-        </section>
-      <SvgWaves colorLight={"#f69497"} colorDark={"#522b28"} />
+      <div>
+        <RippedPaperTop colorLight={"#f69497"} colorDark={"#522b28"} />
+        {/* <SvgLine colorLight={"#f69497"} colorDark={"#522b28"} /> */}
+          <section id="frontend" className="bg-[#f69497] dark:bg-[#522b28]">
+            <Title 
+              title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
+              dot={"."} 
+              children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
+              className=" text-[#d60d20] dark:text-[#2a5530] px-4 mt-0 mb-6 md:mb-12 lg:mb-20"
+            />
+            <FrontendPortfolio />
+          </section>
+          <RippedPaperBottom colorLight={"#f69497"} colorDark={"#522b28"} />
+      </div>
+      {/* <SvgWaves colorLight={"#f69497"} colorDark={"#522b28"} /> */}
       {/* BG color for the light mode  "#dc8e32" */}
       {/* BG color for the light mode  "#9fc4bd" text 345f59*/}
     </>
