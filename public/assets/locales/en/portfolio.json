@@ -57,7 +57,7 @@
     "frontendPortfolioSection": {
         "titleFrontendPortfolio": "Frontend Case",
         "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
-        "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#c2550b] font-semibold'> I love creating beautiful and functional websites.</span>I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+        "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'> I love creating beautiful and functional websites.</span>I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
         "ctaButtonViewAll": "View All Projects"
     }
 } 

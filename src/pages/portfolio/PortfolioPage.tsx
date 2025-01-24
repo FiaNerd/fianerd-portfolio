@@ -39,13 +39,13 @@ const PortfolioPage = () => {
             title={t('portfolioSection.titlePortfolio')}
             dot="."
             children={t('portfolioSection.subTitlePortfolio')}
-            className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#cbbc38] mb-6 md:mb-8 lg:mb-10 "
+            className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 "
             sticky
           />
           <div className="px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">
             <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-8">
-              <div className="flex flex-col lg:gap-8 md:border-double md:border-4 py-8 px-0 md:px-8 border-[#f3d758] dark:border-[#cb9838] rounded">
-                <h1 className="text-[#f3d758] dark:text-[#cb9838]">
+              <div className="flex flex-col lg:gap-8 md:border-double md:border-4 py-8 px-0 md:px-8 border-[#f3d758] dark:border-[#d85f2d] rounded">
+                <h1 className="text-[#f3d758] dark:text-[#d85f2d]">
                   {t('portfolioSection.mainSectionTitle')}
                 </h1>
                 <p className="font-semibold tracking-wide">
@@ -79,7 +79,7 @@ const PortfolioPage = () => {
           title={t('top5PortfolioSection.titleTop5Portfolio')}
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
-          className="bg-[#fff5d7] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md:mb-12 lg:mb-20"
+          className="bg-[#fff5d7] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
           sticky
         />
           <Top5projects />
@@ -91,7 +91,7 @@ const PortfolioPage = () => {
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."} 
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
-              className=" text-[#d60d20] dark:text-[#c2550b] px-4 mt-0 "
+              className=" text-[#d60d20] dark:text-[#d6a70d] px-4 mt-0 mb-6 md:mb-8"
             />
             <FrontendPortfolio />
           </section>

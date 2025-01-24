@@ -53,7 +53,7 @@
         "frontendPortfolioSection": {
         "titleFrontendPortfolio": "Frontendprojekt",
         "subTitleFrontendPortfolio": "Kod med ett öga för design",
-        "introFrontendPortfolio": "<span class=' text-[#d60d20] dark:text-[#c2550b] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
+        "introFrontendPortfolio": "<span class=' text-[#d60d20] dark:text-[#d6a70d] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
         "ctaButtonViewAll": "Visa alla projekt"
     }
 
