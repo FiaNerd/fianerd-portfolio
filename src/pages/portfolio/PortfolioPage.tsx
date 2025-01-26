@@ -5,6 +5,7 @@ import RippedPaperBottom from "../../assets/svg/RippedPaperBottom";
 import RippedPaperTop from "../../assets/svg/RippedPaperTop";
 import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../component/partial/Button";
+import SectionPlate from "../../component/partial/SectionPlate";
 import Title from "../../component/partial/Title";
 import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
 import Top5projects from "../../component/portfolio/Top5projects";
@@ -80,21 +81,22 @@ const PortfolioPage = () => {
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
           className="bg-[#fff5d7] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
-          sticky
+          sticky 
         />
           <Top5projects />
       </section>
 
         <RippedPaperTop colorLight={"#f69497"} colorDark={"#4a2342"} />
-          <section id="frontend" className="bg-[#f69497] dark:bg-[#4a2342]">
+          <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
             <Title 
+            id="frontend" 
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."} 
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
               className=" text-[#d60d20] dark:text-[#d6a70d] px-4 mt-0 mb-6 md:mb-8"
             />
             <FrontendPortfolio />
-          </section>
+          </SectionPlate>
           <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
 
 

@@ -58,7 +58,7 @@
   
   p {
     @apply leading-7 mb-4;
-    font-size: clamp(14px, 2.5vw, 18px); 
+    font-size: clamp(12px, 2.5vw, 18px); 
     color: var(--color-text-primary);
   }
 }
