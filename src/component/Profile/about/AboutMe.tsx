@@ -14,6 +14,7 @@ const AboutMe = () => {
     
     if (isExpanded) {
       const articleTop = document.getElementById('profile');
+
       if (articleTop) {
         articleTop.scrollIntoView({ behavior: 'smooth' });
       }
@@ -24,7 +25,7 @@ const AboutMe = () => {
   
   return (
       <>
-      <section className="article-top max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
+      <section className=" max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
           <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
@@ -58,19 +59,19 @@ const AboutMe = () => {
             </p>
           <p>{t('myJourneyText')}</p>
            {/* <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="hidden lg:block mx-auto lg:float-right mb-8 md:mb-0 md:pr-8 max-w-sm h-auto object-cover "/> */}
-           <h4 className=" m-0 font-bold ttext-[#ca5b87] dark:text-accent-primary not-italic">{t('myFilosofiTitle')}</h4>
+           <h4 className=" m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('myFilosofiTitle')}</h4>
            <h5 className=" not-italic font-semibold text-[#ca5b87] dark:text-accent-primary m-0">{t('myFilosofiSubtitle')}</h5>
            <p className="m-0">{t('myFilosofiText1')}</p>
            <p className="m-0">{t('myFilosofiText2')}</p>
            <p>{t('myFilosofiText3')}</p>
            <p>{t('myFilosofiText4')}</p>
-           <h3 className="font-textImportant  not-italic text-4xl md:text-6xl font-bold text-[#ca5b87] dark:text-accent-primary mt-8 mb-8">{t('createTogheterTitle')}</h3>
+           <h3 className="font-textImportant not-italic text-4xl md:text-6xl font-bold text-[#ca5b87] dark:text-accent-primary mt-8 mb-8">{t('createTogheterTitle')}</h3>
            <p>{t('createTogheterText')}</p>
           </>
         )}
 
         <Button
-            className="float-right text-lg md:text-xl text-btn-bg border-btn-bg hover:text-bg-primary active:text-bg-primary hover:border-bg-hover hover:bg-bg-hover"
+            className="float-end w-auto text-lg md:text-xl text-btn-bg hover:text-bg-hover"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}

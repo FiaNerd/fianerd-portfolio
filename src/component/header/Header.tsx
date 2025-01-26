@@ -1,14 +1,14 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { Suspense, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useSidebarWidth } from '../../hook/useSidebarWidth';
+import { useSmoothScroll } from '../../hook/useSmoothScroll';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
-import { useSmoothScroll } from '../../hook/useSmoothScroll';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);
