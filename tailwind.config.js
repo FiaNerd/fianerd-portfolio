@@ -22,14 +22,9 @@ export default {
         outlinedDark: '#dbf5d5',
       },
       fontFamily: {
-        // heading: ['veneer', 'sans-serif'],
         heading: ['fredericka-the-greatest', 'serif'],
         textImportant: ['pf-fuel-decay', 'sans-serif'],
         'sub-heading': ['cabin-sketch-regular', 'sans-serif'],
-        // heading: ['cabin-sketch-bold', 'sans-serif'],
-        // heading: ['playfair-display', 'serif'],s
-        // heading: ['ltc-artscript-pro', 'sans-serif'],
-        // 'sub-heading': ['proxima-nova', 'sans-serif'],
 
       },
       zIndex: {

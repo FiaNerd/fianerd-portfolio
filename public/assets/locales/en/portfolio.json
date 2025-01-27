@@ -54,10 +54,130 @@
             }
         ]
     },
-    "frontendPortfolioSection": {
-        "titleFrontendPortfolio": "Frontend Case",
-        "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
-        "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'> I love creating beautiful and functional websites.</span>I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
-        "ctaButtonViewAll": "View All Projects"
-    }
+        "frontendPortfolioSection": {
+          "titleFrontendPortfolio": "Frontend Case",
+          "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
+          "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'>I love creating beautiful and functional websites.</span> I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+         
+          "frontendItems": [
+            {
+                "projectType":"Side project",
+                "title": "BrutalBeats",
+                "applicationType": "web",
+                "subTitle": "Frontend",
+                "description": "React and Tailwind CSS",
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "linkTitle": "Links",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "LinkedIn",
+                        "url": "https://www.linkedin.com/in/sofia-mattiasson-fianerd/",
+                        "icon": "line-md:linkedin"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://www.brutalbeats.se/",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },
+            {
+                "projectType":"School project",
+                "title": "The Movie DB",
+                "applicationType": "web",
+                "subTitle": "Frontend",
+                "description": "React and Tailwind CSS",
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "linkTitle": "Links",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/TMDB",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://the-movie-data.netlify.app",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },
+            {
+                "projectType":"School project",
+                "title": "MSB",
+                "applicationType": "web",
+                "subTitle": "Graphic Tools",
+                "description": "HTML & CSS",
+                "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
+                "linkTitle": "Links",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/newproject",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://newproject.com",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+                "tech": [
+                    {
+                        "name": "figma",
+                        "icon": "gg:figma"
+                    },
+                    {
+                        "name": "Photoshop",
+                        "icon": "devicon:photoshop"
+                    },
+                    {
+                        "name": "Illustrator",
+                        "icon": "skill-icons:illustrator"
+                    },
+                    {
+                        "name": "HTML",
+                        "icon": "logos:html-5"
+                    },
+                    {
+                        "name": "CSS",
+                        "icon": "logos:css-3"
+                    }
+                ]
+            }
+        ]
+     }
 } 
