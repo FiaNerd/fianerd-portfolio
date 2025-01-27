@@ -55,121 +55,126 @@
         "subTitleFrontendPortfolio": "Kod med ett öga för design",
         "introFrontendPortfolio": "<span class=' text-[#d60d20] dark:text-[#d6a70d] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
         "ctaButtonViewAll": "Visa alla projekt",
-       "frontendItems": [
-         {
-            "projectType":"Sido projekt",
-            "title": "BrutalBeats",
-            "applicationType": "web",
-            "subTitle": "Frontend",
-            "description": "React and Tailwind CSS",
-            "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
-            "linkTitle": "Länkar",
-            "links": [
-                {
-                    "type": "GitHub",
-                    "url": "https://github.com/FiaNerd/",
-                    "icon": "line-md:github-twotone"
-                },
-                {
-                    "type": "Website",
-                    "url": "https://www.brutalbeats.se/",
-                    "icon": "tdesign:internet-filled"
-                }
-            ],
-            "tech": [
-                {
-                    "name": "React",
-                    "icon": "skill-icons:react-dark"
-                },
-                {
-                    "name": "TypeScript",
-                    "icon": "catppuccin:typescript"
-                },
-                {
-                    "name": "Tailwind CSS",
-                    "icon": "skill-icons:tailwindcss-dark"
-                }
-            ]
-        },
-         {
-            "projectType": "Skolprojekt",
-            "title": "The Movie DB ",
-            "applicationType": "web",
-            "subTitle": "Frontend",
-            "description": "React and Tailwind CSS",
-            "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
-            "linkTitle": "Länkar",
-            "links": [
-                {
-                    "type": "GitHub",
-                    "url": "https://github.com/FiaNerd/TMDB",
-                    "icon": "line-md:github-twotone"
-                },
-                {
-                    "type": "Website",
-                    "url": "https://the-movie-data.netlify.app",
-                    "icon": "tdesign:internet-filled"
-                }
-            ],
-            "tech": [
-                {
-                    "name": "React",
-                    "icon": "skill-icons:react-dark"
-                },
-                {
-                    "name": "TypeScript",
-                    "icon": "catppuccin:typescript"
-                },
-                {
-                    "name": "Tailwind CSS",
-                    "icon": "skill-icons:tailwindcss-dark"
-                }
-            ]
-        },
-        {
-            "projectType": "Skolprojekt",
-            "title": "MSB",
-            "applicationType": "web",
-            "subTitle": "Grafiska verktyg",
-            "description": "Vue and Vuetify",
-            "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
-            "linkTitle": "Länkar",
-            "links": [
-                {
-                    "type": "GitHub",
-                    "url": "https://github.com/newproject",
-                    "icon": "line-md:github-twotone"
-                },
-                {
-                    "type": "Website",
-                    "url": "https://newproject.com",
-                    "icon": "tdesign:internet-filled"
-                }
-            ],
-            "tech": [
+        "frontendItems": [
+            {
+                "projectType":"Sido projekt",
+                "title": "BrutalBeats",
+                "applicationType": "web",
+                "subTitle": "Frontend",
+                "titleDescription": "Webbplats för bokningsföretag",
+                "projectDuration": "BrutalBeats Agency & Booking, Helsingborg | mars 2023 - januari 2025",
+                "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.</br><span>Syfte:</span> Jag ansvarar för att utveckla en webbplats för BrutalBeats Agency & Booking, ett nytt bokningsföretag. Ett grundläggande krav var att sidan ska ha en mörk estetik. Projektet fokuserar på att skapa en responsiv design med en \"mobile-first\" strategi som informerar om olika artister och band. Kommande arbete inkluderar integration av Node.js för att hantera kontaktförfrågningar genom Nodemailer.\n<span>Huvudsakliga Bidrag:</span>- Utformade och implementerade en grundläggande struktur och design för webben. - Skapade en mobilanpassad och responsiv layout för optimal användrupplevelse. - Förberedde för framtida integration av ett kontaktformulär för att underlätta kommunikation mellan besökare och företaget. - Planerar att integrera ett CMS-system, som WordPress eller Umbraco.\n<span>Använda Teknologier: </span>\n- <span>Frontend:</span> React, TypeScript, Tailwindcss - <span>Backend:</span> Node.js (kommande) - Verktyg: Visual Studio Code\n <span>Utmaningar & Lösningar:</span> - Navigerar utmaningen med att utveckla en helt ny webbplats från grunden, inklusive skapandet av en sammanhängande design och struktur. <span>Resultat:</span> Den grundläggande webbplatsen har framgångsrikt etablerats med en responsiv design och en mörk estetik. Nästa steg är att implementera kontaktformulär och e-postintegration för att förbättra användarinteraktionen. Arbetet med att koppla ihop sidan med ett CMS-system kommer ytterligare att förbättra webbplatsens funktionalitet och användarupplevelse. Webbplats: https://www.brutalbeats.se",
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "linkTitle": "Länkar",
+                "ctaButton": "Visa projekt",
+                "links": [
                     {
-                        "name": "figma",
-                        "icon": "gg:figma"
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/",
+                        "icon": "line-md:github-twotone"
                     },
                     {
-                        "name": "Photoshop",
-                        "icon": "devicon:photoshop"
-                    },
-                    {
-                        "name": "Illustrator",
-                        "icon": "skill-icons:illustrator"
-                    },
-                    {
-                        "name": "HTML",
-                        "icon": "logos:html-5"
-                    },
-                    {
-                        "name": "CSS",
-                        "icon": "logos:css-3"
+                        "type": "Website",
+                        "url": "https://www.brutalbeats.se/",
+                        "icon": "tdesign:internet-filled"
                     }
-            ]
-        }
-    ]
+                ],
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },
+            {
+                "projectType": "Skolprojekt",
+                "title": "The Movie DB ",
+                "applicationType": "web",
+                "subTitle": "Frontend",
+                "description": "React and Tailwind CSS",
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "linkTitle": "Länkar",
+                "ctaButton": "Visa projekt",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/TMDB",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://the-movie-data.netlify.app",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },
+            {
+                "projectType": "Skolprojekt",
+                "title": "MSB",
+                "applicationType": "web",
+                "subTitle": "Grafiska verktyg",
+                "description": "Vue and Vuetify",
+                "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
+                "linkTitle": "Länkar",
+                "ctaButton": "Visa projekt",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/newproject",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://newproject.com",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Axios",
+                        "icon": "logos:axios"
+                    },
+                    {
+                        "name": "React Query",
+                        "icon": "logos:react-query"
+                    },
+                    {
+                        "name": "SCSS",
+                        "icon": "vscode-icons:file-type-scss"
+                    }
+                ]
+            }
+        ]
 
     }
 

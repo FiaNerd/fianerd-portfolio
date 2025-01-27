@@ -12,9 +12,11 @@ interface PortfolioCardProps {
   linkTitle: string;
   links: { type: string; url: string; icon: string }[];
   tech: { name: string; icon: string }[];
+  ctaButton: string;
 }
 
-const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links, tech}: PortfolioCardProps) => {
+const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links, tech, ctaButton}: PortfolioCardProps) => {
+ const truncatedDescription = description.length > 100 ? `${description.substring(0, 100)}...` : description;
   return (
     <div className="flex flex-col items-center justify-center">
   <div className="flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-lg">
@@ -47,12 +49,10 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
           </div>
 
           <div className="px-4 space-y-2 ">
-            <p className="text-text-secondary text-sm leading-5 tracking-wide">
-              {description}        
-            </p>
+            <p className="text-text-secondary text-sm leading-5 tracking-wide" dangerouslySetInnerHTML={{ __html: truncatedDescription }} />
             <Button
             className="w-full flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover  tracking-wide">
-              ...Readmore
+              {ctaButton}
             </Button >
           </div>
 

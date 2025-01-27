@@ -65,8 +65,10 @@
                 "title": "BrutalBeats",
                 "applicationType": "web",
                 "subTitle": "Frontend",
-                "description": "React and Tailwind CSS",
-                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "titleDescription": "Booking agency website",
+                "projectDuration": "BrutalBeats Agency & Booking, Helsingborg | march 2023 - january 2025",
+                "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.</br><span>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><span>Key Contributions:</span><br><span>- Frontend Development:</span> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span>- Backend:</span> Node.js<br><span>- Version Control:</span> Git<br><span>- Terminal:</span> Command Line Interface (CLI)<br><span>- Development Tools:</span> Visual Studio Code<br><span>- CMS:</span> Planned integration with WordPress or Umbraco<br><span>Challenges & Solutions:</span> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness. - Planned and strategized for future integration with Node.js and CMS system.<br><span>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality."                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "ctaButton": "View Project",
                 "linkTitle": "Links",
                 "links": [
                     {
@@ -108,6 +110,7 @@
                 "description": "React and Tailwind CSS",
                 "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
                 "linkTitle": "Links",
+                "ctaButton": "View Project",
                 "links": [
                     {
                         "type": "GitHub",
@@ -143,6 +146,7 @@
                 "description": "HTML & CSS",
                 "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
                 "linkTitle": "Links",
+                "ctaButton": "View Project",
                 "links": [
                     {
                         "type": "GitHub",
@@ -157,25 +161,25 @@
                 ],
                 "tech": [
                     {
-                        "name": "figma",
-                        "icon": "gg:figma"
-                    },
-                    {
-                        "name": "Photoshop",
-                        "icon": "devicon:photoshop"
-                    },
-                    {
-                        "name": "Illustrator",
-                        "icon": "skill-icons:illustrator"
-                    },
-                    {
-                        "name": "HTML",
-                        "icon": "logos:html-5"
-                    },
-                    {
-                        "name": "CSS",
-                        "icon": "logos:css-3"
-                    }
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                      },
+                      {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                      },
+                      {
+                        "name": "Axios",
+                        "icon": "logos:axios"
+                      },
+                      {
+                        "name": "React Query",
+                        "icon": "logos:react-query"
+                      },
+                      {
+                        "name": "SCSS",
+                        "icon": "vscode-icons:file-type-scss"
+                      }
                 ]
             }
         ]

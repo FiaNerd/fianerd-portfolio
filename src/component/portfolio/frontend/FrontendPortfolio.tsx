@@ -29,6 +29,7 @@ const FrontendPortfolio = () => {
               subTitle={item.subTitle}
               projectType={item.projectType}
               linkTitle={item.linkTitle}
+              ctaButton={item.ctaButton}
             />
         ))}
       </div>
