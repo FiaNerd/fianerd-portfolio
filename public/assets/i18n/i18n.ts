@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: navigator.language || 'en', // Use browser's language setting or default to 'en'
+    lng: navigator.language || 'en',
     fallbackLng: ['en', 'sv'],
     interpolation: {
       escapeValue: false,
