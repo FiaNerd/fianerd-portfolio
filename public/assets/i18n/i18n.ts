@@ -33,11 +33,20 @@ i18n
       "portfolio/top5PortfolioSection",
       "portfolio/frontendPortfolioSection"
     ],
-    defaultNS: 'HeroSection', // Default namespace
+    defaultNS: 'heroSection', // Default namespace
     detection: {
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
       caches: ['localStorage', 'cookie'],
     },
+    debug: true, // Enable debug mode to see logs
   })
+
+i18n.on('languageChanged', (lng) => {
+  console.log('Language changed to:', lng);
+});
+
+i18n.on('loaded', (loaded) => {
+  console.log('Loaded translations:', loaded);
+});
 
 export default i18n

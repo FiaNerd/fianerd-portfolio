@@ -5,11 +5,11 @@ import RippedPaperBottom from "../../assets/svg/RippedPaperBottom";
 import RippedPaperTop from "../../assets/svg/RippedPaperTop";
 import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../component/partial/Button";
-import SectionPlate from "../../component/partial/SectionPlate";
 import Title from "../../component/partial/Title";
 import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
 import Top5projects from "../../component/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
+import SectionPlate from "../../component/Partial/SectionPlate";
 
 const PortfolioPage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -50,7 +50,7 @@ const PortfolioPage = () => {
                   {t('portfolioSection.mainSectionTitle')}
                 </h1>
                 <p className="font-semibold tracking-wide">
-                  {t('portfolioSection.introPortfolio')}
+                  {t('portfolioSection.portfolioIntro')}
                 </p>
                 <div className="flex flex-col w-full md:flex-row items-center mx-auto md:mt-8 gap-8">
                   <Button className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">

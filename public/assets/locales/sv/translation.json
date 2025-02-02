@@ -36,10 +36,11 @@
   "grafiskDescription": "Utforska mina utvalda grafiska projekt",
   "news": "Nyheter<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
-  "languages": {
-    "sv": "Svenska",
-    "en": "Engelska"
-  },
+    "languages": {
+      "select": "SV",
+      "sv": "Svenska",
+      "en": "Engelska"
+    },
   "subMenu": {
    "titleProfile": "Profil",
     "titlePortfolio": "Portfolio",

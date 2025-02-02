@@ -36,10 +36,11 @@
   "grafiskDescription": "Explore my selected graphic projects",
   "news": "News<span class='text-btn-bg font-medium'>!</span>",
   "contact": "Contact Me",
-  "languages": {
-    "sv": "Swedish",
-    "en": "English"
-  },
+    "languages": {
+      "select": "EN",
+      "sv": "Swedish",
+      "en": "English"
+    },
   "subMenu": {
     "titleProfile": "Profile",
     "titlePortfolio": "Portfolio",
