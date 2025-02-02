@@ -32,7 +32,7 @@
                 "title": "MSB",
                 "subTitle": "Grafisk & Frontend",
                 "description": "Photoshop, Illustrator and HTML & CSS",
-                "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
+                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-hero.jpg",
                 "ctaButton": "Visa projekt"
             },
             {
@@ -147,7 +147,7 @@
                 "subTitle": "Grafiska verktyg",
                 "titleDescription": "Grafiska Element och Illustrationer: Från Adobe till Responsiv Webbdesign",
                 "description": "Detta projekt kombinerar grafisk design och webbutveckling, där jag applicerade mina färdigheter i Adobe Illustrator och Photoshop för att skapa grafiska element och illustrationer. Kursen fokuserade på att bygga en webbplats enligt MSB:s grafiska profil, med inriktning på typografi, färgscheman och layoutprinciper. Jag fick också praktisk erfarenhet av HTML och CSS för att utveckla en responsiv och visuellt tilltalande webbplats.<br><span>Syfte:</span> Kursen Graphic Tools syftade till att ge grundläggande kunskaper i Illustrator och Photoshop. I Illustrator var målet att skapa tre distinkta grafiska element, medan uppgiften i Photoshop innebar att frilägga minst tre personer. Kursen fokuserade även på att följa MSB:s (Myndigheten för samhällsskydd och beredskap) grafiska profil [MSB Graphic Profile](https://www.msb.se/), med fokus på typografi, teckenstorlekar, färgscheman och andra designprinciper. Detta resulterade i att en webbplats byggdes med HTML och CSS som följde denna profil.<br><span>Nyckelbidrag:</span><br>- Designade och skapade alla grafiska element för webbplatsen, inklusive bilder som sammanställdes av olika komponenter. Till exempel skapades Hero-sektionen och eld-bilden genom att kombinera frilagda bilder med andra visuella element.<br>- Säkerställde semantisk korrekthet i HTML och CSS genom att använda flexbox och grid för att förfina teknikerna för frontend-utveckling.<br><span>Tekniker som användes:</span><br><span>- Grafiska verktyg:</span> Photoshop, Illustrator<br><span>- Frontend:</span> HTML, CSS<br><span>- Utvecklingsverktyg:</span> Visual Studio Code<br><span>Projektets höjdpunkter:</span><br>- Använde flexbox och grid-layouts för att skapa en responsiv och visuellt tilltalande webbplats.<br>- Prioriterade efterlevnad av MSB:s grafiska profil, vilket fördjupade förståelsen för designkonsekvens och varumärkesriktlinjer.<br><span>Resultat:</span><br>Projektet, som primärt fokuserade på grafiska verktyg, gav värdefull erfarenhet av HTML och CSS och förbättrade färdigheterna inom frontend-utveckling. Den färdiga webbplatsen demonstrerar tillämpningen av designprinciper och tekniker som lärdes ut under kursen.<br>Webbplats: https://lucky-basbousa-252a0a.netlify.app/<br>GitHub: https://github.com/FiaNerd/msb_falling_trees_mission",
-                "image": "/assets/images/portfolio/frontend/school/ux:ui/school-msb-hero.jpg",
+                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-hero.jpg",
                 "linkTitle": "Länkar",
                 "ctaButton": "Visa projekt",
                 "links": [
