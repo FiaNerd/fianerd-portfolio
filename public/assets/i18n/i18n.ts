@@ -44,6 +44,7 @@ i18n
     },
     debug: true,
   })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -56,5 +57,7 @@ i18n.on('loaded', (loaded) => {
   console.log('Loaded translations:', loaded);
 });
 
+>>>>>>> feature/frontend-portfolio
+=======
 >>>>>>> feature/frontend-portfolio
 export default i18n
