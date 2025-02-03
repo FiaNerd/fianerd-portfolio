@@ -4,16 +4,9 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
+import ErrorFallback from './component/Partial/errors/ErrorFallback';
 
-function ErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
-  return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre>{error.message}</pre>
-      <button onClick={resetErrorBoundary}>Try again</button>
-    </div>
-  );
-}
+
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
