@@ -3,8 +3,8 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Header from './component/header/Header';
-import ErrorFallback from './component/partial/errors/ErrorFallback';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
+import ErrorFallback from './component/Partial/errors/ErrorFallback';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
