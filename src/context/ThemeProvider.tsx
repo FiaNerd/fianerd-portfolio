@@ -1,34 +1,27 @@
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
-// Define the type for the theme context
-interface ThemeContextType {
-  currentTheme: 'light' | 'dark';
-  toggleTheme: (theme: 'light' | 'dark') => void;
+interface ThemeContextProps {
+  currentTheme: string;
+  toggleTheme: () => void;
 }
 
-// Create the context with a default value
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
-const getInitialTheme = (): 'light' | 'dark' => {
-  const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-  return savedTheme ? savedTheme : 'light';
-};
-
-const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>(getInitialTheme);
-
-  const toggleTheme = (theme: 'light' | 'dark') => {
-    setCurrentTheme(theme);
-    localStorage.setItem('theme', theme);
-  };
+export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [currentTheme, setCurrentTheme] = useState('light');
 
   useEffect(() => {
-    if (currentTheme === 'light') {
-      document.body.classList.remove('dark');
-    } else {
-      document.body.classList.add('dark');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setCurrentTheme(savedTheme);
     }
-  }, [currentTheme]);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setCurrentTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   return (
     <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
@@ -36,5 +29,3 @@ const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-export { ThemeProvider, ThemeContext,  };

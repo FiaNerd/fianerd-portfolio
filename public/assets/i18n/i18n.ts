@@ -40,14 +40,4 @@ i18n
     },
     debug: true,
   })
-
-i18n.on('languageChanged', (lng) => {
-  console.log('Language changed to:', lng);
-  localStorage.setItem('i18nextLng', lng);
-});
-
-i18n.on('loaded', (loaded) => {
-  console.log('Loaded translations:', loaded);
-});
-
 export default i18n
