@@ -9,7 +9,7 @@ import Title from "../../component/partial/Title";
 import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
 import Top5projects from "../../component/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
-import SectionPlate from "../../component/Partial/SectionPlate";
+import SectionPlate from "../../component/partial/SectionPlate";
 
 const PortfolioPage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -35,8 +35,9 @@ const PortfolioPage = () => {
         }}
         className="bg-blend-multiply "
       >
-        <section id="portfolio" className="bg-[#436e74] dark:bg-[#16443e]">
+        <section className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
+            id="portfolio" 
             title={t('portfolioSection.titlePortfolio')}
             dot="."
             children={t('portfolioSection.subTitlePortfolio')}
@@ -89,11 +90,12 @@ const PortfolioPage = () => {
         <RippedPaperTop colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
             <Title 
-            id="frontend" 
+              id="frontend" 
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."} 
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
-              className=" text-[#d60d20] dark:text-[#d6a70d] px-4 mt-0 mb-6 md:mb-8"
+              className=" text-[#d60d20] dark:text-[#d6a70d] bg-[#f69497] dark:bg-[#4a2342] px-4 mt-0 mb-6 md:mb-8"
+              sticky
             />
             <FrontendPortfolio />
           </SectionPlate>

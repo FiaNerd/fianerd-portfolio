@@ -74,11 +74,6 @@
                         "icon": "line-md:github-twotone"
                     },
                     {
-                        "type": "LinkedIn",
-                        "url": "https://www.linkedin.com/in/sofia-mattiasson-fianerd/",
-                        "icon": "line-md:linkedin"
-                    },
-                    {
                         "type": "Website",
                         "url": "https://www.brutalbeats.se/",
                         "icon": "tdesign:internet-filled"
@@ -146,7 +141,7 @@
                 "description": "This project combines graphic design and web development, where I applied my skills in Adobe Illustrator and Photoshop to create graphic elements and illustrations. The course focused on building a website following the MSB graphic profile, incorporating typography, color schemes, and layout principles. I also gained hands-on experience with HTML and CSS to develop a responsive and visually engaging site.<br><span>Purpose:</span> The Graphic Tools course aimed to provide foundational knowledge of Illustrator and Photoshop. In Illustrator, the objective was to create three distinct elements, while in Photoshop, the task involved clipping out at least three individuals. Additionally, the course emphasized adhering to the graphic profile of MSB (Civil Contingencies)[MSB Graphic Profile] <span> (https://www.msb.se/) </span>, focusing on typography, font sizes, color schemes, etc., and subsequently building a website using HTML and CSS following this profile.<br><span>Key Contributions:</span><br>- Created all graphic elements for the website, utilizing images composed of various other images. For instance, the Hero section and fire image were assembled from clipped-out images combined with other visuals.<br>- Ensured semantic correctness in HTML and CSS, employing flexbox and grid extensively to enhance frontend development techniques.<br><span>Technologies Used:</span><br><span>- Graphic Tools:</span> Photoshop, Illustrator<br><span>- Frontend:</span> HTML, CSS<br><span>- Development Tools:</span> Visual Studio Code<br><span>Project Highlights:</span><br>- Utilized flexbox and grid layouts to create a visually appealing and responsive website.<br>- Emphasized adherence to the MSB graphic profile, enhancing understanding of design principles and brand consistency.<br><span>Outcome:</span><br>While the primary focus was on graphic tools, the project provided valuable insights into HTML and CSS, improving proficiency in frontend development. The project website showcases the application of design principles and techniques learned during the course.<br>Website: https://lucky-basbousa-252a0a.netlify.app/<br>GitHub: https://github.com/FiaNerd/msb_falling_trees_mission",
                 "linkTitle": "Links",
                 "ctaButton": "View Project",
-                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-hero.jpg",
+                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-footer-landscape.jpg",
                 "links": [
                     {
                         "type": "GitHub",

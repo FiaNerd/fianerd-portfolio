@@ -11,7 +11,6 @@ const FrontendPortfolio = () => {
 
   return (
     <section className="max-w-screen-xl mx-auto px-4">
-      {/* Render the introduction with dangerous HTML */}
       <p
         className="mb-12"
         dangerouslySetInnerHTML={{ __html: t("frontendPortfolioSection.introFrontendPortfolio") }}

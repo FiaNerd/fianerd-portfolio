@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: navigator.language || 'en',
+    lng: localStorage.getItem('i18nextLng') || navigator.language || 'en',
     fallbackLng: ['en', 'sv'],
     interpolation: {
       escapeValue: false,
@@ -38,11 +38,12 @@ i18n
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
       caches: ['localStorage', 'cookie'],
     },
-    debug: true, // Enable debug mode to see logs
+    debug: true,
   })
 
 i18n.on('languageChanged', (lng) => {
   console.log('Language changed to:', lng);
+  localStorage.setItem('i18nextLng', lng);
 });
 
 i18n.on('loaded', (loaded) => {

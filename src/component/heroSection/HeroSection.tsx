@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import ResponsiveHeroImage from "./ResponsiveHeroImage";
 import Button from "../partial/Button";
-import ResponsiveHeroImage from "../partial/ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
