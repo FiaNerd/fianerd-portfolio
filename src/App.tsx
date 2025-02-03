@@ -3,8 +3,17 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Header from './component/header/Header';
-import ErrorFallback from './component/partial/errors/ErrorFallback';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
+
+function ErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  );
+}
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
