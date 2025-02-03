@@ -16,7 +16,7 @@ const FrontendPortfolio = () => {
         dangerouslySetInnerHTML={{ __html: t("frontendPortfolioSection.introFrontendPortfolio") }}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto">
         {Array.isArray(frontendItems) && frontendItems.map((item: any, index: number) => (
           <PortfolioCard
               key={index}

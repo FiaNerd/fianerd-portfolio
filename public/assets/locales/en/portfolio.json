@@ -156,25 +156,21 @@
                 ],
                 "tech": [
                     {
-                        "name": "React",
-                        "icon": "skill-icons:react-dark"
-                      },
-                      {
-                        "name": "TypeScript",
-                        "icon": "catppuccin:typescript"
-                      },
-                      {
-                        "name": "Axios",
-                        "icon": "logos:axios"
-                      },
-                      {
-                        "name": "React Query",
-                        "icon": "logos:react-query-icon"
-                      },
-                      {
-                        "name": "SCSS",
-                        "icon": "vscode-icons:file-type-scss"
-                      }
+                        "name": "Photoshop",
+                        "icon": "skill-icons:photoshop"
+                    },
+                    {
+                        "name": "Illustrator",
+                        "icon": "logos:adobe-illustrator"
+                    },
+                    {
+                        "name": "HTML",
+                        "icon": "logos:html-5"
+                    },
+                    {
+                        "name": "CSS",
+                        "icon": "logos:css-3"
+                    }
                 ]
             }
         ]

@@ -165,11 +165,11 @@
                 "tech": [
                     {
                         "name": "Photoshop",
-                        "icon": "skill-icons:tailwindcss-dark"
+                        "icon": "skill-icons:photoshop"
                     },
                     {
                         "name": "Illustrator",
-                        "icon": "skill-icons:tailwindcss-dark"
+                        "icon": "logos:adobe-illustrator"
                     },
                     {
                         "name": "HTML",

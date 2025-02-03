@@ -18,7 +18,9 @@ const WorkExperience = () => {
           </p>
           <Button onClick={() => navigate('/portfolio')}
           className="flex flex-row gap-4 justify-center items-center text-5xl font-sub-heading bg-transparent mr-auto text-btn-bg font-bold hover:shadow-lg border-2 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow border-btn-bg hover:border-transparent">
-         <Icon icon="ix:explore" width="30" height="30" /> {t("exploreBtn")}</Button>
+           <Icon icon="ix:explore" width="30" height="30" /> 
+            {t("exploreBtn")}
+         </Button>
         </div>
 
       <div className="flex mx-auto md:ml-12 lg:w-2/3 sticky">

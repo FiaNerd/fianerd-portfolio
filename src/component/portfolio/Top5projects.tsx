@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import Button from "../partial/Button";
+import { Icon } from "@iconify/react";
 
 const Top5Projects = () => {
   const { t } = useTranslation("portfolio");
@@ -19,7 +20,6 @@ const Top5Projects = () => {
               // Grid layout for index 0
               if (index === 0) {
                 columnSpan = "lg:col-span-2 lg:row-span-2";  
-                // rowSpan = "md:row-span-2"; 
               }
               // Grid layout for index 1 and 2
               else if (index === 1 || index === 2) {
@@ -29,7 +29,7 @@ const Top5Projects = () => {
               else if (index === 3) {
                 columnSpan = "lg:col-span-2 lg:row-span-1";
               }
-
+              // Grid layout for index 4
               else if (index === 4) {
                 columnSpan = "sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-5 lg:row-start-1"; 
               }
@@ -50,11 +50,12 @@ const Top5Projects = () => {
                     </h3>
 
                     <div className="absolute inset-0 bg-black/80 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <div className="flex flex-col md:flex-col items-center mx-auto gap-8">
-                         <p className="text-white text-sm px-4 flex items-end justify-end">{t(item.description)}</p>
-                        <Button className="bg-btn-bg hover:bg-bg-hover px-8" >
-                          {t(item.ctaButton)}
-                          </Button>
+                      <div className="flex flex-col items-center mx-auto gap-8 w-full px-2">
+                        <p className="text-white text-sm">{t(item.description)}</p>
+                        <Button className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs">
+                          <Icon icon="ix:explore" width="20" height="20" />
+                          <span>{t(item.ctaButton)}</span>
+                        </Button>
                       </div>
                     </div>
                   </NavLink>

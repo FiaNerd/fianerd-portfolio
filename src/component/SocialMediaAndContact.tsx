@@ -33,9 +33,9 @@ const SocialMediaAndContact = () => {
 
 
     {/* Icons Section */}
-      <div className="flex flex-col justify-end space-y-4 pb-20 md:pb-12 text-[0.8em] md:text-[0.9em] mx-auto z-1000">
+      <div className="flex flex-col justify-end space-y-2 pb-20 md:pb-12 text-[0.8em] md:text-[0.9em] mx-auto z-1000">
         {/* Icons Section */}
-        <div className="flex flex-col space-y-8"> 
+        <div className="flex flex-col space-y-3"> 
           <NavLink
             to="https://github.com/FiaNerd"
             target="_blank"
@@ -43,6 +43,8 @@ const SocialMediaAndContact = () => {
             <FontAwesomeIcon icon={faGithub} />
           </NavLink>
 
+          <div className='inline-block  min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
+          
           <NavLink
             to="https://www.linkedin.com/in/sofia-mattiasson-fianerd/"
             target="_blank"
@@ -50,6 +52,8 @@ const SocialMediaAndContact = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </NavLink>
 
+          <div className='inline-block  min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
+          
           <NavLink
             to="mailto:fianerd.developer@gmail.com"
             className="flex flex-col cursor-pointer hover:opacity-70">

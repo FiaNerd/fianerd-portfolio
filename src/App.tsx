@@ -1,18 +1,19 @@
 import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import Header from './component/header/Header';
 import ErrorFallback from './component/partial/errors/ErrorFallback';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
-import { useSmoothScroll } from './hook/useSmoothScroll';
-import HomePage from './pages/HomePage';
-import PortfolioPage from './pages/portfolio/PortfolioPage';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
+const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
 
 function App() {
   const navigate = useNavigate();
 
   const handleErrorReset = () => {
-    navigate('/');  
+    navigate('/');
   };
 
   useEffect(() => {
@@ -21,32 +22,32 @@ function App() {
     }
   }, []);
 
-  const headerHeight = document.getElementById('header')?.clientHeight || 0;
-  useSmoothScroll(headerHeight);
-
   return (
-    <div className="min-h-screen flex">
-      {/* Header */}
+    <div className="flex flex-col min-h-screen">
       <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
         <Header />
       </ErrorBoundary>
 
-      {/* Sidebar */}
-      <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
-        <div className="sticky top-0 h-screen mx-auto bg-bg-secondary text-text-secondary dark:bg-black dark:text-text-accent z-50 pointer-events-auto">
-          <SocialMediaAndContact />
-        </div>
-      </ErrorBoundary>
+      <div className="flex flex-grow">
+        {/* Sidebar */}
+        <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
+          <div className="sticky top-0 h-screen bg-bg-secondary text-text-secondary dark:bg-black dark:text-text-accent z-50 pointer-events-auto">
+            <SocialMediaAndContact />
+          </div>
+        </ErrorBoundary>
 
-      {/* Main Content */}
-      <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-          </Routes>
-        </main>
-      </ErrorBoundary>
+        {/* Main Content */}
+        <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
+          <main className="flex-grow">
+            <Suspense fallback={<div >Loading..</div>}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/portfolio" element={<PortfolioPage />} />
+              </Routes>
+            </Suspense>
+          </main>
+        </ErrorBoundary>
+      </div>
     </div>
   );
 }
