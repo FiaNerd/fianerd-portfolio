@@ -8,11 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-<<<<<<< HEAD
-    lng: navigator.language || 'en',
-=======
     lng: localStorage.getItem('i18nextLng') || navigator.language || 'en',
->>>>>>> feature/frontend-portfolio
     fallbackLng: ['en', 'sv'],
     interpolation: {
       escapeValue: false,
@@ -44,10 +40,6 @@ i18n
     },
     debug: true,
   })
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 i18n.on('languageChanged', (lng) => {
   console.log('Language changed to:', lng);
   localStorage.setItem('i18nextLng', lng);
@@ -56,8 +48,4 @@ i18n.on('languageChanged', (lng) => {
 i18n.on('loaded', (loaded) => {
   console.log('Loaded translations:', loaded);
 });
-
->>>>>>> feature/frontend-portfolio
-=======
->>>>>>> feature/frontend-portfolio
 export default i18n
