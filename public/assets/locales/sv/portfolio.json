@@ -183,8 +183,10 @@
             }
         ]
 
-    }
-
-
+    },
+    "portfolioBackendSection": {
+       "titlePortfolioBackend": "Backend Development",
+       "subTitlePortfolioBackend": "Where Code Meets Creativity"
+   }
 }
     
