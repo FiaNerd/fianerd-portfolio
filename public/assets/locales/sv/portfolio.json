@@ -80,6 +80,7 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "React",
@@ -117,6 +118,7 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "React",
@@ -162,6 +164,7 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "Photoshop",
@@ -189,7 +192,6 @@
        "subTitlePortfolioBackend": "Ryggraden i Digitala Lösningar",
        "introFrontendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
        "ctaButtonViewAll": "Visa Detaljer",
-
         "backendItems": [
             {
                 "projectType":"Skolprojekt",
@@ -209,6 +211,7 @@
                         "icon": "line-md:github-twotone"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "node.js",
@@ -239,7 +242,7 @@
                 "image": "/assets/images/portfolio/backend/slowfashion/slowfashion.jpg",
                 "linkTitle": "Länk till mitt GitHub",
                 "ctaButton": "Visa Detaljer",
-                
+
                 "links": [
                     {
                         "type": "GitHub",
@@ -247,18 +250,19 @@
                         "icon": "line-md:github-twotone"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "C-sharp",
                         "icon": "logos:c-sharp"
                     },
                     {
-                        "name": ".NET",
-                        "icon": "logos:dotnet"
-                    },
-                    {
                         "name": "Postman",
                         "icon": "skill-icons:postman"
+                    },
+                    {
+                        "name": ".NET",
+                        "icon": "logos:dotnet"
                     }
                 ]
             }

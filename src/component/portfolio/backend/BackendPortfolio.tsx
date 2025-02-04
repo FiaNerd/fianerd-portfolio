@@ -26,6 +26,7 @@ const BackendPortfolio = () => {
             subTitle={item.subTitle}
             projectType={item.projectType}
             linkTitle={item.linkTitle}
+            techTitle={item.techTitle}
             ctaButton={item.ctaButton}
           />
         ))}

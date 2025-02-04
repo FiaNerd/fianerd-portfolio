@@ -79,6 +79,8 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
+                
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "React",
@@ -117,6 +119,8 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
+
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "React",
@@ -142,6 +146,7 @@
                 "linkTitle": "Links",
                 "ctaButton": "View Details",
                 "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-footer-landscape.jpg",
+
                 "links": [
                     {
                         "type": "GitHub",
@@ -154,6 +159,8 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
+                
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "Photoshop",
@@ -200,6 +207,7 @@
                         "icon": "line-md:github-twotone"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "Node.js",
@@ -238,18 +246,19 @@
                         "icon": "line-md:github-twotone"
                     }
                 ],
+                "techTitle": "Tech",
                 "tech": [
                     {
                         "name": "C-sharp",
                         "icon": "logos:c-sharp"
                     },
                     {
-                        "name": ".NET",
-                        "icon": "logos:dotnet"
-                    },
-                    {
                         "name": "Postman",
                         "icon": "skill-icons:postman"
+                    },
+                    {
+                        "name": ".NET",
+                        "icon": "logos:dotnet"
                     }
                 ]
             }
