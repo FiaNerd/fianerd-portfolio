@@ -9,7 +9,8 @@ import Title from "../../component/partial/Title";
 import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
 import Top5projects from "../../component/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
-import SectionPlate from "../../component/partial/SectionPlate";
+import SectionPlate from "../../component/Partial/SectionPlate";
+import BackendPortfolio from "../../component/portfolio/backend/BackendPortfolio";
 
 const PortfolioPage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -102,6 +103,17 @@ const PortfolioPage = () => {
           <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
 
 
+          <section>
+             <Title 
+              id="backend" 
+              title={t('portfolioBackendSection.titlePortfolioBackend')} 
+              dot={"."} 
+              children={t("portfolioBackendSection.subTitlePortfolioBackend")} 
+              className="text-[#d60d20] dark:text-[#d6a70d] px-4 mt-0 mb-6 md:mb-8"
+              sticky 
+            />
+          </section>
+          
       {/* BG color for the light mode  "#dc8e32" */}
       {/* BG color for the light mode  "#9fc4bd" text 345f59*/}
     </>
