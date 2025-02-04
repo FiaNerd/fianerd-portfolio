@@ -1,5 +1,5 @@
 {
-    "portfolioSection": {
+    "portfolio": {
         "titlePortfolio": "Portfolio",
         "subTitlePortfolio": "Där kod möter kreativitet",
         "mainSectionTitle": "När idéer blir verklighet",
@@ -187,11 +187,13 @@
         ]
 
     },
-    "portfolioBackendSection": {
+
+    "backendPortfolioSection": {
        "titlePortfolioBackend": "Backendprojekt",
        "subTitlePortfolioBackend": "Ryggraden i Digitala Lösningar",
-       "introFrontendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+       "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
        "ctaButtonViewAll": "Visa Detaljer",
+
         "backendItems": [
             {
                 "projectType":"Skolprojekt",
@@ -232,16 +234,16 @@
                 ]
             },
             {
-                "projectType": "Side project",
+                "projectType": "Sido projekt",
                 "title": "Slowfashion API",
                 "applicationType": "App",
                 "subTitle": "Backend",
                 "titleDescription": "Backend för modemedvetna",
-                "projectDuration": "Assignment 1 week 2023",
-                "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><span>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
+                "projectDuration": "Uppdrag -ment 1 week 2023",
+                "description": "",
                 "image": "/assets/images/portfolio/backend/slowfashion/slowfashion.jpg",
-                "linkTitle": "Länk till mitt GitHub",
                 "ctaButton": "Visa Detaljer",
+                "linkTitle": "Länk till mitt GitHub",
 
                 "links": [
                     {
@@ -250,6 +252,7 @@
                         "icon": "line-md:github-twotone"
                     }
                 ],
+
                 "techTitle": "Tech",
                 "tech": [
                     {
@@ -267,6 +270,6 @@
                 ]
             }
         ]
-   }
+    }
 }
     

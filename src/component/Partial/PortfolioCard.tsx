@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { NavLink } from "react-router-dom";
-import Button from "./Button";
 import Popup from "./Popup";
 import { useState } from "react";
+import Button from "../partial/Button";
 
 interface PortfolioCardProps {
   title: string;

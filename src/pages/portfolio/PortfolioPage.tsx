@@ -39,9 +39,9 @@ const PortfolioPage = () => {
         <section className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
             id="portfolio" 
-            title={t('portfolioSection.titlePortfolio')}
+            title={t('portfolio.titlePortfolio')}
             dot="."
-            children={t('portfolioSection.subTitlePortfolio')}
+            children={t('portfolio.subTitlePortfolio')}
             className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 "
             sticky
           />
@@ -49,17 +49,17 @@ const PortfolioPage = () => {
             <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-8">
               <div className="flex flex-col lg:gap-8 md:border-double md:border-4 py-8 px-0 md:px-8 border-[#f3d758] dark:border-[#d85f2d] rounded">
                 <h1 className="text-[#f3d758] dark:text-[#d85f2d]">
-                  {t('portfolioSection.mainSectionTitle')}
+                  {t('portfolio.mainSectionTitle')}
                 </h1>
                 <p className="font-semibold tracking-wide">
-                  {t('portfolioSection.portfolioIntro')}
+                  {t('portfolio.portfolioIntro')}
                 </p>
                 <div className="flex flex-col w-full md:flex-row items-center mx-auto md:mt-8 gap-8">
                   <Button className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-                    <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolioSection.ctaButtonCV")}
+                    <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolio.ctaButtonCV")}
                   </Button>
                   <Button className="flex flex-row justify-center items-center gap-4 bg-[#350712] border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary">
-                    <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolioSection.ctaButtonContactMe")}
+                    <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolio.ctaButtonContactMe")}
                   </Button>
                 </div>
               </div>
@@ -106,9 +106,9 @@ const PortfolioPage = () => {
           <section className="mb-12">
              <Title 
               id="backend" 
-              title={t('portfolioBackendSection.titlePortfolioBackend')} 
+              title={t('backendPortfolioSection.titlePortfolioBackend')} 
               dot={"."} 
-              children={t("portfolioBackendSection.subTitlePortfolioBackend")} 
+              children={t("backendPortfolioSection.subTitlePortfolioBackend")} 
               className="text-[#ec4428] dark:text-[#1d7ecc] bg-[#fff5d7] dark:bg-[#1b0909] px-4 mt-0 mb-6 md:mb-8"
               sticky 
             />

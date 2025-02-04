@@ -1,5 +1,5 @@
 {
-    "portfolioSection": {
+    "portfolio": {
         "portfolioTitle": "Portfolio",
         "subTitlePortfolio": "Where Code Meets Creativity",
         "mainSectionTitle": "When ideas becomes reality",
@@ -7,11 +7,13 @@
         "ctaButtonCV": "Download CV",
         "ctaButtonContactMe": "Get In Touch"
     },
+
     "top5PortfolioSection": {
         "titleTop5Portfolio": "Top <span class='text-accent-primary'>5</span> Projects",
         "subTitleTop5Portfolio": "Projects that I am proud of",
         "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
         "ctaButtonViewAll": "View All Projects",
+
         "itemsTop5": [
             {
                 "title": "Skjort kravallerna",
@@ -79,7 +81,7 @@
                         "icon": "tdesign:internet-filled"
                     }
                 ],
-                
+
                 "techTitle": "Tech",
                 "tech": [
                     {
@@ -182,12 +184,12 @@
             }
         ]
      },
-    "portfolioBackendSection": {
+
+    "backendPortfolioSection": {
     "titlePortfolioBackend": "Backend Cases",
     "subTitlePortfolioBackend": "The Backbone of Digital Solutions",
-    "introFrontendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projects that combine creativity and functionality. </span> My backend project is currently not live, but I have some experience in backend development, including database management, API integrations, and server administration. If you have an idea or a project in mind, don't hesitate to contact me. I look forward to collaborating and creating something amazing together."
-    },
-
+    "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projects that combine creativity and functionality. </span> My backend project is currently not live, but I have some experience in backend development, including database management, API integrations, and server administration. If you have an idea or a project in mind, don't hesitate to contact me. I look forward to collaborating and creating something amazing together.",
+  
     "backendItems": [
             {
                 "projectType": "School Project",
@@ -235,7 +237,8 @@
                 "titleDescription": "Backend for fashion",
                 "projectDuration": "",
                 "description": "",
-                "image": "/assets/images/portfolio/backend/prismaPhoto/photo-request.jpg",
+                 "image": "/assets/images/portfolio/backend/slowfashion/slowfashion.jpg",
+
                 "linkTitle": "Links to my GitHub",
                 "ctaButton": "View Details",
 
@@ -262,5 +265,6 @@
                     }
                 ]
             }
-        ]
+        ]  
+    }
 } 

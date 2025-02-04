@@ -3,16 +3,17 @@ import { useTranslation } from 'react-i18next';
 import PortfolioCard from '../../Partial/PortfolioCard';
 
 const BackendPortfolio = () => {
-  const { t } = useTranslation('portfolio');
-  console.log(t("portfolioBackendSection.backendItems", { returnObjects: true }));
+  const { t } = useTranslation("portfolio");
 
-  const backendItems = t('portfolioBackendSection.backendItems', { returnObjects: true });
+  console.log("portfolio", t("backendPortfolioSection.backendItems", { returnObjects: true }));
 
-  console.log('Backend Items:', backendItems); // Log the items to the console
+  const backendItems = t('backendPortfolioSection.backendItems', { returnObjects: true });
+
+  console.log('Backend Items:', backendItems)
 
   return (
     <section className="max-w-screen-xl mx-auto px-4">
-      <p className='mb-12' dangerouslySetInnerHTML={{ __html: t('portfolioBackendSection.introFrontendPortfolio') }} />
+      <p className='mb-12' dangerouslySetInnerHTML={{ __html: t('backendPortfolioSection.introBackendPortfolio') }} />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto">
         {Array.isArray(backendItems) && backendItems.map((item: any, index: number) => (
           <PortfolioCard
@@ -26,8 +27,8 @@ const BackendPortfolio = () => {
             subTitle={item.subTitle}
             projectType={item.projectType}
             linkTitle={item.linkTitle}
-            techTitle={item.techTitle}
             ctaButton={item.ctaButton}
+            techTitle={item.techTitle}
           />
         ))}
       </div>
