@@ -31,7 +31,8 @@ i18n
       "portfolio/heroPortfolioSection",
       "portfolio/portfolioSection",
       "portfolio/top5PortfolioSection",
-      "portfolio/frontendPortfolioSection"
+      "portfolio/frontendPortfolioSection",
+      "portfolio/bakcendPortfolioSection",
     ],
     defaultNS: 'heroSection', // Default namespace
     detection: {

@@ -4,7 +4,7 @@ import PortfolioCard from "../../Partial/PortfolioCard";
 
 const FrontendPortfolio = () => {
   const { t } = useTranslation("portfolio");
-  console.log(t("frontendPortfolioSection.frontendItems", { returnObjects: true }));
+  
 
   // Retrieve frontend items dynamically
   const frontendItems = t("frontendPortfolioSection.frontendItems", { returnObjects: true });

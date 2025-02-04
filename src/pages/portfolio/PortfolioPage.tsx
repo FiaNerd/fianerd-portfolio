@@ -103,15 +103,16 @@ const PortfolioPage = () => {
           <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
 
 
-          <section>
+          <section className="mb-12">
              <Title 
               id="backend" 
               title={t('portfolioBackendSection.titlePortfolioBackend')} 
               dot={"."} 
               children={t("portfolioBackendSection.subTitlePortfolioBackend")} 
-              className="text-[#d60d20] dark:text-[#d6a70d] px-4 mt-0 mb-6 md:mb-8"
+              className="text-[#ec4428] dark:text-[#1d7ecc] bg-[#fff5d7] dark:bg-[#1b0909] px-4 mt-0 mb-6 md:mb-8"
               sticky 
             />
+            <BackendPortfolio />
           </section>
           
       {/* BG color for the light mode  "#dc8e32" */}
