@@ -1,6 +1,6 @@
 
 import { useTranslation } from "react-i18next";
-import PortfolioCard from "../../Partial/PortfolioCard";
+import PortfolioCard from "../../partial/PortfolioCard";
 
 const FrontendPortfolio = () => {
   const { t } = useTranslation("portfolio");

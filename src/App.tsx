@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Header from './component/header/Header';
 import SocialMediaAndContact from './component/SocialMediaAndContact';
-import ErrorFallback from './component/Partial/errors/ErrorFallback';
+import ErrorFallback from './component/partial/errors/ErrorFallback';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
