@@ -9,7 +9,7 @@ import Title from "../../component/partial/Title";
 import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
 import Top5projects from "../../component/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
-import SectionPlate from "../../component/Partial/SectionPlate";
+import SectionPlate from "../../component/partial/SectionPlate";
 import BackendPortfolio from "../../component/portfolio/backend/BackendPortfolio";
 
 const PortfolioPage = () => {
