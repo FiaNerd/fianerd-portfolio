@@ -29,9 +29,10 @@ i18n
       "Profile/education",
       "Profile/hobbies", 
       "portfolio/heroPortfolioSection",
-      "portfolio/portfolioSection",
+      "portfolio/portfolio",
       "portfolio/top5PortfolioSection",
-      "portfolio/frontendPortfolioSection"
+      "portfolio/frontendPortfolioSection",
+      "portfolio/backendPortfolioSection",
     ],
     defaultNS: 'heroSection', // Default namespace
     detection: {

@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { NavLink } from "react-router-dom";
-import Button from "./Button";
 import Popup from "./Popup";
 import { useState } from "react";
+import Button from "../partial/Button";
 
 interface PortfolioCardProps {
   title: string;
@@ -13,11 +13,12 @@ interface PortfolioCardProps {
   projectType: string;
   linkTitle: string;
   links: { type: string; url: string; icon: string }[];
+  techTitle: string;
   tech: { name: string; icon: string }[];
   ctaButton: string;
 }
 
-const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links, tech, ctaButton}: PortfolioCardProps) => {
+const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links,techTitle, tech, ctaButton}: PortfolioCardProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const truncatedDescription = description.length > 110 ? `${description.substring(0, 110)}...` : description;
@@ -82,23 +83,26 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
             </div>
 
             {/* Tech Section */}
-            <ul className="items-center p-2 grid grid-flow-col grid-rows-2 gap-2">
-              {tech.map((item, index) => (
-                <li key={index} className="items-center">
-                  <div className="relative">
-                    <Icon
-                      icon={item.icon}
-                      width="24"
-                      height="24"
-                      className="text-gray-400"
-                      onMouseEnter={() => setHoveredTech(item.name)}
-                      onMouseLeave={() => setHoveredTech(null)}
-                      />
-                      {hoveredTech === item.name && <Popup text={item.name} show={true} />}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-col ">
+                <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">{techTitle}</p>
+              <ul className="items-center p-2 grid grid-flow-col grid-rows-2 gap-2">
+                {tech.map((item, index) => (
+                  <li key={index} className="items-center">
+                    <div className="relative">
+                      <Icon
+                        icon={item.icon}
+                        width="24"
+                        height="24"
+                        className="text-gray-400"
+                        onMouseEnter={() => setHoveredTech(item.name)}
+                        onMouseLeave={() => setHoveredTech(null)}
+                        />
+                        {hoveredTech === item.name && <Popup text={item.name} show={true} />}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
