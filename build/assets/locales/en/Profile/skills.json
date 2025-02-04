@@ -1,0 +1,61 @@
+{
+    "webSkills":{
+        "webSkillsTitle": "Developer Skills",
+        "subTitleWebSkills": "System Developer in the Making",
+        "webbDev": "System Developer",
+        "titleWeb": "One code block at a time\n ",
+        "titleWebDev": "Mastering the Art \nof Programming",
+        "titleCode": "Turning Ideas Into\nClean Code",
+        "subTitleWebDev": "– Developer in the making",
+    
+        "textTitleDevGoal": "Goals and Focus in Development 2025",
+        "titleBE": "<b>Backend:</b>",
+        "textBE": "<b>C#, ASP.Net Core:</b> Enhance my expertise in C# and ASP.Net Core to develop secure, scalable, and reusable backend applications.",
+        "textDB": "<b>SQL Server:</b> Master SQL Server to design and manage databases efficiently and ensure data integrity.",
+        "textAzure": "<b>Cloud Services:</b> Leverage Azure's powerful capabilities in infrastructure management, application performance enhancement, and cloud-native development to build robust applications.",
+        "titleFE": "<b>Frontend:</b> ",
+        "textFE": "<b>React:</b> Create highly responsive and reusable components to build interactive user interfaces.",
+        "textVue": "<b>Vue.js:</b> Explore the capabilities of Vue.js to understand its advantages and integrate it into projects where applicable.",
+        "textCMS": "<b>Umbraco:</b> Expand my skills in Umbraco CMS to efficiently manage and deploy dynamic web content.",
+        "textGoal": "The only obstacle is time, so strategic planning and focused efforts will be essential to achieve these goals."
+    },
+    "graphicSkills": {
+        "graphicSkillsTitle": "Graphic Skills",
+        "subTitleGraphicSkills": "Creativity Without Limits",
+        "graphicTitle": "Graphic Design",
+        "titleGraphic": "One Pixel at a Time",
+        "titleGraphicSkills": "Mastering Creativity in Design",
+        "titleDesign": "Designing Dreams\nPixel by Pixel",
+        "subTitleGraphic": "– Turning Ideas Into Design",
+        "textTitleGraphicGoal": "Goals and Focus in Graphic 2025",
+    
+        "textPS": "<b>Photoshop:</b> Continuously discovering new techniques and refining my skills to create visually stunning designs.",
+        "textAI": "<b>Illustrator:</b> Bringing ideas to life through vector art and design.",
+        "textID": "<b>InDesign:</b> Crafting visually compelling layouts for print and digital media, focusing on typography, composition, and visual storytelling.",
+        "textUX/UI": "<b>UX / UI:</b> Deepening my understanding of usability, interaction design, and creating intuitive, user-centered experiences that bridge the gap between functionality and aesthetics.",
+        "textGoal": "To achieve my design goals in 2025, a balance between creativity and structure is required, where each project becomes a step toward refining my skills and creating meaningful, visual experiences."
+    },
+    "otherSkills": {
+        "otherSkillsTitle": "Other Skills",
+        "otherSkillsTitleLanguageAndDriving": "Languages and Driving",
+        "otherSkillsSubTitleLanguageAndDriving": "Fluent in Words and Wheels",
+        "otherSkillsSwedishTitle": "Swedish: Native",
+        "otherSkillsEnglishTitle": "English: Fluent",
+        "otherSkillsDrivingTitle": "Driving License: Category B and access to own car"
+    },
+    "programsAndSoftwares": {
+        "programsAndSoftwaresTitle": "My Toolbox",
+        "programsAndSoftwareTitleProgram": "Crafting with Code and Creativity",
+        "programsAndSoftwareSubTitleProgram": "The tools - from brainstorming to deployment.",
+        "visualStudio": "Visual Studio - A classic for building software solutions.",
+        "visualStudioCode": "Visual Studio Code - My lightweight coding companion.",
+        "terminal": "Terminal - The command center for all things tech.",
+        "git": "Git - Keeping version control under control.",
+        "dataRequest": "Insomnia / Postman / Swagger - Making API requests a breeze.",
+        "ux/ui": "Figma - Where UI dreams come to life.",
+        "photoshop": "Photoshop - Enhancing visuals with precision.",
+        "illustrator": "Illustrator - Crafting vector magic.",
+        "inDesign": "InDesign - Designing layouts like a pro."
+    }
+  }
+  

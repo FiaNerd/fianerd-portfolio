@@ -1,29 +1,19 @@
-import { useEffect } from 'react';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
 import Header from './component/header/Header';
-import SocialMediaAndContact from './component/SocialMediaAndContact';
 import ErrorFallback from './component/partial/errors/ErrorFallback';
+import SocialMediaAndContact from './component/SocialMediaAndContact';
+import HomePage from './pages/HomePage';
+import PortfolioPage from './pages/portfolio/PortfolioPage';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
-const PortfolioPage = lazy(() => import('./pages/portfolio/PortfolioPage'));
+const handleErrorReset = () => {
+  // Handle error reset logic here
+};
 
-function App() {
-  const navigate = useNavigate();
-
-  const handleErrorReset = () => {
-    navigate('/');
-  };
-
-  useEffect(() => {
-    if (location.pathname === '/') {
-      window.scrollTo(0, 0);
-    }
-  }, []);
-
+const App = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="App">
       <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
         <Header />
       </ErrorBoundary>
@@ -39,7 +29,7 @@ function App() {
         {/* Main Content */}
         <ErrorBoundary FallbackComponent={ErrorFallback} onReset={handleErrorReset}>
           <main className="flex-grow">
-            <Suspense fallback={<div >Loading..</div>}>
+            <Suspense fallback={<div>Loading..</div>}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/portfolio" element={<PortfolioPage />} />
@@ -50,6 +40,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

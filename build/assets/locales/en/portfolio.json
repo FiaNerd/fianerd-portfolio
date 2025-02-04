@@ -1,0 +1,270 @@
+{
+    "portfolio": {
+        "portfolioTitle": "Portfolio",
+        "subTitlePortfolio": "Where Code Meets Creativity",
+        "mainSectionTitle": "When ideas becomes reality",
+        "portfolioIntro": "This is a show case of my passion for coding and design. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+        "ctaButtonCV": "Download CV",
+        "ctaButtonContactMe": "Get In Touch"
+    },
+
+    "top5PortfolioSection": {
+        "titleTop5Portfolio": "Top <span class='text-accent-primary'>5</span> Projects",
+        "subTitleTop5Portfolio": "Projects that I am proud of",
+        "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
+        "ctaButtonViewAll": "View All Projects",
+
+        "itemsTop5": [
+            {
+                "title": "Skjort kravallerna",
+                "subTitle": "Graphic",
+                "description": "Photoshop and Illustrator",
+                "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+                "ctaButton": "View Details"
+            },
+            {
+                "title": "BrutalBeats",
+                "subTitle": "Frontend",
+                "description": "React and Tailwind CSS",
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "ctaButton": "View Details"
+            },
+            {
+                "title": "MSB",
+                "subTitle": "Graphic & Frontend",
+                "description": "Photoshop, Illustrator and HTML & CSS",
+                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-hero.jpg",
+                "ctaButton": "View Details"
+            },
+            {
+                "title": "Printagon",
+                "subTitle": "Fullstack",
+                "description": "ASP.NET, SQL, React and Material-UI",
+                "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+                "ctaButton": "View Details"
+            },
+            {
+                "title": "Tyckte jag hörde hundar",
+                "subTitle": "Graphic",
+                "description": "Photoshop and Illustrator",
+                "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+                "ctaButton": "View Details"
+            }
+        ]
+    },
+        "frontendPortfolioSection": {
+          "titleFrontendPortfolio": "Frontend Cases",
+          "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
+          "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'>I love creating beautiful and functional websites.</span> I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+         
+          "frontendItems": [
+            {
+                "projectType":"Side project",
+                "title": "BrutalBeats",
+                "applicationType": "web",
+                "subTitle": "Frontend",
+                "titleDescription": "Booking agency website",
+                "projectDuration": "BrutalBeats Agency & Booking, Helsingborg | march 2023 - january 2025",
+                "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.<br><span>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><span>Key Contributions:</span><br><span>- Frontend Development:</span> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span>- Backend:</span> Node.js<br><span>- Version Control:</span> Git<br><span>- Terminal:</span> Command Line Interface (CLI)<br><span>- Development Tools:</span> Visual Studio Code<br><span>- CMS:</span> Planned integration with WordPress or Umbraco<br><span>Challenges & Solutions:</span> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness. - Planned and strategized for future integration with Node.js and CMS system.<br><span>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality."                ,
+                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "ctaButton": "View Details",
+                "linkTitle": "Links",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://www.brutalbeats.se/",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },
+            {
+                "projectType":"School project",
+                "title": "The Movie DB",
+                "applicationType": "web",
+                "subTitle": "Frontend",
+                "titleDescription": "Movie database website",
+                "projectDuration": "Course: Advanced JavaScript (React), Medieinstitutet | 2023",
+                "description": "I developed an interactive web application that integrates the IMDb API to display movie data, focusing on a seamless and engaging user experience. Leveraging React, TypeScript, Axios, and React Query, I implemented advanced frontend functionalities, including efficient search capabilities, while ensuring reusable and maintainable components.<br><span>Purpose:<span> In this project, I focused on frontend development, specifically advanced JavaScript using React. The task involved integrating the IMDb API and utilizing the Axios library along with React Query to fetch and display movie data. My goal was to create a user-friendly and interactive web application that offers a seamless experience to users.<br><span>Key Contributions:</span><br>- Utilized React and TypeScript to implement the frontend functionalities, ensuring a smooth user experience.<br>- Integrated external APIs and libraries, such as Axios and React Query, to fetch and manage movie data effectively.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Axios, React Query, SCSS<br>- Development Tools: Visual Studio Code<br><span>Project Highlights:</span><br>- Designed and organized components to ensure reusability and maintainability.<br>- Implemented efficient search functionality for users, enhancing the overall user experience.<br><span>Outcome:</span><br>This project not only strengthened my proficiency in React and frontend development but also provided me with valuable experience in handling and displaying data from external APIs. It has equipped me with the skills and confidence to tackle similar challenges in future projects.<br>Website: https://the-movie-data.netlify.app<br>GitHub: https://github.com/FiaNerd/TMDB",
+                "image": "/assets/images/portfolio/frontend/school/theMovieDb/tmdb-mobile-hero.jpg",
+                "linkTitle": "Links",
+                "ctaButton": "View Details",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/TMDB",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://the-movie-data.netlify.app",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },
+            {
+                "projectType":"School project",
+                "title": "MSB",
+                "applicationType": "web",
+                "subTitle": "Graphic Tools",
+                "titleDescription": "Graphic Elements and Illustrations: From Adobe to Responsive Web Design",
+                "description": "This project combines graphic design and web development, where I applied my skills in Adobe Illustrator and Photoshop to create graphic elements and illustrations. The course focused on building a website following the MSB graphic profile, incorporating typography, color schemes, and layout principles. I also gained hands-on experience with HTML and CSS to develop a responsive and visually engaging site.<br><span>Purpose:</span> The Graphic Tools course aimed to provide foundational knowledge of Illustrator and Photoshop. In Illustrator, the objective was to create three distinct elements, while in Photoshop, the task involved clipping out at least three individuals. Additionally, the course emphasized adhering to the graphic profile of MSB (Civil Contingencies)[MSB Graphic Profile] <span> (https://www.msb.se/) </span>, focusing on typography, font sizes, color schemes, etc., and subsequently building a website using HTML and CSS following this profile.<br><span>Key Contributions:</span><br>- Created all graphic elements for the website, utilizing images composed of various other images. For instance, the Hero section and fire image were assembled from clipped-out images combined with other visuals.<br>- Ensured semantic correctness in HTML and CSS, employing flexbox and grid extensively to enhance frontend development techniques.<br><span>Technologies Used:</span><br><span>- Graphic Tools:</span> Photoshop, Illustrator<br><span>- Frontend:</span> HTML, CSS<br><span>- Development Tools:</span> Visual Studio Code<br><span>Project Highlights:</span><br>- Utilized flexbox and grid layouts to create a visually appealing and responsive website.<br>- Emphasized adherence to the MSB graphic profile, enhancing understanding of design principles and brand consistency.<br><span>Outcome:</span><br>While the primary focus was on graphic tools, the project provided valuable insights into HTML and CSS, improving proficiency in frontend development. The project website showcases the application of design principles and techniques learned during the course.<br>Website: https://lucky-basbousa-252a0a.netlify.app/<br>GitHub: https://github.com/FiaNerd/msb_falling_trees_mission",
+                "linkTitle": "Links",
+                "ctaButton": "View Details",
+                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-footer-landscape.jpg",
+
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/msb_falling_trees_mission.git",
+                        "icon": "line-md:github-twotone"
+                    },
+                    {
+                        "type": "Website",
+                        "url": "https://lucky-basbousa-252a0a.netlify.app/",
+                        "icon": "tdesign:internet-filled"
+                    }
+                ],
+                
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "Photoshop",
+                        "icon": "skill-icons:photoshop"
+                    },
+                    {
+                        "name": "Illustrator",
+                        "icon": "logos:adobe-illustrator"
+                    },
+                    {
+                        "name": "HTML",
+                        "icon": "logos:html-5"
+                    },
+                    {
+                        "name": "CSS",
+                        "icon": "logos:css-3"
+                    }
+                ]
+            }
+        ]
+     },
+
+    "backendPortfolioSection": {
+    "titlePortfolioBackend": "Backend Cases",
+    "subTitlePortfolioBackend": "The Backbone of Digital Solutions",
+    "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projects that combine creativity and functionality. </span> My backend project is currently not live, but I have some experience in backend development, including database management, API integrations, and server administration. If you have an idea or a project in mind, don't hesitate to contact me. I look forward to collaborating and creating something amazing together.",
+  
+    "backendItems": [
+            {
+                "projectType": "School Project",
+                "title": "Photo App",
+                "applicationType": "web",
+                "subTitle": "Backend",
+                "titleDescription": "Backend for a photo app",
+                "projectDuration": "Assignment 1 week 2023",
+                "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><span>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
+                "image": "/assets/images/portfolio/backend/prismaPhoto/photo-request.jpg",
+                "linkTitle": "Links",
+                "ctaButton": "View Details",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+                        "icon": "line-md:github-twotone"
+                    }
+                ],
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "Node.js",
+                        "icon": "vscode-icons:file-type-node"
+                    },
+                    {
+                        "name": "Prisma",
+                        "icon": "catppuccin:prisma"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Postman",
+                        "icon": "skill-icons:postman"
+                    }
+                ]
+            },
+            {
+                "projectType": "Side project",
+                "title": "Slowfashion API",
+                "applicationType": "App",
+                "subTitle": "Backend",
+                "titleDescription": "Backend for fashion",
+                "projectDuration": "",
+                "description": "",
+                 "image": "/assets/images/portfolio/backend/slowfashion/slowfashion.jpg",
+
+                "linkTitle": "Links to my GitHub",
+                "ctaButton": "View Details",
+
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd",
+                        "icon": "line-md:github-twotone"
+                    }
+                ],
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "C-sharp",
+                        "icon": "logos:c-sharp"
+                    },
+                    {
+                        "name": "Postman",
+                        "icon": "skill-icons:postman"
+                    },
+                    {
+                        "name": ".NET",
+                        "icon": "logos:dotnet"
+                    }
+                ]
+            }
+        ]  
+    }
+} 

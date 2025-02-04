@@ -1,0 +1,55 @@
+{
+    "titleWorkExperience": "Experience in Motion",
+    "dot": ".",
+    "subTitleWorkExperience": "- Every job is a step toward more experience",
+
+    "titleWorkingAction": "Work in Action",
+    "checkOut": "Check out my projects",
+    "checkoutText": "Explore my creations – See what I've built and how I've grown as a developer!",
+    "exploreBtn": "Explore Now",
+
+    "dateWorkBrutal": "March 2024 - ongoing",
+    "titleBrutal": "Brutal Beats",
+    "workTitleBrutal": "Web Development - Fullstack",
+    "descriptionProjectBrutal": "<b>Side Project</b> - Website for booking management",
+    "techBrutal": "<b>Technologies:</b> React, TypeScript, Tailwindcss, Node.js",
+    
+    "dateWorkProdigies": "January 2024 - August 2024",
+    "titleProdigies": "Prodigies",
+    "workTitleProdigies": "App Development - Fullstack",
+    "descriptionProjectProdigies": "<b>Side Project</b> - App for students to find the perfect education",
+    "techProdigies": "<b>Technologies:</b> React Native, TypeScript, SQLite, Firebase",
+
+    "dateWorkOmegapoint": "September 2023 - December 2024",
+    "titleOmegapoint": "Omegapoint",
+    "workTitleOmegapoint": "Frontend Development",
+    "descriptionProjectOmegapoint": "<b>Internship</b> - Built a PIM system",
+    "techOmegapoint": "<b>Technologies:</b> React, TypeScript, React Query, Axios, Figma",
+
+    "dateWorkAllaTiders": "September 2023 - ongoing",
+    "titleAllaTiders": "Alla Tiders Teater",
+    "workTitleAllaTiders": "Graphic Designer",
+    "workDescriptionAllaTiders": "Graphic designer - creating posters, logos, and other graphic material",
+    "descriptionProjectAllaTiders": "<b>Side Project</b> - Creating designs for various performances",
+    "techAllaTiders": "<b>Technologies:</b> Photoshop, Illustrator & InDesign",
+
+    "dateWorkSlowfashion": "November 2023 - May 2024",
+    "titleSlowfashion": "Slowfashion",
+    "workTitleSlowfashion": "Backend App Development",
+    "descriptionProjectSlowfashion": "<b>Side Project</b> - App for shopping brands",
+    "techSlowfashion": "<b>Technologies:</b> ASP.Net Core web API and C#",
+
+    "dateWorkPrintagon": "September 2023 - December 2024",
+    "titlePrintagon": "Printagon Graphics",
+    "workTitlePrintagon": "Printing/Bookbinding/Warehouse, System Integration",
+    "workDescriptionPrintagon": "Machine operator in bookbinding, assistant in printing, and warehouse operations",
+    "descriptionProjectPrintagon": "<b>Internship</b> - Built a PIM system",
+    "techPrintagon": "<b>Technologies:</b> React, TypeScript, React Query, Axios, Figma",
+
+    "dateWorkStumpen": "Mars 2008 - ongoing",
+    "titleStumpen": "Stumpen Ensemble",
+    "workTitleStumpen": "Graphic Designer",
+    "workDescriptionStumpen": "Graphic designer - creating posters, logos, and other graphic material",
+    "descriptionProjectStumpen": "<b>Side Project</b> - Creating designs for various performances",
+    "techStumpen": "<b>Technologies:</b> Photoshop, Illustrator & InDesign"
+}

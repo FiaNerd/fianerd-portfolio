@@ -1,0 +1,48 @@
+{
+    "titleEducation": "Att Bygga Framtiden",
+    "dot": ".",
+    "subTitleEducation": "- Utbildning öppnar dörrar till nya möjligheter",
+
+    "titleWorkExperience": "Att Bygga Framtiden",
+    "subTitleWorkExperience": "- Utbildning öppnar dörrar till nya möjligheter",
+    "titleWorkingAction": "Utbildning Som Gör Skillnad",
+    "checkOut": "Utforska Mitt Portfolio",
+    "checkoutText": "Upptäck mina projekt – se vad jag har skapat och hur jag har utvecklats inom webbutveckling och grafisk design!",
+    "exploreBtn": "Utforska Nu",
+
+    "dateFE": "September 2022 - may 2024",
+    "titleFEmedie": "Frontend utveckling",
+    "edutacationCoursesFE": "2-årig YH-utbildning inom frontend",
+    "placeFE": "Medieinstitutet, Malmö",
+    "descriptionEducationFE": "<b>Kunskaper</b> - lärde mig bygga responsive deisgn, Hantera diverse API:er, skapa enkla och komplexa webbapplikationer",
+    "techEducationFE": "<b>Tekniker:</b> React, TypeScript, HTML & CSS, JavaScript, React Query, Axios, Node.js, SQL & NoSql, Figma, Cypress,",
+
+    "dateBE": "August 2020 - June 2022",
+    "titleBE": "Webbutveckling inom .NET",
+    "edutacationCoursesBE": "2-årig YH-utbildning inom backend fullstack",
+    "placeFEec": "EC utbildningen, Helsingborg",
+    "descriptionEducationBE": "<b>Kunskaper</b> - lärde mig bygga API:er, skapa SQL Server (SMMS) database, skapa enkla och komplexa webbapplikationer",
+    "techEducationBE": "<b>Tekniker:</b> C#, ASP.NET Core, SQL Server, HTML & CSS, JavaScript, React, TypeScript, Axios",
+
+
+    "datePrint": "August 2007 - June 2008",
+    "titlePrint": "Tryckteknik",
+    "edutacationCoursesPrint": "1-årig vuxenutbildning",
+    "placePrint": "Vuxenutbildning, Helsingborg",
+    "descriptionEducationPrint": "<b>Kunskaper</b> - Trycktekniks grunder 11w - ark offset, screen tryck, sedan resten Praktik på JMS Medie System",
+    "techEducationPrint": "<b>Tekniker:</b> Ark offset, screen tryck, offset tryck",
+
+    "dateGraphic": "August 2005 - June 2006",
+    "titleGraphic": "Graphic Design",
+    "edutacationCoursesGraphic": "1-årig folkhögskola med allmäna ämnen",
+    "placeGraphic": "Fridhems Folkhögskola, Svalöv",
+    "descriptionEducationGraphic": "<b>Kunskaper</b> - Grafisk teknik, formspråk och komposition, illustration, färglära, typografi",
+    "techEducationGraphic": "<b>Tekniker:</b> Adobe Photoshop, Illustrator & InDesign",
+
+    "dateWedesign": "August 2004 - June 2005",
+    "titleWedesign": "Webb design",
+    "edutacationCoursesWedesign": "1-årig folkhögskola med allmäna ämnen",
+    "placeWedesign": "Fridhems Folkhögskola, Svalöv",
+    "descriptionEducationWedesign": "<b>Kunskaper</b> - Webbside formgivning med Macromedia Dreamweaver",
+    "techEducationWedesign": "<b>Tekniker:</b> Macromedia Dreamweaver & Adobe Photoshop"
+}
