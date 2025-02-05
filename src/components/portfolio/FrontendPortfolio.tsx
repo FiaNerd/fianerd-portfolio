@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { useTranslation } from "react-i18next";
-import PortfolioCard from "../../partials/PortfolioCard";
+import PortfolioCard from "../partials/PortfolioCard";
 
 const FrontendPortfolio = () => {
   const { t } = useTranslation("portfolio");

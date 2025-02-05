@@ -7,8 +7,8 @@ import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../components/partials/Button";
 import SectionPlate from "../../components/partials/SectionPlate";
 import Title from "../../components/partials/Title";
-import BackendPortfolio from "../../components/portfolio/backend/BackendPortfolio";
-import FrontendPortfolio from "../../components/portfolio/frontend/FrontendPortfolio";
+import BackendPortfolio from "../../components/portfolio/BackendPortfolio";
+import FrontendPortfolio from "../../components/portfolio/FrontendPortfolio";
 import Top5projects from "../../components/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
