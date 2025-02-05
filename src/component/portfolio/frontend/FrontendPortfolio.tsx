@@ -31,6 +31,7 @@ const FrontendPortfolio = () => {
               linkTitle={item.linkTitle}
               ctaButton={item.ctaButton}
               techTitle={item.techTitle}
+              projectDuration={item.projectDuration}
             />
         ))}
       </div>

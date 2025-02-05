@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PortfolioCard from '../../partial/PortfolioCard';
 
@@ -29,6 +28,7 @@ const BackendPortfolio = () => {
             linkTitle={item.linkTitle}
             ctaButton={item.ctaButton}
             techTitle={item.techTitle}
+            projectDuration={item.projectDuration}
           />
         ))}
       </div>

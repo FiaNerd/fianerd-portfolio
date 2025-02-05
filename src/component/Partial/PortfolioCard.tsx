@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { NavLink } from "react-router-dom";
-import Popup from "./Popup";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Button from "./Button";
+import Popup from "./Popup";
 
 interface PortfolioCardProps {
   title: string;
@@ -16,9 +16,10 @@ interface PortfolioCardProps {
   techTitle: string;
   tech: { name: string; icon: string }[];
   ctaButton: string;
+  projectDuration: string;
 }
 
-const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links,techTitle, tech, ctaButton}: PortfolioCardProps) => {
+const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links,techTitle, tech, ctaButton, projectDuration}: PortfolioCardProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const truncatedDescription = description.length > 110 ? `${description.substring(0, 110)}...` : description;
@@ -51,6 +52,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
             className="text-xl font-medium leading-6 tracking-wide text-accent-secondary cursor-pointer"
           >
             <NavLink to="#">{title}</NavLink>
+            <p className="italic text-xs text-accent-primary" dangerouslySetInnerHTML={{__html: projectDuration}}/>
           </h1>
         </div>
 
@@ -72,12 +74,15 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
               </p>
               <ul className="flex items-center px-2 space-x-4 justify-center">
                 {links.map((item, index) => (
+                  <>
                   <li key={index} className="justify-center items-center flex flex-col cursor-pointer">
                     <NavLink to={item.url} className="flex flex-col items-center" target="_blank" rel="noopener noreferrer">
                       <Icon icon={item.icon} width="24" height="24" className="text-btn-bg hover:text-bg-hover" />
                       <p className="text-xs font-light tracking-wider text-text-primary">{item.type}</p>
                     </NavLink>
                   </li>
+                 
+                  </>
                 ))}
               </ul>
             </div>
