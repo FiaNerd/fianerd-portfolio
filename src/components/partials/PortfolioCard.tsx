@@ -25,7 +25,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
   const truncatedDescription = description.length > 110 ? `${description.substring(0, 110)}...` : description;
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <section className="flex flex-col items-center justify-center">
       <div className="flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-lg">
         <img
           className="rounded-lg rounded-b-none object-cover w-full h-40"
@@ -111,7 +111,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
