@@ -18,7 +18,9 @@ const App = () => {
         {/* Main Content */}
         <main className="flex-grow">
           <ErrorBoundary
-            FallbackComponent={ErrorFallback}
+            fallbackRender={({ error, resetErrorBoundary }) => (
+              <ErrorFallback error={error} resetErrorBoundary={resetErrorBoundary} />
+            )}
             onReset={() => {
               // Reset the state of your app so the error doesn't happen again
               window.location.reload();
