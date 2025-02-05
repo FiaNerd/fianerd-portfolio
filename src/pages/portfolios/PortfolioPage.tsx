@@ -88,7 +88,7 @@ const PortfolioPage = () => {
           <Top5projects />
       </section>
 
-        <RippedPaperTop colorLight={"#f69497"} colorDark={"#4a2342"} />
+        <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
             <Title 
               id="frontend" 
@@ -103,7 +103,7 @@ const PortfolioPage = () => {
           <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
 
 
-          <section className="mb-12">
+          <section id="backend" className="mb-12">
              <Title 
               id="backend" 
               title={t('backendPortfolioSection.titlePortfolioBackend')} 
