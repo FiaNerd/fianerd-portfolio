@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import SocialMediaAndContact from './components/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
-import PortfolioPage from './pages/portfolio/PortfolioPage';
+import PortfolioPage from './pages/portfolios/PortfolioPage';
 
 const App = () => {
   return (
