@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import Button from "../../partial/Button";
+import Button from "../../partials/Button";
 
 const WorkExperience = () => {
     const { t } = useTranslation("Profile/experience");

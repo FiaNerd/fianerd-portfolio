@@ -1,7 +1,7 @@
+import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import Button from "../partial/Button";
-import { Icon } from "@iconify/react";
+import Button from "../partials/Button";
 
 const Top5Projects = () => {
   const { t } = useTranslation("portfolio");

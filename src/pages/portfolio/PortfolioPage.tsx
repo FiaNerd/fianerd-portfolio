@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 import RippedPaperBottom from "../../assets/svg/RippedPaperBottom";
 import RippedPaperTop from "../../assets/svg/RippedPaperTop";
 import SvgWaves from "../../assets/svg/SvgWaves";
-import Button from "../../component/partial/Button";
-import Title from "../../component/partial/Title";
-import FrontendPortfolio from "../../component/portfolio/frontend/FrontendPortfolio";
-import Top5projects from "../../component/portfolio/Top5projects";
+import Button from "../../components/partials/Button";
+import SectionPlate from "../../components/partials/SectionPlate";
+import Title from "../../components/partials/Title";
+import BackendPortfolio from "../../components/portfolio/backend/BackendPortfolio";
+import FrontendPortfolio from "../../components/portfolio/frontend/FrontendPortfolio";
+import Top5projects from "../../components/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
-import SectionPlate from "../../component/partial/SectionPlate";
-import BackendPortfolio from "../../component/portfolio/backend/BackendPortfolio";
 
 const PortfolioPage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);

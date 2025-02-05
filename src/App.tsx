@@ -1,8 +1,8 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import { Route, Routes } from 'react-router-dom';
-import Header from './component/header/Header';
-import ErrorFallback from './component/partial/errors/ErrorFallBack';
-import SocialMediaAndContact from './component/SocialMediaAndContact';
+import Header from './components/header/Header';
+import ErrorFallback from './components/partials/errors/ErrorFallBack';
+import SocialMediaAndContact from './components/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
 

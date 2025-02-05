@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
-import Button from "../../partial/Button";
+import Button from "../../partials/Button";
 
 const AboutMe = () => {
   const { t } = useTranslation("Profile/aboutMe");
