@@ -91,7 +91,6 @@ const PortfolioPage = () => {
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
             <Title 
-              id="frontend" 
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."} 
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
@@ -105,7 +104,6 @@ const PortfolioPage = () => {
 
           <section id="backend" className="mb-12">
              <Title 
-              id="backend" 
               title={t('backendPortfolioSection.titlePortfolioBackend')} 
               dot={"."} 
               children={t("backendPortfolioSection.subTitlePortfolioBackend")} 
