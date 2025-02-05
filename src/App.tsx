@@ -6,10 +6,6 @@ import SocialMediaAndContact from './component/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
 
-const handleErrorReset = () => {
-  // Handle error reset logic here
-};
-
 const App = () => {
   return (
     <div className="App">
