@@ -270,8 +270,93 @@
                         "icon": "logos:dotnet"
                     }
                 ]
+            },
+             {
+                "projectType": "Sido projekt",
+                "title": "Slowfashion API",
+                "applicationType": "App",
+                "subTitle": "Backend",
+                "titleDescription": "Backend för modemedvetna",
+                "projectDuration": "Helsingborg <span class='not-italic'>|</span> juni 2023 – mars 2024",
+                "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utveck- laren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<span class='font-bold'>Huvudsakliga Bidrag:<span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</sapn><br>- Programmeringsspråk: C#<br>- Ramverk: ASP.NET Core Web API<br>- Databaser: PostgreSQL, DBeaver<br>- API-testning: Swagger, Postman, Insomnia<br>- Versionshantering: Git<br>- Molntjänster: Azure<br>- Utvecklingsmiljö (IDE): Visual Studio 2022<br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
+                "image": "/assets/images/portfolio/backend/slowfashion/slowfashion.jpg",
+                "ctaButton": "Visa Detaljer",
+                "linkTitle": "Länk till mitt GitHub",
+
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd",
+                        "icon": "line-md:github-twotone"
+                    }
+                ],
+
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "C-sharp",
+                        "icon": "logos:c-sharp"
+                    },
+                    {
+                        "name": "Postman",
+                        "icon": "skill-icons:postman"
+                    },
+                    {
+                        "name": ".NET",
+                        "icon": "logos:dotnet"
+                    }
+                ]
             }
         ]
+    },
+    "fullStackPortfolioSection": {
+       "titlePortfoliofullStack": "Fullstackprojekt",
+       "subTitlePortfoliofullStack": "Från Databas till Design",
+       "introfullStackPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Även om mitt backend-projekt för närvarande inte är live, har jag värdefull erfarenhet av backend-utveckling, inklusive databashantering, API-integrationer och serveradministration. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+       "ctaButtonViewAll": "Visa Detaljer",
+
+        "fullStackItems": [
+            {
+                "projectType":"Sido projekt",
+                "title": "Printagon Graphics",
+                "applicationType": "webb",
+                "subTitle": "Fullstack",
+                "titleDescription": "Systemintegration för grafiskt företag",
+                "projectDuration": "Helsingborg | June 2024 - pågående",
+                "description": " Developing a robust system to manage and track the workflow of two printing machines, focusing on job tracking, monitoring paper usage, waste management, and managing remaining paper stock.<br> <sapn>Main Contributions:</span><br> <span class='font-bold'>- Requirements Analysis & System Design:</span> Conducted detailed requirements analysis and used Figma to visualize the system's interface and workflow, ensuring that both technical and business needs were addressed before development. <br><span class='font-bold'>- Backend Development:</span> Led the development of the backend system using ASP.NET web api, ensuring robustness, scalability, and performance. <br><span class='font-bold'>- Data Management:</span> Implemented SQL Server to efficiently handle complex relational data and manage large volumes of information, ensuring seamless data handling and retrieval. <br><span class='font-bold'>- Security:</span> Developed a secure authentication system with different roles for admin and user access. <br><span class='font-bold'>Technologies Used</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI for responsive website <br><span class='font-bold'>- Design Tools:</span> Figma for wireframes and interface design <br><span class='font-bold'>- Database:</span> SQL Server (SMSS) <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Command Line Interface:</span> CLI <br><span class='font-bold'>- Development Tools:</span> Visual Studio 2022 <br><span class='font-bold'>Challenges & Solutions</span> <br>- Designed a scalable system to handle high-volume data input and operations. <br>- Ensured robust data integrity and efficient data handling with SQL Server. <br>- Overcame challenges in backend authentication implementation, enriching my understanding of backend complexities. <br><span class='font-bold'>Outcomes</span> <br>- Enhanced workflow management and provided detailed insights into paper usage and waste, optimizing operational efficiency. <br>- Facilitated paper stock inventory management.",
+                "image": "/assets/images/portfolio/backend/prismaPhoto/photo-request.jpg",
+                "linkTitle": "Länkar",
+                "ctaButton": "Visa Detaljer",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+                        "icon": "line-md:github-twotone"
+                    }
+                ],
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "node.js",
+                        "icon": "vscode-icons:file-type-node"
+                    },
+                    {
+                        "name": "prisma",
+                        "icon": "catppuccin:prisma"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Postman",
+                        "icon": "skill-icons:postman"
+                    }
+                ]
+            }
+            
+        ]
+   
     }
 }
     

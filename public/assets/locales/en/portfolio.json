@@ -267,5 +267,55 @@
                 ]
             }
         ]  
-    }
+    },
+    "fullStackPortfolioSection": {
+        "titlePortfoliofullStack": "Fullstackprojekt",
+        "subTitlePortfoliofullStack": "Från Databas till Design",
+        "introfullStackPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Även om mitt backend-projekt för närvarande inte är live, har jag värdefull erfarenhet av backend-utveckling, inklusive databashantering, API-integrationer och serveradministration. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+        "ctaButtonViewAll": "Visa Detaljer",
+ 
+         "fullStackItems": [
+            [
+                {
+                  "projectType": "School Project",
+                  "title": "Printagon Graphics",
+                  "applicationType": "web",
+                  "subTitle": "Fullstack",
+                  "titleDescription": "System integration for a graphic company",
+                  "projectDuration": "Helsingborg | June 2024 - ongoing",
+                  "description": "Developing a robust system to manage and track the workflow of two printing machines, focusing on job tracking, monitoring paper usage, waste management, and managing remaining paper stock.<br> <span>Main Contributions:</span><br> <span class='font-bold'>- Requirements Analysis & System Design:</span> Conducted detailed requirements analysis and used Figma to visualize the system's interface and workflow, ensuring that both technical and business needs were addressed before development. <br><span class='font-bold'>- Backend Development:</span> Led the development of the backend system using ASP.NET web API, ensuring robustness, scalability, and performance. <br><span class='font-bold'>- Data Management:</span> Implemented SQL Server to efficiently handle complex relational data and manage large volumes of information, ensuring seamless data handling and retrieval. <br><span class='font-bold'>- Security:</span> Developed a secure authentication system with different roles for admin and user access. <br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI for responsive website <br><span class='font-bold'>- Design Tools:</span> Figma for wireframes and interface design <br><span class='font-bold'>- Database:</span> SQL Server (SMSS) <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Command Line Interface:</span> CLI <br><span class='font-bold'>- Development Tools:</span> Visual Studio 2022 <br><span class='font-bold'>Challenges & Solutions:</span> <br>- Designed a scalable system to handle high-volume data input and operations. <br>- Ensured robust data integrity and efficient data handling with SQL Server. <br>- Overcame challenges in backend authentication implementation, enriching my understanding of backend complexities. <br><span class='font-bold'>Outcomes:</span> <br>- Enhanced workflow management and provided detailed insights into paper usage and waste, optimizing operational efficiency. <br>- Facilitated paper stock inventory management.",
+                  "image": "/assets/images/portfolio/backend/prismaPhoto/photo-request.jpg",
+                  "linkTitle": "Links",
+                  "ctaButton": "View Details",
+                  "links": [
+                    {
+                      "type": "GitHub",
+                      "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+                      "icon": "line-md:github-twotone"
+                    }
+                  ],
+                  "techTitle": "Tech",
+                  "tech": [
+                    {
+                      "name": "node.js",
+                      "icon": "vscode-icons:file-type-node"
+                    },
+                    {
+                      "name": "prisma",
+                      "icon": "catppuccin:prisma"
+                    },
+                    {
+                      "name": "TypeScript",
+                      "icon": "catppuccin:typescript"
+                    },
+                    {
+                      "name": "Postman",
+                      "icon": "skill-icons:postman"
+                    }
+                  ]
+                }
+              ]
+         ]
+    
+     }
 } 
