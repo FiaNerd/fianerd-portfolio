@@ -9,6 +9,7 @@ import SectionPlate from "../../components/partials/SectionPlate";
 import Title from "../../components/partials/Title";
 import BackendPortfolio from "../../components/portfolio/BackendPortfolio";
 import FrontendPortfolio from "../../components/portfolio/FrontendPortfolio";
+import FullStackPortfolio from "../../components/portfolio/FullStackPortfolio";
 import Top5projects from "../../components/portfolio/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
@@ -114,17 +115,17 @@ const PortfolioPage = () => {
           </section>
 
           <section>
-            <RippedPaperTop id="frontend" colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
+            <RippedPaperTop id="fullstack" colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
                 <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
                   <Title 
-                    title={t('fullStackPortfolioSection.titlePortfoliofullStack')} 
+                    title={t('fullstackPortfolioSection.titlePortfolioFullstack')} 
                     dot={"."} 
-                    children={t("fullStackPortfolioSection.subTitlePortfoliofullStack")} 
+                    children={t("fullstackPortfolioSection.subTitlePortfolioFullstack")} 
                     className=" text-[#064352] dark:text-[#63251e] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
                     subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
                     sticky
                   />
-                <FrontendPortfolio />
+                <FullStackPortfolio />
               </SectionPlate>
             <RippedPaperBottom colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
           </section>
