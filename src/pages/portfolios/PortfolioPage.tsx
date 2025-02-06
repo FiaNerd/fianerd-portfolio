@@ -82,7 +82,7 @@ const PortfolioPage = () => {
           title={t('top5PortfolioSection.titleTop5Portfolio')}
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
-          className="bg-[#fff5d7] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
+          className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
           sticky 
         />
           <Top5projects />
@@ -94,7 +94,7 @@ const PortfolioPage = () => {
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."} 
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
-              className=" text-[#d60d20] dark:text-[#d6a70d] bg-[#f69497] dark:bg-[#4a2342] px-4 mt-0 mb-6 md:mb-8"
+              className=" text-[#ca0416] dark:text-[#d6a70d] bg-[#f69497] dark:bg-[#4a2342] px-4 mt-0 mb-6 md:mb-8"
               sticky
             />
             <FrontendPortfolio />
@@ -113,20 +113,22 @@ const PortfolioPage = () => {
             <BackendPortfolio />
           </section>
 
-          <RippedPaperTop id="frontend" colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
-          <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
-            <Title 
-              title={t('fullStackPortfolioSection.titlePortfoliofullStack')} 
-              dot={"."} 
-              children={t("fullStackPortfolioSection.subTitlePortfoliofullStack")} 
-              className=" text-[#d60d20] dark:text-[#e9232f] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
-              subHeadingClassName="text-[#d60d20] dark:text-[#1b0909]"
-              sticky
-            />
-            <FrontendPortfolio />
-          </SectionPlate>
-          <RippedPaperBottom colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
-          
+          <section>
+            <RippedPaperTop id="frontend" colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
+                <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
+                  <Title 
+                    title={t('fullStackPortfolioSection.titlePortfoliofullStack')} 
+                    dot={"."} 
+                    children={t("fullStackPortfolioSection.subTitlePortfoliofullStack")} 
+                    className=" text-[#064352] dark:text-[#63251e] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
+                    subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
+                    sticky
+                  />
+                <FrontendPortfolio />
+              </SectionPlate>
+            <RippedPaperBottom colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
+          </section>
+                  
     </>
   );
 };
