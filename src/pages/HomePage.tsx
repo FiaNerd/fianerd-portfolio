@@ -43,7 +43,7 @@ const HomePage = () => {
       {/* Profile Section */}
       <section id="profile">
         <Title
-        id="me"
+          id="me"
           title={t("Profile/aboutMe:titleProfile")}
           dot={t("Profile/aboutMe:dot")}
           children={t("Profile/aboutMe:subTitle")}

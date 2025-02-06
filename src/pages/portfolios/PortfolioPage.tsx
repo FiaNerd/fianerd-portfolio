@@ -112,9 +112,21 @@ const PortfolioPage = () => {
             />
             <BackendPortfolio />
           </section>
+
+          <RippedPaperTop id="frontend" colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
+          <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
+            <Title 
+              title={t('fullStackPortfolioSection.titlePortfoliofullStack')} 
+              dot={"."} 
+              children={t("fullStackPortfolioSection.subTitlePortfoliofullStack")} 
+              className=" text-[#d60d20] dark:text-[#e9232f] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
+              subHeadingClassName="text-[#d60d20] dark:text-[#1b0909]"
+              sticky
+            />
+            <FrontendPortfolio />
+          </SectionPlate>
+          <RippedPaperBottom colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
           
-      {/* BG color for the light mode  "#dc8e32" */}
-      {/* BG color for the light mode  "#9fc4bd" text 345f59*/}
     </>
   );
 };

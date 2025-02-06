@@ -269,15 +269,15 @@
         ]  
     },
     "fullStackPortfolioSection": {
-        "titlePortfoliofullStack": "Fullstackprojekt",
-        "subTitlePortfoliofullStack": "Från Databas till Design",
-        "introfullStackPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Även om mitt backend-projekt för närvarande inte är live, har jag värdefull erfarenhet av backend-utveckling, inklusive databashantering, API-integrationer och serveradministration. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
-        "ctaButtonViewAll": "Visa Detaljer",
- 
+        "titlePortfoliofullStack": "Fullstack Projects",
+        "subTitlePortfoliofullStack": "From Database to Design",
+        "introfullStackPortfolio": "<span class='text-[#ec4428] dark:text-[#e9232f] font-semibold'>Projects that combine creativity with robust functionality.</span> Although my backend project is currently not live, I have valuable experience in backend development, including database management, API integrations, and server administration. Do you have an idea or a project in mind? Don't hesitate to contact me – I look forward to collaborating and creating something amazing together.",
+        "ctaButtonViewAll": "View Details",
+    
          "fullStackItems": [
             [
                 {
-                  "projectType": "School Project",
+                  "projectType": "Side project",
                   "title": "Printagon Graphics",
                   "applicationType": "web",
                   "subTitle": "Fullstack",
