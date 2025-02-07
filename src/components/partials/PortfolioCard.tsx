@@ -17,9 +17,10 @@ interface PortfolioCardProps {
   tech: { name: string; icon: string }[];
   ctaButton: string;
   projectDuration: string;
+  titleDescription: string
 }
 
-const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links,techTitle, tech, ctaButton, projectDuration}: PortfolioCardProps) => {
+const PortfolioCard = ({ title, applicationType, subTitle, description, img, projectType, linkTitle, links,techTitle, tech, ctaButton, projectDuration, titleDescription}: PortfolioCardProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const truncatedDescription = description.length > 110 ? `${description.substring(0, 110)}...` : description;
@@ -52,6 +53,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
             className="text-xl font-medium leading-6 tracking-wide text-accent-secondary cursor-pointer"
           >
             <NavLink to="#">{title}</NavLink>
+            <p className="text-xs mb-0">{titleDescription}</p>
             <p className="italic text-xs text-accent-primary" dangerouslySetInnerHTML={{__html: projectDuration}}/>
           </h1>
         </div>

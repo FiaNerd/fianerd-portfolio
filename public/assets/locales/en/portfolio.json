@@ -26,14 +26,14 @@
                 "title": "BrutalBeats",
                 "subTitle": "Frontend",
                 "description": "React and Tailwind CSS",
-                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
                 "ctaButton": "View Details"
             },
             {
                 "title": "MSB",
                 "subTitle": "Graphic & Frontend",
                 "description": "Photoshop, Illustrator and HTML & CSS",
-                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-hero.jpg",
+                "image": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-hero.jpg",
                 "ctaButton": "View Details"
             },
             {
@@ -64,9 +64,9 @@
                 "applicationType": "web",
                 "subTitle": "Frontend",
                 "titleDescription": "Booking agency website",
-                "projectDuration": "Helsingborg <span class='not-italic'>|</span> march 2023 - january 2025",
+                "projectDuration": "march 2023 - january 2025",
                 "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.<br><span>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><span>Key Contributions:</span><br><span>- Frontend Development:</span> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span>- Backend:</span> Node.js<br><span>- Version Control:</span> Git<br><span>- Terminal:</span> Command Line Interface (CLI)<br><span>- Development Tools:</span> Visual Studio Code<br><span>- CMS:</span> Planned integration with WordPress or Umbraco<br><span>Challenges & Solutions:</span> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness. - Planned and strategized for future integration with Node.js and CMS system.<br><span>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality."                ,
-                "image": "/assets/images/portfolio/frontend/bb/brutal-hero.jpg",
+                "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
                 "ctaButton": "View Details",
                 "linkTitle": "Links",
                 "links": [
@@ -106,7 +106,7 @@
                 "titleDescription": "Movie database website",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
                 "description": "I developed an interactive web application that integrates the IMDb API to display movie data, focusing on a seamless and engaging user experience. Leveraging React, TypeScript, Axios, and React Query, I implemented advanced frontend functionalities, including efficient search capabilities, while ensuring reusable and maintainable components.<br><span>Purpose:<span> In this project, I focused on frontend development, specifically advanced JavaScript using React. The task involved integrating the IMDb API and utilizing the Axios library along with React Query to fetch and display movie data. My goal was to create a user-friendly and interactive web application that offers a seamless experience to users.<br><span>Key Contributions:</span><br>- Utilized React and TypeScript to implement the frontend functionalities, ensuring a smooth user experience.<br>- Integrated external APIs and libraries, such as Axios and React Query, to fetch and manage movie data effectively.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Axios, React Query, SCSS<br>- Development Tools: Visual Studio Code<br><span>Project Highlights:</span><br>- Designed and organized components to ensure reusability and maintainability.<br>- Implemented efficient search functionality for users, enhancing the overall user experience.<br><span>Outcome:</span><br>This project not only strengthened my proficiency in React and frontend development but also provided me with valuable experience in handling and displaying data from external APIs. It has equipped me with the skills and confidence to tackle similar challenges in future projects.<br>Website: https://the-movie-data.netlify.app<br>GitHub: https://github.com/FiaNerd/TMDB",
-                "image": "/assets/images/portfolio/frontend/school/theMovieDb/tmdb-mobile-hero.jpg",
+                "image": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
                 "linkTitle": "Links",
                 "ctaButton": "View Details",
                 "links": [
@@ -143,12 +143,12 @@
                 "title": "MSB",
                 "applicationType": "web",
                 "subTitle": "Graphic Tools",
-                "titleDescription": "Graphic Elements and Illustrations: From Adobe to Responsive Web Design",
+                "titleDescription": "Graphic Elements and Illustrations",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
                 "description": "This project combines graphic design and web development, where I applied my skills in Adobe Illustrator and Photoshop to create graphic elements and illustrations. The course focused on building a website following the MSB graphic profile, incorporating typography, color schemes, and layout principles. I also gained hands-on experience with HTML and CSS to develop a responsive and visually engaging site.<br><span class='bold'>Purpose:</span> The Graphic Tools course aimed to provide foundational knowledge of Illustrator and Photoshop. In Illustrator, the objective was to create three distinct elements, while in Photoshop, the task involved clipping out at least three individuals. Additionally, the course emphasized adhering to the graphic profile of MSB (Civil Contingencies)[MSB Graphic Profile] <span> (https://www.msb.se/) </span>, focusing on typography, font sizes, color schemes, etc., and subsequently building a website using HTML and CSS following this profile.<br><span>Key Contributions:</span><br>- Created all graphic elements for the website, utilizing images composed of various other images. For instance, the Hero section and fire image were assembled from clipped-out images combined with other visuals.<br>- Ensured semantic correctness in HTML and CSS, employing flexbox and grid extensively to enhance frontend development techniques.<br><span>Technologies Used:</span><br><span>- Graphic Tools:</span> Photoshop, Illustrator<br><span>- Frontend:</span> HTML, CSS<br><span>- Development Tools:</span> Visual Studio Code<br><span>Project Highlights:</span><br>- Utilized flexbox and grid layouts to create a visually appealing and responsive website.<br>- Emphasized adherence to the MSB graphic profile, enhancing understanding of design principles and brand consistency.<br><span>Outcome:</span><br>While the primary focus was on graphic tools, the project provided valuable insights into HTML and CSS, improving proficiency in frontend development. The project website showcases the application of design principles and techniques learned during the course.<br>Website: https://lucky-basbousa-252a0a.netlify.app/<br>GitHub: https://github.com/FiaNerd/msb_falling_trees_mission",
                 "linkTitle": "Links",
                 "ctaButton": "View Details",
-                "image": "/assets/images/portfolio/frontend/school/ux-ui/school-msb-footer-landscape.jpg",
+                "image": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-footer-landscape.jpg",
 
                 "links": [
                     {
@@ -200,7 +200,7 @@
                 "titleDescription": "Backend for a photo app",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
                 "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><span>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
-                "image": "/assets/images/portfolio/backend/prismaPhoto/photo-request.jpg",
+                "image": "/assets/images/portfolio/back-end/prismaPhoto/postman-photo.jpg",
                 "linkTitle": "Links",
                 "ctaButton": "View Details",
                 "links": [
@@ -236,18 +236,16 @@
                 "applicationType": "App",
                 "subTitle": "Backend",
                 "titleDescription": "Backend for fashion",
-                "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2023 – March 2024",
+                "projectDuration": "June 2023 – March 2024",
                 "description": "Contributed to the development of the Slowfashion app by supporting the backend developer in creating a comprehensive CRUD system for managing products and blog posts. Utilized tools like Swagger and Postman for extensive API testing and validation.<br><span class='bold'>Key Contributions:</span> - Developed a CRUD system for products and blog posts, significantly improving content management efficiency. - Enhanced my backend development skills in ASP.NET and API interaction. - Adapted to an existing project by thoroughly analyzing the codebase and deepening my understanding of software architecture.<br> <span class='bold'>Technologies Used:</span> <span class='bold'>- Programming Language:</span> C# <span class='bold'>- Framework:</span> ASP.NET Core Web API <span class='bold'>- Databases:</span> PostgreSQL, DBeaver <span class='bold'>- API Testing:</span> Swagger, Postman, Insomnia <span class='bold'>- Version Control:</span> Git <span class='bold'>- Cloud Services:</span> Azure <span class='bold'>- Development Environment (IDE):</span> Visual Studio 2022 <span class='bold'>Challenges & Solutions:</span><br> - Overcame challenges in understanding and adapting to the codebase of an existing project. <br>- Improved problem-solving and critical thinking skills through in-depth analysis and study.<span class='bold'>Outcome:</span><br><br>Successfully contributed to the development of a robust backend system for the Slowfashion app, gaining valuable experience in backend development and software architecture.",
-                "image": "/assets/images/portfolio/backend/slowfashion/slowfashion.jpg",
+                "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
 
                 "linkTitle": "Links to my GitHub",
                 "ctaButton": "View Details",
 
                 "links": [
                     {
-                        "type": "GitHub",
-                        "url": "https://github.com/FiaNerd",
-                        "icon": "line-md:github-twotone"
+                        "type": "This repro is private"
                     }
                 ],
                 "techTitle": "Tech",
@@ -276,42 +274,150 @@
     
          "fullstackItems": [
                 {
-                  "projectType": "Side project",
-                  "title": "Printagon Graphics",
-                  "applicationType": "web",
-                  "subTitle": "Fullstack",
-                  "titleDescription": "System integration for a graphic company",
-                  "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
-                  "description": "Developing a robust system to manage and track the workflow of two printing machines, focusing on job tracking, monitoring paper usage, waste management, and managing remaining paper stock.<br> <span>Main Contributions:</span><br> <span class='font-bold'>- Requirements Analysis & System Design:</span> Conducted detailed requirements analysis and used Figma to visualize the system's interface and workflow, ensuring that both technical and business needs were addressed before development. <br><span class='font-bold'>- Backend Development:</span> Led the development of the backend system using ASP.NET web API, ensuring robustness, scalability, and performance. <br><span class='font-bold'>- Data Management:</span> Implemented SQL Server to efficiently handle complex relational data and manage large volumes of information, ensuring seamless data handling and retrieval. <br><span class='font-bold'>- Security:</span> Developed a secure authentication system with different roles for admin and user access. <br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI for responsive website <br><span class='font-bold'>- Design Tools:</span> Figma for wireframes and interface design <br><span class='font-bold'>- Database:</span> SQL Server (SMSS) <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Command Line Interface:</span> CLI <br><span class='font-bold'>- Development Tools:</span> Visual Studio 2022 <br><span class='font-bold'>Challenges & Solutions:</span> <br>- Designed a scalable system to handle high-volume data input and operations. <br>- Ensured robust data integrity and efficient data handling with SQL Server. <br>- Overcame challenges in backend authentication implementation, enriching my understanding of backend complexities. <br><span class='font-bold'>Outcomes:</span> <br>- Enhanced workflow management and provided detailed insights into paper usage and waste, optimizing operational efficiency. <br>- Facilitated paper stock inventory management.",
-                  "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-                  "linkTitle": "Links",
-                  "ctaButton": "View Details",
+                    "projectType": "Side project",
+                    "title": "Printagon Graphics",
+                    "applicationType": "web",
+                    "subTitle": "Fullstack",
+                    "titleDescription": "System integration for a graphic company",
+                    "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
+                    "description": "Developing a mobile application to help high school students explore opportunities for post-secondary education, focusing on providing a seamless, cross-platform user experience. <br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span> <br>- Used React Native and TypeScript to create a responsive and intuitive interface. <br>- Ensured a consistent user experience across iOS and Android platforms. <br><span class='font-bold'>- Backend Development:</span> <br>- Managed APIs and data storage with Firebase, providing reliable backend services. <br>- Implemented SQLite for efficient handling of local data and offline functionality. <br><span class='font-bold'>- Problem Solving:</span> <br>- Overcame specific challenges in iOS development, ensuring robust cross-platform functionality. <br>- Adapted development strategies to maintain seamless performance and usability.<br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI) <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Methodology:</span> Scrum <br><span class='font-bold'>Challenges & Solutions:</span> <br>- Solved complex iOS platform-specific issues, enhancing my problem-solving skills and technical knowledge. <br>- Ensured the app's responsiveness and performance across different devices and screen sizes. <br><span class='font-bold'>Outcomes:</span> <br>- Delivered a valuable tool that helps students effectively navigate their educational choices.<br>- Gained extensive experience in mobile development and cross-platform integration.",                    "linkTitle": "Links",
+                    "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+                    "ctaButton": "View Details",
                   "links": [
                     {
-                      "type": "GitHub",
-                      "url": "https://github.com/FiaNerd/prisma_photo_app_api",
-                      "icon": "line-md:github-twotone"
+                      "type": "This repro is private"
+                    },
+                    {
+                      "type": "App store",
+                      "url": "https://www.printagon.se/",
+                      "icon": "logos:apple-app-store"
                     }
                   ],
                   "techTitle": "Tech",
-                  "tech": [
+                    "tech": [
+                        {
+                            "name": "C-sharp",
+                            "icon": "logos:c-sharp"
+                        },
+                        {
+                            "name": "Firebase",
+                            "icon": "devicon:firebase"
+                        },
+                        {
+                            "name": ".NET",
+                            "icon": "logos:dotnet"
+                        },
+                        {
+                            "name": "React",
+                            "icon": "skill-icons:react-dark"
+                        },
+                        {
+                            "name": "TypeScript",
+                            "icon": "catppuccin:typescript"
+                        },
+                    
+                        {
+                            "name": "Postman",
+                            "icon": "logos:material-ui"
+                        }
+                   ]
+            },
+            {
+                "projectType": "Side Project / Internship",
+                "title": "Prodigies",
+                "applicationType": "App",
+                "subTitle": "Fullstack",
+                "titleDescription": "An App for High School Students",
+                "projectDuration": "Lund <span class='not-italic'>|</span> January 2024 - September 2024",
+                "description": "Developing a mobile application to help high school students explore opportunities for post-secondary education, focusing on providing a seamless, cross-platform user experience. <br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span> <br>- Used React Native and TypeScript to create a responsive and intuitive interface. <br>- Ensured a consistent user experience across iOS and Android platforms. <br><span class='font-bold'>- Backend Development:</span> <br>- Managed APIs and data storage with Firebase, providing reliable backend services. <br>- Implemented SQLite for efficient handling of local data and offline functionality. <br><span class='font-bold'>- Problem Solving:</span> <br>- Overcame specific challenges in iOS development, ensuring robust cross-platform functionality. <br>- Adapted development strategies to maintain seamless performance and usability.<br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI) <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Methodology:</span> Scrum <br><span class='font-bold'>Challenges & Solutions:</span> <br>- Solved complex iOS platform-specific issues, enhancing my problem-solving skills and technical knowledge. <br>- Ensured the app's responsiveness and performance across different devices and screen sizes. <br><span class='font-bold'>Outcomes:</span> <br>- Delivered a valuable tool that helps students effectively navigate their educational choices.<br>- Gained extensive experience in mobile development and cross-platform integration.",
+                "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main.PNG",
+                "linkTitle": "Links",
+                "ctaButton": "View Details",
+                "links": [
                     {
-                      "name": "node.js",
-                      "icon": "vscode-icons:file-type-node"
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+                        "icon": "line-md:github-twotone"
                     },
                     {
-                      "name": "prisma",
-                      "icon": "catppuccin:prisma"
-                    },
-                    {
-                      "name": "TypeScript",
-                      "icon": "catppuccin:typescript"
-                    },
-                    {
-                      "name": "Postman",
-                      "icon": "skill-icons:postman"
+                        "type": "App Store",
+                        "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
+                        "icon": "logos:apple-app-store"
                     }
-                  ]
+                ],
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "devicon:reactnative-wordmark",
+                        "icon": "devicon:reactnative-wordmark"
+                    },
+                    {
+                        "name": "Firebase",
+                        "icon": "devicon:firebase"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "SQLite",
+                        "icon": "vscode-icons:file-type-sql"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
+            },            
+            {
+                "projectType": "Thesis Project",
+                "title": "Coffee Shop",
+                "applicationType": "Web",
+                "subTitle": "Fullstack",
+                "titleDescription": "A coffee shop for coffee lovers",
+                "projectDuration": "December 2023 – January 2024",
+                "description": "Embarked on a journey into full-stack development by creating an e-commerce platform tailored for coffee enthusiasts as part of my thesis project. Started with meticulous planning, I curated a tech stack that aligned with the intended functionalities, using SQL for user, cart, and product relations. By using both lo-fi and hi-fi prototypes in Figma, I refined the app's aesthetics, from color schemes to font choices. <br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span><br>- Used React and TypeScript to orchestrate a seamless user experience. <br>- Enhanced aesthetics through careful design choices using Figma prototypes.<br><span class='font-bold'>- Backend Development:</span><br>- Used ASP.NET Core to seamlessly integrate backend and frontend elements.<br>- Implemented robust backend authentication using the ASP.NET Core Authentication library. <br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core, SQL Server <br><span class='font-bold'>- Database:</span> SQLite <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Deployment:</span> Docker (Planned integration for streamlined deployment) <br><br><span class='font-bold'>Challenges & Solutions:</span><br>- Overcame challenges in implementing backend authentication, enriching my understanding of backend complexities. <br>- Planned integration of PostgreSQL for improved database management and Docker for streamlined deployment on an Azure-based server. <br><br><span class='font-bold'>Outcomes:</span> Successfully navigated the journey from concept to realization within set deadlines, enriching my skills and understanding of full-stack development. Looking forward, I aim to integrate PostgreSQL for improved database management and Docker for streamlined deployment on an Azure-based server.",
+                "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.png",
+                "linkTitle": "Links",
+                "ctaButton": "View Details",
+                "links": [
+                    {
+                        "type": "GitHub",
+                        "url": "https://github.com/FiaNerd/theCoffeeShop_exam",
+                        "icon": "line-md:github-twotone"
+                    }
+                ],
+                "techTitle": "Tech",
+                "tech": [
+                    {
+                        "name": "C-sharp",
+                        "icon": "logos:c-sharp"
+                    },
+                    {
+                        "name": "TypeScript",
+                        "icon": "catppuccin:typescript"
+                    },
+                    {
+                        "name": "Postman",
+                        "icon": "skill-icons:postman"
+                    },
+                    {
+                        "name": "React",
+                        "icon": "skill-icons:react-dark"
+                    },
+                    {
+                        "name": ".NET",
+                        "icon": "logos:dotnet"
+                    },
+                    {
+                        "name": "SQL Server (SMMS)",
+                        "icon": "devicon:microsoftsqlserver"
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "icon": "skill-icons:tailwindcss-dark"
+                    }
+                ]
             }
         ]
     
