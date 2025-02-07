@@ -1,12 +1,12 @@
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import HeroSection from "../component/heroSection/HeroSection";
-import Hobbies from "../component/hobbies/Hobbies";
-import Title from "../component/partial/Title";
-import AboutMe from "../component/profile/about/AboutMe";
-import Education from "../component/profile/education/Education";
-import WorkExperience from "../component/profile/experience/WorkExperience";
-import Skills from "../component/profile/skills/Skills";
+import HeroSection from "../components/heroSection/HeroSection";
+import Hobbies from "../components/hobbies/Hobbies";
+import Title from "../components/partials/Title";
+import AboutMe from "../components/profile/about/AboutMe";
+import Education from "../components/profile/education/Education";
+import WorkExperience from "../components/profile/experience/WorkExperience";
+import Skills from "../components/profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {
@@ -43,7 +43,7 @@ const HomePage = () => {
       {/* Profile Section */}
       <section id="profile">
         <Title
-        id="me"
+          id="me"
           title={t("Profile/aboutMe:titleProfile")}
           dot={t("Profile/aboutMe:dot")}
           children={t("Profile/aboutMe:subTitle")}
