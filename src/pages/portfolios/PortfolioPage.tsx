@@ -89,6 +89,9 @@ const PortfolioPage = () => {
         />
           <Top5projects />
       </section>
+       <section>
+        <Test />
+       </section>
 
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
@@ -113,9 +116,6 @@ const PortfolioPage = () => {
               sticky 
             />
             <BackendPortfolio />
-          </section>
-          <section>
-            <Test />
           </section>
 
           <section>
