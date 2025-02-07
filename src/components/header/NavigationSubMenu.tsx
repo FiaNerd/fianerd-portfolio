@@ -113,9 +113,7 @@ const NavigationSubMenu = ({
                 />
               </NavLink>
               {subMenu.description && (
-                <span className="block text-xs text-text-primary font-light leading-6 opacity-70">
-                  {t(subMenu.description)}
-                </span>
+                <span className="block text-xs text-text-primary font-light leading-6 opacity-70" dangerouslySetInnerHTML={{ __html: t(subMenu.description) }} />
               )}
             </div>
           ))}

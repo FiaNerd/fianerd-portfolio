@@ -1,6 +1,6 @@
 {
     "portfolio": {
-        "portfolioTitle": "Portfolio",
+        "titlePortfolio": "Portfolio",
         "subTitlePortfolio": "Where Code Meets Creativity",
         "mainSectionTitle": "When ideas becomes reality",
         "portfolioIntro": "This is a show case of my passion for coding and design. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
@@ -9,7 +9,7 @@
     },
 
     "top5PortfolioSection": {
-        "titleTop5Portfolio": "Top <span class='text-accent-primary'>5</span> Projects",
+        "titleTop5Portfolio": "Top <span class='text-btn-bg dark:text-accent-primary'>5</span> Projects",
         "subTitleTop5Portfolio": "Projects that I am proud of",
         "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
         "ctaButtonViewAll": "View All Projects",
