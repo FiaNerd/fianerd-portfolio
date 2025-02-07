@@ -7,10 +7,11 @@ import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../components/partials/Button";
 import SectionPlate from "../../components/partials/SectionPlate";
 import Title from "../../components/partials/Title";
-import BackendPortfolio from "../../components/portfolio/BackendPortfolio";
-import FrontendPortfolio from "../../components/portfolio/FrontendPortfolio";
-import FullStackPortfolio from "../../components/portfolio/FullStackPortfolio";
-import Top5projects from "../../components/portfolio/Top5projects";
+import BackendPortfolio from "../../components/portfolios/BackendPortfolio";
+import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
+import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
+import Test from "../../components/portfolios/Test";
+import Top5projects from "../../components/portfolios/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
 const PortfolioPage = () => {
@@ -112,6 +113,9 @@ const PortfolioPage = () => {
               sticky 
             />
             <BackendPortfolio />
+          </section>
+          <section>
+            <Test />
           </section>
 
           <section>
