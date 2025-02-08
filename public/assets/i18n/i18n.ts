@@ -14,8 +14,8 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: '/assets/locales/{{lng}}/{{ns}}.json', // Dynamic loading of translation files
-    },
+      loadPath: '/assets/locales/{{lng}}/{{ns}}.json', // Adjust this path to match your file structure
+    },    
     ns: [
       'home', 
       'heroSection', 

@@ -12,10 +12,10 @@ import { useSmoothScroll } from "../hook/useSmoothScroll";
 const HomePage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
   const { t } = useTranslation([
-    "Profile/aboutMe",
-    "Profile/experience",
-    "Profile/education",
-    "Profile/hobbies"
+    "profile/aboutMe",
+    "profile/experience",
+    "profile/education",
+    "profile/hobbies"
   ]);
 
   useLayoutEffect(() => {
