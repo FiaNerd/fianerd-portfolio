@@ -80,7 +80,7 @@ const PortfolioPage = () => {
 
       <section id="top5projects" className="top-0">
         <Title
-          title={t('top5PortfolioSection.titleTop5Portfolio')}
+          dangerouslySetInnerHTML={{ __html: t('top5PortfolioSection.titleTop5Portfolio') }}
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
