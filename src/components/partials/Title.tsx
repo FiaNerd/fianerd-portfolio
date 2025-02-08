@@ -3,7 +3,7 @@ import TitleAnimation from "./TitleAnimation";
 
 interface IProps {
   id?: string;
-  title: string;
+  title?: string;
   dot: string;
   children: string;
   className?: string; 
@@ -23,9 +23,10 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
       <TitleAnimation 
         title={title + dot} 
         dot={dot}
-        dangerouslyHTML={dangerouslyHTML}
+        dangerouslyHTML={dangerouslyHTML} // Make sure this is correctly passed
         onComplete={() => {}}
       />
+
 
       <h3 className={`${subHeadingClassName || "text-text-secondary dark:text-text-secondary"}`}>
         {children}

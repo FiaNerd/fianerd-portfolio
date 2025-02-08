@@ -28,6 +28,9 @@ const PortfolioPage = () => {
 
   useSmoothScroll(headerHeight ? 0 : headerHeight);
 
+  const dangerouslyHTML = t('top5PortfolioSection.titleTop5Portfolio');
+console.log(dangerouslyHTML);
+
   return (
     <>
       <div
@@ -80,8 +83,8 @@ const PortfolioPage = () => {
 
       <section id="top5projects" className="top-0">
         <Title
-          title={""}   
-          dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')} // Pass the HTML string directly here
+          title={t('top5PortfolioSection.titleTop5Portfolio')}   
+          dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')}
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
