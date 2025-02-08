@@ -10,7 +10,6 @@ import Title from "../../components/partials/Title";
 import BackendPortfolio from "../../components/portfolios/BackendPortfolio";
 import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
 import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
-import Test from "../../components/portfolios/Test";
 import Top5projects from "../../components/portfolios/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
@@ -89,10 +88,6 @@ const PortfolioPage = () => {
         />
           <Top5projects />
       </section>
-       <section>
-        <Test />
-       </section>
-       <p>TEST TEST DEPLOYMENT </p>
 
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">

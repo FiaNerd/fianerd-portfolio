@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -53,7 +54,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
             className="text-xl font-medium leading-6 tracking-wide text-accent-secondary cursor-pointer"
           >
             <NavLink to="#">{title}</NavLink>
-            <p className="text-xs mb-0">{titleDescription}</p>
+            <p className="text-xs font-light mb-0">{titleDescription}</p>
             <p className="italic text-xs text-accent-primary" dangerouslySetInnerHTML={{__html: projectDuration}}/>
           </h1>
         </div>
@@ -75,7 +76,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
                 {linkTitle}
               </p>
               <ul className="flex items-center px-2 space-x-4 justify-center">
-                {links.map((item, index) => (
+                {links.map((item: any, index: number) => (
                   <>
                   <li key={index} className="justify-center items-center flex flex-col cursor-pointer">
                     <NavLink to={item.url} className="flex flex-col items-center" target="_blank" rel="noopener noreferrer">
@@ -93,7 +94,7 @@ const PortfolioCard = ({ title, applicationType, subTitle, description, img, pro
             <div className="flex flex-col ">
                 <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">{techTitle}</p>
               <ul className="items-center p-2 grid grid-flow-col grid-rows-2 gap-2">
-                {tech.map((item, index) => (
+                {tech.map((item: any, index: number) => (
                   <li key={index} className="items-center">
                     <div className="relative">
                       <Icon

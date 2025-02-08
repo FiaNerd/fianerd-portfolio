@@ -1,14 +1,17 @@
 {
-  "build": {
-    "outDir": "dist", 
-    "rollupOptions": {
-      "output": {
-        "manualChunks": {
-          "react-vendor": ["react", "react-dom"]
-        }
+  "builds": [
+    {
+      "src": "src/**/*",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
       }
-    },
-    "chunkSizeWarningLimit": 1000
-  }
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
