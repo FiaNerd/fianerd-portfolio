@@ -21,7 +21,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
       style={style}
     >
       <TitleAnimation 
-        title={title + dot} 
+        title={title || ""} 
         dot={dot}
         dangerouslyHTML={dangerouslyHTML} 
         onComplete={() => {}}

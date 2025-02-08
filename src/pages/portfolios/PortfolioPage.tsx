@@ -44,7 +44,7 @@ console.log(dangerouslyHTML);
           <Title
             id="portfolio" 
             title={t('portfolio.titlePortfolio')}
-            dot="."
+            dot={"."}
             children={t('portfolio.subTitlePortfolio')}
             className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 "
             sticky
@@ -84,7 +84,7 @@ console.log(dangerouslyHTML);
       <section id="top5projects" className="top-0">
         <Title
           dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')}
-          dot="."
+          dot={"."}
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
           sticky 
@@ -97,7 +97,7 @@ console.log(dangerouslyHTML);
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
             <Title 
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
-              dot={"."} 
+              dot={"."}
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
               className=" text-[#ca0416] dark:text-[#d6a70d] bg-[#f69497] dark:bg-[#4a2342] px-4 mt-0 mb-6 md:mb-8"
               sticky
@@ -110,7 +110,7 @@ console.log(dangerouslyHTML);
           <section id="backend" className="mb-12">
              <Title 
               title={t('backendPortfolioSection.titlePortfolioBackend')} 
-              dot={"."} 
+              dot={"."}
               children={t("backendPortfolioSection.subTitlePortfolioBackend")} 
               className="text-[#ec4428] dark:text-[#1d7ecc] bg-[#fff5d7] dark:bg-[#1b0909] px-4 mt-0 mb-6 md:mb-8"
               sticky 

@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import useAnimateIn from "../../hook/useAnimation";
 
+interface IProps {
+  title: string;
+  dot: string;
+  dangerouslyHTML?: string;
+  onComplete: () => void;
+  style?: React.CSSProperties;
+  className?: string;
+}
+
 const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, className }: IProps) => {
   const [animationKey, setAnimationKey] = useState(0);
 
