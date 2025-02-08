@@ -6,6 +6,7 @@ import RippedPaperTop from "../../assets/svg/RippedPaperTop";
 import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../components/partials/Button";
 import SectionPlate from "../../components/partials/SectionPlate";
+import Title from "../../components/partials/Title";
 import BackendPortfolio from "../../components/portfolios/BackendPortfolio";
 import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
 import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
@@ -79,14 +80,16 @@ const PortfolioPage = () => {
 
       <section id="top5projects" className="top-0">
         <Title
-          dangerouslySetInnerHTML={{ __html: t('top5PortfolioSection.titleTop5Portfolio') }}
+          title={""}   
+          dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')} // Pass the HTML string directly here
           dot="."
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] mb-6 md::mb-8"
           sticky 
         />
-          <Top5projects />
+        <Top5projects />
       </section>
+
 
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
