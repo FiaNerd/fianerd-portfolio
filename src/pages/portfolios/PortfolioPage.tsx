@@ -6,7 +6,6 @@ import RippedPaperTop from "../../assets/svg/RippedPaperTop";
 import SvgWaves from "../../assets/svg/SvgWaves";
 import Button from "../../components/partials/Button";
 import SectionPlate from "../../components/partials/SectionPlate";
-import Title from "../../components/partials/Title";
 import BackendPortfolio from "../../components/portfolios/BackendPortfolio";
 import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
 import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
