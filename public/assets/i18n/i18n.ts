@@ -14,7 +14,7 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: '/assets/locales/{{lng}}/{{ns}}.json', // Adjust this path to match your file structure
+      loadPath: '/assets/locales/{{lng}}/{{ns}}.json', 
     },    
     ns: [
       'home', 
@@ -37,7 +37,7 @@ i18n
       "portfolio/backendPortfolioSection",
       "portfolio/fullstackPortfolioSection",
     ],
-    defaultNS: 'heroSection', // Default namespace
+    defaultNS: 'heroSection',
     detection: {
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
       caches: ['localStorage', 'cookie'],
