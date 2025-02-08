@@ -10,9 +10,10 @@ interface IProps {
   subHeadingClassName?: string; 
   sticky?: boolean;
   style?: React.CSSProperties;
+  dangerouslyHTML?: string;
 }
 
-const Title = ({ id, title, dot, children, className, subHeadingClassName, sticky, style,  }: IProps) => {
+const Title = ({ id, title, dot, children, className, subHeadingClassName, sticky, style, dangerouslyHTML }: IProps) => {
   return (
     <motion.div
       id={id}
@@ -22,6 +23,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
       <TitleAnimation 
         title={title + dot} 
         dot={dot}
+        dangerouslyHTML={dangerouslyHTML} 
         onComplete={() => {}}
       />
 
