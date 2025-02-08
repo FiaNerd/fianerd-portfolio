@@ -4,7 +4,7 @@
   "label": "Välj ett annat språk!",
   "home": "Hem",
   "profile": "Profil",
-  "me": "Vem är jag<span class='text-accent-primary font-medium '>?</span>",
+  "me": "Vem är jag<span class='text-accent-primary font-bold '>?</span>",
   "meDescription": "Läs mer om mig och hur jag kom in i systemutveckling och grafisk design.",
   "skillsWeb": "Webbkompetenser",
   "skillsWebDescription": "Utforska mina färdigheter inom webteknologi",
