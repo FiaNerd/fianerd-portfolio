@@ -2,15 +2,11 @@
 
 import { useTranslation } from "react-i18next";
 import i18n from "../../../public/assets/i18n/i18n";
-import PortfolioCard from "../partials/PortfolioCard";
+import PortfolioCard from "./PortfolioCard";
 
 const FrontendPortfolio = () => {
   const { t } = useTranslation("portfolio");
   
-   // Log the current language and namespaces
-   console.log("Current language:", i18n.language);
-   console.log("Loaded namespaces:", i18n.options.ns);
- 
 
   // Retrieve frontend items dynamically
   const frontendItems = t("frontendPortfolioSection.frontendItems", { returnObjects: true });

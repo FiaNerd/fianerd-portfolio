@@ -200,7 +200,7 @@
                 "titleDescription": "Backend for a photo app",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
                 "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><span>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
-                "image": "/assets/images/portfolio/back-end/prismaPhoto/postman-photo.jpg",
+                "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
                 "linkTitle": "Links",
                 "ctaButton": "View Details",
                 "links": [
@@ -270,7 +270,7 @@
     "fullstackPortfolioSection": {
         "titlePortfolioFullstack": "Fullstack Projects",
         "subTitlePortfolioFullstack": "From Database to Design",
-        "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#63251e] font-semibold'>Projects that combine creativity with robust functionality.</span> I have extensive experience in both frontend and backend development, including database management, API integrations, server administration, and user-friendly design. Do you have an idea or a project in mind? Don't hesitate to contact me – I look forward to collaborating and creating something amazing together.",        "ctaButtonViewAll": "View Details",
+        "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#831518] font-semibold'>Projects that combine creativity with robust functionality.</span> I have extensive experience in both frontend and backend development, including database management, API integrations, server administration, and user-friendly design. Do you have an idea or a project in mind? Don't hesitate to contact me – I look forward to collaborating and creating something amazing together.",        "ctaButtonViewAll": "View Details",
     
          "fullstackItems": [
                 {

@@ -274,7 +274,7 @@
     "fullstackPortfolioSection": {
         "titlePortfolioFullstack": "Fullstackprojekt",
         "subTitlePortfolioFullstack": "Från Databas till Design",
-        "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#63251e] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Jag har omfattande erfarenhet av både frontend- och backend-utveckling, inklusive databashantering, API-integrationer, serveradministration och användarvänlig design. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+        "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#831518] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Jag har omfattande erfarenhet av både frontend- och backend-utveckling, inklusive databashantering, API-integrationer, serveradministration och användarvänlig design. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
         "ctaButtonViewAll": "Visa Detaljer",
 
         "fullstackItems": [

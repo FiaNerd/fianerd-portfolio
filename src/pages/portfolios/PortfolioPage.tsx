@@ -29,7 +29,6 @@ const PortfolioPage = () => {
   useSmoothScroll(headerHeight ? 0 : headerHeight);
 
   const dangerouslyHTML = t('top5PortfolioSection.titleTop5Portfolio');
-console.log(dangerouslyHTML);
 
   return (
     <>
@@ -118,14 +117,14 @@ console.log(dangerouslyHTML);
             <BackendPortfolio />
           </section>
 
-          <section>
-            <RippedPaperTop id="fullstack" colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
+          <section id="fullstack" >
+            <RippedPaperTop colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
                 <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
                   <Title 
                     title={t('fullstackPortfolioSection.titlePortfolioFullstack')} 
                     dot={"."} 
                     children={t("fullstackPortfolioSection.subTitlePortfolioFullstack")} 
-                    className=" text-[#064352] dark:text-[#63251e] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
+                    className=" text-[#064352] dark:text-[#831518] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
                     subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
                     sticky
                   />

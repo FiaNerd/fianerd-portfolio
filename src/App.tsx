@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import SocialMediaAndContact from './components/SocialMediaAndContact';
 import HomePage from './pages/HomePage';
+import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/portfolio/:title" element={<PortfolioDetailsPage />} />
             </Routes>
           </ErrorBoundary>
         </main>

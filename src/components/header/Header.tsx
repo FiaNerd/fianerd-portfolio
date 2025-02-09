@@ -49,10 +49,10 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (isNavigating) {
-        return
+        return;
       }
 
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 0) {
         setIsHidden(true); // Hide header when scrolling down
@@ -73,7 +73,7 @@ const Header = () => {
     <div
       ref={headerRef}
       id="header"
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${ isHidden ? '-translate-y-full' : 'translate-y-0' } backdrop-blur-2xl bg-bg-secondary/5 dark:bg-bg-primary/5`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} backdrop-blur-2xl bg-bg-secondary/5 dark:bg-bg-primary/5`}
       style={{
         left: `${sidebarWidth}px`,
         width: `calc(100% - ${sidebarWidth}px)`,
@@ -97,7 +97,7 @@ const Header = () => {
         </NavLink>
 
         <div className="hidden lg:flex">
-            <NavbarDesktop />
+          <NavbarDesktop />
         </div>
 
         <div className="flex items-center gap-4">
@@ -109,7 +109,7 @@ const Header = () => {
             to="/contact"
             className="hidden lg:flex justify-center items-center font-sub-heading text-lg gap-2 lg:text-xl font-medium border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
-           <Icon icon="line-md:email-twotone" width="24" height="24" /> {t('contact')}
+            <Icon icon="line-md:email-twotone" width="24" height="24" /> {t('contact')}
           </NavLink>
 
           <div className="lg:hidden">
@@ -121,4 +121,4 @@ const Header = () => {
   );
 };
 
-export default Header
+export default Header;
