@@ -17,7 +17,7 @@ const App = () => {
           <SocialMediaAndContact />
         </div>
         {/* Main Content */}
-        <main className="flex-grow">
+        <main className="flex-grow overflow-hidden">
           <ErrorBoundary
             fallbackRender={({ error, resetErrorBoundary }) => (
               <ErrorFallback error={error} resetErrorBoundary={resetErrorBoundary} />
