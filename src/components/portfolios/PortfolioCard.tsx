@@ -6,6 +6,7 @@ import Popup from "../partials/Popup";
 
 interface PortfolioCardProps {
   title: string;
+  urlTitle: string;
   applicationType: string;
   subTitle: string;
   description: string;
@@ -22,6 +23,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard = ({
   title,
+  urlTitle,
   applicationType,
   subTitle,
   description,
@@ -39,7 +41,7 @@ const PortfolioCard = ({
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
-    navigate(`/portfolio/${encodeURIComponent(title)}`);
+    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
   };
 
   const truncatedDescription =
@@ -70,7 +72,7 @@ const PortfolioCard = ({
             {projectType.toLocaleUpperCase()}
           </h4>
           <h1 className="text-xl font-medium leading-6 tracking-wide text-accent-secondary cursor-pointer">
-            <NavLink to={`/portfolio/${encodeURIComponent(title)}`}>{title}</NavLink>
+            <NavLink to={`/portfolio/${encodeURIComponent(urlTitle)}`}>{title}</NavLink>
             <p className="text-xs font-light mb-0">{titleDescription}</p>
             <p
               className="italic text-xs text-accent-primary"

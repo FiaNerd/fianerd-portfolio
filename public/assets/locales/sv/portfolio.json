@@ -14,9 +14,10 @@
     "introTop5Portfolio": "Här är de projekt jag är mest stolt över. De är en blandning av kreativitet och funktionalitet. Jag letar alltid efter nya utmaningar och ser fram emot vad framtiden har att erbjuda.",
     "ctaButtonViewAll": "Visa alla projekt",
         
-    "itemsTop5": [
+    "top5Items": [
             {
                 "title": "Skjort kravallerna",
+                "urlTitle": "skjort-kravallerna",
                 "subTitle": "Grafisk",
                 "description": "Photoshop and Illustrator",
                 "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
@@ -24,6 +25,7 @@
             },
             {
                 "title": "BrutalBeats",
+                "urlTitle": "brutal-beats",
                 "subTitle": "Frontend",
                 "description": "React and Tailwind CSS",
                 "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
@@ -31,6 +33,7 @@
             },
             {
                 "title": "MSB",
+                "urlTitle": "msb",
                 "subTitle": "Grafisk & Frontend",
                 "description": "Photoshop, Illustrator and HTML & CSS",
                 "image": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-hero.jpg",
@@ -38,6 +41,7 @@
             },
             {
                 "title": "Printagon",
+                "urlTitle": "printagon-graphics",
                 "subTitle": "Fullstack",
                 "description": "ASP.NET, SQL, React and Material-UI",
                 "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
@@ -45,6 +49,7 @@
             },
             {
                 "title": "Tyckte jag hörde hundar",
+                "urlTitle": "tyckte-jag-horde-hundar",
                 "subTitle": "Grafisk",
                 "description": "Photoshop and Illustrator",
                 "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
@@ -58,48 +63,50 @@
         "introFrontendPortfolio": "<span class=' text-[#ca0416] dark:text-[#d6a70d] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
         "ctaButtonViewAll": "Visa Detaljer",
         "frontendItems": [
-            {
-                "projectType":"Sido projekt",
-                "title": "BrutalBeats",
-                "applicationType": "webb",
-                "subTitle": "Frontend",
-                "titleDescription": "Webbplats för bokningsföretag",
-                "projectDuration": "mars 2023 - januari 2025",
-                "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.</br><span>Syfte:</span> Jag ansvarar för att utveckla en webbplats för BrutalBeats Agency & Booking, ett nytt bokningsföretag. Ett grundläggande krav var att sidan ska ha en mörk estetik. Projektet fokuserar på att skapa en responsiv design med en \"mobile-first\" strategi som informerar om olika artister och band. Kommande arbete inkluderar integration av Node.js för att hantera kontaktförfrågningar genom Nodemailer.\n<span>Huvudsakliga Bidrag:</span>- Utformade och implementerade en grundläggande struktur och design för webben. - Skapade en mobilanpassad och responsiv layout för optimal användrupplevelse. - Förberedde för framtida integration av ett kontaktformulär för att underlätta kommunikation mellan besökare och företaget. - Planerar att integrera ett CMS-system, som WordPress eller Umbraco.\n<span>Använda Teknologier: </span>\n- <span>Frontend:</span> React, TypeScript, Tailwind CSS - <span>Backend:</span> Node.js (kommande) - Verktyg: Visual Studio Code\n <span>Utmaningar & Lösningar:</span> - Navigerar utmaningen med att utveckla en helt ny webbplats från grunden, inklusive skapandet av en sammanhängande design och struktur. <span>Resultat:</span> Den grundläggande webbplatsen har framgångsrikt etablerats med en responsiv design och en mörk estetik. Nästa steg är att implementera kontaktformulär och e-postintegration för att förbättra användarinteraktionen. Arbetet med att koppla ihop sidan med ett CMS-system kommer ytterligare att förbättra webbplatsens funktionalitet och användarupplevelse. Webbplats: https://www.brutalbeats.se",
-                "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
-                "linkTitle": "Länkar",
-                "ctaButton": "Visa Detaljer",
-                "links": [
-                    {
-                        "type": "GitHub",
-                        "url": "https://github.com/FiaNerd/",
-                        "icon": "line-md:github-twotone"
-                    },
-                    {
-                        "type": "Website",
-                        "url": "https://www.brutalbeats.se/",
-                        "icon": "tdesign:internet-filled"
-                    }
-                ],
-                "techTitle": "Tech",
-                "tech": [
-                    {
-                        "name": "React",
-                        "icon": "skill-icons:react-dark"
-                    },
-                    {
-                        "name": "TypeScript",
-                        "icon": "catppuccin:typescript"
-                    },
-                    {
-                        "name": "Tailwind CSS",
-                        "icon": "skill-icons:tailwindcss-dark"
-                    }
-                ]
-            },
+      {
+        "projectType": "Sido projekt",
+        "title": "BrutalBeats",
+        "urlTitle": "brutal-beats",
+        "applicationType": "webb",
+        "subTitle": "Frontend",
+        "titleDescription": "Webbplats för bokningsföretag",
+        "projectDuration": "mars 2023 - januari 2025",
+        "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.",
+        "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://www.brutalbeats.se/",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ]
+      },
             {
                 "projectType": "Skolprojekt",
                 "title": "The Movie DB ",
+                "urlTitle": "the-movie-db",
                 "applicationType": "webb",
                 "subTitle": "Frontend",
                 "titleDescription": "Film databas hemsida",
@@ -147,6 +154,7 @@
             {
                 "projectType": "Skolprojekt",
                 "title": "MSB",
+                "urlTitle": "msb",
                 "applicationType": "webb",
                 "subTitle": "Grafiska verktyg",
                 "titleDescription": "Grafiska Element och Illustrationer",
@@ -200,6 +208,7 @@
             {
                 "projectType":"Skolprojekt",
                 "title": "Photo App",
+                "urlTitle": "photo-app",
                 "applicationType": "webb",
                 "subTitle": "Backend",
                 "titleDescription": "Backand för en foto app",
@@ -238,6 +247,7 @@
             {
                 "projectType": "Sido projekt",
                 "title": "Slowfashion API",
+                "urlTitle": "slowfashion-api",
                 "applicationType": "App",
                 "subTitle": "Backend",
                 "titleDescription": "Backend för modemedvetna",
@@ -281,6 +291,7 @@
             {
                 "projectType":"Sido projekt",
                 "title": "Printagon Graphics",
+                "urlTitle": "printagon-graphics",
                 "applicationType": "webb",
                 "subTitle": "Fullstack",
                 "titleDescription": "Systemintegration för grafiskt företag",
@@ -326,6 +337,7 @@
             {
                 "projectType":"Sido projekt / LIA",
                 "title": "Prodigies",
+                "urlTitle": "prodigies",
                 "applicationType": "App",
                 "subTitle": "Fullstack",
                 "titleDescription": "En App för gymnasieelever",
@@ -368,6 +380,7 @@
             {
                 "projectType":"Examensarbete",
                 "title": "Kaffeshop",
+                "urlTitle": "kaffeshop",
                 "applicationType": "Webb",
                 "subTitle": "Fullstack",
                 "titleDescription": "En kaffeshop för kaffeälskare",

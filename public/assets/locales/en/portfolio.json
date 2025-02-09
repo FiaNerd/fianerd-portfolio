@@ -14,16 +14,18 @@
         "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
         "ctaButtonViewAll": "View All Projects",
 
-        "itemsTop5": [
+        "top5Items": [
             {
                 "title": "Skjort kravallerna",
                 "subTitle": "Graphic",
+                "urlTitle": "skjort-kravallerna",
                 "description": "Photoshop and Illustrator",
                 "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
                 "ctaButton": "View Details"
             },
             {
-                "title": "BrutalBeats",
+                "title": "Brutal Beats",
+                "urlTitle": "brutal-beats",
                 "subTitle": "Frontend",
                 "description": "React and Tailwind CSS",
                 "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
@@ -31,6 +33,7 @@
             },
             {
                 "title": "MSB",
+                "urlTitle": "msb",
                 "subTitle": "Graphic & Frontend",
                 "description": "Photoshop, Illustrator and HTML & CSS",
                 "image": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-hero.jpg",
@@ -38,6 +41,7 @@
             },
             {
                 "title": "Printagon",
+                "urlTitle": "printagon-graphics",
                 "subTitle": "Fullstack",
                 "description": "ASP.NET, SQL, React and Material-UI",
                 "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
@@ -45,6 +49,7 @@
             },
             {
                 "title": "Tyckte jag hörde hundar",
+                "urlTitle": "tyckte-jag-horde-hundar",
                 "subTitle": "Graphic",
                 "description": "Photoshop and Illustrator",
                 "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
@@ -52,55 +57,56 @@
             }
         ]
     },
-        "frontendPortfolioSection": {
-          "titleFrontendPortfolio": "Frontend Cases",
-          "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
-          "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'>I love creating beautiful and functional websites.</span> I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
-         
-          "frontendItems": [
-            {
-                "projectType":"Side project",
-                "title": "BrutalBeats",
-                "applicationType": "web",
-                "subTitle": "Frontend",
-                "titleDescription": "Booking agency website",
-                "projectDuration": "march 2023 - january 2025",
-                "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.<br><span>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><span>Key Contributions:</span><br><span>- Frontend Development:</span> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span>- Backend:</span> Node.js<br><span>- Version Control:</span> Git<br><span>- Terminal:</span> Command Line Interface (CLI)<br><span>- Development Tools:</span> Visual Studio Code<br><span>- CMS:</span> Planned integration with WordPress or Umbraco<br><span>Challenges & Solutions:</span> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness. - Planned and strategized for future integration with Node.js and CMS system.<br><span>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality."                ,
-                "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
-                "ctaButton": "View Details",
-                "linkTitle": "Links",
-                "links": [
-                    {
-                        "type": "GitHub",
-                        "url": "https://github.com/FiaNerd/",
-                        "icon": "line-md:github-twotone"
-                    },
-                    {
-                        "type": "Website",
-                        "url": "https://www.brutalbeats.se/",
-                        "icon": "tdesign:internet-filled"
-                    }
-                ],
-
-                "techTitle": "Tech",
-                "tech": [
-                    {
-                        "name": "React",
-                        "icon": "skill-icons:react-dark"
-                    },
-                    {
-                        "name": "TypeScript",
-                        "icon": "catppuccin:typescript"
-                    },
-                    {
-                        "name": "Tailwind CSS",
-                        "icon": "skill-icons:tailwindcss-dark"
-                    }
-                ]
-            },
+    "frontendPortfolioSection": {
+        "titleFrontendPortfolio": "Frontend Cases",
+        "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
+        "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'>I love creating beautiful and functional websites.</span> I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+        "ctaButtonViewAll": "View Details",
+        "frontendItems": [
+          {
+            "projectType": "Side project",
+            "title": "Brutal Beats",
+            "urlTitle": "brutal-beats",
+            "applicationType": "web",
+            "subTitle": "Frontend",
+            "titleDescription": "Booking agency website",
+            "projectDuration": "march 2023 - january 2025",
+            "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.<br><span>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><span>Key Contributions:</span><br><span>- Frontend Development:</span> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><span>Technologies Used:</span><br><span>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span>- Backend:</span> Node.js<br><span>- Version Control:</span> Git<br><span>- Terminal:</span> Command Line Interface (CLI)<br><span>- Development Tools:</span> Visual Studio Code<br><span>- CMS:</span> Planned integration with WordPress or Umbraco<br><span>Challenges & Solutions:</span> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness. - Planned and strategized for future integration with Node.js and CMS system.<br><span>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality.",
+            "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+            "ctaButton": "View Details",
+            "linkTitle": "Links",
+            "links": [
+              {
+                "type": "GitHub",
+                "url": "https://github.com/FiaNerd/",
+                "icon": "line-md:github-twotone"
+              },
+              {
+                "type": "Website",
+                "url": "https://www.brutalbeats.se/",
+                "icon": "tdesign:internet-filled"
+              }
+            ],
+            "techTitle": "Tech",
+            "tech": [
+              {
+                "name": "React",
+                "icon": "skill-icons:react-dark"
+              },
+              {
+                "name": "TypeScript",
+                "icon": "catppuccin:typescript"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "skill-icons:tailwindcss-dark"
+              }
+            ]
+          },
             {
                 "projectType":"School project",
                 "title": "The Movie DB",
+                "urlTitle": "the-movie-db",
                 "applicationType": "web",
                 "subTitle": "Frontend",
                 "titleDescription": "Movie database website",
@@ -141,6 +147,7 @@
             {
                 "projectType":"School project",
                 "title": "MSB",
+                "urlTitle": "msb",
                 "applicationType": "web",
                 "subTitle": "Graphic Tools",
                 "titleDescription": "Graphic Elements and Illustrations",
@@ -195,6 +202,7 @@
             {
                 "projectType": "School Project",
                 "title": "Photo App",
+                "urlTitle": "photo-app",
                 "applicationType": "web",
                 "subTitle": "Backend",
                 "titleDescription": "Backend for a photo app",
@@ -233,6 +241,7 @@
             {
                 "projectType": "Side project",
                 "title": "Slowfashion API",
+                "urlTitle": "slowfashion-api",
                 "applicationType": "App",
                 "subTitle": "Backend",
                 "titleDescription": "Backend for fashion",
@@ -276,6 +285,7 @@
                 {
                     "projectType": "Side project",
                     "title": "Printagon Graphics",
+                    "urlTitle": "printagon-graphics",
                     "applicationType": "web",
                     "subTitle": "Fullstack",
                     "titleDescription": "System integration for a graphic company",
@@ -325,6 +335,7 @@
             {
                 "projectType": "Side Project / Internship",
                 "title": "Prodigies",
+                "urlTitle": "prodigies",
                 "applicationType": "App",
                 "subTitle": "Fullstack",
                 "titleDescription": "An App for High School Students",
@@ -372,6 +383,7 @@
             {
                 "projectType": "Thesis Project",
                 "title": "Coffee Shop",
+                "urlTitle": "coffee-shop",
                 "applicationType": "Web",
                 "subTitle": "Fullstack",
                 "titleDescription": "A coffee shop for coffee lovers",

@@ -30,7 +30,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/portfolio/:title" element={<PortfolioDetailsPage />} />
+              <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
             </Routes>
           </ErrorBoundary>
         </main>

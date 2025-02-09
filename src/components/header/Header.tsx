@@ -29,6 +29,13 @@ const Header = () => {
     }
   }, [isHidden]);  // This should only trigger if the header's visibility changes
 
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight);
+    }
+  }, [sidebarWidth]);
+  
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
     setIsNavigating(true);
@@ -73,11 +80,15 @@ const Header = () => {
     <div
       ref={headerRef}
       id="header"
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'} backdrop-blur-2xl bg-bg-secondary/5 dark:bg-bg-primary/5`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 
+        ${isHidden ? '-translate-y-full overflow-hidden' : 'translate-y-0'} 
+        backdrop-blur-2xl bg-bg-secondary/5 dark:bg-bg-primary/5`}
+      
       style={{
         left: `${sidebarWidth}px`,
-        width: `calc(100% - ${sidebarWidth}px)`,
+        maxWidth: `calc(100% - ${sidebarWidth}px)`, 
       }}
+      
     >
       {/* Top Announcement Bar */}
       <div className="bg-accent-primary dark:bg-bg-primary">

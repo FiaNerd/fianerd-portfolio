@@ -28,8 +28,6 @@ const PortfolioPage = () => {
 
   useSmoothScroll(headerHeight ? 0 : headerHeight);
 
-  const dangerouslyHTML = t('top5PortfolioSection.titleTop5Portfolio');
-
   return (
     <>
       <div

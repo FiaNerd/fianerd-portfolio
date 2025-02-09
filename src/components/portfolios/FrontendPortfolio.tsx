@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { useTranslation } from "react-i18next";
-import i18n from "../../../public/assets/i18n/i18n";
 import PortfolioCard from "./PortfolioCard";
 
 const FrontendPortfolio = () => {
@@ -21,21 +20,21 @@ const FrontendPortfolio = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto">
         {Array.isArray(frontendItems) && frontendItems.map((item: any, index: number) => (
           <PortfolioCard
-              key={index}
-              title={item.title}
-              description={item.description}
-              img={item.image}
-              links={item.links}
-              tech={item.tech} 
-              applicationType={item.applicationType}        
-              subTitle={item.subTitle}
-              projectType={item.projectType}
-              linkTitle={item.linkTitle}
-              ctaButton={item.ctaButton}
-              techTitle={item.techTitle}
-              projectDuration={item.projectDuration}
-              titleDescription={item.titleDescription}
-            />
+            key={index}
+            title={item.title}
+            urlTitle={item.urlTitle}         
+            description={item.description}
+            img={item.image}
+            links={item.links}
+            tech={item.tech}
+            applicationType={item.applicationType}
+            subTitle={item.subTitle}
+            projectType={item.projectType}
+            linkTitle={item.linkTitle}
+            ctaButton={item.ctaButton}
+            techTitle={item.techTitle}
+            projectDuration={item.projectDuration}
+            titleDescription={item.titleDescription}   />
         ))}
       </div>
     </section>

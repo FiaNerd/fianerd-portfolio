@@ -19,6 +19,7 @@ const BackendPortfolio = () => {
           <PortfolioCard
             key={index}
             title={item.title}
+            urlTitle={item.urlTitle}         
             description={item.description}
             img={item.image}
             links={item.links}

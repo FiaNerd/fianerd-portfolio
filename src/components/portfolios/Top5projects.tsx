@@ -5,7 +5,7 @@ import Button from "../partials/Button";
 
 const Top5Projects = () => {
   const { t } = useTranslation("portfolio");
-  const items = t("top5PortfolioSection.itemsTop5", { returnObjects: true }) as { image: string; title: string; subTitle:string; description: string; ctaButton: string}[];
+  const items = t("top5PortfolioSection.top5Items", { returnObjects: true }) as { image: string; title: string; subTitle:string; description: string; ctaButton: string}[];
 
   return (
     <div className="max-w-screen-xl mx-auto px-4">
