@@ -77,8 +77,6 @@
         "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
         "linkTitle": "Länkar",
         "ctaButton": "Visa Detaljer",
-        "cta": "...Read more",
-        "ctaLess": "Read less",
         "links": [
           {
             "type": "GitHub",
@@ -167,8 +165,6 @@
                 "image": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-footer-landscape.jpg",
                 "linkTitle": "Länkar",
                 "ctaButton": "Visa Detaljer",
-                 "cta": "...Read more",
-                "ctaLess": "Read less",
                 "links": [
                     {
                         "type": "GitHub",
@@ -243,8 +239,6 @@
                 "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
                 "linkTitle": "Länkar",
                 "ctaButton": "Visa Detaljer",
-                "cta": "...Read more",
-                "ctaLess": "Read less",
                 "links": [
                     {
                         "type": "GitHub",
@@ -302,8 +296,6 @@
                 "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
                 "ctaButton": "Visa Detaljer",
                 "linkTitle": "Länk till mitt GitHub",
-                "cta": "...Read more",
-                "ctaLess": "Read less",
                 "links": [
                     {
                         "type": "Det här reprot är privat"
@@ -347,8 +339,6 @@
                 "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
                 "linkTitle": "Länkar",
                 "ctaButton": "Visa Detaljer",
-                "cta": "...Read more",
-                "ctaLess": "Read less",
                 "links": [
                     {
                         "type": "Det här reprot är privat"
@@ -395,8 +385,6 @@
                 "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main.PNG",
                 "linkTitle": "Länkar",
                 "ctaButton": "Visa Detaljer",
-                "cta": "...Read more",
-                "ctaLess": "Read less",
                 "links": [
                     {
                         "type": "App Store",
@@ -440,8 +428,6 @@
                 "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.png",
                 "linkTitle": "Länkar",
                 "ctaButton": "Visa Detaljer",
-                "cta": "...Read more",
-                "ctaLess": "Read less",
                 "links": [
                     {
                         "type": "GitHub",

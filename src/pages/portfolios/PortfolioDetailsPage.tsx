@@ -69,7 +69,6 @@ const PortfolioDetailsPage = () => {
             tech={item.tech} 
             applicationType={item.applicationType}
             linkTitle={item.linkTitle}
-            links={item.links}
             />
         </div>
 
