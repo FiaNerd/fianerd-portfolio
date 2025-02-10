@@ -73,13 +73,13 @@ const NavigationMenu = () => {
   return (
     <>
       <div className="relative z-10">
-        <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-6 xl:gap-20 list-none group">
+        <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-4 lg:gap-1 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">
               <NavLink
                 to={menu.url.replace('#', '')}
                 className={({ isActive }) =>
-                  `inline-flex items-center justify-center text-nav-text h-auto px-4 py-2 text-sm font-medium transition-colors ${
+                  `inline-flex items-center justify-center text-nav-text h-auto px-1 lg:px-2 py-2 text-sm font-medium transition-colors ${
                     isActive
                       ? 'text-nav-text hover:text-nav-hover active:text-nav-hover'
                       : 'text-nav-text hover:text-nav-hover active:text-nav-hover'
