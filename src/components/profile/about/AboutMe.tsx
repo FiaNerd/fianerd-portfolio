@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
 
 const AboutMe = () => {
-  const { t } = useTranslation("Profile/aboutMe");
+  const { t } = useTranslation("profile/aboutMe");
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
