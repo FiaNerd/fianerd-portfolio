@@ -59,7 +59,19 @@ const PortfolioDetailsPage = () => {
         />
       ))}
       {portfolioItems.map((item) => (
-        <PortfolioDetailsItems key={item.urlTitle} title={item.title} images={item.images} description={item.description} tech={[]} />
+        <div id="portfolio-details" key={item.urlTitle} className="px-4 md:px-12 py-8">
+          <PortfolioDetailsItems 
+            key={item.urlTitle} 
+            title={item.title} 
+            images={item.images} 
+            description={item.description} 
+            techTitle={item.techTitle}
+            tech={item.tech} 
+            applicationType={item.applicationType}
+            linkTitle={item.linkTitle}
+            links={item.links}
+            />
+        </div>
 
       ))}
     </div>
