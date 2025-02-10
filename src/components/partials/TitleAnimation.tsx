@@ -27,14 +27,13 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
     setAnimationKey((prev) => prev + 1);
   }, [title]);
 
-
   const words = title.split(" ");
   
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.1,  // You can increase this for slower transitions between words
       },
     },
   };
@@ -43,14 +42,14 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.05, 
+        staggerChildren: 0.1,  // Slightly increased to slow down the words animation
       },
     },
   };
 
   const letterVariants = {
-    hidden: { opacity: 0, width: 0 },
-    visible: { opacity: 1, width: 'auto' }, 
+    hidden: { opacity: 0, scaleX: 0 },
+    visible: { opacity: 1, scaleX: 1 }, 
   };
 
   return (
@@ -62,7 +61,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`text-[2.4rem] md:text-[3.6rem] lg:text-[4.6rem] font-bold mb-0 pt-4 inline-block ${className}`}
+      className={`text-[2.4rem] md:text-[3.6rem] lg:text-[4.6rem] font-bold mb-0 pt-4 inline-block whitespace-nowrap ${className}`}
       style={style}
     >
       {dangerouslyHTML ? (
@@ -83,8 +82,8 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
                   key={letterIndex}
                   variants={letterVariants}
                   transition={{
-                    duration: 0.1,
-                    delay: letterIndex * 0.05,
+                    duration: 0.15,  // Increased duration for slower letter animation
+                    delay: letterIndex * 0.1,  // Increased delay between each letter
                   }}
                   className="inline-block"
                 >
@@ -100,7 +99,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
         variants={letterVariants}
         transition={{
           duration: 0.5,
-          delay: words.reduce((acc, word) => acc + word.length, 0) * 0.05 + 0.2, 
+          delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3,  // Adjusted delay here
         }}
         className="inline-block ml-[-0.09em] text-6xl leading-2 md:text-[3rem] lg:leading-[4rem] lg:text-[12rem]"
       >

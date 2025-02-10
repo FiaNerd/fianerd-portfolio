@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import portfolioData from "../../../public/assets/locales/en/portfolio.json";
 import HeroDetails from "../../components/portfolios/HeroDetails";
+import PortfolioDetailsItems from "../../components/portfolios/PortFolioDetailsItems";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
 const PortfolioDetailsPage = () => {
@@ -56,6 +57,10 @@ const PortfolioDetailsPage = () => {
           image={item.image}
           titleDescription={item.titleDescription }
         />
+      ))}
+      {portfolioItems.map((item) => (
+        <PortfolioDetailsItems key={item.urlTitle} title={item.title} images={item.images} description={item.description} tech={[]} />
+
       ))}
     </div>
   );
