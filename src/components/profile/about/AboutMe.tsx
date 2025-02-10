@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
-import Button from "../../partials/Button";
 
 const AboutMe = () => {
   const { t } = useTranslation("Profile/aboutMe");
@@ -25,7 +24,7 @@ const AboutMe = () => {
   
   return (
       <>
-      <section className=" max-w-screen-xl	mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
+      <section className=" max-w-screen-xl mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-12">
         <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
 
           <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
@@ -70,12 +69,12 @@ const AboutMe = () => {
           </>
         )}
 
-        <Button
-            className="float-end w-auto text-lg md:text-xl text-btn-bg hover:text-bg-hover"
+        <button
+            className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-4"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}
-          </Button>  
+          </button>  
         </motion.div>
       </section>
       </>

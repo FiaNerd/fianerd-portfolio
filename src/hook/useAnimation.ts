@@ -50,9 +50,9 @@ export default function useAnimateIn({
       opacity: 1,
       y: 0,
       transition: {
-        delay,
-        duration,
-        ease: [0.2, 0.65, 0.3, 0.9],
+        delay: delay,
+        duration: duration * 1.5,
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };

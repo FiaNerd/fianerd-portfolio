@@ -2,6 +2,7 @@ import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import Title from "../partials/Title";
+import PortfolioDetailsItems from "./PortFolioDetailsItems";
 
 interface HeroDetailsProps {
   title: string;
@@ -32,6 +33,7 @@ const HeroDetails = ({ title, image, titleDescription }: HeroDetailsProps) => {
         <Title  title={title} dot={"."} children={titleDescription}  className="text-6xl md:text-8xl text-[#4b8668] dark:text-[#86834b] bg-black py-2 px-12 rounded-lg"
           subHeadingClassName="text-amber-100"/>
       </div>
+      <PortfolioDetailsItems />
     </div>
   );
 };

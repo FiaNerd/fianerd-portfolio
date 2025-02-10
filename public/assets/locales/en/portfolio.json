@@ -236,6 +236,24 @@
                         "name": "Postman",
                         "icon": "skill-icons:postman"
                     }
+                ],
+                "images": [
+                    {
+                        "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+                        "alt": "Photo App code"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
+                        "alt": "Photo App browser"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
+                        "alt": "Photo App browser"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
+                        "alt": "Photo App browser"
+                    }
                 ]
             },
             {
