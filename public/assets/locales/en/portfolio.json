@@ -377,6 +377,32 @@
                         "name": ".NET",
                         "icon": "logos:dotnet"
                     }
+                ],
+                "images": [
+                    {
+                        "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+                        "alt": "pg-login"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
+                        "alt": "slowfashion-app"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
+                        "alt": "slowfashion-cards"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
+                        "alt": "pg-trello"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
+                        "alt": "pg-register-role"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
+                        "alt": "pg-joblist"
+                    }
                 ]
             }
         ]  
@@ -394,7 +420,7 @@
                     "urlTitle": "printagon-graphics",
                     "applicationType": "web",
                     "subTitle": "Fullstack",
-                    "titleDescription": "System integration for a graphic company",
+                    "titleDescription": "Graphic company system integration",
                     "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
                     "description": "Developing a mobile application to help high school students explore opportunities for post-secondary education, focusing on providing a seamless, cross-platform user experience. <br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span> <br>- Used React Native and TypeScript to create a responsive and intuitive interface. <br>- Ensured a consistent user experience across iOS and Android platforms. <br><span class='font-bold'>- Backend Development:</span> <br>- Managed APIs and data storage with Firebase, providing reliable backend services. <br>- Implemented SQLite for efficient handling of local data and offline functionality. <br><span class='font-bold'>- Problem Solving:</span> <br>- Overcame specific challenges in iOS development, ensuring robust cross-platform functionality. <br>- Adapted development strategies to maintain seamless performance and usability.<br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI) <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Methodology:</span> Scrum <br><span class='font-bold'>Challenges & Solutions:</span> <br>- Solved complex iOS platform-specific issues, enhancing my problem-solving skills and technical knowledge. <br>- Ensured the app's responsiveness and performance across different devices and screen sizes. <br><span class='font-bold'>Outcomes:</span> <br>- Delivered a valuable tool that helps students effectively navigate their educational choices.<br>- Gained extensive experience in mobile development and cross-platform integration.",                    "linkTitle": "Links",
                     "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
