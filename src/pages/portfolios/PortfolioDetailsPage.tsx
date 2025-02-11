@@ -63,12 +63,14 @@ const PortfolioDetailsPage = () => {
           <PortfolioDetailsItems 
             key={item.urlTitle} 
             title={item.title} 
+            titleDescription={item.titleDescription}
             images={item.images} 
             description={item.description} 
             techTitle={item.techTitle}
             tech={item.tech} 
             applicationType={item.applicationType}
             linkTitle={item.linkTitle}
+            links={item.links}
             />
         </div>
 

@@ -113,7 +113,6 @@ const PortfolioCard = ({
               </ul>
             </div>
 
-            {/* Tech Section */}
             <div className="flex flex-col ">
               <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">
                 {techTitle}

@@ -23,7 +23,7 @@ const HeroDetails = ({ title, image, titleDescription }: HeroDetailsProps) => {
   return (
     <>
     <div
-      className="relative w-full h-full bg-cover mb-12"
+      className="relative w-full h-full bg-cover mb-12 object-cover object-center"
       style={{ backgroundImage: `url(${image})`, paddingTop: `${headerHeight}px` }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>

@@ -6,6 +6,7 @@ import Popup from "../partials/Popup";
 
 interface PortfolioDetailsItemsProps {
   title: string;
+  titleDescription: string;
   images?: { src: string; alt: string; span?: string }[];
   description: string;
   techTitle: string;
@@ -17,6 +18,7 @@ interface PortfolioDetailsItemsProps {
 
 const PortfolioDetailsItems = ({
   title,
+  titleDescription,
   images,
   description,
   techTitle,
@@ -26,57 +28,35 @@ const PortfolioDetailsItems = ({
   links
 }: PortfolioDetailsItemsProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
-  const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation("portfolio");
 
-//   const handleToggleText = () => {
-//     if (isExpanded) {
-//       const articleTop = document.getElementById('portfolio-details');
-//       if (articleTop) {
-//         articleTop.scrollIntoView({ behavior: 'smooth' });
-//       }
-//     }
-//     setIsExpanded(!isExpanded);
-//   };
-
-//   const maxChars = 350;
-//   const isLongText = description.length > maxChars;
-//   const truncatedDescription = isLongText ? description.slice(0, maxChars) + "..." : description;
 
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 py-10 text-[#3C2F2F] lg:space-y-8">
+    <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 py-10  lg:space-y-8">
       
-      {/* First column */}
       <div className="border-r-2 border-[#3C2F2F]">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8">{title}</h1>
+        <h1 className="text-[#3C2F2F] text-4xl md:text-5xl font-bold">{title}</h1>
+        <p className="text-[#695050]">{titleDescription}</p>
+
         <div className="border border-[#3C2F2F] mb-8"></div>
 
-        <div className="flex flex-col gap-4">
-          <p
-            className="text-lg leading-8"
+        <div className="flex flex-col">
+        <p
+            className="text-lg leading-8 max-h-[30em] overflow-y-auto px-4" 
             dangerouslySetInnerHTML={{
-              __html: description 
+            __html: description 
             }}
-          />
-
-          {/* {isLongText && (
-            <button
-              className="flex justify-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-4 px-8 mt-2 mb-4"
-              onClick={handleToggleText}
-            >
-              {isExpanded ? t('portfolio.ctaLess') : t('portfolio.cta')}
-            </button>
-          )} */}
+        />
         </div>
 
         <div className="border border-[#3C2F2F]"></div>
 
         <div className="flex justify-center py-2">
-          <div>
+          <div className="border-r-2 border-[#3C2F2F] ">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">
               {linkTitle}
             </p>
-            <ul className="flex items-center space-x-4 justify-center border-r-2 border-[#3C2F2F] px-8">
+            <ul className="flex items-center space-x-4 justify-center px-8">
               {links &&
                 links.map((item: any, index: number) => (
                   <li key={index} className="justify-center items-center flex flex-col cursor-pointer">
@@ -94,7 +74,7 @@ const PortfolioDetailsItems = ({
             </ul>
           </div>
 
-          <div className="px-8">
+          <div className="px-8 mb-12 md:mb-0">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">{techTitle}</p>
             <ul className="items-center pb-4 grid grid-flow-col justify-center gap-8">
               {tech.map((item: any, index: number) => (
@@ -117,65 +97,70 @@ const PortfolioDetailsItems = ({
         </div>
       </div>
 
-<div className="px-8 ">
-  <div className="flex gap-4 md:grid-cols-4 w-full">
-    <div className="sidebar h-auto lg:w-12 self-stretch bg-white lg:ml-4 flex justify-center items-center" style={{marginTop: 0}}>
-      <h6 className="lg:rotate-90 lg:transform text-3xl font-bold m-0">{applicationType}</h6>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-      <div className="grid gap-4">
-        <div className="relative w-full">
-          <img
-            className="h-full w-full rounded-lg object-cover object-center"
-            src={images && images[0] ? images[0].src : ""}        
-            alt="gallery-photo"
-          />
-        </div>
-        <div className="relative w-full">
-          <img
-            className="h-full w-full rounded-lg object-cover object-center"
-            src={images && images[1] ? images[1].src : ""}         
-            alt="gallery-photo"
-          />
-        </div>
-        {/* Image 3 */}
-        <div className="relative w-full">
-          <img
-            className="h-full w-full rounded-lg object-cover object-center"
-            src={images && images[2] ? images[2].src : ""}         
-            alt="gallery-photo"
-          />
-        </div>
-      </div>
-
-      <div className="grid gap-4">
-        <div className="relative w-full">
-          <img
-            className="h-full w-full rounded-lg object-cover object-center"
-            src={images && images[3] ? images[3].src : ""}         
-            alt="gallery-photo"
-          />
+     <div className="flex flex-col md:flex-row gap-4 w-full" style={{ marginTop: 0 }}>
+        <div
+        className="sidebar h-auto md:w-12 self-stretch bg-[#4b8668] dark:bg-accent-secondary md:ml-4 flex justify-center items-center"
+        style={{ marginTop: 0, position: 'relative', zIndex: 10 }}
+        >
+        <h6 className="md:rotate-90 md:transform text-3xl font-bold m-0 text-[#edd8bf] dark:text-[#240313]">{applicationType}</h6>
         </div>
 
-        <div className="relative w-full">
-          <img
-            className="h-full w-full rounded-lg object-cover object-center"
-            src={images && images[4] ? images[4].src : ""}         
-            alt="gallery-photo"
-          />
+        <div className="grid grid-cols-2 gap-4 w-full bg-[#4b8668] dark:bg-accent-secondary">
+            <div className="grid gap-4 pb-4 pl-4 pt-4">
+                {/* Image 1 */}
+                <div className="relative w-full">
+                <img
+                    className="h-[5em] w-full rounded-lg object-cover object-center"
+                    src={images && images[0] ? images[0].src : ""}
+                    alt={images && images[0] ? images[0].alt : "Photo 1"}
+                />
+                </div>
+                {/* Image 2 */}
+                <div className="relative w-full">
+                <img
+                    className="h-[17em] w-full rounded-lg object-cover object-center"
+                    src={images && images[1] ? images[1].src : ""}
+                    alt={images && images[1] ? images[1].alt : "Photo 2"}
+                />
+                </div>
+                {/* Image 3 */}
+                <div className="relative w-full">
+                <img
+                    className="h-[8em] w-full rounded-lg object-cover object-center"
+                    src={images && images[2] ? images[2].src : ""}
+                    alt={images && images[2] ? images[2].alt : "Photo 3"}
+                />
+                </div>
+            </div>
+
+            <div className="grid gap-4 pb-4 pr-4 pt-4">
+                {/* Image 4 */}
+                <div className="relative w-full">
+                <img
+                    className="h-[17em] w-full rounded-lg object-cover object-center"
+                    src={images && images[3] ? images[3].src : ""}
+                    alt={images && images[3] ? images[3].alt : "Photo 4"}
+                />
+                </div>
+                {/* Image 5 */}
+                <div className="relative w-full">
+                <img
+                    className="h-[8em] w-full rounded-lg object-cover object-center"
+                    src={images && images[4] ? images[4].src : ""}
+                    alt={images && images[4] ? images[4].alt : "Photo 5"}
+                />
+                </div>
+                {/* Image 6 */}
+                <div className="relative w-full">
+                <img
+                    className="h-[5em] w-full rounded-lg object-cover object-center"
+                    src={images && images[5] ? images[5].src : ""}
+                    alt={images && images[5] ? images[5].alt : "Photo 6"}
+                />
+                </div>
+            </div>
         </div>
 
-        <div className="relative w-full h-[4em]">
-          <img
-            className="h-full w-full rounded-lg object-cover object-center"
-            src={images && images[5] ? images[5].src : ""}        
-            alt="gallery-photo"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
   </div>
 
