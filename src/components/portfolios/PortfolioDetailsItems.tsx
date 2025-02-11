@@ -42,7 +42,7 @@ const PortfolioDetailsItems = ({
 
         <div className="flex flex-col">
         <p
-            className="text-lg leading-8 max-h-[30em] overflow-y-auto px-4" 
+            className="text-lg leading-8 h-[30em] overflow-y-auto px-4" 
             dangerouslySetInnerHTML={{
             __html: description 
             }}
