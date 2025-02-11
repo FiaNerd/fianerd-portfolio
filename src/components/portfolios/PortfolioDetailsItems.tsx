@@ -29,22 +29,24 @@ const PortfolioDetailsItems = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation("portfolio");
 
-  const handleToggleText = () => {
-    if (isExpanded) {
-      const articleTop = document.getElementById('portfolio-details');
-      if (articleTop) {
-        articleTop.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    setIsExpanded(!isExpanded);
-  };
+//   const handleToggleText = () => {
+//     if (isExpanded) {
+//       const articleTop = document.getElementById('portfolio-details');
+//       if (articleTop) {
+//         articleTop.scrollIntoView({ behavior: 'smooth' });
+//       }
+//     }
+//     setIsExpanded(!isExpanded);
+//   };
 
-  const maxChars = 350;
-  const isLongText = description.length > maxChars;
-  const truncatedDescription = isLongText ? description.slice(0, maxChars) + "..." : description;
+//   const maxChars = 350;
+//   const isLongText = description.length > maxChars;
+//   const truncatedDescription = isLongText ? description.slice(0, maxChars) + "..." : description;
 
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-flow-row lg:grid-flow-col px-4 py-10 text-[#3C2F2F] lg:space-y-8">
+    <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 py-10 text-[#3C2F2F] lg:space-y-8">
+      
+      {/* First column */}
       <div className="border-r-2 border-[#3C2F2F]">
         <h1 className="text-4xl md:text-5xl font-bold mb-8">{title}</h1>
         <div className="border border-[#3C2F2F] mb-8"></div>
@@ -53,18 +55,18 @@ const PortfolioDetailsItems = ({
           <p
             className="text-lg leading-8"
             dangerouslySetInnerHTML={{
-              __html: isExpanded ? description : truncatedDescription
+              __html: description 
             }}
           />
 
-          {isLongText && (
+          {/* {isLongText && (
             <button
               className="flex justify-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-4 px-8 mt-2 mb-4"
               onClick={handleToggleText}
             >
               {isExpanded ? t('portfolio.ctaLess') : t('portfolio.cta')}
             </button>
-          )}
+          )} */}
         </div>
 
         <div className="border border-[#3C2F2F]"></div>
@@ -115,23 +117,68 @@ const PortfolioDetailsItems = ({
         </div>
       </div>
 
-      <div className="sidebar h-auto lg:w-12 self-stretch bg-white lg:ml-4 flex justify-center items-center" style={{marginTop: 0}}>
-        <h6 className="lg:rotate-90 lg:transform text-3xl font-bold m-0">{applicationType}</h6>
+<div className="px-8 ">
+  <div className="flex gap-4 md:grid-cols-4 w-full">
+    <div className="sidebar h-auto lg:w-12 self-stretch bg-white lg:ml-4 flex justify-center items-center" style={{marginTop: 0}}>
+      <h6 className="lg:rotate-90 lg:transform text-3xl font-bold m-0">{applicationType}</h6>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+      <div className="grid gap-4">
+        <div className="relative w-full">
+          <img
+            className="h-full w-full rounded-lg object-cover object-center"
+            src={images && images[0] ? images[0].src : ""}        
+            alt="gallery-photo"
+          />
+        </div>
+        <div className="relative w-full">
+          <img
+            className="h-full w-full rounded-lg object-cover object-center"
+            src={images && images[1] ? images[1].src : ""}         
+            alt="gallery-photo"
+          />
+        </div>
+        {/* Image 3 */}
+        <div className="relative w-full">
+          <img
+            className="h-full w-full rounded-lg object-cover object-center"
+            src={images && images[2] ? images[2].src : ""}         
+            alt="gallery-photo"
+          />
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {images?.map((image, index) => (
-          <div key={index}>
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="object-cover object-center w-full h-40 max-w-full rounded-lg"
-              loading="lazy"
-            />
-          </div>
-        ))}
+      <div className="grid gap-4">
+        <div className="relative w-full">
+          <img
+            className="h-full w-full rounded-lg object-cover object-center"
+            src={images && images[3] ? images[3].src : ""}         
+            alt="gallery-photo"
+          />
+        </div>
+
+        <div className="relative w-full">
+          <img
+            className="h-full w-full rounded-lg object-cover object-center"
+            src={images && images[4] ? images[4].src : ""}         
+            alt="gallery-photo"
+          />
+        </div>
+
+        <div className="relative w-full h-[4em]">
+          <img
+            className="h-full w-full rounded-lg object-cover object-center"
+            src={images && images[5] ? images[5].src : ""}        
+            alt="gallery-photo"
+          />
+        </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
+
   );
 };
 

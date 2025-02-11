@@ -194,19 +194,27 @@
                 "images": [
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-footer-landscape.jpg",
-                        "alt": "Photo App code"
+                        "alt": "MSB landscape"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-footer.jpg",
-                        "alt": "Photo App browser"
+                        "alt": "MSB footer"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-hero.jpg",
-                        "alt": "Photo App browser"
+                        "alt": "MSB hero"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-main.jpg",
-                        "alt": "Photo App browser"
+                        "alt": "MSB  main"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-main.jpg",
+                        "alt": "MSB main"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/front-end/school/ux-ui/school-msb-main.jpg",
+                        "alt": "MSB  main"
                     }
                 ]
             }
@@ -258,6 +266,14 @@
                     }
                 ],
                 "images": [
+                    {
+                        "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+                        "alt": "Photo App code"
+                    },
+                    {
+                        "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+                        "alt": "Photo App code"
+                    },
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
                         "alt": "Photo App code"
