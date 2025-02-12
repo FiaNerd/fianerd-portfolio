@@ -70,6 +70,7 @@
             "title": "Brutal Beats",
             "urlTitle": "brutal-beats",
             "applicationType": "web",
+            "applicationTypeDetail": "Frontend <span class='font-bold text-9xl'>.</span> Webbapplikation",
             "subTitle": "Frontend",
             "titleDescription": "Booking agency website",
             "projectDuration": "march 2023 - january 2025",

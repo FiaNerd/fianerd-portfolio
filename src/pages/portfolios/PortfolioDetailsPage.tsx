@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import portfolioDataEn from "../../../public/assets/locales/en/portfolio.json";
 import portfolioDataSv from "../../../public/assets/locales/sv/portfolio.json";
 import HeroDetails from "../../components/portfolios/HeroDetails";
-import PortfolioDetailsItems from "../../components/portfolios/PortFolioDetailsItems";
+import PortfolioDetailsItems from "../../components/portfolios/PortfolioDetailsItems";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
 const PortfolioDetailsPage = () => {
@@ -72,7 +72,7 @@ const PortfolioDetailsPage = () => {
             description={item.description}
             techTitle={item.techTitle}
             tech={item.tech}
-            applicationType={item.applicationType}
+            applicationTypeDetail={item.applicationTypeDetail}
             linkTitle={item.linkTitle}
             links={item.links}
           />
