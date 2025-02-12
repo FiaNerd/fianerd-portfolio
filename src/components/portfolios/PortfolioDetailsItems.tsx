@@ -40,13 +40,13 @@ const PortfolioDetailsItems = ({
 
         <div className="border border-[#3C2F2F] mb-8"></div>
 
-        <div className="flex flex-col">
-        <p
-            className="text-lg leading-8 h-[30em] overflow-y-auto px-4" 
-            dangerouslySetInnerHTML={{
-            __html: description 
-            }}
-        />
+        <div className="flex flex-col mb-8">
+          <p
+              className="text-lg leading-8 h-[30em] overflow-y-auto px-4 " 
+              dangerouslySetInnerHTML={{
+              __html: description 
+              }}
+          />
         </div>
 
         <div className="border border-[#3C2F2F]"></div>
