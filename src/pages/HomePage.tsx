@@ -44,9 +44,9 @@ const HomePage = () => {
       <section id="profile">
         <Title
           id="me"
-          title={t("Profile/aboutMe:titleProfile")}
-          dot={t("Profile/aboutMe:dot")}
-          children={t("Profile/aboutMe:subTitle")}
+          title={t("profile/aboutMe:titleProfile")}
+          dot={t("profile/aboutMe:dot")}
+          children={t("profile/aboutMe:subTitle")}
           className="text-[#ca5b87] top-0 dark:text-accent-primary bg-accent-secondary dark:bg-amber-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
           sticky
@@ -62,9 +62,9 @@ const HomePage = () => {
       {/* Work Experience Section */}
       <section id="experience">
         <Title
-          title={t("Profile/experience:titleWorkExperience")}
-          dot={t("Profile/experience:dot")}
-          children={t("Profile/experience:subTitleWorkExperience")}
+          title={t("profile/experience:titleWorkExperience")}
+          dot={t("profile/experience:dot")}
+          children={t("profile/experience:subTitleWorkExperience")}
           className="text-bg-secondary dark:text-text-accent bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky
         />
@@ -73,9 +73,9 @@ const HomePage = () => {
 
       <section id="education">
         <Title
-          title={t("Profile/education:titleEducation")}
-          dot={t("Profile/education:dot")}
-          children={t("Profile/education:subTitleEducation")}
+          title={t("profile/education:titleEducation")}
+          dot={t("profile/education:dot")}
+          children={t("profile/education:subTitleEducation")}
           className="text-text-accent dark:text-[#b5685c] bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky
         />
@@ -85,9 +85,9 @@ const HomePage = () => {
       {/* Hobbies Section */}
       <section id="hobbies" className="mb-20">
         <Title
-          title={t("Profile/hobbies:titleHobbie")}
+          title={t("profile/hobbies:titleHobbie")}
           dot={"!"}
-          children={t("Profile/hobbies:subTitleHobbie")}
+          children={t("profile/hobbies:subTitleHobbie")}
           className="text-[#b67076] top-0 dark:text-accent-primary bg-[#3e3a19] dark:bg-stone-950"
           subHeadingClassName="text-hover-text dark:text-text-secondary px-4"
           sticky
