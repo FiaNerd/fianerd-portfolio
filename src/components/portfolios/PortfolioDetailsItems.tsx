@@ -109,8 +109,8 @@ const PortfolioDetailsItems = ({
           className="sidebar h-auto md:w-12 self-stretch bg-[#4b8668] dark:bg-accent-secondary md:ml-4 flex justify-center items-center"
           style={{ marginTop: 0, position: 'relative', zIndex: 10 }}
         >
-          <div className="flex flex-row  md:flex-col md:py-4 h-full items-center justify-evenly">
-            <span className="text-xl md:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] md:rotate-90 md:transform">{applicationTypeDetail.text}</span>
+          <div className="flex flex-col w-full items-center justify-evenly h-full">
+            <h6 className="text-3xl font-bold text-[#edd8bf] dark:text-[#240313] md:rotate-90 md:transform">{applicationTypeDetail.text}</h6>
             <Icon
               icon={applicationTypeDetail.icon.name}
               width={applicationTypeDetail.icon.width}
@@ -118,7 +118,7 @@ const PortfolioDetailsItems = ({
               style={{ color: applicationTypeDetail.icon.color }}
               className="md:rotate-90 md:transform"
             />
-            <span className="text-xl md:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] md:rotate-90 md:transform">{applicationTypeDetail.suffix}</span>
+            <h6 className="text-nowrap text-3xl font-bold text-[#edd8bf] dark:text-[#240313] md:rotate-90 md:transform">{applicationTypeDetail.suffix}</h6>
           </div>
         </div>
 

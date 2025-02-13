@@ -69,8 +69,17 @@
             "projectType": "Side project",
             "title": "Brutal Beats",
             "urlTitle": "brutal-beats",
-            "applicationType": "web",
-            "applicationTypeDetail": "Frontend <span class='font-bold text-9xl'>.</span> Webbapplikation",
+            "applicationType": "web", 
+            "applicationTypeDetail": {
+                "text": "FRONTEND",
+                "icon": {
+                "name": "icon-park-outline:dot",
+                "width": 48,
+                "height": 48,
+                "color": "#76150d"
+                },
+                "suffix": "WEBB APPLICATION"
+            },
             "subTitle": "Frontend",
             "titleDescription": "Booking agency website",
             "projectDuration": "march 2023 - january 2025",
@@ -137,6 +146,16 @@
                 "title": "The Movie DB",
                 "urlTitle": "the-movie-db",
                 "applicationType": "web",
+                "applicationTypeDetail": {
+                    "text": "FRONTEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEBB APPLICATION"
+                },
                 "subTitle": "Frontend",
                 "titleDescription": "Movie database website",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
@@ -204,6 +223,16 @@
                 "title": "MSB",
                 "urlTitle": "msb",
                 "applicationType": "web",
+                "applicationTypeDetail": {
+                    "text": "FRONTEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEBB APPLICATION"
+                },
                 "subTitle": "Graphic Tools",
                 "titleDescription": "Graphic Elements and Illustrations",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
@@ -285,6 +314,16 @@
                 "title": "Photo App",
                 "urlTitle": "photo-app",
                 "applicationType": "web",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEB APPLICATION"
+                },
                 "subTitle": "Backend",
                 "titleDescription": "Backend for a photo app",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
@@ -351,6 +390,16 @@
                 "urlTitle": "slowfashion-api",
                 "applicationType": "App",
                 "subTitle": "Backend",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "APPLICATION"
+                },
                 "titleDescription": "Backend for fashion",
                 "projectDuration": "June 2023 – March 2024",
                 "description": "Contributed to the development of the Slowfashion app by supporting the backend developer in creating a comprehensive CRUD system for managing products and blog posts. Utilized tools like Swagger and Postman for extensive API testing and validation.<br><br><span class='font-bold'>Key Contributions:</span><br>- Developed a CRUD system for products and blog posts, significantly improving content management efficiency. <br>- Enhanced my backend development skills in ASP.NET and API interaction. <br>- Adapted to an existing project by thoroughly analyzing the codebase and deepening my understanding of software architecture.<br><br> <span class='font-bold'>Technologies Used:</span> <span class='font-bold'><br>- Programming Language:</span> C# <span class='font-bold'><br>- Framework:</span> ASP.NET Core Web API <br><span class='font-bold'>- Databases:</span> PostgreSQL, DBeaver <br><span class='font-bold'>- API Testing:</span> Swagger, Postman, Insomnia <span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Cloud Services:</span> Azure <br><span class='font-bold'>- Development Environment (IDE):</span> Visual Studio 2022 <br><br><span class='font-bold'>Challenges & Solutions:</span><br> - Overcame challenges in understanding and adapting to the codebase of an existing project. <br>- Improved problem-solving and critical thinking skills through in-depth analysis and study.<span class='bold'>Outcome:</span><br><br><span class='font-bold'>Outcomes:</span> Successfully contributed to the development of a robust backend system for the Slowfashion app, gaining valuable experience in backend development and software architecture.",
@@ -420,6 +469,16 @@
                     "title": "Printagon Graphics",
                     "urlTitle": "printagon-graphics",
                     "applicationType": "web",
+                    "applicationTypeDetail": {
+                        "text": "FULLSTACK",
+                        "icon": {
+                        "name": "icon-park-outline:dot",
+                        "width": 48,
+                        "height": 48,
+                        "color": "#76150d"
+                        },
+                        "suffix": "WEB APPLICATION"
+                    },
                     "subTitle": "Fullstack",
                     "titleDescription": "Graphic company system integration",
                     "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
@@ -496,6 +555,16 @@
                 "title": "Prodigies",
                 "urlTitle": "prodigies",
                 "applicationType": "App",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "APPLICATION"
+                },
                 "subTitle": "Fullstack",
                 "titleDescription": "An App for High School Students",
                 "projectDuration": "Lund <span class='not-italic'>|</span> January 2024 - September 2024",
@@ -565,6 +634,16 @@
                 "title": "Coffee Shop",
                 "urlTitle": "coffee-shop",
                 "applicationType": "Web",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEB APPLICATION"
+                },
                 "subTitle": "Fullstack",
                 "titleDescription": "A coffee shop for coffee lovers",
                 "projectDuration": "December 2023 – January 2024",

@@ -71,14 +71,14 @@
         "urlTitle": "brutal-beats",
         "applicationType": "webb",
         "applicationTypeDetail": {
-            "text": "Frontend",
+            "text": "frontend",
             "icon": {
               "name": "icon-park-outline:dot",
               "width": 48,
               "height": 48,
               "color": "#76150d"
             },
-            "suffix": "Webbapplikation"
+            "suffix": "WEBBAPPLIKATION"
           },
         "subTitle": "Frontend",
         "titleDescription": "Webbplats för bokningsföretag",
@@ -146,7 +146,16 @@
                 "title": "The Movie DB",
                 "urlTitle": "the-movie-db",
                 "applicationType": "webb",
-                "applicationTypeDetail": "Frontend <span class='font-bold text-9xl'>0</span> Webapplikation",
+                "applicationTypeDetail": {
+                    "text": "FRONTEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEBAPPLIKATION"
+                },
                 "subTitle": "Frontend",
                 "titleDescription": "Film databas hemsida",
                 "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
@@ -221,6 +230,16 @@
                 "title": "MSB",
                 "urlTitle": "msb",
                 "applicationType": "webb",
+                "applicationTypeDetail": {
+                "text": "FRONTEND",
+                "icon": {
+                "name": "icon-park-outline:dot",
+                "width": 48,
+                "height": 48,
+                "color": "#76150d"
+                },
+                "suffix": "WEBBAPPLIKATION"
+                },
                 "subTitle": "Grafiska verktyg",
                 "titleDescription": "Grafiska Element och Illustrationer",
                 "projectDuration": "mars 2023 - januari 2025",
@@ -302,6 +321,16 @@
                 "urlTitle": "photo-app",
                 "applicationType": "webb",
                 "subTitle": "Backend",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEBBAPPLIKATION"
+                },
                 "titleDescription": "Backand för en foto app",
                 "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
                 "description": "Jag utvecklade en backend för en fotot app som möjliggör användare att ladda upp, hämta och updatera och t abort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
@@ -367,6 +396,16 @@
                 "urlTitle": "slowfashion-api",
                 "applicationType": "App",
                 "subTitle": "Backend",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "APP APPLIKATION"
+                },
                 "titleDescription": "Backend för modemedvetna",
                 "projectDuration": "juni 2023 – mars 2024",
                 "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utvecklaren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<br><br><span class='font-bold'>Huvudsakliga Bidrag:</span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Programmeringsspråk:</span> C#<br>- Ramverk: ASP.NET Core Web API<br><span class='font-bold'>- Databaser:</span> PostgreSQL, DBeaver<br><span class='font-bold'>- API-testning:</span> Swagger, Postman, Insomnia<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Molntjänster:</span> Azure<br></span><span class='font-bold'>- Utvecklingsmiljö (IDE):</span> Visual Studio 2022<br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
@@ -435,6 +474,16 @@
                 "title": "Printagon Graphics",
                 "urlTitle": "printagon-graphics",
                 "applicationType": "webb",
+                "applicationTypeDetail": {
+                    "text": "FULLSTACK",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "WEBBAPPLIKATION"
+                },
                 "subTitle": "Fullstack",
                 "titleDescription": "Systemintegration för grafiskt företag",
                 "projectDuration": "june 2024 - in progress",
@@ -507,6 +556,16 @@
                 "title": "Prodigies",
                 "urlTitle": "prodigies",
                 "applicationType": "App",
+                "applicationTypeDetail": {
+                    "text": "BACKEND",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "APP APPLIKATION"
+                },
                 "subTitle": "Fullstack",
                 "titleDescription": "En App för gymnasieelever",
                 "projectDuration": "januari 2024- september 2024",
@@ -576,6 +635,16 @@
                 "title": "Kaffe Bönans Skafferi",
                 "urlTitle": "kaffebonan",
                 "applicationType": "Webb",
+                "applicationTypeDetail": {
+                    "text": "FULLSTACK",
+                    "icon": {
+                    "name": "icon-park-outline:dot",
+                    "width": 48,
+                    "height": 48,
+                    "color": "#76150d"
+                    },
+                    "suffix": "APP APPLIKATION"
+                },
                 "subTitle": "Fullstack",
                 "titleDescription": "En kaffeshop för kaffeälskare",
                 "projectDuration": "december 2023 – januari 2024",
