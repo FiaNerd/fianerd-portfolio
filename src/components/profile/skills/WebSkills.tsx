@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import ProgressBar from "./ProgressBar";
 
 const WebSkills = () => {
-  const { t } = useTranslation("Profile/skills");
+  const { t } = useTranslation("profile/skills");
 
   const webSkills = [
     { name: 'C#', percentage: 70 },

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../partials/Button";
 
 const WorkExperience = () => {
-    const { t } = useTranslation("Profile/experience");
+    const { t } = useTranslation("profile/experience");
     const navigate = useNavigate();
     
   return ( 

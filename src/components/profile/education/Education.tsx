@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../partials/Button";
 
 const Education = () => {
-    const { t } = useTranslation("Profile/education");
+    const { t } = useTranslation("profile/education");
     const navigate = useNavigate();
 
   return (

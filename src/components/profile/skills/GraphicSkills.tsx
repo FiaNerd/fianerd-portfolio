@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import ProgressBar from "./ProgressBar";
 
 const GraphicSkills = () => {
-  const { t } = useTranslation("Profile/skills");
+  const { t } = useTranslation("profile/skills");
 
   const skillsGraphic = [
     { name: "PhotoShop", percentage: 80 },

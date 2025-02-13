@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
 const Hobbies = () => {
-    const { t } = useTranslation("Profile/hobbies");
+    const { t } = useTranslation("profile/hobbies");
 
     return (
         <section className='max-w-screen-xl	mx-auto'>

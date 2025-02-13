@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 const ProgramAndSoftware = () => {
-    const { t } = useTranslation('Profile/skills');
+    const { t } = useTranslation('profile/skills');
   return (
     <>
         <div className="mb-8">

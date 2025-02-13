@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import ProgramAndSoftware from "./ProgramAndSoftware";
 
  const OtherSkills = () => {
-    const { t } = useTranslation(["Profile/skills"]);
+    const { t } = useTranslation(["profile/skills"]);
     //   const { ref: ref1, ctrls: ctrls1, vars: vars1 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
 
 return (
