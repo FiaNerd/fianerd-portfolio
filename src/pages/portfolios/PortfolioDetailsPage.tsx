@@ -63,7 +63,7 @@ const PortfolioDetailsPage = () => {
         />
       ))}
 
-      {portfolioItems.map((item) => (
+      {portfolioItems && portfolioItems.map((item) => (
         <div id="portfolio-details" key={item.urlTitle} className="px-4 md:px-12 py-8">
           <PortfolioDetailsItems
             title={item.title}

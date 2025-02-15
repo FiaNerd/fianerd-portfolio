@@ -33,7 +33,8 @@ const FullStackPortfolio = () => {
               ctaButton={item.ctaButton}
               techTitle={item.techTitle}
               projectDuration={item.projectDuration} 
-              titleDescription={item.titleDescription}              />
+              titleDescription={item.titleDescription}              
+            />
           ))}
         </div>
       </section>

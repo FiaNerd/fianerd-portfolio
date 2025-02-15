@@ -67,7 +67,7 @@
         "frontendItems": [
           {
             "projectType": "Side project",
-            "title": "Brutal Beats",
+            "title": "BrutalBeats",
             "urlTitle": "brutal-beats",
             "applicationType": "web", 
             "applicationTypeDetail": {
@@ -631,11 +631,11 @@
             },            
             {
                 "projectType": "Thesis Project",
-                "title": "Coffee Shop",
+                "title": "Kaffe Bönans Skafferi",
                 "urlTitle": "coffee-shop",
                 "applicationType": "Web",
                 "applicationTypeDetail": {
-                    "text": "BACKEND",
+                    "text": "FULLSTACK",
                     "icon": {
                     "name": "icon-park-outline:dot",
                     "width": 48,
