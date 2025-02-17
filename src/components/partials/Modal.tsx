@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import React from 'react';
+import { useClickOutside } from '../../hook/useClickOutside';
 
 interface ModalProps {
   show: boolean;
@@ -9,12 +10,15 @@ interface ModalProps {
 }
 
 const Modal = ({ show, onClose, title, children }: ModalProps) => {
+    const ref = useClickOutside<HTMLDivElement>(() => onClose())
+
+
   return (
     show && (
       <>
-        <div className="fixed w-screen h-screen top-0 left-0 bg-black opacity-70" onClick={onClose} />
+        <div className="fixed w-screen h-screen top-0 left-0 bg-black opacity-80" onClick={onClose} />
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-[#1b0909] dark:text-[#f5f5f5] rounded-lg shadow-lg w-11/12 md:w-auto max-h-[80vh] overflow-hidden p-4 relative">
+          <div ref={ref} className="bg-white dark:bg-[#1b0909] dark:text-[#f5f5f5] rounded-lg shadow-lg w-11/12 md:w-auto max-h-[80vh] overflow-hidden p-4 relative">
             <div className="flex items-center justify-end mb-2">
               <div onClick={onClose} className="cursor-pointer text-black dark:text-[#f5f5f5] rounded-full flex justify-center">
                 <Icon icon="line-md:close" width="50" height="50" />
