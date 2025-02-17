@@ -38,7 +38,6 @@ const PortfolioDetailsItems = ({
   links,
 }: PortfolioDetailsItemsProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
-  const { t } = useTranslation("portfolio");
 
   return (
     <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 py-10 lg:space-y-8">

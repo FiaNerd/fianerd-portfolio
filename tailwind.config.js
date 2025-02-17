@@ -42,7 +42,16 @@ export default {
         8: '8',
         9: '9',
         10: '10',
-      }
+      },
+      keyframes: {
+        fade: {
+          'from': { opacity: 0.4 },
+          'to': { opacity: 1 },
+        },
+      },
+      animation: {
+        fade: 'fade 1.5s ease-in-out',
+      },
     },
   },
   plugins: [],
