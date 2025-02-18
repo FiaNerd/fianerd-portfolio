@@ -24,7 +24,7 @@ const Modal = ({ show, onClose, title, children }: ModalProps) => {
                 <Icon icon="line-md:close" width="40" height="40" />
               </div>
             </div>
-            <div className="text-center mb-4  text-text-primary">{title}</div>
+            <h3 className="font-bold not-italic font-sub-heading text-center mb-4 text-text-primary">{title}</h3>
             <div className="flex justify-center items-center w-full h-full">
               {children}
             </div>

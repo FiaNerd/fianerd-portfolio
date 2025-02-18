@@ -15,7 +15,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
   const [animationKey, setAnimationKey] = useState(0);
   const controls = useAnimation();
   
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.5 });
 
   useEffect(() => {
     if (inView) {
@@ -33,7 +33,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1,  // You can increase this for slower transitions between words
+        staggerChildren: 0.1, 
       },
     },
   };
@@ -42,7 +42,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1,  // Slightly increased to slow down the words animation
+        staggerChildren: 0.1, 
       },
     },
   };
@@ -61,7 +61,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`text-[2.4rem] md:text-[3.6rem] lg:text-[4.6rem] font-bold mb-0 pt-4 inline-block whitespace-nowrap ${className}`}
+      className={`text-[2rem] md:text-[3.6rem] lg:text-[4.6rem] font-heading font-bold mb-0 pt-4 inline-block whitespace-nowrap ${className}`}
       style={style}
     >
       {dangerouslyHTML ? (
@@ -82,8 +82,8 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
                   key={letterIndex}
                   variants={letterVariants}
                   transition={{
-                    duration: 0.15,  // Increased duration for slower letter animation
-                    delay: letterIndex * 0.1,  // Increased delay between each letter
+                    duration: 0.15,  
+                    delay: letterIndex * 0.1, 
                   }}
                   className="inline-block"
                 >
@@ -94,17 +94,17 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
           ))}
         </motion.div>
       )}
-
-      <motion.span
-        variants={letterVariants}
-        transition={{
-          duration: 0.5,
-          delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3,  // Adjusted delay here
-        }}
-        className="inline-block ml-[-0.09em] text-6xl leading-2 md:text-[3rem] lg:leading-[4rem] lg:text-[12rem]"
-      >
-        {dot}
-      </motion.span>
+        <motion.span
+          variants={letterVariants}
+          transition={{
+            duration: 0.5,
+            delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3, 
+          }}
+          className="inline-block ml-[-0.20em] relative text-[6rem] md:text-[3rem] lg:text-[4rem]"
+          style={{ transform: "scale(1.5)", lineHeight: "1" }}
+        >
+          {dot}
+        </motion.span>
     </motion.h1>
   );
 };

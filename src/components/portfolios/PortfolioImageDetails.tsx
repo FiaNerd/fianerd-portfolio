@@ -10,10 +10,12 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [modalTitle, setModalTitle] = useState("");
 
   const openModal = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
     setActiveIndex(images ? images.findIndex(img => img.src === image.src) : 0);
+    setModalTitle(image.alt);
     setIsModalOpen(true);
   };
 
@@ -87,11 +89,12 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
       </div>
 
       {isModalOpen && selectedImage && (
-        <Modal show={isModalOpen} onClose={closeModal} title={selectedImage.alt}>
+        <Modal show={isModalOpen} onClose={closeModal} title={modalTitle}>
           <ImageSlider
             images={images ? images.map(image => ({ image_url: image.src, caption: image.alt })) : []}
             active={activeIndex}
             setActive={setActiveIndex}
+            setTitle={setModalTitle}
           />
         </Modal>
       )}

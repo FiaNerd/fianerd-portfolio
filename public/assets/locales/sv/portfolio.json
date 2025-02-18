@@ -693,27 +693,27 @@
               "images": [
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-loggedin-user.jpg",
-                  "alt": "Kaffe bönan inloggad användare"
+                  "alt": "Kaffebönan inloggad användare"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-basket.jpg",
-                  "alt": "Kaffe bönan varukorg"
+                  "alt": "Kaffebönan varukorg"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-login.jpg",
-                  "alt": "Kaffe bönan logga in"
+                  "alt": "Kaffebönan logga in"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-mobile.jpg",
-                  "alt": "Kaffe bönan mobil kort"
+                  "alt": "Kaffebönan mobil kort"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-register2.jpg",
-                  "alt": "Kaffe bönan registrering"
+                  "alt": "Kaffebönan registrering"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-order.jpg",
-                  "alt": "Kaffe bönan order"
+                  "alt": "Kaffebönan order"
                 }
               ]
             }
