@@ -4,7 +4,7 @@ import TitleAnimation from "./TitleAnimation";
 interface IProps {
   id?: string;
   title?: string;
-  dot: string;
+  dot?: string;
   children: string;
   className?: string; 
   subHeadingClassName?: string; 

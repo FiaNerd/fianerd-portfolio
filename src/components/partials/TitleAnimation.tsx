@@ -1,10 +1,11 @@
+import { Icon } from "@iconify/react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 interface IProps {
   title: string;
-  dot: string;
+  dot?: string; // Make dot optional
   dangerouslyHTML?: string;
   onComplete: () => void;
   style?: React.CSSProperties;
@@ -94,17 +95,22 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
           ))}
         </motion.div>
       )}
+      {dot && (
         <motion.span
           variants={letterVariants}
           transition={{
             duration: 0.5,
             delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3, 
           }}
-          className="inline-block ml-[-0.20em] relative text-[6rem] md:text-[3rem] lg:text-[4rem]"
-          style={{ transform: "scale(1.5)", lineHeight: "1" }}
+          className="inline-block relative text-[6rem]"
+          style={{ lineHeight: "1", position: "relative" }}
         >
-          {dot}
+          {dot === "!" ? (
+            <span className="-ml-5">{dot}</span>
+          )    :
+          <Icon icon="icon-park-outline:dot" className="-ml-6 md:-ml-8 text-[2rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />}
         </motion.span>
+      )}
     </motion.h1>
   );
 };
