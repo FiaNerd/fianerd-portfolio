@@ -285,23 +285,23 @@
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-prototyp.jpg",
-                        "alt": "MSB Hero"
+                        "alt": "MSB hero figma prototyp"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-firetruck-orginal-photoshop.jpg",
-                        "alt": "MSB footer"
+                        "alt": "MSB my image vs orginal image"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-high.jpg",
-                        "alt": "MSB  Main"
+                        "alt": "MSB infromations kort"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-card.jpg",
-                        "alt": "MSB Main"
+                        "alt": "MSB kort main"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-fireman-cards.jpg",
-                        "alt": "MSB  Main"
+                        "alt": "MSB brandman kort"
                     }
                 ]
             }
