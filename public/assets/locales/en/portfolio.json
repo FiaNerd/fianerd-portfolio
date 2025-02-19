@@ -11,7 +11,7 @@
     },
 
     "top5PortfolioSection": {
-        "titleTop5Portfolio": "Top <span class='text-btn-bg dark:text-accent-primary'>5</span> Projects",
+        "titleTop5Portfolio": "Top <span class='text-btn-bg dark:text-accent-primary'>5</span> <span class='px-4'>Projects</span>",
         "subTitleTop5Portfolio": "Projects that I am proud of",
         "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
         "ctaButtonViewAll": "View All Projects",
@@ -621,7 +621,7 @@
                     },
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-högskole.jpg",
-                        "alt": "prodigies högskole"
+                        "alt": "Prodigies högskole"
                     },
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-filtering.jpg",

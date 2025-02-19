@@ -17,7 +17,7 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
   return (
     <motion.div
       id={id}
-      className={`flex flex-col top-0 items-center text-center mb-12 md:mb-20 ${className || ""} ${sticky ? "sticky z-20 top-0 left-0" : ""}`}
+      className={`flex flex-col items-center text-center mb-12 md:mb-20 ${className || ""} ${sticky ? "sticky left-0 top-0 z-20" : ""}`}
       style={style}
     >
       <TitleAnimation 
@@ -26,7 +26,6 @@ const Title = ({ id, title, dot, children, className, subHeadingClassName, stick
         dangerouslyHTML={dangerouslyHTML} 
         onComplete={() => {}}
       />
-
 
       <h3 className={`${subHeadingClassName || "text-text-secondary dark:text-text-secondary"}`}>
         {children}

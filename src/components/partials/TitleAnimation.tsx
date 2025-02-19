@@ -16,7 +16,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
   const [animationKey, setAnimationKey] = useState(0);
   const controls = useAnimation();
   
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.5 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
   useEffect(() => {
     if (inView) {

@@ -36,12 +36,12 @@ const HomePage = () => {
       className="bg-blend-multiply"
     >
       {/* Hero Section */}
-      <section id="home" className="relative items-center">
+      <section id="home" className="relative items-center ">
         <HeroSection />
       </section>
 
       {/* Profile Section */}
-      <section id="profile">
+      <section id="profile" className="relative min-h-screen">
         <Title
           id="me"
           title={t("profile/aboutMe:titleProfile")}
@@ -55,12 +55,12 @@ const HomePage = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="section top-0 ">
+      <section id="skills" className="section top-0 relative">
         <Skills />
       </section>
 
       {/* Work Experience Section */}
-      <section id="experience">
+      <section id="experience" className="relative">
         <Title
           title={t("profile/experience:titleWorkExperience")}
           dot={t("profile/experience:dot")}
@@ -71,7 +71,7 @@ const HomePage = () => {
         <WorkExperience />
       </section>
 
-      <section id="education">
+      <section id="education" className="relative">
         <Title
           title={t("profile/education:titleEducation")}
           dot={t("profile/education:dot")}
@@ -83,7 +83,7 @@ const HomePage = () => {
       </section>
 
       {/* Hobbies Section */}
-      <section id="hobbies" className="mb-20">
+      <section id="hobbies" className="mb-20 relative">
         <Title
           title={t("profile/hobbies:titleHobbie")}
           dot={"!"}
