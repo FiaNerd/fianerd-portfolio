@@ -1,11 +1,17 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../partials/Button";
 
 const Top5Projects = () => {
   const { t } = useTranslation("portfolio");
-  const items = t("top5PortfolioSection.top5Items", { returnObjects: true }) as { image: string; title: string; subTitle:string; description: string; ctaButton: string}[];
+  const navigate = useNavigate();
+
+  const top5items = t("top5PortfolioSection.top5Items", { returnObjects: true }) as { image: string; title: string; subTitle: string; description: string; ctaButton: string; urlTitle: string }[];
+
+  const navigateToDetails = (urlTitle: string) => {
+    navigate(`/portfolio/${urlTitle}`);
+  }
 
   return (
     <div className="max-w-screen-xl mx-auto px-4">
@@ -14,7 +20,7 @@ const Top5Projects = () => {
         <div className="py-4 px-2 mx-auto sm:py-4">
           {/* Grid container */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 h-full">
-            {items.map((item, index) => {
+            {top5items.map((item, index) => {
               let columnSpan = "";
 
               // Grid layout for index 0
@@ -36,7 +42,7 @@ const Top5Projects = () => {
 
               return (
                 <div key={index} className={`${columnSpan} h-auto lg:h-full flex flex-col`}>
-                  <NavLink to="" className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+                  <div className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
                     {/* Image */}
                     <img
                       src={item.image}
@@ -52,13 +58,13 @@ const Top5Projects = () => {
                     <div className="absolute inset-0 bg-black/80 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                       <div className="flex flex-col items-center mx-auto gap-8 w-full px-2">
                         <p className="text-white text-sm">{t(item.description)}</p>
-                        <Button className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs">
+                        <Button onClick={() => navigateToDetails(item.urlTitle)} className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs">
                           <Icon icon="ix:explore" width="20" height="20" />
                           <span>{t(item.ctaButton)}</span>
                         </Button>
                       </div>
                     </div>
-                  </NavLink>
+                  </div>
                 </div>
               );
             })}
