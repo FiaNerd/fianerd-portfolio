@@ -70,7 +70,7 @@ const AboutMe = () => {
         )}
 
         <button
-            className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-4"
+            className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-8"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}

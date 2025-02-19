@@ -104,7 +104,7 @@ const PortfolioPage = () => {
           <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
 
 
-          <section id="backend" className="mb-12">
+          <section id="backend" className="top-0 mb-12">
              <Title 
               title={t('backendPortfolioSection.titlePortfolioBackend')} 
               dot={"."}

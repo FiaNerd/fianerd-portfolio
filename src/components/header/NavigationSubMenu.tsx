@@ -1,7 +1,7 @@
-import { startTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
+
 interface IProps {
   navigationMenu: string;
   onMouseEnter: () => void;
@@ -19,17 +19,11 @@ const NavigationSubMenu = ({
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleScroll = (e: React.MouseEvent | undefined, sectionId: string) => {
-    if (e) {
-      e.preventDefault();
+  const handleScroll = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-
-    startTransition(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
   };
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
@@ -37,20 +31,21 @@ const NavigationSubMenu = ({
 
     const [path, sectionId] = url.split('#');
 
-    startTransition(() => {
-      if (sectionId) {
-        if (location.pathname === path) {
-          handleScroll(undefined, sectionId);
-        } else {
-          navigate(`${path}#${sectionId}`, { replace: true });
-          setTimeout(() => {
-            handleScroll(undefined, sectionId);
-          }, 0);
-        }
+    if (sectionId) {
+      if (location.pathname === path) {
+        // Scroll to the section if already on the same page
+        handleScroll(sectionId);
       } else {
-        navigate(path); 
+        // Navigate to the page and then scroll to the section
+        navigate(path);
+        setTimeout(() => {
+          handleScroll(sectionId);
+        }, 300);
       }
-    });
+    } else {
+      // Navigate to the page without a section ID
+      navigate(path);
+    }
 
     closeMenuOnClick();
   };
@@ -60,9 +55,10 @@ const NavigationSubMenu = ({
   if (!currentMenu || !currentMenu.subMenu) {
     return null;
   }
+
   return (
     <div
-      className="absolute z-10 bg-nav-text dark:bg-[#1b0909] shadow-sm p-4 rounded mt-[3.8em] "
+      className="absolute z-10 bg-nav-text dark:bg-[#1b0909] shadow-sm p-4 rounded mt-[3.8em]"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -94,26 +90,26 @@ const NavigationSubMenu = ({
           <p className="block text-sm opacity-70 text-accent-primary">
             {navigationMenu === 'profile'
               ? t('subMenu.subTitleProfile')
-              : t('subMenu.subTitlePortfolio')
-            }
+              : t('subMenu.subTitlePortfolio')}
           </p>
         </div>
 
         {/* Submenu Section */}
         <div className="col-span-2 grid gap-6 grid-cols-2 xl:grid-cols-2 p-4 bg-bg-primary">
-        {currentMenu.subMenu.map((subMenu, index) => (
+          {currentMenu.subMenu.map((subMenu, index) => (
             <div key={index} className="flex flex-col">
               <NavLink
                 to={subMenu.url}
                 className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
                 onClick={(e) => handleMenuClick(e, subMenu.url)}
               >
-                 <span
-                  dangerouslySetInnerHTML={{ __html: t(subMenu.title) }}
-                />
+                <span dangerouslySetInnerHTML={{ __html: t(subMenu.title) }} />
               </NavLink>
               {subMenu.description && (
-                <span className="block text-xs text-text-primary font-light leading-6 opacity-70" dangerouslySetInnerHTML={{ __html: t(subMenu.description) }} />
+                <span
+                  className="block text-xs text-text-primary font-light leading-6 opacity-70"
+                  dangerouslySetInnerHTML={{ __html: t(subMenu.description) }}
+                />
               )}
             </div>
           ))}
