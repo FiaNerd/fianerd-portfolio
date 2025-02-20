@@ -1,8 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink, useNavigate } from "react-router-dom";
-import Button from "../partials/Button";
+import { NavLink } from "react-router-dom";
 import Popup from "../partials/Popup";
 import PortfolioImageDetails from "./PortfolioImageDetails";
 
@@ -62,7 +61,7 @@ const PortfolioDetailsItems = ({
 
         <div className="border border-[#3C2F2F]"></div>
 
-        <div className="flex justify-center py-2">
+        <div className="flex justify-center py-2 mb-8 lg:mb-0">
           <div className="border-r-2 border-[#3C2F2F]">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">
               {linkTitle}
@@ -108,21 +107,21 @@ const PortfolioDetailsItems = ({
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4 w-full mb-12" style={{ marginTop: 0 }}>
+      <div className="flex flex-col lg:flex-row gap-4 w-full mb-12" style={{ marginTop: 0 }}>
         <div
-          className="sidebar h-auto md:w-12 self-stretch bg-[#4b8668] dark:bg-accent-secondary md:ml-4 flex justify-center items-center"
-          style={{ marginTop: 0, position: 'relative', zIndex: 10 }}
+          className="sidebar h-auto lg:w-12 self-stretch bg-[#4b8668] dark:bg-accent-secondary lg:ml-4 flex justify-center items-center "
+          style={{ marginTop: 0, position: 'relative'}}
         >
-          <div className="flex flex-col w-full items-center justify-evenly h-full">
-            <h6 className="text-3xl font-bold text-[#edd8bf] dark:text-[#240313] md:rotate-90 md:transform">{applicationTypeDetail.text}</h6>
+          <div className="flex flex-row lg:flex-col w-full items-center justify-evenly h-full">
+            <h6 className="text-[1.2rem] md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">{applicationTypeDetail.text}</h6>
             <Icon
               icon={applicationTypeDetail.icon.name}
               width={applicationTypeDetail.icon.width}
               height={applicationTypeDetail.icon.height}
               style={{ color: applicationTypeDetail.icon.color }}
-              className="md:rotate-90 md:transform"
+              className=" w-[1.4em] lg:w-auto lg:rotate-90 md:transform"
             />
-            <h6 className="text-nowrap text-3xl font-bold text-[#edd8bf] dark:text-[#240313] md:rotate-90 md:transform">{applicationTypeDetail.suffix}</h6>
+            <h6 className="text-nowrap text-[1.2rem] md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">{applicationTypeDetail.suffix}</h6>
           </div>
         </div>
 
