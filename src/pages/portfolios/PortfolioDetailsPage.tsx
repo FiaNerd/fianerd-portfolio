@@ -57,7 +57,6 @@ const PortfolioDetailsPage = () => {
         transition: "padding-top 0.3s ease",
       }}
     >
-      <div className="mb-12">
         {portfolioItems.map((item) => (
           <HeroDetails
             key={item.urlTitle}
@@ -66,7 +65,7 @@ const PortfolioDetailsPage = () => {
             titleDescription={item.titleDescription}
           />
         ))}
-      </div>
+        
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
           onClick={() => navigate(-1)}
