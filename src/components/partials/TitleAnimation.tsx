@@ -1,61 +1,54 @@
 import { Icon } from "@iconify/react";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 interface IProps {
   title: string;
-  dot?: string; // Make dot optional
+  dot?: string;
   dangerouslyHTML?: string;
-  onComplete: () => void;
+  onComplete?: () => void;
   style?: React.CSSProperties;
   className?: string;
 }
 
 const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, className }: IProps) => {
-  const [animationKey, setAnimationKey] = useState(0);
   const controls = useAnimation();
-  
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  const { ref, inView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden"); 
     }
   }, [inView, controls]);
 
-  useEffect(() => {
-    setAnimationKey((prev) => prev + 1);
-  }, [title]);
-
   const words = title.split(" ");
-  
+
   const containerVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
-      transition: {
-        staggerChildren: 0.1, 
-      },
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
     },
   };
 
   const wordVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
-      transition: {
-        staggerChildren: 0.1, 
-      },
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
     },
   };
 
   const letterVariants = {
     hidden: { opacity: 0, scaleX: 0 },
-    visible: { opacity: 1, scaleX: 1 }, 
+    visible: { opacity: 1, scaleX: 1 },
   };
 
   return (
     <motion.h1
-      key={animationKey}
       ref={ref}
       aria-label={title}
       role="heading"
@@ -83,8 +76,8 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
                   key={letterIndex}
                   variants={letterVariants}
                   transition={{
-                    duration: 0.15,  
-                    delay: letterIndex * 0.1, 
+                    duration: 0.15,
+                    delay: wordIndex * 0.5 + letterIndex * 0.1,
                   }}
                   className="inline-block"
                 >
@@ -100,15 +93,16 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
           variants={letterVariants}
           transition={{
             duration: 0.5,
-            delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3, 
+            delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3,
           }}
           className="inline-block relative text-[6rem]"
           style={{ lineHeight: "1", position: "relative" }}
         >
           {dot === "!" ? (
             <span className="-ml-5">{dot}</span>
-          )    :
-          <Icon icon="icon-park-outline:dot" className="-ml-5 md:-ml-8 text-[1.5rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />}
+          ) : (
+            <Icon icon="icon-park-outline:dot" className="-ml-5 md:-ml-8 text-[1.5rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />
+          )}
         </motion.span>
       )}
     </motion.h1>
