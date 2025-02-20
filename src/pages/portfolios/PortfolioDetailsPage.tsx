@@ -51,21 +51,23 @@ const PortfolioDetailsPage = () => {
   }
 
   return (
-    <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: "padding-top 0.3s ease",
-      }}
-    >
-        {portfolioItems.map((item) => (
-          <HeroDetails
-            key={item.urlTitle}
-            title={item.title}
-            image={item.image}
-            titleDescription={item.titleDescription}
-          />
-        ))}
-        
+      <div
+        style={{
+          paddingTop: `${headerHeight}px`,
+          transition: "padding-top 0.3s ease",
+        }}
+      >
+        <div className="mb-8">
+            {portfolioItems.map((item) => (
+              <HeroDetails
+                key={item.urlTitle}
+                title={item.title}
+                image={item.image}
+                titleDescription={item.titleDescription}
+              />
+            ))}
+        </div>
+
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
           onClick={() => navigate(-1)}
