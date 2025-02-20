@@ -65,6 +65,13 @@ const Top5Projects = () => {
                       </div>
                     </div>
                   </div>
+                  
+                  <div className="lg:hidden mt-4 mb-8">
+                    <Button onClick={() => navigateToDetails(item.urlTitle)} className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full  mx-auto">
+                      <Icon icon="ix:explore" width="20" height="20" />
+                      <span>{t(item.ctaButton)}</span>
+                    </Button>
+                  </div>
                 </div>
               );
             })}

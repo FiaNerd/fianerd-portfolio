@@ -11,8 +11,8 @@ const Skills = () => {
     <div className="mx-auto top-0 left-0 ">
       <section id="web">
         <Title
-          title={t("webSkills.webSkillsTitle")}
           dot="."
+          dangerouslyHTML={t("webSkills.webSkillsTitle")}
           children={t("webSkills.subTitleWebSkills")}
           className="text-[#535437] dark:text-[#489c80] bg-[#fff5d7] dark:bg-[#1b0909]"
           sticky

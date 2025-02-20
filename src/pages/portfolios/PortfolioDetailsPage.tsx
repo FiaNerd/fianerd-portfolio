@@ -1,6 +1,7 @@
+import { Icon } from "@iconify/react";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import portfolioDataEn from "../../../public/assets/locales/en/portfolio.json";
 import portfolioDataSv from "../../../public/assets/locales/sv/portfolio.json";
 import HeroDetails from "../../components/portfolios/HeroDetails";
@@ -12,6 +13,8 @@ const PortfolioDetailsPage = () => {
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const [headerHeight, setHeaderHeight] = useState(0);
   const { i18n } = useTranslation();
+  const { t } = useTranslation("portfolio");
+  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     const header = document.getElementById("header");
@@ -54,17 +57,29 @@ const PortfolioDetailsPage = () => {
         transition: "padding-top 0.3s ease",
       }}
     >
-      {portfolioItems.map((item) => (
-        <HeroDetails
-          key={item.urlTitle}
-          title={item.title}
-          image={item.image}
-          titleDescription={item.titleDescription}
-        />
-      ))}
+      <div className="mb-12">
+        {portfolioItems.map((item) => (
+          <HeroDetails
+            key={item.urlTitle}
+            title={item.title}
+            image={item.image}
+            titleDescription={item.titleDescription}
+          />
+        ))}
+      </div>
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
+        <button
+          onClick={() => navigate(-1)}
+          className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-[#71c79c] bg-transparent w-auto px-2 py-1 "
+          >
+          <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
+          {t("goBack")}
+        </button>
+      </div>
+
 
       {portfolioItems && portfolioItems.map((item) => (
-        <div id="portfolio-details" key={item.urlTitle} className="px-4 md:px-12 py-8">
+        <div id="portfolio-details" key={item.urlTitle} className="py-12">
           <PortfolioDetailsItems
             title={item.title}
             titleDescription={item.titleDescription}
@@ -78,6 +93,7 @@ const PortfolioDetailsPage = () => {
           />
         </div>
       ))}
+      
     </div>
   );
 };

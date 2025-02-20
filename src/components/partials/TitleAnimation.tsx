@@ -62,7 +62,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`text-[2rem] md:text-[3.6rem] lg:text-[4.6rem] font-heading font-bold mb-0 pt-4 inline-block whitespace-nowrap ${className}`}
+      className={`text-[1.5rem] md:text-[3.6rem] lg:text-[4.6rem] font-heading font-bold mb-0 pt-4 inline-block whitespace-nowrap ${className}`}
       style={style}
     >
       {dangerouslyHTML ? (
@@ -108,7 +108,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
           {dot === "!" ? (
             <span className="-ml-5">{dot}</span>
           )    :
-          <Icon icon="icon-park-outline:dot" className="-ml-6 md:-ml-8 text-[2rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />}
+          <Icon icon="icon-park-outline:dot" className="-ml-5 md:-ml-8 text-[1.5rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />}
         </motion.span>
       )}
     </motion.h1>

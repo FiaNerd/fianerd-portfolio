@@ -10,8 +10,6 @@
 
 /* Tailwind CSS setup */
   body {
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100%;
     scroll-padding-top: var(--header-height); 
     background: var(--color-bg-mode);
@@ -25,17 +23,17 @@
   h1 {
     font-weight: bold;
     font-family: var(--font-heading);
-    margin-bottom: 0.5rem; /* mb-2 */
+    margin-bottom: 0.5rem; 
     letter-spacing: 0.05em; /* tracking-wider */
-    font-size: clamp(24px, 5vw, 48px); 
+    font-size: clamp(1.875rem, 5vw, 48px); 
     line-height: 1.2;
     /* color: var(--color-text-accent); */
   }
 
   h2 {
-    font-weight: 600; /* font-semibold */
+    font-weight: 600;
     font-family: var(--font-sub-heading);
-    margin-bottom: 1rem; /* mb-4 */
+    margin-bottom: 1rem; 
     letter-spacing: 0.05em; /* tracking-wider */
     font-size: clamp(20px, 4vw, 36px); 
     line-height: 1.3;
@@ -43,40 +41,37 @@
   }
 
   h3 {
-    font-weight: 300; /* font-light */
+    font-weight: 300;
     font-family: var(--font-sub-heading);
-    font-style: italic;
-    margin-bottom: 1rem; /* mb-4 */
+    margin-bottom: 1rem; 
     font-size: clamp(18px, 3vw, 30px); 
     line-height: 1.4;
     /* color: var(--color-text-secondary); */
   }
   
   h4 {
-    font-weight: 500; /* font-medium */
+    font-weight: 500; 
     font-family: var(--font-sub-heading);
-    font-style: italic;
-    margin-bottom: 1rem; /* mb-4 */
+    margin-bottom: 1rem;
     font-size: clamp(16px, 2.5vw, 24px); 
     line-height: 1.5;
     /* color: var(--color-text-secondary); */
   }
   
   h5 {
-    font-weight: 500; /* font-medium */
-    font-style: italic;
-    margin-bottom: 1rem; /* mb-4 */
+    font-weight: 500;
+    margin-bottom: 1rem;
     font-size: clamp(14px, 2vw, 20px); 
     line-height: 1.6;
     /* color: var(--color-text-secondary); */
   }
   
   p {
-    line-height: 1.75rem; /* leading-7 */
-    margin-bottom: 1rem; /* mb-4 */
-    font-size: clamp(12px, 2.5vw, 18px); 
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 1.8vw, 18px);
     color: var(--color-text-primary);
-  }
+  }  
 
 .outlined-text {
   color: #25021c;

@@ -1,7 +1,8 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import Button from "../partials/Button";
 import Popup from "../partials/Popup";
 import PortfolioImageDetails from "./PortfolioImageDetails";
 
@@ -37,12 +38,15 @@ const PortfolioDetailsItems = ({
   linkTitle,
   links,
 }: PortfolioDetailsItemsProps) => {
+  
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
+  const { t } = useTranslation("portfolio");
 
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 py-10 lg:space-y-8">
+    <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 lg:space-y-8">
+
       <div className="border-r-2 border-[#3C2F2F]">
-        <h1 className="text-[#3C2F2F] text-4xl md:text-5xl font-bold">{title}</h1>
+        <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">{title}</h1>
         <p className="text-[#695050]">{titleDescription}</p>
 
         <div className="border border-[#3C2F2F] mb-8"></div>
@@ -83,7 +87,7 @@ const PortfolioDetailsItems = ({
 
           <div className="px-8 mb-12 md:mb-0">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">{techTitle}</p>
-            <ul className="items-center pb-4 grid grid-flow-col justify-center gap-8">
+            <ul className="items-center pb-4 grid grid-cols-3 justify-center gap-8">
               {tech.map((item: any, index: number) => (
                 <li key={index} className="items-center">
                   <div className="relative">
@@ -104,7 +108,7 @@ const PortfolioDetailsItems = ({
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4 w-full" style={{ marginTop: 0 }}>
+      <div className="flex flex-col md:flex-row gap-4 w-full mb-12" style={{ marginTop: 0 }}>
         <div
           className="sidebar h-auto md:w-12 self-stretch bg-[#4b8668] dark:bg-accent-secondary md:ml-4 flex justify-center items-center"
           style={{ marginTop: 0, position: 'relative', zIndex: 10 }}
