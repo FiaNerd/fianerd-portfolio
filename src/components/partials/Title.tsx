@@ -30,7 +30,7 @@ const Title = ({
 }: IProps) => {
   console.log(`Final classes: ${className} ${light} ${dark}`);
 
-  const stickyClass = sticky ? "sticky left-0 top-0 z-20 mb-12 mb:20" : "";
+  const stickyClass = sticky ? "sticky left-0 top-0 z-20 mb-8 mb:20" : "";
 
   return (
     <motion.div
@@ -44,7 +44,7 @@ const Title = ({
         dangerouslyHTML={dangerouslyHTML}
         onComplete={() => {}}
       />
-      <h3 className={subHeadingClassName}>
+      <h3 className={`text-wrap ${subHeadingClassName}`}>
         {children}
       </h3>
     </motion.div>

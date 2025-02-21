@@ -55,7 +55,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`text-[1.5rem] md:text-[3.6rem] lg:text-[4.6rem] font-heading font-bold mb-0 pt-4 inline-block whitespace-nowrap ${className}`}
+      className={`font-heading font-bold mb-0 pt-4 inline-block text-wrap ${className}`}
       style={style}
     >
       {dangerouslyHTML ? (
@@ -64,7 +64,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
           className={className}
         />
       ) : (
-        <motion.div variants={containerVariants} className="inline-block">
+        <motion.div variants={containerVariants} className="inline">
           {words.map((word, wordIndex) => (
             <motion.span
               key={wordIndex}
@@ -91,12 +91,11 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
       {dot && (
         <motion.span
           variants={letterVariants}
-          transition={{
-            duration: 0.5,
+          transition={{ duration: 0.5,
             delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3,
           }}
-          className="inline-block relative text-[6rem]"
-          style={{ lineHeight: "1", position: "relative" }}
+          className="inline-block align-baseline text-[6rem]"
+          style={{ lineHeight: "1", position: "relative", verticalAlign: "baseline" }}
         >
           {dot === "!" ? (
             <span className="-ml-5">{dot}</span>

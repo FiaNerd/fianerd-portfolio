@@ -26,7 +26,7 @@ const WorkExperience = () => {
       <div className="flex mx-auto md:ml-12 lg:w-2/3 sticky">
         <div className="max-w-screen-xl	mx-auto w-full h-full">
           <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 py-20 lg:p-10 h-full">
-          <div className="absolute h-full border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
+          <div className="absolute h-full border-2 md:border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
 
               <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                 <div className="order-1 w-5/12"></div>

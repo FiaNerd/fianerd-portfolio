@@ -20,12 +20,12 @@ const WebSkills = () => {
       <div 
         className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8"
       >
-        <h1 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
+        <h2 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
           {t('webSkills.webbDev')}
-        </h1>
+        </h2>
 
         <div className="items-center md:row-start-2 md:col-start-1">
-          <h2 className="font-textImportant text-4xl md:text-5xl text-[#535437] dark:text-[#69864e] mb-4 leading-10 font-bold text-center md:leading-[3rem]">
+          <h2 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#69864e] leading-10 font-bold text-center md:leading-[3rem]">
             {t('webSkills.titleCode')}
           </h2>
           <h3 className="text-text-secondary font-light leading-3 text-center">
@@ -34,7 +34,7 @@ const WebSkills = () => {
         </div>
         
         <div className="items-center md:row-start-2 md:col-start-2">
-          <h1 className="font-textImportant text-4xl md:text-5xl text-[#535437] dark:text-[#69864e] font-bold text-center mb-2">
+          <h1 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#69864e] font-bold text-center mb-2">
             {t("webSkills.titleWeb")}
           </h1>
           <h3 className="text-center text-text-secondary not-italic font-light">
