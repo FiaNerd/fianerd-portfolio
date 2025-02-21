@@ -44,10 +44,10 @@ const WebSkills = () => {
       </div>     
 
       <div 
-        className="grid grid-cols-1 md:order-0 lg:grid-cols-[5%_50%_auto] gap-4 mb-8"
+        className="grid grid-cols-1 md:order-0 lg:grid-cols-[6%_50%_auto] gap-4 mb-8"
       >
         {/* Vertical Text Column */}
-        <div className="hidden lg:block items-center justify-center">
+        <div className="hidden lg:flex items-center justify-center"> {/* Added pr-8 for padding-right */}
           <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#69864e] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t('webSkills.webbDev')}
           </h1>

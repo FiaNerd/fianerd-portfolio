@@ -31,9 +31,9 @@ const GraphicSkills = () => {
         </div>
 
         <div className="items-center md:row-start-2 md:col-start-2">
-          <h1 className="text-[#4b1718] dark:text-bg-secondary font-textImportant text-center mb-2 whitespace-break-spaces">
+          <h2 className="text-[#4b1718] dark:text-bg-secondary font-textImportant text-center mb-2 whitespace-break-spaces">
             {t("graphicSkills.titleGraphic")}
-          </h1>
+          </h2>
           <h3 className="text-center text-text-secondary not-italic font-light whitespace-break-spaces ">
             {t('graphicSkills.titleGraphicSkills')}
           </h3>
@@ -43,12 +43,12 @@ const GraphicSkills = () => {
 
 
       <div
-        className="grid grid-cols-1 lg:grid-cols-[5%_50%_auto] gap-4 mb-8"
+        className="grid grid-cols-1 lg:grid-cols-[6%_50%_auto] gap-4 mb-8"
       >
 
         
         {/* Vertical Text Column */}
-        <div className="items-center justify-center hidden lg:block">
+        <div className="items-center justify-center hidden lg:block pr-8">
           <h1 className="text-[#4b1718] dark:text-bg-secondary font-semibold tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center ">
             {t("graphicSkills.graphicTitle").toUpperCase()}
           </h1>
