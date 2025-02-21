@@ -10,6 +10,8 @@
 
 /* Tailwind CSS setup */
   body {
+      @apply text-text-primary;
+    
     height: 100%;
     scroll-padding-top: var(--header-height); 
     background: var(--color-bg-mode);

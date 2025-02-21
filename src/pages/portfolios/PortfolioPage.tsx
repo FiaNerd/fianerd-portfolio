@@ -96,7 +96,9 @@ const PortfolioPage = () => {
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."}
               children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
-              className=" text-[#ca0416] dark:text-[#d6a70d] bg-[#f69497] dark:bg-[#4a2342] px-4 mt-0 mb-6 md:mb-8"
+              className="px-4 mt-0 mb-6 md:mb-8"
+              light="text-[#ca0416] bg-[#f69497]"
+              dark="dark:text-[#d6a70d] dark:bg-[#4a2342]"
               sticky
             />
             <FrontendPortfolio />
@@ -109,7 +111,9 @@ const PortfolioPage = () => {
               title={t('backendPortfolioSection.titlePortfolioBackend')} 
               dot={"."}
               children={t("backendPortfolioSection.subTitlePortfolioBackend")} 
-              className="text-[#ec4428] dark:text-[#1d7ecc] bg-[#fff5d7] dark:bg-[#1b0909] px-4 mt-0 mb-6 md:mb-8"
+              className=" px-4 mt-0 mb-6 md:mb-8"
+              light="text-[#ec4428] bg-[#fff5d7]"
+              dark="dark:text-[#1d7ecc] dark:bg-[#1b0909]"
               sticky 
             />
             <BackendPortfolio />
@@ -122,8 +126,10 @@ const PortfolioPage = () => {
                     title={t('fullstackPortfolioSection.titlePortfolioFullstack')} 
                     dot={"."} 
                     children={t("fullstackPortfolioSection.subTitlePortfolioFullstack")} 
-                    className=" text-[#064352] dark:text-[#831518] bg-[#9fc4bd] dark:bg-[#dc8e32] px-4 mt-0 mb-6 md:mb-8"
+                    className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
                     subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
+                    light="text-[#064352] bg-[#9fc4bd]"
+                    dark="dark:text-[#831518] dark:bg-[#dc8e32]"
                     sticky
                   />
                 <FullStackPortfolio />

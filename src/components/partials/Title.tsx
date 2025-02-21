@@ -6,28 +6,45 @@ interface IProps {
   title?: string;
   dot?: string;
   children: string;
-  className?: string; 
-  subHeadingClassName?: string; 
+  className?: string;
+  subHeadingClassName?: string;
   sticky?: boolean;
   style?: React.CSSProperties;
   dangerouslyHTML?: string;
+  light?: string;
+  dark?: string;
 }
 
-const Title = ({ id, title, dot, children, className, subHeadingClassName, sticky, style, dangerouslyHTML }: IProps) => {
+const Title = ({
+  id,
+  title,
+  dot,
+  children,
+  className = "",
+  subHeadingClassName = "text-text-secondary dark:text-text-secondary",
+  sticky = false,
+  style,
+  dangerouslyHTML,
+  light,
+  dark,
+}: IProps) => {
+  console.log(`Final classes: ${className} ${light} ${dark}`);
+
+  const stickyClass = sticky ? "sticky left-0 top-0 z-20 mb-12 mb:20" : "";
+
   return (
     <motion.div
       id={id}
-      className={`flex flex-col items-center text-center${className || ""} ${sticky ? "sticky left-0 top-0 z-20 mb-12 mb:20" : ""}`}
+      className={`flex flex-col items-center text-center whitespace-nowrap ${className} ${light} ${dark} ${stickyClass}`}
       style={style}
     >
-      <TitleAnimation 
-        title={title || ""} 
+      <TitleAnimation
+        title={title || ""}
         dot={dot}
-        dangerouslyHTML={dangerouslyHTML} 
+        dangerouslyHTML={dangerouslyHTML}
         onComplete={() => {}}
       />
-
-      <h3 className={`${subHeadingClassName || "text-text-secondary dark:text-text-secondary"}`}>
+      <h3 className={subHeadingClassName}>
         {children}
       </h3>
     </motion.div>
