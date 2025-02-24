@@ -9,7 +9,7 @@ interface IProps {
   closeMenuOnClick: () => void;
 }
 
-const NavigationSubMenu = ({
+const NavigationSubMenuDropDownDesktop = ({
   navigationMenu,
   onMouseEnter,
   onMouseLeave,
@@ -119,4 +119,4 @@ const NavigationSubMenu = ({
   );
 };
 
-export default NavigationSubMenu;
+export default NavigationSubMenuDropDownDesktop;

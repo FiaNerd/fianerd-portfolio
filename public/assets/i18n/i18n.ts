@@ -17,6 +17,7 @@ i18n
       loadPath: '/assets/locales/{{lng}}/{{ns}}.json', 
     },    
     ns: [
+      'translation',
       'home', 
       'heroSection', 
       'profile',

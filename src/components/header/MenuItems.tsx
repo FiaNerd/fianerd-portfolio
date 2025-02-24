@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
 import { Route } from '../../config/MenuItemsData';
-import DropdownMenu from './DropdownMenu';
 import useIsTabletOrMobile from '../../hook/useTabletOrMobile';
+import DropdownMenuMobile from './DropdownMenuMobile';
 
 interface MenuItemsProps {
   items: Route;
@@ -20,6 +20,8 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   const [dropdown, setDropdown] = useState(false);
   const { t } = useTranslation('translation');
   const isTabletOrMobile = useIsTabletOrMobile();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleMouseEnter = () => {
     setDropdown(true);
@@ -29,8 +31,38 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     setDropdown(false);
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (e: React.MouseEvent | React.TouchEvent) => {
+    e.stopPropagation();
     setDropdown((prev) => !prev);
+  };
+
+  const handleScroll = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+    e.preventDefault();
+
+    const [path, sectionId] = url.split('#');
+
+    if (sectionId) {
+      if (location.pathname === path) {
+        setTimeout(() => handleScroll(sectionId), 100);
+      } else {
+        navigate(path);
+
+        setTimeout(() => {
+          handleScroll(sectionId);
+        }, 300);
+      }
+    } else {
+      navigate(path);
+    }
+
+    closeMenu();
   };
 
   const renderLinkOrButton = () => {
@@ -39,7 +71,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         <NavLink
           to={items.url}
           className="px-4 font-sub-heading tracking-wider text-xl hover:text-nav-hover focus:text-nav-hover"
-          onClick={closeMenu}
+          onClick={(e) => handleMenuClick(e, items.url)}
         >
           <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
         </NavLink>
@@ -65,11 +97,12 @@ const MenuItems: React.FC<MenuItemsProps> = ({
               <Trans>{t(items.title)}</Trans>
               {items.icon && (
                 <div className="flex items-center">
-                  <Arrow navigationMenuOpen={false} />
+                  <Arrow navigationMenuOpen={dropdown} />
                 </div>
               )}
             </button>
-            <DropdownMenu
+
+            <DropdownMenuMobile
               submenus={
                 isTabletOrMobile && items.title === 'portfolio'
                   ? [{ title: t('linkPortfolio'), url: '/portfolio' }, ...items.subMenu]

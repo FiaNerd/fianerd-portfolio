@@ -10,7 +10,7 @@ interface IProps {
   onMouseLeave?: () => void 
 }
 
-const DropdownMenu = ({
+const DropdownMenuMobile = ({
   submenus,
   dropdown,
   depthLevel,
@@ -18,6 +18,7 @@ const DropdownMenu = ({
   onMouseEnter,
   onMouseLeave,
 }: IProps) => {
+  
   // Increase the depth level by 1 for nested dropdowns
   const newDepthLevel = depthLevel + 1;
 
@@ -48,4 +49,4 @@ const DropdownMenu = ({
   );
 };
 // text-text-primary hover:bg-accent-secondary dark:hover:bg-bg-secondary 
-export default DropdownMenu;
+export default DropdownMenuMobile;
