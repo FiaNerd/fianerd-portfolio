@@ -40,9 +40,9 @@ const Skills = () => {
           title="Other Skills"
           dot="."
           children="Other technical and soft skills."
-          className="text-[#bc3a08] dark:text-[#48a07a] bg-[#fff5d7] dark:bg-[#1b0909]"
+          className="text-[#bc3a08] dark:text-[#69864e] bg-[#fff5d7] dark:bg-[#1b0909]"
           light="text-[#bc3a08] bg-[#fff5d7]"
-          dark="dark:text-[#48a07a] dark:bg-[#1b0909]"
+          dark="dark:text-[#69864e] dark:bg-[#1b0909]"
           sticky
         />
         <OtherSkills />

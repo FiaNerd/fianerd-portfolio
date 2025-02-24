@@ -50,7 +50,7 @@ const HomePage = () => {
           className="text-[#ca5b87] top-0 dark:text-accent-primary"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
           light="bg-accent-secondary"
-          dark="dark:bg-stone-950"
+          dark="dark:bg-[#1d0b00]"
           sticky
         />
         <AboutMe />

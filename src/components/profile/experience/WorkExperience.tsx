@@ -28,7 +28,7 @@ const WorkExperience = () => {
           <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
           <div className="hidden md:block absolute h-full border-2 lg:border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justif y-between flex-row-reverse items-center w-full left-timeline">
                 <div className="order-1 lg:w-5/12"></div>
                   <div className="order-1 md:w-5/12 px-1 mdpy-4 text-left">
                     <p className="mb-3 text-bg-secondary dark:text-text-accent">{t("dateWorkBrutal")}</p>

@@ -20,12 +20,12 @@ const WebSkills = () => {
       <div 
         className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8"
       >
-        <h2 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
+        <h2 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#489c80] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
           {t('webSkills.webbDev')}
         </h2>
 
         <div className="items-center md:row-start-2 md:col-start-1">
-          <h2 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#69864e] leading-10 font-bold text-center md:leading-[3rem]">
+          <h2 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#489c80] leading-10 font-bold text-center md:leading-[3rem]">
             {t('webSkills.titleCode')}
           </h2>
           <h3 className="text-text-secondary font-light leading-3 text-center">
@@ -34,7 +34,7 @@ const WebSkills = () => {
         </div>
         
         <div className="items-center md:row-start-2 md:col-start-2">
-          <h1 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#69864e] font-bold text-center mb-2">
+          <h1 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#489c80] font-bold text-center mb-2">
             {t("webSkills.titleWeb")}
           </h1>
           <h3 className="text-center text-text-secondary not-italic font-light">
@@ -48,14 +48,14 @@ const WebSkills = () => {
       >
         {/* Vertical Text Column */}
         <div className="hidden lg:flex items-center justify-center"> {/* Added pr-8 for padding-right */}
-          <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#69864e] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
+          <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#489c80] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t('webSkills.webbDev')}
           </h1>
         </div>
 
         {/* Middle Column */}
         <div className="sm:col-span-1 order-last lg:order-none md:pr-8">
-          <p className="italic font-medium underline decoration-wavy text-center underline-offset-8 derocation-text-secondary dark:decoration-text-secondary text-md md:text-2xl md:mb-8 text-[#535437] dark:text-[#69864e]">
+          <p className="italic font-medium underline decoration-wavy text-center underline-offset-8 derocation-text-secondary dark:decoration-text-secondary text-md md:text-2xl md:mb-8 text-[#535437] dark:text-[#489c80]">
             {t('webSkills.textTitleDevGoal')}
           </p>
           <h5 className="text-text-secondary not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('webSkills.titleBE') }}></h5>
@@ -67,7 +67,7 @@ const WebSkills = () => {
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('webSkills.textVue') }}></p>
           <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('webSkills.textCMS') }}></p>
           <p className="text-text-primary mb-12" dangerouslySetInnerHTML={{ __html: t('webSkills.textAzure') }}></p>
-          <p className="text-text-secondary font-sub-heading outline-dashed outline-2 outline-text-secondary dark:outline-[#69864e] outline-offset-4 italic font-normal py-2 px-4 p-2 rounded">
+          <p className="text-text-secondary font-sub-heading outline-dashed outline-2 outline-text-secondary dark:outline-text-[#489c80] outline-offset-4 italic font-normal py-2 px-4 p-2 rounded">
             {t('webSkills.textGoal')}
           </p>
         </div>
