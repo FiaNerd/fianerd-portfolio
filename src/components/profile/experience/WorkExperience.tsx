@@ -47,7 +47,7 @@ const WorkExperience = () => {
                   {/* Vertical Line */}
                   <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
                   </div>
                 </div>
 
@@ -70,7 +70,7 @@ const WorkExperience = () => {
                   {/* Vertical Line */}
                   <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
                   </div>
                 </div>
 
@@ -95,15 +95,15 @@ const WorkExperience = () => {
                   {/* Vertical Line */}
                   <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary bg-bg-secondary dark:bg-[#aa7339]"></div>
                   </div>
                 </div>
 
               <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 md:w-5/12"></div>
                   <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
-                    <p className="mb-3 text-bg-secondary dark:dark:text-[#aa7339]">{t("dateWorkAllaTiders")}</p>
-                    <h4 className="mb-0 font-bold  text-bg-secondary dark:dark:text-[#aa7339]">{t("titleAllaTiders")}</h4>
+                    <p className="mb-3 text-bg-secondary dark:text-[#aa7339]">{t("dateWorkAllaTiders")}</p>
+                    <h4 className="mb-0 font-bold  text-bg-secondary dark:text-[#aa7339]">{t("titleAllaTiders")}</h4>
                     <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                       {t("workTitleAllaTiders")}
                     </p>
@@ -116,7 +116,7 @@ const WorkExperience = () => {
                   {/* Vertical Line */}
                   <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
                   </div>
                 </div>
 
@@ -124,8 +124,8 @@ const WorkExperience = () => {
                 <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                   <div className="order-1 md:w-5/12"></div>
                     <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
-                      <p className="mb-3 text-bg-secondary dark:dark:text-[#aa7339]">{t("dateWorkSlowfashion")}</p>
-                      <h4 className="mb-0 font-bold text-bg-secondary dark:dark:text-[#aa7339]">{t("titleSlowfashion")}</h4>
+                      <p className="mb-3 text-bg-secondary dark:text-[#aa7339]">{t("dateWorkSlowfashion")}</p>
+                      <h4 className="mb-0 font-bold text-bg-secondary dark:text-[#aa7339]">{t("titleSlowfashion")}</h4>
                       <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                         {t("workTitleSlowfashion")}
                       </p>
@@ -140,7 +140,7 @@ const WorkExperience = () => {
                   {/* Vertical Line */}
                   <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
                   </div>
                 </div>
 
@@ -148,8 +148,8 @@ const WorkExperience = () => {
                   <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
                     <div className="order-1 md:w-5/12"></div>
                       <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
-                        <p className="mb-3  text-bg-secondary dark:dark:text-[#aa7339]">{t("dateWorkPrintagon")}</p>
-                        <h4 className="mb-0 font-bold text-bg-secondary dark:dark:text-[#aa7339]">{t("titlePrintagon")}</h4>
+                        <p className="mb-3  text-bg-secondary dark:text-[#aa7339]">{t("dateWorkPrintagon")}</p>
+                        <h4 className="mb-0 font-bold text-bg-secondary dark:text-[#aa7339]">{t("titlePrintagon")}</h4>
                         <p className=" leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                           {t("workTitlePrintagon")}
                         </p>
@@ -162,7 +162,7 @@ const WorkExperience = () => {
                   {/* Vertical Line */}
                   <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary bg-bg-secondary dark:bg-[#aa7339]"></div>
                   </div>
                 </div>
 
@@ -170,8 +170,8 @@ const WorkExperience = () => {
                   <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
               <div className="order-1 md:w-5/12"></div>
                   <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
-                    <p className="mb-3 text-bg-secondary dark:dark:text-[#aa7339]">{t("dateWorkStumpen")}</p>
-                    <h4 className="mb-0 font-bold text-bg-secondary dark:dark:text-[#aa7339]">{t("titleStumpen")}</h4>
+                    <p className="mb-3 text-bg-secondary dark:text-[#aa7339]">{t("dateWorkStumpen")}</p>
+                    <h4 className="mb-0 font-bold text-bg-secondary dark:text-[#aa7339]">{t("titleStumpen")}</h4>
                     <p className=" leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                       {t("workTitleStumpen")}
                     </p>

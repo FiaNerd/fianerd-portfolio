@@ -5,11 +5,9 @@ import PortfolioCard from './PortfolioCard';
 const BackendPortfolio = () => {
   const { t } = useTranslation("portfolio");
 
-  console.log("portfolio", t("backendPortfolioSection.backendItems", { returnObjects: true }));
 
   const backendItems = t('backendPortfolioSection.backendItems', { returnObjects: true });
 
-  console.log('Backend Items:', backendItems)
 
   return (
     <section className="max-w-screen-xl mx-auto px-4">

@@ -126,7 +126,7 @@ const Education = () => {
                 </div>
 
 
-                <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                   <div className="order-1 md:w-5/12"></div>
                     <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
                       <p className="mb-3 text-text-accent dark:text-[#b5685c]">{t("dateWedesign")}</p>
@@ -142,15 +142,6 @@ const Education = () => {
                       </p>
                     </div>
                   </div>
-
-                  <div className="relative md:hidden flex flex-col items-center">
-                  {/* Vertical Line */}
-                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
-                    {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
-                  </div>
-                </div>
-
               </div>
 
           {/* TODO: Add a small litle picture her under the line */}

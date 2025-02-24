@@ -28,7 +28,6 @@ const Title = ({
   light,
   dark,
 }: IProps) => {
-  console.log(`Final classes: ${className} ${light} ${dark}`);
 
   const stickyClass = sticky ? "sticky left-0 top-0 z-20 mb-8 mb:20" : "";
 
