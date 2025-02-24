@@ -8,7 +8,7 @@ const WorkExperience = () => {
     const navigate = useNavigate();
     
   return ( 
-    <section className="md:py-8">
+    <section className="mb-12 md:py-8">
       <div className="max-w-screen-xl	mx-auto px-4 flex flex-col items-start lg:flex-row md:mb-20">
         <div className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
           <p className="text-bg-secondary dark:text-text-accent uppercase -mb-2 tracking-loose">{t("titleWorkingAction")}</p>
@@ -43,9 +43,9 @@ const WorkExperience = () => {
                   </div>
                 </div>
 
-                <div className="relative lg:hidden flex flex-col items-center">
+                <div className="relative md:hidden flex flex-col items-center">
                   {/* Vertical Line */}
-                  <div className="w-[0.18em] bg-text-primary h-16 relative opacity-80">
+                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
                   </div>
@@ -66,9 +66,9 @@ const WorkExperience = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative lg:hidden flex flex-col items-center">
+              <div className="relative md:hidden flex flex-col items-center">
                   {/* Vertical Line */}
-                  <div className="w-[0.18em] bg-text-primary h-16 relative opacity-80">
+                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
                   </div>
@@ -91,9 +91,9 @@ const WorkExperience = () => {
                   </div>
                 </div>
 
-                <div className="relative lg:hidden flex flex-col items-center">
+                <div className="relative md:hidden flex flex-col items-center">
                   {/* Vertical Line */}
-                  <div className="w-[0.18em] bg-text-primary h-16 relative opacity-80">
+                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
                   </div>
@@ -112,9 +112,9 @@ const WorkExperience = () => {
                   </div>
               </div>
 
-              <div className="relative lg:hidden flex flex-col items-center">
+              <div className="relative md:hidden flex flex-col items-center">
                   {/* Vertical Line */}
-                  <div className="w-[0.18em] bg-text-primary h-16 relative opacity-80">
+                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
                   </div>
@@ -131,14 +131,14 @@ const WorkExperience = () => {
                       </p>
                       <p className="leading-snug text-opacity-100" dangerouslySetInnerHTML={{ __html: t('descriptionProjectSlowfashion')}}>
                       </p>
-                      <p className="leading-snug text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techSlowfashion')}}>
+                      <p className="mb-0 md:mb-8 leading-snug text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techSlowfashion')}}>
                       </p>
                     </div>
                   </div>
 
-                  <div className="relative lg:hidden flex flex-col items-center">
+                  <div className="relative md:hidden flex flex-col items-center">
                   {/* Vertical Line */}
-                  <div className="w-[0.18em] bg-text-primary h-16 relative opacity-80">
+                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
                   </div>
@@ -158,9 +158,9 @@ const WorkExperience = () => {
                       </div>
                   </div>
 
-                  <div className="relative lg:hidden flex flex-col items-center">
+                  <div className="relative md:hidden flex flex-col items-center">
                   {/* Vertical Line */}
-                  <div className="w-[0.18em] bg-text-primary h-16 relative opacity-80">
+                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
                     {/* Dot in the middle  of the line*/}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-bg-secondary rounded-full border-2 border-text-primary"></div>
                   </div>
