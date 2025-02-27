@@ -51,7 +51,7 @@ const HomePage = () => {
           className="text-[#ca5b87] top-0 dark:text-accent-primary"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
           light="bg-accent-secondary"
-          dark="dark:bg-[#1d0b00]"
+          dark="dark:bg-[#462208]"
           sticky
         />
         <AboutMe />
@@ -98,7 +98,7 @@ const HomePage = () => {
           subHeadingClassName="text-hover-text px-4"
           sticky
           light="text-[#b67076] bg-[#3e3a19]"
-          dark="dark:text-accent-primary dark:bg-stone-950"
+          dark="dark:text-[#931602] dark:bg-[#e68619]"
         />
         <Hobbies />
       </section>

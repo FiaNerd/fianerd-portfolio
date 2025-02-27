@@ -43,7 +43,7 @@ const PortfolioDetailsItems = ({
 
   return (
     <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 lg:space-y-8">
-      <div className="border-r-2 border-[#3C2F2]">
+      <div className="border-r-2 border-[#3C2F2F]">
         <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">{title}</h1>
         <p className="text-[#695050]">{titleDescription}</p>
 
