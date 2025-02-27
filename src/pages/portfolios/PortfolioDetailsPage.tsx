@@ -50,12 +50,15 @@ const PortfolioDetailsPage = () => {
     return <div>Loading...</div>;
   }
 
+  
+
   return (
-      <div
+      <div 
         style={{
           paddingTop: `${headerHeight}px`,
           transition: "padding-top 0.3s ease",
         }}
+        className="bg-blend-multiply"
       >
         <div className="mb-8">
             {portfolioItems.map((item) => (
@@ -80,7 +83,7 @@ const PortfolioDetailsPage = () => {
 
 
       {portfolioItems && portfolioItems.map((item) => (
-        <div id="portfolio-details" key={item.urlTitle} className="py-12">
+        <div id="portfolio-details" key={item.urlTitle} className="py-12 max-w-screen-xl mx-auto px-4]">
           <PortfolioDetailsItems
             title={item.title}
             titleDescription={item.titleDescription}

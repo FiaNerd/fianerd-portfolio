@@ -1,6 +1,4 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '@iconify/react';
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
@@ -33,31 +31,31 @@ const SocialMediaAndContact = () => {
 
 
     {/* Icons Section */}
-      <div className="flex flex-col justify-end space-y-2 pb-20 md:pb-12 text-[0.8em] md:text-[0.9em] mx-auto z-1000">
+      <div className="flex flex-col items-center justify-end space-y-2 pb-20  md:text-[1.5em] mx-auto z-1000">
         {/* Icons Section */}
-        <div className="flex flex-col space-y-3"> 
+        <div className="flex flex-col space-y-3 "> 
           <NavLink
             to="https://github.com/FiaNerd"
             target="_blank"
             className="flex flex-col cursor-pointer hover:opacity-70">
-            <FontAwesomeIcon icon={faGithub} />
+            <Icon icon="jam:github" className='mx-auto text-3xl'/>
           </NavLink>
 
-          <div className='inline-block  min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
+          <div className='inline-block  min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
           
           <NavLink
             to="https://www.linkedin.com/in/sofia-mattiasson-fianerd/"
             target="_blank"
             className="flex flex-col cursor-pointer hover:opacity-70">
-            <FontAwesomeIcon icon={faLinkedin} />
+              <Icon icon="bi:linkedin" className='mx-auto text-2xl'/>
           </NavLink>
 
-          <div className='inline-block  min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
+          <div className='inline-block  min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
           
           <NavLink
             to="mailto:fianerd.developer@gmail.com"
             className="flex flex-col cursor-pointer hover:opacity-70">
-            <FontAwesomeIcon icon={faEnvelope} />
+            <Icon icon="streamline:mail-send-envelope-solid" className='mx-auto text-2xl'/>
           </NavLink>
         </div>
 

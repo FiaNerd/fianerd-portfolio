@@ -35,6 +35,7 @@ const HomePage = () => {
       }}
       className="bg-blend-multiply"
     >
+     
       {/* Hero Section */}
       <section id="home" className="relative items-center ">
         <HeroSection />

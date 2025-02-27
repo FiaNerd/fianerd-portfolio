@@ -42,9 +42,8 @@ const PortfolioDetailsItems = ({
   const { t } = useTranslation("portfolio");
 
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 lg:space-y-8">
-
-      <div className="border-r-2 border-[#3C2F2F]">
+    <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 lg:space-y-8">
+      <div className="border-r-2 border-[#3C2F2]">
         <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">{title}</h1>
         <p className="text-[#695050]">{titleDescription}</p>
 
@@ -61,11 +60,12 @@ const PortfolioDetailsItems = ({
 
         <div className="border border-[#3C2F2F]"></div>
 
-        <div className="flex justify-center py-2 mb-8 lg:mb-0">
+        <div className="flex justify-center py-2 mb-8 lg:mb-0 mx-auto">
           <div className="border-r-2 border-[#3C2F2F]">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">
               {linkTitle}
             </p>
+
             <ul className="flex items-center space-x-4 justify-center px-8">
               {links &&
                 links.map((item: any, index: number) => (
@@ -84,11 +84,11 @@ const PortfolioDetailsItems = ({
             </ul>
           </div>
 
-          <div className="px-8 mb-12 md:mb-0">
+          <div className="mb-12 md:mb-0 mx-auto">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">{techTitle}</p>
-            <ul className="items-center pb-4 grid grid-cols-3 justify-center gap-8">
+            <ul className="items-center pb-4 grid grid-cols-3 md:grid-cols-5 justify-center gap-8">
               {tech.map((item: any, index: number) => (
-                <li key={index} className="items-center">
+                <li key={index}>
                   <div className="relative">
                     <Icon
                       icon={item.icon}
@@ -109,7 +109,7 @@ const PortfolioDetailsItems = ({
 
       <div className="flex flex-col lg:flex-row gap-4 w-full mb-12" style={{ marginTop: 0 }}>
         <div
-          className="sidebar h-auto lg:w-12 self-stretch bg-[#4b8668] dark:bg-accent-secondary lg:ml-4 flex justify-center items-center "
+          className="sidebar h-auto lg:w-20 self-stretch bg-[#4b8668] dark:bg-accent-secondary lg:ml-4 flex justify-center items-center "
           style={{ marginTop: 0, position: 'relative'}}
         >
           <div className="flex flex-row lg:flex-col w-full items-center justify-evenly h-full">
