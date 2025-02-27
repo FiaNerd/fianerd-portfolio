@@ -27,13 +27,13 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
   return (
     <>
       {/* Responsive Grid */}
-      <div className="grid grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg ">
         {images?.map((image: { src: string; alt: string; span?: string }, index: number) => (
           <div
             key={index}
             className={`relative cursor-zoom-in rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105
-              ${image.span === "tall" ? "row-span-2 h-[300px]" : ""}
-              ${image.span === "wide" ? "row-span-1 h-[150px]" : ""}
+              ${image.span === "tall" ? "row-span-2 h-[150px] md:h-[17em]" : ""}
+              ${image.span === "wide" ? "row-span-1 h-[150px]  md:h-[8em]" : ""}
             `}
             onClick={() => openModal(image)}
           >
