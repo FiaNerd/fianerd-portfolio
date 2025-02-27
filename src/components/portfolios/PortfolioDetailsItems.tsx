@@ -42,7 +42,7 @@ const PortfolioDetailsItems = ({
   const { t } = useTranslation("portfolio");
 
   return (
-    <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 lg:space-y-8">
+    <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 px-4 lg:space-y-8 mb-12 md:mb-20">
       <div className="border-r-2 border-[#3C2F2F]">
         <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">{title}</h1>
         <p className="text-[#695050]">{titleDescription}</p>
@@ -109,7 +109,7 @@ const PortfolioDetailsItems = ({
 
       <div className="flex flex-col lg:flex-row gap-4 w-full mb-12" style={{ marginTop: 0 }}>
         <div
-          className="sidebar h-auto lg:w-20 self-stretch bg-[#4b8668] dark:bg-accent-secondary lg:ml-4 flex justify-center items-center "
+          className="sidebar h-auto lg:w-[2.7em] self-stretch bg-[#4b8668] dark:bg-accent-secondary lg:ml-4 flex justify-center items-center "
           style={{ marginTop: 0, position: 'relative'}}
         >
           <div className="flex flex-row lg:flex-col w-full items-center justify-evenly h-full">
@@ -125,7 +125,7 @@ const PortfolioDetailsItems = ({
           </div>
         </div>
 
-        <PortfolioImageDetails images={images} />
+        <PortfolioImageDetails images={images || []} />
       </div>
     </div>
   );

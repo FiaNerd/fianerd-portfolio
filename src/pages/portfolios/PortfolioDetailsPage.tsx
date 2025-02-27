@@ -83,7 +83,7 @@ const PortfolioDetailsPage = () => {
 
 
       {portfolioItems && portfolioItems.map((item) => (
-        <div id="portfolio-details" key={item.urlTitle} className="py-12 max-w-screen-xl mx-auto px-4]">
+        <div id="portfolio-details" key={item.urlTitle} className="py-12 max-w-screen-xl mx-auto px-4">
           <PortfolioDetailsItems
             title={item.title}
             titleDescription={item.titleDescription}
