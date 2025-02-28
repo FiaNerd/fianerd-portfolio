@@ -16,7 +16,6 @@ const SvgWaves = ({ colorLight, colorDark }: SvgWavesProps) => {
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 1440 100"
     width="100%" 
-    height="auto"
   >
     <path
       fill={isDark ? colorDark : colorLight}

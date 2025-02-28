@@ -31,6 +31,7 @@ export default {
         '100': '100',
       },
       screens: {
+        xs: '480px',
         sm: '640px',  
         md: '768px', 
         lg: '1024px',
@@ -42,7 +43,16 @@ export default {
         8: '8',
         9: '9',
         10: '10',
-      }
+      },
+      keyframes: {
+        fade: {
+          'from': { opacity: 0.4 },
+          'to': { opacity: 1 },
+        },
+      },
+      animation: {
+        fade: 'fade 1.5s ease-in-out',
+      },
     },
   },
   plugins: [],

@@ -8,9 +8,9 @@ export const useSidebarWidth = () => {
       const sidebar = document.querySelector('.sidebar');
       if (sidebar) {
         const width = sidebar.getBoundingClientRect().width;
-        setSidebarWidth(width > 37 ? 50 : 37);
+        setSidebarWidth(width > 37 ? 55 : 37);
       } else {
-        setSidebarWidth(window.innerWidth >= 768 ? 50 : 37);
+        setSidebarWidth(window.innerWidth >= 768 ? 55 : 37);
       }
     };
 
