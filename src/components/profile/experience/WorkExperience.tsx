@@ -44,7 +44,7 @@ const WorkExperience = () => {
                   </div>
                 </div>
 
-                <SvgArrowLine colorDark=" #b0c3c6" colorLight="#aa7339" direction="right" className="items-center md:hidden"/>
+                  <SvgArrowLine colorDark="#b0c3c6" colorLight="#aa7339" direction="right" className="items-center md:hidden" />
 
               <div className="md:mb-8 flex justify-between items-center w-full left-timeline ">
                 <div className="order-1 md:w-5/12"></div>
