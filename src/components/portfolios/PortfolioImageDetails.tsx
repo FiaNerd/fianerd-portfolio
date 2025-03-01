@@ -32,8 +32,8 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
           <div
             key={index}
             className={`relative cursor-zoom-in rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105
-              ${image.span === "tall" ? "row-span-2 h-[150px] md:h-[17em]" : ""}
-              ${image.span === "wide" ? "row-span-1 h-[150px]  md:h-[8em]" : ""}
+              ${image.span === "tall" ? "row-span-2 h-[150px] md:h-[17.6em] lg:h-[18.5em]" : ""}
+              ${image.span === "wide" ? "row-span-1 h-[150px]  md:h-[8em] lg:h-[8.5em]" : ""}
             `}
             onClick={() => openModal(image)}
           >
