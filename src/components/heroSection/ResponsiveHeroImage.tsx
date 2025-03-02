@@ -13,7 +13,7 @@ const ResponsiveHeroImage = () => {
   const isDarkMode = currentTheme === "dark";
 
   return (
-    <picture>
+    <picture className=" w-full h-full">
       {/* Mobile image */}
       <source
         media="(max-width: 767px)"
