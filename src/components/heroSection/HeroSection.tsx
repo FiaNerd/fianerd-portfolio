@@ -7,7 +7,7 @@ import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-Resume-sv.pdf" : "/files/SofiaMattiasson-CV-en.pdf";
+  const resumePath = i18n.language === "sv" ? "/assets/files/SofiaMattiasson-Resume-sv.pdf" : "/assets/files/SofiaMattiasson-CV-en.pdf";
   const resumeName = i18n.language === "sv" ? "SofiaMattiasson-Resume-sv.pdf" : "SofiaMattiasson-CV-en.pdf";
   const navigate = useNavigate();
 
@@ -29,13 +29,11 @@ const HeroSection = () => {
             <p className="text-[#350712] dark:text-text-primary text-sm sm:text-base md:text-md mb-4 lg:mb-8">
               {t("text")}
             </p>
-
             <div className="flex flex-col md:flex-row gap-8 w-full">
               <Button className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
                 <Icon icon="line-md:cloud-alt-download" width="30" height="30" /> 
                 <a href={resumePath} download={resumeName}>{t("ctaButtonCV")}</a>
               </Button>
-              
               <Button 
                 onClick={() => navigate('/portfolio')} 
                 className="flex flex-row gap-2 justify-center items-center border-2 border-[#350712] bg-[#350712] dark:bg-transparent dark:border-btn-bg text-bg-primary dark:text-btn-bg tracking-wide font-semibold hover:bg-bg-hover hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover"

@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     lng: localStorage.getItem('i18nextLng') || navigator.language || 'en-US',
-    fallbackLng: ['sv', 'en-US'],
+    fallbackLng: ['sv-SE', 'en-US'],
     interpolation: {
       escapeValue: false,
     },
@@ -45,4 +45,5 @@ i18n
     },
     debug: true,
   })
+
 export default i18n
