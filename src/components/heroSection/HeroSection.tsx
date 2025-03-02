@@ -7,7 +7,7 @@ import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const resumePath = i18n.language === "en" ? "/files/SofiaMattiasson-Resume-en.pdf" : "/files/SofiaMattiasson-CV-sv.pdf";
+  const resumePath = i18n.language === "en" ? "SofiaMattiasson-Resume-en.pdf" : "SofiaMattiasson-CV-sv.pdf";
   const resumeName = i18n.language === "en" ? "SofiaMattiasson-Resume-en.pdf" : "SofiaMattiasson-CV-sv.pdf";
   const navigate = useNavigate();
 
