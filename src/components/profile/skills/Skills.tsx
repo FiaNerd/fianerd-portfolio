@@ -37,9 +37,9 @@ const Skills = () => {
 
       <section id="other-skills" className="top-0 left-0">
         <Title
-          title="Other Skills"
+          title={t("otherSkills.otherSkillsTitle")}
           dot="."
-          children="Other technical and soft skills."
+          children={t("otherSkills.subTitleOtherSkills")}
           className="text-[#bc3a08] dark:text-[#69864e] bg-[#fff5d7] dark:bg-[#1b0909]"
           light="text-[#bc3a08] bg-[#fff5d7]"
           dark="dark:text-[#69864e] dark:bg-[#1b0909]"

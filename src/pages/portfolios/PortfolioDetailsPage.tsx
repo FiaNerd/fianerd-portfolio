@@ -50,12 +50,15 @@ const PortfolioDetailsPage = () => {
     return <div>Loading...</div>;
   }
 
+  
+
   return (
-      <div
+      <div 
         style={{
           paddingTop: `${headerHeight}px`,
           transition: "padding-top 0.3s ease",
         }}
+        className="bg-blend-multiply mb-8"
       >
         <div className="mb-8">
             {portfolioItems.map((item) => (
@@ -71,7 +74,7 @@ const PortfolioDetailsPage = () => {
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-[#71c79c] bg-transparent w-auto px-2 py-1 "
+          className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
           >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
           {t("goBack")}
@@ -80,7 +83,7 @@ const PortfolioDetailsPage = () => {
 
 
       {portfolioItems && portfolioItems.map((item) => (
-        <div id="portfolio-details" key={item.urlTitle} className="py-12">
+        <div id="portfolio-details" key={item.urlTitle} className="py-12 max-w-screen-xl mx-auto px-4">
           <PortfolioDetailsItems
             title={item.title}
             titleDescription={item.titleDescription}

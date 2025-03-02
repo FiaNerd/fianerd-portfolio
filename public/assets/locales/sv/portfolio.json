@@ -117,27 +117,33 @@
         "images": [
             {
                 "src": "/assets/images/portfolio/front-end/bb/brutal-detail-hero.jpg",
-                "alt": "Brutal Detalj Hero"
+                "alt": "Brutal Detalj Hero",
+                "span": "tall"
             },
             {
                 "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-home.jpg",
-                "alt": "Brutal Mobil Hem.jpg"
+                "alt": "Brutal Mobil Hem.jpg",
+                "span": "wide"
             },
             {
                 "src": "/assets/images/portfolio/front-end/bb/brutal-details.jpg",
-                "alt": "TMDB Mobil Hero"
+                "alt": "Brutal detalj sida",
+                "span": "tall"
             },
             {
                 "src": "/assets/images/portfolio/front-end/bb/brutal-main.jpg",
-                "alt": "Brutal Detalj"
+                "alt": "Brutal Detalj",
+                "span": "tall"
             },
             {
                 "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-main.jpg",
-                "alt": "Brutal Mobil Main"
+                "alt": "Brutal Mobil Main",
+                "span": "tall"
             },
             {
                 "src": "/assets/images/portfolio/front-end/bb/brutal-hero-detail.jpg",
-                "alt": "Brutal Hero Detail"
+                "alt": "Brutal Hero Detail",
+                "span": "wide"
             }
         ]
       },
@@ -201,27 +207,33 @@
                 "images": [
                     {
                         "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-top-main.jpg",
-                        "alt": "TMDB Topp Main"
+                        "alt": "TMDB Topp Main",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-deails-movie.jpg",
-                        "alt": "TMDB Detalj Film"
+                        "alt": "TMDB Detalj Film",
+                        "span": "wide"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
-                        "alt": "TMDB Mobil Hero"
+                        "alt": "TMDB Mobil Hero",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/theMovieDb/school-tmdb-mobile-main.jpg",
-                        "alt": "TMDB Mobil Main"
+                        "alt": "TMDB Mobil Main",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-deails-movie.jpg",
-                        "alt": "Mobile Detalj Film"
+                        "alt": "Mobile Detalj Film",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-hero.jpg",
-                        "alt": "tmdb-hero.jpg"
+                        "alt": "tmdb-hero.jpg",
+                        "span": "Wide"
                     }
                 ]
             },
@@ -281,27 +293,33 @@
                 "images": [
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
-                        "alt": "MSB landskap"
+                        "alt": "MSB landskap",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-prototyp.jpg",
-                        "alt": "MSB hero figma prototyp"
+                        "alt": "MSB hero figma prototyp",
+                        "span": "wide"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-firetruck-orginal-photoshop.jpg",
-                        "alt": "MSB my image vs orginal image"
+                        "alt": "MSB my image vs orginal image",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-high.jpg",
-                        "alt": "MSB infromations kort"
+                        "alt": "MSB infromations kort",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-card.jpg",
-                        "alt": "MSB kort main"
+                        "alt": "MSB kort main",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-fireman-cards.jpg",
-                        "alt": "MSB brandman kort"
+                        "alt": "MSB brandman kort",
+                        "span": "wide"
                     }
                 ]
             }
@@ -366,27 +384,33 @@
                 "images": [
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
-                        "alt": "Foto App Code"
+                        "alt": "Foto App Code",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
-                        "alt": "Foto App code"
+                        "alt": "Foto App code",
+                        "span": "wide"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
-                        "alt": "Foto App code"
+                        "alt": "Foto App code",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
-                        "alt": "Foto App webläsare"
+                        "alt": "Foto App webläsare",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
-                        "alt": "Foto App postman"
+                        "alt": "Foto App postman",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
-                        "alt": "Foto App prisma & SQL"
+                        "alt": "Foto App prisma & SQL",
+                        "span": "wide"
                     }
                 ]
             },
@@ -436,27 +460,33 @@
                 "images": [
                     {
                         "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
-                        "alt": "Slowashion mobil app"
+                        "alt": "Slowashion mobil app",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
-                        "alt": "Slowfashion app"
+                        "alt": "Slowfashion app",
+                        "span": "wide"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
-                        "alt": "Slowfashion kort"
+                        "alt": "Slowfashion kort",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
-                        "alt": "Slowfashion logo"
+                        "alt": "Slowfashion logo",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
-                        "alt": "Slowfashion kort kläder"
+                        "alt": "Slowfashion kort kläder",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
-                        "alt": "Slowfashion footer"
+                        "alt": "Slowfashion footer",
+                        "span": "wide"
                     }
                 ]
             }
@@ -527,27 +557,33 @@
                     "images": [
                         {
                             "src": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-                            "alt": "Printagon Logga in"
+                            "alt": "Printagon Logga in",
+                            "span": "tall"
                         },
                         {
                             "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
-                            "alt": "Printagon pausade jobb"
+                            "alt": "Printagon pausade jobb",
+                            "span": "wide"
                         },
                         {
                             "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
-                            "alt": "Printagon pausade jobb"
+                            "alt": "Printagon pausade jobb",
+                            "span": "tall"
                         },
                         {
                             "src": "/assets/images/portfolio/fullstack/pg/pg-trello.jpg",
-                            "alt": "Printagon trello"
+                            "alt": "Printagon trello",
+                            "span": "tall"
                         },
                         {
                             "src": "/assets/images/portfolio/fullstack/pg/pg-register-role.jpg",
-                            "alt": "Printagon registera rullar"
+                            "alt": "Printagon registera rullar",
+                            "span": "tall"
                         },
                         {
                             "src": "/assets/images/portfolio/fullstack/pg/pg-joblist.jpg",
-                            "alt": "Printagon jobb lista"
+                            "alt": "Printagon jobb lista",
+                            "span": "wide"
                         }
                     ]
             },
@@ -606,27 +642,33 @@
                 "images": [
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-deploy.jpg",
-                        "alt": "Prodigies deploya app"
+                        "alt": "Prodigies deploya app",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/prdogies-main.jpg",
-                        "alt": "Prodigies main"
+                        "alt": "Prodigies main",
+                        "span": "wide"
                     },
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/searchCityScreen_figma.jpg",
-                        "alt": "Prodigies sök funktion figma"
+                        "alt": "Prodigies sök funktion figma",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/prodiges-filtering-search.jpg",
-                        "alt": "Prodigies filtera & sök"
+                        "alt": "Prodigies filtera & sök",
+                        "span": "tall"
                     },
                     {
-                        "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-högskole.jpg",
-                        "alt": "Prodigies högskole sida"
+                        "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-högskole.jpg",
+                        "alt": "Prodigies högskole sida",
+                        "span": "tall"
                     },
                     {
                         "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-filtering.jpg",
-                        "alt": "Prodigies filtering"
+                        "alt": "Prodigies filtering",
+                        "span": "wide"
                     }
                 ]
             },
@@ -693,27 +735,33 @@
               "images": [
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-loggedin-user.jpg",
-                  "alt": "Kaffebönan inloggad användare"
+                  "alt": "Kaffebönan inloggad användare",
+                  "span": "tall"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-basket.jpg",
-                  "alt": "Kaffebönan varukorg"
+                  "alt": "Kaffebönan varukorg",
+                  "span": "wide"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-login.jpg",
-                  "alt": "Kaffebönan logga in"
+                  "alt": "Kaffebönan logga in",
+                  "span": "tall"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-mobile.jpg",
-                  "alt": "Kaffebönan mobil kort"
+                  "alt": "Kaffebönan mobil kort",
+                  "span": "tall"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-register2.jpg",
-                  "alt": "Kaffebönan registrering"
+                  "alt": "Kaffebönan registrering",
+                  "span": "tall"
                 },
                 {
                   "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-order.jpg",
-                  "alt": "Kaffebönan order"
+                  "alt": "Kaffebönan order",
+                  "span": "wide"
                 }
               ]
             }
