@@ -1,12 +1,13 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import resume from "../../../public/assets/files/Resume.pdf";
+import i18n from "../../../public/assets/i18n/i18n";
 import Button from "../partials/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
+  const resumePath = i18n.language === "en" ? "../../../public/assets/files/SofiaMattiasson-resume-eng.pdf" : "../../../public/assets/files/SofiaMattiasson-CV-swe.pdf";
   const navigate = useNavigate();
 
   return (
@@ -25,7 +26,8 @@ const HeroSection = () => {
           
             <div className="flex flex-col md:flex-row gap-8 w-full">
               <Button className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-             <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  <a href={resume} download="resume">{t("ctaButtonCV")}</a>
+             <Icon icon="line-md:cloud-alt-download" width="30" height="30" /> 
+                <a href={resumePath} download="resume">{t("ctaButtonCV")}</a>
               </Button>
               <Button 
                 onClick={() => navigate('/portfolio')} 
