@@ -30,10 +30,11 @@ const HeroSection = () => {
               {t("text")}
             </p>
             <div className="flex flex-col md:flex-row gap-8 w-full">
-              <Button className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-                <Icon icon="line-md:cloud-alt-download" width="30" height="30" /> 
+              {/* <Button className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
+                <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  */}
                 <a href={resumePath} download={resumeName}>{t("ctaButtonCV")}</a>
-              </Button>
+              {/* </Button> */}
+
               <Button 
                 onClick={() => navigate('/portfolio')} 
                 className="flex flex-row gap-2 justify-center items-center border-2 border-[#350712] bg-[#350712] dark:bg-transparent dark:border-btn-bg text-bg-primary dark:text-btn-bg tracking-wide font-semibold hover:bg-bg-hover hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover"
