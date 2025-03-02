@@ -27,6 +27,12 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
 
   return (
     <>
+      <style jsx>{`
+        .lg-backdrop {
+          background-color: rgba(0, 0, 0, 0.95) !important;
+        }
+      `}</style>
+
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg">
         {images?.map((image, index) => (
