@@ -8,6 +8,7 @@ import ResponsiveHeroImage from "./ResponsiveHeroImage";
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
   const resumePath = i18n.language === "en" ? "../../../public/assets/files/SofiaMattiasson-resume-eng.pdf" : "../../../public/assets/files/SofiaMattiasson-CV-swe.pdf";
+  const resumeName = i18n.language === "en" ? "SofiaMattiasson-resume-eng.pdf" : "SofiaMattiasson-CV-swe.pdf";
   const navigate = useNavigate();
 
   return (
@@ -27,7 +28,7 @@ const HeroSection = () => {
             <div className="flex flex-col md:flex-row gap-8 w-full">
               <Button className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
              <Icon icon="line-md:cloud-alt-download" width="30" height="30" /> 
-                <a href={resumePath} download="resume">{t("ctaButtonCV")}</a>
+                <a href={resumePath} download={resumeName}>{t("ctaButtonCV")}</a>
               </Button>
               <Button 
                 onClick={() => navigate('/portfolio')} 
