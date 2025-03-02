@@ -85,7 +85,7 @@ const PortfolioDetailsItems = ({
 
           <div className="md:mb-0 mx-auto">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">{techTitle}</p>
-            <ul className="items-center pb-4 grid px-2 grid-cols-3 md:grid-cols-5 justify-center gap-8">
+            <ul className="items-center pb-4 grid grid-cols-3 md:grid-cols-5 justify-center gap-8">
               {tech.map((item: any, index: number) => (
                 <li key={index}>
                   <div className="relative">

@@ -28,8 +28,8 @@ const SvgArrowLine = ({
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
-      height="100"
+      width="350"
+      height="95"
       viewBox="0 0 350 95"
       preserveAspectRatio="xMidYMid meet"
       className={`w-full h-full ${className}`}

@@ -1,41 +1,42 @@
-import { useState } from "react";
-import ImageSlider from "../partials/ImageSlider";
-import Modal from "../partials/Modal";
+import { useRef } from "react";
+import LightGallery from 'lightgallery/react';
+import lgZoom from 'lightgallery/plugins/zoom';
+import lgShare from 'lightgallery/plugins/share';
+import lgHash from 'lightgallery/plugins/hash';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-share.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-fullscreen.css';
+import 'lightgallery/css/lg-autoplay.css';
+import 'lightgallery/css/lg-video.css';
+import 'lightgallery/css/lg-pager.css';
 
 interface PortfolioImageDetailsProps {
   images: { src: string; alt: string; span?: string }[];
 }
 
 const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [modalTitle, setModalTitle] = useState("");
+  const lightGallery = useRef<any>(null);
 
-  const openModal = (image: { src: string; alt: string }) => {
-    setSelectedImage(image);
-    setActiveIndex(images ? images.findIndex(img => img.src === image.src) : 0);
-    setModalTitle(image.alt);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-    setIsModalOpen(false);
+  const openLightbox = (index: number) => {
+    if (lightGallery.current) {
+      lightGallery.current.openGallery(index);
+    }
   };
 
   return (
     <>
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg ">
-        {images?.map((image: { src: string; alt: string; span?: string }, index: number) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg">
+        {images?.map((image, index) => (
           <div
             key={index}
             className={`relative cursor-zoom-in rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105
               ${image.span === "tall" ? "row-span-2 h-[150px] md:h-[17.6em] lg:h-[18.5em]" : ""}
-              ${image.span === "wide" ? "row-span-1 h-[150px]  md:h-[8em] lg:h-[8.5em]" : ""}
+              ${image.span === "wide" ? "row-span-1 h-[150px] md:h-[8em] lg:h-[8.5em]" : ""}
             `}
-            onClick={() => openModal(image)}
+            onClick={() => openLightbox(index)}
           >
             <img
               className="w-full h-full object-cover rounded-lg"
@@ -48,16 +49,21 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
         ))}
       </div>
 
-      {isModalOpen && selectedImage && (
-        <Modal show={isModalOpen} onClose={closeModal} title={modalTitle}>
-          <ImageSlider
-            images={images ? images.map((image: { src: string; alt: string }) => ({ image_url: image.src, caption: image.alt })) : []}
-            active={activeIndex}
-            setActive={setActiveIndex}
-            setTitle={setModalTitle}
-          />
-        </Modal>
-      )}
+      {/* LightGallery Component */}
+      <LightGallery
+        onInit={(ref) => {
+          if (ref) {
+            lightGallery.current = ref.instance;
+          }
+        }}
+        plugins={[lgZoom, lgShare, lgHash]}
+        dynamic
+        dynamicEl={images.map((image) => ({
+          src: image.src,
+          thumb: image.src,
+          subHtml: `<h4>${image.alt}</h4>`,
+        }))}
+      />
     </>
   );
 };

@@ -9,8 +9,8 @@ const WorkExperience = () => {
     const navigate = useNavigate();
     
   return ( 
-    <section className="mb-12 md:py-8">
-      <div className="max-w-screen-xl	mx-auto px-4 flex flex-col items-start lg:flex-row md:mb-20">
+    <section className="mb-12 md:py-8 ">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row md:mb-20">
         <div className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
           <p className="text-bg-secondary dark:text-text-accent uppercase -mb-2 tracking-loose">{t("titleWorkingAction")}</p>
           <h4 className="not-italic text-bg-secondary dark:text-text-accent leading-normal md:leading-relaxed mb-2">{t("checkOut")}</h4>
@@ -29,9 +29,9 @@ const WorkExperience = () => {
           <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
           <div className="hidden md:block absolute h-full border-2 lg:border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
+              <div className="rounded-lg md:mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 lg:w-5/12"></div>
-                  <div className="order-1 md:w-5/12 px-1 mdpy-4 text-left">
+                  <div className="order-1 px-2 py-4 md:w-5/12 px-1 mdpy-4 text-left">
                     <p className="mb-3 text-bg-secondary dark:text-text-accent">{t("dateWorkBrutal")}</p>
                     <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading">{t("titleBrutal")}</h4>
                     <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
@@ -44,7 +44,9 @@ const WorkExperience = () => {
                   </div>
                 </div>
 
-                  <SvgArrowLine colorDark="#b0c3c6" colorLight="#aa7339" direction="right" className="items-center md:hidden" />
+                  {/* <SvgArrowLine colorDark="#b0c3c6" colorLight="#aa7339" direction="right" className="items-center md:hidden" /> */}
+
+                  
 
               <div className="md:mb-8 flex justify-between items-center w-full left-timeline ">
                 <div className="order-1 md:w-5/12"></div>
@@ -60,14 +62,6 @@ const WorkExperience = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative md:hidden flex flex-col items-center">
-                  {/* Vertical Line */}
-                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
-                    {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
-                  </div>
-                </div>
-
 
               <div className=" left-1/2 transform -translate-x-1/2 h-[10%] border-l-2 border-bg-secondary dark:border-text-accent"></div>
 
@@ -85,13 +79,6 @@ const WorkExperience = () => {
                   </div>
                 </div>
 
-                <div className="relative md:hidden flex flex-col items-center">
-                  {/* Vertical Line */}
-                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
-                    {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary bg-bg-secondary dark:bg-[#aa7339]"></div>
-                  </div>
-                </div>
 
               <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 md:w-5/12"></div>
@@ -105,14 +92,6 @@ const WorkExperience = () => {
                     <p className="leading-snug text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techAllaTiders')}}></p>
                   </div>
               </div>
-
-              <div className="relative md:hidden flex flex-col items-center">
-                  {/* Vertical Line */}
-                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
-                    {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
-                  </div>
-                </div>
 
 
                 <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
@@ -130,14 +109,6 @@ const WorkExperience = () => {
                     </div>
                   </div>
 
-                  <div className="relative md:hidden flex flex-col items-center">
-                  {/* Vertical Line */}
-                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
-                    {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary  bg-bg-secondary dark:bg-[#aa7339]"></div>
-                  </div>
-                </div>
-
                       
                   <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
                     <div className="order-1 md:w-5/12"></div>
@@ -151,14 +122,6 @@ const WorkExperience = () => {
                         <p className="leading-snug  text-opacity-100" dangerouslySetInnerHTML={{ __html: t('techPrintagon')}}></p>
                       </div>
                   </div>
-
-                  <div className="relative md:hidden flex flex-col items-center">
-                  {/* Vertical Line */}
-                  <div className="w-[0.15em] bg-text-primary h-16 relative opacity-80">
-                    {/* Dot in the middle  of the line*/}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-text-primary bg-bg-secondary dark:bg-[#aa7339]"></div>
-                  </div>
-                </div>
 
 
                   <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
