@@ -34,7 +34,7 @@ const ImageSlider = ({ images, active, setActive, setTitle }: ImageSliderProps) 
         <Icon icon="iconamoon:arrow-left-2-bold" width="50" height="50" />
       </div>
 
-      <div className="relative overflow-y-auto cursor-move xl:cursor-default flex-grow max-h-[90vh]">
+      <div className="relative cursor-move xl:cursor-default flex-grow max-h-[90vh]">
         {images.map((e, i) => (
           <Slide key={e.caption} {...e} active={i === active} />
         ))}
