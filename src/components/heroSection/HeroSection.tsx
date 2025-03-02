@@ -7,8 +7,8 @@ import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const resumePath = i18n.language === "en" ? "../../../public/assets/files/SofiaMattiasson-resume-eng.pdf" : "../../../public/assets/files/SofiaMattiasson-CV-swe.pdf";
-  const resumeName = i18n.language === "en" ? "SofiaMattiasson-resume-eng.pdf" : "SofiaMattiasson-CV-swe.pdf";
+  const resumePath = i18n.language === "en" ? "../../../public/assets/files/SofiaMattiasson-resume-en.pdf" : "../../../public/assets/files/SofiaMattiasson-CV-sv.pdf";
+  const resumeName = i18n.language === "en" ? "SofiaMattiasson-resume-en.pdf" : "SofiaMattiasson-CV-sv.pdf";
   const navigate = useNavigate();
 
   return (
