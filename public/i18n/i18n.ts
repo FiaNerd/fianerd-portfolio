@@ -1,7 +1,7 @@
-import i18n from 'i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
-import Backend from 'i18next-http-backend'
-import { initReactI18next } from 'react-i18next'
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import Backend from 'i18next-http-backend';
+import { initReactI18next } from 'react-i18next';
 
 i18n
   .use(Backend)
@@ -9,12 +9,12 @@ i18n
   .use(initReactI18next)
   .init({
     lng: localStorage.getItem('i18nextLng') || navigator.language || 'en',
-    fallbackLng: ['en-US', 'sv'],
+    fallbackLng: ['en', 'sv'],
     interpolation: {
       escapeValue: false,
     },
     backend: {
-      loadPath: '/assets/locales/{{lng}}/{{ns}}.json', 
+      loadPath: '/locales/{{lng}}/{{ns}}.json', 
     },    
     ns: [
       'translation',
@@ -26,7 +26,6 @@ i18n
       "profile/skills/graphicSkills", 
       "profile/skills/otherSkills",   
       "profile/skills/programsAndSoftwares",   
-      "profile/skills/webSkills",
       "profile/experience",
       "profile/education",
       "profile/hobbies", 
@@ -38,11 +37,12 @@ i18n
       "portfolio/backendPortfolioSection",
       "portfolio/fullstackPortfolioSection",
     ],
-    defaultNS: 'heroSection',
+    defaultNS: 'profile/aboutMe',
     detection: {
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
       caches: ['localStorage', 'cookie'],
     },
     debug: true,
-  })
-export default i18n
+  });
+
+export default i18n;

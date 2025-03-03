@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import i18n from "../../../public/assets/i18n/i18n";
+import i18n from "../../../public/i18n/i18n";
 import Button from "../partials/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
 

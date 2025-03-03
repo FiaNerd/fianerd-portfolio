@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import SvgArrowLine from "../../../assets/svg/SvgArrowLine";
 import Button from "../../partials/Button";
 
 const WorkExperience = () => {
@@ -31,7 +30,7 @@ const WorkExperience = () => {
 
               <div className="rounded-lg md:mb-8 flex justify-between items-center w-full left-timeline">
                 <div className="order-1 lg:w-5/12"></div>
-                  <div className="order-1 px-2 py-4 md:w-5/12 px-1 mdpy-4 text-left">
+                  <div className="order-1 px-2 py-4 md:w-5/12 md:py-4 text-left">
                     <p className="mb-3 text-bg-secondary dark:text-text-accent">{t("dateWorkBrutal")}</p>
                     <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading">{t("titleBrutal")}</h4>
                     <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
