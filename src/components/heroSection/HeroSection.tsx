@@ -1,10 +1,9 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import resume from "../../../public/assets/files/SofiaMattiasson-CV-sv.pdf";
-import i18n from "../../../public/assets/i18n/i18n";
 import Button from "../partials/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
+import i18n from "../../../public/i18n/i18n";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
@@ -12,7 +11,6 @@ const HeroSection = () => {
   const resumeName = i18n.language === "sv" ? "SofiaMattiasson-Resume-sv.pdf" : "SofiaMattiasson-CV-en.pdf";
   const navigate = useNavigate();
 
-  console.log(resume);
 
   return (
     <div className="relative w-full h-full flex justify-center">
