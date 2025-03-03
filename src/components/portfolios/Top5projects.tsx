@@ -52,15 +52,15 @@ const Top5Projects = () => {
                     
                     <h3 className="bg-[#000]/80 rounded-br-lg z-10 text-lg font-medium text-[#2ea25f] dark:text-[#cb384c] absolute top-0 left-0 py-2 px-4 xs:text-xl md:text-xl group-hover:hidden">
                       {item.title} <br />
-                      <span className="text-slate-400 text-sm">{t(item.subTitle)}</span>
+                      <span className="text-slate-400 text-sm">{item.subTitle}</span>
                     </h3>
 
                     <div className="absolute inset-0 bg-black/80 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                       <div className="flex flex-col items-center mx-auto gap-8 w-full px-2">
-                        <p className="text-white text-sm">{t(item.description)}</p>
+                        <p className="text-white text-sm">{item.description}</p>
                         <Button onClick={() => navigateToDetails(item.urlTitle)} className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs">
                           <Icon icon="ix:explore" width="20" height="20" />
-                          <span>{t(item.ctaButton)}</span>
+                          <span>{item.ctaButton}</span>
                         </Button>
                       </div>
                     </div>
@@ -69,7 +69,7 @@ const Top5Projects = () => {
                   <div className="lg:hidden mt-4 mb-8">
                     <Button onClick={() => navigateToDetails(item.urlTitle)} className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full  mx-auto">
                       <Icon icon="ix:explore" width="20" height="20" />
-                      <span>{t(item.ctaButton)}</span>
+                      <span>{item.ctaButton}</span>
                     </Button>
                   </div>
                 </div>

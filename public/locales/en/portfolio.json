@@ -1,64 +1,63 @@
 {
     "portfolio": {
-        "titlePortfolio": "Portfolio",
-        "subTitlePortfolio": "Where Code Meets Creativity",
-        "mainSectionTitle": "When ideas becomes reality",
-        "portfolioIntro": "This is a show case of my passion for coding and design. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
-        "ctaButtonCV": "Download CV",
-        "ctaButtonContactMe": "Get In Touch",
-         "cta": "Read more",
-        "ctaLess": "Read less"
+      "titlePortfolio": "Portfolio",
+      "subTitlePortfolio": "Where Code Meets Creativity",
+      "mainSectionTitle": "When ideas becomes reality",
+      "portfolioIntro": "This is a show case of my passion for coding and design. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+      "ctaButtonCV": "Download CV",
+      "ctaButtonContactMe": "Get In Touch",
+      "cta": "Read more",
+      "ctaLess": "Read less"
     },
-
     "top5PortfolioSection": {
-        "titleTop5Portfolio": "Top <span class='text-btn-bg dark:text-accent-primary'>5</span> <span class='px-4'>Projects</span>",
-        "subTitleTop5Portfolio": "Projects that I am proud of",
-        "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
-        "ctaButtonViewAll": "View All Projects",
-
-        "top5Items": [
-            {
-                "title": "Skjort kravallerna",
-                "subTitle": "Graphic",
-                "urlTitle": "skjort-kravallerna",
-                "description": "Photoshop and Illustrator",
-                "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
-                "ctaButton": "View Details"
-            },
-            {
-                "title": "Brutal Beats",
-                "urlTitle": "brutal-beats",
-                "subTitle": "Frontend",
-                "description": "React and Tailwind CSS",
-                "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
-                "ctaButton": "View Details"
-            },
-            {
-                "title": "MSB",
-                "urlTitle": "msb",
-                "subTitle": "Graphic & Frontend",
-                "description": "Photoshop, Illustrator and HTML & CSS",
-                "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-hero.jpg",
-                "ctaButton": "View Details"
-            },
-            {
-                "title": "Printagon",
-                "urlTitle": "printagon-graphics",
-                "subTitle": "Fullstack",
-                "description": "ASP.NET, SQL, React and Material-UI",
-                "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-                "ctaButton": "View Details"
-            },
-            {
-                "title": "Tyckte jag hörde hundar",
-                "urlTitle": "tyckte-jag-horde-hundar",
-                "subTitle": "Graphic",
-                "description": "Photoshop and Illustrator",
-                "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
-                "ctaButton": "View Details"
-            }
-        ]
+      "titleTop5Portfolio": "Top <span class='text-btn-bg dark:text-accent-primary'>5</span> <span class='px-4'>Projects</span>",
+      "subTitleTop5Portfolio": "Projects that I am proud of",
+      "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
+      "ctaButtonViewAll": "View All Projects",
+      "top5Items": [
+        {
+          "title": "Skjort kravallerna",
+          "subTitle": "Graphic",
+          "urlTitle": "skjort-kravallerna",
+          "description": "Photoshop and Illustrator",
+          "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+          "ctaButton": "View Details"
+        },
+        {
+          "title": "Brutal Beats",
+          "urlTitle": "brutal-beats",
+          "subTitle": "Frontend",
+          "description": "React and Tailwind CSS",
+          "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+          "ctaButton": "View Details"
+        },
+        {
+          "title": "MSB",
+          "urlTitle": "msb",
+          "subTitle": "Graphic & Frontend",
+          "description": "Photoshop, Illustrator and HTML & CSS",
+          "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-hero.jpg",
+          "ctaButton": "View Details"
+        },
+        {
+          "title": "Printagon",
+          "urlTitle": "printagon-graphics",
+          "subTitle": "Fullstack",
+          "description": "ASP.NET, SQL, React and Material-UI",
+          "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+          "ctaButton": "View Details"
+        },
+        {
+          "title": "Tyckte jag hörde hundar",
+          "urlTitle": "tyckte-jag-horde-hundar",
+          "subTitle": "Graphic",
+          "description": "Photoshop and Illustrator",
+          "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+          "ctaButton": "View Details"
+        }
+      ]
     },
+    
     "frontendPortfolioSection": {
         "titleFrontendPortfolio": "Frontend Cases",
         "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",

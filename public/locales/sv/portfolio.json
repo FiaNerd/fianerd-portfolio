@@ -1,63 +1,61 @@
 {
     "portfolio": {
-        "titlePortfolio": "Portfolio",
-        "subTitlePortfolio": "Där kod möter kreativitet",
-        "mainSectionTitle": "När idéer blir verklighet",
-        "portfolioIntro": "Detta är ett bevis på min passion för kodning och design. Jag har skapat några projekt som jag är stolt över och jag letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
-        "ctaButtonCV": "Ladda ner CV",
-        "ctaButtonContactMe": "Kontakta mig",
-        "cta": "Läs mer",
-        "ctaLess": "Läs mindre"
+      "titlePortfolio": "Portfolio",
+      "subTitlePortfolio": "Där kod möter kreativitet",
+      "mainSectionTitle": "När idéer blir verklighet",
+      "portfolioIntro": "Detta är en utställning av min passion för kodning och design. Jag har skapat några projekt som jag är stolt över och jag letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
+      "ctaButtonCV": "Ladda ner CV",
+      "ctaButtonContactMe": "Kontakta mig",
+      "cta": "Läs mer",
+      "ctaLess": "Läs mindre"
     },
-
     "top5PortfolioSection": {
-    "titleTop5Portfolio": "Topp <span class='text-btn-bg dark:text-accent-primary'> 5 </span> <span class='px-4'>Projekt</span>",
-    "subTitleTop5Portfolio": "Projekt jag är stolt över",
-    "introTop5Portfolio": "Här är de projekt jag är mest stolt över. De är en blandning av kreativitet och funktionalitet. Jag letar alltid efter nya utmaningar och ser fram emot vad framtiden har att erbjuda.",
-    "ctaButtonViewAll": "Visa alla projekt",
-        
-    "top5Items": [
-            {
-                "title": "Skjort kravallerna",
-                "urlTitle": "skjort-kravallerna",
-                "subTitle": "Grafisk",
-                "description": "Photoshop and Illustrator",
-                "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
-                "ctaButton": "Visa Detaljer"
-            },
-            {
-                "title": "BrutalBeats",
-                "urlTitle": "brutal-beats",
-                "subTitle": "Frontend",
-                "description": "React and Tailwind CSS",
-                "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
-                "ctaButton": "Visa Detaljer"
-            },
-            {
-                "title": "MSB",
-                "urlTitle": "msb",
-                "subTitle": "Grafisk & Frontend",
-                "description": "Photoshop, Illustrator and HTML & CSS",
-                "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-hero.jpg",
-                "ctaButton": "Visa Detaljer"
-            },
-            {
-                "title": "Printagon",
-                "urlTitle": "printagon-graphics",
-                "subTitle": "Fullstack",
-                "description": "ASP.NET, SQL, React and Material-UI",
-                "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-                "ctaButton": "Visa projekt"
-            },
-            {
-                "title": "Tyckte jag hörde hundar",
-                "urlTitle": "tyckte-jag-horde-hundar",
-                "subTitle": "Grafisk",
-                "description": "Photoshop and Illustrator",
-                "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
-                "ctaButton": "Visa Detaljer"
-            }
-        ]
+      "titleTop5Portfolio": "Topp <span class='text-btn-bg dark:text-accent-primary'>5</span> <span class='px-4'>Projekt</span>",
+      "subTitleTop5Portfolio": "Projekt som jag är stolt över",
+      "introTop5Portfolio": "Detta är de projekt som jag är mest stolt över. De är en blandning av kreativitet och funktionalitet. Jag letar alltid efter nya utmaningar och jag är spänd på att se vad framtiden har att erbjuda.",
+      "ctaButtonViewAll": "Visa alla projekt",
+      "top5Items": [
+        {
+          "title": "Skjort kravallerna",
+          "subTitle": "Grafik",
+          "urlTitle": "skjort-kravallerna",
+          "description": "Photoshop och Illustrator",
+          "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+          "ctaButton": "Visa detaljer"
+        },
+        {
+          "title": "Brutal Beats",
+          "urlTitle": "brutal-beats",
+          "subTitle": "Frontend",
+          "description": "React och Tailwind CSS",
+          "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+          "ctaButton": "Visa detaljer"
+        },
+        {
+          "title": "MSB",
+          "urlTitle": "msb",
+          "subTitle": "Grafik & Frontend",
+          "description": "Photoshop, Illustrator och HTML & CSS",
+          "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-hero.jpg",
+          "ctaButton": "Visa detaljer"
+        },
+        {
+          "title": "Printagon",
+          "urlTitle": "printagon-graphics",
+          "subTitle": "Fullstack",
+          "description": "ASP.NET, SQL, React och Material-UI",
+          "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+          "ctaButton": "Visa detaljer"
+        },
+        {
+          "title": "Tyckte jag hörde hundar",
+          "urlTitle": "tyckte-jag-horde-hundar",
+          "subTitle": "Grafik",
+          "description": "Photoshop och Illustrator",
+          "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+          "ctaButton": "Visa detaljer"
+        }
+      ]
     },
         "frontendPortfolioSection": {
         "titleFrontendPortfolio": "Frontendprojekt",
