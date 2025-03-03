@@ -1,13 +1,13 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import i18n from "../../../public/i18n/i18n";
 import Button from "../partials/Button";
 import ResponsiveHeroImage from "./ResponsiveHeroImage";
-import i18n from "../../../public/i18n/i18n";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const resumePath = i18n.language === "sv" ? "../../../public/assets/files/SofiaMattiasson-CV-sv.pdf" : "../../../public/assets/files/SofiaMattiasson-CV-en.pdf";
+  const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-CV-sv.pdf" : "/public/assets/files/SofiaMattiasson-CV-en.pdf";
   const resumeName = i18n.language === "sv" ? "SofiaMattiasson-Resume-sv.pdf" : "SofiaMattiasson-CV-en.pdf";
   const navigate = useNavigate();
 
