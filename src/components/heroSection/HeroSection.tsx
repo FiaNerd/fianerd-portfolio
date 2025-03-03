@@ -7,10 +7,19 @@ import ResponsiveHeroImage from "./ResponsiveHeroImage";
 
 const HeroSection = () => {
   const { t } = useTranslation("heroSection");
-  const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-CV-sv.pdf" : "/files/SofiaMattiasson-CV-en.pdf";
-  const resumeName = i18n.language === "sv" ? "SofiaMattiasson-Resume-sv.pdf" : "SofiaMattiasson-CV-en.pdf";
+ // const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-CV-sv.pdf" : "/files/SofiaMattiasson-Resume-en.pdf";
+  // const resumeName = i18n.language === "sv" ? "SofiaMattiasson-CV-sv.pdf" : "SofiaMattiasson-Resume-en.pdf";
   const navigate = useNavigate();
 
+  const onButtonClick = () => {
+    const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-CV-sv.pdf" : "/files/SofiaMattiasson-Resume-en.pdf";
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = i18n.language === "sv" ? "SofiaMattiasson-CV-sv.pdf" : "SofiaMattiasson-Resume-en.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
 
   return (
     <div className="relative w-full h-full flex justify-center">
@@ -31,9 +40,9 @@ const HeroSection = () => {
               {t("text")}
             </p>
             <div className="flex flex-col md:flex-row gap-8 w-full">
-              <Button className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-                <Icon icon="line-md:cloud-alt-download" width="30" height="30" /> 
-                <a href={resumePath} download={resumeName}>{t("ctaButtonCV")}</a>
+              <Button onClick={onButtonClick} className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
+                <Icon icon="line-md:cloud-alt-download" width="30" height="30" /> {t("ctaButtonCV")}
+                {/* <a href={resumePath} download={resumeName}>{t("ctaButtonCV")}</a> */}
               </Button>
               <Button 
                 onClick={() => navigate('/portfolio')} 
