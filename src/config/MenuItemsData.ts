@@ -109,4 +109,8 @@ export const navRoutes: Route[] = [
     title: 'news',
     url: '/news',
   },
+  {
+    title: 'contact',
+    url: '/contact',
+  }
 ];

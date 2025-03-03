@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import SocialMediaAndContact from './components/SocialMediaAndContact';
+import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
@@ -31,6 +32,8 @@ const App = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
+              <Route path="/contact" element={<ContactPage/> } />
+              <Route path="*" element={<div>Not Found</div>} />
             </Routes>
           </ErrorBoundary>
         </main>

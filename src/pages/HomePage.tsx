@@ -20,6 +20,7 @@ const HomePage = () => {
 
   useLayoutEffect(() => {
     const header = document.getElementById("header");
+    
     if (header) {
       setHeaderHeight(header.getBoundingClientRect().height);
     }
