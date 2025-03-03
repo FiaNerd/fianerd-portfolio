@@ -39,7 +39,7 @@ const Title = ({
     >
       <TitleAnimation
         title={title || ""}
-        dot={dot}
+        dot={dot || ""}
         dangerouslyHTML={dangerouslyHTML}
         onComplete={() => {}}
       />
