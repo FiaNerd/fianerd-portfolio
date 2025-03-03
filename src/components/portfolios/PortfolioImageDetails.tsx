@@ -1,16 +1,16 @@
-import { useRef } from "react";
-import LightGallery from 'lightgallery/react';
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgShare from 'lightgallery/plugins/share';
-import lgHash from 'lightgallery/plugins/hash';
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-autoplay.css';
+import 'lightgallery/css/lg-fullscreen.css';
+import 'lightgallery/css/lg-pager.css';
 import 'lightgallery/css/lg-share.css';
 import 'lightgallery/css/lg-thumbnail.css';
-import 'lightgallery/css/lg-fullscreen.css';
-import 'lightgallery/css/lg-autoplay.css';
 import 'lightgallery/css/lg-video.css';
-import 'lightgallery/css/lg-pager.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lightgallery.css';
+import lgHash from 'lightgallery/plugins/hash';
+import lgShare from 'lightgallery/plugins/share';
+import lgZoom from 'lightgallery/plugins/zoom';
+import LightGallery from 'lightgallery/react';
+import { useRef } from "react";
 
 interface PortfolioImageDetailsProps {
   images: { src: string; alt: string; span?: string }[];
@@ -27,12 +27,6 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
 
   return (
     <>
-      <style jsx>{`
-        .lg-backdrop {
-          background-color: rgba(0, 0, 0, 0.95) !important;
-        }
-      `}</style>
-
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg">
         {images?.map((image, index) => (
