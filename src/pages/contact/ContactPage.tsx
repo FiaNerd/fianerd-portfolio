@@ -1,5 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import Contact from "../../components/contactSection/Contact";
 import Title from "../../components/partials/Title";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 
@@ -39,6 +40,7 @@ const ContactPage = () => {
         dark="dark:bg-[#1d1617]"
         sticky
       />
+      <Contact />
     </div>
   );
 };
