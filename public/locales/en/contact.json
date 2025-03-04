@@ -1,14 +1,21 @@
 {
     "contactTitle": "Coffee Break",
     "contactSubtitle": "Grab a cuppa and drop me a line!",
+    "contactGreeting": "Hello",
     "contactIntro": " <span class='contact-text dark:text-text-primary'>I'M ALWAYS OPEN TO</span> <br> <span class='contact-new-text text-text-accent'>NEW</span> <span class='contact-text text-text-accnet opacity-30'> OPPORTUNITIES AND COLLABORATIONS. </span>",
     "contactSubIntro" : " If you have a project in mind or just want to say hi, feel free to get in touch!",
-    "contactGreeting": "Hello",
-    "contactName": "Name: *",
-    "contactEmail": "Email: *",
-    "contactCompanyName": "Company name: ",
+
+    "contactName": "Your name here: *",
+    "contactPlaceholderName": "Jane Doe",
+    "contactEmail": "Your email address: *",
+    "contactPlaceholderEmail": "example@mail.com",
+    "contactCompanyName": "Company (if job-related):",
+    "contactPlaceholderCompany": "Company Name AB",
     "contactSubject": "Subject: *",
-    "contactMessage": "Message: *",
+    "contactPlaceholderSubject": "Job, collaboration, or something else fun?",
+    "contactMessage": "Your message: *",
+    "contactPlaceholderMessage": "Write your message here – I look forward to reading it!",
+
     "contactSubmit": "Send",
     "contactSuccess": "Message sent successfully!",
     "contactError": "An error occurred. Please try again later."

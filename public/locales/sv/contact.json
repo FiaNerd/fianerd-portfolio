@@ -4,11 +4,18 @@
     "contactGreeting": "Hej",
     "contactIntro": " <span class='contact-text dark:text-text-primary'>JAG ÄR ALLTID ÖPPEN FÖR</span> <br> <span class='contact-new-text text-text-accent'>NYA</span> <span class='contact-text '> MÖJLIGHETER OCH SAMARBETEN. </span>",
     "contactSubIntro" : "Om du har ett projekt i åtanke eller bara vill säga hej, tveka inte att höra av dig!",
-    "contactName": "Namn: *",
-    "contactEmail": "E-post: *",
-    "contactCompanyName": "Företag: ",
+    
+    "contactName": "Ditt namn här: *",
+    "contactPlaceholderName": "Jane Doe",
+    "contactEmail": "Din e-postadress: *",
+    "contactPlaceholderEmail": "exempel@mail.com",
+    "contactCompanyName": "Företag (om det är jobbrelaterat):",
+    "contactPlaceholderCompany": "Företagsnamn AB",
     "contactSubject": "Ämne: *",
-    "contactMessage": "Meddelande: *",
+    "contactPlaceholderSubject": "Jobb, samarbete eller något annat kul?",
+    "contactMessage": "Ditt meddelande: *",
+    "contactPlaceholderMessage": "Skriv ditt meddelande här – jag ser fram emot att läsa det!",
+
     "contactSubmit": "Skicka",
     "contactSuccess": "Meddelandet skickades!",
     "contactError": "Något gick fel. Försök igen senare."
