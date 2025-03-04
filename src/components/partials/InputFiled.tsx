@@ -5,7 +5,6 @@ interface InputFiledProps {
     placeholder?: string;
     error?: string;
     register?: any;
-    wrapperClass?: string;
     className?: string;
     type?: string;
 }
@@ -16,19 +15,21 @@ const InputFiled = ({  register,
     error,
     label,
     type,
-    wrapperClass,
+    className,
     ...rest }: InputFiledProps) => {
     return (
-        <div className={wrapperClass}>
+        <div className={`${className} flex flex-col gap-1 mt-4 w-full`}>
         {label && <label htmlFor={name}>{label}</label>}
+
         <input
           type={type}
+          className={`dark:bg-[#000] dark:text-text-primary border-2 dark:border-[#000] rounded-lg p-2 placeholder-gray-300 opacity-30  ${className}`}
           aria-invalid={error ? "true" : "false"}
           placeholder={placeholder}
           {...register(name)}
           {...rest}
         />
-        {error && <span role="alert">{error}</span>}
+        {error && <span role="alert" className="text-red-700 dark:text-red-500 text-[1rem]">{error}</span>}
       </div>
     );
 }

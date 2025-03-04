@@ -87,18 +87,21 @@ const ContactPage = () => {
         dark="dark:bg-[#1d1617]"
         sticky
       />
-     <div className="max-w-screen-lg dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_50%] gap-4 justify-center items-center py-4 md:px-8 rounded-lg">
-             <div className="flex flex-col items-center px-2 md:px-4">
+
+     <div className="max-w-screen-lg mx-auto dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-8 rounded-lg">
+             <div className="flex flex-col items-center  md:px-4 mx-auto ">
                  <h1 className="text-text-primary">{t('contactGreeting').toUpperCase()}</h1>
 
-                 <div className="space-y-4 px-4">
+                 <blockquote className="space-y-4 px-4 text-2xl border-left-4">
                      <h3 className="text-center" dangerouslySetInnerHTML={{__html: t('contactIntro')}} ></h3>
                      <p className="dark:bg-[#1d1617] ">{t('contactSubIntro')}</p>
-                 </div>
+                 </blockquote>
              </div>
 
+             {/* <blockquote class="text-center text-2xl font-semibold text-gray-900 italic dark:text-white">  When you look  <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500">    <span className="relative text-white dark:text-gray-950">annoyed</span>  </span>  all the time, people think that you're busy.</blockquote> */}
+
              <div className="dark:bg-[#1d1617] flex flex-col py-4 px-8 rounded-lg">
-                 <Form className="grid grid-cols-1 w-full gap-4"
+                 <Form className="grid grid-cols-1 w-full gap-8"
                       buttonLabel={t('contactSubmit')}
                       register={register}
                       handleSubmit={handleSubmit}
@@ -106,10 +109,37 @@ const ContactPage = () => {
                     >
                      <InputFiled 
                       name="name" label={t('contactName')} 
-                      register={register} type="text" error={errors.name?.message} placeholder={t('contactPlaceholderName')} />
-                     <InputFiled name="email" type="email" label={t('contactEmail')} type="email"  register={register} error={errors.email?.message} placeholder={t('contactPlaceholderEmail')} />
-                     <InputFiled name="companyName" label={t('contactCompanyName')} type="text" register={register}  placeholder={t('contactPlaceholderCompany')} />
-                     <InputFiled name="subject" label={t('contactSubject')} type="text"  register={register} error={errors.subject?.message} placeholder={t('contactPlaceholderSubject')} />
+                      register={register} 
+                      type="text" 
+                      error={errors.name?.message} 
+                      placeholder={t('contactPlaceholderName')}
+                      />
+
+                     <InputFiled 
+                      name="email" 
+                      type="email" 
+                      label={t('contactEmail')} 
+                      register={register} 
+                      error={errors.email?.message} 
+                      placeholder={t('contactPlaceholderEmail')} 
+                     />
+
+                     <InputFiled 
+                      name="companyName" 
+                      label={t('contactCompanyName')} 
+                      type="text" register={register}  
+                      placeholder={t('contactPlaceholderCompany')} 
+                     />
+
+                     <InputFiled 
+                      name="subject" 
+                      label={t('contactSubject')} 
+                      type="text"  
+                      register={register} 
+                      error={errors.subject?.message} 
+                      placeholder={t('contactPlaceholderSubject')}
+                     />
+
                      <div className="flex flex-col mb-8">
                          <label htmlFor="message" className="text-text-secondary dark:text-text-primary">{t('contactMessage')}</label>
                          <textarea

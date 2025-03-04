@@ -28,7 +28,7 @@ const Form: FC<IFormProps> = ({
 }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} {...rest} className={className} >
-      <div className="d-flex justify-content-center fields__email">
+      <div className="flex justify-content-center flex-wrap">
         {Array.isArray(children)
           ? children.map((child) => {
               return child.props.name
