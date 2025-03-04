@@ -19,14 +19,22 @@ const HomePage = () => {
   ]);
 
   useLayoutEffect(() => {
-    const header = document.getElementById("header");
-    
-    if (header) {
-      setHeaderHeight(header.getBoundingClientRect().height);
-    }
+    const updateHeaderHeight = () => {
+      const header = document.getElementById("header");
+      if (header) {
+        setHeaderHeight(header.getBoundingClientRect().height);
+      }
+    };
+  
+    updateHeaderHeight(); 
+    window.addEventListener("resize", updateHeaderHeight);
+  
+    return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
+  
+  
+  useSmoothScroll(headerHeight);
 
-  useSmoothScroll(headerHeight ? 0 : headerHeight);
 
   return (
     <div

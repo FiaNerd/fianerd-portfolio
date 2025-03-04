@@ -20,13 +20,21 @@ const PortfolioPage = () => {
   ]);
 
   useLayoutEffect(() => {
-    const header = document.getElementById("header");
-    if (header) {
-      setHeaderHeight(header.getBoundingClientRect().height);
-    }
+    const updateHeaderHeight = () => {
+      const header = document.getElementById("header");
+      if (header) {
+        setHeaderHeight(header.getBoundingClientRect().height);
+      }
+    };
+  
+    updateHeaderHeight();
+    window.addEventListener("resize", updateHeaderHeight);
+  
+    return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
-
-  useSmoothScroll(headerHeight ? 0 : headerHeight);
+  
+  
+  useSmoothScroll(headerHeight);
 
   return (
     <>

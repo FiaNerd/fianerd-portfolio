@@ -1,7 +1,8 @@
 {
     "contactTitle": "Fikapaus",
     "contactSubtitle": "Ta en kopp kaffe och hör av dig!",
-    "contactIntro": "Jag är alltid öppen för nya möjligheter och samarbeten. Om du har ett projekt i åtanke eller bara vill säga hej, tveka inte att höra av dig!",
+    "contactIntro": " <span class='contact-text dark:text-text-primary'>JAG ÄR ALLTID ÖPPEN FÖR</span> <br> <span class='contact-new-text text-text-accent'>NYA</span> <span class='contact-text '> MÖJLIGHETER OCH SAMARBETEN. </span>",
+    "contactGreeting": "Hej",
     "contactName": "Namn: *",
     "contactEmail": "E-post: *",
     "contactCompanyName": "Företag: ",

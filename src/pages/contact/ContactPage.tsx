@@ -9,14 +9,22 @@ const ContactPage = () => {
   const { t } = useTranslation('contact');
 
   useLayoutEffect(() => {
-    const header = document.getElementById("header");
-    
-    if (header) {
-      setHeaderHeight(header.getBoundingClientRect().height);
-    }
+    const updateHeaderHeight = () => {
+      const header = document.getElementById("header");
+      if (header) {
+        setHeaderHeight(header.getBoundingClientRect().height);
+      }
+    };
+  
+    updateHeaderHeight(); // Set initial height
+    window.addEventListener("resize", updateHeaderHeight);
+  
+    return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
   
-  useSmoothScroll(headerHeight ? 0 : headerHeight);
+  
+  useSmoothScroll(headerHeight);
+
 
   return (
     <div
@@ -24,7 +32,7 @@ const ContactPage = () => {
         paddingTop: `${headerHeight}px`,
         transition: "padding-top 0.3s ease",
       }}
-      className="bg-blend-multiply bg-[url('/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg')] bg-cover bg-center w-full h-full"
+      className="bg-blend-multiply min-h-screen bg-[url('/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg')] bg-cover bg-center w-full "
     >
       <Title
         id="contact"
@@ -37,7 +45,7 @@ const ContactPage = () => {
         dark="dark:bg-[#1d1617]"
         sticky
       />
-      <div className="px-2 mb-4">
+      <div className="max-w-screen-lg mx-auto px-2 mb-4">
         <ContactForm />
       </div>
     </div>

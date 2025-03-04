@@ -1,7 +1,9 @@
 {
     "contactTitle": "Coffee Break",
     "contactSubtitle": "Grab a cuppa and drop me a line!",
-    "contactIntro": "I'm always open to new opportunities and collaborations. If you have a project in mind or just want to say hi, feel free to get in touch!",
+    "contactIntro": " <span class='contact-text dark:text-text-primary'>I'M ALWAYS OPEN TO</span> <br> <span class='contact-new-text text-text-accent'>NEW</span> <span class='contact-text text-text-accnet opacity-30'> OPPORTUNITIES AND COLLABORATIONS. </span>",
+    "contactSubIntro" : " If you have a project in mind or just want to say hi, feel free to get in touch!",
+    "contactGreeting": "Hello",
     "contactName": "Name: *",
     "contactEmail": "Email: *",
     "contactCompanyName": "Company name: ",

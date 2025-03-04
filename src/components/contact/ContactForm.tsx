@@ -26,14 +26,20 @@ const ContactForm = () => {
         return emailRegex.test(value) || 'Invalid email format';
     };
 
+
+    
     return (
-        <div className="max-w-screen-lg mx-auto dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_50%] gap-4 justify-center items-center py-4 md:px-8 rounded-lg">
-            <div className="flex flex-col items-center">
-                <h1 className="text-text-primary">HELLO</h1>
-                <p className="dark:bg-[#1d1617] py-4 px-8 ">{t('contactIntro')}</p>
+        <div className=" dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_50%] gap-4 justify-center items-center py-4 md:px-8 rounded-lg">
+            <div className="flex flex-col items-center px-2 md:px-4">
+                <h1 className="text-text-primary">{t('contactGreeting').toUpperCase()}</h1>
+
+                <div className="space-y-4 px-4">
+                    <h3 className="text-center" dangerouslySetInnerHTML={{__html: t('contactIntro')}} ></h3>
+                    <p className="dark:bg-[#1d1617] " >{t('contactSubIntro') }</p>
+                </div>
             </div>
 
-            <div className="dark:bg-[#1d1617] flex flex-col items-center py-4 px-8 rounded-lg">
+            <div className="dark:bg-[#1d1617] flex flex-col py-4 px-8 rounded-lg">
                 <form className="grid grid-cols-1 w-full gap-4" onSubmit={handleSubmit(onSubmit)}>
                     <InputFiled name="name" label={t('contactName')} type="text" required register={register} errors={errors} />
                     <InputFiled name="email" label={t('contactEmail')} type="email" required register={register} errors={errors} />
