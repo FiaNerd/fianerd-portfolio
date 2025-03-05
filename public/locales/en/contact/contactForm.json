@@ -1,0 +1,16 @@
+{
+    "contactSubmit": "Submit",
+    "contactName": "Name",
+    "contactEmail": "Email",
+    "contactCompanyName": "Company Name",
+    "contactSubject": "Subject",
+    "contactMessage": "Message",
+    "contactPlaceholderName": "Enter your name",
+    "contactPlaceholderEmail": "Enter your email",
+    "contactPlaceholderCompany": "Enter your company name",
+    "contactPlaceholderSubject": "Enter the subject",
+    "contactPlaceholderMessage": "Enter your message",
+
+    "contactSuccess": "Message sent successfully!",
+    "contactError": "An error occurred. Please try again later."
+}

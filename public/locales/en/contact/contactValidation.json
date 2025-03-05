@@ -1,0 +1,11 @@
+{
+    "nameMax": "Max name length is 32",
+    "nameMin": "Min name length is 2",
+    "nameRequired": "Name is required",
+    "emailInvalid": "Enter a valid email",
+    "emailRequired": "Email is required",
+    "subjectMin": "Min subject length is 2",
+    "subjectMax": "Max subject length is 32",
+    "subjectRequired": "Subject is required",
+    "messageRequired": "Message is required"
+}

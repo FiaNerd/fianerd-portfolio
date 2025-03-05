@@ -1,0 +1,16 @@
+{
+    "contactName": "Ditt namn här: *",
+    "contactPlaceholderName": "Jane Doe",
+    "contactEmail": "Din e-postadress: *",
+    "contactPlaceholderEmail": "exempel@mail.com",
+    "contactCompanyName": "Företag (om jobbrelaterat):",
+    "contactPlaceholderCompany": "Företagsnamn AB",
+    "contactSubject": "Ämne: *",
+    "contactPlaceholderSubject": "Jobb, samarbete eller tips?",
+    "contactMessage": "Ditt meddelande: *",
+    "contactPlaceholderMessage": "Skriv ditt meddelande här – jag ser fram emot att läsa det!",
+    
+    "contactSubmit": "Skicka",
+    "contactSuccess": "Meddelandet skickades framgångsrikt!",
+    "contactError": "Ett fel uppstod. Försök igen senare."
+}

@@ -1,0 +1,11 @@
+{
+    "nameMax": "Max längd för namn är 32",
+    "nameMin": "Min längd för namn är 2",
+    "nameRequired": "Namn krävs",
+    "emailInvalid": "Ange en giltig e-postadress",
+    "emailRequired": "E-postadress krävs",
+    "subjectMin": "Min längd för ämne är 2",
+    "subjectMax": "Max längd för ämne är 32",
+    "subjectRequired": "Ämne krävs",
+    "messageRequired": "Meddelande krävs"
+}
