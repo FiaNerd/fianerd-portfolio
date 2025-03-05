@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import Form from "../../components/partials/Form";
 import InputFiled from "../../components/partials/InputFiled";
+import TextAreaField from "../../components/partials/TextAreaField";
 import Title from "../../components/partials/Title";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import formValidationSchema from "../../utils/contactFormValidation";
@@ -125,13 +126,14 @@ const ContactPage = () => {
               placeholder={t("contact/contactForm:contactPlaceholderSubject")}
             />
 
-            {/* <TextAreaField
+            <TextAreaField
               name="message"
-              label={t("contactForm.contactMessage")}
+              label={t("contact/contactForm:contactMessage")}
               register={register}
               error={errors.message?.message}
-              placeholder={t("contactForm.contactPlaceholderMessage")}
-            /> */}
+              placeholder={t("contact/contactForm:contactPlaceholderMessage")}
+
+            />
           </Form>
         </div>
       </div>

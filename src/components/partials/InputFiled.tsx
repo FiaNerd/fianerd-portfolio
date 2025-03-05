@@ -23,7 +23,7 @@ const InputFiled = ({  register,
 
         <input
           type={type}
-          className={`dark:bg-[#000] dark:text-text-primary border-2 dark:border-[#000] rounded-lg p-2 placeholder-gray-300 opacity-30  ${className}`}
+          className={`dark:bg-[#000] dark:text-text-primary border-2 dark:border-[#000] rounded-lg p-2 placeholder-gray-300 placeholder:text-[0.9rem] opacity-30  ${className}`}
           aria-invalid={error ? "true" : "false"}
           placeholder={placeholder}
           {...register(name)}
