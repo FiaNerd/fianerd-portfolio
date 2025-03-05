@@ -2,11 +2,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import * as yup from "yup";
 import Form from "../../components/partials/Form";
 import InputFiled from "../../components/partials/InputFiled";
 import Title from "../../components/partials/Title";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
+import formValidationSchema from "../../utils/contactFormValidation";
 
 
 
@@ -19,34 +19,18 @@ interface ContactFormInputs {
 }
 
 
-// validation
-const EmailSchema = yup.object().shape({
-  name: yup
-    .string()
-    .max(32, "Max name length is 32")
-    .required("Name is required"),
-  email: yup
-    .string()
-    .email("Enter a valid email")
-    .required("Email is required"),
-  subject: yup
-    .string()
-    .max(32, "Max subject length is 32")
-    .required("Subject is required"),
-  message: yup
-    .string()
-    .required("Message is required"),
-});
-
 
 const ContactPage = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const { t } = useTranslation('contact');
+  const { t } = useTranslation(["contact/contact", "contact/contactForm", "contact/contactValidation"]);
+
   const {
     register,
     handleSubmit,
-    formState: { errors }
-  } = useForm({ resolver: yupResolver(EmailSchema) });
+    formState: { errors },
+  } = useForm<ContactFormInputs>({
+    resolver: yupResolver(formValidationSchema(t)), 
+  });
 
   useLayoutEffect(() => {
     const updateHeaderHeight = () => {
@@ -55,18 +39,16 @@ const ContactPage = () => {
         setHeaderHeight(header.getBoundingClientRect().height);
       }
     };
-  
+
     updateHeaderHeight(); // Set initial height
     window.addEventListener("resize", updateHeaderHeight);
-  
+
     return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
-  
-  
+
   useSmoothScroll(headerHeight);
 
   const onSubmit = (data: ContactFormInputs) => console.log(data);
-
 
   return (
     <div
@@ -78,9 +60,9 @@ const ContactPage = () => {
     >
       <Title
         id="contact"
-        title={t("contactTitle")}
+        title={t("contact/contact:contactTitle")}
         dot={"?"}
-        children={t("contactSubtitle")}
+        children={t("contact/contact:contactSubtitle")}
         className="text-[#ca5b87] top-0 dark:text-accent-primary"
         subHeadingClassName="text-hover-text dark:text-text-secondary"
         light="bg-accent-secondary"
@@ -88,75 +70,75 @@ const ContactPage = () => {
         sticky
       />
 
-     <div className="max-w-screen-lg mx-auto dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-8 rounded-lg">
-             <div className="flex flex-col items-center  md:px-4 mx-auto ">
-                 <h1 className="text-text-primary">{t('contactGreeting').toUpperCase()}</h1>
+      <div className="max-w-screen-lg mx-auto dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
+        <div className="flex flex-col items-center md:px-4 mx-auto ">
+          <h1 className="text-text-primary">{t("contact/contact:contactGreeting").toUpperCase()}</h1>
+          <blockquote className="space-y-8 text-2xl ">
+            <h3
+              className="text-center border-l-8 border-pink-500 px-6"
+              dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
+            ></h3>
+            <p className="dark:bg-[#1d1617] ">{t("contact/contact:contactSubIntro")}</p>
+          </blockquote>
+        </div>
 
-                 <blockquote className="space-y-4 px-4 text-2xl border-left-4">
-                     <h3 className="text-center" dangerouslySetInnerHTML={{__html: t('contactIntro')}} ></h3>
-                     <p className="dark:bg-[#1d1617] ">{t('contactSubIntro')}</p>
-                 </blockquote>
-             </div>
+        <div className="dark:bg-[#1d1617] flex flex-col py-4 px-8 rounded-lg">
+          <Form
+            className="grid grid-cols-1 w-full gap-8"
+            buttonLabel={t("contact/contactForm:contactSubmit")}
+            register={register}
+            handleSubmit={handleSubmit}
+            onSubmit={onSubmit}
+          >
+            <InputFiled
+              name="name"
+              label={t("contact/contactForm:contactName")}
+              register={register}
+              type="text"
+              error={errors.name?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderName")}
+            />
 
-             {/* <blockquote class="text-center text-2xl font-semibold text-gray-900 italic dark:text-white">  When you look  <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500">    <span className="relative text-white dark:text-gray-950">annoyed</span>  </span>  all the time, people think that you're busy.</blockquote> */}
+            <InputFiled
+              name="email"
+              type="email"
+              label={t("contact/contactForm:contactEmail")}
+              register={register}
+              error={errors.email?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderEmail")}
+            />
 
-             <div className="dark:bg-[#1d1617] flex flex-col py-4 px-8 rounded-lg">
-                 <Form className="grid grid-cols-1 w-full gap-8"
-                      buttonLabel={t('contactSubmit')}
-                      register={register}
-                      handleSubmit={handleSubmit}
-                      onSubmit={onSubmit}
-                    >
-                     <InputFiled 
-                      name="name" label={t('contactName')} 
-                      register={register} 
-                      type="text" 
-                      error={errors.name?.message} 
-                      placeholder={t('contactPlaceholderName')}
-                      />
+            <InputFiled
+              name="companyName"
+              label={t("contact/contactForm:contactCompanyName")}
+              type="text"
+              register={register}
+              placeholder={t("contact/contactForm:contactPlaceholderCompany")}
+            />
 
-                     <InputFiled 
-                      name="email" 
-                      type="email" 
-                      label={t('contactEmail')} 
-                      register={register} 
-                      error={errors.email?.message} 
-                      placeholder={t('contactPlaceholderEmail')} 
-                     />
+            <InputFiled
+              name="subject"
+              label={t("contact/contactForm:contactSubject")}
+              type="text"
+              register={register}
+              error={errors.subject?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderSubject")}
+            />
 
-                     <InputFiled 
-                      name="companyName" 
-                      label={t('contactCompanyName')} 
-                      type="text" register={register}  
-                      placeholder={t('contactPlaceholderCompany')} 
-                     />
-
-                     <InputFiled 
-                      name="subject" 
-                      label={t('contactSubject')} 
-                      type="text"  
-                      register={register} 
-                      error={errors.subject?.message} 
-                      placeholder={t('contactPlaceholderSubject')}
-                     />
-
-                     <div className="flex flex-col mb-8">
-                         <label htmlFor="message" className="text-text-secondary dark:text-text-primary">{t('contactMessage')}</label>
-                         <textarea
-                             id="message"
-                             placeholder={t('contactPlaceholderMessage')}
-                             {...register("message", { required: true })}
-                             className="dark:bg-[#1d1617] dark:text-text-primary dark:border-accent-primary dark:border-2 rounded-lg p-2"
-                         />
-                         {errors.message && <p className="text-red-500">{errors.message.message}</p>}
-                     </div>
-                   
-                 </Form>
-             </div>
-         </div>
-         </div>
+            {/* <TextAreaField
+              name="message"
+              label={t("contactForm.contactMessage")}
+              register={register}
+              error={errors.message?.message}
+              placeholder={t("contactForm.contactPlaceholderMessage")}
+            /> */}
+          </Form>
+        </div>
+      </div>
+    </div>
   );
 };
+
 
 export default ContactPage;
 

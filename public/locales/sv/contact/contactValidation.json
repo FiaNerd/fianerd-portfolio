@@ -1,11 +1,11 @@
 {
-    "nameMax": "Max längd för namn är 32",
-    "nameMin": "Min längd för namn är 2",
-    "nameRequired": "Namn krävs",
+    "nameMax": "Maximal namnlängd är 32",
+    "nameMin": "Minimal namnlängd är 2",
+    "nameRequired": "Namn är obligatoriskt",
     "emailInvalid": "Ange en giltig e-postadress",
-    "emailRequired": "E-postadress krävs",
-    "subjectMin": "Min längd för ämne är 2",
-    "subjectMax": "Max längd för ämne är 32",
-    "subjectRequired": "Ämne krävs",
-    "messageRequired": "Meddelande krävs"
+    "emailRequired": "E-postadress är obligatorisk",
+    "subjectMin": "Minimal ämneslängd är 2",
+    "subjectMax": "Maximal ämneslängd är 32",
+    "subjectRequired": "Ämne är obligatoriskt",
+    "messageRequired": "Meddelande är obligatoriskt"
 }
