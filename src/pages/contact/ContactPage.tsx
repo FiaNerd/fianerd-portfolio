@@ -2,9 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import Form from "../../components/partials/Form";
-import InputFiled from "../../components/partials/InputFiled";
-import TextAreaField from "../../components/partials/TextAreaField";
+import ContactForm from "../../components/contact/ContactForm";
 import Title from "../../components/partials/Title";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import formValidationSchema from "../../utils/contactFormValidation";
@@ -72,69 +70,21 @@ const ContactPage = () => {
       />
 
       <div className="max-w-screen-lg mx-auto dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
-        <div className="flex flex-col items-center md:px-2 mx-auto ">
+        <div className="flex flex-col items-center md:px-2 text-wrap">
           <h1 className="text-text-primary">{t("contact/contact:contactGreeting").toUpperCase()}</h1>
-          <blockquote className="space-y-8 text-2xl">
-            <h3
-              className="text-center border-l-8 border-pink-500 px-2"
-              dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
-            ></h3>
+         
+        
+          <blockquote className="w-full space-y-8 px-4">
+            <h4 className="border-l-8 pl-1 border-pink-500 text-center"
+                dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
+            >
+            </h4>
             <p className="dark:bg-[#1d1617] ">{t("contact/contact:contactSubIntro")}</p>
           </blockquote>
         </div>
 
         <div className="dark:bg-[#1d1617] flex flex-col py-4 px-8 rounded-lg">
-          <Form
-            className="grid grid-cols-1 w-full gap-8"
-            buttonLabel={t("contact/contactForm:contactSubmit")}
-            register={register}
-            handleSubmit={handleSubmit}
-            onSubmit={onSubmit}
-          >
-            <InputFiled
-              name="name"
-              label={t("contact/contactForm:contactName")}
-              register={register}
-              type="text"
-              error={errors.name?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderName")}
-            />
-
-            <InputFiled
-              name="email"
-              type="email"
-              label={t("contact/contactForm:contactEmail")}
-              register={register}
-              error={errors.email?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderEmail")}
-            />
-
-            <InputFiled
-              name="companyName"
-              label={t("contact/contactForm:contactCompanyName")}
-              type="text"
-              register={register}
-              placeholder={t("contact/contactForm:contactPlaceholderCompany")}
-            />
-
-            <InputFiled
-              name="subject"
-              label={t("contact/contactForm:contactSubject")}
-              type="text"
-              register={register}
-              error={errors.subject?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderSubject")}
-            />
-
-            <TextAreaField
-              name="message"
-              label={t("contact/contactForm:contactMessage")}
-              register={register}
-              error={errors.message?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderMessage")}
-
-            />
-          </Form>
+          <ContactForm />
         </div>
       </div>
     </div>

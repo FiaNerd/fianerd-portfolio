@@ -2,6 +2,6 @@
     "contactTitle": "Fikapaus",
     "contactSubtitle": "Ta en kopp kaffe och hör av dig!",
     "contactGreeting": "Hej",
-    "contactIntro": "<span class='contact-text'>Jag ser fram emot </span> <span class='highlight'> <span class='highlight-text dark-bg'>nya</span> </span> <span class='contact-text'> möjligheter och spännande samarbeten. </span>",
+    "contactIntro": "<span class='contact-text block'>Jag ser fram emot </span> <span class='highlight'> <span class='highlight-text'>nya</span> </span><span class='contact-text'> möjligheter och spännande samarbeten. </span>",
     "contactSubIntro": "Om du har ett projekt i åtanke eller bara vill säga hej, tveka inte att höra av dig!"
 }

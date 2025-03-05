@@ -1,76 +1,93 @@
-// import { SubmitHandler, useForm } from "react-hook-form";
-// import { useTranslation } from "react-i18next";
-// import Button from "../partials/Button";
-// import InputFiled from "../partials/InputFiled";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import Form from "../../components/partials/Form";
+import InputFiled from "../../components/partials/InputFiled";
+import TextAreaField from "../../components/partials/TextAreaField";
+import formValidationSchema from "../../utils/contactFormValidation";
 
-// interface ContactFormInputs {
-//     name: string;
-//     companyName?: string;
-//     email: string;
-//     subject: string;
-//     message: string;
-// }
 
-// const ContactForm = () => {
-//     const { t } = useTranslation('contact');
 
-//     const { register, handleSubmit, formState: { errors } } = useForm<ContactFormInputs>({
-//         defaultValues: {
-//             name: '',
-//             companyName: '',
-//             email: '',
-//             subject: '',
-//             message: ''
-//         }
-//     });
+interface ContactFormInputs {
+    name: string;
+    companyName?: string;
+    email: string;
+    subject: string;
+    message: string;
+}
 
-//     const onSubmit: SubmitHandler<ContactFormInputs> = data => {
-//         // Handle form submission
-//         console.log(data);
-//     };
 
-//     // const validateEmail = (value: string) => {
-//     //     // Custom email validation logic
-//     //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     //     return emailRegex.test(value) || 'Invalid email format';
-//     // };
 
-//     return (
-//         <div className="dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_50%] gap-4 justify-center items-center py-4 md:px-8 rounded-lg">
-//             <div className="flex flex-col items-center px-2 md:px-4">
-//                 <h1 className="text-text-primary">{t('contactGreeting').toUpperCase()}</h1>
+const ContactPage = () => {
+  const { t } = useTranslation(["contact/contact", "contact/contactForm", "contact/contactValidation"]);
 
-//                 <div className="space-y-4 px-4">
-//                     <h3 className="text-center" dangerouslySetInnerHTML={{__html: t('contactIntro')}} ></h3>
-//                     <p className="dark:bg-[#1d1617] ">{t('contactSubIntro')}</p>
-//                 </div>
-//             </div>
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormInputs>({
+    resolver: yupResolver(formValidationSchema(t)), 
+  });
 
-//             <div className="dark:bg-[#1d1617] flex flex-col py-4 px-8 rounded-lg">
-//                 <form className="grid grid-cols-1 w-full gap-4" onSubmit={handleSubmit(onSubmit)}>
-//                     <InputFiled name="name" label={t('contactName')} type="text" required register={register} errors={errors} placeholder={t('contactPlaceholderName')} />
-//                     <InputFiled name="email" label={t('contactEmail')} type="email" required register={register} errors={errors} placeholder={t('contactPlaceholderEmail')} />
-//                     <InputFiled name="companyName" label={t('contactCompanyName')} type="text" register={register} errors={errors} placeholder={t('contactPlaceholderCompany')} />
-//                     <InputFiled name="subject" label={t('contactSubject')} type="text" required register={register} errors={errors} placeholder={t('contactPlaceholderSubject')} />
-//                     <div className="flex flex-col mb-8">
-//                         <label htmlFor="message" className="text-text-secondary dark:text-text-primary">{t('contactMessage')}</label>
-//                         <textarea
-//                             id="message"
-//                             placeholder={t('contactPlaceholderMessage')}
-//                             {...register("message", { required: true })}
-//                             className="dark:bg-[#1d1617] dark:text-text-primary dark:border-accent-primary dark:border-2 rounded-lg p-2"
-//                         />
-//                         {errors.message && <p className="text-red-500">{errors.message.message}</p>}
-//                     </div>
-//                     <Button 
-//                         type="submit" 
-//                         className="dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">{t('contactSubmit')}</Button>
-//                 </form>
-//             </div>
-//         </div>
-//     );
-// }
 
-// export default ContactForm;
+  const onSubmit = (data: ContactFormInputs) => console.log(data);
 
+  return (
+  
+          <Form
+            className="grid grid-cols-1 w-full gap-8"
+            buttonLabel={t("contact/contactForm:contactSubmit")}
+            register={register}
+            handleSubmit={handleSubmit}
+            onSubmit={onSubmit}
+          >
+            <InputFiled
+              name="name"
+              label={t("contact/contactForm:contactName")}
+              register={register}
+              type="text"
+              error={errors.name?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderName")}
+            />
+
+            <InputFiled
+              name="email"
+              type="email"
+              label={t("contact/contactForm:contactEmail")}
+              register={register}
+              error={errors.email?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderEmail")}
+            />
+
+            <InputFiled
+              name="companyName"
+              label={t("contact/contactForm:contactCompanyName")}
+              type="text"
+              register={register}
+              placeholder={t("contact/contactForm:contactPlaceholderCompany")}
+            />
+
+            <InputFiled
+              name="subject"
+              label={t("contact/contactForm:contactSubject")}
+              type="text"
+              register={register}
+              error={errors.subject?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderSubject")}
+            />
+
+            <TextAreaField
+              name="message"
+              label={t("contact/contactForm:contactMessage")}
+              register={register}
+              error={errors.message?.message}
+              placeholder={t("contact/contactForm:contactPlaceholderMessage")}
+
+            />
+          </Form>
+  );
+};
+
+
+export default ContactPage;
 
