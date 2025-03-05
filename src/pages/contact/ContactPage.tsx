@@ -74,8 +74,8 @@ const ContactPage = () => {
           <h1 className="text-text-primary">{t("contact/contact:contactGreeting").toUpperCase()}</h1>
          
         
-          <blockquote className="w-full space-y-8 px-4">
-            <h4 className="border-l-8 pl-1 border-pink-500 text-center"
+          <blockquote className="w-full space-y-8 px-2">
+            <h4 className="border-l-8 pl-[0.2em] border-pink-500 text-center"
                 dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
             >
             </h4>
