@@ -1,11 +1,18 @@
 {
-    "nameMax": "Maximal namnlängd är 32",
-    "nameMin": "Minimal namnlängd är 2",
+    "nameMax": "Maximal namnlängd är 32 tecken",
+    "nameMin": "Minimal namnlängd är 2 tecken",
     "nameRequired": "Namn är obligatoriskt",
+    "nameInvalid":"Endast bokstäver, mellanslag och bindestreck",
+
+    
     "emailInvalid": "Ange en giltig e-postadress",
     "emailRequired": "E-postadress är obligatorisk",
-    "subjectMin": "Minimal ämneslängd är 2",
-    "subjectMax": "Maximal ämneslängd är 32",
+
+    "subjectMin": "Minimal ämneslängd är 2 tecken",
+    "subjectMax": "Maximal ämneslängd är 64 tecken",
     "subjectRequired": "Ämne är obligatoriskt",
+    
+    "messageMin": "Meddelandet måste vara minst 10 tecken långt",
+    "messageMax": "Meddelandet får vara max 1000 tecken långt",
     "messageRequired": "Meddelande är obligatoriskt"
 }

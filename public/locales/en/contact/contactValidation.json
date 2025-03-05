@@ -1,11 +1,17 @@
 {
-    "nameMax": "Max name length is 32",
-    "nameMin": "Min name length is 2",
+    "nameMax": "Maximum name length is 32 characters",
+    "nameMin": "Minimum name length is 2 characters",
     "nameRequired": "Name is required",
-    "emailInvalid": "Enter a valid email",
-    "emailRequired": "Email is required",
-    "subjectMin": "Min subject length is 2",
-    "subjectMax": "Max subject length is 32",
+    "nameInvalid": "Only letters, spaces, and hyphens",
+    
+    "emailInvalid": "Enter a valid email address",
+    "emailRequired": "Email address is required",
+
+    "subjectMin": "Minimum subject length is 2 characters",
+    "subjectMax": "Maximum subject length is 64 characters",
     "subjectRequired": "Subject is required",
+    
+    "messageMin": "Message must be at least 10 characters long",
+    "messageMax": "Message can be a maximum of 1000 characters long",
     "messageRequired": "Message is required"
 }
