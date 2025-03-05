@@ -1,7 +1,7 @@
 {
-    "contactTitle": "Coffee Break",
-    "contactSubtitle": "Grab a cuppa and drop me a line!",
-    "contactGreeting": "Hello",
-    "contactIntro": "<span class='contact-text'>I'm looking forward to </span> <span class='highlight'> <span class='highlight-text dark-bg'>new</span> </span> <span class='contact-text'> opportunities and exciting collaborations. </span>",
-    "contactSubIntro": "If you have a project in mind or just want to say hi, feel free to get in touch!"
+    "contactTitle": "Fikapaus",
+    "contactSubtitle": "Ta en kopp kaffe och hör av dig!",
+    "contactGreeting": "Hej",
+    "contactIntro": "<span class='contact-text'>Jag ser fram emot </span> <span class='highlight'> <span class='highlight-text dark-bg'>nya</span> </span> <span class='contact-text'> möjligheter och spännande samarbeten. </span>",
+    "contactSubIntro": "Om du har ett projekt i åtanke eller bara vill säga hej, tveka inte att höra av dig!"
 }

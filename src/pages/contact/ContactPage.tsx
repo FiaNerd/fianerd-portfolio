@@ -72,11 +72,11 @@ const ContactPage = () => {
       />
 
       <div className="max-w-screen-lg mx-auto dark:bg-[#1d1617] grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
-        <div className="flex flex-col items-center md:px-4 mx-auto ">
+        <div className="flex flex-col items-center md:px-2 mx-auto ">
           <h1 className="text-text-primary">{t("contact/contact:contactGreeting").toUpperCase()}</h1>
-          <blockquote className="space-y-8 text-2xl ">
+          <blockquote className="space-y-8 text-2xl">
             <h3
-              className="text-center border-l-8 border-pink-500 px-6"
+              className="text-center border-l-8 border-pink-500 px-2"
               dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
             ></h3>
             <p className="dark:bg-[#1d1617] ">{t("contact/contact:contactSubIntro")}</p>
