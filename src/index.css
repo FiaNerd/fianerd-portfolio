@@ -135,15 +135,20 @@ p {
 
 .highlight-text {
     position: relative;
-    color: #ffffff; /* text-white */
+    color: #ffffff;
 }
 
 .dark .highlight::before {
-    background-color: #e91e63; /* dark:bg-gray-950 */
+    background-color: #e91e63;
 }
 
 .dark .highlight-text {
-    color: #ffffff; /* dark:text-pink-500 */
+    color: #ffffff; 
+}
+
+.text-job-related-input{
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
 }
 
 @media (min-width: 640px) {

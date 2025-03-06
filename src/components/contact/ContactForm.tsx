@@ -35,7 +35,7 @@ const ContactPage = () => {
   return (
   
           <Form
-            className="grid grid-cols-1 w-full gap-8"
+            className="grid grid-cols-1 w-full "
             buttonLabel={t("contact/contactForm:contactSubmit")}
             register={register}
             handleSubmit={handleSubmit}
@@ -82,8 +82,9 @@ const ContactPage = () => {
               register={register}
               error={errors.message?.message}
               placeholder={t("contact/contactForm:contactPlaceholderMessage")}
-
+              className="mb-1"
             />
+            <p className="text-[0.9rem]">{t("contact/contactForm:mandatoryFields")}</p>
           </Form>
   );
 };

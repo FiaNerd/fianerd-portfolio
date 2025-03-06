@@ -3,7 +3,7 @@
     "contactPlaceholderName": "Jane Doe",
     "contactEmail": "Din e-postadress: *",
     "contactPlaceholderEmail": "exempel@mail.com",
-    "contactCompanyName": "Företag (om jobbrelaterat):",
+    "contactCompanyName": "Företag: (om jobbrelaterat)",
     "contactPlaceholderCompany": "Företagsnamn AB",
     "contactSubject": "Ämne: *",
     "contactPlaceholderSubject": "Jobb, samarbete eller tips?",
@@ -12,5 +12,6 @@
     
     "contactSubmit": "Skicka",
     "contactSuccess": "Meddelandet skickades framgångsrikt!",
-    "contactError": "Ett fel uppstod. Försök igen senare."
+    "contactError": "Ett fel uppstod. Försök igen senare.",
+    "mandatoryFields": "* Obligatoriska fält"
 }

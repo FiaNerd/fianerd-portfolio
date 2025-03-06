@@ -1,7 +1,7 @@
 {
     "contactName": "Name: *",
     "contactEmail": "Email: *",
-    "contactCompanyName": "Company Name (optional)",
+    "contactCompanyName": "Company name: <span class='text-job-related-input'>(if job related)</span>",
     "contactSubject": "Subject: *",
     "contactMessage": "Message: *",
     "contactPlaceholderName": "Enter your name",
@@ -10,6 +10,7 @@
     "contactPlaceholderSubject": "Enter the subject",
     "contactPlaceholderMessage": "Enter your message",
     "contactSubmit": "Submit",
+    "mandatoryFields": "* Mandatory fields",
 
     "contactSuccess": "Message sent successfully!",
     "contactError": "An error occurred. Please try again later."
