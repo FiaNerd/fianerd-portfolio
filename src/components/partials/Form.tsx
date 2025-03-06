@@ -2,6 +2,7 @@
 
 import { FC, ReactNode, createElement } from "react";
 import Button from "./Button";
+import { Icon } from "@iconify/react";
 
 export type classNameType = string;
 export type childrenType = ReactNode;
@@ -43,7 +44,10 @@ const Form: FC<IFormProps> = ({
             })
           : children}
       </div>
-      <Button className="dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">{buttonLabel}</Button>
+      <Button className="flex flex-row justify-center items-center gap-2 border-2 border-text-primary hover:bg-text-primary dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
+        <Icon icon="fa:send" width="24" height="24" />
+          {buttonLabel}
+      </Button>
     </form>
   );
 };

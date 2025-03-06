@@ -19,7 +19,7 @@ interface ContactFormInputs {
 
 
 const ContactPage = () => {
-  const { t } = useTranslation(["contact/contact", "contact/contactForm", "contact/contactValidation"]);
+  const { t } = useTranslation("contact/contactForm");
 
   const {
     register,
