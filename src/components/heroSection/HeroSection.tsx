@@ -23,7 +23,7 @@ const HeroSection = () => {
     <div className="relative w-full h-full flex justify-center">
       <div className="absolute grid grid-cols-1 md:grid-cols-[80%] lg:grid-cols-[60%] 2xl:grid-cols-[50%] w-full h-full z-10">
         <div className="flex flex-col justify-center items-start px-6 md:px-12 text-left md:text-left z-10 w-full h-full">
-          <div className={"bg-slate-50/40 dark:bg-black/40 p-6 rounded"}>
+          <div className={"bg-white/30 dark:bg-black/40 p-6 rounded"}>
             <h1
               className="text-[#350712] dark:text-text-accent text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl mb-4 font-bold leading-snug lg:mb-12"
               dangerouslySetInnerHTML={{ __html: t("title") }}
