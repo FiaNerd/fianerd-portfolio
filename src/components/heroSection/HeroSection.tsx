@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-full h-full flex justify-center">
-      <div className="absolute grid grid-cols-1 md:grid-cols-[80%] lg:grid-cols-[60%] 2xl:grid-cols-[50%] w-full h-full z-10">
+      <div className="absolute grid grid-cols-1 md:grid-cols-[80%] lg:grid-cols-[65%] 2xl:grid-cols-[50%] w-full h-full z-10">
         <div className="flex flex-col justify-center items-start px-6 md:px-12 text-left md:text-left z-10 w-full h-full">
           <div className={"bg-white/30 dark:bg-black/40 p-6 rounded"}>
             <h1
