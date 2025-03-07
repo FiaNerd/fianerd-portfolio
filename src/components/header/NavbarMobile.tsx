@@ -1,5 +1,6 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { Icon } from '@iconify/react/dist/iconify.js';
 import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
@@ -83,12 +84,14 @@ const NavbarMobile = () => {
            
 
            
-            <div className='flex w-8/12 mt-8 mb-12 p-2 mx-auto border rounded text-btn-bg border-btn-bg hover:border-bg-hover hover:bg-bg-hover hover:text-bg-primary'>
+            <div className='w-8/12 mt-8 mb-12 p-2 mx-auto border rounded text-btn-bg border-btn-bg hover:border-bg-hover hover:bg-bg-hover hover:text-bg-primary'>
+           
               <NavLink
-                to='/'
-                className={`${getClassName} font-sub-heading cursor mx-auto text-[1.2rem] text-align lg:mb-0 `}
+                to='/contact'
+                className={`${getClassName} flex flex-row items-center gap-4 justify-center font-sub-heading cursor mx-auto text-[1.2rem] text-align lg:mb-0 `}
+                onClick={() => setShowMenu(false)}
               >
-                {t('contact')}
+                <Icon icon="line-md:email-twotone" width="24" height="24" /> {t('contact')}
               </NavLink>
             </div>
 
