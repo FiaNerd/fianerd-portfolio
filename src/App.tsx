@@ -33,7 +33,7 @@ const App = () => {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
               <Route path="/contact" element={<ContactPage/> } />
-              <Route path="*" element={<div>Not Found</div>} />
+              <Route path="*" element={<div className="mb-20">Not Found</div>} />
             </Routes>
           </ErrorBoundary>
         </main>

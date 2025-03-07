@@ -38,6 +38,9 @@ i18n
       "portfolio/frontendPortfolioSection",
       "portfolio/backendPortfolioSection",
       "portfolio/fullstackPortfolioSection",
+
+      "contact/contact",
+      "contact/contactForm",
     ],
     defaultNS: 'profile/aboutMe',
     detection: {

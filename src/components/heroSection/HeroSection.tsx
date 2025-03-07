@@ -17,7 +17,7 @@ const HeroSection = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-};
+}
 
   return (
     <div className="relative w-full h-full flex justify-center">

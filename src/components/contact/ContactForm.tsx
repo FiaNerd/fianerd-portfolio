@@ -36,52 +36,52 @@ const ContactPage = () => {
   
           <Form
             className="grid grid-cols-1 w-full "
-            buttonLabel={t("contact/contactForm:contactSubmit")}
+            buttonLabel={t("contactSubmit")}
             register={register}
             handleSubmit={handleSubmit}
             onSubmit={onSubmit}
           >
             <InputFiled
               name="name"
-              label={t("contact/contactForm:contactName")}
+              label={t("contactName")}
               register={register}
               type="text"
               error={errors.name?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderName")}
+              placeholder={t("contactPlaceholderName")}
             />
 
             <InputFiled
               name="email"
               type="email"
-              label={t("contact/contactForm:contactEmail")}
+              label={t("contactEmail")}
               register={register}
               error={errors.email?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderEmail")}
+              placeholder={t("contactPlaceholderEmail")}
             />
 
             <InputFiled
               name="companyName"
-              label={t("contact/contactForm:contactCompanyName")}
+              label={t("contactCompanyName")}
               type="text"
               register={register}
-              placeholder={t("contact/contactForm:contactPlaceholderCompany")}
+              placeholder={t("contactPlaceholderCompany")}
             />
 
             <InputFiled
               name="subject"
-              label={t("contact/contactForm:contactSubject")}
+              label={t("contactSubject")}
               type="text"
               register={register}
               error={errors.subject?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderSubject")}
+              placeholder={t("contactPlaceholderSubject")}
             />
 
             <TextAreaField
               name="message"
-              label={t("contact/contactForm:contactMessage")}
+              label={t("contactMessage")}
               register={register}
               error={errors.message?.message}
-              placeholder={t("contact/contactForm:contactPlaceholderMessage")}
+              placeholder={t("contactPlaceholderMessage")}
               className="mb-1"
             />
             <p className="text-[0.9rem]">{t("contact/contactForm:mandatoryFields")}</p>
