@@ -52,11 +52,11 @@ const SocialMediaAndContact = () => {
 
           <div className='inline-block  min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
           
-          <NavLink
-            to="mailto:fianerd.developer@gmail.com"
+          <a
+            to="mailto:hello.fianerd@gmail.com" 
             className="flex flex-col cursor-pointer hover:opacity-70">
             <Icon icon="streamline:mail-send-envelope-solid" className='mx-auto text-2xl'/>
-          </NavLink>
+          </a>
         </div>
 
         {/* Decorative Line and Contact Text */}
