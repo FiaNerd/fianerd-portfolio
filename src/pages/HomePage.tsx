@@ -40,7 +40,7 @@ const HomePage = () => {
   return (
     <div
       style={{
-        marginTop: `${headerHeight}px`,
+        paddingTop: `${headerHeight}px`,
         transition: "padding-top 0.3s ease",
       }}
       className="bg-blend-multiply"
