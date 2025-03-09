@@ -8,9 +8,10 @@ import Education from "../components/profile/education/Education";
 import WorkExperience from "../components/profile/experience/WorkExperience";
 import Skills from "../components/profile/skills/Skills";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
+import useHeaderHeight from "../hook/useHeaderHeight";
 
 const HomePage = () => {
-  const [headerHeight, setHeaderHeight] = useState(0);
+  const headerHeight = useHeaderHeight();
   const { t } = useTranslation([
     "profile/aboutMe",
     "profile/experience",
@@ -18,19 +19,19 @@ const HomePage = () => {
     "profile/hobbies"
   ]);
 
-  useLayoutEffect(() => {
-    const updateHeaderHeight = () => {
-      const header = document.getElementById("header");
-      if (header) {
-        setHeaderHeight(header.getBoundingClientRect().height);
-      }
-    };
+  // useLayoutEffect(() => {
+  //   const updateHeaderHeight = () => {
+  //     const header = document.getElementById("header");
+  //     if (header) {
+  //       setHeaderHeight(header.getBoundingClientRect().height);
+  //     }
+  //   };
   
-    updateHeaderHeight(); 
-    window.addEventListener("resize", updateHeaderHeight);
+  //   updateHeaderHeight(); 
+  //   window.addEventListener("resize", updateHeaderHeight);
   
-    return () => window.removeEventListener("resize", updateHeaderHeight);
-  }, []);
+  //   return () => window.removeEventListener("resize", updateHeaderHeight);
+  // }, []);
   
   
   useSmoothScroll(headerHeight);
@@ -39,7 +40,7 @@ const HomePage = () => {
   return (
     <div
       style={{
-        paddingTop: `${headerHeight}px`,
+        marginTop: `${headerHeight}px`,
         transition: "padding-top 0.3s ease",
       }}
       className="bg-blend-multiply"

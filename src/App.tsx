@@ -7,6 +7,7 @@ import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
+import PageNotFound from './pages/PageNotFound'; // Ensure this import is correct
 
 const App = () => {
   return (
@@ -32,8 +33,8 @@ const App = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
-              <Route path="/contact" element={<ContactPage/> } />
-              <Route path="*" element={<div className="mb-20">Not Found</div>} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<PageNotFound />} /> {/* Corrected the typo here */}
             </Routes>
           </ErrorBoundary>
         </main>
