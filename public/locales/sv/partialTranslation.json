@@ -1,4 +1,5 @@
 {
-     "goBack": "Take Me Back",
-     "pageNotFound": "Error <br> 404 - Sidan kunde inte hittas"
+     "goBack": "Ta mig tillbaka",
+     "pageNotFoundTitle": "Opps, verkar som någon <br> precis har gått vilse.. ",
+     "pageNotFoundMessage": "Den här sidan du letar efter finns inte tillgänglig."
 }

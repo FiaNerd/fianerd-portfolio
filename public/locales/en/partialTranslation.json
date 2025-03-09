@@ -1,4 +1,5 @@
 {
-     "goBack": "Go back",
-     "pageNotFound": "404 - Page not found"
+     "goBack": "Take me back",
+     "pageNotFoundTitle": "<span class='title-page-not-found'>Opps,</span> looks like someone <br> just got lost.. ",
+     "pageNotFoundMessage": "The page you are looking for is not avalible."
 }

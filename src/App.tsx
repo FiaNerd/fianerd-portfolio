@@ -34,7 +34,7 @@ const App = () => {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="*" element={<PageNotFound />} /> {/* Corrected the typo here */}
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </ErrorBoundary>
         </main>

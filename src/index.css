@@ -151,6 +151,14 @@ p {
   padding: 0.5rem 0.75rem;
 }
 
+.title-page-not-found{
+  color: #6f4a69 ;
+}
+
+.dark .title-page-not-found{
+  color: #92292d;
+}
+
 @media (min-width: 640px) {
   .outlined-text {
     font-size: 2rem; 
