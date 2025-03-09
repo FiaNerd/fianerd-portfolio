@@ -16,7 +16,7 @@ const SocialMediaAndContact = () => {
 
   const isDarkMode = currentTheme === 'dark';
   
-   return (
+  return (
     <div className="sidebar h-screen flex flex-col justify-between w-[37px] md:w-[55px] mx-auto pt-12 px-[0.23em]">
       {/* Logo Section */}
       <div className="flex justify-start ">
@@ -29,39 +29,38 @@ const SocialMediaAndContact = () => {
         </NavLink>
       </div>
 
-
-    {/* Icons Section */}
-      <div className="flex flex-col items-center justify-end space-y-2 pb-20  md:text-[1.5em] mx-auto z-1000">
+      {/* Icons Section */}
+      <div className="flex flex-col items-center justify-center flex-grow space-y-2 md:text-[1.5em] mx-auto z-1000">
         {/* Icons Section */}
         <div className="flex flex-col space-y-3 "> 
           <NavLink
             to="https://github.com/FiaNerd"
             target="_blank"
             className="flex flex-col cursor-pointer hover:opacity-70">
-            <Icon icon="jam:github" className='mx-auto text-3xl'/>
+            <Icon icon="jam:github" className='mx-auto text-2xl md:text-3xl'/>
           </NavLink>
 
-          <div className='inline-block  min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
+          <div className='inline-block min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
           
           <NavLink
             to="https://www.linkedin.com/in/sofia-mattiasson-fianerd/"
             target="_blank"
             className="flex flex-col cursor-pointer hover:opacity-70">
-              <Icon icon="bi:linkedin" className='mx-auto text-2xl'/>
+              <Icon icon="bi:linkedin" className='mx-auto text-xl md:text-2xl'/>
           </NavLink>
 
-          <div className='inline-block  min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
+          <div className='inline-block min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
           
           <a
-            to="mailto:hello.fianerd@gmail.com" 
+            href="mailto:hello.fianerd@gmail.com" // Use href instead of to
             className="flex flex-col cursor-pointer hover:opacity-70">
-            <Icon icon="streamline:mail-send-envelope-solid" className='mx-auto text-2xl'/>
+            <Icon icon="streamline:mail-send-envelope-solid" className='mx-auto text-xl md:text-2xl'/>
           </a>
         </div>
 
         {/* Decorative Line and Contact Text */}
         <div className="inline-block h-[2em] min-h-[1em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent"></div>
-        <p className='rotate-180 [writing-mode:vertical-lr] tracking-widest text-text-secondary dark:text-text-accent mx-auto md:pt-12'>
+        <p className='rotate-180 [writing-mode:vertical-lr] tracking-widest text-text-secondary dark:text-text-accent mx-auto text-xs md:text-sm lg:text-base'>
           {t("contact")}
         </p>
       </div>
