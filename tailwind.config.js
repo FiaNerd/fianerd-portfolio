@@ -1,5 +1,5 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
- 
+
 module.exports = withMT({
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
@@ -26,18 +26,26 @@ module.exports = withMT({
         heading: ['fredericka-the-greatest', 'serif'],
         textImportant: ['pf-fuel-decay', 'sans-serif'],
         'sub-heading': ['cabin-sketch-regular', 'sans-serif'],
-
       },
       zIndex: {
         '100': '100',
       },
       screens: {
+        xxs: '320px',
         xs: '480px',
-        sm: '640px',  
-        md: '768px', 
+        sm: '640px',
+        md: '768px',
         lg: '1024px',
-        xl: '1280px', 
-        '2xl': '1536px', 
+        xl: '1280px',
+        '2xl': '1536px',
+        '3xl': '1920px',
+      },
+      resolutions: {
+        '2': '2dppx',
+        '3': '3dppx',
+        '4': '4dppx',
+        '5': '5dppx',
+        '6': '6dppx'
       },
       lineClamp: {
         7: '7',
@@ -56,5 +64,7 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [],
-})
+  plugins: [
+    require('tailwindcss-resolution'),
+  ],
+});
