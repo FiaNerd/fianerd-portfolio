@@ -64,7 +64,6 @@ h5 {
   margin-bottom: 1rem;
   font-size: clamp(0.875rem, 2vw, 1.25rem); 
   line-height: 1.6;
-  /* color: var(--color-text-secondary); */
 }
 
 p {
@@ -135,7 +134,8 @@ p {
 
 .highlight-text {
     position: relative;
-    color: #ffffff;
+    color: var(--color-hover-text);
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
 }
 
 .dark .highlight::before {
@@ -151,12 +151,29 @@ p {
   padding: 0.5rem 0.75rem;
 }
 
-.title-page-not-found{
-  color: #6f4a69 ;
+.highlight-variant-5{
+    position: relative;
+    display: inline-block;
+    font-size: clamp(1.2rem, 4vw, 1.5rem); 
 }
 
-.dark .title-page-not-found{
-  color: #d46947;
+.highlight-variant-5::before {
+    content: '';
+    position: absolute;
+    inset: -0.25rem; /* before:-inset-1 */
+    display: block;
+    transform: skewY(-6deg); /* before:-skew-y-3 */
+    background-color: var(--color-accent-primary); /* before:bg-pink-500 */
+    /* background-color: #a23615;  */
+}
+
+.oops-text {
+  color: var(--color-hover-text); 
+}
+
+.dark .oops-text  {
+  color: #203842;
+  
 }
 
 @media (min-width: 640px) {
@@ -183,15 +200,12 @@ p {
   --color-bg-mode: radial-gradient(ellipse at 88.1% 69.6%, #fff5d7 40%, #edd8bf 100.2%);
   --color-bg-primary: #f7ece0;
   --color-bg-secondary: #cb7f2c;
-  --color-accent-primary: #b94c0c; 
-  --color-accent-secondary: #913727; 
-  /* --color-accent-secondary: #d46763; Sekundära accenter */
+  --color-accent-primary: #913727; 
+  --color-accent-secondary: #d46947; 
   --color-text-accent: #501842; /* För rubriker */
   --color-text-secondary: #592208ed;
   --color-text-primary: #2d1a23; /* Neutral för brödtext */
-  /* --color-btn-bg: #b7253d; */
   --color-btn-bg: #e63946;
-  /* --color-btn-bg: #e63946; */
   --color-bg-hover: #b1424c;
   --color-hover-text: hsl(45, 100%, 92%);
   --color-nav-text: #06314f;

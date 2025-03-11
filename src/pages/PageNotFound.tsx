@@ -23,13 +23,13 @@ const PageNotFound = () => {
                 dangerouslySetInnerHTML={{ __html: t("pageNotFoundTitle")}}
               >
               </h1>
-              <h5>{t('pageNotFoundMessage')}</h5>
+              <h5 className='text-text-primary'>{t('pageNotFoundMessage')}</h5>
             </div>
 
           <div className="flex justify-center mx-auto items-center ">
                 <Button
                     onClick={goBack}
-                    className="max-w-xs inline-flex justify-center gap-2 text-xl transition-all duration-200 hover:scale-105 dark:text-text-primary border-2 hover:dark:border-[#203842] dark:border-text-primary dark:bg-[#203842] hover:bg-[#6f4a69] dark:hover:bg-[#203842] dark:hover:text-[#d46947] py-2 md:py-4 "
+                    className="max-w-xs inline-flex justify-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-text-primary dark:text-bg-primary hover:text-hover-text dark:hover:text-bg-primary bg-accent-secondary hover:bg-accent-primary dark:bg-text-accent dark:hover:bg-accent-primary border-2 border-text-primary dark:border-bg-primary hover:border-hover-text dark:hover:border-bg-primary py-2 md:py-4 "
                     >
                     <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
                     {t("goBack").toUpperCase()}

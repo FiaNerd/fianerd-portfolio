@@ -66,5 +66,9 @@ module.exports = withMT({
   },
   plugins: [
     require('tailwindcss-resolution'),
+    require('tailwindcss-highlights'),
   ],
+  variants: {
+    aspectRatio: ['responsive', 'hover'],
+  },
 });

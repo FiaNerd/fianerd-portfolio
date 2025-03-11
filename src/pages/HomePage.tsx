@@ -1,4 +1,3 @@
-import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import HeroSection from "../components/heroSection/HeroSection";
 import Hobbies from "../components/hobbies/Hobbies";
@@ -7,8 +6,8 @@ import AboutMe from "../components/profile/about/AboutMe";
 import Education from "../components/profile/education/Education";
 import WorkExperience from "../components/profile/experience/WorkExperience";
 import Skills from "../components/profile/skills/Skills";
-import { useSmoothScroll } from "../hook/useSmoothScroll";
 import useHeaderHeight from "../hook/useHeaderHeight";
+import { useSmoothScroll } from "../hook/useSmoothScroll";
 
 const HomePage = () => {
   const headerHeight = useHeaderHeight();
@@ -19,20 +18,6 @@ const HomePage = () => {
     "profile/hobbies"
   ]);
 
-  // useLayoutEffect(() => {
-  //   const updateHeaderHeight = () => {
-  //     const header = document.getElementById("header");
-  //     if (header) {
-  //       setHeaderHeight(header.getBoundingClientRect().height);
-  //     }
-  //   };
-  
-  //   updateHeaderHeight(); 
-  //   window.addEventListener("resize", updateHeaderHeight);
-  
-  //   return () => window.removeEventListener("resize", updateHeaderHeight);
-  // }, []);
-  
   
   useSmoothScroll(headerHeight);
 
@@ -60,7 +45,7 @@ const HomePage = () => {
           children={t("profile/aboutMe:subTitle")}
           className="text-[#ca5b87] top-0 dark:text-accent-primary"
           subHeadingClassName="text-hover-text dark:text-text-secondary"
-          light="bg-accent-secondary"
+          light="bg-accent-primary"
           dark="dark:bg-[#462208]"
           sticky
         />
