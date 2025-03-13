@@ -5,6 +5,8 @@ import ProgramAndSoftware from "./ProgramAndSoftware";
     const { t } = useTranslation(["profile/skills"]);
     //   const { ref: ref1, ctrls: ctrls1, vars: vars1 } = useFadeIn({ delay: 0.2, duration: 1, repeat: false });
 
+    
+
 return (
         <div  
             // ref={ref1} 
@@ -45,7 +47,7 @@ return (
                         </div>
                     </section>
 
-                <section id="other-skills" >
+                <section id="programs-and-softwares" >
                     <ProgramAndSoftware />
                 </section>
         </div>

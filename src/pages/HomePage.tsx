@@ -12,17 +12,16 @@ import { useSmoothScroll } from "../hook/useSmoothScroll";
 import useHeaderHeight from "../hook/useHeaderHeight";
 
 const HomePage = () => {
-  const headerHeight = useHeaderHeight();
   const { t } = useTranslation([
     "profile/aboutMe",
     "profile/experience",
     "profile/education",
     "profile/hobbies"
   ]);
+
+  const headerHeight = useHeaderHeight();
   const location = useLocation();
-
-  useSmoothScroll(headerHeight);
-
+  
   useEffect(() => {
     const handleHashNavigation = () => {
       const sectionId = location.pathname.split('/').pop();
@@ -35,9 +34,11 @@ const HomePage = () => {
         }
       }
     };
-
+    
     handleHashNavigation();
   }, [location]);
+  
+  useSmoothScroll(headerHeight);
 
   return (
     <div

@@ -75,7 +75,7 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/portfolio/top5projects',
+        url: '/portfolio/top-5-projects',
         description: 'top5best-projectsDescription',
       },
       {

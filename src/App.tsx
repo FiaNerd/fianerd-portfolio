@@ -41,6 +41,11 @@ const App = () => {
               <Route path="/profile/education" element={<HomePage />} />
               <Route path="/profile/hobbies" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/portfolio/top-5-projects" element={<PortfolioPage />} />
+              <Route path="/portfolio/frontend" element={<PortfolioPage />} />
+              <Route path="/portfolio/backend" element={<PortfolioPage />} />
+              <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
+              <Route path="/portfolio/graphic" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<PageNotFound />} />

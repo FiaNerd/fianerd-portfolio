@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import RippedPaperBottom from "../../assets/svg/RippedPaperBottom";
 import RippedPaperTop from "../../assets/svg/RippedPaperTop";
@@ -20,6 +20,22 @@ const PortfolioPage = () => {
   ]);
 
 const headerHeight = useHeaderHeight();
+
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const sectionId = location.pathname.split('/').pop();
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.warn(`Section with ID "${sectionId}" not found.`);
+        }
+      }
+    };
+
+    handleHashNavigation();
+  }, [location]);
   
   
   useSmoothScroll(headerHeight);
@@ -74,7 +90,7 @@ const headerHeight = useHeaderHeight();
         <SvgWaves colorLight={"#436e74"} colorDark={"#16443e"} />
       </div>
 
-      <section id="top5projects" className="top-0">
+      <section id="top-5-projects" className="top-0">
         <Title
           dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')}
           dot={"."}
