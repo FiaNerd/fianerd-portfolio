@@ -6,8 +6,10 @@ import AboutMe from "../components/profile/about/AboutMe";
 import Education from "../components/profile/education/Education";
 import WorkExperience from "../components/profile/experience/WorkExperience";
 import Skills from "../components/profile/skills/Skills";
-import useHeaderHeight from "../hook/useHeaderHeight";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useSmoothScroll } from "../hook/useSmoothScroll";
+import useHeaderHeight from "../hook/useHeaderHeight";
 
 const HomePage = () => {
   const headerHeight = useHeaderHeight();
@@ -17,10 +19,25 @@ const HomePage = () => {
     "profile/education",
     "profile/hobbies"
   ]);
+  const location = useLocation();
 
-  
   useSmoothScroll(headerHeight);
 
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const sectionId = location.pathname.split('/').pop();
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.warn(`Section with ID "${sectionId}" not found.`);
+        }
+      }
+    };
+
+    handleHashNavigation();
+  }, [location]);
 
   return (
     <div
@@ -30,7 +47,6 @@ const HomePage = () => {
       }}
       className="bg-blend-multiply"
     >
-     
       {/* Hero Section */}
       <section id="home" className="relative items-center ">
         <HeroSection />

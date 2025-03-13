@@ -29,6 +29,7 @@ const ContactPage = () => {
     resolver: yupResolver(formValidationSchema(t)), 
   });
 
+  console.log(errors);
 
   const onSubmit = (data: ContactFormInputs) => console.log(data);
 

@@ -23,47 +23,47 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'profile',
-    url: '/#profile', 
+    url: '/profile', 
     icon: faCaretDown,
     subMenu: [
       {
         title: 'me',
-        url: '/#me',
+        url: '/profile/me',
         description: 'meDescription',
       },
       {
         title: 'skillsWeb',
-        url: '/#web',
+        url: '/profile/web',
         description: 'skillsWebDescription',
       },
       {
         title: 'skillsGraphic',
-        url: '/#graphic',
+        url: '/profile/graphic',
         description: 'skillsGraphicDescription',
       },
       {
         title: 'otherSkills',
-        url: '/#other-skills',
+        url: '/profile/other-skills',
         description: 'otherSkillsDescription',
       },
       {
         title: 'programsAndSoftwares',
-        url: '/#other-skills',
+        url: '/profile/programs-and-softwares',
         description: 'programsAndSoftwaresDescription',
       },
       {
         title: 'experience',
-        url: '/#experience', 
+        url: '/profile/experience', 
         description: 'experienceDescription',
       },
       {
         title: 'education',
-        url: '/#education',
+        url: '/profile/education',
         description: 'educationDescription',
       },
       {
         title: 'hobbies',
-        url: '/#hobbies',
+        url: '/profile/hobbies',
         description: 'hobbiesDescription',
       },
     ],
@@ -72,39 +72,39 @@ export const navRoutes: Route[] = [
     title: 'portfolio',
     url: '/portfolio', 
     icon: faCaretDown,
-      subMenu: [
-        {
-          title: 'top5best-projects',
-          url: '/portfolio/#top5projects',
-          description: 'top5best-projectsDescription',
-        },
-        {
-          title: 'allProjects',
-          url: '/portfolio/#alla-projekt',
-          description: 'allProjectsDescription',
-        },
-        {
-          title: 'frontend',
-          url: '/portfolio/#frontend',
-          description: 'frontendDescription',
-        },
-        {
-          title: 'backend',
-          url: '/portfolio/#backend',
-          description: 'backendDescription',
-        },
-        {
-          title: 'fullstack',
-          url: '/portfolio/#fullstack',
-          description: 'fullstackDescription',
-        },
-        {
-          title: 'graphic',
-          url: '/portfolio/#graphic-design',
-          description: 'grafiskDescription',
-        },
-      ],
-    },
+    subMenu: [
+      {
+        title: 'top5best-projects',
+        url: '/portfolio/top5projects',
+        description: 'top5best-projectsDescription',
+      },
+      {
+        title: 'allProjects',
+        url: '/portfolio/all-projects',
+        description: 'allProjectsDescription',
+      },
+      {
+        title: 'frontend',
+        url: '/portfolio/frontend',
+        description: 'frontendDescription',
+      },
+      {
+        title: 'backend',
+        url: '/portfolio/backend',
+        description: 'backendDescription',
+      },
+      {
+        title: 'fullstack',
+        url: '/portfolio/fullstack',
+        description: 'fullstackDescription',
+      },
+      {
+        title: 'graphic',
+        url: '/portfolio/graphic-design',
+        description: 'graphicDescription',
+      },
+    ],
+  },
   {
     title: 'news',
     url: '/news',

@@ -41,6 +41,7 @@ i18n
 
       "contact/contact",
       "contact/contactForm",
+      "contact/contactFormValidation",
     ],
     defaultNS: 'profile/aboutMe',
     detection: {

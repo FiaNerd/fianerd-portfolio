@@ -7,7 +7,7 @@ import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
-import PageNotFound from './pages/PageNotFound'; // Ensure this import is correct
+import PageNotFound from './pages/PageNotFound';
 
 const App = () => {
   return (
@@ -31,6 +31,15 @@ const App = () => {
           >
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/profile" element={<HomePage />} />
+              <Route path="/profile/me" element={<HomePage />} />
+              <Route path="/profile/web" element={<HomePage />} />
+              <Route path="/profile/graphic" element={<HomePage />} />
+              <Route path="/profile/other-skills" element={<HomePage />} />
+              <Route path="/profile/programs-and-softwares" element={<HomePage />} />
+              <Route path="/profile/experience" element={<HomePage />} />
+              <Route path="/profile/education" element={<HomePage />} />
+              <Route path="/profile/hobbies" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />
               <Route path="/contact" element={<ContactPage />} />

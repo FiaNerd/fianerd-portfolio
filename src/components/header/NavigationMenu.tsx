@@ -77,7 +77,7 @@ const NavigationMenu = () => {
           {navRoutes.map((menu, index) => (
             <li key={index} className="text-[1.4rem]">
               <NavLink
-                to={menu.url.replace('#', '')}
+                to={menu.url}
                 className={({ isActive }) =>
                   `inline-flex items-center justify-center text-nav-text h-auto px-1 lg:px-2 py-2 text-sm font-medium transition-colors ${
                     isActive

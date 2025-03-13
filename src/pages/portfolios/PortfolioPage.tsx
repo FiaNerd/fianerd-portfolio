@@ -12,26 +12,14 @@ import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
 import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
 import Top5projects from "../../components/portfolios/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
+import useHeaderHeight from "../../hook/useHeaderHeight";
 
 const PortfolioPage = () => {
-  const [headerHeight, setHeaderHeight] = useState(0);
   const { t } = useTranslation([
     "portfolio",
   ]);
 
-  useLayoutEffect(() => {
-    const updateHeaderHeight = () => {
-      const header = document.getElementById("header");
-      if (header) {
-        setHeaderHeight(header.getBoundingClientRect().height);
-      }
-    };
-  
-    updateHeaderHeight();
-    window.addEventListener("resize", updateHeaderHeight);
-  
-    return () => window.removeEventListener("resize", updateHeaderHeight);
-  }, []);
+const headerHeight = useHeaderHeight();
   
   
   useSmoothScroll(headerHeight);
@@ -99,7 +87,7 @@ const PortfolioPage = () => {
 
 
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
-          <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
+          <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">          npm install react-scroll          npm install react-scroll
             <Title 
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."}
