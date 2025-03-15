@@ -14,11 +14,12 @@ import Top5projects from "../../components/portfolios/Top5projects";
 import useHeaderHeight from "../../hook/useHeaderHeight";
 import { useLocation } from "react-router-dom";
 import useSmoothScroll from "../../hook/useSmoothScroll";
+import useScrollUpdateURL from "../../hook/useScrollUpdate";
 
 const PortfolioPage = () => {
-  const { t } = useTranslation([
-    "portfolio",
-  ]);
+  const { t } = useTranslation('portfolio');
+  console.log(t('portfolio.titlePortfolio'));
+
 
 const headerHeight = useHeaderHeight();
 
@@ -39,7 +40,8 @@ const headerHeight = useHeaderHeight();
       
       handleHashNavigation();
     }, [location]);
-  
+    
+    useScrollUpdateURL('portfolio');
   useSmoothScroll(headerHeight);
 
   return (
@@ -69,7 +71,7 @@ const headerHeight = useHeaderHeight();
                 <p className="font-semibold tracking-wide">
                   {t('portfolio.portfolioIntro')}
                 </p>
-                <div className="flex flex-col w-full xl:flex-row items-center mx-auto md:mt-8 gap-8">
+                <div className="flex flex-col w-full xl:flex-row items-center mx-auto md:mt-8 gap-2">
                   <Button className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
                     <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolio.ctaButtonCV")}
                   </Button>
@@ -104,6 +106,7 @@ const headerHeight = useHeaderHeight();
       </section>
 
 
+      <section id="frontend" className="top-0">
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
           <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">     
             <Title 
@@ -118,7 +121,7 @@ const headerHeight = useHeaderHeight();
             <FrontendPortfolio />
           </SectionPlate>
           <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
-
+        </section>
 
           <section id="backend" className="top-0 mb-12">
              <Title 

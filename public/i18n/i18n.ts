@@ -18,6 +18,7 @@ i18n
     },    
     ns: [
       'translation',
+      "partialTranslation",
       'home', 
       'heroSection', 
 
@@ -43,7 +44,7 @@ i18n
       "contact/contactForm",
       "contact/contactFormValidation",
     ],
-    defaultNS: 'home',
+    defaultNS: 'translation',
     detection: {
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag', 'path', 'subdomain'], 
       caches: ['localStorage', 'cookie'],
