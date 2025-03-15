@@ -13,6 +13,7 @@ import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
 import Top5projects from "../../components/portfolios/Top5projects";
 import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import useHeaderHeight from "../../hook/useHeaderHeight";
+import { useLocation } from "react-router-dom";
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
@@ -21,22 +22,23 @@ const PortfolioPage = () => {
 
 const headerHeight = useHeaderHeight();
 
-  useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.pathname.split('/').pop();
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
+    const location = useLocation();
+    
+    useEffect(() => {
+      const handleHashNavigation = () => {
+        const sectionId = location.pathname.split('/').pop();
+        if (sectionId) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.warn(`Section with ID "${sectionId}" not found.`);
+          }
         }
-      }
-    };
-
-    handleHashNavigation();
-  }, [location]);
-  
+      };
+      
+      handleHashNavigation();
+    }, [location]);
   
   useSmoothScroll(headerHeight);
 
@@ -103,7 +105,7 @@ const headerHeight = useHeaderHeight();
 
 
         <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
-          <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">          npm install react-scroll          npm install react-scroll
+          <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">     
             <Title 
               title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
               dot={"."}

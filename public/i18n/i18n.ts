@@ -43,9 +43,9 @@ i18n
       "contact/contactForm",
       "contact/contactFormValidation",
     ],
-    defaultNS: 'profile/aboutMe',
+    defaultNS: 'home',
     detection: {
-      order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'], 
+      order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag', 'path', 'subdomain'], 
       caches: ['localStorage', 'cookie'],
     },
     debug: true,

@@ -29,22 +29,38 @@ const NavigationMenu = () => {
       setNavigationMenu('');
     }, navigationMenuCloseDelay);
   };
-
-  useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.hash.replace('#', '');
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
+    
+    useEffect(() => {
+      const handleHashNavigation = () => {
+        const sectionId = location.pathname.split('/').pop();
+        if (sectionId) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.warn(`Section with ID "${sectionId}" not found.`);
+          }
         }
-      }
-    };
+      };
+      
+      handleHashNavigation();
+    }, [location]);
 
-    handleHashNavigation();
-  }, [location]);
+  // useEffect(() => {
+  //   const handleHashNavigation = () => {
+  //     const sectionId = location.hash.replace('#', '');
+  //     if (sectionId) {
+  //       const element = document.getElementById(sectionId);
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: 'smooth' });
+  //       } else {
+  //         console.warn(`Section with ID "${sectionId}" not found.`);
+  //       }
+  //     }
+  //   };
+
+  //   handleHashNavigation();
+  // }, [location]);
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault(); // Prevent default link behavior
