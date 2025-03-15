@@ -24,7 +24,7 @@ const useScrollUpdateURL = (basePath: string = "") => {
 
       if (currentSectionId) {
         const fullPath = basePath ? `/${basePath}/${currentSectionId}` : `/${currentSectionId}`;
-        window.history.replaceState(null, "", fullPath); // Use full path here
+        window.history.replaceState(null, "", fullPath);
       }
     };
 

@@ -23,7 +23,7 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'profile',
-    url: '/profile', 
+    url: '/profile/me', 
     icon: faCaretDown,
     subMenu: [
       {

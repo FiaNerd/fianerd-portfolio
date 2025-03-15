@@ -4,11 +4,12 @@ import GraphicSkills from "./GraphicSkills";
 import OtherSkills from "./OtherSkills";
 import WebSkills from "./WebSkills";
 import useScrollUpdateURL from "../../../hook/useScrollUpdate";
+import useScrollSpy from "../../../hook/useScrollSpy";
 
 const Skills = () => {
   const { t } = useTranslation(["profile/skills"]);
+  useScrollSpy(["web-skills", "graphic-skills", "other-skills"], "skills");
 
-  useScrollUpdateURL();
 
   return (
     <div className="mx-auto top-0 left-0 ">

@@ -1,52 +1,42 @@
-import { useEffect, useRef } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const useScrollSpy = (sectionIds: string[], threshold: number = 0.6) => {
+const isElementInView = (element: HTMLElement): boolean => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+
+
+const useScrollSpy = (sectionIds: string[], basePath: string) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const isNavigating = useRef(false); // To prevent conflicts when clicking NavLink
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (isNavigating.current) return; // Skip updates if a NavLink was just clicked
+    const onScroll = () => {
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section && isElementInView(section)) {
+          const newUrl = `${basePath}/${id}`;
 
-        const visibleSection = entries.find((entry) => entry.isIntersecting);
-        if (visibleSection) {
-          const sectionId = visibleSection.target.id;
-          
-          // Only update URL if it's different
-          if (!location.hash.includes(sectionId)) {
-            navigate(`#${sectionId}`, { replace: true });
+          console.log("Checking section:", id);
+console.log("New URL should be:", newUrl);
+console.log("Current URL:", location.pathname);
+
+          if (location.pathname !== newUrl) {
+            navigate(newUrl, { replace: true }); // Update URL without reloading
           }
+          break; // Stop checking after the first visible section
         }
-      },
-      { threshold }
-    );
-
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect(); // Cleanup on unmount
-  }, [navigate, sectionIds, threshold, location]);
-
-  // Handle NavLink clicks (manual navigation)
-  useEffect(() => {
-    if (location.hash) {
-      isNavigating.current = true; // Mark that we're navigating manually
-      const targetId = location.hash.replace("#", "");
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        setTimeout(() => {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-          setTimeout(() => (isNavigating.current = false), 500); // Reset after scroll animation
-        }, 100); // Small delay ensures layout is ready
       }
-    }
-  }, [location.hash]);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [sectionIds, basePath, location.pathname, navigate]);
 };
 
 export default useScrollSpy;

@@ -31,7 +31,7 @@ const App = () => {
           >
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/profile" element={<HomePage />}>
+              <Route path="/profile" element={<HomePage />} >
                 <Route path="/profile/me" element={<HomePage />} />
                 <Route path="/profile/web-skills" element={<HomePage />} />
                 <Route path="/profile/graphic-skills" element={<HomePage />} />
@@ -47,7 +47,7 @@ const App = () => {
               <Route path="/portfolio/backend" element={<PortfolioPage />} />
               <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
               <Route path="/portfolio/graphic" element={<PortfolioPage />} />
-              <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />              npm install react-router-hash-link              npm install react-router-hash-link
+              <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />  
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>

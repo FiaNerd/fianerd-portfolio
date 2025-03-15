@@ -11,6 +11,7 @@ import { useLocation } from "react-router-dom";
 import useHeaderHeight from "../hook/useHeaderHeight";
 import useSmoothScroll from "../hook/useSmoothScroll";
 import useScrollUpdateURL from "../hook/useScrollUpdate";
+import useScrollSpy from "../hook/useScrollSpy";
 
 const HomePage = () => {
   const { t } = useTranslation([
@@ -39,9 +40,11 @@ const HomePage = () => {
     handleHashNavigation();
   }, [location]);
 
-
-
-  useScrollUpdateURL();
+  useScrollSpy(
+    ["profile", "skills", "experience", "education", "hobbies"], 
+    "/profile"
+  );
+  useScrollUpdateURL('profile');
   
   useSmoothScroll(headerHeight);
   
@@ -59,7 +62,7 @@ const HomePage = () => {
       </section>
 
       {/* Profile Section */}
-      <section id="profile" className="relative">
+      <section id="me" className="relative">
         <Title
           id="me"
           title={t("profile/aboutMe:titleProfile")}
@@ -75,9 +78,9 @@ const HomePage = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="section top-0 relative">
+      {/* <section className="section top-0 relative"> */}
         <Skills />
-      </section>
+      {/* </section> */}
 
       {/* Work Experience Section */}
       <section id="experience" className="relative">
