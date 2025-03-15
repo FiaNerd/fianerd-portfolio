@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
-import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import Title from "../partials/Title";
+import useSmoothScroll from "../../hook/useSmoothScroll";
 
 interface HeroDetailsProps {
   title: string;

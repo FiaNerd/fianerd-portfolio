@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import ContactForm from "../../components/contact/ContactForm";
 import Title from "../../components/partials/Title";
-import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import formValidationSchema from "../../utils/contactFormValidation";
+import useSmoothScroll from "../../hook/useSmoothScroll";
 
 interface ContactFormInputs {
   name: string;

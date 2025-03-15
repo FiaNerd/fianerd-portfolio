@@ -33,12 +33,12 @@ export const navRoutes: Route[] = [
       },
       {
         title: 'skillsWeb',
-        url: '/profile/web',
+        url: '/profile/web-skills',
         description: 'skillsWebDescription',
       },
       {
         title: 'skillsGraphic',
-        url: '/profile/graphic',
+        url: '/profile/graphic-skills',
         description: 'skillsGraphicDescription',
       },
       {

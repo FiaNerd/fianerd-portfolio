@@ -6,7 +6,7 @@ import portfolioDataEn from "../../../public/locales/en/portfolio.json";
 import portfolioDataSv from "../../../public/locales/sv/portfolio.json";
 import HeroDetails from "../../components/portfolios/HeroDetails";
 import PortfolioDetailsItems from "../../components/portfolios/PortfolioDetailsItems";
-import { useSmoothScroll } from "../../hook/useSmoothScroll";
+import useSmoothScroll from "../../hook/useSmoothScroll";
 
 const PortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { startTransition, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
@@ -36,34 +36,33 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     setDropdown((prev) => !prev);
   };
 
-  const handleScroll = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
-    e.preventDefault();
-
-    const [path, sectionId] = url.split('#');
-
-    if (sectionId) {
-      if (location.pathname === path) {
-        setTimeout(() => handleScroll(sectionId), 100);
+    e.preventDefault(); // Prevent default link behavior
+  
+    const [path, sectionId] = url.split('#'); // Split the URL to check for a section ID
+  
+    startTransition(() => {
+      // Navigate to the correct section based on URL
+      if (sectionId) {
+        // Scroll to the section if it's on the same page
+        if (location.pathname === path) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          // Otherwise, navigate to the path with the section ID (scroll will be handled)
+          navigate(`${path}#${sectionId}`, { replace: true });
+        }
       } else {
-        navigate(path);
-
-        setTimeout(() => {
-          handleScroll(sectionId);
-        }, 300);
+        navigate(path); // Navigate to the path without a section ID
       }
-    } else {
-      navigate(path);
-    }
-
-    closeMenu();
+    });
+  
+    closeMenu()
   };
+  
 
   const renderLinkOrButton = () => {
     if (items.url) {

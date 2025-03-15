@@ -4,13 +4,13 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
+import useScrollUpdateURL from '../../hook/useScrollUpdate';
 
 const NavigationMenu = () => {
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
-
   const { t } = useTranslation('translation');
 
   const navigationMenuCloseDelay = 200;
@@ -29,38 +29,22 @@ const NavigationMenu = () => {
       setNavigationMenu('');
     }, navigationMenuCloseDelay);
   };
-    
-    useEffect(() => {
-      const handleHashNavigation = () => {
-        const sectionId = location.pathname.split('/').pop();
-        if (sectionId) {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            console.warn(`Section with ID "${sectionId}" not found.`);
-          }
+
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const sectionId = location.hash.replace("#", "");
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      };
-      
-      handleHashNavigation();
-    }, [location]);
+      }
+    };
 
-  // useEffect(() => {
-  //   const handleHashNavigation = () => {
-  //     const sectionId = location.hash.replace('#', '');
-  //     if (sectionId) {
-  //       const element = document.getElementById(sectionId);
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //       } else {
-  //         console.warn(`Section with ID "${sectionId}" not found.`);
-  //       }
-  //     }
-  //   };
-
-  //   handleHashNavigation();
-  // }, [location]);
+    handleHashNavigation();
+  }, [location]);
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault(); // Prevent default link behavior

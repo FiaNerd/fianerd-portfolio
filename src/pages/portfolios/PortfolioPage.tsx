@@ -11,9 +11,9 @@ import BackendPortfolio from "../../components/portfolios/BackendPortfolio";
 import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
 import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
 import Top5projects from "../../components/portfolios/Top5projects";
-import { useSmoothScroll } from "../../hook/useSmoothScroll";
 import useHeaderHeight from "../../hook/useHeaderHeight";
 import { useLocation } from "react-router-dom";
+import useSmoothScroll from "../../hook/useSmoothScroll";
 
 const PortfolioPage = () => {
   const { t } = useTranslation([

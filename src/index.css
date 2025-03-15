@@ -73,6 +73,10 @@ p {
   color: var(--color-text-primary);
 }
 
+section {
+  min-height: 100vh;
+}
+
 .outlined-text {
   color: #25021c;
   -webkit-text-stroke: 0.4px #c81560;

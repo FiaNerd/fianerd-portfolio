@@ -4,11 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useSidebarWidth } from '../../hook/useSidebarWidth';
-import { useSmoothScroll } from '../../hook/useSmoothScroll';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
+import useSmoothScroll from '../../hook/useSmoothScroll';
+import useScrollUpdateURL from '../../hook/useScrollUpdate';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);
@@ -66,6 +67,8 @@ const Header = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, isNavigating]);
+
+  
 
   useSmoothScroll(headerHeight);
 

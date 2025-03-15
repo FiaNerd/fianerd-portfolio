@@ -3,13 +3,16 @@ import Title from "../../partials/Title";
 import GraphicSkills from "./GraphicSkills";
 import OtherSkills from "./OtherSkills";
 import WebSkills from "./WebSkills";
+import useScrollUpdateURL from "../../../hook/useScrollUpdate";
 
 const Skills = () => {
   const { t } = useTranslation(["profile/skills"]);
 
+  useScrollUpdateURL();
+
   return (
     <div className="mx-auto top-0 left-0 ">
-      <section id="web">
+      <section id="web-skills">
         <Title
           title={t("webSkills.webSkillsTitle")}
           dot="."
@@ -22,7 +25,7 @@ const Skills = () => {
       </section>
       
 
-      <section id="graphic" className="top-0 left-0">
+      <section id="graphic-skills" className="top-0 left-0">
         <Title
           title={t('graphicSkills.graphicSkillsTitle')}
           dot="."
