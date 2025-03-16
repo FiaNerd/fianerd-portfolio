@@ -36,15 +36,36 @@
   "grafiskDescription": "Utforska mina utvalda grafiska projekt",
   "news": "Nyheter<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
-    "languages": {
-      "select": "SV",
-      "sv": "Svenska",
-      "en": "Engelska"
-    },
+  "languages": {
+    "select": "SV",
+    "sv": "Svenska",
+    "en": "Engelska"
+  },
   "subMenu": {
-   "titleProfile": "Profil",
+    "titleProfile": "Profil",
     "titlePortfolio": "Portfolio",
     "subTitleProfile": "En personlig profil som visar mina färdigheter",
     "subTitlePortfolio": "En samling av mina bästa verk"
+  },
+  "urls": {
+    "home": "hem",
+    "profile": "profil",
+    "me": "vem-ar-jag",
+    "skillsWeb": "webbkompetenser",
+    "skillsGraphic": "grafiska-kompetens",
+    "otherSkills": "ovriga-kompetens",
+    "programsAndSoftwares": "program-verktyg",
+    "experience": "erfarenhet",
+    "education": "utbildning",
+    "hobbies": "hobbyer",
+    "portfolio": "portfolio",
+    "top5best-projects": "top-5-projekt",
+    "allProjects": "alla-projekt",
+    "frontend": "frontend",
+    "backend": "backend",
+    "fullstack": "fullstack",
+    "graphic": "grafisk-design",
+    "news": "nyheter",
+    "contact": "kontakta-mig"
   }
 }
