@@ -44,6 +44,7 @@ const HomePage = () => {
     ["profile", "skills", "experience", "education", "hobbies"], 
     "/profile"
   );
+  
   useScrollUpdateURL('profile');
   
   useSmoothScroll(headerHeight);

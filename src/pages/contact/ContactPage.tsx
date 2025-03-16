@@ -1,51 +1,15 @@
 import { useLayoutEffect, useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import ContactForm from "../../components/contact/ContactForm";
 import Title from "../../components/partials/Title";
-import formValidationSchema from "../../utils/contactFormValidation";
 import useSmoothScroll from "../../hook/useSmoothScroll";
-import { yupResolver } from "@hookform/resolvers/yup";
-
-interface ContactFormInputs {
-  name: string;
-  companyName?: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+import useHeaderHeight from "../../hook/useHeaderHeight";
 
 const ContactPage = () => {
-  const [headerHeight, setHeaderHeight] = useState(0);
   const { t } = useTranslation("contact/contact");
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<ContactFormInputs>({
-    resolver: yupResolver(formValidationSchema(t)),
-  });
-
-  useLayoutEffect(() => {
-    const updateHeaderHeight = () => {
-      const header = document.getElementById("header");
-      if (header) {
-        setHeaderHeight(header.getBoundingClientRect().height);
-      }
-    };
-
-    updateHeaderHeight();
-    window.addEventListener("resize", updateHeaderHeight);
-
-    return () => window.removeEventListener("resize", updateHeaderHeight);
-  }, []);
+  const headerHeight = useHeaderHeight();
 
   useSmoothScroll(headerHeight);
-
-  const onSubmit: SubmitHandler<ContactFormInputs> = (data) => {
-    console.log(data);
-  };
 
   return (
     <div
@@ -76,7 +40,7 @@ const ContactPage = () => {
         </div>
 
         <div className="bg-[#e7a48a] dark:bg-[#1d1617] flex flex-col py-4 px-4 lg:px-8 rounded-lg">
-          <ContactForm onSubmit={onSubmit}  />
+          <ContactForm />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { FC, ReactNode, createElement, forwardRef, ForwardedRef } from "react";
+import { ReactNode, createElement, forwardRef, ForwardedRef } from "react";
 import { UseFormHandleSubmit, UseFormRegister } from "react-hook-form";
 import Button from "./Button";
 import { Icon } from "@iconify/react";
@@ -11,9 +11,11 @@ interface IFormProps {
   children?: childrenType;
   buttonLabel: string;
   register: UseFormRegister<any>;
-  handleSubmit: UseFormHandleSubmit<any>; // handleSubmit should be passed
+  handleSubmit: UseFormHandleSubmit<any>;
   onSubmit: (data: any) => void;
   className?: string;
+  isLoading: boolean;
+  isSuccess: boolean;
 }
 
 const Form = forwardRef<HTMLFormElement, IFormProps>(({
@@ -24,28 +26,29 @@ const Form = forwardRef<HTMLFormElement, IFormProps>(({
   onSubmit,
   handleSubmit,
   register,
+  isLoading,
+  isSuccess,
   ...rest
 }, ref: ForwardedRef<HTMLFormElement>) => {
   return (
-    <form id="contact-form-container" ref={ref} onSubmit={handleSubmit(onSubmit)} {...rest} className={className}>
+    <form ref={ref} onSubmit={handleSubmit(onSubmit)} {...rest} className={className}>
       <div className="flex justify-content-center flex-wrap">
         {Array.isArray(children)
           ? children.map((child) => {
-              return child.props.name
-                ? createElement(child.type, {
-                    ...{
-                      ...child.props,
-                      register,
-                      key: child.props.name
-                    }
-                  })
-                : child;
+              if (child && child.props && child.props.name) {
+                return createElement(child.type, {
+                  ...child.props,
+                  register,
+                  key: child.props.name
+                });
+              }
+              return child;
             })
           : children}
       </div>
-      <Button className="flex flex-row justify-center items-center gap-2 border-2 border-text-primary hover:bg-text-primary dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
+      <Button disabled={isLoading} type="submit" className="flex flex-row justify-center items-center gap-2 border-2 border-text-primary hover:bg-text-primary dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
         <Icon icon="fa:send" width="24" height="24" />
-        {buttonLabel}
+        {isLoading ? "Sending..." : buttonLabel}
       </Button>
     </form>
   );
