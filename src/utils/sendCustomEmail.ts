@@ -4,7 +4,7 @@ const sendCustomEmail = async (data: any) => {
     emailjs.init(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
 
     emailjs.send(
-        import.meta.env.VITE_EMAIL_SERVICE_ID ,
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
         import.meta.env.VITE_EMAIL_TEMPLATE_ID,
         {
             name: data.name,
@@ -12,12 +12,13 @@ const sendCustomEmail = async (data: any) => {
             email: data.email,
             subject: data.subject,
             message: data.message,
+            reply_to: data.email,
         }
     ).then((response) => {
         console.log("Email sent successfully:", response.text);
     }).catch((error) => {
         console.error("Error sending email:", error);
-    })
+    });
 }
 
-export {sendCustomEmail} 
+export { sendCustomEmail };

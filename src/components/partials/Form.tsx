@@ -46,7 +46,7 @@ const Form = forwardRef<HTMLFormElement, IFormProps>(({
             })
           : children}
       </div>
-      <Button disabled={isLoading} type="submit" className="flex flex-row justify-center items-center gap-2 border-2 border-text-primary hover:bg-text-primary dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
+      <Button disabled={isLoading} type="submit" className="flex flex-row justify-center mt-8 items-center gap-2 border-2 border-text-primary hover:bg-text-primary dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
         <Icon icon="fa:send" width="24" height="24" />
         {isLoading ? "Sending..." : buttonLabel}
       </Button>

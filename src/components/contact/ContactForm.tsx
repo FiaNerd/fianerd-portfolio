@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import InputField from "../../components/partials/InputFiled";
 import TextAreaField from "../../components/partials/TextAreaField";
-import formValidationSchema from "../../utils/contactFormValidation";
 import Form from "../../components/partials/Form";
 import { useState } from "react";
 import { sendCustomEmail } from "../../utils/sendCustomEmail";
+import getFormContactSchema from "../../utils/contactValidation";
 
 interface IContactFormInputs {
   name: string;
@@ -17,9 +17,10 @@ interface IContactFormInputs {
 }
 
 const ContactForm = () => {
-  const { t } = useTranslation("contact/contactForm");
+  const { t } = useTranslation(["contact/contactForm", "contact/contactValidation"]);
+  const formValidationSchema = getFormContactSchema(t); 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IContactFormInputs>({
-    resolver: yupResolver(formValidationSchema(t)),
+    resolver: yupResolver(formValidationSchema),
     defaultValues: {
       name: "",
       companyName: "",
@@ -36,6 +37,7 @@ const ContactForm = () => {
     setIsLoading(true);
     setErrorMessage(null);
     try {
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Add a delay of 1 second
       await sendCustomEmail(data);
       setIsSuccess(true);
       reset();
@@ -91,7 +93,7 @@ const ContactForm = () => {
         error={errors.message?.message}
         placeholder={t("contactPlaceholderMessage")}
       />
-      {isSuccess && <p className="font-sm text-green-500">Email sent successfully!</p>}
+      {isSuccess && <p className="text-green-500">Email sent successfully!</p>}
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
       {isLoading && <p className="text-blue-500">Sending...</p>}
     </Form>
