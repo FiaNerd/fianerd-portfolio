@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import InputField from "../../components/partials/InputFiled";
 import TextAreaField from "../../components/partials/TextAreaField";
+import getFormContactSchema from "../../utils/contactValidation";
 import Form from "../../components/partials/Form";
 import { useState } from "react";
 import { sendCustomEmail } from "../../utils/sendCustomEmail";
-import getFormContactSchema from "../../utils/contactValidation";
 
 interface IContactFormInputs {
   name: string;
@@ -37,13 +37,18 @@ const ContactForm = () => {
     setIsLoading(true);
     setErrorMessage(null);
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Add a delay of 1 second
+      await new Promise(resolve => setTimeout(resolve, 1000));
       await sendCustomEmail(data);
       setIsSuccess(true);
       reset();
+
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 3000); 
+
     } catch (error) {
       setIsSuccess(false);
-      setErrorMessage("Something went wrong. Please try again later.");
+      setErrorMessage(t('contactErrorMessage'));
     }
     setIsLoading(false);
   };
@@ -57,6 +62,7 @@ const ContactForm = () => {
       className="grid grid-cols-1 w-full"
       isLoading={isLoading}
       isSuccess={isSuccess}
+      buttonLoading={t("contactSubmitting")}
     >
       <InputField
         name="name"
@@ -93,9 +99,8 @@ const ContactForm = () => {
         error={errors.message?.message}
         placeholder={t("contactPlaceholderMessage")}
       />
-      {isSuccess && <p className="text-green-500">Email sent successfully!</p>}
+      {isSuccess && <p className="text-green-500">{t('contactSuccessMessage')}</p>}
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-      {isLoading && <p className="text-blue-500">Sending...</p>}
     </Form>
   );
 };

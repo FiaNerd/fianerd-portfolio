@@ -9,9 +9,11 @@
     "contactPlaceholderSubject": "Jobb, samarbete eller tips?",
     "contactMessage": "Ditt meddelande: *",
     "contactPlaceholderMessage": "Skriv ditt meddelande här – jag ser fram emot att läsa det!",
-    
+    "mandatoryFields": "* Obligatoriska fält",
     "contactSubmit": "Skicka",
-    "contactSuccess": "Meddelandet skickades framgångsrikt!",
-    "contactError": "Ett fel uppstod. Försök igen senare.",
-    "mandatoryFields": "* Obligatoriska fält"
+    
+    "contactSubmitting": "Skickar...",
+    "contactSuccessMessage": "Ditt meddelande har skickats!",
+    "contactErrorMessage": "Något gick fel. Försök igen senare."
+
 }

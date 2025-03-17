@@ -9,9 +9,10 @@
     "contactPlaceholderCompany": "Enter your company name",
     "contactPlaceholderSubject": "Enter the subject",
     "contactPlaceholderMessage": "Enter your message",
-    "contactSubmit": "Submit",
     "mandatoryFields": "* Mandatory fields",
+    "contactSubmit": "Submit",
 
-    "contactSuccess": "Message sent successfully!",
-    "contactError": "An error occurred. Please try again later."
+    "contactSubmitting": "Submitting...",
+    "contactSuccessMessage": "Message sent successfully!",
+    "contactErrorMessage": "An error occurred. Please try again later."
 }

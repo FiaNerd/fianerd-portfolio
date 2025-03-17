@@ -98,7 +98,7 @@ const TitleAnimation = ({ title, dot, dangerouslyHTML, onComplete, style, classN
           style={{ lineHeight: "1", position: "relative", verticalAlign: "baseline" }}
         >
           {dot === "!" || dot === "?" ? (
-            <span className="-ml-4 text-[3rem] md:text-[8rem]">{dot}</span>
+            <span className="-ml-4 text-[3rem] md:text-[5rem]">{dot}</span>
           ) : (
             <Icon icon="icon-park-outline:dot" className="-ml-5 md:-ml-8 text-[1.5rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />
           )}

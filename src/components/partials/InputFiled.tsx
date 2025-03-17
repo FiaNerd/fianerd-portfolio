@@ -26,7 +26,7 @@ const InputFiled = ({  register,
         <input
           id={name}
           type={type}
-          className={`bg-[#fff] bg-opacity-40 dark:bg-[#000] text-pink-800 dark:text-text-primary border border-gray-900 dark:border-opacity-50 dark:border-gray-300 rounded-lg p-2 placeholder-gray-900 dark:placeholder-gray-300 placeholder:text-[0.9rem] placeholder:opacity-30  ${className}`}
+          className={`bg-[#fff] bg-opacity-40 dark:bg-[#000] text-text-seconday dark:text-orange-50 border border-gray-900 dark:border-opacity-50 dark:border-gray-300 rounded-lg p-2 placeholder-gray-900 dark:placeholder-gray-300 placeholder:text-[0.9rem] placeholder:opacity-30  ${className}`}
           aria-invalid={error ? "true" : "false"}
           placeholder={placeholder}
           autoComplete={autocomplete}
