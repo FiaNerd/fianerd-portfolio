@@ -180,6 +180,11 @@ section {
   
 }
 
+.company-text-label{
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
 @media (min-width: 640px) {
   .outlined-text {
     font-size: 2rem; 

@@ -1,7 +1,7 @@
 {
     "contactName": "Name: *",
     "contactEmail": "Email: *",
-    "contactCompanyName": "Company name: <span class='text-job-related-input'>(if job related)</span>",
+    "contactCompanyName": "Company name: <span class='company-text-label'>(if job related)</span>",
     "contactSubject": "Subject: *",
     "contactMessage": "Message: *",
     "contactPlaceholderName": "Enter your name",

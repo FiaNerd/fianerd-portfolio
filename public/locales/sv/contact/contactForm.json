@@ -3,7 +3,7 @@
     "contactPlaceholderName": "Jane Doe",
     "contactEmail": "Din e-postadress: *",
     "contactPlaceholderEmail": "exempel@mail.com",
-    "contactCompanyName": "Företag: (om jobbrelaterat)",
+    "contactCompanyName": "Företag: <span class='company-text-label'>(om jobbrelaterat)</span>",
     "contactPlaceholderCompany": "Företagsnamn AB",
     "contactSubject": "Ämne: *",
     "contactPlaceholderSubject": "Jobb, samarbete eller tips?",
