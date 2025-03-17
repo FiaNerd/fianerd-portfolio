@@ -30,13 +30,16 @@ const ContactPage = () => {
       <div className="max-w-screen-lg mx-auto lg:bg-[#d47166] lg:dark:bg-[#1d1617] mb-20 grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
         <div className="flex flex-col items-center md:px-2 text-wrap">
           <h1 className="text-text-primary">{t("contactGreeting").toUpperCase()}</h1>
-          <blockquote className="w-full space-y-8 px-2 mb-8 md:mb-0">
+          <blockquote className="w-full space-y-8 px-2 mb-8 md:mb-8">
             <h4
               className="border-l-8 pl-[0.2em] border-[#159ea2] dark:border-pink-500 text-center"
               dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
             ></h4>
             <p dangerouslySetInnerHTML={{ __html: t("contactSubIntro") }}></p>
           </blockquote>
+          <div className="w-80 mx-auto mb-8 md:mb-0">
+            <img src="/assets/images/me-img.jpg" alt="contact image" className="border-4 border-text-primary mx-auto"/>
+          </div>
         </div>
 
         <div className="bg-[#e7a48a] dark:bg-[#1d1617] flex flex-col py-4 px-4 lg:px-8 rounded-lg">
