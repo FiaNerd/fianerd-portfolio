@@ -1,6 +1,30 @@
 {
-    "newsTitle": "On <br>the <br>Move",
-    "subTitleNews": "The Journey Continues – Check Out What’s New!",
-    "noNews": "No news available."
-    
+    "neswTitle": "Lates News",
+    "newsTitlePart1": "On",
+    "newsTitlePart2": "the",
+    "newsTitlePart3": "Move",
+    "subTitleNews": "Check Out What’s New!",
+    "noNews": "No news available.",
+    "readMore": "Read More",
+
+    "newsCards": {
+        "newsCard1": {
+            "title": "New Feature",
+            "nr": ".01",
+            "date": "2021-01-01",
+            "content": "We have added a new feature to our website!"
+        },
+        "newsCard2": {
+            "title": "New Product",
+            "nr": ".02",
+            "date": "2021-01-01",
+            "content": "We have launched a new product!"
+        },
+        "newsCard3": {
+            "title": "New Service",
+            "nr": ".02",
+            "date": "2021-01-01",
+            "content": "We have added a new service to our portfolio!"
+        }
+    }
 }

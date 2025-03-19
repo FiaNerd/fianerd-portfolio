@@ -44,6 +44,9 @@ i18n
       "contact/contactForm",
       "contact/contactFormValidation",
       "contact/contactValidation",
+
+      "news",
+      "news/newsCards",
     ],
     defaultNS: 'translation',
     detection: {
