@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import Title from '../../components/partials/Title';
-import NewsCards from '../../components/news/newsCards';
+import NewsCards from '../../components/news/NewsCards';
 
 const NewsPage = () => {
   const { t } = useTranslation('news');
@@ -17,7 +17,7 @@ const NewsPage = () => {
       transition: "padding-top 0.3s ease",
     }}>
         <Title title={t('newsTitle')} children={t('subTitleNews')} sticky/>
-        
+
         <NewsCards />
      
     </section>
