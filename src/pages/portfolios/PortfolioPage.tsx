@@ -15,6 +15,8 @@ import useHeaderHeight from "../../hook/useHeaderHeight";
 import { useLocation } from "react-router-dom";
 import useSmoothScroll from "../../hook/useSmoothScroll";
 import useScrollUpdateURL from "../../hook/useScrollUpdate";
+import i18n from "../../../public/i18n/i18n";
+import { NavLink } from "react-router-dom";
 
 const PortfolioPage = () => {
   const { t } = useTranslation('portfolio');
@@ -44,6 +46,16 @@ const headerHeight = useHeaderHeight();
     useScrollUpdateURL('portfolio');
   useSmoothScroll(headerHeight);
 
+  const onButtonClick = () => {
+    const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-CV-sv.pdf" : "/files/SofiaMattiasson-Resume-en.pdf";
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = i18n.language === "sv" ? "SofiaMattiasson-CV-sv.pdf" : "SofiaMattiasson-Resume-en.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
   return (
     <>
       <div
@@ -65,19 +77,19 @@ const headerHeight = useHeaderHeight();
           <div className="px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">
             <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-8">
               <div className="flex flex-col lg:gap-8 md:border-double md:border-4 py-8 px-0 md:px-8 border-[#f3d758] dark:border-[#d85f2d] rounded">
-                <h1 className="text-[#f3d758] dark:text-[#d85f2d] text-md md:text-[3rem] xl:text-[5rem] xl:leading-[4.2rem] font-semibold tracking-wide">
+                <h1 className="text-[#f3d758] dark:text-[#d85f2d] text-md md:text-[3rem] xl:text-[5rem] xl:leading-[4.2rem] font-semibold tracking-wpide">
                   {t('portfolio.mainSectionTitle').toUpperCase()}
                 </h1>
                 <p className="font-semibold tracking-wide">
                   {t('portfolio.portfolioIntro')}
                 </p>
                 <div className="flex flex-col w-full xl:flex-row items-center mx-auto md:mt-8 gap-2">
-                  <Button className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
+                  <Button onClick={onButtonClick} className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
                     <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolio.ctaButtonCV")}
                   </Button>
-                  <Button className="flex flex-row justify-center items-center gap-4 bg-[#350712] border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary">
+                  <NavLink to={'/contact'} className="flex flex-row w-full justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-4 py-2 cursor-pointer">
                     <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolio.ctaButtonContactMe")}
-                  </Button>
+                  </NavLink>
                 </div>
               </div>
             </div>
