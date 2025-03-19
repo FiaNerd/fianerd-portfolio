@@ -111,8 +111,8 @@ const ContactForm = () => {
         error={errors.message?.message}
         placeholder={t("contactPlaceholderMessage")}
       />
-      {isSuccess && <p className="text-green-950 dark:text-green-500">{t("contactSuccessMessage")}</p>}
-      {errorMessage && <p className="text-red-800 dark:text-red-500">{errorMessage}</p>}
+      {isSuccess && <p className="font-bold text-lime-900 dark:text-green-500">{t("contactSuccessMessage")}</p>}
+      {errorMessage && <p className="font-bold text-red-800 dark:text-red-500">{errorMessage}</p>}
     </Form>
   );
 };
