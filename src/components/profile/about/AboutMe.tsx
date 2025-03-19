@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import useFadeIn from "../../../hook/useFadeIn";
+import { NavLink } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 const AboutMe = () => {
-  const { t } = useTranslation("profile/aboutMe");
+  const { t } = useTranslation(["profile/aboutMe", "translation"]);
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
@@ -43,6 +45,10 @@ const AboutMe = () => {
               <p>{t('myFilosofiText4')}</p>
               <h3 className="font-textImportant not-italic text-4xl md:text-6xl font-bold text-[#ca5b87] dark:text-accent-primary mt-8 mb-8">{t('createTogheterTitle')}</h3>
               <p>{t('createTogheterText')}</p>
+
+              <NavLink to={'/contact'} className="flex flex-row w-full md:w-80 mx-auto justify-center items-center gap-4 font-sub-heading border-2 border-btn-bg hover:border-bg-hover text-btn-bg hover:bg-bg-hover hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary tracking-wide font-semibold hover:text-bg-primary rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-4 py-2 cursor-pointer">
+                <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("translation:contact")}
+              </NavLink>
             </>
           )}
           <button className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-8" onClick={handleToggleText}>
