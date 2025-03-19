@@ -1,3 +1,4 @@
+// utils/contactValidation.ts
 import * as yup from "yup";
 
 const getFormContactSchema = (t: (key: string) => string) => {
@@ -14,6 +15,7 @@ const getFormContactSchema = (t: (key: string) => string) => {
       .trim()
       .required(t("contact/contactValidation:emailRequired"))
       .email(t("contact/contactValidation:emailInvalid")),
+    companyName: yup.string(),
     subject: yup
       .string()
       .trim()

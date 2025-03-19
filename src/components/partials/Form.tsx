@@ -1,27 +1,21 @@
-import { ReactNode, createElement, forwardRef, ForwardedRef } from "react";
-import { UseFormHandleSubmit, UseFormRegister } from "react-hook-form";
+import { createElement, forwardRef, ForwardedRef, ReactNode } from "react";
+import { UseFormRegister, UseFormHandleSubmit } from "react-hook-form";
 import Button from "./Button";
 import { Icon } from "@iconify/react";
-import { useTranslation } from "react-i18next";
 
-export type classNameType = string;
-export type childrenType = ReactNode;
-
-interface IFormProps {
-  defaultValues?: any;
-  children?: childrenType;
+export interface IFormProps {
+  children?: ReactNode;
   buttonLabel: string;
   register: UseFormRegister<any>;
   handleSubmit: UseFormHandleSubmit<any>;
   onSubmit: (data: any) => void;
   className?: string;
   isLoading: boolean;
-  isSuccess: boolean;
+  isSuccess?: boolean;
   buttonLoading: string;
 }
 
 const Form = forwardRef<HTMLFormElement, IFormProps>(({
-  defaultValues,
   buttonLabel = "Submit",
   children,
   className,
@@ -29,8 +23,8 @@ const Form = forwardRef<HTMLFormElement, IFormProps>(({
   handleSubmit,
   register,
   isLoading,
-  isSuccess,
   buttonLoading,
+  isSuccess,
   ...rest
 }, ref: ForwardedRef<HTMLFormElement>) => {
   return (
@@ -49,7 +43,8 @@ const Form = forwardRef<HTMLFormElement, IFormProps>(({
             })
           : children}
       </div>
-      <Button disabled={isLoading} type="submit" className="flex flex-row justify-center mt-8 items-center gap-2 border-2 border-text-primary hover:bg-text-primary dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
+      <Button disabled={isLoading} type="submit" className="flex flex-row justify-center mt-8 items-center gap-2 border-2 border-text-primary  hover:bg-[#d47166] dark:text-[#1d1617] hover:dark:text-text-primary dark:bg-accent-primary hover:opacity-80 dark:border-accent-primary dark:border-2 rounded-lg p-2">
+
         {isLoading ? (
           <>
             <Icon icon="eos-icons:three-dots-loading" width="24" height="24" />

@@ -5,7 +5,7 @@ import InputField from "../../components/partials/InputFiled";
 import TextAreaField from "../../components/partials/TextAreaField";
 import getFormContactSchema from "../../utils/contactValidation";
 import Form from "../../components/partials/Form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { sendCustomEmail } from "../../utils/sendCustomEmail";
 
 interface IContactFormInputs {
@@ -17,9 +17,16 @@ interface IContactFormInputs {
 }
 
 const ContactForm = () => {
-  const { t } = useTranslation(["contact/contactForm", "contact/contactValidation"]);
-  const formValidationSchema = getFormContactSchema(t); 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<IContactFormInputs>({
+  const { t, i18n } = useTranslation(["contact/contactForm"]);
+  
+  const [formValidationSchema, setFormValidationSchema] = useState(getFormContactSchema(t));
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<IContactFormInputs>({
     resolver: yupResolver(formValidationSchema),
     defaultValues: {
       name: "",
@@ -29,6 +36,7 @@ const ContactForm = () => {
       message: "",
     },
   });
+
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -44,14 +52,19 @@ const ContactForm = () => {
 
       setTimeout(() => {
         setIsSuccess(false);
-      }, 3000); 
-
+      }, 3000);
     } catch (error) {
       setIsSuccess(false);
-      setErrorMessage(t('contactErrorMessage'));
+      setErrorMessage(t("contactErrorMessage"));
     }
     setIsLoading(false);
   };
+
+  
+  useEffect(() => {
+    setFormValidationSchema(getFormContactSchema(t));
+    reset(undefined, { keepValues: true });
+  }, [t, i18n.language]);
 
   return (
     <Form
@@ -61,7 +74,6 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="grid grid-cols-1 w-full"
       isLoading={isLoading}
-      isSuccess={isSuccess}
       buttonLoading={t("contactSubmitting")}
     >
       <InputField
@@ -84,7 +96,6 @@ const ContactForm = () => {
         label={t("contactCompanyName")}
         register={register}
         placeholder={t("contactPlaceholderCompany")}
-        
       />
       <InputField
         name="subject"
@@ -100,7 +111,7 @@ const ContactForm = () => {
         error={errors.message?.message}
         placeholder={t("contactPlaceholderMessage")}
       />
-      {isSuccess && <p className="text-green-950 dark:text-green-500">{t('contactSuccessMessage')}</p>}
+      {isSuccess && <p className="text-green-950 dark:text-green-500">{t("contactSuccessMessage")}</p>}
       {errorMessage && <p className="text-red-800 dark:text-red-500">{errorMessage}</p>}
     </Form>
   );

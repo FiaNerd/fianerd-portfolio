@@ -43,6 +43,7 @@ i18n
       "contact/contact",
       "contact/contactForm",
       "contact/contactFormValidation",
+      "contact/contactValidation",
     ],
     defaultNS: 'translation',
     detection: {
