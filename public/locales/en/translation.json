@@ -36,6 +36,7 @@
   "graphicDescription": "Explore my featured graphic projects",
   "news": "News<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Contact me",
+  "languages": {
     "select": "EN",
     "sv": "Swedish",
     "en": "English"

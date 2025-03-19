@@ -7,11 +7,11 @@ import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
 
 const NavigationMenu = () => {
+  const { t } = useTranslation('translation');
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useTranslation('translation');
 
   const navigationMenuCloseDelay = 200;
   let navigationMenuCloseTimeout: NodeJS.Timeout | null = null;
