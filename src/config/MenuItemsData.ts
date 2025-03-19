@@ -78,11 +78,11 @@ export const navRoutes: Route[] = [
         url: '/portfolio/top-5-projects',
         description: 'top5best-projectsDescription',
       },
-      {
-        title: 'allProjects',
-        url: '/portfolio/all-projects',
-        description: 'allProjectsDescription',
-      },
+      // {
+      //   title: 'allProjects',
+      //   url: '/portfolio/all-projects',
+      //   description: 'allProjectsDescription',
+      // },
       {
         title: 'frontend',
         url: '/portfolio/frontend',

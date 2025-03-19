@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
+import NewsPage from './pages/news/NewsPage';
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
               <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
               <Route path="/portfolio/graphic" element={<PortfolioPage />} />
               <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />  
+              <Route path="/news" element={<NewsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
