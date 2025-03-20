@@ -34,7 +34,7 @@
   "fullstackDescription": "Explore my featured fullstack projects",
   "graphic": "Graphic Design",
   "graphicDescription": "Explore my featured graphic projects",
-  "news": "News<span class='text-accent-primary font-medium'>!</span>",
+  "blog": "Blog<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Contact me",
   "languages": {
     "select": "EN",
@@ -65,7 +65,7 @@
     "backend": "backend",
     "fullstack": "fullstack",
     "graphic": "graphic-design",
-    "news": "news",
+    "blog": "Blog",
     "contact": "contact-me"
   }
 }

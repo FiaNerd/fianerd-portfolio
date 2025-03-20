@@ -36,12 +36,11 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     setDropdown((prev) => !prev);
   };
 
-
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault(); // Prevent default link behavior
-  
+
     const [path, sectionId] = url.split('#'); // Split the URL to check for a section ID
-  
+
     startTransition(() => {
       // Navigate to the correct section based on URL
       if (sectionId) {
@@ -59,10 +58,9 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         navigate(path); // Navigate to the path without a section ID
       }
     });
-  
-    closeMenu()
+
+    closeMenu();
   };
-  
 
   const renderLinkOrButton = () => {
     if (items.url) {
@@ -104,7 +102,10 @@ const MenuItems: React.FC<MenuItemsProps> = ({
             <DropdownMenuMobile
               submenus={
                 isTabletOrMobile && items.title === 'portfolio'
-                  ? [{ title: t('linkPortfolio'), url: '/portfolio' }, ...items.subMenu]
+                  ? [
+                      { title: t('linkPortfolio'), url: '/portfolio' },
+                      ...items.subMenu,
+                    ]
                   : items.subMenu
               }
               dropdown={dropdown}

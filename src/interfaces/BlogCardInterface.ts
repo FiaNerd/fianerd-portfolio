@@ -1,7 +1,8 @@
 export interface IBlogCard {
   id: string;
   title: string;
-  date: string;
+  month: string;
+  day: string;
   content: string;
   httpHomepage?: string;
   img: string;

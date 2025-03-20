@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogCardInterface';
+import { Icon } from '@iconify/react';
 
 const BlogCards = () => {
   const { t } = useTranslation('blogPost');
@@ -10,47 +11,54 @@ const BlogCards = () => {
   }) as IBlogCard[];
 
   return (
-    <div className="max-w-screen-xl mx-auto h-[60px] px-4 mt-12 mb-12">
+    <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12 h-62">
       <div className="flex flex-col gap-4 lg:flex-row">
         {/* Featured Title (h1) */}
         <div className="flex-1 text-center">
-          <h1 className="bg-text-primary text-bg-primary px-4 pb-8">
-            <span className="text-[2.2em]">
-              {t('blogPostTitlePart1').toUpperCase()}
-            </span>
-            <br />
-            <span className="leading-[0.5em] text-[1.6em]">
-              {t('blogPostTitlePart2').toUpperCase()}
-            </span>
-            <br />
-            <span className="text-[1em]">
-              {t('blogPostTitlePart3').toUpperCase()}
-            </span>
+          <h1 className="bg-text-primary text-bg-primary px-4 pb-8 flex items-center justify-center h-full">
+            <div className="text-center">
+              <span className="text-[2.2em]">
+                {t('blogPostTitlePart1').toUpperCase()}
+              </span>
+              <br />
+              <span className="leading-[0.5em] text-[1.6em]">
+                {t('blogPostTitlePart2').toUpperCase()}
+              </span>
+              <br />
+              <span className="text-[1em]">
+                {t('blogPostTitlePart3').toUpperCase()}
+              </span>
+            </div>
           </h1>
         </div>
 
         {/* Blog Cards Grid */}
         <div className="flex-3 lg:w-3/4">
-          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogCards.map((card, index) => (
-              <li
-                key={index}
-                className="flex flex-col gap-4bg-gray-100 rounded-lg shadow-lg"
-              >
+              <li key={index} className="grid flex-col  gap-4 justify-between">
                 <img
                   src={card.img}
                   alt={card.title}
                   className="w-full h-40 object-cover"
                 />
-                <h6 className="text-xl font-bold px-4">{card.id}</h6>
-                <h6 className="text-xl font-bold px-4">{card.title}</h6>
-                <p className="px-4">{card.date}</p>
-                <p className="px-4">{card.content}</p>
+                <div className="px-4">
+                  <h6 className="text-lg mb-0 font-bold ">{card.month}</h6>
+                  <h6 className="text-xl text-bg-secondary dark:text-text-accent mb-0 font-bold">
+                    {card.day}
+                  </h6>
+                </div>
+                <h5 className="text-xl mb-0 font-semibold px-4">
+                  {card.title}
+                </h5>
+                <p className="px-4 mb-0 border-b border-text-primary py-2">
+                  {card.content}
+                </p>
                 <a
                   href={card.httpHomepage}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 text-blue-600"
+                  className="px-4 pb-2 self-end"
                 >
                   {t('readMore')}
                 </a>

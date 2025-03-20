@@ -8,7 +8,8 @@
   "readMore": "Read More",
   "blogPostCards": [
     {
-      "id": ".01",
+      "day": ".20",
+      "month": "mars",
       "title": "Warp - the only terminal I ever need",
       "date": "2025-03-20",
       "content": "I've been using Warp for a while now, and I must say...",
@@ -20,7 +21,8 @@
       "keyFeature": "AI-assisted terminal commands"
     },
     {
-      "id": ".02",
+      "day": ".18",
+      "month": "mars",
       "title": "Printagon Order Form",
       "date": "2025-03-20",
       "content": "Right now, I am working on a new Printagon order form...",

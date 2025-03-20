@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
-import BlogPage from './pages/news/BlogPage';
+import BlogPage from './pages/blog/BlogPage';
 
 const App = () => {
   return (
