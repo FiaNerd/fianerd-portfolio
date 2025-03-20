@@ -1,6 +1,7 @@
 {
   "blogPostTitle": "Code, Design & Discoveries",
   "subTitleBlogPost": "Sharing My Journey in Code, Design, and Discovery",
+  "blogYear2025": "2025",
   "blogPostTitlePart1": "On",
   "blogPostTitlePart2": "the",
   "blogPostTitlePart3": "Move",
@@ -23,7 +24,7 @@
     {
       "day": ".18",
       "month": "mars",
-      "title": "Printagon Order Form",
+      "title": "Skapar Printagon Order Form",
       "date": "2025-03-20",
       "content": "Right now, I am working on a new Printagon order form...",
       "img": "/assets/images/blog/PG-newOrder.jpg",
