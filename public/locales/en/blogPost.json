@@ -1,0 +1,42 @@
+{
+  "blogPostTitle": "Code, Design & Discoveries",
+  "subTitleBlogPost": "Sharing My Journey in Code, Design, and Discovery",
+  "blogPostTitlePart1": "On",
+  "blogPostTitlePart2": "the",
+  "blogPostTitlePart3": "Move",
+  "noBlogPost": "No blogs available.",
+  "readMore": "Read More",
+
+  "blogCards": [
+    {
+      "title": "Warp - the only terminal I ever need",
+      "nr": ".01",
+      "date": "2025-03-20",
+      "content": "I've been using Warp for a while now, and I must say, it's the only terminal I ever need. It initially launched for Mac, and I discovered it when I had issues with my built-in terminal and was searching for a new one. That's when I found Warp. <br> At the time, it was only available on Mac, and I’d been checking for updates on Windows every now and then. A few weeks ago, it finally came to Windows, and I was thrilled. The installation process was incredibly easy on both Mac and Windows. While it offers various themes and customizable text options, the absolute best part is that I can now save my terminal commands. I have many commands in my head, but not all of them, and some I don't use frequently. For example, when I need to change a commit message. Sure, Google can help, but now I can save those commands and access them with just one click whenever I need them. <b>Another amazing feature is the built-in AI, which lets me write and ask for specific commands, even explaining what the command does.</b> Another thing I love is that I don’t need to use the arrow keys to navigate—I can simply use my mouse. If I notice a typo, I can click on it and make changes directly. It's just so much easier. <br> I absolutely love it. It’s a must-have for any developer who appreciates the power of the terminal like I do.",
+      "httpHomepage": "https://warp.dev/",
+      "img": "/assets/images/blog/PG-newOrder.jpg",
+      "suffix": "Tech",
+      "technologies": ["AI", "Terminal", "Cross-Platform"],
+      "status": "Completed",
+      "keyFeature": "AI-assisted terminal commands"
+    },
+    {
+      "title": "Printagon Order Form",
+      "nr": ".02",
+      "date": "2025-03-20",
+      "content": "Right now, I am working on a new Printagon order form. I had a meeting with a client to discuss their needs before I implemented the function. Which fields should be required. After the meeting, I started working on the form. Now, I'm working on the backend API, which will be finished soon before I move on to the frontend and create the reusable input form with input fields and a text area.",
+      "img": "/assets/images/blog/PG-newOrder.jpg",
+      "suffix": "Code",
+      "technologies": ["C#", "ASP.NET", "SQL"],
+      "status": "In Progress",
+      "duration": "2 months",
+      "keyFeatures": [
+        "Customizable Form Fields",
+        "Backend Integration",
+        "Reusable Input Components",
+        "Responsive Design",
+        "Validation"
+      ]
+    }
+  ]
+}

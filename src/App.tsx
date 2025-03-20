@@ -8,7 +8,8 @@ import HomePage from './pages/HomePage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
-import NewsPage from './pages/news/NewsPage';
+import NewsPage from './pages/news/BlogPage';
+import BlogPage from './pages/news/BlogPage';
 
 const App = () => {
   return (
@@ -23,7 +24,10 @@ const App = () => {
         <main className="flex-grow ">
           <ErrorBoundary
             fallbackRender={({ error, resetErrorBoundary }) => (
-              <ErrorFallback error={error} resetErrorBoundary={resetErrorBoundary} />
+              <ErrorFallback
+                error={error}
+                resetErrorBoundary={resetErrorBoundary}
+              />
             )}
             onReset={() => {
               // Reset the state of your app so the error doesn't happen again
@@ -32,24 +36,33 @@ const App = () => {
           >
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/profile" element={<HomePage />} >
+              <Route path="/profile" element={<HomePage />}>
                 <Route path="/profile/me" element={<HomePage />} />
                 <Route path="/profile/web-skills" element={<HomePage />} />
                 <Route path="/profile/graphic-skills" element={<HomePage />} />
                 <Route path="/profile/other-skills" element={<HomePage />} />
-                <Route path="/profile/programs-and-softwares" element={<HomePage />} />
+                <Route
+                  path="/profile/programs-and-softwares"
+                  element={<HomePage />}
+                />
                 <Route path="/profile/experience" element={<HomePage />} />
                 <Route path="/profile/education" element={<HomePage />} />
                 <Route path="/profile/hobbies" element={<HomePage />} />
-                </Route>
+              </Route>
               <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/portfolio/top-5-projects" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio/top-5-projects"
+                element={<PortfolioPage />}
+              />
               <Route path="/portfolio/frontend" element={<PortfolioPage />} />
               <Route path="/portfolio/backend" element={<PortfolioPage />} />
               <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
               <Route path="/portfolio/graphic" element={<PortfolioPage />} />
-              <Route path="/portfolio/:urlTitle" element={<PortfolioDetailsPage />} />  
-              <Route path="/news" element={<NewsPage />} />
+              <Route
+                path="/portfolio/:urlTitle"
+                element={<PortfolioDetailsPage />}
+              />
+              <Route path="/blog" element={<BlogPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
