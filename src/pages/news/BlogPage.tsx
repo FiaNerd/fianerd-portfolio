@@ -3,7 +3,7 @@ import useHeaderHeight from '../../hook/useHeaderHeight';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import Title from '../../components/partials/Title';
 import BlogCards from '../../components/news/BlogCards';
-const NewsPage = () => {
+const BlogPage = () => {
   const { t } = useTranslation('blogPost');
   const headerHeight = useHeaderHeight();
 
@@ -29,4 +29,4 @@ const NewsPage = () => {
   );
 };
 
-export default NewsPage;
+export default BlogPage;
