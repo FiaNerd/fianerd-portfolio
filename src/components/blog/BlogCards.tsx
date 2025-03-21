@@ -3,7 +3,7 @@ import { IBlogCard } from '../../interfaces/BlogCardInterface';
 import { Icon } from '@iconify/react';
 
 const BlogCards = () => {
-  const { t } = useTranslation('blogPost');
+  const { t } = useTranslation(['blogPost', 'blogPostCards']);
 
   // Get the blogCards array from the translation
   const blogCards: IBlogCard[] = t('blogPostCards', {
@@ -12,8 +12,8 @@ const BlogCards = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12 h-62">
+      <h2>{t('blogYear2025')}</h2>
       <div className="flex flex-col gap-4 lg:flex-row">
-        <h2>{t('blogYear2025')}</h2>
         <div className="flex-1 text-center">
           <h1 className="bg-text-primary text-bg-primary px-4 pb-8 flex items-center justify-center h-full">
             <div className="text-center">

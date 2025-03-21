@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import Title from '../../components/partials/Title';
-import BlogCards from '../../components/news/BlogCards';
+import BlogCards from '../../components/blog/BlogCards';
 const BlogPage = () => {
   const { t } = useTranslation('blogPost');
   const headerHeight = useHeaderHeight();
@@ -25,6 +25,7 @@ const BlogPage = () => {
       />
 
       <BlogCards />
+      {/* <BlogCards /> */}
     </section>
   );
 };
