@@ -20,7 +20,13 @@ const BlogPage = () => {
     >
       <Title
         title={t('blogPostTitle')}
+        dot={'.'}
         children={t('subTitleBlogPost')}
+        className="bg-text-primary text-bg-primary"
+        subHeadingClassName="text-hover-text dark:text-text-secondary"
+        light="bg-bg-primary"
+        dark="bg-bg-primary"
+        text-bg-primary
         sticky
       />
 

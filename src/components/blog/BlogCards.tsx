@@ -1,77 +1,79 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogCardInterface';
-import { Icon } from '@iconify/react';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
-
-  // Get the blogCards array from the translation
   const blogCards: IBlogCard[] = t('blogPostCards', {
     returnObjects: true,
   }) as IBlogCard[];
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12 h-62">
-      <h2>{t('blogYear2025')}</h2>
-      <div className="flex flex-col gap-4 lg:flex-row">
-        <div className="flex-1 text-center">
-          <h1 className="bg-text-primary text-bg-primary px-4 pb-8 flex items-center justify-center h-full">
-            <div className="text-center">
-              <span className="text-[2.2em]">
-                {t('blogPostTitlePart1').toUpperCase()}
-              </span>
-              <br />
-              <span className="leading-[0.5em] text-[1.6em]">
-                {t('blogPostTitlePart2').toUpperCase()}
-              </span>
-              <br />
-              <span className="text-[1em]">
-                {t('blogPostTitlePart3').toUpperCase()}
-              </span>
-            </div>
-          </h1>
-        </div>
+    <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12">
+      <h2 className="text-center mb-8 text-3xl font-bold">
+        {t('blogYear2025')}
+      </h2>
 
-        {/* Blog Cards Grid */}
-        <div className="flex-4 w-auto lg:w-3/4">
-          <ul className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="flex flex-col gap-8 lg:grid lg:grid-cols-4">
+        {/* Introduction Section */}
+        <h1 className="bg-text-primary text-bg-primary p-8 flex items-center justify-center lg:col-span-1">
+          <div className="text-center">
+            <span className="text-[2.2em] block">
+              {t('blogPostTitlePart1').toUpperCase()}
+            </span>
+            <span className="leading-[0.5em] text-[1.6em] block">
+              {t('blogPostTitlePart2').toUpperCase()}
+            </span>
+            <span className="text-[1em] block">
+              {t('blogPostTitlePart3').toUpperCase()}
+            </span>
+          </div>
+        </h1>
+
+        {/* Blog Cards Section */}
+        <div className="lg:col-span-3">
+          <ul className="flex flex-col gap-8 md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-8">
             {blogCards.map((card, index) => (
-              <li key={index} className="grid flex-col md:flex-rows gap-4 ">
-                <div className="flex flex-col md:flex-row lg:flex-col md:gap-8 md:justify-center md:items-center lg:items-start">
-                  <div className="md:flex md:flex-row-reverse lg:flex-col md:justify-between md:items-center lg:items-start">
-                    <div className="flex flex-col md:flex-row-reverse lg:flex-col justify-center items-center md:items-start lg:items-start">
-                      <img
-                        src={card.img}
-                        alt={card.title}
-                        className="w-full h-40 object-cover"
-                      />
-                      <div className="px-4 ">
-                        <h6 className="text-lg mb-0 font-bold ">
-                          {card.month}
-                        </h6>
-                        <h6 className="text-xl text-bg-secondary dark:text-text-accent mb-0 font-bold">
-                          {card.day}
-                        </h6>
-                      </div>
+              <li
+                key={index}
+                className="p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between w-full md:w-[48%] lg:w-auto"
+              >
+                {/* Image & Date */}
+                <div>
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="w-full h-40 object-cover rounded-md mb-4"
+                  />
+                  <div className="flex justify-between items-center px-2 mb-2">
+                    <div>
+                      <h6 className="text-lg font-bold">{card.month}</h6>
+                      <h6 className="text-xl text-bg-secondary dark:text-text-accent font-bold">
+                        {card.day}
+                      </h6>
                     </div>
                   </div>
+                </div>
 
-                  <div>
-                    <h5 className="text-xl mb-0 font-semibold px-4">
-                      {card.title}
-                    </h5>
-                    <p className="px-4 mb-0 border-b border-text-primary py-2">
-                      {card.content}
-                    </p>
-                    <a
-                      href={card.httpHomepage}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 pb-2 flex justify-end"
-                    >
-                      {t('readMore')}
-                    </a>
-                  </div>
+                {/* Title & Description */}
+                <div>
+                  <h5 className="text-xl font-semibold mb-2">{card.title}</h5>
+                  <p className="text-sm mb-4">
+                    {card.content.length > 160
+                      ? `${card.content.substring(0, 160)}...`
+                      : card.content}
+                  </p>
+                </div>
+
+                {/* Read More Link */}
+                <div className="flex justify-end">
+                  <a
+                    href={card.httpHomepage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    {t('readMore')}
+                  </a>
                 </div>
               </li>
             ))}
