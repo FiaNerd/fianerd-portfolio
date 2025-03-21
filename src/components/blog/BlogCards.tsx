@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogCardInterface';
+import { NavLink } from 'react-router-dom';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
@@ -7,11 +8,17 @@ const BlogCards = () => {
     returnObjects: true,
   }) as IBlogCard[];
 
+  // Function to generate random color in HSL format
+  const getRandomHSLColor = () => {
+    const h = Math.floor(Math.random() * 350); // Hue (0-350)
+    const s = Math.floor(Math.random() * 41) + 60; // Saturation (60-100%)
+    const l = Math.floor(Math.random() * 41) + 40; // Lightness (40-80%)
+    return `hsl(${h}, ${s}%, ${l}%)`;
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12">
-      <h2 className="text-center mb-8 text-3xl font-bold">
-        {t('blogYear2025')}
-      </h2>
+      <h2 className="mb-8 text-3xl font-bold">{t('blogYear2025')}</h2>
 
       <div className="flex flex-col gap-8 lg:grid lg:grid-cols-4">
         {/* Introduction Section */}
@@ -35,18 +42,25 @@ const BlogCards = () => {
             {blogCards.map((card, index) => (
               <li
                 key={index}
-                className="hover:shadow-lg rounded-lg transition-shadow duration-300 flex flex-col justify-between w-full"
+                className="rounded-lg transition-shadow duration-300 flex flex-col justify-between"
               >
-                <div className="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-8 lg:gap-4">
+                <div className="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-8 lg:gap-4 h-full group">
                   {/* Layout for md screens */}
                   <div className="flex flex-col md:flex-row-reverse lg:flex-col gap-4">
                     {/* Image */}
-                    <div className="w-full md:w-64 lg:w-full flex-shrink-0">
+                    <div className="w-full md:w-64 lg:w-full flex-shrink-0 relative group">
                       <img
                         src={card.img}
                         alt={card.title}
-                        className="w-full h-full object-cover rounded-md"
+                        className="w-full h-48 object-cover rounded-md"
                       />
+                      {/* Overlay - initially visible, hides when hovering over the image */}
+                      <div
+                        className="absolute inset-0 opacity-40  hover:opacity-0 rounded-md"
+                        style={{
+                          backgroundColor: getRandomHSLColor(), // Apply the random color dynamically
+                        }}
+                      ></div>
                     </div>
 
                     {/* Date */}
@@ -60,11 +74,9 @@ const BlogCards = () => {
 
                   {/* Title & Description */}
                   <div className="flex flex-col justify-between flex-1 w-full px-2 pb-2">
-                    <div>
-                      <h5 className="text-xl font-semibold mb-2">
-                        {card.title}
-                      </h5>
-                      <p className="text-sm mb-4">
+                    <div className="border-b border-text-primary py-2 flex-grow">
+                      <h5 className="text-xl font-semibold">{card.title}</h5>
+                      <p className="text-sm">
                         {card.content.length > 160
                           ? `${card.content.substring(0, 160)}...`
                           : card.content}
@@ -72,15 +84,15 @@ const BlogCards = () => {
                     </div>
 
                     {/* Read More Link */}
-                    <div className="flex justify-end">
-                      <a
-                        href={card.httpHomepage}
+                    <div className="flex justify-end pt-2">
+                      <NavLink
+                        to={''}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer"
+                        className="text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer"
                       >
                         {t('readMore')}
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
