@@ -31,49 +31,58 @@ const BlogCards = () => {
 
         {/* Blog Cards Section */}
         <div className="lg:col-span-3">
-          <ul className="flex flex-col gap-8 md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-8">
+          <ul className="flex flex-col gap-8 md:grid md:grid-cols-1 lg:grid lg:grid-cols-3 lg:gap-8">
             {blogCards.map((card, index) => (
               <li
                 key={index}
-                className="p-4 hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between w-full md:w-[48%] lg:w-auto"
+                className="hover:shadow-lg rounded-lg transition-shadow duration-300 flex flex-col justify-between w-full"
               >
-                {/* Image & Date */}
-                <div>
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                    className="w-full h-40 object-cover rounded-md mb-4"
-                  />
-                  <div className="flex justify-between items-center px-2 mb-2">
-                    <div>
+                <div className="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-8 lg:gap-4">
+                  {/* Layout for md screens */}
+                  <div className="flex flex-col md:flex-row-reverse lg:flex-col gap-4">
+                    {/* Image */}
+                    <div className="w-full md:w-64 lg:w-full flex-shrink-0">
+                      <img
+                        src={card.img}
+                        alt={card.title}
+                        className="w-full h-full object-cover rounded-md"
+                      />
+                    </div>
+
+                    {/* Date */}
+                    <div className="flex flex-col items-start px-2">
                       <h6 className="text-lg font-bold">{card.month}</h6>
                       <h6 className="text-xl text-bg-secondary dark:text-text-accent font-bold">
                         {card.day}
                       </h6>
                     </div>
                   </div>
-                </div>
 
-                {/* Title & Description */}
-                <div>
-                  <h5 className="text-xl font-semibold mb-2">{card.title}</h5>
-                  <p className="text-sm mb-4">
-                    {card.content.length > 160
-                      ? `${card.content.substring(0, 160)}...`
-                      : card.content}
-                  </p>
-                </div>
+                  {/* Title & Description */}
+                  <div className="flex flex-col justify-between flex-1 w-full px-2 pb-2">
+                    <div>
+                      <h5 className="text-xl font-semibold mb-2">
+                        {card.title}
+                      </h5>
+                      <p className="text-sm mb-4">
+                        {card.content.length > 160
+                          ? `${card.content.substring(0, 160)}...`
+                          : card.content}
+                      </p>
+                    </div>
 
-                {/* Read More Link */}
-                <div className="flex justify-end">
-                  <a
-                    href={card.httpHomepage}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    {t('readMore')}
-                  </a>
+                    {/* Read More Link */}
+                    <div className="flex justify-end">
+                      <a
+                        href={card.httpHomepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer"
+                      >
+                        {t('readMore')}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </li>
             ))}

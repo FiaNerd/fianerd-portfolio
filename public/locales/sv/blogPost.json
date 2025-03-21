@@ -25,9 +25,9 @@
     {
       "day": ".20",
       "month": "mars",
-      "title": "Skapar Printagon beställningsformulär",
+      "title": "Skapar Printagon orderformulär",
       "date": "2025-03-20",
-      "content": "Just nu arbetar jag på ett nytt Printagon beställningsformulär. Jag hade ett möte med en kund för att diskutera deras behov innan jag implementerade funktionen. Vilka fält ska vara obligatoriska. Efter mötet började jag arbeta på formuläret. Så nu jobbar jag på backend-API:et, som kommer vara klart snart innan jag går över till frontend och skapar det återanvändbara inmatningsformuläret med inmatningsfält och textområde.",
+      "content": "Just nu arbetar jag på ett nytt Printagon orderformulär. Jag hade ett möte med en kund för att diskutera deras behov innan jag implementerade funktionen. Vilka fält ska vara obligatoriska. Efter mötet började jag arbeta på formuläret. Så nu jobbar jag på backend-API:et, som kommer vara klart snart innan jag går över till frontend och skapar det återanvändbara inmatningsformuläret med inmatningsfält och textområde.",
       "img": "/assets/images/blog/PG-newOrder.jpg",
       "suffix": "Code",
       "technologies": ["C#", "ASP.NET", "SQL"],
