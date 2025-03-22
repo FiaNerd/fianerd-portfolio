@@ -22,11 +22,10 @@ const BlogPage = () => {
         title={t('blogPostTitle')}
         dot={'.'}
         children={t('subTitleBlogPost')}
-        className="bg-text-primary text-bg-primary"
-        subHeadingClassName="text-hover-text dark:text-text-secondary"
-        light="bg-bg-primary"
-        dark="bg-bg-primary"
-        text-bg-primary
+        className="text-bg-secondary dark:text-text-accent"
+        subHeadingClassName="text-hover-text dark:text-accent-secondary"
+        light="bg-[#1e3237]"
+        dark="dark:bg-[#435a40] "
         sticky
       />
 
