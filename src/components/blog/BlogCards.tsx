@@ -44,23 +44,29 @@ const BlogCards = () => {
             key={index}
             className="rounded-lg transition-shadow duration-300"
           >
-            <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8 lg:flex lg:flex-col justify-between h-full group ">
-              <div className="relative group flex w-full ">
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="w-full h-48 object-cover rounded-md"
-                />
-                <div
-                  className="absolute inset-0 opacity-40 hover:opacity-0 rounded-md"
-                  style={{ backgroundColor: getRandomHSLColor() }}
-                ></div>
-                <span className="absolute text-bg-secondary dark:text-text-accent text-xl font-bold bg-black bg-opacity-80 px-2">
+            <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8 lg:flex lg:flex-col justify-between h-full group">
+              <div className="relative group flex w-full h-full">
+                <div className="relative w-full h-48">
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="w-full h-full object-cover rounded-md"
+                  />
+                  <div
+                    className="absolute inset-0 rounded-md"
+                    style={{
+                      backgroundColor: getRandomHSLColor(),
+                      opacity: 0.5,
+                      transition: 'opacity 0.3s',
+                    }}
+                  ></div>
+                </div>
+                <span className="absolute top-2 left-2 text-bg-secondary dark:text-text-accent text-xl font-bold bg-black bg-opacity-80 px-2 rounded-md">
                   {card.suffix}
                 </span>
               </div>
 
-              <div className="flex flex-col justify-between w-full px-2 mb-0 ">
+              <div className="flex flex-col justify-between w-full px-2 mb-0 mt-2">
                 <div className="border-b border-text-primary py-2">
                   <div>
                     <h5 className="font-semibold px-2 mb-0 leading-0">
