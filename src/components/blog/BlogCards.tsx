@@ -77,6 +77,7 @@ const BlogCards = () => {
                     </h4>
                   </div>
                   <h5 className="text-xl font-semibold">{card.title}</h5>
+                  <p>{card.titleDescription}</p>
                   <p className="text-sm">
                     {card.content.length > 160
                       ? `${card.content.substring(0, 160)}...`
