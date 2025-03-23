@@ -20,9 +20,11 @@
       "httpHomepage": "https://warp.dev/",
       "img": "/assets/images/blog/warp-terminal.jpg",
       "suffix": "Tech",
+      "titleTeche": "Technologies",
       "technologies": ["AI", "Terminal", "Cross-Platform"],
       "status": "Completed",
-      "keyFeature": "AI-assisted terminal commands"
+      "titleKeyFeature": "Key Features",
+      "keyFeatures": ["AI-assisted terminal commands"]
     },
     {
       "urlTitle": "printagon-order",
@@ -34,9 +36,11 @@
       "content": "Right now, I'm working on a new Printagon order form. I had a meeting with a client to discuss their needs before implementing the feature. Which fields should be mandatory. After the meeting, I started working on the form. So now I'm working on the backend API, which will be completed soon before I move on to the frontend and create the reusable input form with input fields and text area.",
       "img": "/assets/images/blog/PG-newOrder.jpg",
       "suffix": "Code",
+      "titleTeche": "Technologies",
       "technologies": ["C#", "ASP.NET", "SQL"],
       "status": "In Progress",
       "duration": "2 months",
+      "titleKeyFeature": "Key Features",
       "keyFeatures": [
         "Customizable form fields",
         "Backend integration",

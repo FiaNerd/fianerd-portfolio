@@ -20,9 +20,14 @@
       "httpHomepage": "https://warp.dev/",
       "img": "/assets/images/blog/warp-terminal.jpg",
       "suffix": "Tech",
+      "titleTeche": "Teknologier",
       "technologies": ["AI", "Terminal", "Cross-Platform"],
       "status": "Completed",
-      "keyFeature": "AI-assisterade terminalkommandon"
+      "titleKeyFeature": "Key Features",
+      "keyFeatures": [
+        "AI-assisterade terminalkommandon",
+        "Terminal för flera plattformar"
+      ]
     },
     {
       "urlTitle": "printagon-order-form",
@@ -34,9 +39,11 @@
       "content": "Just nu arbetar jag på ett nytt Printagon orderformulär. Jag hade ett möte med en kund för att diskutera deras behov innan jag implementerade funktionen. Vilka fält ska vara obligatoriska. Efter mötet började jag arbeta på formuläret. Så nu jobbar jag på backend-API:et, som kommer vara klart snart innan jag går över till frontend och skapar det återanvändbara inmatningsformuläret med inmatningsfält och textområde.",
       "img": "/assets/images/blog/PG-newOrder.jpg",
       "suffix": "Code",
+      "titleTeche": "Teknologier",
       "technologies": ["C#", "ASP.NET", "SQL"],
       "status": "In Progress",
       "duration": "2 months",
+      "titleKeyFeature": "Nyckelfunktioner",
       "keyFeatures": [
         "Anpassningsbara formulärfält",
         "Backend-integration",

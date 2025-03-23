@@ -12,15 +12,20 @@ export interface IBlogCard {
 
 export interface IBlogDetails {
   urlTitle: string;
-  title: string;
-  titleDescription: string;
   day: string;
   month: string;
+  title: string;
+  titleDescription: string;
+  date: string;
   content: string;
-  httpHomepage: string;
-  img: string;
-  suffix: string;
-  technologies: string[];
-  status: string;
-  keyFeature: string;
+  httpHomepage?: string;
+  img?: string;
+  suffix?: string;
+  titleTeche: string;
+  technologies?: string[];
+  // technologies?: { url: string; icon: string; type: string }[];
+  status?: string;
+  keyFeatures?: string[];
+  titleKeyFeature?: string;
+  duration?: string;
 }

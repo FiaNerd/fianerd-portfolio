@@ -78,38 +78,64 @@ const BlogDetailsPage = () => {
               <div className="border border-[#3C2F2F]"></div>
 
               <div className="flex justify-center py-2 mb-12 lg:mb-0 mx-auto">
-                <div className="border-r-2 border-[#3C2F2F]">
-                  <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">
-                    {blog.keyFeature}
-                  </p>
-
-                  <ul className="flex items-center space-x-4 justify-center px-2 lg:px-8">
-                    {blog.technologies &&
-                      blogDetails.map((item: any, index: number) => (
-                        <li
-                          key={index}
-                          className="justify-center items-center flex flex-col cursor-pointer"
+                <ul className="flex items-center space-x-4 justify-center px-2 lg:px-8">
+                  {blog.technologies &&
+                    blog.technologies.map((tech, index) => (
+                      <li
+                        key={index}
+                        className="justify-center items-center flex flex-col cursor-pointer"
+                      >
+                        <NavLink
+                          to={tech.url}
+                          className="flex flex-col items-center"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          <NavLink
-                            to={item.url}
-                            className="flex flex-col items-center"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Icon
-                              icon={item.icon}
-                              width="24"
-                              height="24"
-                              className="text-btn-bg hover:text-bg-hover"
-                            />
-                            <p className="text-xs font-light tracking-wider text-text-primary">
-                              {item.type}
-                            </p>
-                          </NavLink>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
+                          <Icon
+                            icon={tech.icon}
+                            width="24"
+                            height="24"
+                            className="text-btn-bg hover:text-bg-hover"
+                          />
+                          <p className="text-xs font-light tracking-wider text-text-primary">
+                            {tech.type}
+                          </p>
+                        </NavLink>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-cols mb-8 justify-around">
+            <div>
+              <h5>{blog.titleTeche}</h5>
+              <div className=" gap-2">
+                {Array.isArray(blog.technologies) &&
+                  blog.technologies.map((tech, index) => (
+                    <p
+                      key={index}
+                      className="text-sm font-semibold tracking-wide text-text-primary opacity-70"
+                    >
+                      {tech}
+                    </p>
+                  ))}
+              </div>
+            </div>
+
+            <div>
+              <h5>{blog.titleKeyFeature}</h5>
+              <div className=" gap-2">
+                {Array.isArray(blog.keyFeatures) &&
+                  blog.keyFeatures.map((feature: string, index: number) => (
+                    <p
+                      key={index}
+                      className="text-sm font-semibold tracking-wide text-text-primary opacity-70"
+                    >
+                      {feature}
+                    </p>
+                  ))}
               </div>
             </div>
           </div>
