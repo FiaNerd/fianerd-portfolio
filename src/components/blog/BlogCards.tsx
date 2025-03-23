@@ -42,11 +42,11 @@ const BlogCards = () => {
         {blogCards.map((card, index) => (
           <div
             key={index}
-            className="rounded-lg transition-shadow duration-300"
+            className="rounded-lg transition-shadow duration-300 flex flex-col h-full"
           >
-            <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8 lg:flex lg:flex-col justify-between h-full group">
-              <div className="relative group flex w-full h-full">
-                <div className="relative w-full h-48">
+            <div className="flex flex-col justify-between h-full group p-4 rounded-md">
+              <div>
+                <div className="relative w-full h-48 mb-2">
                   <img
                     src={card.img}
                     alt={card.title}
@@ -60,39 +60,34 @@ const BlogCards = () => {
                       transition: 'opacity 0.3s',
                     }}
                   ></div>
+                  <span className="absolute top-2 left-2 text-bg-secondary dark:text-text-accent text-xl font-bold bg-[#1e3237] dark:bg-[#180f08] px-2 rounded-md">
+                    {card.suffix}
+                  </span>
                 </div>
-                <span className="absolute top-2 left-2 text-bg-secondary dark:text-text-accent text-xl font-bold dark:bg-[#180f08] px-2 rounded-md">
-                  {card.suffix}
-                </span>
-              </div>
 
-              <div className="flex flex-col justify-between w-full px-2 mb-0 mt-2">
-                <div className="border-b border-text-primary py-2">
-                  <div>
-                    <h5 className="font-semibold px-2 mb-0 leading-0">
-                      {card.month}
-                    </h5>
-                    <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none">
-                      {card.day}
-                    </h4>
-                  </div>
-                  <h5 className="text-xl font-semibold">{card.title}</h5>
+                <div className=" pb-2 mb-2">
+                  <h5 className="font-semibold mb-0 ml-4">{card.month}</h5>
+                  <h4 className="text-bg-secondary dark:text-text-accent font-bold leading-none mb-4 ml-4">
+                    {card.day}
+                  </h4>
+                  <h5 className="text-xl font-semibold mb-1">{card.title}</h5>
                   <p>{card.titleDescription}</p>
-                  <p className="text-sm">
+                  <p className="text-sm mt-1">
                     {card.content.length > 160
                       ? `${card.content.substring(0, 160)}...`
                       : card.content}
                   </p>
                 </div>
-                <div className="flex justify-end pt-2">
-                  <NavLink
-                    to={`/blog/${encodeURIComponent(card.urlTitle)}`}
-                    rel="noopener noreferrer"
-                    className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer"
-                  >
-                    {t('readMore')}
-                  </NavLink>
-                </div>
+              </div>
+
+              <div className="flex justify-end mt-auto border-t border-text-primary">
+                <NavLink
+                  to={`/blog/${encodeURIComponent(card.urlTitle)}`}
+                  rel="noopener noreferrer"
+                  className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer mt-2"
+                >
+                  {t('readMore')}
+                </NavLink>
               </div>
             </div>
           </div>
