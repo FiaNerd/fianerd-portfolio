@@ -10,6 +10,7 @@
 
   "blogPostCards": [
     {
+      "urlTitle": "warp-terminal",
       "day": ".18",
       "month": "mars",
       "title": "Warp - den enda terminalen jag behöver",
@@ -23,6 +24,7 @@
       "keyFeature": "AI-assisterade terminalkommandon"
     },
     {
+      "urlTitle": "printagon-order-form",
       "day": ".20",
       "month": "mars",
       "title": "Skapar Printagon orderformulär",

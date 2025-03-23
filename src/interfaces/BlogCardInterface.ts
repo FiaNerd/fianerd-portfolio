@@ -1,5 +1,5 @@
 export interface IBlogCard {
-  id: string;
+  urlTitle: string;
   title: string;
   month: string;
   day: string;
@@ -12,5 +12,3 @@ export interface IBlogCard {
   keyFeature?: string;
   keyFeatures?: string[];
 }
-
-

@@ -1,14 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogCardInterface';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
+  const navigate = useNavigate();
   const blogCards: IBlogCard[] = t('blogPostCards', {
     returnObjects: true,
   }) as IBlogCard[];
-
-  console.log('blogPostCards', blogCards);
 
   // Function to generate random color in HSL format
   const getRandomHSLColor = () => {
@@ -20,11 +19,13 @@ const BlogCards = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12">
-      <h2 className="mb-8 text-3xl font-bold">{t('blogYear2025')}</h2>
+      <h2 className="mb-8 text-3xl text-bg-secondary dark:text-[#ff7318] font-bold">
+        {t('blogYear2025')}
+      </h2>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-1 lg:grid-cols-4">
         {/* Title Column */}
-        <div className="flex col-span-1 text-bg-secondary dark:text-text-accent bg-[#1e3237] dark:bg-[#435a40] font-bold p-8 items-center justify-center">
+        <div className="flex col-span-1 text-bg-secondary dark:text-[#ff7318] bg-[#1e3237] dark:bg-[#26170d] font-bold p-8 items-center justify-center">
           <div className="text-center">
             <span className="text-[6.6em] leading-[1.3em] block">
               {t('blogPostTitlePart1').toUpperCase()}
@@ -61,7 +62,7 @@ const BlogCards = () => {
                     }}
                   ></div>
                 </div>
-                <span className="absolute top-2 left-2 text-bg-secondary dark:text-text-accent text-xl font-bold bg-black bg-opacity-80 px-2 rounded-md">
+                <span className="absolute top-2 left-2 text-bg-secondary dark:text-[#ff7318] text-xl font-bold bg-black bg-opacity-80 px-2 rounded-md">
                   {card.suffix}
                 </span>
               </div>
@@ -72,7 +73,7 @@ const BlogCards = () => {
                     <h5 className="font-semibold px-2 mb-0 leading-0">
                       {card.month}
                     </h5>
-                    <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none">
+                    <h4 className="text-bg-secondary dark:text-[#ff7318] font-bold px-2 leading-none">
                       {card.day}
                     </h4>
                   </div>
@@ -85,8 +86,7 @@ const BlogCards = () => {
                 </div>
                 <div className="flex justify-end pt-2">
                   <NavLink
-                    to={''}
-                    target="_blank"
+                    to={`/blog/${card.urlTitle}`}
                     rel="noopener noreferrer"
                     className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer"
                   >

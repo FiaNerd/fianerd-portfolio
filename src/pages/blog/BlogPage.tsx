@@ -12,7 +12,6 @@ const BlogPage = () => {
   return (
     <section
       id="blog"
-      className=""
       style={{
         paddingTop: `${headerHeight}px`,
         transition: 'padding-top 0.3s ease',
@@ -22,15 +21,14 @@ const BlogPage = () => {
         title={t('blogPostTitle')}
         dot={'.'}
         children={t('subTitleBlogPost')}
-        className="text-bg-secondary dark:text-text-accent"
+        className="text-bg-secondary dark:text-[#ff7318]"
         subHeadingClassName="text-hover-text dark:text-accent-secondary"
         light="bg-[#1e3237]"
-        dark="dark:bg-[#435a40] "
+        dark="dark:bg-[#26170d]"
         sticky
       />
 
       <BlogCards />
-      {/* <BlogCards /> */}
     </section>
   );
 };

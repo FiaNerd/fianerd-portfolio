@@ -10,6 +10,7 @@
 
   "blogPostCards": [
     {
+      "urlTitle": "warp-terminal",
       "day": ".18",
       "month": "March",
       "title": "Warp - The Only Terminal I Need",
@@ -23,63 +24,7 @@
       "keyFeature": "AI-assisted terminal commands"
     },
     {
-      "day": ".20",
-      "month": "March",
-      "title": "Creating Printagon Order Form",
-      "date": "2025-03-20",
-      "content": "Right now, I'm working on a new Printagon order form. I had a meeting with a client to discuss their needs before implementing the feature. Which fields should be mandatory. After the meeting, I started working on the form. So now I'm working on the backend API, which will be completed soon before I move on to the frontend and create the reusable input form with input fields and text area.",
-      "img": "/assets/images/blog/PG-newOrder.jpg",
-      "suffix": "Code",
-      "technologies": ["C#", "ASP.NET", "SQL"],
-      "status": "In Progress",
-      "duration": "2 months",
-      "keyFeatures": [
-        "Customizable form fields",
-        "Backend integration",
-        "Reusable input components",
-        "Responsive design",
-        "Validation"
-      ]
-    },
-    {
-      "day": ".20",
-      "month": "March",
-      "title": "Creating Printagon Order Form",
-      "date": "2025-03-20",
-      "content": "Right now, I'm working on a new Printagon order form. I had a meeting with a client to discuss their needs before implementing the feature. Which fields should be mandatory. After the meeting, I started working on the form. So now I'm working on the backend API, which will be completed soon before I move on to the frontend and create the reusable input form with input fields and text area.",
-      "img": "/assets/images/blog/PG-newOrder.jpg",
-      "suffix": "Code",
-      "technologies": ["C#", "ASP.NET", "SQL"],
-      "status": "In Progress",
-      "duration": "2 months",
-      "keyFeatures": [
-        "Customizable form fields",
-        "Backend integration",
-        "Reusable input components",
-        "Responsive design",
-        "Validation"
-      ]
-    },
-    {
-      "day": ".20",
-      "month": "March",
-      "title": "Creating Printagon Order Form",
-      "date": "2025-03-20",
-      "content": "Right now, I'm working on a new Printagon order form. I had a meeting with a client to discuss their needs before implementing the feature. Which fields should be mandatory. After the meeting, I started working on the form. So now I'm working on the backend API, which will be completed soon before I move on to the frontend and create the reusable input form with input fields and text area.",
-      "img": "/assets/images/blog/PG-newOrder.jpg",
-      "suffix": "Code",
-      "technologies": ["C#", "ASP.NET", "SQL"],
-      "status": "In Progress",
-      "duration": "2 months",
-      "keyFeatures": [
-        "Customizable form fields",
-        "Backend integration",
-        "Reusable input components",
-        "Responsive design",
-        "Validation"
-      ]
-    },
-    {
+      "urlTitle": "printagon-order-form",
       "day": ".20",
       "month": "March",
       "title": "Creating Printagon Order Form",

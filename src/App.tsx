@@ -9,6 +9,7 @@ import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
+import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
 
 const App = () => {
   return (
@@ -62,6 +63,7 @@ const App = () => {
                 element={<PortfolioDetailsPage />}
               />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:urlTitle" element={<BlogDeatilsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
