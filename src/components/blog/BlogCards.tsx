@@ -84,7 +84,7 @@ const BlogCards = () => {
                 <NavLink
                   to={`/blog/${encodeURIComponent(card.urlTitle)}`}
                   rel="noopener noreferrer"
-                  className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer mt-2"
+                  className="font-sub-heading font-bold text-nav-text hover:text-nav-hover hover:underline cursor-pointer mt-2"
                 >
                   {t('readMore')}
                 </NavLink>

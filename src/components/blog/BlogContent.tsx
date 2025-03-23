@@ -18,7 +18,7 @@ const BlogContent = ({
       />
       <div className="border border-[#3C2F2F] mb-2"></div>
 
-      <div className="flex flex-rows gap-8 px-4">
+      <div className="flex flex-rows gap-8 px-4 justify-evenly">
         <a
           href={http}
           target="_blank"

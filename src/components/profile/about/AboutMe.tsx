@@ -79,7 +79,7 @@ const AboutMe = () => {
 
               <NavLink
                 to={'/contact'}
-                className="flex flex-row w-full md:w-80 mx-auto justify-center items-center gap-4 font-sub-heading border-2 border-btn-bg text-btn-bg  hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary tracking-wide rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg  px-4 py-2 cursor-pointer"
+                className="flex flex-row w-full md:w-80 mx-auto justify-center items-center gap-4 font-sub-heading border-2 border-btn-bg text-btn-bg  hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary tracking-wide rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg px-4 py-2 cursor-pointer"
               >
                 <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
                 {t('translation:contact')}
@@ -87,7 +87,7 @@ const AboutMe = () => {
             </>
           )}
           <button
-            className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent hover:underline hover:underline-offset-4"
+            className="flex float-end text-lg font-sub-heading font-bold md:text-xl text-nav-text hover:text-nav-hover bg-transparent hover:underline hover:underline-offset-4"
             onClick={handleToggleText}
           >
             {isExpanded ? t('ctaLess') : t('cta')}
