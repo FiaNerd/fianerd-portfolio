@@ -23,9 +23,28 @@ export interface IBlogDetails {
   suffix?: string;
   titleTeche: string;
   technologies?: string[];
-  // technologies?: { url: string; icon: string; type: string }[];
   status?: string;
   keyFeatures?: string[];
   titleKeyFeature?: string;
   duration?: string;
+  icon: {
+    name: string;
+    width: number;
+    height: number;
+    color: string;
+  };
+  privateText?: string;
+}
+
+export interface IBlogContentProps {
+  content: string;
+  suffix: string;
+  http: string;
+  icon: {
+    name: string;
+    width: number;
+    height: number;
+    color: string;
+  };
+  privateText?: string;
 }

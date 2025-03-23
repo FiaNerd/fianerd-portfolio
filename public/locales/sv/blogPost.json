@@ -27,7 +27,14 @@
       "keyFeatures": [
         "AI-assisterade terminalkommandon",
         "Terminal för flera plattformar"
-      ]
+      ],
+      "icon": {
+        "name": "icon-park-twotone:web-page",
+        "width": 40,
+        "height": 40,
+        "color": ""
+      },
+      "privateText": ""
     },
     {
       "urlTitle": "printagon-order-form",
@@ -37,6 +44,7 @@
       "titleDescription": "Skapar ett nytt orderformulär för Printagon",
       "date": "2025-03-20",
       "content": "Just nu arbetar jag på ett nytt Printagon orderformulär. Jag hade ett möte med en kund för att diskutera deras behov innan jag implementerade funktionen. Vilka fält ska vara obligatoriska. Efter mötet började jag arbeta på formuläret. Så nu jobbar jag på backend-API:et, som kommer vara klart snart innan jag går över till frontend och skapar det återanvändbara inmatningsformuläret med inmatningsfält och textområde.",
+      "httpHomepage": "https://github.com/FiaNerd",
       "img": "/assets/images/blog/PG-newOrder.jpg",
       "suffix": "Code",
       "titleTeche": "Teknologier",
@@ -50,7 +58,14 @@
         "Återanvändbara inmatningskomponenter",
         "Responsiv design",
         "Validering"
-      ]
+      ],
+      "icon": {
+        "name": "jam:github",
+        "width": 40,
+        "height": 40,
+        "color": ""
+      },
+      "privateText": "Detta repro är privat. Men kolla in mina andra projekt."
     }
   ]
 }

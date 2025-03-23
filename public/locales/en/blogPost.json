@@ -24,7 +24,14 @@
       "technologies": ["AI", "Terminal", "Cross-Platform"],
       "status": "Completed",
       "titleKeyFeature": "Key Features",
-      "keyFeatures": ["AI-assisted terminal commands"]
+      "keyFeatures": ["AI-assisted terminal commands"],
+      "icon": {
+        "name": "icon-park-twotone:web-page",
+        "width": 40,
+        "height": 40,
+        "color": "text-text-primary"
+      },
+      "privateText": "This repo is private. BUT checkout my other projects."
     },
     {
       "urlTitle": "printagon-order",
@@ -36,6 +43,7 @@
       "content": "Right now, I'm working on a new Printagon order form. I had a meeting with a client to discuss their needs before implementing the feature. Which fields should be mandatory. After the meeting, I started working on the form. So now I'm working on the backend API, which will be completed soon before I move on to the frontend and create the reusable input form with input fields and text area.",
       "img": "/assets/images/blog/PG-newOrder.jpg",
       "suffix": "Code",
+      "httpHomepage": "https://github.com/FiaNerd",
       "titleTeche": "Technologies",
       "technologies": ["C#", "ASP.NET", "SQL"],
       "status": "In Progress",
@@ -47,7 +55,14 @@
         "Reusable input components",
         "Responsive design",
         "Validation"
-      ]
+      ],
+      "icon": {
+        "name": "jam:github",
+        "width": 40,
+        "height": 40,
+        "color": ""
+      },
+      "privateText": "This repo is private. BUT checkout my other projects."
     }
   ]
 }

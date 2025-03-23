@@ -21,7 +21,7 @@ const BlogPage = () => {
         title={t('blogPostTitle')}
         dot={'.'}
         children={t('subTitleBlogPost')}
-        className="text-bg-secondary dark:text-[#f89831]"
+        className="text-bg-secondary dark:text-text-accent"
         subHeadingClassName="text-hover-text dark:text-text-secondary"
         light="bg-[#1e3237]"
         dark="dark:bg-[#180f08]"

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { IBlogCard } from '../../interfaces/BlogCardInterface';
+import { IBlogCard } from '../../interfaces/BlogInterface';
 import { NavLink } from 'react-router-dom';
 
 const BlogCards = () => {
