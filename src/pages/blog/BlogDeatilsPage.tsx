@@ -39,10 +39,10 @@ const BlogDetailsPage = () => {
       <div className="mb-8">
         <HeroDetails
           title={blog.title}
-          image={blog.img}
+          image={blog.img || ''}
           titleDescription={blog.titleDescription}
           light="text-bg-secondary"
-          dark="dark:text-[#ff7318]"
+          dark="dark:text-text-accent"
         />
       </div>
 
@@ -59,83 +59,75 @@ const BlogDetailsPage = () => {
 
         {/* Blog Content */}
         <div className="mt-8">
-          <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 lg:space-y-8 gap-8 items-center">
-            <img src={blog.img} alt="" />
-            <div>
-              <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">
-                {blog.title}
-              </h1>
+          <div className="mx-auto grid grid-cols-1 lg:grid-cols-[40%_40%_20%] items-center lg:space-y-8 gap-8 ">
+            {/* Image Column */}
+            <div className="lg:col-span-1">
+              <img src={blog.img} alt="" className="w-full h-auto" />
+            </div>
+
+            {/* Title and Content Column */}
+            <div className="flex flex-col">
+              <div className="flex flex-rows text-center items-center gap-4 ">
+                <div className="border-r-2 border-[#3C2F2F] mb-2">
+                  <h5 className="font-semibold px-2 mb-0 leading-0">
+                    {blog.month}
+                  </h5>
+                  <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none">
+                    {blog.day}
+                  </h4>
+                </div>
+
+                <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">
+                  {blog.title}
+                </h1>
+              </div>
               <p className="text-[#695050]">{blog.titleDescription}</p>
 
               <div className="border border-[#3C2F2F] mb-8"></div>
 
               <div className="flex flex-col mb-8 border-r-2 border-[#3C2F2F]">
                 <p
-                  className="text-lg leading-8 max-h-[30em] overflow-y-auto px-4"
+                  className="text-lg text-text-primary leading-8 max-h-[30em] overflow-y-auto px-4"
                   dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
               </div>
-              <div className="border border-[#3C2F2F]"></div>
+              <div className="border border-[#3C2F2F] mb-8"></div>
+            </div>
 
-              <div className="flex justify-center py-2 mb-12 lg:mb-0 mx-auto">
-                <ul className="flex items-center space-x-4 justify-center px-2 lg:px-8">
-                  {blog.technologies &&
+            {/* Technologies and Key Features Column */}
+            <div className="bg-[#000] p-4 lg:col-span-1">
+              <div className="mb-8 ">
+                <h5 className="dark:text-black font-bold highlight  highlight-bg-secondary dark:highlight-text-accent highlight-variant-18 highlight-spread-x-xl highlight-spread-y-sm">
+                  {blog.titleTeche}
+                </h5>
+                <div>
+                  {Array.isArray(blog.technologies) &&
                     blog.technologies.map((tech, index) => (
-                      <li
+                      <p
                         key={index}
-                        className="justify-center items-center flex flex-col cursor-pointer"
+                        className="text-sm tracking-wide text-hover-text dark:text-text-primary"
                       >
-                        <NavLink
-                          to={tech.url}
-                          className="flex flex-col items-center"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon
-                            icon={tech.icon}
-                            width="24"
-                            height="24"
-                            className="text-btn-bg hover:text-bg-hover"
-                          />
-                          <p className="text-xs font-light tracking-wider text-text-primary">
-                            {tech.type}
-                          </p>
-                        </NavLink>
-                      </li>
+                        {tech}
+                      </p>
                     ))}
-                </ul>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div className="flex flex-cols mb-8 justify-around">
-            <div>
-              <h5>{blog.titleTeche}</h5>
-              <div className=" gap-2">
-                {Array.isArray(blog.technologies) &&
-                  blog.technologies.map((tech, index) => (
-                    <p
-                      key={index}
-                      className="text-sm font-semibold tracking-wide text-text-primary opacity-70"
-                    >
-                      {tech}
-                    </p>
-                  ))}
-              </div>
-            </div>
-
-            <div>
-              <h5>{blog.titleKeyFeature}</h5>
-              <div className=" gap-2">
-                {Array.isArray(blog.keyFeatures) &&
-                  blog.keyFeatures.map((feature: string, index: number) => (
-                    <p
-                      key={index}
-                      className="text-sm font-semibold tracking-wide text-text-primary opacity-70"
-                    >
-                      {feature}
-                    </p>
-                  ))}
+              <div className="mb-8">
+                <h5 className="dark:text-black font-bold highlight highlight-bg-secondary dark:highlight-text-accent highlight-variant-18 highlight-spread-x-xl highlight-spread-y-sm">
+                  {blog.titleKeyFeature}
+                </h5>
+                <div>
+                  {Array.isArray(blog.keyFeatures) &&
+                    blog.keyFeatures.map((feature: string, index: number) => (
+                      <p
+                        key={index}
+                        className="text-sm tracking-wide text-hover-text dark:text-text-primary"
+                      >
+                        {feature}
+                      </p>
+                    ))}
+                </div>
               </div>
             </div>
           </div>
