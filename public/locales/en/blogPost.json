@@ -13,7 +13,8 @@
       "urlTitle": "warp-terminal",
       "day": ".18",
       "month": "March",
-      "title": "Warp - The Only Terminal I Need",
+      "title": "Warp",
+      "titleDescription": "The Only Terminal I Need",
       "date": "2025-03-20",
       "content": "I've been using Warp for a while now and I have to say, it's the only terminal I ever need. It was first released for Mac, and I discovered it when I had issues with my built-in terminal and was looking for a new one. That's when I found Warp. <br> At that time, it was only available for Mac, and I had been checking for updates for Windows from time to time. A few weeks ago, it finally came to Windows, and I was thrilled. The installation process was incredibly simple on both Mac and Windows. Sure, it offers different themes and customizable text options, but the absolute best part is that I can now save my terminal commands. I have many commands in my head, but not all of them, and some I don't use that often. For example, when I need to change a commit message. Sure, Google can help, but now I can save those commands and access them with one click when I need them. <b>Another amazing feature is the built-in AI, which lets me write and ask for specific commands, and it actually explains what the command does.</b> Another thing I love is that I don't have to use the arrow keys to navigate - I can simply use my mouse. If I notice a typo, I can click on it and change it directly. It's so much easier. <br> I really love it. It's a must-have for any developer who appreciates the power of the terminal, just like I do.",
       "httpHomepage": "https://warp.dev/",
@@ -24,10 +25,11 @@
       "keyFeature": "AI-assisted terminal commands"
     },
     {
-      "urlTitle": "printagon-order-form",
+      "urlTitle": "printagon-order",
       "day": ".20",
       "month": "March",
-      "title": "Creating Printagon Order Form",
+      "title": "Printagon Order Form",
+      "titleDescription": "Creating a new order form for Printagon",
       "date": "2025-03-20",
       "content": "Right now, I'm working on a new Printagon order form. I had a meeting with a client to discuss their needs before implementing the feature. Which fields should be mandatory. After the meeting, I started working on the form. So now I'm working on the backend API, which will be completed soon before I move on to the frontend and create the reusable input form with input fields and text area.",
       "img": "/assets/images/blog/PG-newOrder.jpg",

@@ -1,10 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogCardInterface';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
-  const navigate = useNavigate();
   const blogCards: IBlogCard[] = t('blogPostCards', {
     returnObjects: true,
   }) as IBlogCard[];
@@ -86,7 +85,7 @@ const BlogCards = () => {
                 </div>
                 <div className="flex justify-end pt-2">
                   <NavLink
-                    to={`/blog/${card.urlTitle}`}
+                    to={`/blog/${encodeURIComponent(card.urlTitle)}`}
                     rel="noopener noreferrer"
                     className="text-nav-text hover:text-nav-hover hover:underline cursor-pointer"
                   >
