@@ -34,7 +34,7 @@
   "fullstackDescription": "Utforska mina utvalda fullstack-projekt",
   "graphic": "Grafisk design",
   "grafiskDescription": "Utforska mina utvalda grafiska projekt",
-  "news": "Nyheter<span class='text-accent-primary font-medium'>!</span>",
+  "blog": "Blog<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
   "languages": {
     "select": "SV",
@@ -65,7 +65,7 @@
     "backend": "backend",
     "fullstack": "fullstack",
     "graphic": "grafisk-design",
-    "news": "nyheter",
+    "blog": "Blog",
     "contact": "kontakta-mig"
   }
 }

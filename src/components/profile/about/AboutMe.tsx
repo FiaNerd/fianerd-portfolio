@@ -1,59 +1,97 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import useFadeIn from "../../../hook/useFadeIn";
-import { NavLink } from "react-router-dom";
-import { Icon } from "@iconify/react";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import useFadeIn from '../../../hook/useFadeIn';
+import { NavLink } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
 const AboutMe = () => {
-  const { t } = useTranslation(["profile/aboutMe", "translation"]);
+  const { t } = useTranslation(['profile/aboutMe', 'translation']);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const { ref, ctrls, vars } = useFadeIn({ delay: 0.5, duration: 1, repeat: true });
+  const { ref, ctrls, vars } = useFadeIn({
+    delay: 0.5,
+    duration: 1,
+    repeat: true,
+  });
 
   const handleToggleText = () => {
     if (isExpanded) {
       const articleTop = document.getElementById('profile');
-      
+
       if (articleTop) {
         articleTop.scrollIntoView({ behavior: 'smooth' });
       }
     }
     setIsExpanded(!isExpanded);
   };
-  
+
   return (
     <>
       <section className="max-w-screen-xl mx-auto grid grid-col-1 md:gap-10 px-4 md:px-10 py-8 md:py-20">
-        <motion.div ref={ref} initial="hidden" animate={ctrls} variants={vars} className="mx-auto">
-          <img src="/assets/images/profile-img-mobile.jpg" alt="Fia nerd" className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "/>
-          <h2 className="text-h2 m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('title')}</h2>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={ctrls}
+          variants={vars}
+          className="mx-auto"
+        >
+          <img
+            src="/assets/images/profile-img-mobile.jpg"
+            alt="Fia nerd"
+            className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "
+          />
+          <h2 className="text-h2 m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">
+            {t('title')}
+          </h2>
           <p className="italic">{t('intro')}</p>
           <p className="font-semibold tracking-wide">{t('introBio')}</p>
-          <p className={`${isExpanded ? "line-clamp-none" : "line-clamp-5 lg:line-clamp-[10]"}`} dangerouslySetInnerHTML={{ __html: t('mainIntroProfile') }} />
-          { isExpanded && (
+          <p
+            className={`${
+              isExpanded ? 'line-clamp-none' : 'line-clamp-5 lg:line-clamp-[10]'
+            }`}
+            dangerouslySetInnerHTML={{ __html: t('mainIntroProfile') }}
+          />
+          {isExpanded && (
             <>
-              <h3 className="text-[#ca5b87] dark:text-accent-primary font-bold not-italic">{t('myBackgroundTitle')}</h3>
-              <h3 className="m-0 font-medium text-[#ca5b87] dark:text-accent-primary not-italic">{t('myJourneyTitle')}</h3>
+              <h3 className="text-[#ca5b87] dark:text-accent-primary font-bold not-italic">
+                {t('myBackgroundTitle')}
+              </h3>
+              <h3 className="m-0 font-medium text-[#ca5b87] dark:text-accent-primary not-italic">
+                {t('myJourneyTitle')}
+              </h3>
               <p>{t('myBackgroundText')}</p>
               <p>{t('myJourneyText')}</p>
-              <h4 className="m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">{t('myFilosofiTitle')}</h4>
-              <h5 className="not-italic font-semibold text-[#ca5b87] dark:text-accent-primary m-0">{t('myFilosofiSubtitle')}</h5>
+              <h4 className="m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">
+                {t('myFilosofiTitle')}
+              </h4>
+              <h5 className="not-italic font-semibold text-[#ca5b87] dark:text-accent-primary m-0">
+                {t('myFilosofiSubtitle')}
+              </h5>
               <p className="m-0">{t('myFilosofiText1')}</p>
               <p className="m-0">{t('myFilosofiText2')}</p>
               <p>{t('myFilosofiText3')}</p>
               <p>{t('myFilosofiText4')}</p>
-              <h3 className="font-textImportant not-italic text-4xl md:text-6xl font-bold text-[#ca5b87] dark:text-accent-primary mt-8 mb-8">{t('createTogheterTitle')}</h3>
+              <h3 className="font-textImportant not-italic text-4xl md:text-6xl font-bold text-[#ca5b87] dark:text-accent-primary mt-8 mb-8">
+                {t('createTogheterTitle')}
+              </h3>
               <p>{t('createTogheterText')}</p>
 
-              <NavLink to={'/contact'} className="flex flex-row w-full md:w-80 mx-auto justify-center items-center gap-4 font-sub-heading border-2 border-btn-bg hover:border-bg-hover text-btn-bg hover:bg-bg-hover hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary tracking-wide font-semibold hover:text-bg-primary rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-4 py-2 cursor-pointer">
-                <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("translation:contact")}
+              <NavLink
+                to={'/contact'}
+                className="flex flex-row w-full md:w-80 mx-auto justify-center items-center gap-4 font-sub-heading border-2 border-btn-bg text-btn-bg  hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary tracking-wide rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg  px-4 py-2 cursor-pointer"
+              >
+                <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
+                {t('translation:contact')}
               </NavLink>
             </>
           )}
-          <button className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent underline underline-offset-8" onClick={handleToggleText}>
+          <button
+            className="flex float-end text-lg md:text-xl text-btn-bg hover:text-bg-hover bg-transparent hover:underline hover:underline-offset-4"
+            onClick={handleToggleText}
+          >
             {isExpanded ? t('ctaLess') : t('cta')}
-          </button>  
+          </button>
         </motion.div>
       </section>
     </>

@@ -2,6 +2,6 @@
     "contactTitle": "Coffee Break",
     "contactSubtitle": "Grab a cup and drop me a line!",
     "contactGreeting": "Hello",
-    "contactIntro": "<span class='contact-text'>I'm looking forward to </span> <span class='highlight'> <span class='highlight-text'>new</span> </span> <span class='contact-text'> opportunities and exciting collaborations. </span>",
+    "contactIntro": "<span class='contact-text'>I'm looking forward to </span> <span class='highlight-container'> <span class='highlight-text'>new</span> </span> <span class='contact-text'> opportunities and exciting collaborations. </span>",
     "contactSubIntro": "<span class='contact-subintro'>If you have a project in mind or just want to say hi, feel free to get in touch!</span>"
 }

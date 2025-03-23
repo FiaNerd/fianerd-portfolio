@@ -1,0 +1,71 @@
+{
+  "blogPostTitle": "Kod, Design & Upptäckter",
+  "subTitleBlogPost": "Dela min resa inom kod, design och upptäckter",
+  "blogYear2025": "2025",
+  "blogPostTitlePart1": "På",
+  "blogPostTitlePart2": "väg",
+  "blogPostTitlePart3": "fram",
+  "noBlogPost": "Inga blogginlägg tillgängliga.",
+  "readMore": "Läs hela inlägget",
+
+  "blogPostCards": [
+    {
+      "urlTitle": "warp-terminal",
+      "day": ".18",
+      "month": "mars",
+      "title": "Warp",
+      "titleDescription": "Den enda terminalen jag behöver",
+      "date": "2025-03-20",
+      "content": "Jag har använt Warp ett tag nu och jag måste säga att det är den enda terminalen jag någonsin behöver. Den lanserades först för Mac och jag upptäckte den när jag hade problem med min inbyggda terminal och letade efter en ny. Det var då jag hittade Warp. Vid den tiden var den bara tillgänglig för Mac, och jag hade kollat efter uppdateringar för Windows då och då. För några veckor sedan kom den äntligen till Windows, och jag var överlycklig. <br><br> Installationsprocessen var otroligt enkel på både Mac och Windows. Visst, den erbjuder olika teman och anpassbara textalternativ, men den absolut bästa delen är att jag nu kan spara mina terminalkommandon. Jag har många kommandon i huvudet, men inte alla, och vissa använder jag inte så ofta. Till exempel när jag behöver ändra ett commit-meddelande. Visst, Google kan hjälpa till, men nu kan jag spara de där kommandona och komma åt dem med ett klick när jag behöver dem. <br><br><b>En annan fantastisk funktion är den inbyggda AI:n, som låter mig skriva och fråga efter specifika kommandon, och den förklarar faktiskt vad kommandot gör.</b> En annan sak jag älskar är att jag inte behöver använda piltangenterna för att navigera - jag kan helt enkelt använda min mus. Om jag märker ett stavfel kan jag klicka på det och ändra det direkt. Det är så mycket enklare. <br><br> Jag älskar det verkligen. Det är ett måste för alla utvecklare som uppskattar terminalens kraft, precis som jag gör.",
+      "httpHomepage": "https://warp.dev/",
+      "img": "/assets/images/blog/warp-terminal.jpg",
+      "suffix": "Tech",
+      "titleTeche": "Teknologier",
+      "technologies": ["AI", "Terminal", "Cross-Platform"],
+      "status": "Completed",
+      "titleKeyFeature": "Key Features",
+      "keyFeatures": [
+        "AI-assisterade terminalkommandon",
+        "Terminal för flera plattformar"
+      ],
+      "icon": {
+        "name": "icon-park-twotone:web-page",
+        "width": 40,
+        "height": 40,
+        "color": ""
+      },
+      "privateText": ""
+    },
+    {
+      "urlTitle": "printagon-order-form",
+      "day": ".20",
+      "month": "mars",
+      "title": "Printagon orderformulär",
+      "titleDescription": "Skapar ett nytt orderformulär för Printagon",
+      "date": "2025-03-20",
+      "content": "Just nu arbetar jag på ett nytt Printagon orderformulär. Jag hade ett möte med en kund för att diskutera deras behov innan jag implementerade funktionen. Vilka fält ska vara obligatoriska. Efter mötet började jag arbeta på formuläret. Så nu jobbar jag på backend-API:et, som kommer vara klart snart innan jag går över till frontend och skapar det återanvändbara inmatningsformuläret med inmatningsfält och textområde.",
+      "httpHomepage": "https://github.com/FiaNerd",
+      "img": "/assets/images/blog/PG-newOrder.jpg",
+      "suffix": "Code",
+      "titleTeche": "Teknologier",
+      "technologies": ["C#", "ASP.NET", "SQL"],
+      "status": "In Progress",
+      "duration": "2 months",
+      "titleKeyFeature": "Nyckelfunktioner",
+      "keyFeatures": [
+        "Anpassningsbara formulärfält",
+        "Backend-integration",
+        "Återanvändbara inmatningskomponenter",
+        "Responsiv design",
+        "Validering"
+      ],
+      "icon": {
+        "name": "jam:github",
+        "width": 40,
+        "height": 40,
+        "color": ""
+      },
+      "privateText": "Detta repro är privat. Men kolla in mina andra projekt."
+    }
+  ]
+}
