@@ -1,75 +1,79 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import RippedPaperBottom from "../../assets/svg/RippedPaperBottom";
-import RippedPaperTop from "../../assets/svg/RippedPaperTop";
-import SvgWaves from "../../assets/svg/SvgWaves";
-import Button from "../../components/partials/Button";
-import SectionPlate from "../../components/partials/SectionPlate";
-import Title from "../../components/partials/Title";
-import BackendPortfolio from "../../components/portfolios/BackendPortfolio";
-import FrontendPortfolio from "../../components/portfolios/FrontendPortfolio";
-import FullStackPortfolio from "../../components/portfolios/FullStackPortfolio";
-import Top5projects from "../../components/portfolios/Top5projects";
-import useHeaderHeight from "../../hook/useHeaderHeight";
-import { useLocation } from "react-router-dom";
-import useSmoothScroll from "../../hook/useSmoothScroll";
-import useScrollUpdateURL from "../../hook/useScrollUpdate";
-import i18n from "../../../public/i18n/i18n";
-import { NavLink } from "react-router-dom";
+import { Icon } from '@iconify/react/dist/iconify.js';
+import { useEffect, useLayoutEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import RippedPaperBottom from '../../assets/svg/RippedPaperBottom';
+import RippedPaperTop from '../../assets/svg/RippedPaperTop';
+import SvgWaves from '../../assets/svg/SvgWaves';
+import Button from '../../components/partials/Button';
+import SectionPlate from '../../components/partials/SectionPlate';
+import Title from '../../components/partials/Title';
+import BackendPortfolio from '../../components/portfolios/BackendPortfolio';
+import FrontendPortfolio from '../../components/portfolios/FrontendPortfolio';
+import FullStackPortfolio from '../../components/portfolios/FullStackPortfolio';
+import Top5projects from '../../components/portfolios/Top5projects';
+import useHeaderHeight from '../../hook/useHeaderHeight';
+import { useLocation } from 'react-router-dom';
+import useSmoothScroll from '../../hook/useSmoothScroll';
+import useScrollUpdateURL from '../../hook/useScrollUpdate';
+import i18n from '../../../public/i18n/i18n';
+import { NavLink } from 'react-router-dom';
 
 const PortfolioPage = () => {
   const { t } = useTranslation('portfolio');
-  console.log(t('portfolio.titlePortfolio'));
 
+  const headerHeight = useHeaderHeight();
 
-const headerHeight = useHeaderHeight();
+  const location = useLocation();
 
-    const location = useLocation();
-    
-    useEffect(() => {
-      const handleHashNavigation = () => {
-        const sectionId = location.pathname.split('/').pop();
-        if (sectionId) {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            console.warn(`Section with ID "${sectionId}" not found.`);
-          }
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const sectionId = location.pathname.split('/').pop();
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      };
-      
-      handleHashNavigation();
-    }, [location]);
-    
-    useScrollUpdateURL('portfolio');
+      }
+    };
+
+    handleHashNavigation();
+  }, [location]);
+
+  useScrollUpdateURL('portfolio');
   useSmoothScroll(headerHeight);
 
   const onButtonClick = () => {
-    const resumePath = i18n.language === "sv" ? "/files/SofiaMattiasson-CV-sv.pdf" : "/files/SofiaMattiasson-Resume-en.pdf";
-    const link = document.createElement("a");
+    const resumePath =
+      i18n.language === 'sv'
+        ? '/files/SofiaMattiasson-CV-sv.pdf'
+        : '/files/SofiaMattiasson-Resume-en.pdf';
+    const link = document.createElement('a');
     link.href = resumePath;
-    link.download = i18n.language === "sv" ? "SofiaMattiasson-CV-sv.pdf" : "SofiaMattiasson-Resume-en.pdf";
+    link.download =
+      i18n.language === 'sv'
+        ? 'SofiaMattiasson-CV-sv.pdf'
+        : 'SofiaMattiasson-Resume-en.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-}
+  };
 
   return (
     <>
       <div
         style={{
           paddingTop: `${headerHeight}px`,
-          transition: "padding-top 0.3s ease",
+          transition: 'padding-top 0.3s ease',
         }}
         className="bg-blend-multiply "
       >
         <section className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
-            id="portfolio" 
+            id="portfolio"
             title={t('portfolio.titlePortfolio')}
-            dot={"."}
+            dot={'.'}
             children={t('portfolio.subTitlePortfolio')}
             className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 "
             sticky
@@ -84,11 +88,23 @@ const headerHeight = useHeaderHeight();
                   {t('portfolio.portfolioIntro')}
                 </p>
                 <div className="flex flex-col w-full xl:flex-row items-center mx-auto md:mt-8 gap-2">
-                  <Button onClick={onButtonClick} className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide">
-                    <Icon icon="line-md:cloud-alt-download" width="30" height="30" />  {t("portfolio.ctaButtonCV")}
+                  <Button
+                    onClick={onButtonClick}
+                    className="flex flex-row justify-center items-center gap-4 bg-btn-bg text-bg-primary border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide"
+                  >
+                    <Icon
+                      icon="line-md:cloud-alt-download"
+                      width="30"
+                      height="30"
+                    />{' '}
+                    {t('portfolio.ctaButtonCV')}
                   </Button>
-                  <NavLink to={'/contact'} className="flex flex-row w-full justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-4 py-2 cursor-pointer">
-                    <Icon icon="line-md:email-twotone" width="30" height="30" /> {t("portfolio.ctaButtonContactMe")}
+                  <NavLink
+                    to={'/contact'}
+                    className="flex flex-row w-full justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded text-base md:text-md lg:text-lg hover:shadow-lg px-4 py-2 cursor-pointer"
+                  >
+                    <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
+                    {t('portfolio.ctaButtonContactMe')}
                   </NavLink>
                 </div>
               </div>
@@ -103,69 +119,84 @@ const headerHeight = useHeaderHeight();
           </div>
         </section>
 
-        <SvgWaves colorLight={"#436e74"} colorDark={"#16443e"} />
+        <SvgWaves colorLight={'#436e74'} colorDark={'#16443e'} />
       </div>
 
       <section id="top-5-projects" className="top-0">
         <Title
           dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')}
-          dot={"."}
+          dot={'.'}
           children={t('top5PortfolioSection.subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 "
-          sticky 
+          sticky
         />
         <Top5projects />
       </section>
 
-
       <section id="frontend" className="top-0">
-        <RippedPaperTop id="frontend" colorLight={"#f69497"} colorDark={"#4a2342"} />
-          <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">     
-            <Title 
-              title={t('frontendPortfolioSection.titleFrontendPortfolio')} 
-              dot={"."}
-              children={t("frontendPortfolioSection.subTitleFrontendPortfolio")} 
-              className="px-4 mt-0 mb-6 md:mb-8"
-              light="text-[#ca0416] bg-[#f69497]"
-              dark="dark:text-[#d6a70d] dark:bg-[#4a2342]"
-              sticky
-            />
-            <FrontendPortfolio />
-          </SectionPlate>
-          <RippedPaperBottom colorLight={"#f69497"} colorDark={"#4a2342"} />
-        </section>
+        <RippedPaperTop
+          id="frontend"
+          colorLight={'#f69497'}
+          colorDark={'#4a2342'}
+        />
+        <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
+          <Title
+            title={t('frontendPortfolioSection.titleFrontendPortfolio')}
+            dot={'.'}
+            children={t('frontendPortfolioSection.subTitleFrontendPortfolio')}
+            className="px-4 mt-0 mb-6 md:mb-8"
+            light="text-[#ca0416] bg-[#f69497]"
+            dark="dark:text-[#d6a70d] dark:bg-[#4a2342]"
+            sticky
+          />
+          <FrontendPortfolio />
+        </SectionPlate>
+        <RippedPaperBottom colorLight={'#f69497'} colorDark={'#4a2342'} />
+      </section>
 
-          <section id="backend" className="top-0 mb-12">
-             <Title 
-              title={t('backendPortfolioSection.titlePortfolioBackend')} 
-              dot={"."}
-              children={t("backendPortfolioSection.subTitlePortfolioBackend")} 
-              className=" px-4 mt-0 mb-6 md:mb-8"
-              light="text-[#ec4428] bg-[#fff5d7]"
-              dark="dark:text-[#1d7ecc] dark:bg-[#1b0909]"
-              sticky 
-            />
-            <BackendPortfolio />
-          </section>
+      <section id="backend" className="top-0 mb-12">
+        <Title
+          title={t('backendPortfolioSection.titlePortfolioBackend')}
+          dot={'.'}
+          children={t('backendPortfolioSection.subTitlePortfolioBackend')}
+          className=" px-4 mt-0 mb-6 md:mb-8"
+          light="text-[#ec4428] bg-[#fff5d7]"
+          dark="dark:text-[#1d7ecc] dark:bg-[#1b0909]"
+          sticky
+        />
+        <BackendPortfolio />
+      </section>
 
-          <section id="fullstack" >
-            <RippedPaperTop colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
-                <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
-                  <Title 
-                    title={t('fullstackPortfolioSection.titlePortfolioFullstack')} 
-                    dot={"."} 
-                    children={t("fullstackPortfolioSection.subTitlePortfolioFullstack")} 
-                    className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
-                    subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
-                    light="text-[#064352] bg-[#9fc4bd]"
-                    dark="dark:text-[#831518] dark:bg-[#dc8e32]"
-                    sticky
-                  />
-                <FullStackPortfolio />
-              </SectionPlate>
-            <RippedPaperBottom colorLight={"#9fc4bd"} colorDark={"#dc8e32"} />
-          </section>
-                  
+      <section id="fullstack">
+        <RippedPaperTop colorLight={'#9fc4bd'} colorDark={'#dc8e32'} />
+        <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
+          <Title
+            title={t('fullstackPortfolioSection.titlePortfolioFullstack')}
+            dot={'.'}
+            children={t('fullstackPortfolioSection.subTitlePortfolioFullstack')}
+            className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
+            subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
+            light="text-[#064352] bg-[#9fc4bd]"
+            dark="dark:text-[#831518] dark:bg-[#dc8e32]"
+            sticky
+          />
+          <FullStackPortfolio />
+        </SectionPlate>
+        <RippedPaperBottom colorLight={'#9fc4bd'} colorDark={'#dc8e32'} />
+      </section>
+
+      <section id="graphic-design" className="top-0">
+        <Title
+          title={t('graphicPortfolioSection.titleGraphicPortfolio')}
+          dot={'.'}
+          children={t('graphicPortfolioSection.subTitleGraphicPortfolio')}
+          className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
+          subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
+          light="text-[#064352] bg-[#9fc4bd]"
+          dark="dark:text-[#831518] dark:bg-[#dc8e32]"
+          sticky
+        />
+      </section>
     </>
   );
 };

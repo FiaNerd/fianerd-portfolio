@@ -766,6 +766,15 @@
             }
         ]
     },
+    "grapicPortfolioSection":{
+        
+        "title": "Grafisk Portfolio",
+        "subTitleGraphic": "Färg och form utan gränser.",
+        "description": "En samling av mina mest uttrycksfulla grafiska verk."
+          
+          
+
+    },
     "goBack": "Tillbaka"
 }
     
