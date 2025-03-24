@@ -46,7 +46,7 @@ const BlogCards = () => {
           >
             <div className="flex flex-col justify-between h-full group p-4 rounded-md">
               <div>
-                <div className="relative w-full h-48 mb-2">
+                <div className="relative w-full h-48 mb-4">
                   <img
                     src={card.img}
                     alt={card.title}
@@ -84,7 +84,7 @@ const BlogCards = () => {
                 <NavLink
                   to={`/blog/${encodeURIComponent(card.urlTitle)}`}
                   rel="noopener noreferrer"
-                  className="font-sub-heading font-bold text-nav-text hover:text-nav-hover hover:underline cursor-pointer mt-2"
+                  className="font-sub-heading font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
                 </NavLink>
