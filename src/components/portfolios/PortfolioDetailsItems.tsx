@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import Popup from '../partials/Popup';
 import PortfolioImageDetails from './PortfolioImageDetails';

@@ -1,7 +1,10 @@
+import GraphicImageDetails from '../../components/portfolios/GraphicImageDetails';
+import PortfolioImageDetails from '../../components/portfolios/PortfolioImageDetails';
+
 const GraphicPortfolioPage = () => {
   return (
-    <div>
-      <h1>HEJ</h1>
+    <div className="max-w-screen-xl mx-auto px-4">
+      <GraphicImageDetails />
     </div>
   );
 };

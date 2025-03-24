@@ -1,5 +1,81 @@
 {
   "titleGraphicPortfolio": "Grafiska projekt",
   "subTitleGraphicPortfolio": "Färg och form utan gränser.",
-  "descriptioGraphicPortfolio": "En samling av mina mest uttrycksfulla grafiska verk."
+  "descriptioGraphicPortfolio": "En samling av mina mest uttrycksfulla grafiska verk.",
+
+  "graphicItemsPortfolio": [
+    {
+      "urlTitle": "skjort-kravallerna",
+      "title": "Skjort kravallerna",
+      "subTitle": "Alla Tiders Teater",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+      "alt": "Skjort kravallerna",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "en-kvall-for-fred",
+      "title": "En Kväll för fred",
+      "subTitle": "Alla Tiders Teater",
+      "description": "Illustrator & Photoshop",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
+      "alt": "En Kväll för fred",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "riksteatern-fjarilsvingar",
+      "title": "Fjärilsvingar",
+      "subTitle": "Riksteatern",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
+      "alt": "Rikdteatern Fjärilsvingar",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "riksteatern-program-2024",
+      "title": "Program 2024",
+      "subTitle": "Riksteatern",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
+      "alt": "Riksteatern Program 2024",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "begravt-barn",
+      "title": "Begravt Barn",
+      "subTitle": "Stumpenensemblen",
+      "description": "React and Tailwind CSS",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
+      "alt": "Begravt Barn",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "genomskinliga-hjartan",
+      "title": "Genomskinliga Hjärtan",
+      "subTitle": "Stumpenensemblen",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
+      "alt": "Genomskinliga Hjärtan",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "hemmet",
+      "title": "Hemmet",
+      "subTitle": "Stumpenensemblen",
+      "description": "Photoshop & Illustrator",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
+      "alt": "Hemmet",
+      "ctaButton": "View Details"
+    },
+
+    {
+      "urlTitle": "tyckte-jag-horde-hundar",
+      "title": "Tyckte jag hörde hundar",
+      "subTitle": "Stumpenensemblen",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+      "alt": "Tyckte jag hörde hundar",
+      "ctaButton": "View Details"
+    }
+  ]
 }
