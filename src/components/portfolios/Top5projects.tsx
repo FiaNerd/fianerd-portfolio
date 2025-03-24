@@ -24,7 +24,7 @@ const Top5Projects = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto px-4">
-      <p>{t('top5PortfolioSection.introTop5Portfolio')}</p>
+      <p>{t('portfolio/top5PortfolioSection:introTop5Portfolio')}</p>
       <section className="mb-12">
         <div className="py-4 px-2 mx-auto sm:py-4">
           {/* Grid container */}
