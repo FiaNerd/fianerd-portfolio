@@ -4,7 +4,6 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
-import useScrollUpdateURL from '../../hook/useScrollUpdate';
 
 const NavigationMenu = () => {
   const { t } = useTranslation('translation');

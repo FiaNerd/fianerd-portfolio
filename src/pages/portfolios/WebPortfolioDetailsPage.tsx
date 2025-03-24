@@ -16,6 +16,7 @@ const PortfolioDetailsPage = () => {
     'portfolio/frontendPortfolioSection',
     'portfolio/backendPortfolioSection',
     'portfolio/fullstackPortfolioSection',
+    'partialTranslation'
   ]);
   const navigate = useNavigate();
 
@@ -99,7 +100,7 @@ const PortfolioDetailsPage = () => {
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('portfolio:goBack')}
+          {t('partialTranslation:goBack')}
         </button>
       </div>
 

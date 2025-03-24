@@ -17,6 +17,8 @@ import useSmoothScroll from '../../hook/useSmoothScroll';
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
 import { NavLink } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
+import useScrollSpy from '../../hook/useScrollSpy';
+import GraphicPortfolioPage from './GraphicPortfolioPage';
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
@@ -49,6 +51,7 @@ const PortfolioPage = () => {
   }, [location]);
 
   useScrollUpdateURL('portfolio');
+
   useSmoothScroll(headerHeight);
 
   const onButtonClick = () => {
@@ -213,10 +216,11 @@ const PortfolioPage = () => {
           )}
           className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
           subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
-          light="text-[#064352] bg-[#9fc4bd]"
-          dark="dark:text-[#831518] dark:bg-[#dc8e32]"
+          light="text-[#55ae63] bg-[#fff5d7]"
+          dark="dark:text-[#55ae63] dark:bg-[#1b0909]"
           sticky
         />
+        <GraphicPortfolioPage />
       </section>
     </>
   );
