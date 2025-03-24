@@ -96,7 +96,7 @@ export const navRoutes: Route[] = [
         description: 'fullstackDescription',
       },
       {
-        title: 'graphic',
+        title: 'graphic-design',
         url: '/portfolio/graphic-design',
         description: 'graphicDescription',
       },

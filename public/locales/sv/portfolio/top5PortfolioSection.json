@@ -1,0 +1,49 @@
+{
+  "titleTop5Portfolio": "Topp <span class='text-btn-bg dark:text-accent-primary'> 5 </span> <span class='px-4'>Projekt</span>",
+  "subTitleTop5Portfolio": "Projekt jag är stolt över",
+  "introTop5Portfolio": "Här är de projekt jag är mest stolt över. De är en blandning av kreativitet och funktionalitet. Jag letar alltid efter nya utmaningar och ser fram emot vad framtiden har att erbjuda.",
+  "ctaButtonViewAll": "Visa alla projekt",
+
+  "top5Items": [
+    {
+      "title": "Skjort kravallerna",
+      "urlTitle": "skjort-kravallerna",
+      "subTitle": "Grafisk",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+      "ctaButton": "Visa Detaljer"
+    },
+    {
+      "title": "BrutalBeats",
+      "urlTitle": "brutal-beats",
+      "subTitle": "Frontend",
+      "description": "React and Tailwind CSS",
+      "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+      "ctaButton": "Visa Detaljer"
+    },
+    {
+      "title": "MSB",
+      "urlTitle": "msb",
+      "subTitle": "Grafisk & Frontend",
+      "description": "Photoshop, Illustrator and HTML & CSS",
+      "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-hero.jpg",
+      "ctaButton": "Visa Detaljer"
+    },
+    {
+      "title": "Printagon",
+      "urlTitle": "printagon-graphics",
+      "subTitle": "Fullstack",
+      "description": "ASP.NET, SQL, React and Material-UI",
+      "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+      "ctaButton": "Visa projekt"
+    },
+    {
+      "title": "Tyckte jag hörde hundar",
+      "urlTitle": "tyckte-jag-horde-hundar",
+      "subTitle": "Grafisk",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+      "ctaButton": "Visa Detaljer"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import RippedPaperBottom from '../../assets/svg/RippedPaperBottom';
 import RippedPaperTop from '../../assets/svg/RippedPaperTop';
@@ -15,11 +15,18 @@ import useHeaderHeight from '../../hook/useHeaderHeight';
 import { useLocation } from 'react-router-dom';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
-import i18n from '../../../public/i18n/i18n';
 import { NavLink } from 'react-router-dom';
+import i18n from '../../../public/i18n/i18n';
 
 const PortfolioPage = () => {
-  const { t } = useTranslation('portfolio');
+  const { t } = useTranslation([
+    'portfolio/portfolio',
+    'portfolio/top5PortfolioSection',
+    'portfolio/frontendPortfolioSection',
+    'portfolio/backendPortfolioSection',
+    'portfolio/fullstackPortfolioSection',
+    'portfolio/graphicPortfolioSection',
+  ]);
 
   const headerHeight = useHeaderHeight();
 
@@ -72,9 +79,9 @@ const PortfolioPage = () => {
         <section className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
             id="portfolio"
-            title={t('portfolio.titlePortfolio')}
+            title={t('titlePortfolio')}
             dot={'.'}
-            children={t('portfolio.subTitlePortfolio')}
+            children={t('subTitlePortfolio')}
             className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 "
             sticky
           />
@@ -82,10 +89,10 @@ const PortfolioPage = () => {
             <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-8">
               <div className="flex flex-col lg:gap-8 md:border-double md:border-4 py-8 px-0 md:px-8 border-[#f3d758] dark:border-[#d85f2d] rounded">
                 <h1 className="text-[#f3d758] dark:text-[#d85f2d] text-md md:text-[3rem] xl:text-[5rem] xl:leading-[4.2rem] font-semibold tracking-wpide">
-                  {t('portfolio.mainSectionTitle').toUpperCase()}
+                  {t('mainSectionTitle').toUpperCase()}
                 </h1>
                 <p className="font-semibold tracking-wide">
-                  {t('portfolio.portfolioIntro')}
+                  {t('portfolioIntro')}
                 </p>
                 <div className="flex flex-col w-full xl:flex-row items-center mx-auto md:mt-8 gap-2">
                   <Button
@@ -97,14 +104,14 @@ const PortfolioPage = () => {
                       width="30"
                       height="30"
                     />{' '}
-                    {t('portfolio.ctaButtonCV')}
+                    {t('ctaButtonCV')}
                   </Button>
                   <NavLink
                     to={'/contact'}
                     className="flex flex-row w-full justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded text-base md:text-md lg:text-lg hover:shadow-lg px-4 py-2 cursor-pointer"
                   >
                     <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
-                    {t('portfolio.ctaButtonContactMe')}
+                    {t('ctaButtonContactMe')}
                   </NavLink>
                 </div>
               </div>
@@ -124,9 +131,11 @@ const PortfolioPage = () => {
 
       <section id="top-5-projects" className="top-0">
         <Title
-          dangerouslyHTML={t('top5PortfolioSection.titleTop5Portfolio')}
+          dangerouslyHTML={t(
+            'portfolio/top5PortfolioSection:titleTop5Portfolio'
+          )}
           dot={'.'}
-          children={t('top5PortfolioSection.subTitleTop5Portfolio')}
+          children={t('portfolio/top5PortfolioSection:subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 "
           sticky
         />
@@ -141,9 +150,13 @@ const PortfolioPage = () => {
         />
         <SectionPlate className="bg-[#f69497] dark:bg-[#4a2342]">
           <Title
-            title={t('frontendPortfolioSection.titleFrontendPortfolio')}
+            title={t(
+              'portfolio/frontendPortfolioSection:titleFrontendPortfolio'
+            )}
             dot={'.'}
-            children={t('frontendPortfolioSection.subTitleFrontendPortfolio')}
+            children={t(
+              'portfolio/frontendPortfolioSection:subTitleFrontendPortfolio'
+            )}
             className="px-4 mt-0 mb-6 md:mb-8"
             light="text-[#ca0416] bg-[#f69497]"
             dark="dark:text-[#d6a70d] dark:bg-[#4a2342]"
@@ -156,9 +169,11 @@ const PortfolioPage = () => {
 
       <section id="backend" className="top-0 mb-12">
         <Title
-          title={t('backendPortfolioSection.titlePortfolioBackend')}
+          title={t('portfolio/backendPortfolioSection:titlePortfolioBackend')}
           dot={'.'}
-          children={t('backendPortfolioSection.subTitlePortfolioBackend')}
+          children={t(
+            'portfolio/backendPortfolioSection:subTitlePortfolioBackend'
+          )}
           className=" px-4 mt-0 mb-6 md:mb-8"
           light="text-[#ec4428] bg-[#fff5d7]"
           dark="dark:text-[#1d7ecc] dark:bg-[#1b0909]"
@@ -171,9 +186,13 @@ const PortfolioPage = () => {
         <RippedPaperTop colorLight={'#9fc4bd'} colorDark={'#dc8e32'} />
         <SectionPlate className="bg-[#9fc4bd] dark:bg-[#dc8e32]">
           <Title
-            title={t('fullstackPortfolioSection.titlePortfolioFullstack')}
+            title={t(
+              'portfolio/fullstackPortfolioSection:titlePortfolioFullstack'
+            )}
             dot={'.'}
-            children={t('fullstackPortfolioSection.subTitlePortfolioFullstack')}
+            children={t(
+              'portfolio/fullstackPortfolioSection:subTitlePortfolioFullstack'
+            )}
             className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
             subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
             light="text-[#064352] bg-[#9fc4bd]"
@@ -187,9 +206,11 @@ const PortfolioPage = () => {
 
       <section id="graphic-design" className="top-0">
         <Title
-          title={t('graphicPortfolioSection.titleGraphicPortfolio')}
+          title={t('portfolio/graphicPortfolioSection:titleGraphicPortfolio')}
           dot={'.'}
-          children={t('graphicPortfolioSection.subTitleGraphicPortfolio')}
+          children={t(
+            'portfolio/graphicPortfolioSection:subTitleGraphicPortfolio'
+          )}
           className=" text-[#064352] dark:text-[#831518] px-4 mt-0 mb-6 md:mb-8"
           subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
           light="text-[#064352] bg-[#9fc4bd]"

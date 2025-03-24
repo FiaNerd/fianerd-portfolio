@@ -2,8 +2,6 @@ import { Icon } from '@iconify/react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
-import portfolioDataEn from '../../../public/locales/en/portfolio.json';
-import portfolioDataSv from '../../../public/locales/sv/portfolio.json';
 import HeroDetails from '../../components/portfolios/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import useSmoothScroll from '../../hook/useSmoothScroll';
@@ -12,8 +10,13 @@ const PortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const [headerHeight, setHeaderHeight] = useState(0);
-  const { i18n } = useTranslation();
-  const { t } = useTranslation('portfolio');
+  const { i18n, t } = useTranslation([
+    'portfolio/portfolio',
+    'portfolio/top5PortfolioSection',
+    'portfolio/frontendPortfolioSection',
+    'portfolio/backendPortfolioSection',
+    'portfolio/fullstackPortfolioSection',
+  ]);
   const navigate = useNavigate();
 
   useLayoutEffect(() => {
@@ -26,25 +29,43 @@ const PortfolioDetailsPage = () => {
   useSmoothScroll(headerHeight ? 0 : headerHeight);
 
   useEffect(() => {
-    const portfolioData =
-      i18n.language === 'sv' ? portfolioDataSv : portfolioDataEn;
+    const loadPortfolioData = async () => {
+      const portfolioData = await Promise.all([
+        i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
+        i18n.getResourceBundle(i18n.language, 'portfolio/top5PortfolioSection'),
+        i18n.getResourceBundle(
+          i18n.language,
+          'portfolio/frontendPortfolioSection'
+        ),
+        i18n.getResourceBundle(
+          i18n.language,
+          'portfolio/backendPortfolioSection'
+        ),
+        i18n.getResourceBundle(
+          i18n.language,
+          'portfolio/fullstackPortfolioSection'
+        ),
+      ]);
 
-    const sections = [
-      ...(portfolioData.top5PortfolioSection?.top5Items || []),
-      ...(portfolioData.frontendPortfolioSection?.frontendItems || []),
-      ...(portfolioData.backendPortfolioSection?.backendItems || []),
-      ...(portfolioData.fullstackPortfolioSection?.fullstackItems || []),
-    ];
+      const sections = [
+        ...(portfolioData[1]?.top5Items || []),
+        ...(portfolioData[2]?.frontendItems || []),
+        ...(portfolioData[3]?.backendItems || []),
+        ...(portfolioData[4]?.fullstackItems || []),
+      ];
 
-    const filteredItems = sections.filter(
-      (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
-    );
+      const filteredItems = sections.filter(
+        (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
+      );
 
-    const uniqueItems = Array.from(
-      new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
-    );
+      const uniqueItems = Array.from(
+        new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
+      );
 
-    setPortfolioItems(uniqueItems);
+      setPortfolioItems(uniqueItems);
+    };
+
+    loadPortfolioData();
   }, [urlTitle, i18n.language]);
 
   if (portfolioItems.length === 0) {
@@ -78,7 +99,7 @@ const PortfolioDetailsPage = () => {
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('goBack')}
+          {t('portfolio:goBack')}
         </button>
       </div>
 

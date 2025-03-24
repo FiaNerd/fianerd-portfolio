@@ -1,0 +1,266 @@
+{
+    "titleFrontendPortfolio": "Frontendprojekt",
+    "subTitleFrontendPortfolio": "Kod med ett öga för design",
+    "introFrontendPortfolio": "<span class=' text-[#ca0416] dark:text-[#d6a70d] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
+    "ctaButtonViewAll": "Visa Detaljer",
+    "frontendItems": [
+      {
+        "projectType": "Sido projekt",
+        "title": "BrutalBeats",
+        "urlTitle": "brutal-beats",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
+          "text": "frontend",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBBAPPLIKATION"
+        },
+        "subTitle": "Frontend",
+        "titleDescription": "Webbplats för bokningsföretag",
+        "projectDuration": "mars 2023 - januari 2025",
+        "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. <br><br>Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.",
+        "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://www.brutalbeats.se/",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-detail-hero.jpg",
+            "alt": "Brutal Detalj Hero",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-home.jpg",
+            "alt": "Brutal Mobil Hem.jpg",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-details.jpg",
+            "alt": "Brutal detalj sida",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-main.jpg",
+            "alt": "Brutal Detalj",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-main.jpg",
+            "alt": "Brutal Mobil Main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-hero-detail.jpg",
+            "alt": "Brutal Hero Detail",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Skolprojekt",
+        "title": "The Movie DB",
+        "urlTitle": "the-movie-db",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBAPPLIKATION"
+        },
+        "subTitle": "Frontend",
+        "titleDescription": "Film databas hemsida",
+        "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
+        "description": "Jag utvecklade en interaktiv webbapplikation som integrerar IMDb API för att visa filmdata med fokus på en sömlös och engagerande användarupplevelse. Genom att använda React, TypeScript, Axios och React Query implementerade jag avancerade frontend-funktioner, inklusive en effektiv sökfunktion, samtidigt som jag säkerställde återanvändbara och underhållsvänliga komponenter.<br><br><span class='font-bold'>Syfte:</span> I detta projekt fokuserade jag på frontend-utveckling, särskilt avancerad JavaScript med React. Uppgiften innebar att integrera IMDb API och använda Axios-biblioteket tillsammans med React Query för att hämta och visa filmdata. Mitt mål var att skapa en användarvänlig och interaktiv webbapplikation som erbjuder en smidig upplevelse för användare.<br><br><span class='font-bold'>Nyckelbidrag:</span><br>- Använde React och TypeScript för att implementera frontend-funktionalitet och säkerställa en smidig användarupplevelse.<br>- Integrerade externa API:er och bibliotek, såsom Axios och React Query, för att effektivt hämta och hantera filmdata.<br><br><span class='font-bold'>Tekniker:</span><br><span class='font-bold'>- Frontend:</span> React, TypeScript, Axios, React Query, SCSS<br> <span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code<br><br><span class='font-bold'>Projektets Höjdpunkter:</span><br>- Designade och organiserade komponenter för att säkerställa återanvändbarhet och underhåll.<br>- Implementerade en effektiv sökfunktion för användare, vilket förbättrade den övergripande användarupplevelsen.<br><br><span class='font-bold'>Resultat:</span> Detta projekt stärkte inte bara min kunskap i React och frontend-utveckling utan gav mig även värdefull erfarenhet av att hantera och visa data från externa API:er. Det har utrustat mig med färdigheter och självförtroende för att hantera liknande utmaningar i framtida projekt.",
+        "image": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/TMDB",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://the-movie-data.netlify.app",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "SCSS",
+            "icon": "vscode-icons:file-type-scss"
+          },
+          {
+            "name": "Axios",
+            "icon": "logos:axios"
+          },
+          {
+            "name": "React Query",
+            "icon": "logos:react-query-icon"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-top-main.jpg",
+            "alt": "TMDB Topp Main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-deails-movie.jpg",
+            "alt": "TMDB Detalj Film",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
+            "alt": "TMDB Mobil Hero",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/school-tmdb-mobile-main.jpg",
+            "alt": "TMDB Mobil Main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-deails-movie.jpg",
+            "alt": "Mobile Detalj Film",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-hero.jpg",
+            "alt": "tmdb-hero.jpg",
+            "span": "Wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Skolprojekt",
+        "title": "MSB",
+        "urlTitle": "msb",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBBAPPLIKATION"
+        },
+        "subTitle": "Grafiska verktyg",
+        "titleDescription": "Grafiska Element och Illustrationer",
+        "projectDuration": "mars 2023 - januari 2025",
+        "description": "Detta projekt kombinerar grafisk design och webbutveckling, där jag applicerade mina färdigheter i Adobe Illustrator och Photoshop för att skapa grafiska element och illustrationer. Kursen fokuserade på att bygga en webbplats enligt MSB:s grafiska profil, med inriktning på typografi, färgscheman och layoutprinciper. Jag fick också praktisk erfarenhet av HTML och CSS för att utveckla en responsiv och visuellt tilltalande webbplats.<br><br> <span class='font-bold'>Syfte:</span> Kursen Graphic Tools syftade till att ge grundläggande kunskaper i Illustrator och Photoshop. I Illustrator var målet att skapa tre distinkta grafiska element, medan uppgiften i Photoshop innebar att frilägga minst tre personer. <br>Kursen fokuserade även på att följa MSB:s (Myndigheten för samhällsskydd och beredskap) grafiska profil <span class='font-bold'>[ MSB Graphic Profile ]</span><span class='italic'> (https://www.msb.se/)</span>, med fokus på typografi, teckenstorlekar, färgscheman och andra designprinciper. Detta resulterade i att en webbplats byggdes med HTML och CSS som följde denna profil.<br><br><span class='font-bold'>Nyckelbidrag:</span><br>- Designade och skapade alla grafiska element för webbplatsen, inklusive bilder som sammanställdes av olika komponenter. Till exempel skapades Hero-sektionen och eld-bilden genom att kombinera frilagda bilder med andra visuella element.<br>- Säkerställde semantisk korrekthet i HTML och CSS genom att använda flexbox och grid för att förfina teknikerna för frontend-utveckling.<br><br><span class='font-bold'>Tekniker som användes:</span><br><span class='font-bold'>- Grafiska verktyg:</span> Photoshop, Illustrator<br><span class='font-bold'>- Frontend:</span> HTML, CSS <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code<br><br><span class='font-bold'>Projektets höjdpunkter:</span><br>- Använde flexbox och grid-layouts för att skapa en responsiv och visuellt tilltalande webbplats.<br>- Prioriterade efterlevnad av MSB:s grafiska profil, vilket fördjupade förståelsen för designkonsekvens och varumärkesriktlinjer.<br><br><span class='font-bold'>Resultat:</span> Projektet, som primärt fokuserade på grafiska verktyg, gav värdefull erfarenhet av HTML och CSS och förbättrade färdigheterna inom frontend-utveckling. Den färdiga webbplatsen demonstrerar tillämpningen av designprinciper och tekniker som lärdes ut under kursen.",
+        "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/msb_falling_trees_mission.git",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://lucky-basbousa-252a0a.netlify.app/",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "Photoshop",
+            "icon": "skill-icons:photoshop"
+          },
+          {
+            "name": "Illustrator",
+            "icon": "logos:adobe-illustrator"
+          },
+          {
+            "name": "HTML",
+            "icon": "logos:html-5"
+          },
+          {
+            "name": "CSS",
+            "icon": "logos:css-3"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
+            "alt": "MSB landskap",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-prototyp.jpg",
+            "alt": "MSB hero figma prototyp",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-firetruck-orginal-photoshop.jpg",
+            "alt": "MSB my image vs orginal image",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-high.jpg",
+            "alt": "MSB infromations kort",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-card.jpg",
+            "alt": "MSB kort main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-fireman-cards.jpg",
+            "alt": "MSB brandman kort",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
+}
