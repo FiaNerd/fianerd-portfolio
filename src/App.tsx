@@ -10,6 +10,7 @@ import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
+import GraphicPortfolioDetails from './components/portfolios/GraphicPortfolioDetails';
 
 const App = () => {
   return (
@@ -60,6 +61,10 @@ const App = () => {
               <Route
                 path="/portfolio/graphic-design"
                 element={<PortfolioPage />}
+              />
+              <Route
+                path="/portfolio/:urlTitle"
+                element={<GraphicPortfolioDetails />}
               />
               <Route
                 path="/portfolio/:urlTitle"
