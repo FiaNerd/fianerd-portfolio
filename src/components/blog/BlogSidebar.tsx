@@ -13,7 +13,6 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
   titleKeyFeature,
   keyFeatures,
 }) => {
-  
   return (
     <div className="bg-[#000] p-4 lg:col-span-1">
       <div className="mb-8 ">

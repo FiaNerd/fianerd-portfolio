@@ -136,7 +136,7 @@ section {
   font-size: clamp(2.1rem, 4vw, 3.5rem);
 }
 
-.dark .highlight::before {
+.dark .highlight-container::before {
   background-color: #e91e63;
 }
 

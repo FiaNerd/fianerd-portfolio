@@ -2,13 +2,13 @@
   "titleGraphicPortfolio": "Grafiska projekt",
   "subTitleGraphicPortfolio": "Färg och form utan gränser.",
   "descriptioGraphicPortfolio": "En samling av mina mest uttrycksfulla grafiska verk.",
-  "top10graphicProjects":"Här är mina 10 bästa grafiska projekt.",
+  "top10graphicProjects": "Här är mina 10 bästa grafiska projekt.",
 
   "graphicItemsPortfolio": [
     {
       "urlTitle": "skjort-kravallerna",
       "title": "Skjort kravallerna",
-      "subTitle": "Alla Tiders Teater",
+      "subTitle": "Teater grupp: Alla Tiders Teater",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
       "alt": "Skjort kravallerna",
@@ -16,7 +16,7 @@
     },
     {
       "urlTitle": "en-kvall-for-fred",
-      "title": "En Kväll för fred",
+      "title": "Teater grupp:: En Kväll för fred",
       "subTitle": "Alla Tiders Teater",
       "description": "Illustrator & Photoshop",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
@@ -34,7 +34,7 @@
     },
     {
       "urlTitle": "riksteatern-program-2024",
-      "title": "Program 2024",
+      "title": "Riksteatern Program 2024",
       "subTitle": "Riksteatern",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",

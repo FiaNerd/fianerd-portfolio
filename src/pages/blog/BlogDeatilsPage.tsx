@@ -62,7 +62,7 @@ const BlogDetailsPage = () => {
 
         {/* Blog Content */}
         <div className="mt-8">
-          <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[40%_40%_20%] items-start lg:space-y-8 gap-8">
+          <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[40%_40%_20%] items-center lg:space-y-8 gap-8">
             {/* Image Column */}
             <div className="lg:col-span-1">
               <img

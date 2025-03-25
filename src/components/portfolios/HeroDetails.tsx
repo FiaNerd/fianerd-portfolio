@@ -22,7 +22,7 @@ const HeroDetails = ({
 
   return (
     <div
-      className={`relative w-full h-[20rem] flex items-center justify-center bg-cover bg-center ${dark} ${light}`}
+      className={`relative w-full h-[20rem] flex items-center justify-center bg-cover bg-center mb-8 ${dark} ${light}`}
       style={{ backgroundImage: `url(${image})` }}
     >
       {/* Dark overlay */}

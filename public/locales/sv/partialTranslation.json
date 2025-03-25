@@ -1,6 +1,6 @@
 {
-     "goBack": "Ta mig tillbaka",
-     "pageNotFoundTitle": "<span class='highlight-variant-5'><span class='oops-text highlight-text'>Opps!</span></span> Verkar som någon <br> precis har gått vilse.. ",
-     "pageNotFoundMessage": "Den här sidan du letar efter finns inte tillgänglig.",
-     "ctaButtonCV": "Ladda ner CV"
+  "goBack": "Ta mig tillbaka",
+  "pageNotFoundTitle": "<span class='highlight-container'><span class='oops-text highlight-text'>Opps!</span></span> Verkar som någon <br> precis har gått vilse.. ",
+  "pageNotFoundMessage": "Den här sidan du letar efter finns inte tillgänglig.",
+  "ctaButtonCV": "Ladda ner CV"
 }
