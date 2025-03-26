@@ -25,7 +25,7 @@ const GraphicImageGallery = () => {
   // Split the images into 3 chunks for 3 columns
   const column1 = graphicImages.slice(0, 3);
   const column2 = graphicImages.slice(3, 7);
-  const column3 = graphicImages.slice(7, 10);
+  const column3 = graphicImages.slice(7, 11);
 
   const navigate = useNavigate();
 

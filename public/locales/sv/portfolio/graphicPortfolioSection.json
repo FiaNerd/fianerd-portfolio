@@ -8,7 +8,7 @@
     {
       "urlTitle": "skjort-kravallerna",
       "title": "Skjort kravallerna",
-      "subTitle": "Teater grupp: Alla Tiders Teater",
+      "subTitle": "Gjord till Alla Tiders Teater",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
       "alt": "Skjort kravallerna",
@@ -17,7 +17,7 @@
     {
       "urlTitle": "en-kvall-for-fred",
       "title": "Teater grupp:: En Kväll för fred",
-      "subTitle": "Alla Tiders Teater",
+      "subTitle": "Gjord till Alla Tiders Teater",
       "description": "Illustrator & Photoshop",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
       "alt": "En Kväll för fred",
@@ -26,7 +26,7 @@
     {
       "urlTitle": "riksteatern-fjarilsvingar",
       "title": "Fjärilsvingar",
-      "subTitle": "Riksteatern",
+      "subTitle": "Gjord till Riksteatern",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
       "alt": "Rikdteatern Fjärilsvingar",
@@ -35,7 +35,7 @@
     {
       "urlTitle": "riksteatern-program-2024",
       "title": "Riksteatern Program 2024",
-      "subTitle": "Riksteatern",
+      "subTitle": "Gjord Riksteatern",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
       "alt": "Riksteatern Program 2024",
@@ -44,7 +44,7 @@
     {
       "urlTitle": "begravt-barn",
       "title": "Begravt Barn",
-      "subTitle": "Stumpenensemblen",
+      "subTitle": "Gjord till Stumpenensemblen",
       "description": "React and Tailwind CSS",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
       "alt": "Begravt Barn",
@@ -53,7 +53,7 @@
     {
       "urlTitle": "genomskinliga-hjartan",
       "title": "Genomskinliga Hjärtan",
-      "subTitle": "Stumpenensemblen",
+      "subTitle": "Gjord till Stumpenensemblen",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
       "alt": "Genomskinliga Hjärtan",
@@ -62,20 +62,46 @@
     {
       "urlTitle": "hemmet",
       "title": "Hemmet",
-      "subTitle": "Stumpenensemblen",
+      "subTitle": "Gjord till Stumpenensemblen",
       "description": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
       "alt": "Hemmet",
       "ctaButton": "View Details"
     },
-
     {
-      "urlTitle": "tyckte-jag-horde-hundar",
+      "urlTitle": "tyckte-jag-hörde-undar",
       "title": "Tyckte jag hörde hundar",
-      "subTitle": "Stumpenensemblen",
-      "description": "Photoshop and Illustrator",
-      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+      "subTitle": "Gjord till Stumpenensemblen",
+      "description": "Photoshop & Illustrator",
+      "image": "/assets/images/portfolio/graphic/stallaTirders/allaTiders-Haxan-A6-2024.jpg",
       "alt": "Tyckte jag hörde hundar",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "haxan",
+      "title": "Happy New Year 2019",
+      "subTitle": "Made for Alla Tiders Teater",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
+      "alt": "Häxan flyers A6 2024",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "etitektt-haxan",
+      "title": "Kaffe eitkett Häxan",
+      "subTitle": "Made for Alla Tiders Teater",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
+      "alt": "etikett häxbryggd häxan",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "printagon-juol-kort",
+      "title": "Gått nytt år 2019",
+      "subTitle": "Gjord till Printagon Graphic",
+      "description": "Photoshop and Illustrator",
+      "image": "/assets/images/portfolio/graphic/pg/PGnyår.jpg",
+      "alt": "Printagon Graphic - Gått nytt år 2019",
       "ctaButton": "View Details"
     }
   ]
