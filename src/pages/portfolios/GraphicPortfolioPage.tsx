@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import GraphicImageGallery from '../../components/portfolios/GraphicImageGallery';
-import GraphicImageDetails from '../../components/portfolios/GraphicImageGallery';
+import GraphicImageGallery from '../../components/portfolios/graphic/GraphicImageGallery';
+import GraphicImageDetails from '../../components/portfolios/graphic/GraphicImageGallery';
 import PortfolioImageDetails from '../../components/portfolios/PortfolioImageDetails';
 
 const GraphicPortfolioPage = () => {

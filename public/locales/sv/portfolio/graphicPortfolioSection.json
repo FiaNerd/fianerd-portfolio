@@ -2,7 +2,7 @@
   "titleGraphicPortfolio": "Grafiska projekt",
   "subTitleGraphicPortfolio": "Färg och form utan gränser.",
   "descriptioGraphicPortfolio": "En samling av mina mest uttrycksfulla grafiska verk.",
-  "top10graphicProjects": "Här är mina 10 bästa grafiska projekt.",
+  "top10graphicProjects": "Här är mina topp 11 grafiska projekt. Jag har främst arbetat med teatergrupper, vilket har varit väldigt roligt eftersom det gett mig extra kreativ frihet. Jag har även arbetat med företag.",
 
   "graphicItemsPortfolio": [
     {
@@ -73,34 +73,34 @@
       "title": "Tyckte jag hörde hundar",
       "subTitle": "Gjord till Stumpenensemblen",
       "description": "Photoshop & Illustrator",
-      "image": "/assets/images/portfolio/graphic/stallaTirders/allaTiders-Haxan-A6-2024.jpg",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
       "alt": "Tyckte jag hörde hundar",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "haxan",
-      "title": "Happy New Year 2019",
-      "subTitle": "Made for Alla Tiders Teater",
+      "title": "Flyer Häxan A6",
+      "subTitle": "Gjord till Alla Tiders Teater",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
       "alt": "Häxan flyers A6 2024",
       "ctaButton": "View Details"
     },
     {
-      "urlTitle": "etitektt-haxan",
+      "urlTitle": "etiekett-haxan",
       "title": "Kaffe eitkett Häxan",
-      "subTitle": "Made for Alla Tiders Teater",
+      "subTitle": "Gjord till Alla Tiders Teater",
       "description": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
       "alt": "etikett häxbryggd häxan",
       "ctaButton": "View Details"
     },
     {
-      "urlTitle": "printagon-juol-kort",
+      "urlTitle": "printagon-jul-kort",
       "title": "Gått nytt år 2019",
       "subTitle": "Gjord till Printagon Graphic",
       "description": "Photoshop and Illustrator",
-      "image": "/assets/images/portfolio/graphic/pg/PGnyår.jpg",
+      "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
       "alt": "Printagon Graphic - Gått nytt år 2019",
       "ctaButton": "View Details"
     }
