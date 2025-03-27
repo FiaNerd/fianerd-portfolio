@@ -4,7 +4,7 @@ import useSmoothScroll from '../../hook/useSmoothScroll';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import { IBlogDetails } from '../../interfaces/BlogInterface';
 import { Icon } from '@iconify/react';
-import HeroDetails from '../../components/portfolios/HeroDetails';
+import HeroDetails from '../../components/partials/HeroDetails';
 import BlogHeader from '../../components/blog/BlogHeader';
 import BlogContent from '../../components/blog/BlogContent';
 import BlogSidebar from '../../components/blog/BlogSidebar';
@@ -43,7 +43,7 @@ const BlogDetailsPage = () => {
         <HeroDetails
           title={blog.title}
           image={blog.img || ''}
-          titleDescription={blog.titleDescription}
+          subTitle={blog.titleDescription}
           light="text-bg-secondary"
           dark="dark:text-text-accent"
         />

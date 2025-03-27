@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
-import HeroDetails from '../../components/portfolios/HeroDetails';
+import HeroDetails from '../../components/partials/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 
@@ -16,7 +16,7 @@ const PortfolioDetailsPage = () => {
     'portfolio/frontendPortfolioSection',
     'portfolio/backendPortfolioSection',
     'portfolio/fullstackPortfolioSection',
-    'partialTranslation'
+    'partialTranslation',
   ]);
   const navigate = useNavigate();
 
@@ -87,7 +87,7 @@ const PortfolioDetailsPage = () => {
             key={item.urlTitle}
             title={item.title}
             image={item.image}
-            titleDescription={item.titleDescription}
+            subTitle={item.titleDescription}
             light="text-[#4b8668]"
             dark="dark:text-[#86834b]"
           />

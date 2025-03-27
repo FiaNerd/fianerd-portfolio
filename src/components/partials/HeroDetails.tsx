@@ -1,10 +1,10 @@
-import Title from '../partials/Title';
+import Title from './Title';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 
 interface HeroDetailsProps {
   title: string;
-  titleDescription: string;
+  subTitle: string;
   image: string;
   dark: string;
   light: string;
@@ -13,7 +13,7 @@ interface HeroDetailsProps {
 const HeroDetails = ({
   title,
   image,
-  titleDescription,
+  subTitle,
   dark,
   light,
 }: HeroDetailsProps) => {
@@ -33,7 +33,7 @@ const HeroDetails = ({
         <Title
           title={title}
           dot={'.'}
-          children={titleDescription}
+          children={subTitle}
           className="text-6xl md:text-8xl bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg"
           subHeadingClassName="text-amber-100"
         />

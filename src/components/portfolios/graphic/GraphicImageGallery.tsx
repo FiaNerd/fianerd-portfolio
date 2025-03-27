@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import LightGallery from 'lightgallery/react';
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-thumbnail.css';
-import 'lightgallery/css/lg-zoom.css';
 import { useTranslation } from 'react-i18next';
-import GraphicGalleryItems from './GraphicImageItems';
 import { useNavigate } from 'react-router-dom';
+import GraphicGalleryItems from './GraphicImageItems';
 import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
 
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [sidebarWidth, setSidebarWidth] = useState(700); // Initial sidebar width
+  const [selectedUrlTitle, setSelectedUrlTitle] = useState<string | null>(null); // Track the selected image
 
   const graphicImages = t('graphicItemsPortfolio', {
     returnObjects: true,
@@ -33,18 +30,23 @@ const GraphicImageGallery = () => {
   const navigate = useNavigate();
 
   const handleImageClick = (urlTitle: string) => {
-    // navigate(`/portfolio/graphic-design/${encodeURIComponent(urlTitle)}`);
-
-    setIsSidebarOpen(true);
+    setSelectedUrlTitle(urlTitle); // Set the selected image's URL title
+    setIsSidebarOpen(true); // Open the sidebar
   };
 
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false);
+    setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
   };
+
+  // Find the selected image details based on the selectedUrlTitle
+  const selectedImageDetails = graphicImages.find(
+    (image) => image.urlTitle === selectedUrlTitle
+  );
 
   return (
     <>
-      <div className="p-4 flex justify-center ">
+      <div className="p-4 flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
           {/* Column 1 */}
           <div className="grid md:grid-rows-2 lg:grid-rows-3 gap-4 lg:place-self-center">
@@ -81,6 +83,15 @@ const GraphicImageGallery = () => {
               onClose={handleCloseSidebar}
               sidebarWidth={sidebarWidth}
               setSidebarWidth={setSidebarWidth}
+              imageDetails={
+                selectedImageDetails
+                  ? {
+                      ...selectedImageDetails,
+                      subTitleGraphicPortfolio: selectedImageDetails.subTitle,
+                      descriptionGraphicPortfolio: selectedImageDetails.description,
+                    }
+                  : undefined
+              } 
             />
           </div>
         )}

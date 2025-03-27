@@ -1,10 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import HeroDetails from '../../partials/HeroDetails';
+import { Icon } from '@iconify/react';
 
 interface SidebarGraphicPortfolioProps {
   isVisible: boolean;
   onClose: () => void;
-  sidebarWidth?: number; // Optional if managed locally
-  setSidebarWidth?: React.Dispatch<React.SetStateAction<number>>; // Optional if managed locally
+  sidebarWidth?: number;
+  setSidebarWidth?: React.Dispatch<React.SetStateAction<number>>;
+  imageDetails?: {
+    urlTitle: string;
+    title: string;
+    subTitle: string;
+    descriptionGraphicPortfolio: string;
+    image: string;
+    alt: string;
+  };
 }
 
 const SidebarGraphicPortfolio = ({
@@ -12,10 +23,12 @@ const SidebarGraphicPortfolio = ({
   onClose,
   sidebarWidth: parentSidebarWidth,
   setSidebarWidth: parentSetSidebarWidth,
+  imageDetails,
 }: SidebarGraphicPortfolioProps) => {
-  const [sidebarWidth, setSidebarWidth] = useState(parentSidebarWidth || 700); // Default to 700px
+  const { t } = useTranslation(['portfolio/graphicPortfolioSection']);
+  const [sidebarWidth, setSidebarWidth] = useState(parentSidebarWidth || 700);
   const [maxWidth, setMaxWidth] = useState(() => window.innerWidth * 0.9);
-  const [isMobile, setIsMobile] = useState(false); // Track if the screen is mobile
+  const [isMobile, setIsMobile] = useState(false);
   const isDragging = useRef(false);
   const startX = useRef(0);
   const startWidth = useRef(0);
@@ -42,7 +55,7 @@ const SidebarGraphicPortfolio = ({
   // Update maxWidth dynamically on window resize and detect mobile screens
   useEffect(() => {
     const handleResize = () => {
-      const isMobileScreen = window.innerWidth <= 768; // Mobile breakpoint
+      const isMobileScreen = window.innerWidth <= 768;
       setIsMobile(isMobileScreen);
 
       const calculatedMaxWidth = window.innerWidth * 0.9;
@@ -50,16 +63,15 @@ const SidebarGraphicPortfolio = ({
       if (!isMobileScreen) {
         setMaxWidth(calculatedMaxWidth);
 
-        // Only clamp the width if it exceeds the maxWidth
         if (sidebarWidth > calculatedMaxWidth) {
           setSidebarWidth(calculatedMaxWidth);
         }
       } else {
-        setSidebarWidth(window.innerWidth); // Full width on mobile
+        setSidebarWidth(window.innerWidth);
       }
     };
 
-    handleResize(); // Run on mount
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -67,7 +79,9 @@ const SidebarGraphicPortfolio = ({
   }, [sidebarWidth]);
 
   const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging.current || isMobile) return;
+    if (!isDragging.current || isMobile) {
+      return;
+    }
 
     const newWidth = startWidth.current - (e.clientX - startX.current);
     const clampedWidth = Math.min(Math.max(newWidth, minWidth), maxWidth);
@@ -78,7 +92,7 @@ const SidebarGraphicPortfolio = ({
   const handleMouseUp = () => {
     if (isDragging.current) {
       isDragging.current = false;
-      document.body.style.userSelect = 'auto'; // Re-enable text selection
+      document.body.style.userSelect = 'auto';
     }
   };
 
@@ -89,10 +103,9 @@ const SidebarGraphicPortfolio = ({
     isDragging.current = true;
     startX.current = e.clientX;
     startWidth.current = sidebarWidth;
-    document.body.style.userSelect = 'none'; // Prevent text selection while resizing
+    document.body.style.userSelect = 'none';
   };
 
-  // Attach mousemove and mouseup listeners to the document
   useEffect(() => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
@@ -102,19 +115,21 @@ const SidebarGraphicPortfolio = ({
     };
   }, [maxWidth, isMobile]);
 
-  if (!isVisible) return null;
+  if (!isVisible || !imageDetails) {
+    return null; // Don't render if the sidebar is not visible or no image is selected
+  }
 
   return (
     <div className="fixed inset-0 z-50 flex overflow-hidden">
       {/* Background Overlay */}
       <div
-        className="absolute inset-0 bg-orange-800 bg-opacity-50 z-40"
-        onClick={onClose} // Close the sidebar when clicking on the overlay
+        className="absolute inset-0 bg-black opacity-80 z-40"
+        onClick={onClose}
       ></div>
 
       {/* Sidebar */}
       <aside
-        className={`relative bg-green-500 flex flex-col gap-2 h-full z-50 ${
+        className={`relative bg-bg-primary flex flex-col gap-2 h-full z-50 ${
           isMobile ? 'w-full' : 'ml-auto'
         }`}
         style={{ width: isMobile ? '100%' : `${sidebarWidth}px` }}
@@ -122,17 +137,32 @@ const SidebarGraphicPortfolio = ({
         {/* Resize Handle */}
         {!isMobile && (
           <div
-            className="absolute top-0 left-0 h-full w-2 bg-gray-300 cursor-col-resize z-50"
+            className="absolute top-0 left-0 h-full w-2 bg-accent-primary cursor-col-resize z-50"
             onMouseDown={handleMouseDown}
           />
         )}
 
-        <button onClick={onClose} className="self-start p-4">
-          Close
-        </button>
+        {/* Header Section */}
+        <div className="flex flex-col items-start lg:flex-row p-8">
+          <button
+            onClick={onClose}
+            className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
+          >
+            <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
+            {t('partialTranslation:goBack')}
+          </button>
+        </div>
 
-        {/* Content */}
-        <div className="p-4">Sidebar Content</div>
+        {/* HeroDetails Component */}
+        <div className="w-full overflow-auto">
+          <HeroDetails
+            title={imageDetails.title}
+            image={imageDetails.image}
+            subTitle={imageDetails.subTitle}
+            light="text-[#8d4970]"
+            dark="dark:text-[#55ae63]"
+          />
+        </div>
       </aside>
     </div>
   );
