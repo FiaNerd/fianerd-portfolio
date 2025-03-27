@@ -11,7 +11,7 @@ import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [sidebarWidth, setSidebarWidth] = useState(350); // Initial sidebar width
+  const [sidebarWidth, setSidebarWidth] = useState(700); // Initial sidebar width
 
   const graphicImages = t('graphicItemsPortfolio', {
     returnObjects: true,
@@ -79,8 +79,8 @@ const GraphicImageGallery = () => {
             <SidebarGraphicPortfolio
               isVisible={isSidebarOpen}
               onClose={handleCloseSidebar}
-              sidebarWidth={sidebarWidth} // Pass sidebar width to the sidebar
-              setSidebarWidth={setSidebarWidth} // Pass setSidebarWidth function to allow resizing
+              sidebarWidth={sidebarWidth}
+              setSidebarWidth={setSidebarWidth}
             />
           </div>
         )}
