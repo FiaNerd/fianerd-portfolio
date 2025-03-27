@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import GraphicImageGallery from '../../components/portfolios/graphic/GraphicImageGallery';
-import GraphicImageDetails from '../../components/portfolios/graphic/GraphicImageGallery';
-import PortfolioImageDetails from '../../components/portfolios/PortfolioImageDetails';
 
 const GraphicPortfolioPage = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-thumbnail.css';
@@ -6,9 +6,12 @@ import 'lightgallery/css/lg-zoom.css';
 import { useTranslation } from 'react-i18next';
 import GraphicGalleryItems from './GraphicImageItems';
 import { useNavigate } from 'react-router-dom';
+import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
 
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [sidebarWidth, setSidebarWidth] = useState(350); // Initial sidebar width
 
   const graphicImages = t('graphicItemsPortfolio', {
     returnObjects: true,
@@ -30,7 +33,13 @@ const GraphicImageGallery = () => {
   const navigate = useNavigate();
 
   const handleImageClick = (urlTitle: string) => {
-    navigate(`/portfolio/graphic-design/${encodeURIComponent(urlTitle)}`);
+    // navigate(`/portfolio/graphic-design/${encodeURIComponent(urlTitle)}`);
+
+    setIsSidebarOpen(true);
+  };
+
+  const handleCloseSidebar = () => {
+    setIsSidebarOpen(false);
   };
 
   return (
@@ -64,6 +73,17 @@ const GraphicImageGallery = () => {
             ))}
           </div>
         </div>
+
+        {isSidebarOpen && (
+          <div className="relative">
+            <SidebarGraphicPortfolio
+              isVisible={isSidebarOpen}
+              onClose={handleCloseSidebar}
+              sidebarWidth={sidebarWidth} // Pass sidebar width to the sidebar
+              setSidebarWidth={setSidebarWidth} // Pass setSidebarWidth function to allow resizing
+            />
+          </div>
+        )}
       </div>
     </>
   );

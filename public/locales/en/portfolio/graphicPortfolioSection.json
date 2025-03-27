@@ -8,17 +8,17 @@
     {
       "urlTitle": "skjort-kravallerna",
       "title": "Skjort kravallerna",
-      "subTitle": "Made for Alla Tiders Teater",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
       "alt": "Skjort kravallerna",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "en-kvall-for-fred",
-      "title": "Teater grupp:: En Kväll för fred",
-      "subTitle": "Made for Alla Tiders Teater",
-      "description": "Illustrator & Photoshop",
+      "title": " En Kväll för fred",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Illustrator & Photoshop",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
       "alt": "En Kväll för fred",
       "ctaButton": "View Details"
@@ -26,8 +26,8 @@
     {
       "urlTitle": "riksteatern-fjarilsvingar",
       "title": "Fjärilsvingar",
-      "subTitle": "Made for Riksteatern",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Riksteatern",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
       "alt": "Rikdteatern Fjärilsvingar",
       "ctaButton": "View Details"
@@ -35,8 +35,8 @@
     {
       "urlTitle": "riksteatern-program-2024",
       "title": "Riksteatern Program 2024",
-      "subTitle": "Made for Riksteatern Skåne",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Riksteatern Skåne",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
       "alt": "Riksteatern Program 2024",
       "ctaButton": "View Details"
@@ -44,8 +44,8 @@
     {
       "urlTitle": "begravt-barn",
       "title": "Begravt Barn",
-      "subTitle": "Made for Stumpenensemblen",
-      "description": "React and Tailwind CSS",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "React and Tailwind CSS",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
       "alt": "Begravt Barn",
       "ctaButton": "View Details"
@@ -53,8 +53,8 @@
     {
       "urlTitle": "genomskinliga-hjartan",
       "title": "Genomskinliga Hjärtan",
-      "subTitle": "Made for Stumpenensemblen",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
       "alt": "Genomskinliga Hjärtan",
       "ctaButton": "View Details"
@@ -62,8 +62,8 @@
     {
       "urlTitle": "hemmet",
       "title": "Hemmet",
-      "subTitle": "Made for Stumpenensemblen",
-      "description": "Photoshop & Illustrator",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
       "alt": "Hemmet",
       "ctaButton": "View Details"
@@ -71,8 +71,8 @@
     {
       "urlTitle": "tyckte-jag-hörde-undar",
       "title": "Tyckte jag hörde hundar",
-      "subTitle": "Made for Stumpenensemblen",
-      "description": "Photoshop & Illustrator",
+      "subTitle": "Project for Stumpenensemblen",
+      "descrtechnologiesption": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
       "alt": "Hemmet",
       "ctaButton": "View Details"
@@ -80,8 +80,8 @@
     {
       "urlTitle": "haxan",
       "title": "Happy New Year 2019",
-      "subTitle": "Made for Alla Tiders Teater",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
       "alt": "Häxan flyers A6 2024",
       "ctaButton": "View Details"
@@ -89,8 +89,8 @@
     {
       "urlTitle": "label-haxan",
       "title": "Coffe label Häxan",
-      "subTitle": "Made for Alla Tiders Teater",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
       "alt": "label häxbryggd häxan",
       "ctaButton": "View Details"
@@ -98,19 +98,33 @@
     {
       "urlTitle": "printagon-chrismtas-card",
       "title": "printagon-chrismtas-card",
-      "subTitle": "Made for Printagon",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Printagon",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
       "alt": "Printagon Graphic - Happy new Year 2019",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "printagon-christmas-card",
-      "title": "printagon-chrismtas-card",
-      "subTitle": "Made for Printagon",
-      "description": "Photoshop and Illustrator",
+      "title": "Printagon Chrismtas Card",
+      "subTitle": "Project for Printagon",
+      "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
       "alt": "Printagon Graphic - Happy new Year 2019",
+      "ctaButton": "View Details"
+    }
+  ],
+  "graphicContentPortfolio": [
+    {
+      "subTitle": "Project for Alla Tiders Teater",
+      "category": "Graphic Design",
+      "year": "2024",
+      "client": "Theater Group – Alla Tiders Teater",
+      "technologies": "Illustrator & Photoshop",
+      "description": "Graphic material created for Alla Tiders Teater and Helsingborg City Theater's event 'An Evening for Peace.' The project included posters, flyers, and program booklets.",
+      "demands": "I had full creative freedom. The only requirement was that the design could not have any political or religious associations. My goal was to create something colorful and eye-catching.",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-enKvallForFred-2024.jpg",
+      "alt": "An Evening for Peace",
       "ctaButton": "View Details"
     }
   ]

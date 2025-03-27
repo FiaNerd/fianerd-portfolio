@@ -4,6 +4,7 @@ import HeroDetails from '../../components/portfolios/HeroDetails';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import { Icon } from '@iconify/react';
+import SidebarGraphicPortfolio from '../../components/portfolios/graphic/SidebarGraphicPortfolio';
 
 const GraphicPortfolioDetails = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
@@ -58,6 +59,7 @@ const GraphicPortfolioDetails = () => {
             {t('partialTranslation:goBack')}
           </button>
         </div>
+        
       </div>
     </div>
   );

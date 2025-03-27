@@ -1,42 +1,42 @@
 {
-  "titleGraphicPortfolio": "Grafiska projekt",
-  "subTitleGraphicPortfolio": "Färg och form utan gränser.",
-  "descriptioGraphicPortfolio": "En samling av mina mest uttrycksfulla grafiska verk.",
-  "top10graphicProjects": "Här är mina topp 11 grafiska projekt. Jag har främst arbetat med teatergrupper, vilket har varit väldigt roligt eftersom det gett mig extra kreativ frihet. Jag har även arbetat med företag.",
+  "titleGraphicPortfolio": "Graphic Projects",
+  "subTitleGraphicPortfolio": "Color and form without limits.",
+  "descriptioGraphicPortfolio": "A collection of my most expressive graphic works.",
+  "top10graphicProjects": "Here are my top 11 graphic design projects. I have primarily worked with theater groups, which has been a lot of fun as it has given me extra creative freedom. I have also worked with businesses.",
 
   "graphicItemsPortfolio": [
     {
-      "urlTitle": "skjort-kravallerna",
-      "title": "Skjort kravallerna",
-      "subTitle": "Gjord till Alla Tiders Teater",
-      "description": "Photoshop and Illustrator",
+      "urlTitle": "skjortkravallerna",
+      "title": "Skjortkravallerna",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
-      "alt": "Skjort kravallerna",
+      "alt": "The Shirt Riots",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "en-kvall-for-fred",
-      "title": "Teater grupp:: En Kväll för fred",
-      "subTitle": "Gjord till Alla Tiders Teater",
-      "description": "Illustrator & Photoshop",
+      "title": "En Kväll för Fred",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Illustrator & Photoshop",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
-      "alt": "En Kväll för fred",
+      "alt": "En Kväll för Fred",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "riksteatern-fjarilsvingar",
       "title": "Fjärilsvingar",
-      "subTitle": "Gjord till Riksteatern",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Riksteatern",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
-      "alt": "Rikdteatern Fjärilsvingar",
+      "alt": "Fjärilsvingar",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "riksteatern-program-2024",
       "title": "Riksteatern Program 2024",
-      "subTitle": "Gjord Riksteatern",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Riksteatern",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
       "alt": "Riksteatern Program 2024",
       "ctaButton": "View Details"
@@ -44,8 +44,8 @@
     {
       "urlTitle": "begravt-barn",
       "title": "Begravt Barn",
-      "subTitle": "Gjord till Stumpenensemblen",
-      "description": "React and Tailwind CSS",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "React & Tailwind CSS",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
       "alt": "Begravt Barn",
       "ctaButton": "View Details"
@@ -53,55 +53,70 @@
     {
       "urlTitle": "genomskinliga-hjartan",
       "title": "Genomskinliga Hjärtan",
-      "subTitle": "Gjord till Stumpenensemblen",
-      "description": "Photoshop and Illustrator",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
       "alt": "Genomskinliga Hjärtan",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "hemmet",
-      "title": "Hemmet",
-      "subTitle": "Gjord till Stumpenensemblen",
-      "description": "Photoshop & Illustrator",
+      "title": "hemmet",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
       "alt": "Hemmet",
       "ctaButton": "View Details"
     },
     {
-      "urlTitle": "tyckte-jag-hörde-undar",
-      "title": "Tyckte jag hörde hundar",
-      "subTitle": "Gjord till Stumpenensemblen",
-      "description": "Photoshop & Illustrator",
+      "urlTitle": "tyckte-jag-hörde-hundar",
+      "title": "Tyckte Jag Hörd Hundar",
+      "subTitle": "Project for Stumpenensemblen",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
-      "alt": "Tyckte jag hörde hundar",
+      "alt": "Tyckte Jag Hörd Hundar",
       "ctaButton": "View Details"
     },
     {
       "urlTitle": "haxan",
-      "title": "Flyer Häxan A6",
-      "subTitle": "Gjord till Alla Tiders Teater",
-      "description": "Photoshop and Illustrator",
+      "title": "Häxan",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
-      "alt": "Häxan flyers A6 2024",
+      "alt": "Häxan Flyer A6 2024",
       "ctaButton": "View Details"
     },
     {
-      "urlTitle": "etiekett-haxan",
-      "title": "Kaffe eitkett Häxan",
-      "subTitle": "Gjord till Alla Tiders Teater",
-      "description": "Photoshop and Illustrator",
+      "urlTitle": "label-haxan",
+      "title": "Coffee Label - Häxan",
+      "subTitle": "Project for Alla Tiders Teater",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
-      "alt": "etikett häxbryggd häxan",
+      "alt": "Label for The Witch Brew",
       "ctaButton": "View Details"
     },
     {
-      "urlTitle": "printagon-jul-kort",
-      "title": "Gått nytt år 2019",
-      "subTitle": "Gjord till Printagon Graphic",
-      "description": "Photoshop and Illustrator",
+      "urlTitle": "printagon-christmas-card",
+      "title": "Happy New Year 2019",
+      "subTitle": "Project for Printagon Graphic",
+      "technologies": "Photoshop & Illustrator",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
-      "alt": "Printagon Graphic - Gått nytt år 2019",
+      "alt": "Printagon Graphic - Happy New Year 2019",
+      "ctaButton": "View Details"
+    }
+  ],
+  "graphicContentPortfolio": [
+    {
+      "title": "En Kväll för Fred",
+      "subTitle": "Project for Alla Tiders Teater",
+      "category": "Graphic Design",
+      "year": "2024",
+      "client": "Theater Group – Alla Tiders Teater",
+      "technologies": "Illustrator & Photoshop",
+      "description": "Graphic material created for Alla Tiders Teater and Helsingborg City Theater's event 'An Evening for Peace.' The project included posters, flyers, and program booklets.",
+      "demands": "I had full creative freedom. The only requirement was that the design could not have any political or religious associations. My goal was to create something colorful and eye-catching.",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-enKvallForFred-2024.jpg",
+      "alt": "En Kväll för Fred",
       "ctaButton": "View Details"
     }
   ]
