@@ -42,14 +42,14 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
           </div>
         )}
 
-        {/* <div> */}
+        <div className="flex flex-col">
           {/* Title */}
           <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold ">
             {title}
           </h1>
-        {/* </div> */}
-      </div>
           <p className="text-[#695050]">{subTitle}</p>
+        </div>
+      </div>
 
       {/* Description */}
 
