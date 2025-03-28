@@ -3,39 +3,35 @@ import { useTranslation } from 'react-i18next';
 import HeroDetails from '../../partials/HeroDetails';
 import { Icon } from '@iconify/react';
 import ContentTitleDetails from '../../partials/ContentTitleDetails';
-import { useParams } from 'react-router-dom';
 
 interface ISidebarGraphicPortfolioProps {
   isVisible: boolean;
   onClose: () => void;
   sidebarWidth?: number;
   setSidebarWidth?: React.Dispatch<React.SetStateAction<number>>;
-  imageDetails?: {
+  graphicDetails?: {
     urlTitle: string;
     title: string;
     subTitle: string;
-    descriptionGraphicPortfolio: string;
     image: string;
+    category: string;
+    year: string;
+    yearText: string;
+    client: string;
+    technologies: string;
+    description: string;
+    goals: string;
+    role: string;
+    challenges: string;
+    results: string;
+    testmonial: string;
+    tags: string[];
+    relatedProjects: string[];
+    ctaLink: string;
+    demands: string;
     alt: string;
+    ctaButton: string;
   };
-  graphicContent?:
-    | {
-        urlTitle: string;
-        title: string;
-        subTitle: string;
-        category: string;
-        year?: string;
-        yearText?: string;
-        client: string;
-        technologies: string;
-        description: string;
-        demands: string;
-        image: string;
-        alt: string;
-        ctaButton: string;
-      }
-    | null
-    | undefined;
 }
 
 const SidebarGraphicPortfolio = ({
@@ -43,11 +39,9 @@ const SidebarGraphicPortfolio = ({
   onClose,
   sidebarWidth: parentSidebarWidth,
   setSidebarWidth: parentSetSidebarWidth,
-  imageDetails,
-  graphicContent,
+  graphicDetails,
 }: ISidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection']);
-  const { urlTitle } = useParams<{ urlTitle: string }>();
   const [sidebarWidth, setSidebarWidth] = useState(parentSidebarWidth || 700);
   const [maxWidth, setMaxWidth] = useState(() => window.innerWidth * 0.9);
   const [isMobile, setIsMobile] = useState(false);
@@ -55,8 +49,6 @@ const SidebarGraphicPortfolio = ({
   const startX = useRef(0);
   const startWidth = useRef(0);
   const minWidth = 275;
-
-  console.log('graphicContent:', graphicContent);
 
   // const blog = blogDetails.find((blog) => blog.urlTitle === urlTitle);
 
@@ -141,13 +133,10 @@ const SidebarGraphicPortfolio = ({
     };
   }, [maxWidth, isMobile]);
 
-    console.log('graphicContent.yearText:', graphicContent?.yearText);
-  console.log('graphicContent.year:', graphicContent?.year);
-
-  if (!isVisible || (!imageDetails && !graphicContent)) {
+  if (!isVisible || !graphicDetails) {
     return null; // Don't render if the sidebar is not visible or no data is available
   }
-  console.log('rendering', graphicContent);
+
   return (
     <div className="fixed inset-0 z-50 flex overflow-hidden">
       {/* Background Overlay */}
@@ -174,9 +163,9 @@ const SidebarGraphicPortfolio = ({
         {/* HeroDetails Component */}
         <div className="w-full overflow-auto">
           <HeroDetails
-            title={imageDetails?.title || ''}
-            image={imageDetails?.image || ''}
-            subTitle={imageDetails?.subTitle || ''}
+            title={graphicDetails?.title || ''}
+            image={graphicDetails?.image || ''}
+            subTitle={graphicDetails?.subTitle || ''}
             light="text-[#8d4970]"
             dark="dark:text-[#55ae63]"
           />
@@ -195,10 +184,10 @@ const SidebarGraphicPortfolio = ({
           </div>
 
           <ContentTitleDetails
-            title={graphicContent?.title || ''}
-            day={graphicContent?.year || ''}
-            yearText={graphicContent?.yearText || ''}
-            subTitle={graphicContent?.subTitle || ''}
+            title={graphicDetails?.title || ''}
+            yearText={graphicDetails?.yearText || 'N/A'}
+            year={graphicDetails?.year || ''}
+            subTitle={graphicDetails?.subTitle || ''}
           />
         </div>
       </aside>

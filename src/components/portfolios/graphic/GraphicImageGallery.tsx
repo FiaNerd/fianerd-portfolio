@@ -15,27 +15,24 @@ const GraphicImageGallery = () => {
     urlTitle: string;
     title: string;
     subTitle: string;
-    description: string;
-    image: string;
-    alt: string;
-    ctaButton: string;
-  }[];
-
-  const graphicContentPortfolio = t('graphicContentPortfolio', {
-    returnObjects: true,
-  }) as {
-    urlTitle: string;
-    title: string;
-    subTitle: string;
     category: string;
-    year?: string;
+    year: string;
+    yearText: string;
     client: string;
     technologies: string;
     description: string;
+    goals: string;
+    role: string;
+    challenges: string;
+    results: string;
+    testmonial: string;
+    tags: string[];
+    relatedProjects: string[];
+    ctaLink: string;
     demands: string;
-    image: string;
     alt: string;
     ctaButton: string;
+    image: string;
   }[];
 
   const column1 = graphicImages.slice(0, 3);
@@ -48,23 +45,36 @@ const GraphicImageGallery = () => {
   };
 
   const handleCloseSidebar = () => {
-    setIsSidebarOpen(false);
+    setIsSidebarOpen(false); // Close the sidebar
     setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
   };
 
   // Find the selected image details based on the selectedUrlTitle
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
-  );
-
-  // Find the selected graphic content based on the selectedUrlTitle
-  const sidebartTitleContent = graphicContentPortfolio.find(
-    (item) => item.urlTitle === selectedUrlTitle
-  );
-
-  console.log('graphicContentPortfolio:', graphicContentPortfolio);
-  console.log('selectedUrlTitle:', selectedUrlTitle);
-  console.log('sidebartTitleContent:', sidebartTitleContent);
+  ) || {
+    urlTitle: '',
+    title: '',
+    subTitle: '',
+    image: '',
+    category: '',
+    year: '',
+    yearText: '',
+    client: '',
+    technologies: '',
+    description: '',
+    goals: '',
+    role: '',
+    challenges: '',
+    results: '',
+    testmonial: '',
+    tags: [],
+    relatedProjects: [],
+    ctaLink: '',
+    demands: '',
+    alt: '',
+    ctaButton: '',
+  };
 
   return (
     <>
@@ -105,18 +115,7 @@ const GraphicImageGallery = () => {
               onClose={handleCloseSidebar}
               sidebarWidth={sidebarWidth}
               setSidebarWidth={setSidebarWidth}
-              imageDetails={
-                selectedImageDetails
-                  ? {
-                      ...selectedImageDetails,
-                      title: selectedImageDetails.title,
-                      subTitle: selectedImageDetails.subTitle,
-                      descriptionGraphicPortfolio:
-                        selectedImageDetails.description,
-                    }
-                  : undefined
-              }
-              graphicContent={sidebartTitleContent}
+              graphicDetails={selectedImageDetails} // Pass the selected image details
             />
           </div>
         )}

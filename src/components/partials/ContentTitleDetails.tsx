@@ -11,51 +11,53 @@ interface IContentTitleDetails {
 
 const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
   title,
+  day,
   month,
   year,
-  day,
-  subTitle,
   yearText,
+  subTitle,
 }) => {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-rows text-start items-center gap-4">
-        {/* Date Section */}
-        {(month || day || year) && (
-          <div className="border-r-2 border-[#3C2F2F] mb-2">
-            {month && (
-              <h5 className="font-semibold px-2 mb-0 leading-0">{month}</h5>
-            )}
-            {day && (
-              <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none">
-                {day}
-              </h4>
-            )}
-            {year && (
-              <>
-                <h5 className="font-semibold px-2 pb-0 leading-0">
+    <>
+      <div className="flex flex-col">
+        <div className="flex flex-rows text-start gap-4">
+          {/* Date Section */}
+          {(month || day || year || yearText) && (
+            <div className="border-r-2 border-[#3C2F2F] mb-2">
+              {month && (
+                <h5 className="font-semibold px-2 mb-0 leading-0">{month}</h5>
+              )}
+              {day && (
+                <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none mb-0">
+                  {day}
+                </h4>
+              )}
+              {yearText && (
+                <h5 className="font-semibold mb-0 px-2 pb-0 leading-0">
                   {yearText}
                 </h5>
-                <h5 className="font-semibold px-2 pb-0 leading-0">{year}</h5>
-              </>
-            )}
+              )}
+              {year && (
+                <>
+                  <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none mb-0">
+                    {year}
+                  </h4>
+                </>
+              )}
+            </div>
+          )}
+
+          <div className="flex flex-col">
+            {/* Title */}
+            <h2 className="text-[#3C2F2F] mb-0 font-bold ">{title}</h2>
+            <p className="text-[#695050]">{subTitle}</p>
           </div>
-        )}
-
-        <div className="flex flex-col">
-          {/* Title */}
-          <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold ">
-            {title}
-          </h1>
-          <p className="text-[#695050]">{subTitle}</p>
         </div>
+
+        {/* Divider */}
+        <div className="border border-[#3C2F2F] h-full mb-8"></div>
       </div>
-
-      {/* Description */}
-
-      {/* Divider */}
-      <div className="border border-[#3C2F2F] h-full mb-8"></div>
-    </div>
+    </>
   );
 };
 
