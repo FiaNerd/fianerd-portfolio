@@ -97,7 +97,7 @@
     },
     {
       "urlTitle": "printagon-chrismtas-card",
-      "title": "printagon-chrismtas-card",
+      "title": "Printagon Chrismtas Card",
       "subTitle": "Project for Printagon",
       "technologies": "Photoshop and Illustrator",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
@@ -117,10 +117,42 @@
 
   "graphicContentPortfolio": [
     {
+      "urlTitle": "skjort-kravallerna",
       "title": " En Kväll för fred",
       "subTitle": "Project for Alla Tiders Teater",
       "category": "Graphic Design",
-      "year": "2024",
+      "year": "'24",
+      "yearText": "YEAR",
+      "client": "Theater Group – Alla Tiders Teater",
+      "technologies": "Illustrator & Photoshop",
+      "description": "Graphic material created for Alla Tiders Teater and Helsingborg City Theater's event 'An Evening for Peace.' The project included posters, flyers, and program booklets.",
+      "demands": "I had full creative freedom. The only requirement was that the design could not have any political or religious associations. My goal was to create something colorful and eye-catching.",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-enKvallForFred-2024.jpg",
+      "alt": "An Evening for Peace",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "printagon-chrismtas-card",
+      "title": "Printagon Chrismtas Card",
+      "subTitle": "Project for Alla Tiders Teater",
+      "category": "Graphic Design",
+      "year": "'24",
+      "yearText": "YEAR",
+      "client": "Theater Group – Alla Tiders Teater",
+      "technologies": "Illustrator & Photoshop",
+      "description": "Graphic material created for Alla Tiders Teater and Helsingborg City Theater's event 'An Evening for Peace.' The project included posters, flyers, and program booklets.",
+      "demands": "I had full creative freedom. The only requirement was that the design could not have any political or religious associations. My goal was to create something colorful and eye-catching.",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-enKvallForFred-2024.jpg",
+      "alt": "An Evening for Peace",
+      "ctaButton": "View Details"
+    },
+    {
+      "urlTitle": "riksteatern-fjarilsvingar",
+      "title": "Fjärilsvingar",
+      "subTitle": "Project for Alla Tiders Teater",
+      "category": "Graphic Design",
+      "year": "'24",
+      "yearText": "YEAR",
       "client": "Theater Group – Alla Tiders Teater",
       "technologies": "Illustrator & Photoshop",
       "description": "Graphic material created for Alla Tiders Teater and Helsingborg City Theater's event 'An Evening for Peace.' The project included posters, flyers, and program booklets.",

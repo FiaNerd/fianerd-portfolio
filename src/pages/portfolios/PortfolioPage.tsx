@@ -220,7 +220,7 @@ const PortfolioPage = () => {
           dark="dark:text-[#55ae63] dark:bg-[#1b0909]"
           sticky
         />
-        
+
         <GraphicPortfolioPage />
       </section>
     </>

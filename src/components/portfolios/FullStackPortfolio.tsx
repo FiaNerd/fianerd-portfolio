@@ -3,21 +3,30 @@ import { useTranslation } from 'react-i18next';
 import PortfolioCard from './PortfolioCard';
 
 const FullStackPortfolio = () => {
-    const { t } = useTranslation("portfolio");
-  
+  const { t } = useTranslation('portfolio');
 
-    // Retrieve frontend items dynamically
-    const fullstackItems = t("fullstackPortfolioSection.fullstackItems", { returnObjects: true });
-  
-    return (
-      <section className="max-w-screen-xl mx-auto px-4">
-        <p
-          className="mb-12"
-          dangerouslySetInnerHTML={{ __html: t("fullstackPortfolioSection.introFullstackPortfolio") }}
-        />
-  
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto">
-          {Array.isArray(fullstackItems) && fullstackItems.map((item: any, index: number) => (
+  // Retrieve frontend items dynamically
+  const fullstackItems = t(
+    'portfolio/fullstackPortfolioSection:fullstackItems',
+    {
+      returnObjects: true,
+    }
+  );
+
+  return (
+    <section className="max-w-screen-xl mx-auto px-4">
+      <p
+        className="mb-12"
+        dangerouslySetInnerHTML={{
+          __html: t(
+            'portfolio/fullstackPortfolioSection:introFullstackPortfolio'
+          ),
+        }}
+      />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto">
+        {Array.isArray(fullstackItems) &&
+          fullstackItems.map((item: any, index: number) => (
             <PortfolioCard
               key={index}
               title={item.title}
@@ -32,13 +41,13 @@ const FullStackPortfolio = () => {
               linkTitle={item.linkTitle}
               ctaButton={item.ctaButton}
               techTitle={item.techTitle}
-              projectDuration={item.projectDuration} 
-              titleDescription={item.titleDescription}              
+              projectDuration={item.projectDuration}
+              titleDescription={item.titleDescription}
             />
           ))}
-        </div>
-      </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default FullStackPortfolio
+export default FullStackPortfolio;

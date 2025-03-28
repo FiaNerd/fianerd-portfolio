@@ -58,6 +58,7 @@ const App = () => {
               <Route path="/portfolio/frontend" element={<PortfolioPage />} />
               <Route path="/portfolio/backend" element={<PortfolioPage />} />
               <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
+              
               <Route
                 path="/portfolio/graphic-design"
                 element={<PortfolioPage />}

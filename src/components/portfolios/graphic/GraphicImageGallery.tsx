@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import GraphicGalleryItems from './GraphicImageItems';
 import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
 
@@ -8,7 +7,7 @@ const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [sidebarWidth, setSidebarWidth] = useState(700); // Initial sidebar width
-  const [selectedUrlTitle, setSelectedUrlTitle] = useState<string | null>(null); // Track the selected image
+  const [selectedUrlTitle, setSelectedUrlTitle] = useState<string | null>(null);
 
   const graphicImages = t('graphicItemsPortfolio', {
     returnObjects: true,
@@ -22,12 +21,26 @@ const GraphicImageGallery = () => {
     ctaButton: string;
   }[];
 
-  // Split the images into 3 chunks for 3 columns
+  const graphicContentPortfolio = t('graphicContentPortfolio', {
+    returnObjects: true,
+  }) as {
+    urlTitle: string;
+    title: string;
+    subTitle: string;
+    category: string;
+    year?: string;
+    client: string;
+    technologies: string;
+    description: string;
+    demands: string;
+    image: string;
+    alt: string;
+    ctaButton: string;
+  }[];
+
   const column1 = graphicImages.slice(0, 3);
   const column2 = graphicImages.slice(3, 7);
   const column3 = graphicImages.slice(7, 11);
-
-  const navigate = useNavigate();
 
   const handleImageClick = (urlTitle: string) => {
     setSelectedUrlTitle(urlTitle); // Set the selected image's URL title
@@ -43,6 +56,15 @@ const GraphicImageGallery = () => {
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
   );
+
+  // Find the selected graphic content based on the selectedUrlTitle
+  const sidebartTitleContent = graphicContentPortfolio.find(
+    (item) => item.urlTitle === selectedUrlTitle
+  );
+
+  console.log('graphicContentPortfolio:', graphicContentPortfolio);
+  console.log('selectedUrlTitle:', selectedUrlTitle);
+  console.log('sidebartTitleContent:', sidebartTitleContent);
 
   return (
     <>
@@ -87,11 +109,14 @@ const GraphicImageGallery = () => {
                 selectedImageDetails
                   ? {
                       ...selectedImageDetails,
-                      subTitleGraphicPortfolio: selectedImageDetails.subTitle,
-                      descriptionGraphicPortfolio: selectedImageDetails.description,
+                      title: selectedImageDetails.title,
+                      subTitle: selectedImageDetails.subTitle,
+                      descriptionGraphicPortfolio:
+                        selectedImageDetails.description,
                     }
                   : undefined
-              } 
+              }
+              graphicContent={sidebartTitleContent}
             />
           </div>
         )}

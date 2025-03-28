@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroDetails from '../../partials/HeroDetails';
 import { Icon } from '@iconify/react';
+import ContentTitleDetails from '../../partials/ContentTitleDetails';
+import { useParams } from 'react-router-dom';
 
-interface SidebarGraphicPortfolioProps {
+interface ISidebarGraphicPortfolioProps {
   isVisible: boolean;
   onClose: () => void;
   sidebarWidth?: number;
@@ -16,6 +18,24 @@ interface SidebarGraphicPortfolioProps {
     image: string;
     alt: string;
   };
+  graphicContent?:
+    | {
+        urlTitle: string;
+        title: string;
+        subTitle: string;
+        category: string;
+        year?: string;
+        yearText?: string;
+        client: string;
+        technologies: string;
+        description: string;
+        demands: string;
+        image: string;
+        alt: string;
+        ctaButton: string;
+      }
+    | null
+    | undefined;
 }
 
 const SidebarGraphicPortfolio = ({
@@ -24,8 +44,10 @@ const SidebarGraphicPortfolio = ({
   sidebarWidth: parentSidebarWidth,
   setSidebarWidth: parentSetSidebarWidth,
   imageDetails,
-}: SidebarGraphicPortfolioProps) => {
+  graphicContent,
+}: ISidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection']);
+  const { urlTitle } = useParams<{ urlTitle: string }>();
   const [sidebarWidth, setSidebarWidth] = useState(parentSidebarWidth || 700);
   const [maxWidth, setMaxWidth] = useState(() => window.innerWidth * 0.9);
   const [isMobile, setIsMobile] = useState(false);
@@ -33,6 +55,10 @@ const SidebarGraphicPortfolio = ({
   const startX = useRef(0);
   const startWidth = useRef(0);
   const minWidth = 275;
+
+  console.log('graphicContent:', graphicContent);
+
+  // const blog = blogDetails.find((blog) => blog.urlTitle === urlTitle);
 
   // Sync with parent state if provided
   useEffect(() => {
@@ -115,10 +141,13 @@ const SidebarGraphicPortfolio = ({
     };
   }, [maxWidth, isMobile]);
 
-  if (!isVisible || !imageDetails) {
-    return null; // Don't render if the sidebar is not visible or no image is selected
-  }
+    console.log('graphicContent.yearText:', graphicContent?.yearText);
+  console.log('graphicContent.year:', graphicContent?.year);
 
+  if (!isVisible || (!imageDetails && !graphicContent)) {
+    return null; // Don't render if the sidebar is not visible or no data is available
+  }
+  console.log('rendering', graphicContent);
   return (
     <div className="fixed inset-0 z-50 flex overflow-hidden">
       {/* Background Overlay */}
@@ -142,25 +171,34 @@ const SidebarGraphicPortfolio = ({
           />
         )}
 
-        {/* Header Section */}
-        <div className="flex flex-col items-start lg:flex-row p-8">
-          <button
-            onClick={onClose}
-            className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
-          >
-            <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-            {t('partialTranslation:goBack')}
-          </button>
-        </div>
-
         {/* HeroDetails Component */}
         <div className="w-full overflow-auto">
           <HeroDetails
-            title={imageDetails.title}
-            image={imageDetails.image}
-            subTitle={imageDetails.subTitle}
+            title={imageDetails?.title || ''}
+            image={imageDetails?.image || ''}
+            subTitle={imageDetails?.subTitle || ''}
             light="text-[#8d4970]"
             dark="dark:text-[#55ae63]"
+          />
+        </div>
+
+        {/* Header Section */}
+        <div className="px-8 ">
+          <div className="flex flex-col mb-8 items-start lg:flex-row ">
+            <button
+              onClick={onClose}
+              className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
+            >
+              <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
+              {t('partialTranslation:goBack')}
+            </button>
+          </div>
+
+          <ContentTitleDetails
+            title={graphicContent?.title || ''}
+            day={graphicContent?.year || ''}
+            yearText={graphicContent?.yearText || ''}
+            subTitle={graphicContent?.subTitle || ''}
           />
         </div>
       </aside>

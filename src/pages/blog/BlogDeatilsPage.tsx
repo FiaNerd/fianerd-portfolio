@@ -5,7 +5,7 @@ import useHeaderHeight from '../../hook/useHeaderHeight';
 import { IBlogDetails } from '../../interfaces/BlogInterface';
 import { Icon } from '@iconify/react';
 import HeroDetails from '../../components/partials/HeroDetails';
-import BlogHeader from '../../components/blog/BlogHeader';
+import ContentTitleDetails from '../../components/partials/ContentTitleDetails';
 import BlogContent from '../../components/blog/BlogContent';
 import BlogSidebar from '../../components/blog/BlogSidebar';
 
@@ -74,11 +74,11 @@ const BlogDetailsPage = () => {
 
             {/* Title and Content Column */}
             <div className="lg:col-span-1">
-              <BlogHeader
+              <ContentTitleDetails
                 title={blog.title}
                 month={blog.month}
                 day={blog.day}
-                titleDescription={blog.titleDescription}
+                subTitle={blog.titleDescription}
               />
               <BlogContent
                 content={blog.content || ''}
