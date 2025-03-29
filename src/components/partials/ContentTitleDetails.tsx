@@ -22,7 +22,7 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
   return (
     <>
       <div className="flex flex-col">
-        <div className="flex flex-rows text-start gap-4">
+        <div className="flex flex-rowsn gap-4">
           {/* Date Section */}
           {(month || day || year || yearText) && (
             <div className="border-r-2 border-[#3C2F2F] mb-2">
@@ -30,7 +30,7 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
                 <h5 className="font-semibold px-2 mb-0 leading-0">{month}</h5>
               )}
               {day && (
-                <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none mb-0">
+                <h4 className="text-bg-secondary dark:text-text-accent text-end font-bold px-2 leading-none mb-0">
                   {day}
                 </h4>
               )}
@@ -41,7 +41,7 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
               )}
               {year && (
                 <>
-                  <h4 className="text-bg-secondary dark:text-text-accent font-bold px-2 leading-none mb-0">
+                  <h4 className="text-bg-secondary text-end dark:text-text-accent font-bold px-2 leading-none mb-0">
                     {year}
                   </h4>
                 </>

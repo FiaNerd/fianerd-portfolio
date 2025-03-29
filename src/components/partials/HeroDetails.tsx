@@ -36,7 +36,6 @@ const HeroDetails = ({
           children={subTitle}
           className="text-6xl md:text-3xl bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg"
           subHeadingClassName="text-amber-100"
-          dotClassName="text-amber-100"
         />
       </div>
     </div>

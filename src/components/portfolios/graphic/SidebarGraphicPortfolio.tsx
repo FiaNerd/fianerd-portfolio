@@ -4,6 +4,7 @@ import HeroDetails from '../../partials/HeroDetails';
 import { Icon } from '@iconify/react';
 import ContentTitleDetails from '../../partials/ContentTitleDetails';
 import ContentDetails from '../../partials/ContentDetails';
+import GraphicPortfolioContentAbout from './GraphicPortfolioContentAbout';
 
 interface ISidebarGraphicPortfolioProps {
   isVisible: boolean;
@@ -45,6 +46,24 @@ const SidebarGraphicPortfolio = ({
   if (!isVisible || !graphicDetails) {
     return null; // Don't render if the sidebar is not visible or no data is available
   }
+
+  // Transform graphicDetails into an array
+  const graphicItemsPortfolio = [
+    {
+      client: graphicDetails?.client,
+      technologies: graphicDetails?.technologies,
+      goals: graphicDetails?.goals,
+      role: graphicDetails?.role,
+      challenges: graphicDetails?.challenges,
+      results: graphicDetails?.results,
+      testimonial: graphicDetails?.testmonial,
+      tags: graphicDetails?.tags,
+      relatedProjects: graphicDetails?.relatedProjects,
+      demands: graphicDetails?.demands,
+      ctaLink: graphicDetails?.ctaLink,
+      ctaButton: graphicDetails?.ctaButton,
+    },
+  ];
 
   return (
     <div className="fixed inset-0 z-50 flex overflow-hidden">
@@ -97,13 +116,18 @@ const SidebarGraphicPortfolio = ({
             }}
           />
 
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 mb-12 ">
             <img
               src={graphicDetails.image}
               alt={graphicDetails.alt}
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full md:w-[70%] h-auto mx-auto rounded-lg shadow-md"
             />
           </div>
+
+          {/* Pass the transformed data */}
+          <GraphicPortfolioContentAbout
+            graphicItemsPortfolio={graphicItemsPortfolio}
+          />
         </div>
       </aside>
     </div>
