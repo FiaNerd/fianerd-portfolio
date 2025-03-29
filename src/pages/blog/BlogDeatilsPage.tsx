@@ -6,8 +6,8 @@ import { IBlogDetails } from '../../interfaces/BlogInterface';
 import { Icon } from '@iconify/react';
 import HeroDetails from '../../components/partials/HeroDetails';
 import ContentTitleDetails from '../../components/partials/ContentTitleDetails';
-import BlogContent from '../../components/blog/BlogContent';
 import BlogSidebar from '../../components/blog/BlogSidebar';
+import ContentDetails from '../../components/partials/ContentDetails';
 
 const BlogDetailsPage = () => {
   const { t } = useTranslation([
@@ -80,7 +80,7 @@ const BlogDetailsPage = () => {
                 day={blog.day}
                 subTitle={blog.titleDescription}
               />
-              <BlogContent
+              <ContentDetails
                 content={blog.content || ''}
                 suffix={blog.suffix || ''}
                 http={blog.httpHomepage || ''}

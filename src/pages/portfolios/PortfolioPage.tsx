@@ -141,6 +141,7 @@ const PortfolioPage = () => {
           children={t('portfolio/top5PortfolioSection:subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 "
           sticky
+          title={''}
         />
         <Top5projects />
       </section>

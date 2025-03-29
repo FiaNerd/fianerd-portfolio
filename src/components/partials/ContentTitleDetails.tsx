@@ -7,6 +7,8 @@ interface IContentTitleDetails {
   year?: string;
   yearText?: string;
   subTitle: string;
+  titleClassName?: string;
+  subTitleClassName?: string;
 }
 
 const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
@@ -33,7 +35,7 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
                 </h4>
               )}
               {yearText && (
-                <h5 className="font-semibold mb-0 px-2 pb-0 leading-0">
+                <h5 className="font-semibold text-end mb-0 px-2 pb-0 leading-0">
                   {yearText}
                 </h5>
               )}

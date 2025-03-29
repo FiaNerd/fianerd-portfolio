@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GraphicGalleryItems from './GraphicImageItems';
 import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
+import useSmoothScroll from '../../../hook/useSmoothScroll';
 
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
@@ -48,6 +49,8 @@ const GraphicImageGallery = () => {
     setIsSidebarOpen(false); // Close the sidebar
     setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
   };
+
+  useSmoothScroll(0); // Smooth scroll to the top when the sidebar opens
 
   // Find the selected image details based on the selectedUrlTitle
   const selectedImageDetails = graphicImages.find(
