@@ -8,6 +8,7 @@ interface HeroDetailsProps {
   image: string;
   dark: string;
   light: string;
+  titleClassName?: string;
 }
 
 const HeroDetails = ({
@@ -16,6 +17,7 @@ const HeroDetails = ({
   subTitle,
   dark,
   light,
+  titleClassName = '',
 }: HeroDetailsProps) => {
   const headerHeight = useHeaderHeight();
   useSmoothScroll(headerHeight);
@@ -34,8 +36,9 @@ const HeroDetails = ({
           title={title}
           dot={'.'}
           children={subTitle}
-          className="text-6xl md:text-3xl bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg"
+          className="bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg"
           subHeadingClassName="text-amber-100"
+          titleClassName="text-[2rem] md:text-[3rem]"
         />
       </div>
     </div>

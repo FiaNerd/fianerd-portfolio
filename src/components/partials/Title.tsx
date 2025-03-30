@@ -5,6 +5,7 @@ import TitleAnimation from "./TitleAnimation";
 interface IProps {
   id?: string;
   title?: string;
+  titleClassName?: string;
   dot?: string;
   children: string;
   className?: string;
@@ -19,6 +20,7 @@ interface IProps {
 const Title = ({
   id,
   title,
+  titleClassName,
   dot,
   children,
   className = "",
@@ -54,6 +56,7 @@ const Title = ({
         dangerouslyHTML={dangerouslyHTML}
         onComplete={handleAnimationComplete}
         shouldAnimate={!hasAnimated}
+        titleClassName={titleClassName}
       />
       <h3 className={`text-wrap ${subHeadingClassName}`}>{children}</h3>
     </motion.div>

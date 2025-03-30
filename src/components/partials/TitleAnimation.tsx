@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 interface IProps {
   title: string;
+  titleClassName?: string;
   dot?: string;
   dangerouslyHTML?: string;
   onComplete?: () => void;
@@ -15,6 +16,7 @@ interface IProps {
 
 const TitleAnimation = ({
   title,
+  titleClassName,
   dot,
   dangerouslyHTML,
   onComplete,
@@ -73,14 +75,14 @@ const TitleAnimation = ({
   };
 
   return (
-    <motion.h1
+        <motion.h1
       ref={ref}
       aria-label={currentTitle}
       role="heading"
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`font-heading font-bold mb-0 pt-4 inline-block text-wrap ${className}`}
+      className={`font-heading font-bold mb-0 pt-4 inline-block text-wrap ${className} ${titleClassName || ""}`} // Combine className and titleClassName
       style={style}
     >
       {dangerouslyHTML ? (

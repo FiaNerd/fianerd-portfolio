@@ -76,7 +76,7 @@ const GraphicPortfolioContentAbout = ({
               <p>{item.goals}</p>
             </div>
           )}
-
+          
           {/* Role Section */}
           {item.role && (
             <div>

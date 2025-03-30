@@ -20,7 +20,7 @@ interface ISidebarGraphicPortfolioProps {
     year: string;
     yearText: string;
     client: string;
-    technologies: string;
+    technologies: string[];
     description: string;
     goals: string;
     role: string;
