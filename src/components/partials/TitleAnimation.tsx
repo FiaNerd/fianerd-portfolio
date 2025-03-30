@@ -1,12 +1,13 @@
-import { Icon } from "@iconify/react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { Icon } from '@iconify/react';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface IProps {
   title: string;
   titleClassName?: string;
   dot?: string;
+  dotClassName?: string;
   dangerouslyHTML?: string;
   onComplete?: () => void;
   style?: React.CSSProperties;
@@ -18,6 +19,7 @@ const TitleAnimation = ({
   title,
   titleClassName,
   dot,
+  dotClassName,
   dangerouslyHTML,
   onComplete,
   style,
@@ -31,27 +33,26 @@ const TitleAnimation = ({
 
   useEffect(() => {
     if (title !== currentTitle) {
-      setCurrentTitle(title); 
+      setCurrentTitle(title);
       setHasAnimated(false);
-      controls.start("hidden").then(() => {
-        controls.start("visible"); 
+      controls.start('hidden').then(() => {
+        controls.start('visible');
       });
     }
   }, [title, currentTitle, controls]);
 
   useEffect(() => {
     if (inView && !hasAnimated && shouldAnimate) {
-      controls.start("visible")
-      .then(() => {
+      controls.start('visible').then(() => {
         setHasAnimated(true);
         if (onComplete) {
-          onComplete(); 
+          onComplete();
         }
       });
     }
   }, [inView, controls, hasAnimated, shouldAnimate, onComplete]);
 
-  const words = currentTitle.split(" ");
+  const words = currentTitle.split(' ');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -75,14 +76,16 @@ const TitleAnimation = ({
   };
 
   return (
-        <motion.h1
+    <motion.h1
       ref={ref}
       aria-label={currentTitle}
       role="heading"
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`font-heading font-bold mb-0 pt-4 inline-block text-wrap ${className} ${titleClassName || ""}`} // Combine className and titleClassName
+      className={`font-heading font-bold mb-0 pt-4 inline text-wrap ${className} ${
+        titleClassName || ''
+      }`}
       style={style}
     >
       {dangerouslyHTML ? (
@@ -91,14 +94,14 @@ const TitleAnimation = ({
           className={className}
         />
       ) : (
-        <motion.div variants={containerVariants} className="inline">
+        <motion.div variants={containerVariants} className="inline text-wrap">
           {words.map((word, wordIndex) => (
             <motion.span
               key={wordIndex}
               variants={wordVariants}
-              className="inline-block mr-4"
+              className="inline mr-4 text-wrap"
             >
-              {word.split("").map((letter, letterIndex) => (
+              {word.split('').map((letter, letterIndex) => (
                 <motion.span
                   key={letterIndex}
                   variants={letterVariants}
@@ -106,7 +109,7 @@ const TitleAnimation = ({
                     duration: 0.15,
                     delay: wordIndex * 0.5 + letterIndex * 0.1,
                   }}
-                  className="inline-block"
+                  className="inline text-wrap"
                 >
                   {letter}
                 </motion.span>
@@ -120,16 +123,18 @@ const TitleAnimation = ({
           variants={letterVariants}
           transition={{
             duration: 0.5,
-            delay: words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3,
+            delay:
+              words.reduce((acc, word) => acc + word.length, 0) * 0.1 + 0.3,
           }}
-          className="inline-block align-baseline text-[6rem]"
-          style={{ lineHeight: "1", position: "relative", verticalAlign: "baseline" }}
+          className={`inline ${
+            dotClassName ||
+            'text-[4rem] -ml-4 md:text-[5rem] lg:text-[8rem] leading-10 align-baseline'
+          }`}
+          style={{
+            verticalAlign: 'baseline',
+          }}
         >
-          {dot === "!" || dot === "?" ? (
-            <span className="-ml-4 text-[3rem] md:text-[5rem]">{dot}</span>
-          ) : (
-            <Icon icon="icon-park-outline:dot" className="-ml-5 md:-ml-8 text-[1.5rem] md:text-[3rem] lg:text-[4rem] translate-y-[0.3em]" />
-          )}
+          {dot}
         </motion.span>
       )}
     </motion.h1>

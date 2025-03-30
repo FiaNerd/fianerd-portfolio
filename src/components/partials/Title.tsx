@@ -1,12 +1,13 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import TitleAnimation from "./TitleAnimation";
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import TitleAnimation from './TitleAnimation';
 
 interface IProps {
   id?: string;
   title?: string;
   titleClassName?: string;
   dot?: string;
+  dotClassName?: string;
   children: string;
   className?: string;
   subHeadingClassName?: string;
@@ -22,9 +23,10 @@ const Title = ({
   title,
   titleClassName,
   dot,
+  dotClassName,
   children,
-  className = "",
-  subHeadingClassName = "text-text-secondary dark:text-text-secondary",
+  className = '',
+  subHeadingClassName = 'text-text-secondary dark:text-text-secondary',
   sticky = false,
   style,
   dangerouslyHTML,
@@ -42,7 +44,7 @@ const Title = ({
     setHasAnimated(true); // Mark as animated
   };
 
-  const stickyClass = sticky ? "sticky left-0 top-0 z-20 mb-8 mb:20" : "";
+  const stickyClass = sticky ? 'sticky left-0 top-0 z-20 mb-8 mb:20' : '';
 
   return (
     <motion.div
@@ -51,12 +53,13 @@ const Title = ({
       style={style}
     >
       <TitleAnimation
-        title={title || ""}
-        dot={dot || ""}
+        title={title || ''}
+        dot={dot || ''}
         dangerouslyHTML={dangerouslyHTML}
         onComplete={handleAnimationComplete}
         shouldAnimate={!hasAnimated}
         titleClassName={titleClassName}
+        dotClassName={dotClassName}
       />
       <h3 className={`text-wrap ${subHeadingClassName}`}>{children}</h3>
     </motion.div>

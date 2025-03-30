@@ -14,7 +14,7 @@ const BackendPortfolio = () => {
       <p
         className="mb-12"
         dangerouslySetInnerHTML={{
-          __html: t('backendPortfolioSection.introBackendPortfolio'),
+          __html: t('portfolio/backendPortfolioSection:introBackendPortfolio'),
         }}
       />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto">

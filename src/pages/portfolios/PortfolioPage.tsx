@@ -216,12 +216,11 @@ const PortfolioPage = () => {
             'portfolio/graphicPortfolioSection:subTitleGraphicPortfolio'
           )}
           className="px-4 mt-0 mb-6 md:mb-8"
-          subHeadingClassName="text-text-secondary dark:text-[#1b0909]"
+          subHeadingClassName="text-text-secondary "
           light="text-[#8d4970] bg-[#fff5d7]"
           dark="dark:text-[#55ae63] dark:bg-[#1b0909]"
           sticky
         />
-
         <GraphicPortfolioPage />
       </section>
     </>

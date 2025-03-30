@@ -12,6 +12,7 @@ const BlogPage = () => {
   return (
     <section
       id="blog"
+     className="relative w-full overflow-hidden"
       style={{
         paddingTop: `${headerHeight}px`,
         transition: 'padding-top 0.3s ease',

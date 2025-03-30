@@ -20,7 +20,7 @@ const GraphicImageGallery = () => {
     year: string;
     yearText: string;
     client: string;
-    technologies: string;
+    technologies: string[];
     description: string;
     goals: string;
     role: string;
@@ -56,15 +56,15 @@ const GraphicImageGallery = () => {
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
   ) || {
+    ...graphicImages[0], // Use the structure of the first item as a fallback
+    technologies: [],
     urlTitle: '',
     title: '',
     subTitle: '',
     image: '',
     category: '',
     year: '',
-    yearText: '',
     client: '',
-    technologies: '',
     description: '',
     goals: '',
     role: '',
