@@ -49,7 +49,7 @@ const Title = ({
   return (
     <motion.div
       id={id}
-      className={`flex flex-col items-center text-center whitespace-nowrap ${className} ${light} ${dark} ${stickyClass}`}
+      className={`max-w-full flex flex-col items-center text-center break-spaces ${className} ${light} ${dark} ${stickyClass}`}
       style={style}
     >
       <TitleAnimation

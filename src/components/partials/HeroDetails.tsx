@@ -34,10 +34,10 @@ const HeroDetails = ({
           title={title}
           dot={'.'}
           children={subTitle}
-          className="bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg"
-          subHeadingClassName="text-amber-100"
-          titleClassName="text-[1.8rem] md:text-[2.5rem]"
-          dotClassName="text-[4rem] -ml-4 md:text-[5rem] lg:text-[6rem] leading-8 align-baseline absoulte"
+          className="bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg break-words"
+          subHeadingClassName="text-amber-100 break-words"
+          titleClassName="text-[1.8rem] md:text-[2.5rem] break-words"
+          dotClassName="text-[4rem] -ml-4 md:text-[5rem] lg:text-[6rem] leading-8 align-baseline"
         />
       </div>
     </div>

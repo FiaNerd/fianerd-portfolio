@@ -83,7 +83,7 @@ const TitleAnimation = ({
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`font-heading font-bold mb-0 pt-4 inline text-wrap ${className} ${
+      className={`font-heading font-bold mb-0 pt-4 ${className} ${
         titleClassName || ''
       }`}
       style={style}
@@ -94,12 +94,12 @@ const TitleAnimation = ({
           className={className}
         />
       ) : (
-        <motion.div variants={containerVariants} className="inline text-wrap">
+        <motion.div variants={containerVariants} className="inline">
           {words.map((word, wordIndex) => (
             <motion.span
               key={wordIndex}
               variants={wordVariants}
-              className="inline mr-4 text-wrap"
+              className="inline-block mr-4 "
             >
               {word.split('').map((letter, letterIndex) => (
                 <motion.span
@@ -109,7 +109,7 @@ const TitleAnimation = ({
                     duration: 0.15,
                     delay: wordIndex * 0.5 + letterIndex * 0.1,
                   }}
-                  className="inline text-wrap"
+                  className="inline"
                 >
                   {letter}
                 </motion.span>
