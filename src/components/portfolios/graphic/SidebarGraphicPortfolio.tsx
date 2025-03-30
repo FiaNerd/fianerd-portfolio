@@ -97,6 +97,7 @@ const SidebarGraphicPortfolio = ({
               {t('partialTranslation:goBack')}
             </button>
           </div>
+          
           <ContentTitleDetails
             title={graphicDetails?.title || ''}
             yearText={graphicDetails?.yearText || 'N/A'}

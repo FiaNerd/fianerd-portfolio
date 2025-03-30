@@ -83,7 +83,7 @@ const TitleAnimation = ({
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`font-heading font-bold mb-0 pt-4 ${className} ${
+      className={`font-heading font-bold mb-0 pt-4 leading-0 ${className} ${
         titleClassName || ''
       }`}
       style={style}
@@ -128,7 +128,7 @@ const TitleAnimation = ({
           }}
           className={`inline ${
             dotClassName ||
-            'text-[4rem] -ml-4 md:text-[5rem] lg:text-[8rem] leading-10 align-baseline'
+            'text-[4rem] -ml-4 md:text-[5rem] lg:text-[8rem] leading-none align-baseline'
           }`}
           style={{
             verticalAlign: 'baseline',

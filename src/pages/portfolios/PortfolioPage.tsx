@@ -85,7 +85,7 @@ const PortfolioPage = () => {
             title={t('titlePortfolio')}
             dot={'.'}
             children={t('subTitlePortfolio')}
-            className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 "
+            className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 leading-[0]"
             sticky
           />
           <div className="px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">
@@ -139,7 +139,7 @@ const PortfolioPage = () => {
           )}
           dot={'.'}
           children={t('portfolio/top5PortfolioSection:subTitleTop5Portfolio')}
-          className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 "
+          className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 leading-[0]"
           sticky
           title={''}
         />
@@ -161,7 +161,7 @@ const PortfolioPage = () => {
             children={t(
               'portfolio/frontendPortfolioSection:subTitleFrontendPortfolio'
             )}
-            className="px-4 mt-0 mb-6 md:mb-8"
+            className="px-4 mt-0 mb-6 md:mb-8 leading-[0]"
             light="text-[#ca0416] bg-[#f69497]"
             dark="dark:text-[#d6a70d] dark:bg-[#4a2342]"
             sticky
@@ -178,7 +178,7 @@ const PortfolioPage = () => {
           children={t(
             'portfolio/backendPortfolioSection:subTitlePortfolioBackend'
           )}
-          className=" px-4 mt-0 mb-6 md:mb-8"
+          className=" px-4 mt-0 mb-6 md:mb-8 leading-[0]"
           light="text-[#ec4428] bg-[#fff5d7]"
           dark="dark:text-[#1d7ecc] dark:bg-[#1b0909]"
           sticky
@@ -215,8 +215,8 @@ const PortfolioPage = () => {
           children={t(
             'portfolio/graphicPortfolioSection:subTitleGraphicPortfolio'
           )}
-          className="px-4 mt-0 mb-6 md:mb-8"
-          subHeadingClassName="text-text-secondary "
+          className="px-4 mt-0 mb-6 md:mb-8 leading-[0]"
+          subHeadingClassName="text-text-secondary"
           light="text-[#8d4970] bg-[#fff5d7]"
           dark="dark:text-[#55ae63] dark:bg-[#1b0909]"
           sticky
