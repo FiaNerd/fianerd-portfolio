@@ -1,13 +1,15 @@
-import { useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface IFadeInProps {
   customVars?: {
-    hidden: { opacity: number; scale: number };
+    hidden: { opacity: number; scale?: number; x?: number; y?: number };
     visible: {
       opacity: number;
-      scale: number;
+      scale?: number;
+      x?: number;
+      y?: number;
       transition: {
         delay: number;
         duration: number;
@@ -19,6 +21,7 @@ interface IFadeInProps {
   duration?: number;
   repeat?: boolean;
   threshold?: number;
+  direction?: 'left' | 'right' | 'up' | 'down'; // New prop for direction
 }
 
 export default function useFadeIn({
@@ -27,6 +30,7 @@ export default function useFadeIn({
   duration,
   repeat = false,
   threshold,
+  direction = 'up', // Default direction
 }: IFadeInProps) {
   const ctrls = useAnimation();
 
@@ -37,17 +41,22 @@ export default function useFadeIn({
 
   useEffect(() => {
     if (inView) {
-      ctrls.start("visible");
+      ctrls.start('visible');
     } else {
-      ctrls.start("hidden");
+      ctrls.start('hidden');
     }
   }, [ctrls, inView]);
 
   const vars = customVars || {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: {
+      opacity: 0,
+      x: direction === 'left' ? -100 : direction === 'right' ? 100 : 0,
+      y: direction === 'up' ? -100 : direction === 'down' ? 100 : 0,
+    },
     visible: {
       opacity: 1,
-      scale: 1,
+      x: 0,
+      y: 0,
       transition: {
         delay: delay || 1,
         duration: duration || 0.8,
