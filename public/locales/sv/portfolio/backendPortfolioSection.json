@@ -23,7 +23,7 @@
         },
         "titleDescription": "Backand för en foto app",
         "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
-        "description": "Jag utvecklade en backend för en fotot app som möjliggör användare att ladda upp, hämta och updatera och t abort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
+        "description": "Jag utvecklade en backend för en foto app som möjliggör användare att ladda upp, hämta och uppdatera och ta bort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
         "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
         "linkTitle": "Länkar",
         "ctaButton": "Visa Detaljer",

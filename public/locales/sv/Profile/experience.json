@@ -11,13 +11,13 @@
   "dateWorkBrutal": "Mars 2024 - pågående",
   "titleBrutal": "Brutal Beats",
   "workTitleBrutal": "Webbutveckling - fullstack",
-  "descriptionProjectBrutal": "<b>Sido-projekt</b> - Webbplats för bokningshantering",
+  "descriptionProjectBrutal": "<b>Sido projekt</b> - Webbplats för bokningshantering",
   "techBrutal": "<b>Tekniker:</b> React, TypeScript, Tailwindcss, Node.js",
 
   "dateWorkProdigies": "Januari 2024 - Augusti 2024",
   "titleProdigies": "Prodigies",
   "workTitleProdigies": "Apputveckling - fullstack",
-  "descriptionProjectProdigies": "<b>Sido-projekt</b> - App för studenter att hitta den perfekta utbildningen",
+  "descriptionProjectProdigies": "<b>Sido projekt</b> - App för studenter att hitta den perfekta utbildningen",
   "techProdigies": "<b>Tekniker:</b> React Native, TypeScript, SQLite, Firebase",
 
   "dateWorkOmegapoint": "September 2023 - December 2024",
@@ -29,7 +29,7 @@
   "dateWorkSlowfashion": "November 2023 - Maj 2024",
   "titleSlowfashion": "Slowfashion",
   "workTitleSlowfashion": "Backend App Utveckling",
-  "descriptionProjectSlowfashion": "<b>Sido-projekt</b> - App för shopping av varumärken",
+  "descriptionProjectSlowfashion": "<b>Sido projekt</b> - App för shopping av varumärken",
   "techSlowfashion": "<b>Tekniker:</b> ASP.Net Core web API och C#",
 
   "dateWorkAllaTiders": "September 2023 - pågående",
@@ -41,14 +41,14 @@
 
   "dateWorkPrintagon": "September 2023 - December 2024",
   "titlePrintagon": "Printagon Graphics",
-  "workTitlePrintagon": "Printing/Bookbinding/Warehouse, System Integration",
-  "workDescriptionPrintagon": "Machine operator in bookbinding, assistant in printing, and warehouse operations",
-  "descriptionProjectPrintagon": "<b>Side Project</b> - Building a management and inventory system with ASP.Net Core to streamline warehouse operations",
-  "techPrintagon": "<b>Technologies:</b> React, TypeScript, Axios, C#, Material UI, ASP.NET Core, Figma",
+  "workTitlePrintagon": "Printing/Bookbinding/Lager, System Integration",
+  "workDescriptionPrintagon": "Maskinoperatör inom bokbinderi, assistent inom tryckning och lagerhantering",
+  "descriptionProjectPrintagon": "<b>Sido projekt:</b> - Bygger ett hanterings- och inventeringssystem med ASP.Net Core för att effektivisera lagerhanteringen",
+  "techPrintagon": "<b>Tekniker:</b> React, TypeScript, Axios, C#, Material UI, ASP.NET Core, Figma",
 
   "dateWorkStumpen": "Mars 2008 - pågående",
   "titleStumpen": "Stumpen Ensemblen",
-  "workTitleStumpen": "Graisk designer",
+  "workTitleStumpen": "Grafisk designer",
   "workDescriptionStumpen": "Grafisk designer - skapar affischer, logotyper och annat grafiskt material",
   "descriptionProjectStumpen": "<b>Sido projekt</b> - skapar deras design för diverse föreställningar",
   "techStumpen": "<b>Tekniker:</b> Phtoshop, Illustrator & InDesign"

@@ -1,29 +1,26 @@
-{  "titleProfile": "Profil",
-    "dot": ".",
-    "subTitle": "bakom tangentbordet.",
-    
-    "title": "Skaparen bakom de digitala drömmarna",
-    "intro": "En resa driven av kreativitet, fylld av nyfikenhet och förverkligad genom kod och design.",
-   
-    "mainIntroProfile": "<span class='text-bg-secondary font-bold'>Välkommen till världen bakom skärmen!</span> När jag inte skriver kod eller felsöker ett projekt hittar du mig ofta upptäckande nya tekniktrender, försjunken i härlig musik eller brygga den perfekta koppen kaffe — en nödvändighet för varje utvecklare. Jag brinner för att omvandla komplexa problem till eleganta lösningar. För mig handlar bra kod inte bara om funktionalitet; det ska vara en glädje att både skriva och läsa. Oavsett om jag experimenterar med de senaste JavaScript-ramverken eller hittar kreativa sätt att förbättra användarupplevelser, söker jag alltid nästa utmaning som får mig att tänka utanför boxen. Utanför kodandet hämtar jag inspiration och motivation från mina intressen inom musik och design. Jag tror att en lekfull och nyfiken inställning kan leda till innovation, vare sig det gäller att utveckla nya funktioner eller hitta lustiga buggar. Här kan du utforska de olika projekten jag har arbetat med och se hur jag kombinerar teknik och kreativitet för att lösa verkliga problem. Låt oss koppla samman över vår gemensamma kärlek till teknik och kreativitet. Oavsett om det handlar om de senaste tekniktrenderna, kodningstips eller bara ett fantastiskt kafferecept, är jag alltid redo för en pratstund!",
-    "introBio": "Jag är en nyfiken problemlösare med en passion för programmering och kreativitet i blodet. Det jag älskar mest är att ta idéer och förvandla dem till användarvänliga digitala upplevelser.",
-    
-    "myBackgroundTitle": "Min resa inom IT",
-    "myBackgroundText": "Min resa in i webbutveckling började med en fascination för webdesign i Dreamweaver och grafisk design, en passion som öppnade dörrar till spännande projekt. Redan 2008 designade jag logotyp, affischer, programblad och flyers för teatergruppen Stumpenensemblen, ett samarbete som fortfarande pågår. Sedan dess har jag arbetat med flera andra teatergrupper och företag, där jag har fått kombinera mitt kreativa öga med praktiskt skapande. Efter flera år inom tryckteknik insåg jag att min verkliga drivkraft låg i att skapa funktionella och innovativa webblösningar.",
-    "myJourneyTitle": "Min tekniska resa",
-    "myJourneyText": "Min tekniska resa tog fart inom backend-utveckling med .NET, där jag lärde mig att bygga skalbara och hållbara system. Nyfikenheten för frontend-utveckling ledde mig till teknologier som JavaScript, React och TypeScript. Kombinationen av backend- och frontend-kunskaper gör det möjligt för mig att skapa kompletta lösningar – från robusta API:er i Node.js till snygga och responsiva gränssnitt. Min portfolio speglar denna resa – en blandning av teknisk kompetens och kreativt tänkande.",
-    "myFilosofiTitle": "Min arbetsfilosofi",
-    "myFilosofiSubtitle": "Jag strävar alltid efter att: ",
-    "myFilosofiText1": "Skriva ren och hållbar kod.",
-    "myFilosofiText2": "Lägga stort fokus på användarupplevelsen.",
-    "myFilosofiText3": "Lösa problem med ett öppet sinne och ett öga för detaljer.",
-    "myFilosofiText4": "Mitt mål är att skapa lösningar som inte bara fungerar – utan som sticker ut.",
-    "createTogheterTitle": "Låt oss skapa något fantastiskt tillsammans!",
-    "createTogheterText": "Är du nyfiken på ett samarbete eller har ett spännande projekt på gång? Tveka inte att höra av dig – jag ser fram emot att utforska nya möjligheter och skapa något fantastiskt tillsammans!",
-    "cta": "Läs mer",
-    "ctaLess": "Läs mindre"
+{
+  "titleProfile": "Profil",
+  "dot": ".",
+  "subTitle": "bakom tangentbordet.",
+
+  "title": "Skaparen bakom de digitala drömmarna",
+  "intro": "En resa driven av kreativitet, fylld av nyfikenhet och förverkligad genom kod och design.",
+
+  "mainIntroProfile": "<span class='text-bg-secondary font-bold'>Välkommen till världen bakom skärmen!</span> När jag inte skriver kod eller felsöker ett projekt hittar du mig ofta upptäckande nya tekniktrender, försjunken i härlig musik eller brygga den perfekta koppen kaffe — en nödvändighet för varje utvecklare. Jag brinner för att omvandla komplexa problem till eleganta lösningar. För mig handlar bra kod inte bara om funktionalitet; det ska vara en glädje att både skriva och läsa. Oavsett om jag experimenterar med de senaste JavaScript-ramverken eller hittar kreativa sätt att förbättra användarupplevelser, söker jag alltid nästa utmaning som får mig att tänka utanför boxen. Utanför kodandet hämtar jag inspiration och motivation från mina intressen inom musik och design. Jag tror att en lekfull och nyfiken inställning kan leda till innovation, vare sig det gäller att utveckla nya funktioner eller hitta lustiga buggar. Här kan du utforska de olika projekten jag har arbetat med och se hur jag kombinerar teknik och kreativitet för att lösa verkliga problem. Låt oss koppla samman över vår gemensamma kärlek till teknik och kreativitet. Oavsett om det handlar om de senaste tekniktrenderna, kodningstips eller bara ett fantastiskt kafferecept, är jag alltid redo för en pratstund!",
+  "introBio": "Jag är en nyfiken problemlösare med en passion för programmering och kreativitet i blodet. Det jag älskar mest är att ta idéer och förvandla dem till användarvänliga digitala upplevelser.",
+
+  "myBackgroundTitle": "Min resa inom IT",
+  "myBackgroundText": "Min resa in i webbutveckling började med en fascination för webdesign i Dreamweaver och grafisk design, en passion som öppnade dörrar till spännande projekt. Redan 2008 designade jag logotyp, affischer, programblad och flyers för teatergruppen Stumpenensemblen, ett samarbete som fortfarande pågår. Sedan dess har jag arbetat med flera andra teatergrupper och företag, där jag har fått kombinera mitt kreativa öga med praktiskt skapande. Efter flera år inom tryckteknik insåg jag att min verkliga drivkraft låg i att skapa funktionella och innovativa webblösningar.",
+  "myJourneyTitle": "Min tekniska resa",
+  "myJourneyText": "Min tekniska resa tog fart inom backend-utveckling med .NET, där jag lärde mig att bygga skalbara och hållbara system. Nyfikenheten för frontend-utveckling ledde mig till teknologier som JavaScript, React och TypeScript. Kombinationen av backend- och frontend-kunskaper gör det möjligt för mig att skapa kompletta lösningar – från robusta API:er i Node.js till snygga och responsiva gränssnitt. Min portfolio speglar denna resa – en blandning av teknisk kompetens och kreativt tänkande.",
+  "myFilosofiTitle": "Min arbetsfilosofi",
+  "myFilosofiSubtitle": "Jag strävar alltid efter att: ",
+  "myFilosofiText1": "Skriva ren och hållbar kod.",
+  "myFilosofiText2": "Lägga stort fokus på användarupplevelsen.",
+  "myFilosofiText3": "Lösa problem med ett öppet sinne och ett öga för detaljer.",
+  "myFilosofiText4": "Mitt mål är att skapa lösningar som inte bara fungerar – utan som sticker ut.",
+  "createTogheterTitle": "Låt oss skapa något fantastiskt tillsammans!",
+  "createTogheterText": "Är du nyfiken på ett samarbete eller har ett spännande projekt på gång? Tveka inte att höra av dig – jag ser fram emot att utforska nya möjligheter och skapa något fantastiskt tillsammans!",
+  "cta": "Läs mer",
+  "ctaLess": "Läs mindre"
 }
-
-
-
-

@@ -17,7 +17,7 @@ const AboutMe = () => {
 
   const handleToggleText = () => {
     if (isExpanded) {
-      const articleTop = document.getElementById('profile');
+      const articleTop = document.getElementById('me');
 
       if (articleTop) {
         articleTop.scrollIntoView({ behavior: 'smooth' });
@@ -35,6 +35,7 @@ const AboutMe = () => {
           animate={ctrls}
           variants={vars}
           className="mx-auto"
+          id="me"
         >
           <img
             src="/assets/images/profile-img-mobile.jpg"
@@ -42,7 +43,7 @@ const AboutMe = () => {
             className="mx-auto lg:float-left mb-8 lg:mb-0 md:pr-8 max-w-full h-auto object-cover "
           />
           <h2 className="text-h2 m-0 font-bold text-[#ca5b87] dark:text-accent-primary not-italic">
-            {t('title')}
+            {t('profile/aboutMe:titleProfile')}
           </h2>
           <p className="italic">{t('intro')}</p>
           <p className="font-semibold tracking-wide">{t('introBio')}</p>

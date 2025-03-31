@@ -2,7 +2,7 @@
   "titleGraphicPortfolio": "Graphic Projects",
   "subTitleGraphicPortfolio": "Color and form without limits.",
   "descriptionGraphicPortfolio": "A collection of my most expressive graphic works.",
-  "top10graphicProjects": "Here are my top 11 graphic projects. I have primarily worked with theater groups, which has been a lot of fun as it has given me extra creative freedom. I have also worked with companies.",
+  "top10graphicProjects": "<span class='text-[#8d4970] dark:text-[#55ae63] font-semibold'>Here are my top 11 graphic projects. </span> I have primarily worked with theater groups, which has been a lot of fun as it has given me extra creative freedom. I have also worked with companies.",
   "graphicItemsPortfolioTitles": {
     "clientTitle": "Client",
     "technologiesTitle": "Technologies",

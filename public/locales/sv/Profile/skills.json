@@ -1,62 +1,62 @@
 {
-    "webSkills":{
-        "webSkillsTitle": "Webbkompetens",
-        "subTitleWebSkills": "Framtidens systemutvecklare",
-        "webbDev": "Systemutvecklare",
-        "titleWeb": "En kodblock i taget\n",
-        "titleWebDev": "Att bemästra konsten \nav programmering",
-        "titleCode": "Förvandlar idéer till\nren kod",
-        "subTitleWebDev": "Utvecklare på väg",
-        "textTitleDevGoal": "Mål och fokus inom utveckling 2025",
-      
-        "titleBE": "<b>Backend:</b>",
-        "textBE": "<b>C#, ASP.Net Core:</b> Fördjupa min expertis inom C# och ASP.Net Core för att utveckla säkra, skalbara och återanvändbara backend-applikationer.",
-        "textDB": "<b>SQL Server:</b> Bemästra SQL Server för att designa och hantera databaser effektivt och säkerställa dataintegritet.",
-        "textAzure": "<b>Molntjänster:</b> Utnyttja Azures kraftfulla kapabiliteter inom infrastrukturhantering, applikationsprestanda och molnbaserad utveckling för att bygga robusta applikationer.",
-        "titleFE": "<b>Frontend:</b>",
-        "textFE": "<b>React:</b> Skapa högresponsiva och återanvändbara komponenter för att bygga interaktiva användargränssnitt.",
-        "textVue": "<b>Vue.js:</b> Utforska möjligheterna med Vue.js för att förstå dess fördelar och integrera det i projekt där det är lämpligt.",
-        "textCMS": "<b>Umbraco:</b> Utöka mina färdigheter i Umbraco CMS för att effektivt hantera och distribuera dynamiskt webb-innehåll.",
-        "textGoal": "Den enda hindret är tiden, så strategisk planering och fokuserade ansträngningar kommer att vara avgörande för att uppnå dessa mål."
-    },
-    "graphicSkills": {
-        "graphicSkillsTitle": "Grafisk kompetens",
-        "subTitleSkills": "Kreativitet utan gränser",
-        "graphicTitle": "Grafisk design",
-        "subTitleGraphicSkills": "Konst möter syfte",
-        "titleGraphic": "En pixel i taget",
-        "titleGraphicSkills": "Behärska kreativitet inom design",
-        "titleDesign": "Designa drömmar\nPixel för pixel",
-        "subTitleGraphic": "– Omvandla idéer till design",
-        "textTitleGraphicGoal": "Mål och fokus inom grafisk design 2025",
+  "webSkills": {
+    "webSkillsTitle": "Webbkompetens",
+    "subTitleWebSkills": "Framtidens systemutvecklare",
+    "webbDev": "Systemutvecklare",
+    "titleWeb": "Ett kodblock i taget\n",
+    "titleWebDev": "Att bemästra konsten \nav programmering",
+    "titleCode": "Förvandlar idéer till\nren kod",
+    "subTitleWebDev": "Utvecklare på väg",
+    "textTitleDevGoal": "Mål och fokus inom utveckling 2025",
 
-        "textPS": "<b>Photoshop:</b> Kontinuerligt upptäcka nya tekniker och förfina mina färdigheter för att skapa visuellt imponerande designer.",
-        "textAI": "<b>Illustrator:</b> Ge liv åt idéer genom vektorbaserad konst och design.",
-        "textID": "<b>InDesign:</b> Skapa visuellt övertygande layouter för tryckta och digitala medier, med fokus på typografi, komposition och visuell berättande.",
-        "textUX/UI": "<b>UX / UI:</b> Fördjupa min förståelse för användbarhet, interaktionsdesign och skapa intuitiva, användarcentrerade upplevelser som binder samman funktionalitet och estetik.",
-        "textGoal": "För att uppnå mina designmål 2025 krävs en balans mellan kreativitet och struktur, där varje projekt blir ett steg mot att förfina mina färdigheter och skapa meningsfulla, visuella upplevelser."
-    },
-    "otherSkills": {
-        "otherSkillsTitle": "Övriga färdigheter",
-        "subTitleOtherSkills": "Mångsidighet i färdigheter",
-        "otherSkillsTitleLanguageAndDriving": "Språk och körkort",
-        "otherSkillsSubTitleLanguageAndDriving": "Flytande i ord och hjul",
-        "otherSkillsSwedishTitle": "Svenska: Modersmål",
-        "otherSkillsEnglishTitle": "Engelska: Flytande",
-        "otherSkillsDrivingTitle": "Körkort: Körkort kategori B och tillgång till egen bil"
-    },
-    "programsAndSoftwares": {
-        "programsAndSoftwaresTitle": "Min verktygslåda",
-        "programsAndSoftwareTitleProgram": "Skapande med kod och kreativitet",
-        "programsAndSoftwareSubTitleProgram": "Verktygen - från idé till implementering.",
-        "visualStudio": "Visual Studio - En klassiker för att bygga mjukvarulösningar.",
-        "visualStudioCode": "Visual Studio Code - Min lätta kodkompanjon.",
-        "terminal": "Terminal - Kommandocentralen för allt tekniskt.",
-        "git": "Git - Håller versionshantering under kontroll.",
-        "dataRequest": "Insomnia / Postman / Swagger - Gör API-förfrågningar till en barnlek.",
-        "ux/ui": "Figma - Där UI-drömmar blir verklighet.",
-        "photoshop": "Photoshop - Förbättrar visuella element med precision.",
-        "illustrator": "Illustrator - Skapar vektormagi.",
-        "inDesign": "InDesign - Designar layouter som ett proffs."
-    }
+    "titleBE": "<b>Backend:</b>",
+    "textBE": "<b>C#, ASP.Net Core:</b> Fördjupa min expertis inom C# och ASP.Net Core för att utveckla säkra, skalbara och återanvändbara backend-applikationer.",
+    "textDB": "<b>SQL Server:</b> Bemästra SQL Server för att designa och hantera databaser effektivt och säkerställa dataintegritet.",
+    "textAzure": "<b>Molntjänster:</b> Utnyttja Azures kraftfulla kapabiliteter inom infrastrukturhantering, applikationsprestanda och molnbaserad utveckling för att bygga robusta applikationer.",
+    "titleFE": "<b>Frontend:</b>",
+    "textFE": "<b>React:</b> Skapa högresponsiva och återanvändbara komponenter för att bygga interaktiva användargränssnitt.",
+    "textVue": "<b>Vue.js:</b> Utforska möjligheterna med Vue.js för att förstå dess fördelar och integrera det i projekt där det är lämpligt.",
+    "textCMS": "<b>Umbraco:</b> Utöka mina färdigheter i Umbraco CMS för att effektivt hantera och distribuera dynamiskt webb-innehåll.",
+    "textGoal": "Den enda hindret är tiden, så strategisk planering och fokuserade ansträngningar kommer att vara avgörande för att uppnå dessa mål."
+  },
+  "graphicSkills": {
+    "graphicSkillsTitle": "Grafisk kompetens",
+    "subTitleSkills": "Kreativitet utan gränser",
+    "graphicTitle": "Grafisk design",
+    "subTitleGraphicSkills": "Konst möter syfte",
+    "titleGraphic": "En pixel i taget",
+    "titleGraphicSkills": "Behärska kreativitet inom design",
+    "titleDesign": "Designa drömmar\nPixel för pixel",
+    "subTitleGraphic": "– Omvandla idéer till design",
+    "textTitleGraphicGoal": "Mål och fokus inom grafisk design 2025",
+
+    "textPS": "<b>Photoshop:</b> Kontinuerligt upptäcka nya tekniker och förfina mina färdigheter för att skapa visuellt imponerande designer.",
+    "textAI": "<b>Illustrator:</b> Ge liv åt idéer genom vektorbaserad konst och design.",
+    "textID": "<b>InDesign:</b> Skapa visuellt övertygande layouter för tryckta och digitala medier, med fokus på typografi, komposition och visuell berättande.",
+    "textUX/UI": "<b>UX / UI:</b> Fördjupa min förståelse för användbarhet, interaktionsdesign och skapa intuitiva, användarcentrerade upplevelser som binder samman funktionalitet och estetik.",
+    "textGoal": "För att uppnå mina designmål 2025 krävs en balans mellan kreativitet och struktur, där varje projekt blir ett steg mot att förfina mina färdigheter och skapa meningsfulla, visuella upplevelser."
+  },
+  "otherSkills": {
+    "otherSkillsTitle": "Övriga färdigheter",
+    "subTitleOtherSkills": "Mångsidighet i färdigheter",
+    "otherSkillsTitleLanguageAndDriving": "Språk och körkort",
+    "otherSkillsSubTitleLanguageAndDriving": "Flytande i ord och hjul",
+    "otherSkillsSwedishTitle": "Svenska: Modersmål",
+    "otherSkillsEnglishTitle": "Engelska: Flytande",
+    "otherSkillsDrivingTitle": "Körkort: Körkort kategori B och tillgång till egen bil"
+  },
+  "programsAndSoftwares": {
+    "programsAndSoftwaresTitle": "Min verktygslåda",
+    "programsAndSoftwareTitleProgram": "Skapande med kod och kreativitet",
+    "programsAndSoftwareSubTitleProgram": "Verktygen - från idé till implementering.",
+    "visualStudio": "Visual Studio - En klassiker för att bygga mjukvarulösningar.",
+    "visualStudioCode": "Visual Studio Code - Min lätta kodkompanjon.",
+    "terminal": "Terminal - Kommandocentralen för allt tekniskt.",
+    "git": "Git - Håller versionshantering under kontroll.",
+    "dataRequest": "Insomnia / Postman / Swagger - Gör API-förfrågningar till en barnlek.",
+    "ux/ui": "Figma - Där UI-drömmar blir verklighet.",
+    "photoshop": "Photoshop - Förbättrar visuella element med precision.",
+    "illustrator": "Illustrator - Skapar vektormagi.",
+    "inDesign": "InDesign - Designar layouter som ett proffs."
+  }
 }

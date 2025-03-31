@@ -6,9 +6,13 @@ const GraphicPortfolioPage = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto px-4">
-      <p className="text-center">
-        {t('portfolio/graphicPortfolioSection:top10graphicProjects')}
-      </p>
+      <p
+        className="text-center"
+        dangerouslySetInnerHTML={{
+          __html: t('portfolio/graphicPortfolioSection:top10graphicProjects'),
+        }}
+      />
+
       <GraphicImageGallery />
     </div>
   );
