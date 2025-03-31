@@ -1,5 +1,7 @@
-import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import debounce from 'lodash.debounce'; 
+
 
 const isElementInView = (element: HTMLElement): boolean => {
   const rect = element.getBoundingClientRect();
@@ -9,22 +11,17 @@ const isElementInView = (element: HTMLElement): boolean => {
   );
 };
 
-
-
 const useScrollSpy = (sectionIds: string[], basePath: string) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => {
+    // Debounced scroll handler
+    const debouncedOnScroll = debounce(() => {
       for (const id of sectionIds) {
         const section = document.getElementById(id);
         if (section && isElementInView(section)) {
           const newUrl = `${basePath}/${id}`;
-
-          console.log("Checking section:", id);
-console.log("New URL should be:", newUrl);
-console.log("Current URL:", location.pathname);
 
           if (location.pathname !== newUrl) {
             navigate(newUrl, { replace: true }); // Update URL without reloading
@@ -32,10 +29,15 @@ console.log("Current URL:", location.pathname);
           break; // Stop checking after the first visible section
         }
       }
-    };
+    }, 100); // Adjust debounce delay as needed
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener('scroll', debouncedOnScroll);
+
+    return () => {
+      // Cleanup the event listener and debounce instance
+      window.removeEventListener('scroll', debouncedOnScroll);
+      debouncedOnScroll.cancel(); // Cancel any pending debounced calls
+    };
   }, [sectionIds, basePath, location.pathname, navigate]);
 };
 

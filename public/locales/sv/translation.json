@@ -22,7 +22,7 @@
   "hobbiesDescription": "Utforska mina fritidsintressen",
   "portfolio": "Portfolio",
   "linkPortfolio": "Min Projektportfölj",
-  "top5best-projects": "Top <span class='text-btn-bg font-bold'>5</span> Best Projects",
+  "top5best-projects": "Top <span class='text-btn-bg font-bold'>5</span> Bästa Projekt",
   "top5best-projectsDescription": "Upptäck mina top <span class='text-btn-bg font-bold'>5</span> projekt",
   "allProjects": "Alla projekt",
   "allProjectsDescription": "Bläddra bland alla mina utvalda projekt",
@@ -33,7 +33,7 @@
   "fullstack": "Fullstack",
   "fullstackDescription": "Utforska mina utvalda fullstack-projekt",
   "graphic-design": "Grafisk design",
-  "grafiskDescription": "Utforska mina utvalda grafiska projekt",
+  "graphicDescription": "Utforska mina utvalda grafiska projekt",
   "blog": "Blog<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Kontakta mig",
   "languages": {
