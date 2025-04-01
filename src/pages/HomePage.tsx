@@ -52,12 +52,12 @@ const HomePage = () => {
       className="bg-blend-multiply"
     >
       {/* Hero Section */}
-      <section className="relative items-center ">
+      <section id="home" className="relative items-center ">
         <HeroSection />
       </section>
 
       {/* Profile Section */}
-      <section className="relative" id="me">
+      <section id="me" className="relative">
         <Title
           title={t('profile/aboutMe:titleProfile')}
           dot={t('profile/aboutMe:dot')}

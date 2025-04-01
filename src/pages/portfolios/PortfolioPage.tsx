@@ -36,7 +36,7 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     const handleHashNavigation = () => {
-      const sectionId = location.pathname.split('/').pop();
+      const sectionId = location.pathname.split('/').pop(); // Get the last part of the path
       if (sectionId) {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -46,7 +46,7 @@ const PortfolioPage = () => {
         }
       }
     };
-
+  
     handleHashNavigation();
   }, [location]);
 

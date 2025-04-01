@@ -5,7 +5,7 @@ import useFadeIn from '../../../hook/useFadeIn';
 
 const OtherSkills = () => {
   const { t } = useTranslation(['profile/skills']);
-  
+
   const { ref, ctrls, vars } = useFadeIn({
     delay: 0.5,
     duration: 1,

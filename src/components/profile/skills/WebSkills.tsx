@@ -1,8 +1,9 @@
-import { useTranslation } from "react-i18next";
-import ProgressBar from "./ProgressBar";
+import { useTranslation } from 'react-i18next';
+import ProgressBar from './ProgressBar';
+import useFadeIn from '../../../hook/useFadeIn';
 
 const WebSkills = () => {
-  const { t } = useTranslation("profile/skills");
+  const { t } = useTranslation('profile/skills');
 
   const webSkills = [
     { name: 'C#', percentage: 70 },
@@ -17,9 +18,7 @@ const WebSkills = () => {
 
   return (
     <section className="max-w-screen-xl mx-auto top-0 left-0 px-4 md:px-6 lg:px-10 py-8 md:py-12">
-      <div 
-        className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8"
-      >
+      <div className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8">
         <h2 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#489c80] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
           {t('webSkills.webbDev')}
         </h2>
@@ -32,22 +31,22 @@ const WebSkills = () => {
             {t('webSkills.subTitleWebDev')}
           </h3>
         </div>
-        
+
         <div className="items-center md:row-start-2 md:col-start-2">
           <h1 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#489c80] font-bold text-center mb-2">
-            {t("webSkills.titleWeb")}
+            {t('webSkills.titleWeb')}
           </h1>
           <h3 className="text-center text-text-secondary not-italic font-light">
             {t('webSkills.titleWebDev')}
           </h3>
         </div>
-      </div>     
+      </div>
 
-      <div 
-        className="grid grid-cols-1 md:order-0 lg:grid-cols-[6%_50%_auto] gap-4 mb-8"
-      >
+      <div className="grid grid-cols-1 md:order-0 lg:grid-cols-[6%_50%_auto] gap-4 mb-8">
         {/* Vertical Text Column */}
-        <div className="hidden lg:flex items-center justify-center"> {/* Added pr-8 for padding-right */}
+        <div className="hidden lg:flex items-center justify-center">
+          {' '}
+          {/* Added pr-8 for padding-right */}
           <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#489c80] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t('webSkills.webbDev')}
           </h1>
@@ -58,15 +57,33 @@ const WebSkills = () => {
           <p className="italic font-medium underline decoration-wavy text-center underline-offset-8 derocation-text-secondary dark:decoration-text-secondary text-md md:text-2xl md:mb-8 text-[#535437] dark:text-[#489c80]">
             {t('webSkills.textTitleDevGoal')}
           </p>
-          <h5 className="text-text-secondary not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('webSkills.titleBE') }}></h5>
+          <h5
+            className="text-text-secondary not-italic mb-0"
+            dangerouslySetInnerHTML={{ __html: t('webSkills.titleBE') }}
+          ></h5>
           <p dangerouslySetInnerHTML={{ __html: t('webSkills.textBE') }}></p>
           <p dangerouslySetInnerHTML={{ __html: t('webSkills.textDB') }}></p>
           <p dangerouslySetInnerHTML={{ __html: t('webSkills.textAzure') }}></p>
-          <h5 className="text-text-secondary not-italic mb-0" dangerouslySetInnerHTML={{ __html: t('webSkills.titleFE') }}></h5>
-          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('webSkills.textFE') }}></p>
-          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('webSkills.textVue') }}></p>
-          <p className="text-text-primary" dangerouslySetInnerHTML={{ __html: t('webSkills.textCMS') }}></p>
-          <p className="text-text-primary mb-12" dangerouslySetInnerHTML={{ __html: t('webSkills.textAzure') }}></p>
+          <h5
+            className="text-text-secondary not-italic mb-0"
+            dangerouslySetInnerHTML={{ __html: t('webSkills.titleFE') }}
+          ></h5>
+          <p
+            className="text-text-primary"
+            dangerouslySetInnerHTML={{ __html: t('webSkills.textFE') }}
+          ></p>
+          <p
+            className="text-text-primary"
+            dangerouslySetInnerHTML={{ __html: t('webSkills.textVue') }}
+          ></p>
+          <p
+            className="text-text-primary"
+            dangerouslySetInnerHTML={{ __html: t('webSkills.textCMS') }}
+          ></p>
+          <p
+            className="text-text-primary mb-12"
+            dangerouslySetInnerHTML={{ __html: t('webSkills.textAzure') }}
+          ></p>
           <p className="text-text-secondary font-sub-heading outline-dashed outline-2 outline-text-secondary dark:outline-text-[#489c80] outline-offset-4 italic font-normal py-2 px-4 p-2 rounded">
             {t('webSkills.textGoal')}
           </p>
@@ -74,9 +91,11 @@ const WebSkills = () => {
 
         {/* Skills Column */}
         <div className="col-span-2 md:col-span-1">
-          {webSkills.map(skill => (
+          {webSkills.map((skill) => (
             <div key={skill.name}>
-              <h2 className="text-sm text-text-secondary font-semibold mb-[0.15em]">{skill.name}</h2>
+              <h2 className="text-sm text-text-secondary font-semibold mb-[0.15em]">
+                {skill.name}
+              </h2>
               <ProgressBar percentage={skill.percentage} />
             </div>
           ))}
