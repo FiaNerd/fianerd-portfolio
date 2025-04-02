@@ -9,6 +9,9 @@ import useScrollSpy from "../../../hook/useScrollSpy";
 const Skills = () => {
   const { t } = useTranslation(["profile/skills"]);
   useScrollSpy(["web-skills", "graphic-skills", "other-skills"], "skills");
+  // useScrollUpdateURL(
+  //   ['web-skills', 'graphic-skills', 'other-skills']
+  // );
 
 
   return (

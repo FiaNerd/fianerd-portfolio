@@ -1,5 +1,4 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import RippedPaperBottom from '../../assets/svg/RippedPaperBottom';
 import RippedPaperTop from '../../assets/svg/RippedPaperTop';
@@ -12,12 +11,10 @@ import FrontendPortfolio from '../../components/portfolios/FrontendPortfolio';
 import FullStackPortfolio from '../../components/portfolios/FullStackPortfolio';
 import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
-import { useLocation } from 'react-router-dom';
-import useSmoothScroll from '../../hook/useSmoothScroll';
+import { useLocation } from 'react-router-dom';;
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
 import { NavLink } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
-import useScrollSpy from '../../hook/useScrollSpy';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
 
 const PortfolioPage = () => {
@@ -34,25 +31,11 @@ const PortfolioPage = () => {
 
   const location = useLocation();
 
-  useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.pathname.split('/').pop(); // Get the last part of the path
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
-        }
-      }
-    };
-  
-    handleHashNavigation();
-  }, [location]);
-
-  useScrollUpdateURL('portfolio');
-
-  useSmoothScroll(headerHeight);
+  useScrollUpdateURL(
+    ['portfolio', 'top5projects', 'frontend', 'backend', 'fullstack'],
+    '',
+    headerHeight
+  );
 
   const onButtonClick = () => {
     const resumePath =

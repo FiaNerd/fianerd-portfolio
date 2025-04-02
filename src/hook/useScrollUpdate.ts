@@ -1,30 +1,24 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const useScrollUpdateURL = (basePath: string = '') => {
+const useScrollUpdateURL = (
+  sectionIds: string[],
+  basePath: string = '',
+  headerHeight: number = 0
+) => {
+  const location = useLocation();
+
   useEffect(() => {
-    if (typeof document === 'undefined') {
-      console.error('Document is not available.');
-      return;
-    }
-
-    let timeout: NodeJS.Timeout;
-
     const handleScroll = () => {
-      clearTimeout(timeout); // Clear the previous timeout
-      timeout = setTimeout(() => {
-        const sections = document.querySelectorAll<HTMLElement>('section[id]');
-        if (!sections || sections.length === 0) {
-          console.warn('No sections with IDs found in the DOM.');
-          return;
-        }
+      const scrollPosition = window.scrollY + window.innerHeight / 4;
 
-        const scrollPosition = window.scrollY + window.innerHeight / 4;
+      let currentSectionId: string | null = null;
+      let minDistance = Infinity;
 
-        let currentSectionId: string | null = null;
-        let minDistance = Infinity;
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const sectionTop = section.offsetTop - headerHeight; // Account for header height
           const sectionHeight = section.offsetHeight;
           const distance = Math.abs(scrollPosition - sectionTop);
 
@@ -34,44 +28,42 @@ const useScrollUpdateURL = (basePath: string = '') => {
           ) {
             if (distance < minDistance) {
               minDistance = distance;
-              currentSectionId = section.id;
+              currentSectionId = id;
             }
           }
-        });
-
-        if (currentSectionId) {
-          const fullPath = basePath
-            ? `/${basePath.replace(/^\/|\/$/g, '')}/${currentSectionId}`
-            : `/${currentSectionId}`;
-
-          if (window.location.pathname !== fullPath) {
-            window.history.replaceState(null, '', fullPath);
-            console.log('Full Path (updated):', fullPath);
-          }
-        } else {
-          console.log(
-            'No matching section found for the current scroll position.'
-          );
         }
-      }, 100); // Debounce delay (100ms)
+      });
+
+      if (currentSectionId) {
+        const fullPath = basePath
+          ? `/${basePath.replace(/^\/|\/$/g, '')}/${currentSectionId}`
+          : `/${currentSectionId}`;
+
+        if (location.pathname !== fullPath) {
+          window.history.replaceState(null, '', fullPath);
+        }
+      }
     };
 
-    // Reset the URL on mount if the scroll position is at the top
-    if (window.scrollY === 0) {
-      const fullPath = basePath ? `/${basePath.replace(/^\/|\/$/g, '')}` : '/';
-      if (window.location.pathname !== fullPath) {
-        window.history.replaceState(null, '', fullPath);
-        console.log('Full Path (reset on mount):', fullPath);
+       const handleHashNavigation = () => {
+      const sectionId = location.pathname.split('/').pop();
+      if (sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = element.offsetTop - headerHeight; // Account for header height
+          window.scrollTo({ top: offset > 0 ? offset : 0, behavior: 'smooth' });
+        }
       }
-    }
+    };
 
+    // Handle scroll and hash navigation
     window.addEventListener('scroll', handleScroll);
+    handleHashNavigation();
 
     return () => {
-      clearTimeout(timeout); // Clear timeout on cleanup
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [basePath]);
+  }, [sectionIds, basePath, headerHeight, location.pathname]);
 };
 
 export default useScrollUpdateURL;

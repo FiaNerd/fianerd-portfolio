@@ -6,10 +6,8 @@ import AboutMe from '../components/profile/about/AboutMe';
 import Education from '../components/profile/education/Education';
 import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import useHeaderHeight from '../hook/useHeaderHeight';
-import useSmoothScroll from '../hook/useSmoothScroll';
 import useScrollUpdateURL from '../hook/useScrollUpdate';
 
 const HomePage = () => {
@@ -23,25 +21,12 @@ const HomePage = () => {
   const headerHeight = useHeaderHeight();
   const location = useLocation();
 
-  useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.pathname.split('/').pop();
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
-        }
-      }
-    };
+  useScrollUpdateURL(
+    ['home', 'me', 'experience', 'education', 'hobbies'],
+    '',
+    headerHeight
+  );
 
-    handleHashNavigation();
-  }, [location]);
-
-  useScrollUpdateURL('profile');
-
-  useSmoothScroll(headerHeight);
 
   return (
     <div
@@ -72,9 +57,7 @@ const HomePage = () => {
       </section>
 
       {/* Skills Section */}
-      {/* <section className="section top-0 relative"> */}
       <Skills />
-      {/* </section> */}
 
       {/* Work Experience Section */}
       <section id="experience" className="relative">

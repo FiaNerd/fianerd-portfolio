@@ -15,7 +15,6 @@ import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
 import useSmoothScroll from '../../hook/useSmoothScroll';
-import useScrollUpdateURL from '../../hook/useScrollUpdate';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);

@@ -31,11 +31,11 @@ const NavigationMenu = () => {
 
   useEffect(() => {
     const handleHashNavigation = () => {
-      const sectionId = location.hash.replace("#", "");
+      const sectionId = location.hash.replace('#', '');
       if (sectionId) {
         const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: 'smooth' });
         } else {
           console.warn(`Section with ID "${sectionId}" not found.`);
         }
@@ -96,7 +96,11 @@ const NavigationMenu = () => {
                   className="md:text-[1.4rem]"
                 />
                 {menu.icon && (
-                  <Arrow navigationMenuOpen={navigationMenuOpen} navigationMenu={navigationMenu} menu={menu} />
+                  <Arrow
+                    navigationMenuOpen={navigationMenuOpen}
+                    navigationMenu={navigationMenu}
+                    menu={menu}
+                  />
                 )}
               </NavLink>
             </li>

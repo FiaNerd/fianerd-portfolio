@@ -36,35 +36,51 @@ const App = () => {
             }}
           >
             <Routes>
+              {/* Home Route */}
               <Route path="/" element={<HomePage />} />
-              <Route path="/profile" element={<HomePage />}>
-                <Route path="home" element={<HomePage />} />
-                <Route path="me" element={<HomePage />} />
-                <Route path="web-skills" element={<HomePage />} />
-                <Route path="graphic-skills" element={<HomePage />} />
-                <Route path="other-skills" element={<HomePage />} />
-                <Route path="programs-and-softwares" element={<HomePage />} />
-                <Route path="experience" element={<HomePage />} />
-                <Route path="education" element={<HomePage />} />
-                <Route path="hobbies" element={<HomePage />} />
-              </Route>
+              <Route path="/profile" element={<HomePage />} />
+              <Route path="/profile/me" element={<HomePage />} />
+              <Route path="/profile/web-skills" element={<HomePage />} />
+              <Route path="/profile/graphic-skills" element={<HomePage />} />
+              <Route path="/profile/other-skills" element={<HomePage />} />
+              <Route
+                path="/profile/programs-and-softwares"
+                element={<HomePage />}
+              />
+              <Route path="/profile/experience" element={<HomePage />} />
+              <Route path="/profile/education" element={<HomePage />} />
+              <Route path="/profile/hobbies" element={<HomePage />} />
 
-              <Route path="/portfolio" element={<PortfolioPage />}>
-                <Route path="top-5-projects" element={<PortfolioPage />} />
-                <Route path="frontend" element={<PortfolioPage />} />
-                <Route path="backend" element={<PortfolioPage />} />
-                <Route path="fullstack" element={<PortfolioPage />} />
-                <Route path="graphic-design" element={<PortfolioPage />} />
-                <Route
-                  path="graphic-design/:urlTitle"
-                  element={<GraphicPortfolioDetailsPage />}
-                />
-                <Route path=":urlTitle" element={<PortfolioDetailsPage />} />
-              </Route>
+              {/* Portfolio Routes */}
+              <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio/top-5-projects"
+                element={<PortfolioPage />}
+              />
+              <Route path="/portfolio/frontend" element={<PortfolioPage />} />
+              <Route path="/portfolio/backend" element={<PortfolioPage />} />
+              <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio/graphic-design"
+                element={<PortfolioPage />}
+              />
+              <Route
+                path="/portfolio/graphic-design/:urlTitle"
+                element={<GraphicPortfolioDetailsPage />}
+              />
+              <Route
+                path="/portfolio/:urlTitle"
+                element={<PortfolioDetailsPage />}
+              />
 
+              {/* Blog Routes */}
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:urlTitle" element={<BlogDeatilsPage />} />
+
+              {/* Contact Route */}
               <Route path="/contact" element={<ContactPage />} />
+
+              {/* 404 Page */}
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </ErrorBoundary>

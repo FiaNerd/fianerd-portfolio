@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
+import { startTransition } from 'react';
 
 interface IProps {
   navigationMenu: string;
@@ -19,33 +20,25 @@ const NavigationSubMenuDropDownDesktop = ({
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleScroll = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault();
 
     const [path, sectionId] = url.split('#');
 
-    if (sectionId) {
-      if (location.pathname === path) {
-        // Scroll to the section if already on the same page
-        handleScroll(sectionId);
+    startTransition(() => {
+      if (sectionId) {
+        if (location.pathname === path) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          navigate(`${path}#${sectionId}`, { replace: true });
+        }
       } else {
-        // Navigate to the page and then scroll to the section
-        navigate(path);
-        setTimeout(() => {
-          handleScroll(sectionId);
-        }, 300);
+        navigate(path); // Navigate without section ID
       }
-    } else {
-      // Navigate to the page without a section ID
-      navigate(path);
-    }
+    });
 
     closeMenuOnClick();
   };
@@ -85,7 +78,9 @@ const NavigationSubMenuDropDownDesktop = ({
             className="w-full h-auto object-cover rounded-lg mb-4"
           />
           <p className="block font-bold text-base">
-            {navigationMenu === 'profile' ? t('subMenu.titleProfile') : t('subMenu.titlePortfolio')}
+            {navigationMenu === 'profile'
+              ? t('subMenu.titleProfile')
+              : t('subMenu.titlePortfolio')}
           </p>
           <p className="block text-sm opacity-70 text-accent-primary">
             {navigationMenu === 'profile'
