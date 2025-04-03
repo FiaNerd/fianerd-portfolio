@@ -11,11 +11,12 @@ import FrontendPortfolio from '../../components/portfolios/FrontendPortfolio';
 import FullStackPortfolio from '../../components/portfolios/FullStackPortfolio';
 import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
-import { useLocation } from 'react-router-dom';;
+import { useLocation } from 'react-router-dom';
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
 import { NavLink } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
+import useSmoothScroll from '../../hook/useSmoothScroll';
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
@@ -27,14 +28,13 @@ const PortfolioPage = () => {
     'portfolio/graphicPortfolioSection',
   ]);
 
-  const headerHeight = useHeaderHeight();
-
-  const location = useLocation();
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
   useScrollUpdateURL(
     ['portfolio', 'top5projects', 'frontend', 'backend', 'fullstack'],
     '',
-    headerHeight
+    headerHeight,
+    isHeaderVisible
   );
 
   const onButtonClick = () => {
@@ -56,11 +56,11 @@ const PortfolioPage = () => {
   return (
     <>
       <div
-        style={{
-          paddingTop: `${headerHeight}px`,
-          transition: 'padding-top 0.3s ease',
-        }}
         className="bg-blend-multiply "
+        style={{
+          marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+          transition: 'top 0.3s ease',
+        }}
       >
         <section className="bg-[#436e74] dark:bg-[#16443e]">
           <Title

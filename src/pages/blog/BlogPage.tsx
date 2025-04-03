@@ -3,19 +3,20 @@ import useHeaderHeight from '../../hook/useHeaderHeight';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import Title from '../../components/partials/Title';
 import BlogCards from '../../components/blog/BlogCards';
+import useScrollUpdateURL from '../../hook/useScrollUpdate';
 const BlogPage = () => {
   const { t } = useTranslation('blogPost');
-  const headerHeight = useHeaderHeight();
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
-  useSmoothScroll(headerHeight);
+  useScrollUpdateURL(['blog'], '', headerHeight, isHeaderVisible);
 
   return (
     <section
       id="blog"
-     className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden"
       style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
+        marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+        transition: 'top 0.3s ease',
       }}
     >
       <Title

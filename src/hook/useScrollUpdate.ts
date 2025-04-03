@@ -4,7 +4,8 @@ import { useLocation } from 'react-router-dom';
 const useScrollUpdateURL = (
   sectionIds: string[],
   basePath: string = '',
-  headerHeight: number = 0
+  headerHeight: number = 0,
+  isHeaderVisible: boolean = true
 ) => {
   const location = useLocation();
 
@@ -18,7 +19,9 @@ const useScrollUpdateURL = (
       sectionIds.forEach((id) => {
         const section = document.getElementById(id);
         if (section) {
-          const sectionTop = section.offsetTop - headerHeight; // Account for header height
+          const sectionTop =
+            section.offsetTop -
+            (isHeaderVisible ? headerHeight : 0); // Adjust for header height only if visible
           const sectionHeight = section.offsetHeight;
           const distance = Math.abs(scrollPosition - sectionTop);
 
@@ -45,13 +48,19 @@ const useScrollUpdateURL = (
       }
     };
 
-       const handleHashNavigation = () => {
+    const handleHashNavigation = () => {
       const sectionId = location.pathname.split('/').pop();
       if (sectionId) {
         const element = document.getElementById(sectionId);
         if (element) {
-          const offset = element.offsetTop - headerHeight; // Account for header height
-          window.scrollTo({ top: offset > 0 ? offset : 0, behavior: 'smooth' });
+          const offset = isHeaderVisible
+            ? element.offsetTop - 0 // Adjust for header height when visible
+            : element.offsetTop; // No adjustment when header is hidden
+
+          window.scrollTo({
+            top: offset > 0 ? offset : 0,
+            behavior: 'smooth',
+          });
         }
       }
     };
@@ -63,7 +72,7 @@ const useScrollUpdateURL = (
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [sectionIds, basePath, headerHeight, location.pathname]);
+  }, [sectionIds, basePath, headerHeight, isHeaderVisible, location.pathname]);
 };
 
 export default useScrollUpdateURL;

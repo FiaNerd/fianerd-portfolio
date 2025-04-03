@@ -1,39 +1,48 @@
-import { useTranslation } from "react-i18next";
-import Title from "../../partials/Title";
-import GraphicSkills from "./GraphicSkills";
-import OtherSkills from "./OtherSkills";
-import WebSkills from "./WebSkills";
-import useScrollUpdateURL from "../../../hook/useScrollUpdate";
-import useScrollSpy from "../../../hook/useScrollSpy";
+import { useTranslation } from 'react-i18next';
+import Title from '../../partials/Title';
+import GraphicSkills from './GraphicSkills';
+import OtherSkills from './OtherSkills';
+import WebSkills from './WebSkills';
+import useScrollUpdateURL from '../../../hook/useScrollUpdate';
+import useScrollSpy from '../../../hook/useScrollSpy';
+import useHeaderHeight from '../../../hook/useHeaderHeight';
 
 const Skills = () => {
-  const { t } = useTranslation(["profile/skills"]);
-  useScrollSpy(["web-skills", "graphic-skills", "other-skills"], "skills");
-  // useScrollUpdateURL(
-  //   ['web-skills', 'graphic-skills', 'other-skills']
-  // );
+  const { t } = useTranslation(['profile/skills']);
 
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+
+  //useScrollSpy(["web-skills", "graphic-skills", "other-skills"], "skills");
+  useScrollUpdateURL(
+    ['web-skills', 'graphic-skills', 'other-skills'],
+    '',
+    headerHeight,
+    isHeaderVisible 
+  );
 
   return (
-    <div className="mx-auto top-0 left-0 ">
+    <div className="mx-auto top-0 left-0 "
+    style={{
+      marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+      transition: 'top 0.3s ease',
+    }}>
       <section id="web-skills">
         <Title
-          title={t("webSkills.webSkillsTitle")}
+          title={t('webSkills.webSkillsTitle')}
           dot="."
-          children={t("webSkills.subTitleWebSkills")}
+          children={t('webSkills.subTitleWebSkills')}
           light="text-[#535437] bg-[#fff5d7]"
           dark="dark:text-[#489c80] dark:bg-[#1b0909]"
           sticky
         />
         <WebSkills />
       </section>
-      
 
       <section id="graphic-skills" className="top-0 left-0">
         <Title
           title={t('graphicSkills.graphicSkillsTitle')}
           dot="."
-          children={t("graphicSkills.subTitleGraphicSkills")}
+          children={t('graphicSkills.subTitleGraphicSkills')}
           className="text-[#4b1718] dark:text-bg-secondary  bg-[#fff5d7] dark:bg-[#1b0909]"
           light="text-[#4b1718] bg-[#fff5d7]"
           dark="dark:text-bg-secondary dark:bg-[#1b0909]"
@@ -44,9 +53,9 @@ const Skills = () => {
 
       <section id="other-skills" className="top-0 left-0">
         <Title
-          title={t("otherSkills.otherSkillsTitle")}
+          title={t('otherSkills.otherSkillsTitle')}
           dot="."
-          children={t("otherSkills.subTitleOtherSkills")}
+          children={t('otherSkills.subTitleOtherSkills')}
           className="text-[#bc3a08] dark:text-[#69864e] bg-[#fff5d7] dark:bg-[#1b0909]"
           light="text-[#bc3a08] bg-[#fff5d7]"
           dark="dark:text-[#69864e] dark:bg-[#1b0909]"

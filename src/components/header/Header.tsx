@@ -76,7 +76,7 @@ const Header = () => {
   useSmoothScroll(headerHeight);
 
   return (
-    <div
+    <header
       ref={headerRef}
       id="header"
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
@@ -129,7 +129,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

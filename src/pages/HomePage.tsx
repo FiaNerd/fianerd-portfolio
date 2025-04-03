@@ -9,6 +9,7 @@ import Skills from '../components/profile/skills/Skills';
 import { useLocation } from 'react-router-dom';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdate';
+import useSmoothScroll from '../hook/useSmoothScroll';
 
 const HomePage = () => {
   const { t } = useTranslation([
@@ -18,26 +19,24 @@ const HomePage = () => {
     'profile/hobbies',
   ]);
 
-  const headerHeight = useHeaderHeight();
-  const location = useLocation();
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
   useScrollUpdateURL(
     ['home', 'me', 'experience', 'education', 'hobbies'],
     '',
-    headerHeight
+    headerHeight,
+    isHeaderVisible
   );
-
 
   return (
     <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
-      }}
       className="bg-blend-multiply"
+      style={{
+        marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+        transition: 'top 0.3s ease',
+      }}
     >
-      {/* Hero Section */}
-      <section id="home" className="relative items-center ">
+      <section id="home">
         <HeroSection />
       </section>
 
