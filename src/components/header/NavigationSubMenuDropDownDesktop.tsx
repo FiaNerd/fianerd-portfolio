@@ -22,21 +22,21 @@ const NavigationSubMenuDropDownDesktop = ({
 
   console.log(location.pathname);
 
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+    const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault();
   
+    console.log('Navigating to:', url);
+  
     const [path, sectionId] = url.split('#');
-    console.log('Navigating to:', path, sectionId);
+    console.log('Path:', path, 'Section ID:', sectionId);
   
     startTransition(() => {
       if (sectionId) {
-        if (location.pathname === path) {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
         } else {
-          navigate(`${path}#${sectionId}`, { replace: true });
+          console.warn(`Section with ID "${sectionId}" not found.`);
         }
       } else {
         navigate(path); // Navigate without section ID

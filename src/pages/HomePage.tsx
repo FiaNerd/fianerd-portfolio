@@ -33,7 +33,7 @@ const HomePage = () => {
       'education',
       'hobbies',
     ],
-    '', // Base path for HomePage
+    '',
     headerHeight,
     isHeaderVisible
   );
@@ -46,10 +46,10 @@ const HomePage = () => {
         transition: 'top 0.3s ease',
       }}
     >
+      {/* Hero Section */},
       <section id="home">
         <HeroSection />
       </section>
-
       {/* Profile Section */}
       <section id="me" className="relative">
         <Title
@@ -64,12 +64,8 @@ const HomePage = () => {
         />
         <AboutMe />
       </section>
-
       {/* Skills Section */}
-      {/* <section id="skills" className="relative"> */}
       <Skills />
-      {/* </section> */}
-
       {/* Work Experience Section */}
       <section id="experience" className="relative">
         <Title
@@ -82,7 +78,7 @@ const HomePage = () => {
         />
         <WorkExperience />
       </section>
-
+      {/* Education Section */}
       <section id="education" className="relative">
         <Title
           title={t('profile/education:titleEducation')}
@@ -95,7 +91,6 @@ const HomePage = () => {
         />
         <Education />
       </section>
-
       {/* Hobbies Section */}
       <section id="hobbies" className="mb-20 relative">
         <Title

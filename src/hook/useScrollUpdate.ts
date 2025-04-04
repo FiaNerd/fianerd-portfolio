@@ -39,9 +39,8 @@ const useScrollUpdateURL = (
       if (currentSectionId) {
         // Construct the full path with basePath and currentSectionId
         const fullPath = basePath
-          ? `/${basePath.replace(/^\/|\/$/g, '')}/${currentSectionId}` // Ensure basePath is properly formatted
-          : `/${currentSectionId}`; // Use only the section ID if no basePath is provided
-
+          ? `${basePath.replace(/^\/|\/$/g, '')}/${currentSectionId}`
+          : `${currentSectionId}`;
         // Update the URL only if it differs from the current pathname
         if (location.pathname !== fullPath) {
           window.history.replaceState(null, '', fullPath);
@@ -51,6 +50,7 @@ const useScrollUpdateURL = (
 
     const handleHashNavigation = () => {
       const sectionId = location.pathname.split('/').pop();
+
       if (sectionId) {
         const element = document.getElementById(sectionId);
         if (element) {

@@ -3,26 +3,13 @@ import Title from '../../partials/Title';
 import GraphicSkills from './GraphicSkills';
 import OtherSkills from './OtherSkills';
 import WebSkills from './WebSkills';
-import useScrollUpdateURL from '../../../hook/useScrollUpdate';
 import useHeaderHeight from '../../../hook/useHeaderHeight';
-import { motion } from 'framer-motion';
-import Competencies from './Competencies';
-import useFadeIn from '../../../hook/useFadeIn';
-import ProgramAndSoftware from './ProgramAndSoftware';
+;
 
 const Skills = () => {
   const { t } = useTranslation(['profile/skills']);
 
   const { headerHeight, isHeaderVisible } = useHeaderHeight();
-
-  // useScrollUpdateURL(
-  //   ['web-skills', 'graphic-skills', 'other-skills'],
-  //   '',
-  //   headerHeight,
-  //   isHeaderVisible
-  // );
-  const fadeLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
-  const fadeRight = useFadeIn({ direction: 'right', delay: 0.7, duration: 1 });
 
   return (
     <div

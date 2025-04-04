@@ -97,7 +97,7 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-        <NavLink to="/" className="flex-shrink-0">
+        <NavLink to="/profile/home" className="flex-shrink-0">
           <img
             src={`/assets/images/logos/Logo${
               currentTheme === 'dark' ? 'Dark' : 'Light'
