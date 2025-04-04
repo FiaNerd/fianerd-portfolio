@@ -26,7 +26,7 @@ const BlogCards = () => {
         {/* Title Column */}
         <div className="flex col-span-1 text-bg-secondary dark:text-text-accent bg-[#1e3237] dark:bg-[#180f08] font-bold p-8 items-center justify-center">
           <div className="text-center">
-            <span className="text-[6.6em] leading-[1.3em] block">
+            <span className="text-[6.6em] leading-[1.6em] block">
               {t('blogPostTitlePart1').toUpperCase()}
             </span>
             <span className="text-[5.5em] leading-[0.3em] block">

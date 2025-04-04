@@ -1,63 +1,50 @@
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import ProgramAndSoftware from './ProgramAndSoftware';
 import useFadeIn from '../../../hook/useFadeIn';
+import useScrollUpdateURL from '../../../hook/useScrollUpdate';
+import useHeaderHeight from '../../../hook/useHeaderHeight';
+import Competencies from './Competencies';
 
 const OtherSkills = () => {
-  const { t } = useTranslation(['profile/skills']);
+  // Animations for the image and text
+  const fadeLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
+  const fadeRight = useFadeIn({ direction: 'right', delay: 0.7, duration: 1 });
 
-  const { ref, ctrls, vars } = useFadeIn({
-    delay: 0.5,
-    duration: 1,
-    repeat: true,
-  });
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+
+  // Include 'programs-and-softwares' in the sectionIds array
+  // useScrollUpdateURL(
+  //   ['other-skills','programs-and-softwares'],
+  //   '',
+  //   headerHeight,
+  //   isHeaderVisible
+  // );
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={ctrls}
-      variants={vars}
-      className="max-w-screen-xl mx-auto px-4 md:px-10 md:py-12 grid grid-rows-1 lg:grid-cols-2 gap-8 xl:px-20 text-center mb-12 lg:mb-20 justify-center "
-    >
-      <section>
-        <h1 className="text-center text-hover-text mb-8 text-2xl md:text-3xl lg:text-5xl bg-[#bc3a08] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
-          {t('otherSkills.otherSkillsTitle')}
-        </h1>
+    <div className="max-w-screen-xl mx-auto px-4 md:px-10 md:py-12 grid grid-rows-1 lg:grid-cols-2 gap-8 xl:px-20 text-center mb-12 lg:mb-20 justify-center">
+      <motion.div
+        ref={fadeLeft.ref}
+        initial="hidden"
+        animate={fadeLeft.ctrls}
+        variants={fadeLeft.vars}
+        className=" "
+      >
+        <section id="other-skills">
+          <Competencies />
+        </section>
+      </motion.div>
 
-        <h2 className="text-[#bc3a08] dark:text-[#69864e] font-textImportant text-4xl md:text-5xl mb-2 leading-none font-bold text-center md:leading-[3rem]">
-          {t('otherSkills.otherSkillsTitleLanguageAndDriving')}
-        </h2>
-        <h3 className="text-text-secondary font-light mb-12 leading-3 md:leading-none text-center">
-          {t('otherSkills.otherSkillsSubTitleLanguageAndDriving')}
-        </h3>
-
-        <div className="sm:col-span-1 md:pr-8 flex flex-col">
-          <p className="text-text-sub-heading not-italic text-text-secondary">
-            <span className="font-medium text-[#bc3a08] dark:text-[#69864e] font-sub-heading inline tracking-wider">
-              {t('otherSkills.otherSkillsSwedishTitle').split(':')[0]}:
-            </span>
-            {t('otherSkills.otherSkillsSwedishTitle').split(':')[1]}
-          </p>
-          <p className="not-italic text-text-secondary">
-            <span className="font-medium text-[#bc3a08] dark:text-[#69864e] font-sub-heading inline">
-              {t('otherSkills.otherSkillsEnglishTitle').split(':')[0]}:
-            </span>
-            {t('otherSkills.otherSkillsEnglishTitle').split(':')[1]}
-          </p>
-          <p className="not-italic text-text-secondary mb-12">
-            <span className="font-medium text-[#bc3a08] dark:text-[#69864e] font-sub-heading inline">
-              {t('otherSkills.otherSkillsDrivingTitle').split(':')[0]}:
-            </span>
-            {t('otherSkills.otherSkillsDrivingTitle').split(':')[1]}
-          </p>
-        </div>
-      </section>
-
-      <section id="programs-and-softwares">
-        <ProgramAndSoftware />
-      </section>
-    </motion.div>
+      <motion.div
+        ref={fadeRight.ref}
+        initial="hidden"
+        animate={fadeRight.ctrls}
+        variants={fadeRight.vars}
+      >
+        <section id="programs-and-softwares">
+          <ProgramAndSoftware />
+        </section>
+      </motion.div>
+    </div>
   );
 };
 

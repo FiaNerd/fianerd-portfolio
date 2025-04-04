@@ -20,8 +20,7 @@ const useScrollUpdateURL = (
         const section = document.getElementById(id);
         if (section) {
           const sectionTop =
-            section.offsetTop -
-            (isHeaderVisible ? headerHeight : 0); // Adjust for header height only if visible
+            section.offsetTop - (isHeaderVisible ? headerHeight : 0); // Adjust for header height only if visible
           const sectionHeight = section.offsetHeight;
           const distance = Math.abs(scrollPosition - sectionTop);
 
@@ -38,10 +37,12 @@ const useScrollUpdateURL = (
       });
 
       if (currentSectionId) {
+        // Construct the full path with basePath and currentSectionId
         const fullPath = basePath
-          ? `/${basePath.replace(/^\/|\/$/g, '')}/${currentSectionId}`
-          : `/${currentSectionId}`;
+          ? `/${basePath.replace(/^\/|\/$/g, '')}/${currentSectionId}` // Ensure basePath is properly formatted
+          : `/${currentSectionId}`; // Use only the section ID if no basePath is provided
 
+        // Update the URL only if it differs from the current pathname
         if (location.pathname !== fullPath) {
           window.history.replaceState(null, '', fullPath);
         }

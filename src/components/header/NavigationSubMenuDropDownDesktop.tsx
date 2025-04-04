@@ -20,11 +20,14 @@ const NavigationSubMenuDropDownDesktop = ({
   const navigate = useNavigate();
   const location = useLocation();
 
+  console.log(location.pathname);
+
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault();
-
+  
     const [path, sectionId] = url.split('#');
-
+    console.log('Navigating to:', path, sectionId);
+  
     startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
@@ -39,7 +42,7 @@ const NavigationSubMenuDropDownDesktop = ({
         navigate(path); // Navigate without section ID
       }
     });
-
+  
     closeMenuOnClick();
   };
 

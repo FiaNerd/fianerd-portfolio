@@ -17,8 +17,7 @@ const sendCustomEmail = async (data: any) => {
             }
         );
 
-        console.log("Email sent successfully:", response.text);
-
+     
         // Return a success flag or response for handling in the form
         return { success: true, response };
     } catch (error) {

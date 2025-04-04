@@ -16,7 +16,6 @@ import useScrollUpdateURL from '../../hook/useScrollUpdate';
 import { NavLink } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
-import useSmoothScroll from '../../hook/useSmoothScroll';
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
@@ -32,7 +31,7 @@ const PortfolioPage = () => {
 
   useScrollUpdateURL(
     ['portfolio', 'top5projects', 'frontend', 'backend', 'fullstack'],
-    '',
+    'portfolio',
     headerHeight,
     isHeaderVisible
   );
@@ -42,8 +41,11 @@ const PortfolioPage = () => {
       i18n.language === 'sv'
         ? '/files/SofiaMattiasson-CV-sv.pdf'
         : '/files/SofiaMattiasson-Resume-en.pdf';
+
     const link = document.createElement('a');
+
     link.href = resumePath;
+
     link.download =
       i18n.language === 'sv'
         ? 'SofiaMattiasson-CV-sv.pdf'

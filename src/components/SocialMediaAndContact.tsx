@@ -51,11 +51,10 @@ const SocialMediaAndContact = () => {
 
           <div className='inline-block min-h-[2em] w-0.5 self-stretch mx-auto bg-text-secondary dark:bg-text-accent'></div>
           
-          <a
-            href="mailto:hello.fianerd@gmail.com" // Use href instead of to
+          <NavLink to='/contact'
             className="flex flex-col cursor-pointer hover:opacity-70">
             <Icon icon="streamline:mail-send-envelope-solid" className='mx-auto text-xl md:text-2xl'/>
-          </a>
+          </NavLink>
         </div>
 
         {/* Decorative Line and Contact Text */}

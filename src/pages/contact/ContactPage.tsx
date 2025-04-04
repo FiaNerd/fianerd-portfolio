@@ -4,13 +4,17 @@ import ContactForm from "../../components/contact/ContactForm";
 import Title from "../../components/partials/Title";
 import useSmoothScroll from "../../hook/useSmoothScroll";
 import useHeaderHeight from "../../hook/useHeaderHeight";
+import useScrollUpdateURL from "../../hook/useScrollUpdate";
 
 const ContactPage = () => {
   const { t } = useTranslation("contact/contact");
-  const headerHeight = useHeaderHeight();
+  const {headerHeight, isHeaderVisible} = useHeaderHeight();
 
-  useSmoothScroll(headerHeight);
+  useScrollUpdateURL([
+    "contact",
+  ], "", headerHeight, isHeaderVisible);
 
+  
   return (
     <div
       style={{ paddingTop: `${headerHeight}px`, transition: "padding-top 0.3s ease" }}

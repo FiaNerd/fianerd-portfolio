@@ -32,8 +32,10 @@ const NavigationMenu = () => {
   useEffect(() => {
     const handleHashNavigation = () => {
       const sectionId = location.hash.replace('#', '');
+
       if (sectionId) {
         const element = document.getElementById(sectionId);
+
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         } else {
@@ -45,28 +47,35 @@ const NavigationMenu = () => {
     handleHashNavigation();
   }, [location]);
 
+  const closeMenuOnClick = () => {
+    setNavigationMenuOpen(false);
+    setNavigationMenu('');
+  };
+
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
-    e.preventDefault(); // Prevent default link behavior
-
-    const [path, sectionId] = url.split('#');
-
+    e.preventDefault();
+  
+    const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
+  
     startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
+          // If already on the correct path, scroll to the section
           const element = document.getElementById(sectionId);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
         } else {
+          // Navigate to the path and include the hash fragment
           navigate(`${path}#${sectionId}`, { replace: true });
         }
       } else {
-        navigate(path); // Navigate without section ID
+        // Navigate to the path without a hash fragment
+        navigate(path, { replace: true });
       }
     });
-
-    // Close the navigation menu after clicking
-    setNavigationMenuOpen(false);
+  
+    closeMenuOnClick();
   };
 
   return (

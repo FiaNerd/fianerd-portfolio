@@ -22,8 +22,18 @@ const HomePage = () => {
   const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
   useScrollUpdateURL(
-    ['home', 'me', 'experience', 'education', 'hobbies'],
-    '',
+    [
+      'home',
+      'me',
+      'web-skills',
+      'graphic-skills',
+      'other-skills',
+      'programs-and-softwares',
+      'experience',
+      'education',
+      'hobbies',
+    ],
+    '', // Base path for HomePage
     headerHeight,
     isHeaderVisible
   );
@@ -56,7 +66,9 @@ const HomePage = () => {
       </section>
 
       {/* Skills Section */}
+      {/* <section id="skills" className="relative"> */}
       <Skills />
+      {/* </section> */}
 
       {/* Work Experience Section */}
       <section id="experience" className="relative">
@@ -90,7 +102,7 @@ const HomePage = () => {
           title={t('profile/hobbies:titleHobbie')}
           dot={'!'}
           children={t('profile/hobbies:subTitleHobbie')}
-          className="top-0"
+          className=""
           subHeadingClassName="text-hover-text px-4"
           sticky
           light="text-[#b67076] bg-[#3e3a19]"
