@@ -6,10 +6,9 @@ import AboutMe from '../components/profile/about/AboutMe';
 import Education from '../components/profile/education/Education';
 import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
-import { useLocation } from 'react-router-dom';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdate';
-import useSmoothScroll from '../hook/useSmoothScroll';
+import { useState } from 'react';
 
 const HomePage = () => {
   const { t } = useTranslation([
@@ -23,8 +22,7 @@ const HomePage = () => {
 
   useScrollUpdateURL(
     [
-      'home',
-      'me',
+      'who-am-i',
       'web-skills',
       'graphic-skills',
       'other-skills',
@@ -33,10 +31,11 @@ const HomePage = () => {
       'education',
       'hobbies',
     ],
-    '',
+    'profile',
     headerHeight,
     isHeaderVisible
   );
+
 
   return (
     <div
@@ -47,11 +46,11 @@ const HomePage = () => {
       }}
     >
       {/* Hero Section */},
-      <section id="home">
+      <section id="profile">
         <HeroSection />
       </section>
       {/* Profile Section */}
-      <section id="me" className="relative">
+      <section id="who-am-i" className="relative">
         <Title
           title={t('profile/aboutMe:titleProfile')}
           dot={t('profile/aboutMe:dot')}

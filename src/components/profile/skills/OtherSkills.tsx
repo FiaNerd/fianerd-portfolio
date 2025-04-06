@@ -4,7 +4,7 @@ import useFadeIn from '../../../hook/useFadeIn';
 import Competencies from './Competencies';
 
 const OtherSkills = () => {
-  // Animations for the image and text
+  
   const fadeLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
   const fadeRight = useFadeIn({ direction: 'right', delay: 0.7, duration: 1 });
 

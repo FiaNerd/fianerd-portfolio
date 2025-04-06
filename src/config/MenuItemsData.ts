@@ -15,17 +15,17 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/profile/home',
+    url: '/',
     nav: HomePage,
   },
   {
     title: 'profile',
-    url: '/profile/me',
+    url: '/profile/who-am-i',
     icon: faCaretDown,
     subMenu: [
       {
         title: 'me',
-        url: '/profile/me',
+        url: '/profile/who-am-i',
         description: 'meDescription',
       },
       {

@@ -30,9 +30,16 @@ const PortfolioPage = () => {
   const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
   useScrollUpdateURL(
-    ['portfolio', 'top5projects', 'frontend', 'backend', 'fullstack'],
+    [
+      'portfolio',
+      'top-5-projects',
+      'frontend',
+      'backend',
+      'fullstack',
+      'graphic-design',
+    ],
     'portfolio',
-    headerHeight,
+    121,
     isHeaderVisible
   );
 
