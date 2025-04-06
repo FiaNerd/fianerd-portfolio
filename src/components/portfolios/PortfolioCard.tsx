@@ -1,8 +1,8 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import Button from "../partials/Button";
-import Popup from "../partials/Popup";
+import { Icon } from '@iconify/react/dist/iconify.js';
+import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Button from '../partials/Button';
+import Popup from '../partials/Popup';
 
 interface PortfolioCardProps {
   title: string;
@@ -45,7 +45,9 @@ const PortfolioCard = ({
   };
 
   const truncatedDescription =
-    description.length > 110 ? `${description.substring(0, 110)}...` : description;
+    description.length > 110
+      ? `${description.substring(0, 110)}...`
+      : description;
 
   return (
     <section className="flex flex-col items-center justify-center">
@@ -72,7 +74,9 @@ const PortfolioCard = ({
             {projectType.toLocaleUpperCase()}
           </h4>
           <h1 className="text-xl font-medium leading-6 tracking-wide text-accent-secondary cursor-pointer">
-            <NavLink to={`/portfolio/${encodeURIComponent(urlTitle)}`}>{title}</NavLink>
+            <NavLink to={`/portfolio/${encodeURIComponent(urlTitle)}`}>
+              {title}
+            </NavLink>
             <p className="text-xs font-light mb-0">{titleDescription}</p>
             <p
               className="italic text-xs text-accent-primary"
@@ -103,10 +107,25 @@ const PortfolioCard = ({
               </p>
               <ul className="flex items-center px-2 space-x-4 justify-center">
                 {links.map((item: any, index: number) => (
-                  <li key={index} className="justify-center items-center flex flex-col cursor-pointer">
-                    <NavLink to={item.url} className="flex flex-col items-center" target="_blank" rel="noopener noreferrer">
-                      <Icon icon={item.icon} width="24" height="24" className="text-btn-bg hover:text-bg-hover" />
-                      <p className="text-xs font-light tracking-wider text-text-primary">{item.type}</p>
+                  <li
+                    key={index}
+                    className="justify-center items-center flex flex-col cursor-pointer"
+                  >
+                    <NavLink
+                      to={item.url}
+                      className="flex flex-col items-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon
+                        icon={item.icon}
+                        width="24"
+                        height="24"
+                        className="text-btn-bg hover:text-bg-hover"
+                      />
+                      <p className="text-xs font-light tracking-wider text-text-primary">
+                        {item.type}
+                      </p>
                     </NavLink>
                   </li>
                 ))}
@@ -129,7 +148,9 @@ const PortfolioCard = ({
                         onMouseEnter={() => setHoveredTech(item.name)}
                         onMouseLeave={() => setHoveredTech(null)}
                       />
-                      {hoveredTech === item.name && <Popup text={item.name} show={true} />}
+                      {hoveredTech === item.name && (
+                        <Popup text={item.name} show={true} />
+                      )}
                     </div>
                   </li>
                 ))}

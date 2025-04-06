@@ -15,7 +15,7 @@ const BlogDetailsPage = () => {
     'blogPostCards',
     'partialTranslation',
   ]);
-  const headerHeight = useHeaderHeight();
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
 
@@ -25,8 +25,6 @@ const BlogDetailsPage = () => {
 
   const blog = blogDetails.find((blog) => blog.urlTitle === urlTitle);
 
-  useSmoothScroll(headerHeight);
-
   if (!blog) {
     return <div>{t('noBlogPost')}</div>;
   }
@@ -34,7 +32,7 @@ const BlogDetailsPage = () => {
   return (
     <div
       style={{
-        paddingTop: `${headerHeight}px`,
+        paddingTop: `${isHeaderVisible ? headerHeight : 0}px`,
         transition: 'padding-top 0.3s ease',
       }}
       className="bg-blend-multiply"

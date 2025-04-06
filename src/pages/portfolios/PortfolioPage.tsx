@@ -11,7 +11,6 @@ import FrontendPortfolio from '../../components/portfolios/FrontendPortfolio';
 import FullStackPortfolio from '../../components/portfolios/FullStackPortfolio';
 import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
-import { useLocation } from 'react-router-dom';
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
 import { NavLink } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
@@ -38,9 +37,7 @@ const PortfolioPage = () => {
       'fullstack',
       'graphic-design',
     ],
-    'portfolio',
-    121,
-    isHeaderVisible
+    'portfolio'
   );
 
   const onButtonClick = () => {

@@ -15,6 +15,7 @@ import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
 import useSmoothScroll from '../../hook/useSmoothScroll';
+import useHeaderHeight from '../../hook/useHeaderHeight';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);
@@ -26,31 +27,6 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavigating, setIsNavigating] = useState(false);
   const headerRef = useRef<HTMLDivElement | null>(null);
-
-  const [headerHeight, setHeaderHeight] = useState(0);
-
-  useLayoutEffect(() => {
-    if (headerRef.current) {
-      setHeaderHeight(headerRef.current.offsetHeight);
-    }
-  }, [isHidden]); // This should only trigger if the header's visibility changes
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-    setIsNavigating(true);
-    const timer = setTimeout(() => setIsNavigating(false), 200);
-    return () => clearTimeout(timer);
-  }, [location]);
-
-  useEffect(() => {
-    if (!isNavigating) {
-      const initialScrollY = window.scrollY;
-
-      if (initialScrollY > 0) {
-        setIsHidden(true);
-      }
-    }
-  }, [isNavigating]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,8 +48,6 @@ const Header = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, isNavigating]);
-
-  useSmoothScroll(headerHeight);
 
   return (
     <header

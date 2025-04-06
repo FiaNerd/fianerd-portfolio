@@ -1,34 +1,24 @@
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useHeaderHeight = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const header = document.getElementById('header');
+    console.log('Header Element:', header); // Debug log
 
     const updateHeaderHeight = () => {
       if (header) {
-        setHeaderHeight(header.getBoundingClientRect().height);
+        const height = header.getBoundingClientRect().height;
+        setHeaderHeight(height);
       }
     };
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsHeaderVisible(entry.isIntersecting); // Update visibility state
-      },
-      { root: null, threshold: 0 } // Observe when the header enters/exits the viewport
-    );
-
-    if (header) {
-      observer.observe(header);
-    }
-
-    updateHeaderHeight(); // Set initial height
+    updateHeaderHeight();
     window.addEventListener('resize', updateHeaderHeight);
 
     return () => {
-      if (header) observer.unobserve(header);
       window.removeEventListener('resize', updateHeaderHeight);
     };
   }, []);

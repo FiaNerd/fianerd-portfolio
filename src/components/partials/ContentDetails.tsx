@@ -12,6 +12,7 @@ const BlogContent = ({
 }: IBlogContentProps) => {
   return (
     <div className="flex flex-col mb-8 border-r-2 border-[#3C2F2F]">
+
       <p
         className="text-lg text-text-primary leading-8 max-h-[30em] mb-8 overflow-y-auto px-4"
         dangerouslySetInnerHTML={{ __html: content }}

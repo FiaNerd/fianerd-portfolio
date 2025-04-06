@@ -8,7 +8,7 @@ const BlogPage = () => {
   const { t } = useTranslation('blogPost');
   const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
-  useScrollUpdateURL(['blog'], '', headerHeight, isHeaderVisible);
+  useScrollUpdateURL(['blog'], '',);
 
   return (
     <section

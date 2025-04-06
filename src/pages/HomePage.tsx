@@ -31,11 +31,8 @@ const HomePage = () => {
       'education',
       'hobbies',
     ],
-    'profile',
-    headerHeight,
-    isHeaderVisible
+    'profile'
   );
-
 
   return (
     <div

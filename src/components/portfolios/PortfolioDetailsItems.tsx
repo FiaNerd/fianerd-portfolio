@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from '../partials/Popup';
 import PortfolioImageDetails from './PortfolioImageDetails';
+import useHeaderHeight from '../../hook/useHeaderHeight';
 
 interface PortfolioDetailsItemsProps {
   title: string;
@@ -40,7 +41,7 @@ const PortfolioDetailsItems = ({
 
   return (
     <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 lg:space-y-8">
-      <div className="">
+      <div>
         <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">
           {title}
         </h1>
@@ -152,4 +153,3 @@ const PortfolioDetailsItems = ({
 };
 
 export default PortfolioDetailsItems;
-

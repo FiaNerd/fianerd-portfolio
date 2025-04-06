@@ -15,7 +15,7 @@ import GraphicPortfolioDetailsPage from './pages/portfolios/GraphicPortfolioDeta
 const App = () => {
   return (
     <div className="App">
-      <Header />
+        <Header />
       <div className="flex flex-grow">
         {/* Sidebar */}
         <div className="sticky top-0 h-screen bg-bg-secondary text-text-secondary dark:bg-black dark:text-text-accent z-50 pointer-events-auto">

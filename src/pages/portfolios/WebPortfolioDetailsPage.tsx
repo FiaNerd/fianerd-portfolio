@@ -5,11 +5,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import useSmoothScroll from '../../hook/useSmoothScroll';
+import useHeaderHeight from '../../hook/useHeaderHeight';
 
 const PortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-  const [headerHeight, setHeaderHeight] = useState(0);
+  // const [headerHeight, setHeaderHeight] = useState(0);
   const { i18n, t } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
@@ -20,14 +21,7 @@ const PortfolioDetailsPage = () => {
   ]);
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    const header = document.getElementById('header');
-    if (header) {
-      setHeaderHeight(header.getBoundingClientRect().height);
-    }
-  }, []);
-
-  useSmoothScroll(headerHeight ? 0 : headerHeight);
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
   useEffect(() => {
     const loadPortfolioData = async () => {
@@ -73,15 +67,22 @@ const PortfolioDetailsPage = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(
+    'Header Height:',
+    headerHeight,
+    'Is Header Visible:',
+    isHeaderVisible
+  );
+
   return (
-    <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
-      }}
-      className="bg-blend-multiply mb-8"
-    >
-      <div className="mb-8">
+    <>
+      <div
+        className="mb-8"
+        style={{
+          marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+          transition: 'top 0.3s ease',
+        }}
+      >
         {portfolioItems.map((item) => (
           <HeroDetails
             key={item.urlTitle}
@@ -124,7 +125,7 @@ const PortfolioDetailsPage = () => {
             />
           </div>
         ))}
-    </div>
+    </>
   );
 };
 

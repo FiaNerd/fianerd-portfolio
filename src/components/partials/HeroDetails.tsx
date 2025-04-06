@@ -17,13 +17,12 @@ const HeroDetails = ({
   dark,
   light,
 }: HeroDetailsProps) => {
-  const headerHeight = useHeaderHeight();
-  useSmoothScroll(headerHeight);
-
   return (
     <div
       className={`relative w-full h-[15em] lg:h-[20rem] flex items-center justify-center bg-cover bg-center mb-8 ${dark} ${light}`}
-      style={{ backgroundImage: `url(${image})` }}
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
