@@ -20,29 +20,22 @@ const NavigationSubMenuDropDownDesktop = ({
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location.pathname);
-
-    const handleMenuClick = (e: React.MouseEvent, url: string) => {
+  const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault();
-  
-    console.log('Navigating to:', url);
-  
+    console.log('Full URL:', url); // Add this line to check the full URL
     const [path, sectionId] = url.split('#');
-    console.log('Path:', path, 'Section ID:', sectionId);
-  
-    startTransition(() => {
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
-        }
-      } else {
-        navigate(path); // Navigate without section ID
-      }
-    });
-  
+    console.log('Path:', path);
+    console.log('SectionId:', sectionId);
+
+    // Spara sectionId i sessionStorage om det finns
+    if (sectionId) {
+      sessionStorage.setItem('scrollToSection', sectionId);
+    } else {
+      console.log('No sectionId to save.');
+    }
+
+    // Navigera till path
+    navigate(path);
     closeMenuOnClick();
   };
 

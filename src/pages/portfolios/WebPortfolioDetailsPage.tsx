@@ -21,7 +21,7 @@ const PortfolioDetailsPage = () => {
   ]);
   const navigate = useNavigate();
 
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
   useEffect(() => {
     const loadPortfolioData = async () => {
@@ -67,19 +67,13 @@ const PortfolioDetailsPage = () => {
     return <div>Loading...</div>;
   }
 
-  console.log(
-    'Header Height:',
-    headerHeight,
-    'Is Header Visible:',
-    isHeaderVisible
-  );
 
   return (
     <>
       <div
         className="mb-8"
         style={{
-          marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+          marginTop: `${headerHeight}px`,
           transition: 'top 0.3s ease',
         }}
       >

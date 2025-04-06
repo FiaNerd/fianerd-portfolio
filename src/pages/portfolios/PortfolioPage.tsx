@@ -26,7 +26,7 @@ const PortfolioPage = () => {
     'portfolio/graphicPortfolioSection',
   ]);
 
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
   useScrollUpdateURL(
     [
@@ -37,7 +37,8 @@ const PortfolioPage = () => {
       'fullstack',
       'graphic-design',
     ],
-    'portfolio'
+    'portfolio',
+    headerHeight,
   );
 
   const onButtonClick = () => {
@@ -60,14 +61,13 @@ const PortfolioPage = () => {
   };
 
   return (
-    <>
-      <div
-        className="bg-blend-multiply "
-        style={{
-          marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
-          transition: 'top 0.3s ease',
-        }}
-      >
+    <div
+      className="bg-blend-multiply"
+      style={{
+        marginTop: `${headerHeight}px`,
+        transition: 'top 0.3s ease',
+      }}
+    >
         <section className="bg-[#436e74] dark:bg-[#16443e]">
           <Title
             id="portfolio"
@@ -119,7 +119,7 @@ const PortfolioPage = () => {
         </section>
 
         <SvgWaves colorLight={'#436e74'} colorDark={'#16443e'} />
-      </div>
+
 
       <section id="top-5-projects" className="top-0">
         <Title
@@ -212,7 +212,7 @@ const PortfolioPage = () => {
         />
         <GraphicPortfolioPage />
       </section>
-    </>
+    </div>
   );
 };
 

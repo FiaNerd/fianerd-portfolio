@@ -1,20 +1,21 @@
 // import { useEffect, useState } from 'react';
 
-// export const useHeaderVisibility = () => {
-//   const [visible, setVisible] = useState(true);
+import { useEffect, useState } from 'react';
 
-//   useEffect(() => {
-//     let lastScrollY = 0;
-//     const onScroll = () => {
-//       const currentScrollY = window.scrollY;
-//       setVisible(currentScrollY < lastScrollY || currentScrollY === 0);
-//       lastScrollY = currentScrollY;
-//     };
+export const useHeaderVisibility = () => {
+  const [visible, setVisible] = useState(true);
 
-//     window.addEventListener('scroll', onScroll);
-//     return () => window.removeEventListener('scroll', onScroll);
-//   }, []);
+  useEffect(() => {
+    let lastScrollY = 0;
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setVisible(currentScrollY < lastScrollY || currentScrollY === 0);
+      lastScrollY = currentScrollY;
+    };
 
-//   return visible;
-// };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
+  return visible;
+};

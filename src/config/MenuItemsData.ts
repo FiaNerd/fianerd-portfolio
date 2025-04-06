@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { faCaretDown, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import HomePage from '../pages/HomePage';
 
 export interface Route {
   url: string;
-  title: string; // This is translation key
+  title: string; // This is the translation key
   nav?: React.ComponentType<any>;
   subMenu?: Route[];
   dropdown?: Route[];
@@ -25,42 +24,42 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'me',
-        url: '/profile/who-am-i',
+        url: '/profile/who-am-i#who-am-i',
         description: 'meDescription',
       },
       {
         title: 'skillsWeb',
-        url: '/profile/web-skills',
+        url: '/profile/web-skills#web-skills',
         description: 'skillsWebDescription',
       },
       {
         title: 'skillsGraphic',
-        url: '/profile/graphic-skills',
+        url: '/profile/graphic-skills#graphic-skills',
         description: 'skillsGraphicDescription',
       },
       {
         title: 'otherSkills',
-        url: '/profile/other-skills',
+        url: '/profile/other-skills#other-skills',
         description: 'otherSkillsDescription',
       },
       {
         title: 'programsAndSoftwares',
-        url: '/profile/other-skills',
+        url: '/profile/other-skills#programs-and-softwares',
         description: 'programsAndSoftwaresDescription',
       },
       {
         title: 'experience',
-        url: '/profile/experience',
+        url: '/profile/experience#experience',
         description: 'experienceDescription',
       },
       {
         title: 'education',
-        url: '/profile/education',
+        url: '/profile/education#education',
         description: 'educationDescription',
       },
       {
         title: 'hobbies',
-        url: '/profile/hobbies',
+        url: '/profile/hobbies#hobbies',
         description: 'hobbiesDescription',
       },
     ],
@@ -72,32 +71,27 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/portfolio/top-5-projects',
+        url: '/portfolio/top-5-projects#top5best-projects',
         description: 'top5best-projectsDescription',
       },
-      // {
-      //   title: 'allProjects',
-      //   url: '/portfolio/all-projects',
-      //   description: 'allProjectsDescription',
-      // },
       {
         title: 'frontend',
-        url: '/portfolio/frontend',
+        url: '/portfolio/frontend#frontend',
         description: 'frontendDescription',
       },
       {
         title: 'backend',
-        url: '/portfolio/backend',
+        url: '/portfolio/backend#backend',
         description: 'backendDescription',
       },
       {
         title: 'fullstack',
-        url: '/portfolio/fullstack',
+        url: '/portfolio/fullstack#fullstack',
         description: 'fullstackDescription',
       },
       {
         title: 'graphic-design',
-        url: '/portfolio/graphic-design',
+        url: '/portfolio/graphic-design#graphic-design',
         description: 'graphicDescription',
       },
     ],

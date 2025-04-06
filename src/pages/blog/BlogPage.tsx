@@ -6,16 +6,16 @@ import BlogCards from '../../components/blog/BlogCards';
 import useScrollUpdateURL from '../../hook/useScrollUpdate';
 const BlogPage = () => {
   const { t } = useTranslation('blogPost');
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
-  useScrollUpdateURL(['blog'], '',);
+  useScrollUpdateURL(['blog'], '');
 
   return (
     <section
       id="blog"
       className="relative w-full overflow-hidden"
       style={{
-        marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+        marginTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
       }}
     >
