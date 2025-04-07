@@ -98,15 +98,7 @@ const GraphicPortfolioContentAbout = ({
           )}
 
           {/* Results Section */}
-          {item.results && (
-            <div>
-              <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
-                {titles.resultsTitle}
-              </h4>
-              <p>{item.results}</p>
-            </div>
-          )}
-
+      
           {/* Testimonial Section */}
           {item.testimonial && (
             <div>
@@ -116,17 +108,6 @@ const GraphicPortfolioContentAbout = ({
               <p>{item.testimonial}</p>
             </div>
           )}
-
-          {/* Result */}
-          {item.results && (
-            <div>
-              <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
-                {titles.resultsTitle}
-              </h4>
-              <p>{item.results}</p>
-            </div>
-          )}
-
           {/* Tags Section */}
           <div>
             <h4 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
