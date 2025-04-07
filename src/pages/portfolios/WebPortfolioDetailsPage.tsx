@@ -1,10 +1,9 @@
 import { Icon } from '@iconify/react';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
-import useSmoothScroll from '../../hook/useSmoothScroll';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 
 const WebPortfolioDetailsPage = () => {
@@ -21,9 +20,6 @@ const WebPortfolioDetailsPage = () => {
     'partialTranslation',
   ]);
   const navigate = useNavigate();
-
-  console.log('URL Title:', urlTitle);
-  console.log('Portfolio Items:', portfolioItems);
 
   const { headerHeight } = useHeaderHeight();
 
@@ -62,13 +58,9 @@ const WebPortfolioDetailsPage = () => {
         (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
       );
 
-      console.log('Filtered Items:', filteredItems);
-
       const uniqueItems = Array.from(
         new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
       );
-
-      console.log('Unique Items:', uniqueItems);
 
       setPortfolioItems(uniqueItems);
     };

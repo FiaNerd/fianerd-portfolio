@@ -22,10 +22,7 @@ const NavigationSubMenuDropDownDesktop = ({
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault();
-    console.log('Full URL:', url); // Add this line to check the full URL
     const [path, sectionId] = url.split('#');
-    console.log('Path:', path);
-    console.log('SectionId:', sectionId);
 
     // Spara sectionId i sessionStorage om det finns
     if (sectionId) {

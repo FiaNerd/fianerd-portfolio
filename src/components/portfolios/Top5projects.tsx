@@ -20,7 +20,6 @@ const Top5Projects = () => {
 
   const navigateToDetails = (urlTitle: string) => {
     navigate(`/portfolio/${urlTitle}`);
-    console.log(urlTitle);
   };
 
   return (
