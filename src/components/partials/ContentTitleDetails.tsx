@@ -2,6 +2,8 @@ import React from 'react';
 
 interface IContentTitleDetails {
   title: string;
+  clientTitle?: string;
+  client?: string;
   day?: string;
   month?: string;
   year?: string;
@@ -13,11 +15,12 @@ interface IContentTitleDetails {
 
 const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
   title,
+  clientTitle,
+  client,
   day,
   month,
   year,
   yearText,
-  subTitle,
 }) => {
   return (
     <>
@@ -52,7 +55,10 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
           <div className="flex flex-col">
             {/* Title */}
             <h2 className="text-[#3C2F2F] mb-0 font-bold ">{title}</h2>
-            <p className="text-[#695050]">{subTitle}</p>
+            <div className="flex flex-rows gap-4">
+              <span className="text-[#695050] font-bold">{clientTitle}</span>
+              <span>{client}</span>
+            </div>
           </div>
         </div>
 

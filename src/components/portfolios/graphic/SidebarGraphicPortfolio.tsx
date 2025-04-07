@@ -24,6 +24,7 @@ interface ISidebarGraphicPortfolioProps {
     category: string;
     year: string;
     yearText: string;
+    clientTitle?: string;
     client: string;
     tecthTitle?: string;
     tech: { name: string; icon: string }[];
@@ -60,11 +61,12 @@ const SidebarGraphicPortfolio = ({
     return null; // Don't render if the sidebar is not visible or no data is available
   }
 
-
   // Transform graphicDetails into an array
   const graphicItemsPortfolio = [
     {
+      clientTitle: graphicDetails?.clientTitle,
       client: graphicDetails?.client,
+      subTitle: graphicDetails?.subTitle,
       techTitle: graphicDetails?.tecthTitle,
       tech:
         graphicDetails?.tech?.map((technology) => ({
@@ -83,6 +85,11 @@ const SidebarGraphicPortfolio = ({
       ctaButton: graphicDetails?.ctaButton,
     },
   ];
+
+   // Fetch titles dynamically
+   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
+    clientTitle?: string;
+  };
 
   return (
     <>
@@ -122,6 +129,8 @@ const SidebarGraphicPortfolio = ({
               title={graphicDetails?.title || ''}
               yearText={graphicDetails?.yearText || 'N/A'}
               year={graphicDetails?.year || ''}
+              clientTitle={titles?.clientTitle || ''}
+              client={graphicDetails?.client || ''}
               subTitle={graphicDetails?.subTitle || ''}
             />
 

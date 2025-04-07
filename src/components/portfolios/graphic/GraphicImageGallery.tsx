@@ -20,6 +20,8 @@ const GraphicImageGallery = () => {
     year: string;
     yearText: string;
     client: string;
+    image: string;
+    images: { src: string; alt: string; span?: string }[];
     tech: { name: string; icon: string }[];
     description: string;
     goals: string;
@@ -33,7 +35,6 @@ const GraphicImageGallery = () => {
     demands: string;
     alt: string;
     ctaButton: string;
-    image: string;
   }[];
 
   const column1 = graphicImages.slice(0, 3);
@@ -61,8 +62,10 @@ const GraphicImageGallery = () => {
     title: '',
     subTitle: '',
     image: '',
+    images: [{ src: '', alt: '', span: '' }],
     category: '',
     year: '',
+    yearText: '',
     client: '',
     description: '',
     goals: '',

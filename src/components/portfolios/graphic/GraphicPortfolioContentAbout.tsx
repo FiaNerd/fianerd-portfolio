@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 interface IGraphicItem {
   urlTitle?: string;
-  client: string;
+  subTitle?: string;
   techTitle?: string;
   tech: { name: string; icon: string }[];
   goals: string;
@@ -27,11 +27,13 @@ const GraphicPortfolioContentAbout = ({
 }: GraphicPortfolioContentAboutProps) => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
 
-  console.log(graphicItemsPortfolio);
+  if (!graphicItemsPortfolio || graphicItemsPortfolio.length === 0) {
+    return <p className="text-sm text-gray-500">No data available</p>;
+  }
 
   // Fetch titles dynamically
   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
-    clientTitle?: string;
+    subTitle?: string;
     techTitle?: string;
     tech?: string;
     tagsTitle?: string;
@@ -47,18 +49,19 @@ const GraphicPortfolioContentAbout = ({
       {graphicItemsPortfolio.map((item, index) => (
         <div key={index} className="flex flex-col gap-4">
           {/* Client Section */}
-          <div>
-            <h5 className="mb-0 text-bg-secondary dark:text-text-accent font-semibold">
-              {titles.clientTitle}
-            </h5>
-            <p dangerouslySetInnerHTML={{ __html: item.client }} />
-          </div>
+          <h4 className="font-bold mx-auto">{item.subTitle}</h4>
 
           {/* Technologies Section */}
           <div>
-            <h5 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
-              {titles.techTitle}
-            </h5>
+            <div>
+              {item.tech && (
+                <h5 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
+                  {item.techTitle ||
+                    titles.techTitle ||
+                    'No technology title available'}
+                </h5>
+              )}
+            </div>
 
             <div className="flex flex-wrap gap-x-2">
               {item.tech?.length ? (
@@ -67,7 +70,6 @@ const GraphicPortfolioContentAbout = ({
                     key={techIndex}
                     className="flex items-center gap-2 px-2 py-1 dark:border-text-accent rounded text-sm"
                   >
-                    {/* Render the icon */}
                     <Icon
                       icon={tech.icon}
                       width="24"
