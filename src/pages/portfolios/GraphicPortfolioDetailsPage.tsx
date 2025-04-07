@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 const GraphicPortfolioDetails = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
   // useSmoothScroll(headerHeight);
 

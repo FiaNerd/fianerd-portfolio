@@ -15,7 +15,7 @@ const BlogDetailsPage = () => {
     'blogPostCards',
     'partialTranslation',
   ]);
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ const BlogDetailsPage = () => {
   return (
     <div
       style={{
-        paddingTop: `${isHeaderVisible ? headerHeight : 0}px`,
+        paddingTop: `${headerHeight}px`,
         transition: 'padding-top 0.3s ease',
       }}
       className="bg-blend-multiply"

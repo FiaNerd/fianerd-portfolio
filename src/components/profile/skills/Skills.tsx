@@ -4,18 +4,16 @@ import GraphicSkills from './GraphicSkills';
 import OtherSkills from './OtherSkills';
 import WebSkills from './WebSkills';
 import useHeaderHeight from '../../../hook/useHeaderHeight';
-;
-
 const Skills = () => {
   const { t } = useTranslation(['profile/skills']);
 
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
   return (
     <div
       className="mx-auto top-0 left-0 "
       style={{
-        marginTop: isHeaderVisible ? `${headerHeight}px` : 0,
+        marginTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
       }}
     >

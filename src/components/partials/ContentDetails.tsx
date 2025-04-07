@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { IBlogContentProps } from '../../interfaces/BlogInterface';
 
-const BlogContent = ({
+const ContentDetails = ({
   content,
   suffix,
   http,
@@ -12,7 +12,6 @@ const BlogContent = ({
 }: IBlogContentProps) => {
   return (
     <div className="flex flex-col mb-8 border-r-2 border-[#3C2F2F]">
-
       <p
         className="text-lg text-text-primary leading-8 max-h-[30em] mb-8 overflow-y-auto px-4"
         dangerouslySetInnerHTML={{ __html: content }}
@@ -52,4 +51,4 @@ const BlogContent = ({
   );
 };
 
-export default BlogContent;
+export default ContentDetails;

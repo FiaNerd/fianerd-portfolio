@@ -11,11 +11,12 @@ import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
 import GraphicPortfolioDetailsPage from './pages/portfolios/GraphicPortfolioDetailsPage';
+import WebPortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
 
 const App = () => {
   return (
     <div className="App">
-        <Header />
+      <Header />
       <div className="flex flex-grow">
         {/* Sidebar */}
         <div className="sticky top-0 h-screen bg-bg-secondary text-text-secondary dark:bg-black dark:text-text-accent z-50 pointer-events-auto">
@@ -60,12 +61,12 @@ const App = () => {
                 element={<PortfolioPage />}
               />
               <Route
-                path="/portfolio/graphic-design/:urlTitle"
-                element={<GraphicPortfolioDetailsPage />}
+                path="/portfolio/:urlTitle"
+                element={<WebPortfolioDetailsPage />}
               />
               <Route
-                path="/portfolio/:urlTitle"
-                element={<PortfolioDetailsPage />}
+                path="/portfolio/graphic-design/:urlTitle"
+                element={<GraphicPortfolioDetailsPage />}
               />
 
               {/* Blog Routes */}

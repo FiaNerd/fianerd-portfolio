@@ -27,15 +27,19 @@ interface PortfolioDetailsItemsProps {
 }
 
 const PortfolioDetailsItems = ({
-  title,
-  titleDescription,
-  images,
-  description,
-  techTitle,
-  tech,
-  applicationTypeDetail,
-  linkTitle,
-  links,
+  title = 'Untitled',
+  titleDescription = 'No description available',
+  images = [],
+  description = 'No description available',
+  techTitle = '',
+  tech = [],
+  applicationTypeDetail = {
+    text: '',
+    icon: { name: '', width: 0, height: 0, color: '' },
+    suffix: '',
+  },
+  linkTitle = '',
+  links = [],
 }: PortfolioDetailsItemsProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
@@ -67,8 +71,8 @@ const PortfolioDetailsItems = ({
             </p>
 
             <ul className="flex items-center space-x-4 justify-center px-2 lg:px-8">
-              {links &&
-                links.map((item: any, index: number) => (
+              {links.length > 0 &&
+                links.map((item, index) => (
                   <li
                     key={index}
                     className="justify-center items-center flex flex-col cursor-pointer"
@@ -99,23 +103,24 @@ const PortfolioDetailsItems = ({
               {techTitle}
             </p>
             <ul className="items-center pb-4 grid grid-cols-3 md:grid-cols-5 justify-center gap-8">
-              {tech.map((item: any, index: number) => (
-                <li key={index}>
-                  <div className="relative">
-                    <Icon
-                      icon={item.icon}
-                      width="24"
-                      height="24"
-                      className="text-gray-400"
-                      onMouseEnter={() => setHoveredTech(item.name)}
-                      onMouseLeave={() => setHoveredTech(null)}
-                    />
-                    {hoveredTech === item.name && (
-                      <Popup text={item.name} show={true} />
-                    )}
-                  </div>
-                </li>
-              ))}
+              {tech.length > 0 &&
+                tech.map((item, index) => (
+                  <li key={index}>
+                    <div className="relative">
+                      <Icon
+                        icon={item.icon}
+                        width="24"
+                        height="24"
+                        className="text-gray-400"
+                        onMouseEnter={() => setHoveredTech(item.name)}
+                        onMouseLeave={() => setHoveredTech(null)}
+                      />
+                      {hoveredTech === item.name && (
+                        <Popup text={item.name} show={true} />
+                      )}
+                    </div>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
@@ -131,17 +136,19 @@ const PortfolioDetailsItems = ({
         >
           <div className="flex flex-row lg:flex-col w-full items-center justify-evenly h-full">
             <h6 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">
-              {applicationTypeDetail.text}
+              {applicationTypeDetail.text || 'N/A'}
             </h6>
-            <Icon
-              icon={applicationTypeDetail.icon.name}
-              width={applicationTypeDetail.icon.width}
-              height={applicationTypeDetail.icon.height}
-              style={{ color: applicationTypeDetail.icon.color }}
-              className=" w-[1.4em] lg:w-auto lg:rotate-90 md:transform"
-            />
+            {applicationTypeDetail.icon.name && (
+              <Icon
+                icon={applicationTypeDetail.icon.name}
+                width={applicationTypeDetail.icon.width}
+                height={applicationTypeDetail.icon.height}
+                style={{ color: applicationTypeDetail.icon.color }}
+                className=" w-[1.4em] lg:w-auto lg:rotate-90 md:transform"
+              />
+            )}
             <h6 className="text-nowrap text-lg md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">
-              {applicationTypeDetail.suffix}
+              {applicationTypeDetail.suffix || ''}
             </h6>
           </div>
         </div>

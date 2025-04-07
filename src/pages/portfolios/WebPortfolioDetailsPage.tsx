@@ -7,7 +7,7 @@ import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsI
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 
-const PortfolioDetailsPage = () => {
+const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   // const [headerHeight, setHeaderHeight] = useState(0);
@@ -17,9 +17,13 @@ const PortfolioDetailsPage = () => {
     'portfolio/frontendPortfolioSection',
     'portfolio/backendPortfolioSection',
     'portfolio/fullstackPortfolioSection',
+    'portfolio/graphicPortfolioSection',
     'partialTranslation',
   ]);
   const navigate = useNavigate();
+
+  console.log('URL Title:', urlTitle);
+  console.log('Portfolio Items:', portfolioItems);
 
   const { headerHeight } = useHeaderHeight();
 
@@ -40,6 +44,10 @@ const PortfolioDetailsPage = () => {
           i18n.language,
           'portfolio/fullstackPortfolioSection'
         ),
+        i18n.getResourceBundle(
+          i18n.language,
+          'portfolio/graphicPortfolioSection'
+        ),
       ]);
 
       const sections = [
@@ -47,15 +55,20 @@ const PortfolioDetailsPage = () => {
         ...(portfolioData[2]?.frontendItems || []),
         ...(portfolioData[3]?.backendItems || []),
         ...(portfolioData[4]?.fullstackItems || []),
+        ...(portfolioData[5]?.graphicItemsPortfolio || []), 
       ];
 
       const filteredItems = sections.filter(
         (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
       );
 
+      console.log('Filtered Items:', filteredItems);
+
       const uniqueItems = Array.from(
         new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
       );
+
+      console.log('Unique Items:', uniqueItems);
 
       setPortfolioItems(uniqueItems);
     };
@@ -66,7 +79,6 @@ const PortfolioDetailsPage = () => {
   if (portfolioItems.length === 0) {
     return <div>Loading...</div>;
   }
-
 
   return (
     <>
@@ -123,4 +135,4 @@ const PortfolioDetailsPage = () => {
   );
 };
 
-export default PortfolioDetailsPage;
+export default WebPortfolioDetailsPage;

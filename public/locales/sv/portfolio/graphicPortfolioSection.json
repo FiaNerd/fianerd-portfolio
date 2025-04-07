@@ -18,135 +18,371 @@
   },
   "graphicItemsPortfolio": [
     {
-      "urlTitle": "skjortkravallerna",
+      "projectType": "Grafisk Design",
       "title": "Skjortkravallerna",
+      "urlTitle": "skjortkravallerna",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Alla Tiders Teater",
+      "titleDescription": "Grafiskt material skapat för Alla Tiders Teater ",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Alla Tiders Teater 'Skjortkravallerna'.' Projektet inkluderade affischer, flyers och programhäften.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><span class='font-bold'>- Kundsamarbete:</span> Arbetade nära kunden för att säkerställa att designen överensstämde med deras vision.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><span class='font-bold'>- Designprocess:</span> Brainstorming, skissning och digitala mockups.<br><br><span class='font-bold'>Resultat:</span><br>- Ökad evenemangsdeltagande med 30% jämfört med föregående år.<br>- Fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+      "ctaButton": "Visa Detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+          "alt": "Skjortkravallerna Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Affischer & Flyers",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Alla Tiders Teater",
-      "clientLink": "https://www.allatidersteater.se",
-      "technologies": ["Photoshop", "Illustrator", "InDesign"],
-      "description": "Grafiskt material skapat för Alla Tiders Teater och Helsingborgs Stadsteaters evenemang 'En kväll för fred.' Projektet inkluderade affischer, flyers och programhäften.",
-      "goal": "Att skapa en visuellt slående affisch som fångar essensen av teaterproduktionen och lockar en bred publik.",
-      "role": "Grafisk designer – Ansvarig för konceptskapande, layoutdesign och slutgiltigt material.",
+      "goal": "Att skapa en visuellt slående affisch som fångar essensen av teaterproduktionen och attraherar en bred publik.",
+      "role": "Grafisk Designer – Ansvarig för konceptskapande, layoutdesign och slutgiltigt konstverk.",
       "challenges": "Kunden önskade en design som var både modern och traditionell, vilket krävde en balans mellan kontrasterande stilar.",
-      "results": "Affischdesignen ökade evenemangets besöksantal med 30 % jämfört med föregående år.",
+      "results": "Affischdesignen ökade evenemangsdeltagandet med 30% jämfört med föregående år.",
       "testimonial": "Designen överträffade våra förväntningar och fångade perfekt evenemangets anda. – Kund, Alla Tiders Teater",
       "process": "Började med brainstorming och skissning av koncept, följt av att skapa digitala mockups i Illustrator. Slutförde designen efter kundens feedback.",
       "tags": ["Teater", "Affischer", "Flyers", "Illustrator", "Photoshop"],
-      "relatedProjects": ["Häxan", "En Kväll för Fred"],
-      "ctaButton": "Visa detaljer",
+      "relatedProjects": ["en-kvall-for-fred", "skjortkravallerna"],
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
-      "urlTitle": "en-kvall-for-fred",
-      "title": "En Kväll för Fred",
+      "projectType": "Grafisk Design",
+      "urlTitle": "fred-for-kvall",
+      "title": "Fred för Kväll",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Alla Tiders Teater",
+      "titleDescription": "Grafiskt material skapat för Alla Tiders Teaters evenemang 'Fred för Kväll.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Alla Tiders Teaters evenemang 'Fred för Kväll.' Projektet inkluderade affischer, flyers och marknadsföringsmaterial.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
+      "ctaButton": "Visa Detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
+          "alt": "Fred för Kväll Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Affischer & Flyers",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Alla Tiders Teater",
-      "clientLink": "https://www.allatidersteater.se",
-      "technologies": ["Photoshop", "Illustrator", "InDesign"],
-      "description": "Grafiskt material skapat för Alla Tiders Teater och Helsingborgs Stadsteaters evenemang 'En kväll för fred.' Projektet inkluderade affischer, flyers och programhäften.",
-      "goal": "Att skapa en visuellt slående affisch som fångar essensen av teaterproduktionen och lockar en bred publik.",
-      "role": "Grafisk designer – Ansvarig för konceptskapande, layoutdesign och slutgiltigt material.",
-      "challenges": "Det enda kravet jag fick från kunden var att det inte fick ha några politiska insinuationer eller kopplingar, samt inga färger som kunde uppfattas som en nations flagga, vilket krävde en balans mellan kontrasterande stilar.",
-      "results": "Affischdesignen ökade evenemangets besöksantal med 30 % jämfört med föregående år.",
-      "testimonial": "Designen överträffade våra förväntningar och fångade perfekt evenemangets anda. – Kund, Alla Tiders Teater",
-      "process": "Började med brainstorming och skissning av koncept, följt av att skapa digitala mockups i Illustrator. Slutförde designen efter kundens feedback.",
-      "tags": ["Teater", "Affischer", "Flyers", "Illustrator", "Photoshop"],
-      "relatedProjects": ["riksteatern-fjarilsvingar"],
-      "ctaButton": "Visa detaljer",
+      "goal": "Att skapa en design som fångar evenemangets tema och attraherar en bred publik.",
+      "role": "Grafisk Designer – Ansvarig för konceptskapande och layout.",
+      "challenges": "Att skapa en design som överensstämde med Alla Tiders Teaters varumärke och evenemangets tema.",
+      "results": "Designen fick positiv feedback från både kunden och publiken.",
+      "testimonial": "Designen var fantastisk och hjälpte oss att nå en bredare publik. – Kund, Alla Tiders Teater",
+      "process": "Började med att analysera evenemangets tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
+      "tags": ["Teater", "Affischer", "Flyers", "Photoshop", "Illustrator"],
+      "relatedProjects": ["skjortkravallerna", "haxan", "label-haxan"],
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
       "urlTitle": "riksteatern-fjarilsvingar",
       "title": "Fjärilsvingar",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Riksteatern",
+      "titleDescription": "Grafiskt material skapat för Riksteaterns produktion 'Fjärilsvingar.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Riksteaterns produktion 'Fjärilsvingar.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://www.riksteatern.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
+          "alt": "Fjärilsvingar Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Affischer & Flyers",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teater – Riksteatern",
-      "clientLink": "https://www.riksteatern.se",
-      "technologies": ["Photoshop", "Illustrator"],
-      "description": "Grafiskt material skapat för Riksteaterns produktion 'Fjärilsvingar.' Projektet inkluderade affischer och flyers.",
       "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som både var i linje med Riksteaterns varumärke och produktionens tema.",
-      "results": "Designen fick positiv feedback från både klienten och publiken.",
+      "results": "Designen fick positiv feedback från både kunden och publiken.",
       "testimonial": "Designen var fantastisk och hjälpte oss att nå ut till en bredare publik. – Kund, Riksteatern",
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
-      "tags": ["Teater", "Affischer", "Flyers", "Illustrator", "Photoshop"],
+      "tags": ["Teater", "Affischer", "Flyers", "Photoshop", "Illustrator"],
       "relatedProjects": ["riksteatern-program-2024"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
       "urlTitle": "riksteatern-program-2024",
-      "title": "Riksteatern Program 2024",
+      "title": "Riksteatern Program",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "PROGRAMHÄFTEN"
+      },
       "subTitle": "Projekt för Riksteatern",
+      "titleDescription": "Programhäfte skapat för Riksteaterns evenemang 2024.",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Programhäfte skapat för Riksteaterns evenemang 2024.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Layoutdesign:</span> Designade programhäftets layout med hjälp av InDesign.<br><span class='font-bold'>- Bildredigering:</span> Redigerade bilder i Photoshop för att förbättra det visuella intrycket.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe InDesign, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Programhäftet fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
+      "ctaButton": "Visa Detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://www.riksteatern.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe InDesign",
+          "icon": "logos:adobe-indesign"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
+          "alt": "Riksteatern Program Omslag",
+          "span": "wide"
+        }
+      ],
       "category": "Programhäften",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teater – Riksteatern",
-      "clientLink": "https://www.riksteatern.se",
-      "technologies": ["Photoshop", "Illustrator"],
-      "description": "Programhäfte skapat för Riksteaterns evenemang 2024.",
       "goal": "Att skapa ett programhäfte som är både informativt och visuellt tilltalande.",
-      "role": "Grafisk designer – Ansvarig för layout och design.",
+      "role": "Grafisk Designer – Ansvarig för layout och design.",
       "challenges": "Att balansera information och design för att skapa ett lättläst programhäfte.",
-      "results": "Programhäftet fick positiv feedback från både klienten och publiken.",
+      "results": "Programhäftet fick positiv feedback från både kunden och publiken.",
       "testimonial": "Programhäftet var både vackert och funktionellt. – Kund, Riksteatern",
       "process": "Skapade layouten i InDesign och använde Photoshop för bildredigering.",
-      "tags": ["Teater", "Programhäften", "Illustrator", "Photoshop"],
+      "tags": ["Teater", "Programhäften", "Photoshop", "InDesign"],
       "relatedProjects": ["fjarilsvingar"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
-      "urlTitle": "begravt-barn",
       "title": "Begravt Barn",
-      "subTitle": "Projekt för Stumpenensemblen",
+      "urlTitle": "begravt-barn",
+      "applicationType": "grafisk",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
       "category": "Grafisk Design",
+
+      "projectType": "Grafisk Design",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
+      "subTitle": "Projekt för Stumpenensemblen",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'Begravt Barn.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2011",
+      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Begravt Barn.' Projektet inkluderade affischer och marknadsföringsmaterial.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
+
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
+          "alt": "Begravt Barn Affisch",
+          "span": "wide"
+        }
+      ],
+
       "year": "'11",
       "yearText": "ÅR",
       "client": "Teatergrupp – Stumpenensemblen",
-      "technologies": ["Photoshop", "Illustrator", "InDesign"],
-      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Begravt Barn.'",
+      "technologies": ["Photoshop", "Illustrator"],
       "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
-      "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
-      "challenges": "Att skapa en design som både var i linje med Stumpenensemblens varumärke och produktionens tema.",
-      "results": "Designen fick positiv feedback från både klienten och publiken.",
-      "testimonial": "Designen var fantastisk och hjälpte oss att nå ut till en bredare publik. – Kund, Stumpenensemblen",
+      "role": "Grafisk Designer – Ansvarig för konceptskapande och layout.",
+      "challenges": "Att skapa en design som överensstämde med Stumpenensemblens varumärke och produktionens tema.",
+      "results": "Designen fick positiv feedback från både kunden och publiken.",
+      "testimonial": "Designen var fantastisk och hjälpte oss att nå en bredare publik. – Kund, Stumpenensemblen",
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
-      "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
-      "relatedProjects": ["genomskinliga-hjartan", "hemmet"],
-      "ctaButton": "Visa detaljer",
+      "tags": ["Teater", "Grafisk Design", "Photoshop", "Illustrator"],
+      "relatedProjects": ["transparent-hearts", "the-home"],
+      "ctaButton": "Visa Detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
       "urlTitle": "genomskinliga-hjartan",
       "title": "Genomskinliga Hjärtan",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Stumpenensemblen",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'Genomskinliga Hjärtan.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Genomskinliga Hjärtan.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop, InDesign<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        },
+        {
+          "name": "Adobe InDesign",
+          "icon": "logos:adobe-indesign"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
+          "alt": "Genomskinliga Hjärtan Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Grafisk Design",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Stumpenensemblen",
-      "technologies": ["Photoshop", "Illustrator", "InDesign"],
-      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Genomskinliga Hjärtan.'",
       "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som både var i linje med Stumpenensemblens varumärke och produktionens tema.",
@@ -161,21 +397,63 @@
         "InDesign"
       ],
       "relatedProjects": ["begravt-barn", "hemmet"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
       "urlTitle": "hemmet",
       "title": "Hemmet",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Stumpenensemblen",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'Hemmet.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Hemmet.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop, InDesign<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        },
+        {
+          "name": "Adobe InDesign",
+          "icon": "logos:adobe-indesign"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
+          "alt": "Hemmet Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Grafisk Design",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Stumpenensemblen",
-      "technologies": ["Photoshop", "Illustrator", "InDesign"],
-      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Hemmet.'",
       "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som både var i linje med Stumpenensemblens varumärke och produktionens tema.",
@@ -190,21 +468,60 @@
         "InDesign"
       ],
       "relatedProjects": ["genomskinliga-hjartan", "begravt-barn"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
-      "urlTitle": "tyckte-jag-hörde-hundar",
+      "projectType": "Grafisk Design",
+      "urlTitle": "tyckte-jag-horde-hundar",
       "title": "Tyckte Jag Hör Hundar",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Stumpenensemblen",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'Tyckte Jag Hör Hundar.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Tyckte Jag Hör Hundar.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "www.stumpenensemblen.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+          "alt": "Tyckte Jag Hör Hundar Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Grafisk Design",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Stumpenensemblen",
-      "technologies": ["Photoshop", "Illustrator"],
-      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Tyckte Jag Hör Hundar.'",
       "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som både var i linje med Stumpenensemblens varumärke och produktionens tema.",
@@ -213,21 +530,59 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["hemmet", "genomskinliga-hjartan"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
       "urlTitle": "haxan",
       "title": "Häxan",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
       "subTitle": "Projekt för Alla Tiders Teater",
+      "titleDescription": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
+          "alt": "Häxan Affisch",
+          "span": "wide"
+        }
+      ],
       "category": "Grafisk Design",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Alla Tiders Teater",
-      "technologies": ["Photoshop", "Illustrator"],
-      "description": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.' Projektet inkluderade affischer och flyers.",
       "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som både var i linje med Alla Tiders Teaters varumärke och produktionens tema.",
@@ -236,22 +591,59 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["riksteatern-fjarilsvingar", "en-kvall-for-fred"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
-
     {
       "urlTitle": "label-haxan",
-      "title": "Kaffe ettikett - Häxan",
+      "title": "Kaffe Etikett - Häxan",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "ETIKETTER"
+      },
       "subTitle": "Projekt för Alla Tiders Teater",
+      "titleDescription": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.' Projektet inkluderade etiketter och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för etiketter.<br><span class='font-bold'>- Designutförande:</span> Designade etiketter med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
+          "alt": "Kaffe Etikett - Häxan",
+          "span": "wide"
+        }
+      ],
       "category": "Grafisk Design",
       "year": "'24",
       "yearText": "ÅR",
       "client": "Teatergrupp – Alla Tiders Teater",
-      "technologies": ["Photoshop", "Illustrator"],
-      "description": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.' Projektet inkluderade etiketter och flyers.",
       "goal": "Att skapa en etikett som fångar produktionens mystiska tema och lockar en bred publik.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som både var i linje med Alla Tiders Teaters varumärke och produktionens tema.",
@@ -260,21 +652,59 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["skjortkravallerna", "en-kvall-for-fred"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
       "urlTitle": "printagon-christmas-card",
       "title": "Gott Nytt År 2019",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "NYÅRSKORT"
+      },
       "subTitle": "Projekt för Printagon Graphic",
+      "titleDescription": "Grafiskt material skapat för Printagon Graphics nyårskampanj 2019.",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2019",
+      "description": "Grafiskt material skapat för Printagon Graphics nyårskampanj 2019.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för nyårskortet.<br><span class='font-bold'>- Designutförande:</span> Designade kortet med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Kortet fick positiv feedback från både klienten och deras kunder.",
+      "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
+      "ctaButton": "Visa detaljer",
+      "links": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
+          "alt": "Gott Nytt År 2019 Kort",
+          "span": "wide"
+        }
+      ],
       "category": "Grafisk Design",
       "year": "'19",
       "yearText": "ÅR",
       "client": "Printagon Graphic",
-      "technologies": ["Photoshop", "Illustrator"],
-      "description": "Grafiskt material skapat för Printagon Graphics nyårskampanj 2019.",
       "goal": "Att skapa ett nyårskort som är både festligt och visuellt tilltalande.",
       "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
       "challenges": "Att skapa en design som förmedlar en känsla av firande och optimism inför det nya året.",
@@ -283,7 +713,6 @@
       "process": "Började med att analysera kundens behov och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["label-haxan"],
-      "ctaButton": "Visa detaljer",
       "ctaLink": "https://example.com/project-details",
       "media": []
     }
