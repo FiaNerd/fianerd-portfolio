@@ -39,7 +39,7 @@
       "description": "Graphic material created for Alla Tiders Teater 'Skjortkravallerna.' The project included posters, flyers, and program booklets.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><span class='font-bold'>- Client Collaboration:</span> Worked closely with the client to ensure the designs aligned with their vision.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><span class='font-bold'>- Design Process:</span> Brainstorming, sketching, and digital mockups.<br><br><span class='font-bold'>Results:</span><br>- Increased event attendance by 30% compared to the previous year.<br>- Received positive feedback from both the client and the audience.",
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://www.allatidersteater.se",
@@ -79,7 +79,6 @@
       "tags": ["Theater", "Posters", "Flyers", "Illustrator", "Photoshop"],
       "relatedProjects": ["en-kvall-for-fred", "skjortkravallerna"],
       "ctaButton": "View Details",
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -103,7 +102,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://www.allatidersteater.se",
@@ -140,7 +139,6 @@
       "process": "Started by analyzing the theme of the event and creating sketches. Finalized the design in Photoshop and Illustrator.",
       "tags": ["Theater", "Posters", "Flyers", "Photoshop", "Illustrator"],
       "relatedProjects": ["skjortkravallerna", "haxan", "label-haxan"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -164,7 +162,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://www.riksteatern.se",
@@ -200,8 +198,7 @@
       "testimonial": "The design was fantastic and helped us reach a wider audience. – Client, Riksteatern",
       "process": "Started by analyzing the theme of the production and creating sketches. Finalized the design in Photoshop and Illustrator.",
       "tags": ["Theater", "Posters", "Flyers", "Photoshop", "Illustrator"],
-      "relatedProjects": ["riksteatern-program-2024"],
-      "ctaLink": "https://example.com/project-details"
+      "relatedProjects": ["riksteatern-program-2024"]
     },
     {
       "urlTitle": "riksteatern-program-2024",
@@ -224,7 +221,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://www.riksteatern.se",
@@ -261,7 +258,6 @@
       "process": "Created the layout in InDesign and used Photoshop for image editing.",
       "tags": ["Theater", "Program Booklets", "Photoshop", "InDesign"],
       "relatedProjects": ["fjarilsvingar"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -288,7 +284,7 @@
       "description": "Graphic material created for Stumpenensemblen's production 'Begravt Barn.' The project included posters and promotional materials.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Results:</span><br>- Received positive feedback from both the client and the audience.",
       "linkTitle": "Links",
 
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://example.com",
@@ -327,7 +323,6 @@
       "tags": ["Theater", "Graphic Design", "Photoshop", "Illustrator"],
       "relatedProjects": ["transparent-hearts", "the-home"],
       "ctaButton": "View Details",
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -351,7 +346,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://example.com",
@@ -420,7 +415,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://example.com",
@@ -488,12 +483,12 @@
         "suffix": "POSTERS & FLYERS"
       },
       "subTitle": "Project for Stumpenensemblen",
-      "titleDescription": "Graphic material created for Stumpenensemblen's production 'Tyckte Jag Hörde Hundar.'",
+      "titleDescription": "Graphic material created for Stumpenensemblen's production.'",
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
       "description": "Graphic material created for Stumpenensemblen's production 'Tyckte Jag Hörde Hundar.'<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop, InDesign<br><br><span class='font-bold'>Results:</span><br>- The design received positive feedback from both the client and the audience.",
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://example.com",
@@ -536,7 +531,6 @@
       "tags": ["Theater", "Graphic Design", "Photoshop", "Illustrator"],
       "relatedProjects": ["Hemmet", "Genomskinliga Hjärtan", "Begravt Barn"],
       "ctaButton": "View Details",
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -560,7 +554,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
 
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://www.allatidersteater.se",
@@ -607,7 +601,7 @@
         "Kaffe Etikett - Häxbryggd"
       ],
       "ctaButton": "View Details",
-      "ctaLink": "https://example.com/project-details",
+      "ctaLink": "https://www.allatidersteater.se/",
       "media": []
     },
     {
@@ -670,7 +664,7 @@
       "tags": ["Theater", "Graphic Design", "Photoshop", "Illustrator"],
       "relatedProjects": ["Häxan", "En Kväll för Fred"],
 
-      "ctaLink": "https://example.com/project-details",
+      "ctaLink": "https://www.allatidersteater.se/",
       "media": [
         {
           "type": "image",
@@ -699,7 +693,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "Client Website",
           "url": "https://www.printagon.se",
@@ -736,7 +730,6 @@
       "process": "Started by analyzing the client's needs and creating sketches. Finalized the designs in Photoshop and Illustrator.",
       "tags": ["Marketing", "Graphic Design", "Photoshop", "Illustrator"],
       "relatedProjects": ["printagon-christmas-card"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     }
   ]

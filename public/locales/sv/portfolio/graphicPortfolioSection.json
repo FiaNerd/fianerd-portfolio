@@ -39,7 +39,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
       "ctaButton": "Visa Detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://www.allatidersteater.se",
@@ -76,7 +76,6 @@
       "process": "Började med brainstorming och skissning av koncept, följt av att skapa digitala mockups i Illustrator. Slutförde designen efter kundens feedback.",
       "tags": ["Teater", "Affischer", "Flyers", "Illustrator", "Photoshop"],
       "relatedProjects": ["en-kvall-for-fred", "skjortkravallerna"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -101,7 +100,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
       "ctaButton": "Visa Detaljer",
-      "links": [
+      "ctaLinks": [
         {
           "type": "Kundens Webbplats",
           "url": "https://www.allatidersteater.se",
@@ -162,7 +161,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern-fjarilsvingar-2024.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://www.riksteatern.se",
@@ -199,7 +198,6 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Affischer", "Flyers", "Photoshop", "Illustrator"],
       "relatedProjects": ["riksteatern-program-2024"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -223,7 +221,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/riksteatern/riksteatern_hbg_program_2024-front.jpg",
       "ctaButton": "Visa Detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://www.riksteatern.se",
@@ -260,7 +258,6 @@
       "process": "Skapade layouten i InDesign och använde Photoshop för bildredigering.",
       "tags": ["Teater", "Programhäften", "Photoshop", "InDesign"],
       "relatedProjects": ["fjarilsvingar"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -287,7 +284,7 @@
       "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Begravt Barn.' Projektet inkluderade affischer och marknadsföringsmaterial.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Fick positiv feedback från både kunden och publiken.",
       "linkTitle": "Länkar",
 
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://example.com",
@@ -326,7 +323,6 @@
       "tags": ["Teater", "Grafisk Design", "Photoshop", "Illustrator"],
       "relatedProjects": ["transparent-hearts", "the-home"],
       "ctaButton": "Visa Detaljer",
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -350,7 +346,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-genomskinliga-hjartan.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://example.com",
@@ -397,7 +393,6 @@
         "InDesign"
       ],
       "relatedProjects": ["begravt-barn", "hemmet"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -421,7 +416,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://example.com",
@@ -468,7 +463,6 @@
         "InDesign"
       ],
       "relatedProjects": ["genomskinliga-hjartan", "begravt-barn"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -487,13 +481,13 @@
         "suffix": "AFFISCHER & FLYERS"
       },
       "subTitle": "Projekt för Stumpenensemblen",
-      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'Tyckte Jag Hör Hundar.'",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion",
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
       "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Tyckte Jag Hör Hundar.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "www.stumpenensemblen.se",
@@ -530,7 +524,6 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["hemmet", "genomskinliga-hjartan"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -554,7 +547,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://example.com",
@@ -591,7 +584,6 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["riksteatern-fjarilsvingar", "en-kvall-for-fred"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -615,7 +607,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/zoegas_etikett_alla_tiders-haxan.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://example.com",
@@ -652,7 +644,6 @@
       "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["skjortkravallerna", "en-kvall-for-fred"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     },
     {
@@ -676,7 +667,7 @@
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/pg/PGnyar.jpg",
       "ctaButton": "Visa detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "Kundens Webbplats",
           "url": "https://example.com",
@@ -713,7 +704,6 @@
       "process": "Började med att analysera kundens behov och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
       "tags": ["Grafisk Design", "Illustrator", "Photoshop"],
       "relatedProjects": ["label-haxan"],
-      "ctaLink": "https://example.com/project-details",
       "media": []
     }
   ]

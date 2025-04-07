@@ -27,7 +27,7 @@
         "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
         "linkTitle": "Länkar",
         "ctaButton": "Visa Detaljer",
-        "links": [
+        "ctaLink": [
           {
             "type": "GitHub",
             "url": "https://github.com/FiaNerd/prisma_photo_app_api",
@@ -108,7 +108,7 @@
         "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
         "ctaButton": "Visa Detaljer",
         "linkTitle": "Länk till mitt GitHub",
-        "links": [
+        "ctaLink": [
           {
             "type": "Det här reprot är privat"
           }

@@ -27,7 +27,7 @@
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "This repro is private"
         },
@@ -120,7 +120,7 @@
       "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main-hero.jpg",
       "linkTitle": "Links",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "App Store",
           "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
@@ -205,7 +205,7 @@
       "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg",
       "linkTitle": "Links",
       "ctaButton": "View Details",
-      "links": [
+      "ctaLink": [
         {
           "type": "GitHub",
           "url": "https://github.com/FiaNerd/theCoffeeShop_exam",

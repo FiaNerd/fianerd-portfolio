@@ -26,7 +26,7 @@
       "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
       "linkTitle": "Länkar",
       "ctaButton": "Visa Detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "GitHub",
           "url": "https://github.com/FiaNerd/",
@@ -34,7 +34,7 @@
         },
         {
           "type": "Website",
-          "url": "https://www.brutalbeats.se/",
+          "url": "https://brutalbeats.netlify.app/",
           "icon": "tdesign:internet-filled"
         }
       ],
@@ -108,7 +108,7 @@
       "image": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
       "linkTitle": "Länkar",
       "ctaButton": "Visa Detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "GitHub",
           "url": "https://github.com/FiaNerd/TMDB",
@@ -198,7 +198,7 @@
       "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
       "linkTitle": "Länkar",
       "ctaButton": "Visa Detaljer",
-      "links": [
+      "ctaLink": [
         {
           "type": "GitHub",
           "url": "https://github.com/FiaNerd/msb_falling_trees_mission.git",

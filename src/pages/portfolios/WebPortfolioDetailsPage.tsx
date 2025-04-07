@@ -127,7 +127,7 @@ const WebPortfolioDetailsPage = () => {
               tech={item.tech}
               applicationTypeDetail={item.applicationTypeDetail}
               linkTitle={item.linkTitle}
-              links={item.links}
+              links={item.ctaLink}
             />
           </div>
         ))}

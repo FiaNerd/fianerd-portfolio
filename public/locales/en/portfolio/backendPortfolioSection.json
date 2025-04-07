@@ -26,7 +26,7 @@
         "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
         "linkTitle": "Links",
         "ctaButton": "View Details",
-        "links": [
+        "ctaLink": [
           {
             "type": "GitHub",
             "url": "https://github.com/FiaNerd/prisma_photo_app_api",
@@ -109,7 +109,7 @@
         "linkTitle": "Links to my GitHub",
         "ctaButton": "View Details",
 
-        "links": [
+        "ctaLink": [
           {
             "type": "This repro is private"
           }

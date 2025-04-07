@@ -26,7 +26,7 @@ const BackendPortfolio = () => {
               urlTitle={item.urlTitle}
               description={item.description}
               img={item.image}
-              links={item.links}
+              links={item.ctaLink}
               tech={item.tech}
               applicationType={item.applicationType}
               subTitle={item.subTitle}
