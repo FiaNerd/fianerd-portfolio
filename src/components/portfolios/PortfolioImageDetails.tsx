@@ -31,33 +31,23 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
       <div
         className={`grid ${
           images.length === 1
-            ? 'grid-cols-1 justify-center items-center ' // Single image takes full width
+            ? 'grid-cols-1 h-full' // Single image takes full height and width
             : 'grid-cols-1 md:grid-cols-2 gap-4'
-        } w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg`}
+        } w-full p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg`}
       >
         {images?.map((image, index) => (
           <div
             key={index}
-            className={`relative cursor-zoom-in rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105
-              ${
-                images.length === 1 ? 'h-[500px] md:h-[600px] lg:h-[700px]' : ''
-              }
-              ${
-                image.span === 'tall'
-                  ? 'row-span-2 h-[150px] md:h-[17.6em] lg:h-[18.5em]'
-                  : ''
-              }
-              ${
-                image.span === 'wide'
-                  ? 'row-span-1 h-[150px] md:h-[8em] lg:h-[8.5em]'
-                  : ''
-              }
-            `}
+            className={`relative cursor-zoom-in overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 ${
+              images.length === 1
+                ? 'h-[50vh] md:h-[60vh] lg:h-full'
+                : 'h-[15vh] md:h-[20vh] lg:h-full'
+            }`}
             onClick={() => openLightbox(index)}
           >
             <img
-              className={`w-full h-full object-cover rounded-lg ${
-                images.length === 1 ? 'rounded-none' : ''
+              className={`absolute inset-0 w-full h-full object-cover ${
+                images.length === 1 ? 'rounded-none' : 'rounded-lg'
               }`}
               src={image.src}
               alt={image.alt}
