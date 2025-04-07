@@ -40,11 +40,6 @@ const GraphicImageGallery = () => {
   const column2 = graphicImages.slice(3, 7);
   const column3 = graphicImages.slice(7, 11);
 
-  const handleImageClick = (urlTitle: string) => {
-    setSelectedUrlTitle(urlTitle); // Set the selected image's URL title
-    setIsSidebarOpen(true); // Open the sidebar
-  };
-
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false); // Close the sidebar
     setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
@@ -52,11 +47,10 @@ const GraphicImageGallery = () => {
 
   useSmoothScroll(0); // Smooth scroll to the top when the sidebar opens
 
-  // Find the selected image details based on the selectedUrlTitle
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
   ) || {
-    ...graphicImages[0], // Use the structure of the first item as a fallback
+    ...graphicImages[0],
     technologies: [],
     urlTitle: '',
     title: '',
@@ -86,8 +80,12 @@ const GraphicImageGallery = () => {
           {/* Column 1 */}
           <div className="grid md:grid-rows-2 lg:grid-rows-3 gap-4 lg:place-self-center">
             {column1.map((image, index) => (
-              <div key={index} onClick={() => handleImageClick(image.urlTitle)}>
-                <GraphicGalleryItems image={image} />
+              <div key={index}>
+                <GraphicGalleryItems
+                  image={image}
+                  setIsSidebarOpen={setIsSidebarOpen}
+                  setSelectedUrlTitle={setSelectedUrlTitle}
+                />
               </div>
             ))}
           </div>
@@ -95,8 +93,12 @@ const GraphicImageGallery = () => {
           {/* Column 2 */}
           <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-4">
             {column2.map((image, index) => (
-              <div key={index} onClick={() => handleImageClick(image.urlTitle)}>
-                <GraphicGalleryItems image={image} />
+              <div key={index}>
+                <GraphicGalleryItems
+                  image={image}
+                  setIsSidebarOpen={setIsSidebarOpen}
+                  setSelectedUrlTitle={setSelectedUrlTitle}
+                />
               </div>
             ))}
           </div>
@@ -104,8 +106,12 @@ const GraphicImageGallery = () => {
           {/* Column 3 */}
           <div className="grid lg:grid-rows-2 gap-4 lg:place-self-center">
             {column3.map((image, index) => (
-              <div key={index} onClick={() => handleImageClick(image.urlTitle)}>
-                <GraphicGalleryItems image={image} />
+              <div key={index}>
+                <GraphicGalleryItems
+                  image={image}
+                  setIsSidebarOpen={setIsSidebarOpen}
+                  setSelectedUrlTitle={setSelectedUrlTitle}
+                />
               </div>
             ))}
           </div>
@@ -118,7 +124,7 @@ const GraphicImageGallery = () => {
               onClose={handleCloseSidebar}
               sidebarWidth={sidebarWidth}
               setSidebarWidth={setSidebarWidth}
-              graphicDetails={selectedImageDetails} // Pass the selected image details
+              graphicDetails={selectedImageDetails}
             />
           </div>
         )}

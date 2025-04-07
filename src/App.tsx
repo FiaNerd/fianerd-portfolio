@@ -64,10 +64,6 @@ const App = () => {
                 path="/portfolio/:urlTitle"
                 element={<WebPortfolioDetailsPage />}
               />
-              <Route
-                path="/portfolio/graphic-design/:urlTitle"
-                element={<GraphicPortfolioDetailsPage />}
-              />
 
               {/* Blog Routes */}
               <Route path="/blog" element={<BlogPage />} />
