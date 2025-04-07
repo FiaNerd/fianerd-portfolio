@@ -16,9 +16,9 @@ const GraphicGalleryItems = ({
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full border border-black dark:border-white rounded-lg p-4">
       {/* Image Container */}
-      <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-out">
+      <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-black dark:border-white rounded-lg overflow-hidden">
         {/* Image */}
         <img
           src={image.image}
@@ -34,7 +34,7 @@ const GraphicGalleryItems = ({
         </h3>
 
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-black/60 flex flex-col justify-end text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        <div className="absolute hidden inset-0 bg-black/60 md:flex md:flex-col justify-end text-center md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
           {/* Button at the Bottom (Hover) */}
           <Button
             onClick={handleButtonClick}

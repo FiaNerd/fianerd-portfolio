@@ -10,7 +10,6 @@ import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
-import GraphicPortfolioDetailsPage from './pages/portfolios/GraphicPortfolioDetailsPage';
 import WebPortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
 
 const App = () => {

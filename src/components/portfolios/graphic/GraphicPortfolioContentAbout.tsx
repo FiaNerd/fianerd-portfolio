@@ -1,9 +1,11 @@
+import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 
 interface IGraphicItem {
   urlTitle?: string;
   client: string;
-  technologies: string[];
+  techTitle?: string;
+  tech: { name: string; icon: string }[];
   goals: string;
   role: string;
   challenges: string;
@@ -25,10 +27,13 @@ const GraphicPortfolioContentAbout = ({
 }: GraphicPortfolioContentAboutProps) => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
 
+  console.log(graphicItemsPortfolio);
+
   // Fetch titles dynamically
   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
     clientTitle?: string;
-    technologiesTitle?: string;
+    techTitle?: string;
+    tech?: string;
     tagsTitle?: string;
     goalsTitle?: string;
     roleTitle?: string;
@@ -43,46 +48,58 @@ const GraphicPortfolioContentAbout = ({
         <div key={index} className="flex flex-col gap-4">
           {/* Client Section */}
           <div>
-            <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
+            <h5 className="mb-0 text-bg-secondary dark:text-text-accent font-semibold">
               {titles.clientTitle}
-            </h4>
+            </h5>
             <p dangerouslySetInnerHTML={{ __html: item.client }} />
           </div>
 
           {/* Technologies Section */}
           <div>
-            <h4 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
-              {titles.technologiesTitle}
-            </h4>
+            <h5 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
+              {titles.techTitle}
+            </h5>
 
             <div className="flex flex-wrap gap-x-2">
-              {item.technologies?.map((tech, techIndex) => (
-                <p
-                  key={techIndex}
-                  className="px-2 py-1 border-bg-secondary border-2  dark:border-text-accent rounded text-sm"
-                >
-                  {tech}
-                </p>
-              ))}
+              {item.tech?.length ? (
+                item.tech.map((tech, techIndex) => (
+                  <div
+                    key={techIndex}
+                    className="flex items-center gap-2 px-2 py-1 dark:border-text-accent rounded text-sm"
+                  >
+                    {/* Render the icon */}
+                    <Icon
+                      icon={tech.icon}
+                      width="24"
+                      height="24"
+                      className="text-btn-bg hover:text-bg-hover"
+                    />
+                    {/* Render the name */}
+                    <span>{tech.name}</span>
+                  </div>
+                ))
+              ) : (
+                <p className="text-sm text-gray-500">No technologies listed</p>
+              )}
             </div>
           </div>
 
           {/* Goals Section */}
           {item.goals && (
             <div>
-              <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
+              <h5 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
                 {titles.goalsTitle}
-              </h4>
+              </h5>
               <p>{item.goals}</p>
             </div>
           )}
-          
+
           {/* Role Section */}
           {item.role && (
             <div>
-              <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
+              <h5 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
                 {titles.roleTitle}
-              </h4>
+              </h5>
               <p>{item.role}</p>
             </div>
           )}
@@ -90,29 +107,29 @@ const GraphicPortfolioContentAbout = ({
           {/* Challenges Section */}
           {item.challenges && (
             <div>
-              <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
+              <h5 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
                 {titles.challengesTitle}
-              </h4>
+              </h5>
               <p>{item.challenges}</p>
             </div>
           )}
 
           {/* Results Section */}
-      
+
           {/* Testimonial Section */}
           {item.testimonial && (
             <div>
-              <h4 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
+              <h5 className="mb-0 text-bg-secondary dark:text-text-accent font-bold">
                 {titles.testimonialTitle}
-              </h4>
+              </h5>
               <p>{item.testimonial}</p>
             </div>
           )}
           {/* Tags Section */}
           <div>
-            <h4 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
+            <h5 className="mb-2 text-bg-secondary dark:text-text-accent font-bold">
               {titles.tagsTitle}
-            </h4>
+            </h5>
 
             <div className="flex flex-wrap gap-x-2">
               {item.tags?.map((tag, tagIndex) => (

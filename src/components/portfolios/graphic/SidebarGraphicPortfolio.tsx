@@ -20,7 +20,8 @@ interface ISidebarGraphicPortfolioProps {
     year: string;
     yearText: string;
     client: string;
-    technologies: string[];
+    tecthTitle?: string;
+    tech: { name: string; icon: string }[];
     description: string;
     goals: string;
     role: string;
@@ -51,7 +52,12 @@ const SidebarGraphicPortfolio = ({
   const graphicItemsPortfolio = [
     {
       client: graphicDetails?.client,
-      technologies: graphicDetails?.technologies,
+      techTitle: graphicDetails?.tecthTitle,
+      tech:
+        graphicDetails?.tech?.map((technology) => ({
+          name: technology.name,
+          icon: technology.icon,
+        })) || [],
       goals: graphicDetails?.goals,
       role: graphicDetails?.role,
       challenges: graphicDetails?.challenges,
@@ -97,7 +103,7 @@ const SidebarGraphicPortfolio = ({
               {t('partialTranslation:goBack')}
             </button>
           </div>
-          
+
           <ContentTitleDetails
             title={graphicDetails?.title || ''}
             yearText={graphicDetails?.yearText || 'N/A'}
