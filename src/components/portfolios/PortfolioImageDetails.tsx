@@ -10,7 +10,7 @@ import lgHash from 'lightgallery/plugins/hash';
 import lgShare from 'lightgallery/plugins/share';
 import lgZoom from 'lightgallery/plugins/zoom';
 import LightGallery from 'lightgallery/react';
-import { useRef } from "react";
+import { useRef } from 'react';
 
 interface PortfolioImageDetailsProps {
   images: { src: string; alt: string; span?: string }[];
@@ -28,18 +28,37 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
   return (
     <>
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg">
+      <div
+        className={`grid ${
+          images.length === 1
+            ? 'grid-cols-1 justify-center items-center ' // Single image takes full width
+            : 'grid-cols-1 md:grid-cols-2 gap-4'
+        } w-full h-auto p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg`}
+      >
         {images?.map((image, index) => (
           <div
             key={index}
             className={`relative cursor-zoom-in rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105
-              ${image.span === "tall" ? "row-span-2 h-[150px] md:h-[17.6em] lg:h-[18.5em]" : ""}
-              ${image.span === "wide" ? "row-span-1 h-[150px] md:h-[8em] lg:h-[8.5em]" : ""}
+              ${
+                images.length === 1 ? 'h-[500px] md:h-[600px] lg:h-[700px]' : ''
+              }
+              ${
+                image.span === 'tall'
+                  ? 'row-span-2 h-[150px] md:h-[17.6em] lg:h-[18.5em]'
+                  : ''
+              }
+              ${
+                image.span === 'wide'
+                  ? 'row-span-1 h-[150px] md:h-[8em] lg:h-[8.5em]'
+                  : ''
+              }
             `}
             onClick={() => openLightbox(index)}
           >
             <img
-              className="w-full h-full object-cover rounded-lg"
+              className={`w-full h-full object-cover rounded-lg ${
+                images.length === 1 ? 'rounded-none' : ''
+              }`}
               src={image.src}
               alt={image.alt}
             />

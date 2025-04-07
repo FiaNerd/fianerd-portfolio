@@ -134,7 +134,7 @@ const PortfolioDetailsItems = ({
           className="sidebar h-auto lg:w-[2.7em] self-stretch bg-[#4b8668] dark:bg-accent-secondary lg:ml-4 flex justify-center items-center "
           style={{ marginTop: 0, position: 'relative' }}
         >
-          <div className="flex flex-row lg:flex-col w-full items-center justify-evenly h-full">
+          <div className="flex flex-row lg:flex-col items-center justify-evenly h-full">
             <h6 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">
               {applicationTypeDetail.text || 'N/A'}
             </h6>
