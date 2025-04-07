@@ -1,10 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroDetails from '../../partials/HeroDetails';
 import { Icon } from '@iconify/react';
 import ContentTitleDetails from '../../partials/ContentTitleDetails';
 import ContentDetails from '../../partials/ContentDetails';
 import GraphicPortfolioContentAbout from './GraphicPortfolioContentAbout';
+import lgZoom from 'lightgallery/plugins/zoom';
+import lgShare from 'lightgallery/plugins/share';
+import lgHash from 'lightgallery/plugins/hash';
+import LightGallery from 'lightgallery/react';
 
 interface ISidebarGraphicPortfolioProps {
   isVisible: boolean;
@@ -16,6 +20,7 @@ interface ISidebarGraphicPortfolioProps {
     title: string;
     subTitle: string;
     image: string;
+    images: { src: string; alt: string; span?: string }[];
     category: string;
     year: string;
     yearText: string;
@@ -43,10 +48,18 @@ const SidebarGraphicPortfolio = ({
   graphicDetails,
 }: ISidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection']);
+  const lightGallery = useRef<any>(null);
+
+  const openLightbox = (index: number) => {
+    if (lightGallery.current) {
+      lightGallery.current.openGallery(index);
+    }
+  };
 
   if (!isVisible || !graphicDetails) {
     return null; // Don't render if the sidebar is not visible or no data is available
   }
+
 
   // Transform graphicDetails into an array
   const graphicItemsPortfolio = [
@@ -72,72 +85,93 @@ const SidebarGraphicPortfolio = ({
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex overflow-hidden">
-      {/* Background Overlay */}
-      <div
-        className="absolute inset-0 bg-black opacity-80 z-40"
-        onClick={onClose}
-      ></div>
+    <>
+      <div className="fixed inset-0 z-50 flex overflow-hidden">
+        {/* Background Overlay */}
+        <div
+          className="absolute inset-0 bg-black opacity-80 z-40"
+          onClick={onClose}
+        ></div>
 
-      {/* Sidebar */}
-      <aside className="relative bg-bg-primary flex flex-col gap-2 h-full z-50 overflow-y-auto ml-auto max-w-[700px] w-full">
-        {/* HeroDetails Component */}
-        <div className="w-full">
-          <HeroDetails
-            title={graphicDetails?.title || ''}
-            image={graphicDetails?.image || ''}
-            subTitle={graphicDetails?.subTitle || ''}
-            light="text-[#8d4970]"
-            dark="dark:text-[#55ae63]"
-          />
-        </div>
-
-        {/* Header Section */}
-        <div className="px-8 mb-12">
-          <div className="flex flex-col mb-8 items-start lg:flex-row">
-            <button
-              onClick={onClose}
-              className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
-            >
-              <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-              {t('partialTranslation:goBack')}
-            </button>
-          </div>
-
-          <ContentTitleDetails
-            title={graphicDetails?.title || ''}
-            yearText={graphicDetails?.yearText || 'N/A'}
-            year={graphicDetails?.year || ''}
-            subTitle={graphicDetails?.subTitle || ''}
-          />
-
-          <ContentDetails
-            content={graphicDetails.description}
-            suffix={''}
-            http={''}
-            icon={{
-              name: '',
-              width: 0,
-              height: 0,
-              color: '',
-            }}
-          />
-
-          <div className="lg:col-span-1 mb-12 ">
-            <img
-              src={graphicDetails.image}
-              alt={graphicDetails.alt}
-              className="w-full md:w-[70%] h-auto mx-auto rounded-lg shadow-md"
+        {/* Sidebar */}
+        <aside className="relative bg-bg-primary flex flex-col gap-2 h-full z-50 overflow-y-auto ml-auto max-w-[700px] w-full">
+          {/* HeroDetails Component */}
+          <div className="w-full">
+            <HeroDetails
+              title={graphicDetails?.title || ''}
+              image={graphicDetails?.image || ''}
+              subTitle={graphicDetails?.subTitle || ''}
+              light="text-[#8d4970]"
+              dark="dark:text-[#55ae63]"
             />
           </div>
 
-          {/* Pass the transformed data */}
-          <GraphicPortfolioContentAbout
-            graphicItemsPortfolio={graphicItemsPortfolio}
-          />
-        </div>
-      </aside>
-    </div>
+          {/* Header Section */}
+          <div className="px-8 mb-12">
+            <div className="flex flex-col mb-8 items-start lg:flex-row">
+              <button
+                onClick={onClose}
+                className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
+              >
+                <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
+                {t('partialTranslation:goBack')}
+              </button>
+            </div>
+
+            <ContentTitleDetails
+              title={graphicDetails?.title || ''}
+              yearText={graphicDetails?.yearText || 'N/A'}
+              year={graphicDetails?.year || ''}
+              subTitle={graphicDetails?.subTitle || ''}
+            />
+
+            <ContentDetails
+              content={graphicDetails.description}
+              suffix={''}
+              http={''}
+              icon={{
+                name: '',
+                width: 0,
+                height: 0,
+                color: '',
+              }}
+            />
+
+            <div
+              className="lg:col-span-1 mb-12 cursor-zoom-in"
+              onClick={() => openLightbox(0)}
+            >
+              <img
+                src={graphicDetails.image}
+                alt={graphicDetails.alt}
+                className="w-full md:w-[70%] h-auto mx-auto rounded-lg shadow-md"
+              />
+            </div>
+
+            {/* Pass the transformed data */}
+            <GraphicPortfolioContentAbout
+              graphicItemsPortfolio={graphicItemsPortfolio}
+            />
+          </div>
+        </aside>
+      </div>
+
+      {/* LightGallery Component */}
+      <LightGallery
+        onInit={(ref: { instance: any }) => {
+          if (ref) {
+            lightGallery.current = ref.instance;
+          }
+        }}
+        plugins={[lgZoom, lgShare, lgHash]}
+        dynamic
+        dynamicEl={(graphicDetails.images || []).map((image) => ({
+          src: image.src,
+          thumb: image.src,
+          subHtml: `<h4>${image.alt}</h4>`,
+        }))}
+      />
+    </>
   );
 };
 
