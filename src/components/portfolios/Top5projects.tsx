@@ -56,7 +56,10 @@ const Top5Projects = () => {
                   key={index}
                   className={`${columnSpan} h-auto lg:h-full flex flex-col`}
                 >
-                  <div className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+                  <div
+                    className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow cursor-pointer"
+                    onClick={() => navigateToDetails(item.urlTitle)}
+                  >
                     {/* Image */}
                     <img
                       src={item.image}

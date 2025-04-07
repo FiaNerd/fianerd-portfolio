@@ -40,6 +40,11 @@ const GraphicImageGallery = () => {
   const column2 = graphicImages.slice(3, 7);
   const column3 = graphicImages.slice(7, 11);
 
+  const handleNavigation = (urlTitle: string) => {
+    setSelectedUrlTitle(urlTitle); // Set the selected image URL title
+    setIsSidebarOpen(true); // Open the sidebar
+  };
+
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false); // Close the sidebar
     setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
@@ -80,7 +85,11 @@ const GraphicImageGallery = () => {
           {/* Column 1 */}
           <div className="grid md:grid-rows-2 lg:grid-rows-3  gap-8 md:gap-4 lg:place-self-center">
             {column1.map((image, index) => (
-              <div key={index}>
+              <div
+                key={index}
+                onClick={() => handleNavigation(image.urlTitle)}
+                className="cursor-pointer"
+              >
                 <GraphicGalleryItems
                   image={image}
                   setIsSidebarOpen={setIsSidebarOpen}
@@ -93,7 +102,11 @@ const GraphicImageGallery = () => {
           {/* Column 2 */}
           <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-8 md:gap-4 ">
             {column2.map((image, index) => (
-              <div key={index}>
+              <div
+                key={index}
+                onClick={() => handleNavigation(image.urlTitle)}
+                className="cursor-pointer"
+              >
                 <GraphicGalleryItems
                   image={image}
                   setIsSidebarOpen={setIsSidebarOpen}
@@ -106,7 +119,11 @@ const GraphicImageGallery = () => {
           {/* Column 3 */}
           <div className="grid lg:grid-rows-2 gap-8 md:gap-4 lg:place-self-center">
             {column3.map((image, index) => (
-              <div key={index}>
+              <div
+                key={index}
+                onClick={() => handleNavigation(image.urlTitle)}
+                className="cursor-pointer"
+              >
                 <GraphicGalleryItems
                   image={image}
                   setIsSidebarOpen={setIsSidebarOpen}
