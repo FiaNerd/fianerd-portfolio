@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
-import { startTransition } from 'react';
-
+import { useEffect, startTransition } from 'react';
 interface IProps {
   navigationMenu: string;
   onMouseEnter: () => void;
@@ -18,21 +17,39 @@ const NavigationSubMenuDropDownDesktop = ({
 }: IProps) => {
   const { t } = useTranslation('translation');
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
-    e.preventDefault();
-    const [path, sectionId] = url.split('#');
+    e.preventDefault(); // Prevent default link behavior
 
-    // Spara sectionId i sessionStorage om det finns
-    if (sectionId) {
-      sessionStorage.setItem('scrollToSection', sectionId);
-    } else {
-      console.log('No sectionId to save.');
-    }
+    const [path, sectionId] = url.split('#'); // Split the URL to check for a section ID
 
-    // Navigera till path
-    navigate(path);
+    startTransition(() => {
+      if (sectionId) {
+        if (location.pathname === path) {
+          // Scroll to the section if it's on the same page
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.error(`Element with id "${sectionId}" not found.`);
+          }
+        } else {
+          // Navigate to the path and scroll after navigation
+          navigate(path, { replace: true });
+          setTimeout(() => {
+            const element = document.getElementById(sectionId);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              console.error(`Element with id "${sectionId}" not found.`);
+            }
+          }, 300); // Delay to ensure the DOM is rendered
+        }
+      } else {
+        navigate(path); // Navigate to the path without a section ID
+      }
+    });
+
     closeMenuOnClick();
   };
 
