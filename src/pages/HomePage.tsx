@@ -32,11 +32,10 @@ const HomePage = () => {
 
   useScrollUpdateURL(
     [
-      'profile',
       'who-am-i',
       'web-skills',
       'graphic-skills',
-      'other-skills',
+      'additional-skills',
       'programs-and-softwares',
       'experience',
       'education',

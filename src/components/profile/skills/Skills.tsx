@@ -4,6 +4,8 @@ import GraphicSkills from './GraphicSkills';
 import OtherSkills from './OtherSkills';
 import WebSkills from './WebSkills';
 import useHeaderHeight from '../../../hook/useHeaderHeight';
+import ProgramAndSoftware from './ProgramAndSoftware';
+import Competencies from './Competencies';
 const Skills = () => {
   const { t } = useTranslation(['profile/skills']);
 
@@ -42,7 +44,7 @@ const Skills = () => {
         <GraphicSkills />
       </section>
 
-      <section id="other-skills" className="top-0 left-0">
+      <section id="additional-skills" className="mb-20">
         <Title
           title={t('otherSkills.tilteSectionOtherSkills')}
           dot="."
@@ -52,7 +54,20 @@ const Skills = () => {
           dark="dark:text-[#69864e] dark:bg-[#1b0909]"
           sticky
         />
-        <OtherSkills />
+        <Competencies />
+      </section>
+
+      <section id="programs-and-softwares" className="mb-12">
+        <Title
+          title={t('programsAndSoftwares.titleProgramsAndSoftwaresTitle')}
+          dot="."
+
+          children={t('programsAndSoftwares.subTiltePogramAndSoftwares')}
+          light="text-[#035d44]  bg-[#fff5d7]"
+          dark="dark:text-[#4b1718] dark:bg-[#a05a48]"
+          sticky
+        />
+        <ProgramAndSoftware />
       </section>
     </div>
   );

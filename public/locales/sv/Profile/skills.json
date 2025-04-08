@@ -47,6 +47,8 @@
     "otherSkillsDrivingTitle": "Körkort: Körkort kategori B och tillgång till egen bil"
   },
   "programsAndSoftwares": {
+    "titleProgramsAndSoftwaresTitle": "Program & verktyg",
+    "subTiltePogramAndSoftwares": "Min verktyg som jag använder dagligen",
     "programsAndSoftwaresTitle": "Min verktygslåda",
     "programsAndSoftwareTitleProgram": "Skapande med kod och kreativitet",
     "programsAndSoftwareSubTitleProgram": "Verktygen - från idé till implementering.",

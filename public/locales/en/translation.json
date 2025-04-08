@@ -10,7 +10,7 @@
   "skillsWebDescription": "Explore my skills in web technology",
   "skillsGraphic": "Graphic Skills",
   "skillsGraphicDescription": "Explore my graphic design skills",
-  "otherSkills": "Other Skills",
+  "otherSkills": "Additional Skills",
   "otherSkillsDescription": "Explore my other skills",
   "programsAndSoftwares": "Programs & Tools",
   "programsAndSoftwaresDescription": "My digital toolbox",
@@ -36,24 +36,13 @@
   "graphicDescription": "Explore my featured graphic projects",
   "blog": "Blog<span class='text-accent-primary font-medium'>!</span>",
   "contact": "Contact me",
-  "languages": {
-    "select": "EN",
-    "sv": "Swedish",
-    "en": "English"
-  },
-  "subMenu": {
-    "titleProfile": "Profile",
-    "titlePortfolio": "Portfolio",
-    "subTitleProfile": "A personal profile showcasing my skills",
-    "subTitlePortfolio": "A collection of my best works"
-  },
   "urls": {
-    "home": "home",
+    "home": "",
     "profile": "profile",
     "me": "who-am-i",
     "skillsWeb": "web-skills",
     "skillsGraphic": "graphic-skills",
-    "otherSkills": "other-skills",
+    "otherSkills": "additional-skills",
     "programsAndSoftwares": "programs-and-softwares",
     "experience": "experience",
     "education": "education",
@@ -65,7 +54,18 @@
     "backend": "backend",
     "fullstack": "fullstack",
     "graphic": "graphic-design",
-    "blog": "Blog",
+    "blog": "blog",
     "contact": "contact-me"
+  },
+  "languages": {
+    "select": "EN",
+    "sv": "Swedish",
+    "en": "English"
+  },
+  "subMenu": {
+    "titleProfile": "Profile",
+    "titlePortfolio": "Portfolio",
+    "subTitleProfile": "A personal profile showcasing my skills",
+    "subTitlePortfolio": "A collection of my best works"
   }
 }

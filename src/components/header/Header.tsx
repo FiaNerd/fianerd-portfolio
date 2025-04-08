@@ -2,7 +2,6 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import {
   useContext,
   useEffect,
-  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
@@ -14,15 +13,12 @@ import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
-import useSmoothScroll from '../../hook/useSmoothScroll';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 
 const Header = () => {
   const { t } = useTranslation(['translation']);
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
   const sidebarWidth = useSidebarWidth();
-  const location = useLocation();
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavigating, setIsNavigating] = useState(false);

@@ -36,7 +36,7 @@
     "textGoal": "To achieve my design goals in 2025, a balance between creativity and structure is required, where each project becomes a step toward refining my skills and creating meaningful, visual experiences."
   },
   "otherSkills": {
-    "tilteSectionOtherSkills": "Other skills",
+    "tilteSectionOtherSkills": "Additional skills",
     "otherSkillsTitle": "Competencies",
     "subTitleOtherSkills": "Versatility in Skills",
     "otherSkillsTitleLanguageAndDriving": "Languages and Driving",
@@ -46,6 +46,8 @@
     "otherSkillsDrivingTitle": "Driving License: Category B and access to own car"
   },
   "programsAndSoftwares": {
+    "titleProgramsAndSoftwaresTitle": "Programs & Tools",
+    "subTitleProgramsAndSoftwares": "The Toolbox I Use Daily",
     "programsAndSoftwaresTitle": "Toolbox",
     "programsAndSoftwareTitleProgram": "Crafting with Code and Creativity",
     "programsAndSoftwareSubTitleProgram": "The tools - from brainstorming to deployment.",

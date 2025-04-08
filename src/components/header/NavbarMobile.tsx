@@ -30,27 +30,38 @@ const NavbarMobile = () => {
   const { currentTheme } = context;
 
   const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
+useEffect(() => {
+  // Prevent background scrolling when the menu is open
+  if (showMenu) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 
-  useEffect(() => {
-    document.body.classList.toggle('dark', currentTheme === 'dark');
+  return () => {
+    document.body.style.overflow = '';
+  };
+}, [showMenu]);
+  // useEffect(() => {
+  //   document.body.classList.toggle('dark', currentTheme === 'dark');
 
-    // Prevent background scrolling when the menu is open
-    if (showMenu) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+  //   // Prevent background scrolling when the menu is open
+  //   if (showMenu) {
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     document.body.style.overflow = '';
+  //   }
 
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [currentTheme, showMenu]);
+  //   return () => {
+  //     document.body.style.overflow = '';
+  //   };
+  // }, [currentTheme, showMenu]);
 
   return (
     <div ref={ref} className="lg:hidden relative">
       <AnimatePresence>
         {showMenu && (
-          <motion.div
+                    <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
@@ -59,7 +70,7 @@ const NavbarMobile = () => {
               stiffness: 260,
               damping: 20,
             }}
-            className="h-screen bg-bg-primary text-text-accent dark:text-bg-primary fixed left-0 right-0 top-0 bottom-0 w-full flex flex-col"
+            className="h-screen bg-bg-primary text-text-accent dark:text-bg-primary fixed left-0 right-0 top-0 bottom-0 w-full flex flex-col z-50"
           >
             <div className="flex-grow overflow-y-auto mt-[3em]">
               <div className="flex gap-8 items-center p-4 mb-20">

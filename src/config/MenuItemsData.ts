@@ -19,7 +19,7 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'profile',
-    url: '/profile/#who-am-i',
+    url: '/profile',
     icon: faCaretDown,
     subMenu: [
       {
@@ -39,12 +39,12 @@ export const navRoutes: Route[] = [
       },
       {
         title: 'otherSkills',
-        url: '/profile/other-skills#other-skills',
+        url: '/profile/additional-skills#additional-skills',
         description: 'otherSkillsDescription',
       },
       {
         title: 'programsAndSoftwares',
-        url: '/profile/other-skills#programs-and-softwares',
+        url: '/profile/programs-and-softwares#programs-and-softwares',
         description: 'programsAndSoftwaresDescription',
       },
       {

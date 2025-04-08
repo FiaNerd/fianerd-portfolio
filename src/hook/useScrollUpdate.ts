@@ -24,7 +24,7 @@ const useScrollUpdateURL = (
         const section = document.getElementById(id);
         if (section) {
           const sectionTop =
-            section.offsetTop - (isHeaderVisible ? headerHeight : 0); // Adjust for header visibility
+            section.offsetTop - (isHeaderVisible ? headerHeight : 0);
           const sectionHeight = section.offsetHeight;
           const scrollPosition = window.scrollY + window.innerHeight / 10;
 
@@ -56,7 +56,7 @@ const useScrollUpdateURL = (
       }
     };
 
-    const handleHashNavigation = () => {
+       const handleHashNavigation = () => {
       const sectionId = location.pathname.split('/').filter(Boolean).pop();
       if (sectionId) {
         if (sectionIds.includes(sectionId)) {
@@ -65,12 +65,12 @@ const useScrollUpdateURL = (
             isNavigating.current = true;
             const offset =
               element.offsetTop - (isHeaderVisible ? headerHeight : 0);
-
+    
             window.scrollTo({
               top: offset > 0 ? offset : 0,
               behavior: 'smooth',
             });
-
+    
             setTimeout(() => {
               isNavigating.current = false;
             }, 500);
@@ -84,7 +84,7 @@ const useScrollUpdateURL = (
         // Scroll to the top if no section ID is provided
         isNavigating.current = true;
         window.scrollTo({
-          top: 0,
+          top: isHeaderVisible ? headerHeight : 0, // Account for header height
           behavior: 'smooth',
         });
         setTimeout(() => {

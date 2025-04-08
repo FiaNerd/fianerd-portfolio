@@ -30,7 +30,7 @@ const PortfolioPage = () => {
 
   useScrollUpdateURL(
     [
-      'portfolio',
+      '',
       'top-5-projects',
       'frontend',
       'backend',
