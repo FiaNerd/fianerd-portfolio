@@ -9,6 +9,7 @@ import Skills from '../components/profile/skills/Skills';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdateURL';
 import { useEffect } from 'react';
+import { useHeaderVisibility } from '../hook/useHeaderVisibility';
 
 const HomePage = () => {
   const { t } = useTranslation([
@@ -18,6 +19,8 @@ const HomePage = () => {
     'profile/hobbies',
   ]);
 
+  const { headerHeight } = useHeaderHeight();
+  // const isHeaderVisable = useHeaderVisibility();
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -28,10 +31,9 @@ const HomePage = () => {
     }
   }, []);
 
-  const { headerHeight } = useHeaderHeight();
-
   useScrollUpdateURL(
     [
+      'home',
       'who-am-i',
       'web-skills',
       'graphic-skills',
@@ -48,12 +50,14 @@ const HomePage = () => {
     <div
       className="bg-blend-multiply"
       style={{
-        marginTop: `${headerHeight}px`,
+        marginTop: `${headerHeight}px `,
         transition: 'top 0.3s ease',
       }}
     >
       {/* Hero Section */}
-      <HeroSection />
+      <section id="home" className="relative">
+        <HeroSection />
+      </section>
       {/* Profile Section */}
       <section id="who-am-i" className="relative">
         <Title

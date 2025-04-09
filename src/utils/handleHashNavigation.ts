@@ -13,34 +13,34 @@ export const handleHashNavigation = ({
   location,
   isNavigating,
 }: HashNavigationParams) => {
-  const sectionId = location.pathname.split('/').filter(Boolean).pop();
-  if (sectionId) {
-    if (sectionIds.includes(sectionId)) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        isNavigating.current = true;
-        const offset = element.offsetTop - (isHeaderVisible ? headerHeight : 0);
+  // const sectionId = location.pathname.split('/').filter(Boolean).pop();
+  // if (sectionId) {
+  //   if (sectionIds.includes(sectionId)) {
+  //     const element = document.getElementById(sectionId);
+  //     if (element) {
+  //       isNavigating.current = true;
+  //       const offset = element.offsetTop - (isHeaderVisible ? headerHeight : 0);
 
-        window.scrollTo({
-          top: offset > 0 ? offset : 0,
-          behavior: 'smooth',
-        });
+  //       window.scrollTo({
+  //         top: offset > 0 ? offset : 0,
+  //         behavior: 'smooth',
+  //       });
 
-        setTimeout(() => {
-          isNavigating.current = false;
-        }, 500);
-      }
-    } else {
-      console.warn(`Section ID "${sectionId}" not found in sectionIds array.`);
-    }
-  } else {
-    isNavigating.current = true;
-    window.scrollTo({
-      top: isHeaderVisible ? headerHeight : 0,
-      behavior: 'smooth',
-    });
-    setTimeout(() => {
-      isNavigating.current = false;
-    }, 500);
-  }
+  //       setTimeout(() => {
+  //         isNavigating.current = false;
+  //       }, 500);
+  //     }
+  //   } else {
+  //     console.warn(`Section ID "${sectionId}" not found in sectionIds array.`);
+  //   }
+  // } else {
+  //   isNavigating.current = true;
+  //   window.scrollTo({
+  //     top: isHeaderVisible ? headerHeight : 0,
+  //     behavior: 'smooth',
+  //   });
+  //   setTimeout(() => {
+  //     isNavigating.current = false;
+  //   }, 500);
+  // }
 };

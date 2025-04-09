@@ -1,6 +1,4 @@
 import Title from './Title';
-import useSmoothScroll from '../../hook/useSmoothScroll';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 
 interface HeroDetailsProps {
   title: string;

@@ -51,7 +51,7 @@ const GraphicImageGallery = () => {
     setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
   };
 
-  useSmoothScroll(0); // Smooth scroll to the top when the sidebar opens
+  // useSmoothScroll(0); 
 
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle

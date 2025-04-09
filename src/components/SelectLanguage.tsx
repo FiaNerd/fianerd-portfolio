@@ -5,7 +5,11 @@ import { useTranslation } from 'react-i18next';
 import Arrow from '../assets/svg/Arrow';
 import { useClickOutside } from '../hook/useClickOutside';
 
-const SelectLanguage = () => {
+interface ISelectLanguageProps {
+  onChange?: () => void;
+}
+
+const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
   const { i18n, t } = useTranslation('translation');
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
@@ -44,6 +48,7 @@ const SelectLanguage = () => {
         aria-expanded={isOpen}
         className="flex flex-row items-center text-md font-sub-heading icon-language text-nav-text hover:text-nav-hover"
         onClick={toggleDropdown}
+        onChange={onChange}
       >
         <Icon
           icon="ic:twotone-language"

@@ -19,7 +19,7 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'profile',
-    url: '/profile',
+    url: '/profile#who-am-i',
     icon: faCaretDown,
     subMenu: [
       {
@@ -66,7 +66,7 @@ export const navRoutes: Route[] = [
   },
   {
     title: 'portfolio',
-    url: '/portfolio',
+    url: '/portfolio#portfolio',
     icon: faCaretDown,
     subMenu: [
       {

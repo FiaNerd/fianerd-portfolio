@@ -54,9 +54,9 @@ const NavigationMenu = () => {
 
   const handleMenuClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault();
-  
+
     const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
-  
+
     startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
@@ -74,7 +74,7 @@ const NavigationMenu = () => {
         navigate(path, { replace: true });
       }
     });
-  
+
     closeMenuOnClick();
   };
 

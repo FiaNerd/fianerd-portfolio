@@ -1,10 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -33,14 +28,13 @@ const Header = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 0) {
-        setIsHidden(true); // Hide header when scrolling down
+        setIsHidden(true);
       } else if (currentScrollY < lastScrollY) {
-        setIsHidden(false); // Show header when scrolling up
+        setIsHidden(false);
       }
       setLastScrollY(currentScrollY);
     };
 
-    
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
