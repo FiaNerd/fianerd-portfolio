@@ -27,21 +27,23 @@ const NavbarMobile = () => {
     throw new Error('ThemeContext must be used within a ThemeProvider');
   }
 
-  const { currentTheme } = context;
+  // const { currentTheme } = context;
 
   const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
-useEffect(() => {
-  // Prevent background scrolling when the menu is open
-  if (showMenu) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
 
-  return () => {
-    document.body.style.overflow = '';
-  };
-}, [showMenu]);
+  useEffect(() => {
+    // Prevent background scrolling when the menu is open
+    if (showMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [showMenu]);
+
   // useEffect(() => {
   //   document.body.classList.toggle('dark', currentTheme === 'dark');
 
@@ -61,7 +63,7 @@ useEffect(() => {
     <div ref={ref} className="lg:hidden relative">
       <AnimatePresence>
         {showMenu && (
-                    <motion.div
+          <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}

@@ -18,8 +18,8 @@ const SelectLanguage = () => {
   const handleLanguageChange = (code: string) => {
     i18n.changeLanguage(code); // Change the language in i18next
     localStorage.setItem('i18nextLng', code); // Persist the selected language
-    setSelectedLanguage(code); // Update the selected language state
-    // Do not close the dropdown here
+    setSelectedLanguage(code);
+    setIsOpen(false); // Close the dropdown
   };
 
   const LANGUAGES = [

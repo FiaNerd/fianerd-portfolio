@@ -1,30 +1,30 @@
-import { useLayoutEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import ContactForm from "../../components/contact/ContactForm";
-import Title from "../../components/partials/Title";
-import useSmoothScroll from "../../hook/useSmoothScroll";
-import useHeaderHeight from "../../hook/useHeaderHeight";
-import useScrollUpdateURL from "../../hook/useScrollUpdate";
+import { useLayoutEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import ContactForm from '../../components/contact/ContactForm';
+import Title from '../../components/partials/Title';
+import useSmoothScroll from '../../hook/useSmoothScroll';
+import useHeaderHeight from '../../hook/useHeaderHeight';
+import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 
 const ContactPage = () => {
-  const { t } = useTranslation("contact/contact");
-  const {headerHeight, isHeaderVisible} = useHeaderHeight();
+  const { t } = useTranslation('contact/contact');
+  const { headerHeight, isHeaderVisible } = useHeaderHeight();
 
-  useScrollUpdateURL([
-    "contact",
-  ], "", headerHeight, isHeaderVisible);
+  useScrollUpdateURL(['contact'], '', headerHeight, isHeaderVisible);
 
-  
   return (
     <div
-      style={{ paddingTop: `${headerHeight}px`, transition: "padding-top 0.3s ease" }}
+      style={{
+        paddingTop: `${headerHeight}px`,
+        transition: 'padding-top 0.3s ease',
+      }}
       className="bg-blend-multiply min-h-screen h-full lg:bg-[url('/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg')] bg-cover bg-center w-full"
     >
       <Title
         id="contact"
-        title={t("contactTitle")}
-        dot={"?"}
-        children={t("contactSubtitle")}
+        title={t('contactTitle')}
+        dot={'?'}
+        children={t('contactSubtitle')}
         className="text-[#d47166] top-0 dark:text-accent-primary"
         subHeadingClassName="text-text-secondary dark:text-text-secondary"
         light="bg-[#e7a48a]"
@@ -33,16 +33,22 @@ const ContactPage = () => {
       />
       <div className="max-w-screen-lg mx-auto lg:bg-[#d47166] lg:dark:bg-[#1d1617] mb-20 grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
         <div className="flex flex-col items-center md:px-2 text-wrap">
-          <h1 className="text-text-primary">{t("contactGreeting").toUpperCase()}</h1>
+          <h1 className="text-text-primary">
+            {t('contactGreeting').toUpperCase()}
+          </h1>
           <blockquote className="w-full space-y-8 px-2 mb-8 md:mb-8">
             <h4
               className="border-l-8 pl-[0.2em] border-[#159ea2] dark:border-pink-500 text-center"
-              dangerouslySetInnerHTML={{ __html: t("contactIntro") }}
+              dangerouslySetInnerHTML={{ __html: t('contactIntro') }}
             ></h4>
-            <p dangerouslySetInnerHTML={{ __html: t("contactSubIntro") }}></p>
+            <p dangerouslySetInnerHTML={{ __html: t('contactSubIntro') }}></p>
           </blockquote>
           <div className="w-80 mx-auto mb-8 md:mb-0">
-            <img src="/assets/images/me-img.jpg" alt="contact image" className="border-4 border-text-primary mx-auto"/>
+            <img
+              src="/assets/images/me-img.jpg"
+              alt="contact image"
+              className="border-4 border-text-primary mx-auto"
+            />
           </div>
         </div>
 

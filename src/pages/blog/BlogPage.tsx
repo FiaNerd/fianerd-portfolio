@@ -3,7 +3,7 @@ import useHeaderHeight from '../../hook/useHeaderHeight';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import Title from '../../components/partials/Title';
 import BlogCards from '../../components/blog/BlogCards';
-import useScrollUpdateURL from '../../hook/useScrollUpdate';
+import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 const BlogPage = () => {
   const { t } = useTranslation('blogPost');
   const { headerHeight } = useHeaderHeight();

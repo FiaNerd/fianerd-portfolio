@@ -7,7 +7,7 @@ import Education from '../components/profile/education/Education';
 import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
 import useHeaderHeight from '../hook/useHeaderHeight';
-import useScrollUpdateURL from '../hook/useScrollUpdate';
+import useScrollUpdateURL from '../hook/useScrollUpdateURL';
 import { useEffect } from 'react';
 
 const HomePage = () => {
