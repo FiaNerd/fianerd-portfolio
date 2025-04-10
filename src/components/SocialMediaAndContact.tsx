@@ -25,7 +25,7 @@ const SocialMediaAndContact = () => {
             src={
               isDarkMode
                 ? '/assets/images/logos/logo-icon-light.svg'
-                : '/assets/images/l ogos/logo-icon-dark.svg'
+                : '/assets/images/logos/logo-icon-dark.svg'
             }
             alt="Logo"
             className="w-[8em] md:w-[7em]" // Match the width and height to the icon size
