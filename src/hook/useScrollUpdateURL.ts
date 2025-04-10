@@ -25,17 +25,17 @@ const useScrollUpdateURL = (
         isNavigating,
       });
 
-    const onHashNavigate = () =>
-      handleHashNavigation({
-        sectionIds,
-        headerHeight,
-        isHeaderVisible,
-        // location,
-        isNavigating,
-      });
+    // const onHashNavigate = () =>
+    //   handleHashNavigation({
+    //     sectionIds,
+    //     headerHeight,
+    //     isHeaderVisible,
+    //     // location,
+    //     isNavigating,
+    //   });
 
     window.addEventListener('scroll', onScroll);
-    onHashNavigate();
+    // onHashNavigate();
 
     return () => {
       window.removeEventListener('scroll', onScroll);
