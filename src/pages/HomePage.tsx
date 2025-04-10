@@ -24,7 +24,6 @@ const HomePage = () => {
   const isNavigating = useRef(false);
 
   const sectionIds = [
-    'home',
     'who-am-i',
     'web-skills',
     'graphic-skills',
@@ -59,7 +58,7 @@ const HomePage = () => {
       }}
     >
       {/* Hero Section */}
-      <section id="home" className="relative">
+      <section className="relative">
         <HeroSection />
       </section>
       {/* Profile Section */}

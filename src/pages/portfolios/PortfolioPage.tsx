@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import RippedPaperBottom from '../../assets/svg/RippedPaperBottom';
 import RippedPaperTop from '../../assets/svg/RippedPaperTop';
 import SvgWaves from '../../assets/svg/SvgWaves';
-import Button from '../../components/partials/Button';
 import SectionPlate from '../../components/partials/SectionPlate';
 import Title from '../../components/partials/Title';
 import BackendPortfolio from '../../components/portfolios/BackendPortfolio';
@@ -83,7 +82,6 @@ const PortfolioPage = () => {
           children={t('portfolio/top5PortfolioSection:subTitleTop5Portfolio')}
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 leading-[0]"
           sticky
-          title={''}
         />
         <Top5projects />
       </section>
