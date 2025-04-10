@@ -29,7 +29,6 @@ const PortfolioPage = () => {
   ]);
 
   const { headerHeight } = useHeaderHeight();
-  // const isHeaderVisible = useHeaderVisibility(); // Track header visibility
   const isNavigating = useRef(false);
 
   const sectionIds = [
@@ -41,12 +40,11 @@ const PortfolioPage = () => {
     'graphic-design',
   ];
 
-
   useEffect(() => {
     handleHashNavigation({
       sectionIds,
       headerHeight,
-      isHeaderVisible: true, 
+      isHeaderVisible: true,
       isNavigating,
       onNavigationComplete: () => {
         console.log('Navigation completed!');
@@ -56,34 +54,6 @@ const PortfolioPage = () => {
 
   // Update the URL when scrolling
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
-
-  // Handle navigation (e.g., when clicking a link)
-  const handleNavigation = () => {
-    isNavigating.current = true; // Set navigation state to true
-  };
-  // const isHeaderVisable = useHeaderVisibility();
-  // useEffect(() => {
-  //   const hash = window.location.hash;
-  //   if (hash) {
-  //     const element = document.querySelector(hash);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   }
-  // }, []);
-
-  // useScrollUpdateURL(
-  //   [
-  //     '',
-  //     'top-5-projects',
-  //     'frontend',
-  //     'backend',
-  //     'fullstack',
-  //     'graphic-design',
-  //   ],
-  //   'portfolio',
-  //   headerHeight
-  // );
 
   const onButtonClick = () => {
     const resumePath =

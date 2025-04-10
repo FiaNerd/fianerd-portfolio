@@ -26,14 +26,14 @@ interface ISidebarGraphicPortfolioProps {
     yearText: string;
     clientTitle?: string;
     client: string;
-    tecthTitle?: string;
+    techTitle?: string;
     tech: { name: string; icon: string }[];
     description: string;
     goals: string;
     role: string;
     challenges: string;
     results: string;
-    testmonial: string;
+    testimonial: string;
     tags: string[];
     relatedProjects: string[];
     ctaLink: string;
@@ -48,138 +48,79 @@ const SidebarGraphicPortfolio = ({
   onClose,
   graphicDetails,
 }: ISidebarGraphicPortfolioProps) => {
-  const { t } = useTranslation(['portfolio/graphicPortfolioSection']);
+  const { t } = useTranslation(['portfolio/graphicPortfolioSection', 'common']);
   const lightGallery = useRef<any>(null);
 
-  const openLightbox = (index: number) => {
-    if (lightGallery.current) {
-      lightGallery.current.openGallery(index);
-    }
-  };
+  console.log('isVisible:', isVisible);
+  console.log('graphicDetails:', graphicDetails);
 
   if (!isVisible || !graphicDetails) {
-    return null; // Don't render if the sidebar is not visible or no data is available
+    console.log('Sidebar is not visible or graphicDetails is missing.');
+    return null;
   }
 
-  // Transform graphicDetails into an array
+  const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
+    clientTitle?: string;
+    techTitle?: string;
+  };
+  console.log('titles:', titles);
+
   const graphicItemsPortfolio = [
     {
-      clientTitle: graphicDetails?.clientTitle,
-      client: graphicDetails?.client,
-      subTitle: graphicDetails?.subTitle,
-      techTitle: graphicDetails?.tecthTitle,
+      clientTitle:
+        graphicDetails?.clientTitle || titles.clientTitle || 'Client: ',
+      client: graphicDetails?.client || 'N/A',
+      subTitle: graphicDetails?.subTitle || 'No subtitle available',
+      techTitle:
+        graphicDetails?.techTitle || titles.techTitle || 'Technologies',
       tech:
         graphicDetails?.tech?.map((technology) => ({
-          name: technology.name,
-          icon: technology.icon,
+          name: technology.name || 'Unknown Technology',
+          icon: technology.icon || '',
         })) || [],
-      goals: graphicDetails?.goals,
-      role: graphicDetails?.role,
-      challenges: graphicDetails?.challenges,
-      results: graphicDetails?.results,
-      testimonial: graphicDetails?.testmonial,
-      tags: graphicDetails?.tags,
-      relatedProjects: graphicDetails?.relatedProjects,
-      demands: graphicDetails?.demands,
-      ctaLink: graphicDetails?.ctaLink,
-      ctaButton: graphicDetails?.ctaButton,
+      goals: graphicDetails?.goals || 'No goals provided',
+      role: graphicDetails?.role || 'No role specified',
+      challenges: graphicDetails?.challenges || 'No challenges specified',
+      results: graphicDetails?.results || 'No results available',
+      testimonial: graphicDetails?.testimonial || 'No testimonial available',
+      tags: graphicDetails?.tags || [],
+      relatedProjects: graphicDetails?.relatedProjects || [],
+      demands: graphicDetails?.demands || 'No demands specified',
+      ctaLink: graphicDetails?.ctaLink || '#',
+      ctaButton: graphicDetails?.ctaButton || 'Learn More',
     },
   ];
 
-   // Fetch titles dynamically
-   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
-    clientTitle?: string;
-  };
+  console.log('graphicItemsPortfolio:', graphicItemsPortfolio);
 
   return (
     <>
       <div className="fixed inset-0 z-50 flex overflow-hidden">
-        {/* Background Overlay */}
         <div
           className="absolute inset-0 bg-black opacity-80 z-40"
           onClick={onClose}
         ></div>
-
-        {/* Sidebar */}
         <aside className="relative bg-bg-primary flex flex-col gap-2 h-full z-50 overflow-y-auto ml-auto max-w-[700px] w-full">
-          {/* HeroDetails Component */}
-          <div className="w-full">
-            <HeroDetails
-              title={graphicDetails?.title || ''}
-              image={graphicDetails?.image || ''}
-              subTitle={graphicDetails?.subTitle || ''}
-              light="text-[#8d4970]"
-              dark="dark:text-[#55ae63]"
-            />
-          </div>
-
-          {/* Header Section */}
-          <div className="px-8 mb-12">
-            <div className="flex flex-col mb-8 items-start lg:flex-row">
-              <button
-                onClick={onClose}
-                className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
-              >
-                <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-                {t('partialTranslation:goBack')}
-              </button>
-            </div>
-
-            <ContentTitleDetails
-              title={graphicDetails?.title || ''}
-              yearText={graphicDetails?.yearText || 'N/A'}
-              year={graphicDetails?.year || ''}
-              clientTitle={titles?.clientTitle || ''}
-              client={graphicDetails?.client || ''}
-              subTitle={graphicDetails?.subTitle || ''}
-            />
-
-            <ContentDetails
-              content={graphicDetails.description}
-              suffix={''}
-              http={''}
-              icon={{
-                name: '',
-                width: 0,
-                height: 0,
-                color: '',
-              }}
-            />
-
-            <div
-              className="lg:col-span-1 mb-12 cursor-zoom-in"
-              onClick={() => openLightbox(0)}
-            >
-              <img
-                src={graphicDetails.image}
-                alt={graphicDetails.alt}
-                className="w-full md:w-[70%] h-auto mx-auto rounded-lg shadow-md"
-              />
-            </div>
-
-            {/* Pass the transformed data */}
-            <GraphicPortfolioContentAbout
-              graphicItemsPortfolio={graphicItemsPortfolio}
-            />
-          </div>
+          <HeroDetails
+            title={graphicDetails?.title || ''}
+            image={graphicDetails?.image || ''}
+            subTitle={graphicDetails?.subTitle || ''}
+            light="text-[#8d4970]"
+            dark="dark:text-[#55ae63]"
+          />
+          <ContentTitleDetails
+            title={graphicDetails?.title || ''}
+            yearText={graphicDetails?.yearText || 'N/A'}
+            year={graphicDetails?.year || ''}
+            clientTitle={titles?.clientTitle || ''}
+            client={graphicDetails?.client || ''}
+            subTitle={graphicDetails?.subTitle || ''}
+          />
+          <GraphicPortfolioContentAbout
+            graphicItemsPortfolio={graphicItemsPortfolio}
+          />
         </aside>
       </div>
-
-      {/* LightGallery Component */}
-      <LightGallery
-        onInit={(ref: { instance: any }) => {
-          if (ref) {
-            lightGallery.current = ref.instance;
-          }
-        }}
-        plugins={[lgZoom, lgShare, lgHash]}
-        dynamic
-        dynamicEl={(graphicDetails.images || []).map((image) => ({
-          src: image.src,
-          thumb: image.src,
-          subHtml: `<h4>${image.alt}</h4>`,
-        }))}
-      />
     </>
   );
 };

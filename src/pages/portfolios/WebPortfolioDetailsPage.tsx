@@ -1,10 +1,11 @@
 import { Icon } from '@iconify/react';
-import { useEffect, useState } from 'react';
+import { startTransition, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import useHeaderHeight from '../../hook/useHeaderHeight';
+import Button from '../../components/partials/Button';
 
 const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
@@ -17,9 +18,15 @@ const WebPortfolioDetailsPage = () => {
     'portfolio/backendPortfolioSection',
     'portfolio/fullstackPortfolioSection',
     'portfolio/graphicPortfolioSection',
-    'partialTranslation',
+    'common',
   ]);
   const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    startTransition(() => {
+      navigate && navigate(-1);
+    });
+  };
 
   const { headerHeight } = useHeaderHeight();
 
@@ -51,7 +58,7 @@ const WebPortfolioDetailsPage = () => {
         ...(portfolioData[2]?.frontendItems || []),
         ...(portfolioData[3]?.backendItems || []),
         ...(portfolioData[4]?.fullstackItems || []),
-        ...(portfolioData[5]?.graphicItemsPortfolio || []), 
+        ...(portfolioData[5]?.graphicItemsPortfolio || []),
       ];
 
       const filteredItems = sections.filter(
@@ -94,13 +101,13 @@ const WebPortfolioDetailsPage = () => {
       </div>
 
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
-        <button
-          onClick={() => navigate(-1)}
+        <Button
+          onClick={handleNavigate}
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('partialTranslation:goBack')}
-        </button>
+          {t('common:goBack')}
+        </Button>
       </div>
 
       {portfolioItems &&

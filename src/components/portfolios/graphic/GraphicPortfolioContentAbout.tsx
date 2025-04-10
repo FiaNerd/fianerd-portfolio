@@ -33,6 +33,7 @@ const GraphicPortfolioContentAbout = ({
 
   // Fetch titles dynamically
   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
+    clientTitle?: string;
     subTitle?: string;
     techTitle?: string;
     tech?: string;
@@ -43,6 +44,10 @@ const GraphicPortfolioContentAbout = ({
     resultsTitle?: string;
     testimonialTitle?: string;
   };
+
+  console.log('titles:', titles);
+  console.log('graphicItemsPortfolio:', graphicItemsPortfolio);
+  console.log('graphicItemsPortfolio:', graphicItemsPortfolio);
 
   return (
     <div className="grid gap-8">

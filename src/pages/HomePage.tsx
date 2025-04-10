@@ -9,7 +9,6 @@ import Skills from '../components/profile/skills/Skills';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdateURL';
 import { useEffect, useRef } from 'react';
-import { useHeaderVisibility } from '../hook/useHeaderVisibility';
 import { handleHashNavigation } from '../utils/handleHashNavigation';
 
 const HomePage = () => {
@@ -21,7 +20,6 @@ const HomePage = () => {
   ]);
 
   const { headerHeight } = useHeaderHeight();
-  // const isHeaderVisible = useHeaderVisibility();
   const isNavigating = useRef(false);
 
   const sectionIds = [
@@ -51,9 +49,7 @@ const HomePage = () => {
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
 
-  // const handleNavigation = () => {
-  //   isNavigating.current = true;
-  // };
+
 
   return (
     <div

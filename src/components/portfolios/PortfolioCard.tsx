@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useState } from 'react';
+import { startTransition, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import Popup from '../partials/Popup';
@@ -41,8 +41,12 @@ const PortfolioCard = ({
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
-    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
+    startTransition(() => {
+      navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
+    });
   };
+  
+
 
   const truncatedDescription =
     description.length > 110

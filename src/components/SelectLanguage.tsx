@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { startTransition, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Arrow from '../assets/svg/Arrow';
 import { useClickOutside } from '../hook/useClickOutside';
@@ -13,6 +13,9 @@ const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
   const { i18n, t } = useTranslation('translation');
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+  useEffect(() => {
+    i18n.loadNamespaces('translation');
+  }, []);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -20,10 +23,12 @@ const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
   const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
 
   const handleLanguageChange = (code: string) => {
-    i18n.changeLanguage(code); // Change the language in i18next
-    localStorage.setItem('i18nextLng', code); // Persist the selected language
-    setSelectedLanguage(code);
-    setIsOpen(false); // Close the dropdown
+    startTransition(() => {
+      i18n.changeLanguage(code); // 👈 Safe now, won't crash
+      localStorage.setItem('i18nextLng', code);
+      setSelectedLanguage(code);
+      setIsOpen(false);
+    });
   };
 
   const LANGUAGES = [
@@ -45,10 +50,9 @@ const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
   return (
     <div ref={ref} className="relative">
       <button
+        onClick={toggleDropdown}
         aria-expanded={isOpen}
         className="flex flex-row items-center text-md font-sub-heading icon-language text-nav-text hover:text-nav-hover"
-        onClick={toggleDropdown}
-        onChange={onChange}
       >
         <Icon
           icon="ic:twotone-language"

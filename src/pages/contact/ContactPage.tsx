@@ -8,9 +8,9 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 
 const ContactPage = () => {
   const { t } = useTranslation('contact/contact');
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
-  useScrollUpdateURL(['contact'], '', headerHeight, isHeaderVisible);
+  useScrollUpdateURL(['contact'], '', headerHeight);
 
   return (
     <div

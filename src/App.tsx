@@ -1,7 +1,7 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
-import ErrorFallback from './components/partials/errors/ErrorFallBack';
+
 import SocialMediaAndContact from './components/SocialMediaAndContact';
 import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
@@ -11,6 +11,7 @@ import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
 import WebPortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
+import ErrorFallback from './components/partials/errors/ErrorFallBack';
 
 const App = () => {
   return (
@@ -37,7 +38,7 @@ const App = () => {
           >
             <Routes>
               {/* Home Route */}
-              <Route path="/home" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/profile" element={<HomePage />} />
               <Route path="/profile/who-am-i" element={<HomePage />} />
               <Route path="/profile/web-skills" element={<HomePage />} />

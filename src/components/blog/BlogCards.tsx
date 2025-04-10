@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogInterface';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { startTransition } from 'react';
+import Button from '../partials/Button';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
@@ -8,12 +10,22 @@ const BlogCards = () => {
     returnObjects: true,
   }) as IBlogCard[];
 
+  const navigate = useNavigate();
+
   // Function to generate random color in HSL format
   const getRandomHSLColor = () => {
     const h = Math.floor(Math.random() * 350); // Hue (0-350)
     const s = Math.floor(Math.random() * 41) + 60; // Saturation (60-100%)
     const l = Math.floor(Math.random() * 41) + 40; // Lightness (40-80%)
     return `hsl(${h}, ${s}%, ${l}%)`;
+  };
+
+  const handleNaviagete = (urlTitle: string) => {
+    // Encode the URL title to handle special characters
+    const encodedUrlTitle = encodeURIComponent(urlTitle);
+    startTransition(() => {
+      navigate(`/blog/${encodedUrlTitle}`);
+    });
   };
 
   return (
@@ -81,13 +93,12 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <NavLink
-                  to={`/blog/${encodeURIComponent(card.urlTitle)}`}
-                  rel="noopener noreferrer"
-                  className="font-sub-heading font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
+                <Button
+                  onClick={() => handleNaviagete(card.urlTitle)}
+                  className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </NavLink>
+                </Button>
               </div>
             </div>
           </div>

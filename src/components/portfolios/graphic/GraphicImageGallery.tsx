@@ -28,7 +28,7 @@ const GraphicImageGallery = () => {
     role: string;
     challenges: string;
     results: string;
-    testmonial: string;
+    testimonial: string;
     tags: string[];
     relatedProjects: string[];
     ctaLink: string;
@@ -51,7 +51,7 @@ const GraphicImageGallery = () => {
     setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
   };
 
-  // useSmoothScroll(0); 
+  // useSmoothScroll(0);
 
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
@@ -72,7 +72,7 @@ const GraphicImageGallery = () => {
     role: '',
     challenges: '',
     results: '',
-    testmonial: '',
+    testimonial: '', 
     tags: [],
     relatedProjects: [],
     ctaLink: '',

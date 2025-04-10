@@ -5,8 +5,15 @@ import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
 
-const NavigationMenu = () => {
-  const { t } = useTranslation('translation');
+  const NavigationMenu = () => {
+    const { i18n,t } = useTranslation();
+  
+    useEffect(() => {
+      if (!i18n.hasResourceBundle('translation', i18n.language)) {
+        i18n.loadNamespaces('translation');
+      }
+    }, [i18n]);
+  
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
   const navigate = useNavigate();
@@ -27,6 +34,13 @@ const NavigationMenu = () => {
       setNavigationMenuOpen(false);
       setNavigationMenu('');
     }, navigationMenuCloseDelay);
+  };
+
+  const handleMouseEnter = (menuTitle: string) => {
+ 
+      setNavigationMenuOpen(true);
+      setNavigationMenu(menuTitle);
+  
   };
 
   useEffect(() => {
@@ -57,7 +71,7 @@ const NavigationMenu = () => {
 
     const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
 
-    startTransition(() => {
+  
       if (sectionId) {
         if (location.pathname === path) {
           // If already on the correct path, scroll to the section
@@ -73,13 +87,12 @@ const NavigationMenu = () => {
         // Navigate to the path without a hash fragment
         navigate(path, { replace: true });
       }
-    });
 
     closeMenuOnClick();
   };
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className="relative z-10">
         <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-4 lg:gap-1 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
@@ -94,11 +107,20 @@ const NavigationMenu = () => {
                   }`
                 }
                 onMouseEnter={() => {
-                  setNavigationMenuOpen(true);
-                  setNavigationMenu(menu.title);
+                  console.log('onMouseEnter triggered for menu:', menu.title);
+                  startTransition(() => {
+                    setNavigationMenuOpen(true);
+                    setNavigationMenu(menu.title);
+                  });
                 }}
                 onMouseLeave={handleMouseLeave}
-                onClick={(e) => handleMenuClick(e, menu.url)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log('onClick triggered for menu:', menu.url);
+                  startTransition(() => {
+                    handleMenuClick(e, menu.url);
+                  });
+                }}
               >
                 <span
                   dangerouslySetInnerHTML={{ __html: t(menu.title) }}
@@ -117,17 +139,17 @@ const NavigationMenu = () => {
         </ul>
       </div>
 
-      {navigationMenuOpen && (
-        <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading submenu...</div>}>
+        {navigationMenuOpen && (
           <NavigationSubMenuDropDownDesktop
             navigationMenu={navigationMenu}
             onMouseEnter={clearCloseTimeout}
             onMouseLeave={handleMouseLeave}
             closeMenuOnClick={() => setNavigationMenuOpen(false)}
           />
-        </Suspense>
-      )}
-    </>
+        )}
+      </Suspense>
+    </Suspense>
   );
 };
 
