@@ -38,7 +38,7 @@ const App = () => {
           >
             <Routes>
               {/* Home Route */}
-              <Route path="/home" element={<HomePage />} />
+              <Route path="/profile/home" element={<HomePage />} />
               <Route path="/profile" element={<HomePage />} />
               <Route path="/profile/who-am-i" element={<HomePage />} />
               <Route path="/profile/web-skills" element={<HomePage />} />
