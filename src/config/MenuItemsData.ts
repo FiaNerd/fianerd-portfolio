@@ -14,7 +14,7 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/',
+    url: '/home#home',
     nav: HomePage,
   },
   {
@@ -71,7 +71,7 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/portfolio/top-5-projects#top5best-projects',
+        url: '/portfolio/top-5-projects#top-5-projects',
         description: 'top5best-projectsDescription',
       },
       {

@@ -9,6 +9,7 @@ const useHeaderHeight = () => {
     const updateHeaderHeight = () => {
       if (header) {
         const newHeight = header.getBoundingClientRect().height;
+        
         setHeaderHeight((prevHeight) => {
           if (prevHeight !== newHeight) return newHeight;
           return prevHeight;

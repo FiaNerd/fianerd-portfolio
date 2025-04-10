@@ -15,6 +15,8 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import { NavLink } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
+import { useEffect, useRef } from 'react';
+import { handleHashNavigation } from '../../utils/handleHashNavigation';
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
@@ -27,19 +29,61 @@ const PortfolioPage = () => {
   ]);
 
   const { headerHeight } = useHeaderHeight();
+  // const isHeaderVisible = useHeaderVisibility(); // Track header visibility
+  const isNavigating = useRef(false);
 
-  useScrollUpdateURL(
-    [
-      '',
-      'top-5-projects',
-      'frontend',
-      'backend',
-      'fullstack',
-      'graphic-design',
-    ],
+  const sectionIds = [
     'portfolio',
-    headerHeight
-  );
+    'top-5-projects',
+    'frontend',
+    'backend',
+    'fullstack',
+    'graphic-design',
+  ];
+
+
+  useEffect(() => {
+    handleHashNavigation({
+      sectionIds,
+      headerHeight,
+      isHeaderVisible: true, 
+      isNavigating,
+      onNavigationComplete: () => {
+        console.log('Navigation completed!');
+      },
+    });
+  }, [headerHeight]);
+
+  // Update the URL when scrolling
+  useScrollUpdateURL(sectionIds, 'profile', headerHeight);
+
+  // Handle navigation (e.g., when clicking a link)
+  const handleNavigation = () => {
+    isNavigating.current = true; // Set navigation state to true
+  };
+  // const isHeaderVisable = useHeaderVisibility();
+  // useEffect(() => {
+  //   const hash = window.location.hash;
+  //   if (hash) {
+  //     const element = document.querySelector(hash);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   }
+  // }, []);
+
+  // useScrollUpdateURL(
+  //   [
+  //     '',
+  //     'top-5-projects',
+  //     'frontend',
+  //     'backend',
+  //     'fullstack',
+  //     'graphic-design',
+  //   ],
+  //   'portfolio',
+  //   headerHeight
+  // );
 
   const onButtonClick = () => {
     const resumePath =

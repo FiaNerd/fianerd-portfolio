@@ -8,8 +8,9 @@ import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdateURL';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useHeaderVisibility } from '../hook/useHeaderVisibility';
+import { handleHashNavigation } from '../utils/handleHashNavigation';
 
 const HomePage = () => {
   const { t } = useTranslation([
@@ -20,31 +21,39 @@ const HomePage = () => {
   ]);
 
   const { headerHeight } = useHeaderHeight();
-  // const isHeaderVisable = useHeaderVisibility();
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, []);
+  // const isHeaderVisible = useHeaderVisibility();
+  const isNavigating = useRef(false);
 
-  useScrollUpdateURL(
-    [
-      'home',
-      'who-am-i',
-      'web-skills',
-      'graphic-skills',
-      'additional-skills',
-      'programs-and-softwares',
-      'experience',
-      'education',
-      'hobbies',
-    ],
-    'profile'
-  );
+  const sectionIds = [
+    'home',
+    'who-am-i',
+    'web-skills',
+    'graphic-skills',
+    'additional-skills',
+    'programs-and-softwares',
+    'experience',
+    'education',
+    'hobbies',
+  ];
+
+  useEffect(() => {
+    handleHashNavigation({
+      sectionIds,
+      headerHeight,
+      isHeaderVisible: true,
+      isNavigating,
+      onNavigationComplete: () => {
+        console.log('Navigation completed!');
+      },
+    });
+  }, [headerHeight]);
+
+  // Update the URL when scrollin
+  useScrollUpdateURL(sectionIds, 'profile', headerHeight);
+
+  // const handleNavigation = () => {
+  //   isNavigating.current = true;
+  // };
 
   return (
     <div

@@ -30,7 +30,7 @@ const useScrollUpdateURL = (
         sectionIds,
         headerHeight,
         isHeaderVisible,
-        location,
+        // location,
         isNavigating,
       });
 
