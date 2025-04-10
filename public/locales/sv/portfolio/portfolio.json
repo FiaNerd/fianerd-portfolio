@@ -1,11 +1,10 @@
 {
-    "titlePortfolio": "Portfolio",
-    "subTitlePortfolio": "Där kod möter kreativitet",
-    "mainSectionTitle": "När idéer blir verklighet",
-    "portfolioIntro": "Detta är ett bevis på min passion för kodning och design. Jag har skapat några projekt som jag är stolt över och jag letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
-    "ctaButtonCV": "Ladda ner CV",
-    "ctaButtonContactMe": "Kontakta mig",
-    "cta": "Läs mer",
-    "ctaLess": "Läs mindre"
-  
+  "titlePortfolio": "Logik & Pixlar - Portfolio",
+  "subTitlePortfolio": "Där kod möter kreativitet",
+  "mainSectionTitle": "När idéer blir verklighet",
+  "portfolioIntro": "Detta är ett bevis på min passion för kodning och design. Jag har skapat några projekt som jag är stolt över och jag letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
+  "ctaButtonCV": "Ladda ner CV",
+  "ctaButtonContactMe": "Kontakta mig",
+  "cta": "Läs mer",
+  "ctaLess": "Läs mindre"
 }
