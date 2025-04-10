@@ -20,12 +20,12 @@ const SocialMediaAndContact = () => {
     <div className="sidebar h-screen flex flex-col justify-between w-[37px] md:w-[55px] mx-auto pt-12 px-[0.23em]">
       {/* Logo Section */}
       <div className="flex justify-start ">
-        <NavLink to="/">
+        <NavLink to="/home#home">
           <img
             src={
               isDarkMode
                 ? '/assets/images/logos/logo-icon-light.svg'
-                : '/assets/images/logos/logo-icon-dark.svg'
+                : '/assets/images/l ogos/logo-icon-dark.svg'
             }
             alt="Logo"
             className="w-[8em] md:w-[7em]" // Match the width and height to the icon size

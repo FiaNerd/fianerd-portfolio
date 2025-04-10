@@ -14,36 +14,17 @@ export const handleHashNavigation = ({
   isNavigating,
   onNavigationComplete,
 }: HashNavigationParams) => {
-  const hash = window.location.hash;
+  const hash = window.location.hash.slice(1); // Get the hash without '#'
 
-  if (hash) {
-    const sectionId = hash.substring(1);
-
-    if (sectionIds.includes(sectionId)) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        isNavigating.current = true;
-
-        const offset = element.offsetTop - (isHeaderVisible ? headerHeight : 0);
-
-        window.scrollTo({
-          top: offset > 0 ? offset : 0,
-          behavior: 'smooth',
-        });
-
-        setTimeout(() => {
-          isNavigating.current = false;
-          if (onNavigationComplete) {
-            onNavigationComplete();
-          }
-        }, 500);
-      } else {
-        console.warn(`Element with ID "${sectionId}" not found in the DOM.`);
-      }
-    } else {
-      console.warn(
-        `Section ID "${sectionId}" is not in the valid sectionIds array.`
-      );
+  if (sectionIds.includes(hash)) {
+    const element = document.getElementById(hash);
+    if (element) {
+      const topOffset = isHeaderVisible ? headerHeight : 0;
+      window.scrollTo({
+        top: element.offsetTop - topOffset,
+        behavior: 'smooth',
+      });
+      if (onNavigationComplete) onNavigationComplete();
     }
   }
 };

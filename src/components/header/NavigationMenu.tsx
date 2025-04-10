@@ -5,15 +5,15 @@ import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
 
-  const NavigationMenu = () => {
-    const { i18n,t } = useTranslation();
-  
-    useEffect(() => {
-      if (!i18n.hasResourceBundle('translation', i18n.language)) {
-        i18n.loadNamespaces('translation');
-      }
-    }, [i18n]);
-  
+const NavigationMenu = () => {
+  const { i18n, t } = useTranslation();
+
+  useEffect(() => {
+    if (!i18n.hasResourceBundle('translation', i18n.language)) {
+      i18n.loadNamespaces('translation');
+    }
+  }, [i18n]);
+
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
   const navigate = useNavigate();
@@ -37,10 +37,8 @@ import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop
   };
 
   const handleMouseEnter = (menuTitle: string) => {
- 
-      setNavigationMenuOpen(true);
-      setNavigationMenu(menuTitle);
-  
+    setNavigationMenuOpen(true);
+    setNavigationMenu(menuTitle);
   };
 
   useEffect(() => {
@@ -71,7 +69,7 @@ import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop
 
     const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
 
-  
+    startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
           // If already on the correct path, scroll to the section
@@ -87,6 +85,7 @@ import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop
         // Navigate to the path without a hash fragment
         navigate(path, { replace: true });
       }
+    });
 
     closeMenuOnClick();
   };

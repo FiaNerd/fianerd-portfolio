@@ -20,6 +20,7 @@ const HomePage = () => {
   ]);
 
   const { headerHeight } = useHeaderHeight();
+  // const isHeaderVisible = useHeaderVisibility();
   const isNavigating = useRef(false);
 
   const sectionIds = [
@@ -48,8 +49,6 @@ const HomePage = () => {
 
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
-
-
 
   return (
     <div
