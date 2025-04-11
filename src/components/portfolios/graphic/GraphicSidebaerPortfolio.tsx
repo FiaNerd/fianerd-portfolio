@@ -117,13 +117,13 @@ const SidebarGraphicPortfolio = ({
           {/* Header Section */}
           <div className="px-8 mb-12">
             <div className="flex flex-col mb-8 items-start lg:flex-row">
-              <Button
+              <button
                 onClick={onClose}
-                className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
+                className="font-sub-heading inline-flex items-center gap-2 text-xl transition-all duration-200 bg-none hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover w-auto py-1"
               >
                 <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
                 {t('common:goBack').toLocaleUpperCase()}
-              </Button>
+              </button>
             </div>
 
             <ContentTitleDetails

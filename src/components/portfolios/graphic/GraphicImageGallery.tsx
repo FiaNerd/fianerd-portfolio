@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GraphicGalleryItems from './GraphicImageItems';
-import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
+import SidebarGraphicPortfolio from './GraphicSidebaerPortfolio';
 import useSmoothScroll from '../../../hook/useSmoothScroll';
 
 const GraphicImageGallery = () => {
