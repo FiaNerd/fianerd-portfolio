@@ -34,7 +34,7 @@ interface ISidebarGraphicPortfolioProps {
     role: string;
     challenges: string;
     results: string;
-    testmonial: string;
+    testimonial: string;
     tags: string[];
     relatedProjects: string[];
     ctaLink: string;
@@ -78,7 +78,7 @@ const SidebarGraphicPortfolio = ({
       role: graphicDetails?.role,
       challenges: graphicDetails?.challenges,
       results: graphicDetails?.results,
-      testimonial: graphicDetails?.testmonial,
+      testimonial: graphicDetails?.testimonial,
       tags: graphicDetails?.tags,
       relatedProjects: graphicDetails?.relatedProjects,
       demands: graphicDetails?.demands,
