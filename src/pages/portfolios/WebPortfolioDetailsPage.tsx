@@ -23,9 +23,7 @@ const WebPortfolioDetailsPage = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    startTransition(() => {
-      navigate && navigate(-1);
-    });
+      navigate(-1);
   };
 
   const { headerHeight } = useHeaderHeight();

@@ -10,9 +10,7 @@ const PageNotFound = () => {
   const { t } = useTranslation('common');
 
   const goBack = () => {
-    startTransition(() => {
-      navigate && navigate(-1);
-    });
+    navigate(-1);
   };
 
   return (

@@ -8,7 +8,6 @@ import HeroDetails from '../../components/partials/HeroDetails';
 import ContentTitleDetails from '../../components/partials/ContentTitleDetails';
 import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
-import { startTransition } from 'react';
 
 const BlogDetailsPage = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards', 'common']);
@@ -27,9 +26,7 @@ const BlogDetailsPage = () => {
   }
 
   const handleNavigate = () => {
-    startTransition(() => {
-      navigate && navigate(-1);
-    });
+    navigate(-1);
   };
 
   return (
