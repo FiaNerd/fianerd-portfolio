@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from '../partials/Popup';
 import PortfolioImageDetails from './PortfolioImageDetails';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 
 interface PortfolioDetailsItemsProps {
   title: string;

@@ -50,7 +50,7 @@ const GraphicPortfolioContentAbout = ({
   console.log('graphicItemsPortfolio:', graphicItemsPortfolio);
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 px-8">
       {graphicItemsPortfolio.map((item, index) => (
         <div key={index} className="flex flex-col gap-4">
           {/* Client Section */}

@@ -23,7 +23,7 @@ const WebPortfolioDetailsPage = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-      navigate(-1);
+    navigate(-1);
   };
 
   const { headerHeight } = useHeaderHeight();
@@ -104,7 +104,7 @@ const WebPortfolioDetailsPage = () => {
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('common:goBack')}
+          {t('common:goBack').toUpperCase()}
         </Button>
       </div>
 
