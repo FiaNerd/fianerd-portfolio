@@ -84,7 +84,7 @@ const Top5Projects = () => {
                         <p className="text-white text-sm">{item.description}</p>
                         <Button
                           onClick={() => navigateToDetails(item.urlTitle)}
-                          className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs"
+                          className="hidden lg:flex bg-btn-bg hover:bg-bg-hover  items-center justify-center gap-2 w-full max-w-xs"
                         >
                           <Icon icon="ix:explore" width="20" height="20" />
                           <span>{item.ctaButton}</span>

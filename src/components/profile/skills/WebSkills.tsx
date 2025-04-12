@@ -19,9 +19,6 @@ const WebSkills = () => {
   return (
     <section className="max-w-screen-xl mx-auto top-0 left-0 px-4 md:px-6 lg:px-10 py-8 md:py-12">
       <div className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8">
-        <h2 className="text-center text-hover-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-[#535437] dark:bg-[#489c80] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
-          {t('webSkills.webbDev')}
-        </h2>
 
         <div className="items-center md:row-start-2 md:col-start-1">
           <h2 className="font-textImportant text-3xl md:text-5xl text-[#535437] dark:text-[#489c80] leading-10 font-bold text-center md:leading-[3rem]">
