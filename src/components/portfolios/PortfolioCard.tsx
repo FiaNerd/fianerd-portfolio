@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { startTransition, useState } from 'react';
+import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import Popup from '../partials/Popup';
@@ -21,7 +21,7 @@ interface PortfolioCardProps {
   titleDescription: string;
 }
 
-const PortfolioCard = ({
+const PortfolioCard = ({ 
   title,
   urlTitle,
   applicationType,
@@ -41,12 +41,9 @@ const PortfolioCard = ({
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
-    startTransition(() => {
-      navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
-    });
+    console.log('Navigating to:', `/portfolio/${encodeURIComponent(urlTitle)}`);
+    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
   };
-  
-
 
   const truncatedDescription =
     description.length > 110
@@ -58,7 +55,7 @@ const PortfolioCard = ({
       {/* First Section (Navigable) */}
       <div
         className="flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-t-lg cursor-pointer"
-        onClick={navigateToDetails} // Navigate on click anywhere in this section
+        onClick={navigateToDetails}
       >
         {/* Image */}
         <img

@@ -29,6 +29,9 @@ const PortfolioPage = () => {
   const { headerHeight } = useHeaderHeight();
   const isNavigating = useRef(false);
 
+  console.log('Header Height:', headerHeight);
+  console.log('Is Navigating:', isNavigating.current);
+
   const sectionIds = [
     'portfolio',
     'top-5-projects',

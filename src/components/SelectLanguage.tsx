@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import clsx from 'clsx';
-import { startTransition, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Arrow from '../assets/svg/Arrow';
 import { useClickOutside } from '../hook/useClickOutside';
@@ -23,12 +23,10 @@ const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
   const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
 
   const handleLanguageChange = (code: string) => {
-    startTransition(() => {
       i18n.changeLanguage(code); // 👈 Safe now, won't crash
       localStorage.setItem('i18nextLng', code);
       setSelectedLanguage(code);
       setIsOpen(false);
-    });
   };
 
   const LANGUAGES = [

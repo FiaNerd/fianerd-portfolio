@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
-import { startTransition, Suspense } from 'react';
 
 interface IProps {
   navigationMenu: string;
@@ -24,7 +23,6 @@ const NavigationSubMenuDropDownDesktop = ({
 
     const [path, sectionId] = url.split('#'); // Split the URL to check for a section ID
 
-    startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
           // Scroll to the section if it's on the same page
@@ -49,7 +47,6 @@ const NavigationSubMenuDropDownDesktop = ({
       } else {
         navigate(path); // Navigate to the path without a section ID
       }
-    });
 
     closeMenuOnClick();
   };
@@ -61,7 +58,6 @@ const NavigationSubMenuDropDownDesktop = ({
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
       <div
         className="absolute z-10 bg-nav-text dark:bg-[#1b0909] shadow-sm p-4 rounded mt-[3.8em]"
         onMouseEnter={onMouseEnter}
@@ -127,7 +123,6 @@ const NavigationSubMenuDropDownDesktop = ({
           </div>
         </div>
       </div>
-    </Suspense>
   );
 };
 

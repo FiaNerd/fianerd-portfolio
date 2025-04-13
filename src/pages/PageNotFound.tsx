@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import PageNotFoundBackground from '../components/pageNotFound/PageNotFoundBackground';
 import Button from '../components/partials/Button';
-import { startTransition } from 'react';
 
 const PageNotFound = () => {
   const navigate = useNavigate();

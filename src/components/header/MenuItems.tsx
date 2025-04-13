@@ -1,4 +1,4 @@
-import React, { startTransition, Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
@@ -48,7 +48,6 @@ const MenuItems: React.FC<MenuItemsProps> = ({
 
     const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
 
-    startTransition(() => {
       if (sectionId) {
         if (location.pathname === path) {
           // Scroll to the section if it's on the same page
@@ -64,7 +63,6 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         // Navigate to the path without a section ID
         navigate(path, { replace: true });
       }
-    });
 
     closeMenu();
   };

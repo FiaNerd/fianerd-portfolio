@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { startTransition, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
@@ -7,10 +7,10 @@ import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsI
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import Button from '../../components/partials/Button';
 
-const WebPortfolioDetailsPage = () => {
+const PortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-  // const [headerHeight, setHeaderHeight] = useState(0);
+
   const { i18n, t } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
@@ -28,7 +28,21 @@ const WebPortfolioDetailsPage = () => {
 
   const { headerHeight } = useHeaderHeight();
 
+  // Reload translation resources when the language changes
   useEffect(() => {
+    i18n.reloadResources(i18n.language, [
+      'portfolio/portfolio',
+      'portfolio/top5PortfolioSection',
+      'portfolio/frontendPortfolioSection',
+      'portfolio/backendPortfolioSection',
+      'portfolio/fullstackPortfolioSection',
+      'portfolio/graphicPortfolioSection',
+    ]);
+  }, [i18n.language]);
+
+  // Load portfolio data
+  useEffect(() => {
+    console.log('urlTitle:', urlTitle); // Check the URL parameter
     const loadPortfolioData = async () => {
       const portfolioData = await Promise.all([
         i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
@@ -51,6 +65,8 @@ const WebPortfolioDetailsPage = () => {
         ),
       ]);
 
+      console.log('Portfolio Data:', portfolioData);
+
       const sections = [
         ...(portfolioData[1]?.top5Items || []),
         ...(portfolioData[2]?.frontendItems || []),
@@ -59,9 +75,13 @@ const WebPortfolioDetailsPage = () => {
         ...(portfolioData[5]?.graphicItemsPortfolio || []),
       ];
 
+      console.log('Sections:', sections); // Check the combined data
+
       const filteredItems = sections.filter(
         (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
       );
+
+      console.log('Filtered Items:', filteredItems); // Check the filtered items
 
       const uniqueItems = Array.from(
         new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
@@ -74,7 +94,7 @@ const WebPortfolioDetailsPage = () => {
   }, [urlTitle, i18n.language]);
 
   if (portfolioItems.length === 0) {
-    return <div>Loading...</div>;
+    return <div>No portfolio items found for "{urlTitle}".</div>;
   }
 
   return (
@@ -132,4 +152,4 @@ const WebPortfolioDetailsPage = () => {
   );
 };
 
-export default WebPortfolioDetailsPage;
+export default PortfolioDetailsPage;

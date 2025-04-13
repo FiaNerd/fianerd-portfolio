@@ -72,7 +72,7 @@ const GraphicImageGallery = () => {
     role: '',
     challenges: '',
     results: '',
-    testimonial: '', 
+    testimonial: '',
     tags: [],
     relatedProjects: [],
     ctaLink: '',
@@ -142,8 +142,8 @@ const GraphicImageGallery = () => {
             <SidebarGraphicPortfolio
               isVisible={isSidebarOpen}
               onClose={handleCloseSidebar}
-              sidebarWidth={sidebarWidth}
-              setSidebarWidth={setSidebarWidth}
+              // sidebarWidth={sidebarWidth}
+              //setSidebarWidth={setSidebarWidth}
               graphicDetails={selectedImageDetails}
             />
           </div>

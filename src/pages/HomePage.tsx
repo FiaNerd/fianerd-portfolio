@@ -45,6 +45,7 @@ const HomePage = () => {
       },
     });
   }, [headerHeight]);
+  
 
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);

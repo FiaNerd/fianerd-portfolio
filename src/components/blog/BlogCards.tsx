@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogInterface';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { startTransition } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 
 const BlogCards = () => {
@@ -23,9 +22,7 @@ const BlogCards = () => {
   const handleNaviagete = (urlTitle: string) => {
     // Encode the URL title to handle special characters
     const encodedUrlTitle = encodeURIComponent(urlTitle);
-    startTransition(() => {
       navigate(`/blog/${encodedUrlTitle}`);
-    });
   };
 
   return (

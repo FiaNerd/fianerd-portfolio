@@ -5,12 +5,11 @@ import Header from './components/header/Header';
 import SocialMediaAndContact from './components/SocialMediaAndContact';
 import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
-import PortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
-import WebPortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
+import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import ErrorFallback from './components/partials/errors/ErrorFallBack';
 
 const App = () => {
@@ -67,7 +66,7 @@ const App = () => {
               />
               <Route
                 path="/portfolio/:urlTitle"
-                element={<WebPortfolioDetailsPage />}
+                element={<PortfolioDetailsPage />}
               />
 
               {/* Blog Routes */}

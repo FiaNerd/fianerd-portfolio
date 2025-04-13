@@ -18,7 +18,6 @@ export const handleHashNavigation = ({
   console.log('Current hash:', hash);
 
   if (!hash) {
-    // Exit silently if no hash is found
     return;
   }
 

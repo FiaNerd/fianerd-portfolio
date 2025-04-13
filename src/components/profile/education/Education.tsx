@@ -2,16 +2,13 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../partials/Button';
-import { startTransition } from 'react';
 
 const Education = () => {
   const { t } = useTranslation('profile/education');
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    startTransition(() => {
       navigate('/portfolio');
-    });
   };
 
   return (
