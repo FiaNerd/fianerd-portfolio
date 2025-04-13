@@ -21,7 +21,7 @@ interface PortfolioCardProps {
   titleDescription: string;
 }
 
-const PortfolioCard = ({ 
+const PortfolioCard = ({
   title,
   urlTitle,
   applicationType,

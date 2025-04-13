@@ -7,7 +7,6 @@ import useSmoothScroll from '../../../hook/useSmoothScroll';
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [sidebarWidth, setSidebarWidth] = useState(700); // Initial sidebar width
   const [selectedUrlTitle, setSelectedUrlTitle] = useState<string | null>(null);
 
   const graphicImages = t('graphicItemsPortfolio', {
@@ -47,11 +46,10 @@ const GraphicImageGallery = () => {
   };
 
   const handleCloseSidebar = () => {
-    setIsSidebarOpen(false); // Close the sidebar
-    setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
+    setIsSidebarOpen(false); 
+    setSelectedUrlTitle(null); 
   };
 
-  // useSmoothScroll(0);
 
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
@@ -142,8 +140,6 @@ const GraphicImageGallery = () => {
             <SidebarGraphicPortfolio
               isVisible={isSidebarOpen}
               onClose={handleCloseSidebar}
-              // sidebarWidth={sidebarWidth}
-              //setSidebarWidth={setSidebarWidth}
               graphicDetails={selectedImageDetails}
             />
           </div>

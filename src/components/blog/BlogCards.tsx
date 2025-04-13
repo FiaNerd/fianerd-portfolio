@@ -21,8 +21,8 @@ const BlogCards = () => {
 
   const handleNaviagete = (urlTitle: string) => {
     // Encode the URL title to handle special characters
-    const encodedUrlTitle = encodeURIComponent(urlTitle);
-      navigate(`/blog/${encodedUrlTitle}`);
+    // const encodedUrlTitle = encodeURIComponent(urlTitle);
+    navigate(`/blog/${encodeURIComponent(urlTitle)}`);
   };
 
   return (
