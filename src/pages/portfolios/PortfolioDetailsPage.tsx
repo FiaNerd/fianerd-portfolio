@@ -1,117 +1,72 @@
 import { Icon } from '@iconify/react';
-import { Suspense, useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
-import HeroDetails from '../../components/partials/HeroDetails';
+import portfolioDataEn from '../../../public/locales/en/portfolioSection.json';
+import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
-import useHeaderHeight from '../../hook/useHeaderHeight';
-import Button from '../../components/partials/Button';
+import useSmoothScroll from '../../hook/useSmoothScroll';
+import HeroDetails from '../../components/partials/HeroDetails';
 
 const PortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-
-  const { i18n, t } = useTranslation([
-    'portfolio/portfolio',
-    'portfolio/top5PortfolioSection',
-    'portfolio/frontendPortfolioSection',
-    'portfolio/backendPortfolioSection',
-    'portfolio/fullstackPortfolioSection',
-    'portfolio/graphicPortfolioSection',
-    'common',
-  ]);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const { i18n } = useTranslation();
+  const { t } = useTranslation(['portfolio', 'common']);
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate(-1);
-  };
+  useLayoutEffect(() => {
+    const header = document.getElementById('header');
+    if (header) {
+      setHeaderHeight(header.getBoundingClientRect().height);
+    }
+  }, []);
 
-  const { headerHeight } = useHeaderHeight();
+  useSmoothScroll(headerHeight ? 0 : headerHeight);
 
-  // Reload translation resources when the language changes
   useEffect(() => {
-    i18n.reloadResources(i18n.language, [
-      'portfolio/portfolio',
-      'portfolio/top5PortfolioSection',
-      'portfolio/frontendPortfolioSection',
-      'portfolio/backendPortfolioSection',
-      'portfolio/fullstackPortfolioSection',
-      'portfolio/graphicPortfolioSection',
-    ]);
-  }, [i18n.language]);
+    const portfolioData =
+      i18n.language === 'sv' ? portfolioDataSv : portfolioDataEn;
 
-  // Load portfolio data
-  useEffect(() => {
-    console.log('urlTitle:', urlTitle); // Check the URL parameter
-    const loadPortfolioData = async () => {
-      const portfolioData = await Promise.all([
-        i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
-        i18n.getResourceBundle(i18n.language, 'portfolio/top5PortfolioSection'),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/frontendPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/backendPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/fullstackPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/graphicPortfolioSection'
-        ),
-      ]);
+    const sections = [
+      ...(portfolioData.top5PortfolioSection?.top5Items || []),
+      ...(portfolioData.frontendPortfolioSection?.frontendItems || []),
+      ...(portfolioData.backendPortfolioSection?.backendItems || []),
+      ...(portfolioData.fullstackPortfolioSection?.fullstackItems || []),
+    ];
 
-      console.log('Portfolio Data:', portfolioData);
+    const filteredItems = sections.filter(
+      (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
+    );
 
-      const sections = [
-        ...(portfolioData[1]?.top5Items || []),
-        ...(portfolioData[2]?.frontendItems || []),
-        ...(portfolioData[3]?.backendItems || []),
-        ...(portfolioData[4]?.fullstackItems || []),
-        ...(portfolioData[5]?.graphicItemsPortfolio || []),
-      ];
+    const uniqueItems = Array.from(
+      new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
+    );
 
-      console.log('Sections:', sections); // Check the combined data
-
-      const filteredItems = sections.filter(
-        (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
-      );
-
-      console.log('Filtered Items:', filteredItems); // Check the filtered items
-
-      const uniqueItems = Array.from(
-        new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
-      );
-
-      setPortfolioItems(uniqueItems);
-    };
-
-    loadPortfolioData();
+    setPortfolioItems(uniqueItems);
   }, [urlTitle, i18n.language]);
 
   if (portfolioItems.length === 0) {
-    return <div>No portfolio items found for "{urlTitle}".</div>;
+    return <div>Loading...</div>;
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div
-        className="mb-8"
-        style={{
-          marginTop: `${headerHeight}px`,
-          transition: 'top 0.3s ease',
-        }}
-      >
+    <div
+      style={{
+        paddingTop: `${headerHeight}px`,
+        transition: 'padding-top 0.3s ease',
+      }}
+      className="bg-blend-multiply mb-8"
+    >
+      <div className="mb-8">
         {portfolioItems.map((item) => (
           <HeroDetails
             key={item.urlTitle}
             title={item.title}
+            subTitle={item.subTitle || ''}
             image={item.image}
-            subTitle={item.titleDescription}
+            titleDescription={item.titleDescription}
             light="text-[#4b8668]"
             dark="dark:text-[#86834b]"
           />
@@ -120,8 +75,8 @@ const PortfolioDetailsPage = () => {
 
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
-          onClick={handleNavigate}
-          className="inline-flex font-sub-heading items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
+          onClick={() => navigate(-1)}
+          className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
           {t('common:goBack').toUpperCase()}
@@ -144,11 +99,11 @@ const PortfolioDetailsPage = () => {
               tech={item.tech}
               applicationTypeDetail={item.applicationTypeDetail}
               linkTitle={item.linkTitle}
-              links={item.ctaLink}
+              links={item.links}
             />
           </div>
         ))}
-    </Suspense>
+    </div>
   );
 };
 

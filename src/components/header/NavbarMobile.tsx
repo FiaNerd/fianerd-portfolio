@@ -27,7 +27,6 @@ const NavbarMobile = () => {
     throw new Error('ThemeContext must be used within a ThemeProvider');
   }
 
-  // const { currentTheme } = context;
 
   const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
 
@@ -43,21 +42,6 @@ const NavbarMobile = () => {
       document.body.style.overflow = '';
     };
   }, [showMenu]);
-
-  // useEffect(() => {
-  //   document.body.classList.toggle('dark', currentTheme === 'dark');
-
-  //   // Prevent background scrolling when the menu is open
-  //   if (showMenu) {
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     document.body.style.overflow = '';
-  //   }
-
-  //   return () => {
-  //     document.body.style.overflow = '';
-  //   };
-  // }, [currentTheme, showMenu]);
 
   return (
     <div ref={ref} className="lg:hidden relative">
