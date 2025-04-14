@@ -26,24 +26,24 @@ const NavigationSubMenuDropDownDesktop = ({
   ) => {
     e.preventDefault();
 
-    // Navigate to the base route if not already there
-    if (location.pathname !== url) {
-      navigate(url);
-    }
+    startTransition(() => {
+      if (location.pathname !== url) {
+        navigate(url);
+      }
 
-    // Scroll to the section after navigation
-    if (sectionId) {
+      if (sectionId) {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 0);
+      }
+
       setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
-        }
-      }, 0); // Delay to ensure the page has loaded
-    }
-
-    closeMenuOnClick();
+        closeMenuOnClick();
+      }, 300);
+    });
   };
 
   const currentMenu = navRoutes.find((menu) => menu.title === navigationMenu);

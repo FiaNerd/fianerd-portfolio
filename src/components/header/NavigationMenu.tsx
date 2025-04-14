@@ -37,40 +37,10 @@ const NavigationMenu = () => {
   };
 
   useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.hash.replace('#', '');
-
-      if (sectionId) {
-        const element = document.getElementById(sectionId);
-
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
-        }
-      }
-    };
-
-    handleHashNavigation();
-  }, [location]);
-
-  const closeMenuOnClick = () => {
-    setNavigationMenuOpen(false);
-    setNavigationMenu('');
-  };
-  const handleMenuClick = (
-    e: React.MouseEvent,
-    url: string,
-    sectionId?: string
-  ) => {
-    e.preventDefault();
-    // Navigate to the base route if not already there
-    if (location.pathname !== url) {
-      navigate(url);
-    }
-
-    // Scroll to the section after navigation
-    if (sectionId) {
+    const hash = location.hash;
+    if (hash) {
+      const sectionId = hash.replace('#', '');
+      // Wait briefly for the element to render
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -78,10 +48,46 @@ const NavigationMenu = () => {
         } else {
           console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      }, 0); // Delay to ensure the page has loaded
+      }, 100); // You may need to adjust this delay
     }
+  }, [location]);
 
-    closeMenuOnClick();
+  const closeMenuOnClick = () => {
+    setNavigationMenuOpen(false);
+    setNavigationMenu('');
+  };
+
+  const handleMenuClick = (
+    e: React.MouseEvent,
+    url: string,
+    sectionId?: string
+  ) => {
+    e.preventDefault();
+
+    startTransition(() => {
+      // If we are already on the destination (portfolio) page…
+      if (sectionId && location.pathname === url) {
+        // Update the URL with the hash but then immediately scroll
+        navigate(`${url}#${sectionId}`);
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else if (location.pathname !== url) {
+        // When not on the portfolio page, navigate normally with the hash if provided
+        if (sectionId) {
+          navigate(`${url}#${sectionId}`);
+        } else {
+          navigate(url);
+        }
+      }
+
+      setTimeout(() => {
+        closeMenuOnClick();
+      }, 300);
+    });
   };
 
   return (
@@ -108,7 +114,7 @@ const NavigationMenu = () => {
                 onMouseLeave={handleMouseLeave}
                 onClick={(e) => {
                   e.preventDefault();
-                  
+
                   startTransition(() => {
                     handleMenuClick(e, menu.url, menu.sectionId);
                   });

@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect, startTransition } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
@@ -43,28 +43,37 @@ const MenuItems: React.FC<MenuItemsProps> = ({
     setDropdown((prev) => !prev);
   };
 
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
-    e.preventDefault(); // Prevent default link behavior
+  const handleMenuClick = (
+    e: React.MouseEvent,
+    url: string,
+    sectionId?: string
+  ) => {
+    e.preventDefault();
 
-    const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
-
-      if (sectionId) {
-        if (location.pathname === path) {
-          // Scroll to the section if it's on the same page
+    startTransition(() => {
+      // If we are already on the destination (portfolio) page…
+      if (sectionId && location.pathname === url) {
+        // Update the URL with the hash but then immediately scroll
+        navigate(`${url}#${sectionId}`);
+        setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
+        }, 100);
+      } else if (location.pathname !== url) {
+        // When not on the portfolio page, navigate normally with the hash if provided
+        if (sectionId) {
+          navigate(`${url}#${sectionId}`);
         } else {
-          // Navigate to the path with the section ID
-          navigate(`${path}#${sectionId}`, { replace: true });
+          navigate(url);
         }
-      } else {
-        // Navigate to the path without a section ID
-        navigate(path, { replace: true });
       }
 
-    closeMenu();
+      setTimeout(() => {
+        closeMenu();
+      }, 300);
+    });
   };
 
   const renderLinkOrButton = () => {
