@@ -14,22 +14,22 @@ export interface Route {
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/',
+    url: '/#home',
     nav: HomePage,
   },
   {
     title: 'profile',
-    url: '/profile#who-am-i',
+    url: '/#who-am-i',
     icon: faCaretDown,
     subMenu: [
       {
         title: 'me',
-        url: '/profile/who-am-i#who-am-i',
+        url: '/profile/#who-am-i',
         description: 'meDescription',
       },
       {
         title: 'skillsWeb',
-        url: '/profile/web-skills#web-skills',
+        url: '/profile/#web-skills',
         description: 'skillsWebDescription',
       },
       {

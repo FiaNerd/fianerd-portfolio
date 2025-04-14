@@ -24,6 +24,7 @@ const HomePage = () => {
   const isNavigating = useRef(false);
 
   const sectionIds = [
+    'home',
     'who-am-i',
     'web-skills',
     'graphic-skills',
@@ -45,7 +46,6 @@ const HomePage = () => {
       },
     });
   }, [headerHeight]);
-  
 
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
@@ -59,7 +59,7 @@ const HomePage = () => {
       }}
     >
       {/* Hero Section */}
-      <section className="relative">
+      <section id="home" className="relative">
         <HeroSection />
       </section>
       {/* Profile Section */}
