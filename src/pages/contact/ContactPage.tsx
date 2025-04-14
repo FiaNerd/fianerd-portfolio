@@ -31,7 +31,7 @@ const ContactPage = () => {
         dark="dark:bg-[#1d1617]"
         sticky
       />
-      <div className="max-w-screen-lg mx-auto lg:bg-[#d47166] lg:dark:bg-[#1d1617] mb-20 grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
+      <div className="max-w-screen-xl mx-auto lg:bg-[#d47166] lg:dark:bg-[#1d1617] mb-20 grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
         <div className="flex flex-col items-center md:px-2 text-wrap">
           <h1 className="text-text-primary">
             {t('contactGreeting').toUpperCase()}

@@ -48,7 +48,7 @@ const BlogDetailsPage = () => {
         />
       </div>
 
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div className="max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col items-start lg:flex-row mb-8">
           <Button
             onClick={handleNavigate}

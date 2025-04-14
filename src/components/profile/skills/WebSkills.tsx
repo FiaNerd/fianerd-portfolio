@@ -17,7 +17,7 @@ const WebSkills = () => {
   ];
 
   return (
-    <section className="max-w-screen-xl mx-auto top-0 left-0 px-4 md:px-6 lg:px-10 py-8 md:py-12">
+    <section className="max-w-screen-2xl mx-auto top-0 left-0 px-4 md:px-6 lg:px-10 py-8 md:py-12">
       <div className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-8">
 
         <div className="items-center md:row-start-2 md:col-start-1">

@@ -25,7 +25,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-10 py-8 md:py-20">
+    <section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-10 py-8 md:py-20">
       {/* Left Column: Image */}
       <motion.div
         ref={fadeInImage.ref}

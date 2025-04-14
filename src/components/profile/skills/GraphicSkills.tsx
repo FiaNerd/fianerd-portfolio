@@ -12,7 +12,7 @@ const GraphicSkills = () => {
   ];
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-10 py-8 md:py-12">
+    <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-8 md:py-12">
       
       <div className="grid grid-rows-[auto_auto] grid-cols-1 md:grid-cols- gap-8 md:gap-20 mb-8">
         <div className="items-center md:row-start-2 md:col-start-1">

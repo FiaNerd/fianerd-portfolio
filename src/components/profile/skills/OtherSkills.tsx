@@ -8,7 +8,7 @@ const OtherSkills = () => {
   const fadeRight = useFadeIn({ direction: 'right', delay: 0.7, duration: 1 });
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-10 md:py-12 grid grid-rows-1 lg:grid-cols-2 gap-8 xl:px-20 text-center mb-12 lg:mb-20 justify-center">
+    <div className="max-w-screen-2xl mx-auto px-4 md:px-10 md:py-12 grid grid-rows-1 lg:grid-cols-2 gap-8 xl:px-20 text-center mb-12 lg:mb-20 justify-center">
       <motion.div
         ref={fadeLeft.ref}
         initial="hidden"

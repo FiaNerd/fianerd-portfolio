@@ -73,7 +73,7 @@ const PortfolioDetailsPage = () => {
         ))}
       </div>
 
-      <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
+      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
           onClick={() => navigate(-1)}
           className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
@@ -88,7 +88,7 @@ const PortfolioDetailsPage = () => {
           <div
             id="portfolio-details"
             key={item.urlTitle}
-            className="py-12 max-w-screen-xl mx-auto px-4"
+            className="py-12 max-w-screen-2xl mx-auto px-4"
           >
             <PortfolioDetailsItems
               title={item.title}

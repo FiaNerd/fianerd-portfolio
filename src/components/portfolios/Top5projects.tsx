@@ -19,14 +19,14 @@ const Top5Projects = () => {
   }[];
 
   const navigateToDetails = (urlTitle: string) => {
-      // navigate(`/portfolio/${urlTitle}`);
-      // Encode the URL title to handle special characters
-      const encodedUrlTitle = encodeURIComponent(urlTitle);
-      navigate(`/portfolio/${encodedUrlTitle}`);
+    // navigate(`/portfolio/${urlTitle}`);
+    // Encode the URL title to handle special characters
+    const encodedUrlTitle = encodeURIComponent(urlTitle);
+    navigate(`/portfolio/${encodedUrlTitle}`);
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4">
+    <div className="max-w-screen-2xl mx-auto px-4">
       <p>{t('portfolio/top5PortfolioSection:introTop5Portfolio')}</p>
       <section className="mb-12">
         <div className="py-4 px-2 mx-auto sm:py-4">

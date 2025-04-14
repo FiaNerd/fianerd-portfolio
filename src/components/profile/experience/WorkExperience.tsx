@@ -16,7 +16,7 @@ const WorkExperience = () => {
 
   return (
     <section className="mb-12 md:py-8 ">
-      <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row md:mb-20">
+      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row md:mb-20">
         <div className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10">
           <p className="text-bg-secondary dark:text-text-accent uppercase -mb-2 tracking-loose">
             {t('titleWorkingAction')}
@@ -35,7 +35,7 @@ const WorkExperience = () => {
         </div>
 
         <div className="flex mx-auto md:ml-12 lg:w-2/3 sticky">
-          <div className="max-w-screen-xl	mx-auto w-full h-full">
+          <div className="max-w-screen-2xl	mx-auto w-full h-full">
             <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
               <div className="hidden md:block absolute h-full border-2 lg:border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
 

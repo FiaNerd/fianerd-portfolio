@@ -14,7 +14,7 @@ const FullStackPortfolio = () => {
   );
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4">
+    <section className="max-w-screen-2xl mx-auto px-4">
       <p
         className="mb-12"
         dangerouslySetInnerHTML={{

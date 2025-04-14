@@ -4,7 +4,7 @@ const Competencies = () => {
   const { t } = useTranslation(['profile/skills']);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 ">
+    <div className="max-w-screen-2xl mx-auto px-4 ">
       {/* <h1 className="text-center text-hover-text mb-8 text-2xl md:text-3xl lg:text-5xl bg-[#bc3a08] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
         {t('otherSkills.otherSkillsTitle')}
       </h1> */}

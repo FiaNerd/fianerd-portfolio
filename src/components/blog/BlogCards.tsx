@@ -26,7 +26,7 @@ const BlogCards = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12">
+    <div className="max-w-screen-2xl mx-auto px-4 mt-12 mb-12">
       <h2 className="mb-8 text-3xl text-bg-secondary dark:text-text-accent font-bold">
         {t('blogYear2025')}
       </h2>

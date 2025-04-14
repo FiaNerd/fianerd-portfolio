@@ -46,10 +46,9 @@ const GraphicImageGallery = () => {
   };
 
   const handleCloseSidebar = () => {
-    setIsSidebarOpen(false); 
-    setSelectedUrlTitle(null); 
+    setIsSidebarOpen(false);
+    setSelectedUrlTitle(null);
   };
-
 
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
@@ -82,9 +81,9 @@ const GraphicImageGallery = () => {
   return (
     <>
       <div className="p-4 flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8 md:gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8 md:gap-12 ">
           {/* Column 1 */}
-          <div className="grid md:grid-rows-2 lg:grid-rows-3  gap-8 md:gap-4 lg:place-self-center">
+          <div className="grid md:grid-rows-2 lg:grid-rows-3  gap-8 md:gap-12 lg:place-self-center">
             {column1.map((image, index) => (
               <div
                 key={index}
@@ -101,7 +100,7 @@ const GraphicImageGallery = () => {
           </div>
 
           {/* Column 2 */}
-          <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-8 md:gap-4 ">
+          <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-8 md:gap-12 ">
             {column2.map((image, index) => (
               <div
                 key={index}
@@ -118,7 +117,7 @@ const GraphicImageGallery = () => {
           </div>
 
           {/* Column 3 */}
-          <div className="grid lg:grid-rows-2 gap-8 md:gap-4 lg:place-self-center">
+          <div className="grid lg:grid-rows-2 gap-8 md:gap-12 lg:place-self-center">
             {column3.map((image, index) => (
               <div
                 key={index}

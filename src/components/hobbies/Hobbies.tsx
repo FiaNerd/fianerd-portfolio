@@ -6,7 +6,7 @@ const Hobbies = () => {
     const { t } = useTranslation("profile/hobbies");
 
     return (
-        <section className='max-w-screen-xl mx-auto'>
+        <section className='max-w-screen-2xl mx-auto'>
             <p className='px-4 pb-8 justify-center mx-auto lg:max-w-[80%] text-text-secondary'>{t('introHobbie')}</p>
 
             <div className="grid grid-rows-1 sm:grid-cols-1 xl:grid-cols-3 gap-4 px-4 xl:px-20 text-center mb-12">
