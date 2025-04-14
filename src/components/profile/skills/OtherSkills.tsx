@@ -20,17 +20,6 @@ const OtherSkills = () => {
           <Competencies />
         </section>
       </motion.div>
-
-      {/* <motion.div
-        ref={fadeRight.ref}
-        initial="hidden"
-        animate={fadeRight.ctrls}
-        variants={fadeRight.vars}
-      >
-        <section id="programs-and-softwares">
-          <ProgramAndSoftware />
-        </section>
-      </motion.div> */}
     </div>
   );
 };

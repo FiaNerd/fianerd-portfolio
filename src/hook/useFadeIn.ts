@@ -21,7 +21,7 @@ interface IFadeInProps {
   duration?: number;
   repeat?: boolean;
   threshold?: number;
-  direction?: 'left' | 'right' | 'up' | 'down'; // New prop for direction
+  direction?: 'left' | 'right' | 'up' | 'down'; 
 }
 
 export default function useFadeIn({
