@@ -29,11 +29,8 @@ const PortfolioPage = () => {
   const { headerHeight } = useHeaderHeight();
   const isNavigating = useRef(false);
 
-  console.log('Header Height:', headerHeight);
-  console.log('Is Navigating:', isNavigating.current);
-
   const sectionIds = [
-    'portfolio',
+    'my-work',
     'top-5-projects',
     'frontend',
     'backend',
@@ -63,7 +60,7 @@ const PortfolioPage = () => {
         transition: 'top 0.3s ease',
       }}
     >
-      <section id="portfolio" className="bg-[#436e74] dark:bg-[#16443e]">
+      <section id="my-work" className="bg-[#436e74] dark:bg-[#16443e]">
         <Title
           title={t('titlePortfolio')}
           dot={'.'}

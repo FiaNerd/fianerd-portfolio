@@ -5,7 +5,7 @@ const GraphicPortfolioPage = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-4">
+    <div className="max-w-screen-2xl mx-auto px-4 mb-20">
       <p
         className="text-center"
         dangerouslySetInnerHTML={{

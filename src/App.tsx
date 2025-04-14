@@ -1,5 +1,5 @@
 import { ErrorBoundary } from 'react-error-boundary';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 
 import SocialMediaAndContact from './components/SocialMediaAndContact';
@@ -38,6 +38,7 @@ const App = () => {
             <Routes>
               {/* Home Route */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/profile/home" element={<Navigate to="/" />} />
               <Route path="/profile" element={<HomePage />} />
               <Route path="/profile/who-am-i" element={<HomePage />} />
               <Route path="/profile/web-skills" element={<HomePage />} />
@@ -51,8 +52,11 @@ const App = () => {
               <Route path="/profile/education" element={<HomePage />} />
               <Route path="/profile/hobbies" element={<HomePage />} />
 
-              {/* Portfolio Routes */}
               <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio/my-work"
+                element={<Navigate to="/portfolio" />}
+              />
               <Route
                 path="/portfolio/top-5-projects"
                 element={<PortfolioPage />}

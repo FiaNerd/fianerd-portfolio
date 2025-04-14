@@ -9,89 +9,106 @@ export interface Route {
   dropdown?: Route[];
   icon?: IconDefinition;
   description?: string;
+  sectionId?: string;
 }
 
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/#home',
+    url: '/profile',
+    sectionId: 'home',
     nav: HomePage,
   },
   {
     title: 'profile',
-    url: '/#who-am-i',
+    url: '/profile',
+    sectionId: 'who-am-i',
     icon: faCaretDown,
     subMenu: [
       {
         title: 'me',
-        url: '/profile/#who-am-i',
+        url: '/profile',
+        sectionId: 'who-am-i',
         description: 'meDescription',
       },
       {
         title: 'skillsWeb',
-        url: '/profile/#web-skills',
+        url: '/profile',
+        sectionId: 'web-skills',
         description: 'skillsWebDescription',
       },
       {
         title: 'skillsGraphic',
-        url: '/profile/#graphic-skills',
+        url: '/profile',
+        sectionId: 'graphic-skills',
         description: 'skillsGraphicDescription',
       },
       {
         title: 'otherSkills',
-        url: '/profile/#additional-skills',
+        url: '/profile',
+        sectionId: 'additional-skills',
         description: 'otherSkillsDescription',
       },
       {
         title: 'programsAndSoftwares',
-        url: '/profile/#programs-and-softwares',
+        url: '/profile',
+        sectionId: 'programs-and-softwares',
         description: 'programsAndSoftwaresDescription',
       },
       {
         title: 'experience',
-        url: '/profile/#experience',
+        url: '/profile',
+        sectionId: 'experience',
         description: 'experienceDescription',
       },
       {
         title: 'education',
-        url: '/profile/#education',
+        url: '/profile',
+        sectionId: 'education',
         description: 'educationDescription',
       },
       {
         title: 'hobbies',
-        url: '/profile/#hobbies',
+        url: '/profile',
+        sectionId: 'hobbies',
         description: 'hobbiesDescription',
       },
     ],
   },
   {
     title: 'portfolio',
-    url: '/portfolio/#portfolio',
+    url: '/portfolio/my-work',
+    sectionId: 'my-work',
     icon: faCaretDown,
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/portfolio/#top-5-projects',
+        url: '/portfolio',
+        sectionId: 'top-5-projects',
         description: 'top5best-projectsDescription',
       },
       {
         title: 'frontend',
-        url: '/portfolio/#frontend',
+        url: '/portfolio',
+        sectionId: 'frontend',
         description: 'frontendDescription',
       },
       {
         title: 'backend',
-        url: '/portfolio/#backend',
+        url: '/portfolio',
+        sectionId: 'backend',
         description: 'backendDescription',
       },
       {
         title: 'fullstack',
-        url: '/portfolio/#fullstack',
+        url: '/portfolio',
+        sectionId: 'fullstack',
         description: 'fullstackDescription',
       },
       {
         title: 'graphic-design',
-        url: '/portfolio/#graphic-design',
+        url: '/portfolio',
+        sectionId: 'graphic-design',
         description: 'graphicDescription',
       },
     ],
@@ -99,5 +116,6 @@ export const navRoutes: Route[] = [
   {
     title: 'blog',
     url: '/blog',
+    sectionId: 'blog',
   },
 ];

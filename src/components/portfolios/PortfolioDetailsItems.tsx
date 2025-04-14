@@ -63,7 +63,7 @@ const PortfolioDetailsItems = ({
 
         <div className="border border-[#3C2F2F]"></div>
 
-        <div className="flex justify-center py-2 mb-12 lg:mb-0 mx-auto">
+        <div className="grid grid-cols-[40%_60%] justify-center py-2 mb-12 lg:mb-0 mx-auto">
           <div className="border-r-2 border-[#3C2F2F]">
             <p className="text-sm text-center font-semibold tracking-wide text-text-primary opacity-70">
               {linkTitle}

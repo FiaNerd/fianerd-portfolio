@@ -28,7 +28,8 @@ export const updateURLOnScroll = ({
       const sectionTop =
         section.offsetTop - (isHeaderVisible ? headerHeight : 0);
       const sectionHeight = section.offsetHeight;
-      const scrollPosition = window.scrollY + window.innerHeight / 10;
+      const scrollPosition =
+        window.scrollY + window.innerHeight / 100;
 
       const visibleHeight =
         Math.min(

@@ -36,11 +36,6 @@ const NavigationMenu = () => {
     }, navigationMenuCloseDelay);
   };
 
-  const handleMouseEnter = (menuTitle: string) => {
-    setNavigationMenuOpen(true);
-    setNavigationMenu(menuTitle);
-  };
-
   useEffect(() => {
     const handleHashNavigation = () => {
       const sectionId = location.hash.replace('#', '');
@@ -63,29 +58,29 @@ const NavigationMenu = () => {
     setNavigationMenuOpen(false);
     setNavigationMenu('');
   };
-
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+  const handleMenuClick = (
+    e: React.MouseEvent,
+    url: string,
+    sectionId?: string
+  ) => {
     e.preventDefault();
+    // Navigate to the base route if not already there
+    if (location.pathname !== url) {
+      navigate(url);
+    }
 
-    const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
-
-    startTransition(() => {
-      if (sectionId) {
-        if (location.pathname === path) {
-          // If already on the correct path, scroll to the section
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
+    // Scroll to the section after navigation
+    if (sectionId) {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          console.log(`Scrolling to section: ${sectionId}`);
+          element.scrollIntoView({ behavior: 'smooth' });
         } else {
-          // Navigate to the path and include the hash fragment
-          navigate(`${path}#${sectionId}`, { replace: true });
+          console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      } else {
-        // Navigate to the path without a hash fragment
-        navigate(path, { replace: true });
-      }
-    });
+      }, 0); // Delay to ensure the page has loaded
+    }
 
     closeMenuOnClick();
   };
@@ -106,7 +101,6 @@ const NavigationMenu = () => {
                   }`
                 }
                 onMouseEnter={() => {
-                  console.log('onMouseEnter triggered for menu:', menu.title);
                   startTransition(() => {
                     setNavigationMenuOpen(true);
                     setNavigationMenu(menu.title);
@@ -115,9 +109,9 @@ const NavigationMenu = () => {
                 onMouseLeave={handleMouseLeave}
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log('onClick triggered for menu:', menu.url);
+                  
                   startTransition(() => {
-                    handleMenuClick(e, menu.url);
+                    handleMenuClick(e, menu.url, menu.sectionId);
                   });
                 }}
               >
