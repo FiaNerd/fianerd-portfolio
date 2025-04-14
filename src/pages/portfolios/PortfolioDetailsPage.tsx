@@ -7,7 +7,7 @@ import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsI
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import Button from '../../components/partials/Button';
 
-const WebPortfolioDetailsPage = () => {
+const PortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   // const [headerHeight, setHeaderHeight] = useState(0);
@@ -132,4 +132,4 @@ const WebPortfolioDetailsPage = () => {
   );
 };
 
-export default WebPortfolioDetailsPage;
+export default PortfolioDetailsPage;
