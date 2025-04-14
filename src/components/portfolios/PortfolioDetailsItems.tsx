@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from '../partials/Popup';
 import PortfolioImageDetails from './PortfolioImageDetails';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
 
 interface PortfolioDetailsItemsProps {
   title: string;
@@ -42,9 +44,20 @@ const PortfolioDetailsItems = ({
 }: PortfolioDetailsItemsProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
+  const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
+  const fadeInRight = useFadeIn({
+    direction: 'right',
+    delay: 0.7,
+    duration: 1,
+  });
+
   return (
     <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 lg:space-y-8">
-      <div>
+      <motion.div
+          ref={fadeInLeft.ref}
+          initial="hidden"
+          animate={fadeInLeft.ctrls}
+          variants={fadeInLeft.vars}>
         <h1 className="text-[#3C2F2F] text-3xl md:text-5xl font-bold">
           {title}
         </h1>
@@ -123,9 +136,13 @@ const PortfolioDetailsItems = ({
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        ref={fadeInRight.ref}
+        initial="hidden"
+        animate={fadeInRight.ctrls}
+        variants={fadeInRight.vars}
         className="flex flex-col lg:flex-row gap-4 w-full  mb-12"
         style={{ marginTop: 0 }}
       >
@@ -153,7 +170,7 @@ const PortfolioDetailsItems = ({
         </div>
 
         <PortfolioImageDetails images={images || []} />
-      </div>
+      </motion.div>
     </div>
   );
 };
