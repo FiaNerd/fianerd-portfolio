@@ -14,6 +14,8 @@ import ContentTitleDetails from '../../partials/ContentTitleDetails';
 import HeroDetails from '../../partials/HeroDetails';
 import GraphicPortfolioContentAbout from './GraphicPortfolioContentAbout';
 import { useClickOutside } from '../../../hook/useClickOutside';
+import useFadeIn from '../../../hook/useFadeIn';
+import { motion } from 'framer-motion';
 
 interface Technology {
   name: string;
@@ -111,9 +113,22 @@ const SidebarGraphicPortfolio = ({
   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
     clientTitle?: string;
   };
+
+  const fadeInRight = useFadeIn({
+    direction: 'right',
+    delay: 0.7,
+    duration: 1,
+  });
+
   return (
     <>
-      <div className="fixed inset-0 z-50 flex">
+      <motion.div
+        ref={fadeInRight.ref}
+        initial="hidden"
+        animate={fadeInRight.ctrls}
+        variants={fadeInRight.vars}
+        className="fixed inset-0 z-50 flex"
+      >
         <div className="fixed inset-0 bg-black bg-opacity-80" />
         <aside
           ref={sidebarRef}
@@ -197,7 +212,7 @@ const SidebarGraphicPortfolio = ({
           }}
           plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Zoom]}
         />
-      </div>
+      </motion.div>
     </>
   );
 };

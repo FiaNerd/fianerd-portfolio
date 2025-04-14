@@ -20,14 +20,13 @@ const BlogPage = () => {
   // Use effect for handling hash navigation
   useEffect(() => {
     const handleNavigation = () => {
-      setIsNavigating(true); // Set navigation to true before starting
+      setIsNavigating(true); 
       handleHashNavigation({
         sectionIds: ['blog'], // Ensure these are correct section IDs
         headerHeight,
-        isHeaderVisible: false, // Hide the header when navigating
+        isHeaderVisible: false, 
         isNavigating: isNavigatingRef,
         onNavigationComplete: () => {
-          console.log('Navigation completed!');
           setIsNavigating(false); // Set to false once navigation is done
         },
       });

@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Title from '../../partials/Title';
 import GraphicSkills from './GraphicSkills';
-import OtherSkills from './OtherSkills';
 import WebSkills from './WebSkills';
 import useHeaderHeight from '../../../hook/useHeaderHeight';
 import ProgramAndSoftware from './ProgramAndSoftware';

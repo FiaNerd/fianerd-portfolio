@@ -45,10 +45,6 @@ const GraphicPortfolioContentAbout = ({
     testimonialTitle?: string;
   };
 
-  console.log('titles:', titles);
-  console.log('graphicItemsPortfolio:', graphicItemsPortfolio);
-  console.log('graphicItemsPortfolio:', graphicItemsPortfolio);
-
   return (
     <div className="grid gap-8 px-8">
       {graphicItemsPortfolio.map((item, index) => (

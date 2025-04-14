@@ -2,6 +2,8 @@ import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
 
 const Top5Projects = () => {
   const { t } = useTranslation('portfolio/top5PortfolioSection');
@@ -24,9 +26,16 @@ const Top5Projects = () => {
     const encodedUrlTitle = encodeURIComponent(urlTitle);
     navigate(`/portfolio/${encodedUrlTitle}`);
   };
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-4">
+    <motion.div
+      ref={fadeInDown.ref}
+      initial="hidden"
+      animate={fadeInDown.ctrls}
+      variants={fadeInDown.vars}
+      className="max-w-screen-2xl mx-auto px-4"
+    >
       <p>{t('portfolio/top5PortfolioSection:introTop5Portfolio')}</p>
       <section className="mb-12">
         <div className="py-4 px-2 mx-auto sm:py-4">
@@ -54,10 +63,7 @@ const Top5Projects = () => {
               }
 
               return (
-                <div
-                  key={index}
-                  className={`${columnSpan} h-auto lg:h-full flex flex-col`}
-                >
+                <div className={`${columnSpan} h-auto lg:h-full flex flex-col`}>
                   <div
                     className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow cursor-pointer"
                     onClick={() => navigateToDetails(item.urlTitle)}
@@ -105,7 +111,7 @@ const Top5Projects = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

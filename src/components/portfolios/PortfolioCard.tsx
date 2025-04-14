@@ -41,7 +41,6 @@ const PortfolioCard = ({
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
-    console.log('Navigating to:', `/portfolio/${encodeURIComponent(urlTitle)}`);
     navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
   };
 

@@ -8,15 +8,15 @@ const Hobbies = () => {
   const { t } = useTranslation('profile/hobbies');
   // Animations for the image and text
 
-  const fadeInText = useFadeIn({ direction: 'up', delay: 0.7, duration: 1 });
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.7, duration: 1 });
 
   return (
     <section className="max-w-screen-2xl mx-auto">
       <motion.div
-        ref={fadeInText.ref}
+        ref={fadeInDown.ref}
         initial="hidden"
-        animate={fadeInText.ctrls}
-        variants={fadeInText.vars}
+        animate={fadeInDown.ctrls}
+        variants={fadeInDown.vars}
       >
         <p className="px-4 pb-8 justify-center mx-auto lg:max-w-[80%] text-text-secondary">
           {t('introHobbie')}

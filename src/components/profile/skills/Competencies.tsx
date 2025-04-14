@@ -1,14 +1,20 @@
 import { useTranslation } from 'react-i18next';
+import useFadeIn from '../../../hook/useFadeIn';
+import { motion } from 'framer-motion';
 
 const Competencies = () => {
   const { t } = useTranslation(['profile/skills']);
 
-  return (
-    <div className="max-w-screen-2xl mx-auto px-4 ">
-      {/* <h1 className="text-center text-hover-text mb-8 text-2xl md:text-3xl lg:text-5xl bg-[#bc3a08] dark:bg-[#69864e] dark:text-[#4b1718] py-2 md:py-4 px-4 md:col-start-1 md:row-start-1">
-        {t('otherSkills.otherSkillsTitle')}
-      </h1> */}
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
 
+  return (
+    <motion.div
+      ref={fadeInDown.ref}
+      initial="hidden"
+      animate={fadeInDown.ctrls}
+      variants={fadeInDown.vars}
+      className="max-w-screen-2xl mx-auto px-4 "
+    >
       <h2 className="text-[#bc3a08] dark:text-[#69864e] font-textImportant text-4xl md:text-5xl mb-2 leading-none font-bold text-center md:leading-[3rem]">
         {t('otherSkills.otherSkillsTitleLanguageAndDriving')}
       </h2>
@@ -36,7 +42,7 @@ const Competencies = () => {
           {t('otherSkills.otherSkillsDrivingTitle').split(':')[1]}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

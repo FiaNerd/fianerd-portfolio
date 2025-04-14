@@ -74,7 +74,6 @@ const NavigationMenu = () => {
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
-          console.log(`Scrolling to section: ${sectionId}`);
           element.scrollIntoView({ behavior: 'smooth' });
         } else {
           console.warn(`Section with ID "${sectionId}" not found.`);
