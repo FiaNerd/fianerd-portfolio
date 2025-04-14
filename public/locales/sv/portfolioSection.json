@@ -14,7 +14,7 @@
     "subTitleTop5Portfolio": "Projekt som jag är stolt över",
     "introTop5Portfolio": "Detta är de projekt som jag är mest stolt över. De är en blandning av kreativitet och funktionalitet. Jag letar alltid efter nya utmaningar och jag är spänd på att se vad framtiden har att erbjuda.",
     "ctaButtonViewAll": "Visa alla projekt",
-    
+
     "top5Items": [
       {
         "title": "Skjort kravallerna",
@@ -58,18 +58,18 @@
       }
     ]
   },
-      "frontendPortfolioSection": {
-      "titleFrontendPortfolio": "Frontendprojekt",
-      "subTitleFrontendPortfolio": "Kod med ett öga för design",
-      "introFrontendPortfolio": "<span class=' text-[#ca0416] dark:text-[#d6a70d] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
-      "ctaButtonViewAll": "Visa Detaljer",
-      "frontendItems": [
-    {
-      "projectType": "Sido projekt",
-      "title": "BrutalBeats",
-      "urlTitle": "brutal-beats",
-      "applicationType": "webb",
-      "applicationTypeDetail": {
+  "frontendPortfolioSection": {
+    "titleFrontendPortfolio": "Frontendprojekt",
+    "subTitleFrontendPortfolio": "Kod med ett öga för design",
+    "introFrontendPortfolio": "<span class=' text-[#ca0416] dark:text-[#d6a70d] font-semibold'>Projekt som förenar kreativitet och funktionalitet.</span> Jag älskar att skapa vackra och funktionella webbplatser. Jag har skapat några projekt som jag är stolt över och letar alltid efter nya utmaningar. Om du har ett projekt i åtanke, tveka inte att kontakta mig.",
+    "ctaButtonViewAll": "Visa Detaljer",
+    "frontendItems": [
+      {
+        "projectType": "Sido projekt",
+        "title": "BrutalBeats",
+        "urlTitle": "brutal-beats",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
           "text": "frontend",
           "icon": {
             "name": "icon-park-outline:dot",
@@ -79,693 +79,893 @@
           },
           "suffix": "WEBBAPPLIKATION"
         },
-      "subTitle": "Frontend",
-      "titleDescription": "Webbplats för bokningsföretag",
-      "projectDuration": "mars 2023 - januari 2025",
-      "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. <br><br>Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.",
-      "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
-      "linkTitle": "Länkar",
-      "ctaButton": "Visa Detaljer",
-      "links": [
-        {
-          "type": "GitHub",
-          "url": "https://github.com/FiaNerd/",
-          "icon": "line-md:github-twotone"
-        },
-        {
-          "type": "Website",
-          "url": "https://www.brutalbeats.se/",
-          "icon": "tdesign:internet-filled"
-        }
-      ],
-      "techTitle": "Tech",
-      "tech": [
-        {
-          "name": "React",
-          "icon": "skill-icons:react-dark"
-        },
-        {
-          "name": "TypeScript",
-          "icon": "catppuccin:typescript"
-        },
-        {
-          "name": "Tailwind CSS",
-          "icon": "skill-icons:tailwindcss-dark"
-        }
-      ],
-      "images": [
+        "subTitle": "Frontend",
+        "titleDescription": "Webbplats för bokningsföretag",
+        "projectDuration": "mars 2023 - januari 2025",
+        "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. <br><br>Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.",
+        "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
           {
-              "src": "/assets/images/portfolio/front-end/bb/brutal-detail-hero.jpg",
-              "alt": "Brutal Detalj Hero",
-              "span": "tall"
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/",
+            "icon": "line-md:github-twotone"
           },
           {
-              "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-home.jpg",
-              "alt": "Brutal Mobil Hem.jpg",
-              "span": "wide"
-          },
-          {
-              "src": "/assets/images/portfolio/front-end/bb/brutal-details.jpg",
-              "alt": "Brutal detalj sida",
-              "span": "tall"
-          },
-          {
-              "src": "/assets/images/portfolio/front-end/bb/brutal-main.jpg",
-              "alt": "Brutal Detalj",
-              "span": "tall"
-          },
-          {
-              "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-main.jpg",
-              "alt": "Brutal Mobil Main",
-              "span": "tall"
-          },
-          {
-              "src": "/assets/images/portfolio/front-end/bb/brutal-hero-detail.jpg",
-              "alt": "Brutal Hero Detail",
-              "span": "wide"
+            "type": "Website",
+            "url": "https://www.brutalbeats.se/",
+            "icon": "tdesign:internet-filled"
           }
-      ]
-    },
+        ],
+        "techTitle": "Tech",
+        "tech": [
           {
-              "projectType": "Skolprojekt",
-              "title": "The Movie DB",
-              "urlTitle": "the-movie-db",
-              "applicationType": "webb",
-              "applicationTypeDetail": {
-                  "text": "FRONTEND",
-                  "icon": {
-                  "name": "icon-park-outline:dot",
-                  "width": 48,
-                  "height": 48,
-                  "color": "#76150d"
-                  },
-                  "suffix": "WEBAPPLIKATION"
-              },
-              "subTitle": "Frontend",
-              "titleDescription": "Film databas hemsida",
-              "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
-              "description": "Jag utvecklade en interaktiv webbapplikation som integrerar IMDb API för att visa filmdata med fokus på en sömlös och engagerande användarupplevelse. Genom att använda React, TypeScript, Axios och React Query implementerade jag avancerade frontend-funktioner, inklusive en effektiv sökfunktion, samtidigt som jag säkerställde återanvändbara och underhållsvänliga komponenter.<br><br><span class='font-bold'>Syfte:</span> I detta projekt fokuserade jag på frontend-utveckling, särskilt avancerad JavaScript med React. Uppgiften innebar att integrera IMDb API och använda Axios-biblioteket tillsammans med React Query för att hämta och visa filmdata. Mitt mål var att skapa en användarvänlig och interaktiv webbapplikation som erbjuder en smidig upplevelse för användare.<br><br><span class='font-bold'>Nyckelbidrag:</span><br>- Använde React och TypeScript för att implementera frontend-funktionalitet och säkerställa en smidig användarupplevelse.<br>- Integrerade externa API:er och bibliotek, såsom Axios och React Query, för att effektivt hämta och hantera filmdata.<br><br><span class='font-bold'>Tekniker:</span><br><span class='font-bold'>- Frontend:</span> React, TypeScript, Axios, React Query, SCSS<br> <span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code<br><br><span class='font-bold'>Projektets Höjdpunkter:</span><br>- Designade och organiserade komponenter för att säkerställa återanvändbarhet och underhåll.<br>- Implementerade en effektiv sökfunktion för användare, vilket förbättrade den övergripande användarupplevelsen.<br><br><span class='font-bold'>Resultat:</span> Detta projekt stärkte inte bara min kunskap i React och frontend-utveckling utan gav mig även värdefull erfarenhet av att hantera och visa data från externa API:er. Det har utrustat mig med färdigheter och självförtroende för att hantera liknande utmaningar i framtida projekt.",
-              "image": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
-              "linkTitle": "Länkar",
-              "ctaButton": "Visa Detaljer",
-              "links": [
-                  {
-                      "type": "GitHub",
-                      "url": "https://github.com/FiaNerd/TMDB",
-                      "icon": "line-md:github-twotone"
-                  },
-                  {
-                      "type": "Website",
-                      "url": "https://the-movie-data.netlify.app",
-                      "icon": "tdesign:internet-filled"
-                  }
-              ],
-              "techTitle": "Tech",
-              "tech": [
-                  {
-                      "name": "React",
-                      "icon": "skill-icons:react-dark"
-                  },
-                  {
-                      "name": "TypeScript",
-                      "icon": "catppuccin:typescript"
-                  },
-                  {
-                      "name": "SCSS",
-                      "icon": "vscode-icons:file-type-scss"
-                  },
-                  {
-                      "name": "Axios",
-                      "icon": "logos:axios"
-                  },
-                  {
-                      "name": "React Query",
-                      "icon": "logos:react-query-icon"
-                  }
-              ],
-              "images": [
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-top-main.jpg",
-                      "alt": "TMDB Topp Main",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-deails-movie.jpg",
-                      "alt": "TMDB Detalj Film",
-                      "span": "wide"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
-                      "alt": "TMDB Mobil Hero",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/theMovieDb/school-tmdb-mobile-main.jpg",
-                      "alt": "TMDB Mobil Main",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-deails-movie.jpg",
-                      "alt": "Mobile Detalj Film",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-hero.jpg",
-                      "alt": "tmdb-hero.jpg",
-                      "span": "Wide"
-                  }
-              ]
+            "name": "React",
+            "icon": "skill-icons:react-dark"
           },
           {
-              "projectType": "Skolprojekt",
-              "title": "MSB",
-              "urlTitle": "msb",
-              "applicationType": "webb",
-              "applicationTypeDetail": {
-              "text": "FRONTEND",
-              "icon": {
-              "name": "icon-park-outline:dot",
-              "width": 48,
-              "height": 48,
-              "color": "#76150d"
-              },
-              "suffix": "WEBBAPPLIKATION"
-              },
-              "subTitle": "Grafiska verktyg",
-              "titleDescription": "Grafiska Element och Illustrationer",
-              "projectDuration": "mars 2023 - januari 2025",
-              "description": "Detta projekt kombinerar grafisk design och webbutveckling, där jag applicerade mina färdigheter i Adobe Illustrator och Photoshop för att skapa grafiska element och illustrationer. Kursen fokuserade på att bygga en webbplats enligt MSB:s grafiska profil, med inriktning på typografi, färgscheman och layoutprinciper. Jag fick också praktisk erfarenhet av HTML och CSS för att utveckla en responsiv och visuellt tilltalande webbplats.<br><br> <span class='font-bold'>Syfte:</span> Kursen Graphic Tools syftade till att ge grundläggande kunskaper i Illustrator och Photoshop. I Illustrator var målet att skapa tre distinkta grafiska element, medan uppgiften i Photoshop innebar att frilägga minst tre personer. <br>Kursen fokuserade även på att följa MSB:s (Myndigheten för samhällsskydd och beredskap) grafiska profil <span class='font-bold'>[ MSB Graphic Profile ]</span><span class='italic'> (https://www.msb.se/)</span>, med fokus på typografi, teckenstorlekar, färgscheman och andra designprinciper. Detta resulterade i att en webbplats byggdes med HTML och CSS som följde denna profil.<br><br><span class='font-bold'>Nyckelbidrag:</span><br>- Designade och skapade alla grafiska element för webbplatsen, inklusive bilder som sammanställdes av olika komponenter. Till exempel skapades Hero-sektionen och eld-bilden genom att kombinera frilagda bilder med andra visuella element.<br>- Säkerställde semantisk korrekthet i HTML och CSS genom att använda flexbox och grid för att förfina teknikerna för frontend-utveckling.<br><br><span class='font-bold'>Tekniker som användes:</span><br><span class='font-bold'>- Grafiska verktyg:</span> Photoshop, Illustrator<br><span class='font-bold'>- Frontend:</span> HTML, CSS <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code<br><br><span class='font-bold'>Projektets höjdpunkter:</span><br>- Använde flexbox och grid-layouts för att skapa en responsiv och visuellt tilltalande webbplats.<br>- Prioriterade efterlevnad av MSB:s grafiska profil, vilket fördjupade förståelsen för designkonsekvens och varumärkesriktlinjer.<br><br><span class='font-bold'>Resultat:</span> Projektet, som primärt fokuserade på grafiska verktyg, gav värdefull erfarenhet av HTML och CSS och förbättrade färdigheterna inom frontend-utveckling. Den färdiga webbplatsen demonstrerar tillämpningen av designprinciper och tekniker som lärdes ut under kursen.",
-              "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
-              "linkTitle": "Länkar",
-              "ctaButton": "Visa Detaljer",
-              "links": [
-                  {
-                      "type": "GitHub",
-                      "url": "https://github.com/FiaNerd/msb_falling_trees_mission.git",
-                      "icon": "line-md:github-twotone"
-                  },
-                  {
-                      "type": "Website",
-                      "url": "https://lucky-basbousa-252a0a.netlify.app/",
-                      "icon": "tdesign:internet-filled"
-                  }
-              ],
-              "techTitle": "Tech",
-              "tech": [
-                  {
-                      "name": "Photoshop",
-                      "icon": "skill-icons:photoshop"
-                  },
-                  {
-                      "name": "Illustrator",
-                      "icon": "logos:adobe-illustrator"
-                  },
-                  {
-                      "name": "HTML",
-                      "icon": "logos:html-5"
-                  },
-                  {
-                      "name": "CSS",
-                      "icon": "logos:css-3"
-                  }
-              ],
-              "images": [
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
-                      "alt": "MSB landskap",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-prototyp.jpg",
-                      "alt": "MSB hero figma prototyp",
-                      "span": "wide"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-firetruck-orginal-photoshop.jpg",
-                      "alt": "MSB my image vs orginal image",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-high.jpg",
-                      "alt": "MSB infromations kort",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-card.jpg",
-                      "alt": "MSB kort main",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-fireman-cards.jpg",
-                      "alt": "MSB brandman kort",
-                      "span": "wide"
-                  }
-              ]
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
           }
-      ]
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-detail-hero.jpg",
+            "alt": "Brutal Detalj Hero",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-home.jpg",
+            "alt": "Brutal Mobil Hem.jpg",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-details.jpg",
+            "alt": "Brutal detalj sida",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-main.jpg",
+            "alt": "Brutal Detalj",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-main.jpg",
+            "alt": "Brutal Mobil Main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-hero-detail.jpg",
+            "alt": "Brutal Hero Detail",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Skolprojekt",
+        "title": "The Movie DB",
+        "urlTitle": "the-movie-db",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBAPPLIKATION"
+        },
+        "subTitle": "Frontend",
+        "titleDescription": "Film databas hemsida",
+        "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
+        "description": "Jag utvecklade en interaktiv webbapplikation som integrerar IMDb API för att visa filmdata med fokus på en sömlös och engagerande användarupplevelse. Genom att använda React, TypeScript, Axios och React Query implementerade jag avancerade frontend-funktioner, inklusive en effektiv sökfunktion, samtidigt som jag säkerställde återanvändbara och underhållsvänliga komponenter.<br><br><span class='font-bold'>Syfte:</span> I detta projekt fokuserade jag på frontend-utveckling, särskilt avancerad JavaScript med React. Uppgiften innebar att integrera IMDb API och använda Axios-biblioteket tillsammans med React Query för att hämta och visa filmdata. Mitt mål var att skapa en användarvänlig och interaktiv webbapplikation som erbjuder en smidig upplevelse för användare.<br><br><span class='font-bold'>Nyckelbidrag:</span><br>- Använde React och TypeScript för att implementera frontend-funktionalitet och säkerställa en smidig användarupplevelse.<br>- Integrerade externa API:er och bibliotek, såsom Axios och React Query, för att effektivt hämta och hantera filmdata.<br><br><span class='font-bold'>Tekniker:</span><br><span class='font-bold'>- Frontend:</span> React, TypeScript, Axios, React Query, SCSS<br> <span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code<br><br><span class='font-bold'>Projektets Höjdpunkter:</span><br>- Designade och organiserade komponenter för att säkerställa återanvändbarhet och underhåll.<br>- Implementerade en effektiv sökfunktion för användare, vilket förbättrade den övergripande användarupplevelsen.<br><br><span class='font-bold'>Resultat:</span> Detta projekt stärkte inte bara min kunskap i React och frontend-utveckling utan gav mig även värdefull erfarenhet av att hantera och visa data från externa API:er. Det har utrustat mig med färdigheter och självförtroende för att hantera liknande utmaningar i framtida projekt.",
+        "image": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/TMDB",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://the-movie-data.netlify.app",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "SCSS",
+            "icon": "vscode-icons:file-type-scss"
+          },
+          {
+            "name": "Axios",
+            "icon": "logos:axios"
+          },
+          {
+            "name": "React Query",
+            "icon": "logos:react-query-icon"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-top-main.jpg",
+            "alt": "TMDB Topp Main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-deails-movie.jpg",
+            "alt": "TMDB Detalj Film",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
+            "alt": "TMDB Mobil Hero",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/school-tmdb-mobile-main.jpg",
+            "alt": "TMDB Mobil Main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-deails-movie.jpg",
+            "alt": "Mobile Detalj Film",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-hero.jpg",
+            "alt": "tmdb-hero.jpg",
+            "span": "Wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Skolprojekt",
+        "title": "MSB",
+        "urlTitle": "msb",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBBAPPLIKATION"
+        },
+        "subTitle": "Grafiska verktyg",
+        "titleDescription": "Grafiska Element och Illustrationer",
+        "projectDuration": "mars 2023 - januari 2025",
+        "description": "Detta projekt kombinerar grafisk design och webbutveckling, där jag applicerade mina färdigheter i Adobe Illustrator och Photoshop för att skapa grafiska element och illustrationer. Kursen fokuserade på att bygga en webbplats enligt MSB:s grafiska profil, med inriktning på typografi, färgscheman och layoutprinciper. Jag fick också praktisk erfarenhet av HTML och CSS för att utveckla en responsiv och visuellt tilltalande webbplats.<br><br> <span class='font-bold'>Syfte:</span> Kursen Graphic Tools syftade till att ge grundläggande kunskaper i Illustrator och Photoshop. I Illustrator var målet att skapa tre distinkta grafiska element, medan uppgiften i Photoshop innebar att frilägga minst tre personer. <br>Kursen fokuserade även på att följa MSB:s (Myndigheten för samhällsskydd och beredskap) grafiska profil <span class='font-bold'>[ MSB Graphic Profile ]</span><span class='italic'> (https://www.msb.se/)</span>, med fokus på typografi, teckenstorlekar, färgscheman och andra designprinciper. Detta resulterade i att en webbplats byggdes med HTML och CSS som följde denna profil.<br><br><span class='font-bold'>Nyckelbidrag:</span><br>- Designade och skapade alla grafiska element för webbplatsen, inklusive bilder som sammanställdes av olika komponenter. Till exempel skapades Hero-sektionen och eld-bilden genom att kombinera frilagda bilder med andra visuella element.<br>- Säkerställde semantisk korrekthet i HTML och CSS genom att använda flexbox och grid för att förfina teknikerna för frontend-utveckling.<br><br><span class='font-bold'>Tekniker som användes:</span><br><span class='font-bold'>- Grafiska verktyg:</span> Photoshop, Illustrator<br><span class='font-bold'>- Frontend:</span> HTML, CSS <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code<br><br><span class='font-bold'>Projektets höjdpunkter:</span><br>- Använde flexbox och grid-layouts för att skapa en responsiv och visuellt tilltalande webbplats.<br>- Prioriterade efterlevnad av MSB:s grafiska profil, vilket fördjupade förståelsen för designkonsekvens och varumärkesriktlinjer.<br><br><span class='font-bold'>Resultat:</span> Projektet, som primärt fokuserade på grafiska verktyg, gav värdefull erfarenhet av HTML och CSS och förbättrade färdigheterna inom frontend-utveckling. Den färdiga webbplatsen demonstrerar tillämpningen av designprinciper och tekniker som lärdes ut under kursen.",
+        "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/msb_falling_trees_mission.git",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://lucky-basbousa-252a0a.netlify.app/",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "Photoshop",
+            "icon": "skill-icons:photoshop"
+          },
+          {
+            "name": "Illustrator",
+            "icon": "logos:adobe-illustrator"
+          },
+          {
+            "name": "HTML",
+            "icon": "logos:html-5"
+          },
+          {
+            "name": "CSS",
+            "icon": "logos:css-3"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
+            "alt": "MSB landskap",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-prototyp.jpg",
+            "alt": "MSB hero figma prototyp",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-firetruck-orginal-photoshop.jpg",
+            "alt": "MSB my image vs orginal image",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-high.jpg",
+            "alt": "MSB infromations kort",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-card.jpg",
+            "alt": "MSB kort main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-fireman-cards.jpg",
+            "alt": "MSB brandman kort",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
   },
 
   "backendPortfolioSection": {
-     "titlePortfolioBackend": "Backendprojekt",
-     "subTitlePortfolioBackend": "Ryggraden i Digitala Lösningar",
-     "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
-     "ctaButtonViewAll": "Visa Detaljer",
+    "titlePortfolioBackend": "Backendprojekt",
+    "subTitlePortfolioBackend": "Ryggraden i Digitala Lösningar",
+    "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+    "ctaButtonViewAll": "Visa Detaljer",
 
-      "backendItems": [
+    "backendItems": [
+      {
+        "projectType": "Skolprojekt",
+        "title": "Photo App",
+        "urlTitle": "photo-app",
+        "applicationType": "webb",
+        "subTitle": "Backend",
+        "applicationTypeDetail": {
+          "text": "BACKEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBBAPPLIKATION"
+        },
+        "titleDescription": "Backand för en foto app",
+        "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
+        "description": "Jag utvecklade en backend för en fotot app som möjliggör användare att ladda upp, hämta och updatera och t abort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
+        "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
           {
-              "projectType":"Skolprojekt",
-              "title": "Photo App",
-              "urlTitle": "photo-app",
-              "applicationType": "webb",
-              "subTitle": "Backend",
-              "applicationTypeDetail": {
-                  "text": "BACKEND",
-                  "icon": {
-                  "name": "icon-park-outline:dot",
-                  "width": 48,
-                  "height": 48,
-                  "color": "#76150d"
-                  },
-                  "suffix": "WEBBAPPLIKATION"
-              },
-              "titleDescription": "Backand för en foto app",
-              "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
-              "description": "Jag utvecklade en backend för en fotot app som möjliggör användare att ladda upp, hämta och updatera och t abort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
-              "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
-              "linkTitle": "Länkar",
-              "ctaButton": "Visa Detaljer",
-              "links": [
-                  {
-                      "type": "GitHub",
-                      "url": "https://github.com/FiaNerd/prisma_photo_app_api",
-                      "icon": "line-md:github-twotone"
-                  }
-              ],
-              "techTitle": "Tech",
-              "tech": [
-                  {
-                      "name": "node.js",
-                      "icon": "vscode-icons:file-type-node"
-                  },
-                  {
-                      "name": "prisma",
-                      "icon": "catppuccin:prisma"
-                  },
-                  {
-                      "name": "TypeScript",
-                      "icon": "catppuccin:typescript"
-                  },
-                  {
-                      "name": "Postman",
-                      "icon": "skill-icons:postman"
-                  }
-              ],
-              "images": [
-                  {
-                      "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
-                      "alt": "Foto App Code",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
-                      "alt": "Foto App code",
-                      "span": "wide"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
-                      "alt": "Foto App code",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
-                      "alt": "Foto App webläsare",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
-                      "alt": "Foto App postman",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
-                      "alt": "Foto App prisma & SQL",
-                      "span": "wide"
-                  }
-              ]
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+            "icon": "line-md:github-twotone"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "node.js",
+            "icon": "vscode-icons:file-type-node"
           },
           {
-              "projectType": "Sido projekt",
-              "title": "Slowfashion API",
-              "urlTitle": "slowfashion-api",
-              "applicationType": "App",
-              "subTitle": "Backend",
-              "applicationTypeDetail": {
-                  "text": "BACKEND",
-                  "icon": {
-                  "name": "icon-park-outline:dot",
-                  "width": 48,
-                  "height": 48,
-                  "color": "#76150d"
-                  },
-                  "suffix": "APP APPLIKATION"
-              },
-              "titleDescription": "Backend för modemedvetna",
-              "projectDuration": "juni 2023 – mars 2024",
-              "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utvecklaren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<br><br><span class='font-bold'>Huvudsakliga Bidrag:</span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Programmeringsspråk:</span> C#<br>- Ramverk: ASP.NET Core Web API<br><span class='font-bold'>- Databaser:</span> PostgreSQL, DBeaver<br><span class='font-bold'>- API-testning:</span> Swagger, Postman, Insomnia<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Molntjänster:</span> Azure<br></span><span class='font-bold'>- Utvecklingsmiljö (IDE):</span> Visual Studio 2022<br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
-              "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
-              "ctaButton": "Visa Detaljer",
-              "linkTitle": "Länk till mitt GitHub",
-              "links": [
-                  {
-                      "type": "Det här reprot är privat"
-                  }
-              ],
-
-              "techTitle": "Tech",
-              "tech": [
-                  {
-                      "name": "C-sharp",
-                      "icon": "logos:c-sharp"
-                  },
-                  {
-                      "name": "Postman",
-                      "icon": "skill-icons:postman"
-                  },
-                  {
-                      "name": ".NET",
-                      "icon": "logos:dotnet"
-                  }
-              ],
-              "images": [
-                  {
-                      "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
-                      "alt": "Slowashion mobil app",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
-                      "alt": "Slowfashion app",
-                      "span": "wide"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
-                      "alt": "Slowfashion kort",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
-                      "alt": "Slowfashion logo",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
-                      "alt": "Slowfashion kort kläder",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
-                      "alt": "Slowfashion footer",
-                      "span": "wide"
-                  }
-              ]
+            "name": "prisma",
+            "icon": "catppuccin:prisma"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
           }
-      ]
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
+            "alt": "Foto App Code",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+            "alt": "Foto App code",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+            "alt": "Foto App code",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
+            "alt": "Foto App webläsare",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
+            "alt": "Foto App postman",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
+            "alt": "Foto App prisma & SQL",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Sido projekt",
+        "title": "Slowfashion API",
+        "urlTitle": "slowfashion-api",
+        "applicationType": "App",
+        "subTitle": "Backend",
+        "applicationTypeDetail": {
+          "text": "BACKEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "APP APPLIKATION"
+        },
+        "titleDescription": "Backend för modemedvetna",
+        "projectDuration": "juni 2023 – mars 2024",
+        "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utvecklaren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<br><br><span class='font-bold'>Huvudsakliga Bidrag:</span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Programmeringsspråk:</span> C#<br>- Ramverk: ASP.NET Core Web API<br><span class='font-bold'>- Databaser:</span> PostgreSQL, DBeaver<br><span class='font-bold'>- API-testning:</span> Swagger, Postman, Insomnia<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Molntjänster:</span> Azure<br></span><span class='font-bold'>- Utvecklingsmiljö (IDE):</span> Visual Studio 2022<br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
+        "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+        "ctaButton": "Visa Detaljer",
+        "linkTitle": "Länk till mitt GitHub",
+        "links": [
+          {
+            "type": "Det här reprot är privat"
+          }
+        ],
+
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "C-sharp",
+            "icon": "logos:c-sharp"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          },
+          {
+            "name": ".NET",
+            "icon": "logos:dotnet"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+            "alt": "Slowashion mobil app",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
+            "alt": "Slowfashion app",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
+            "alt": "Slowfashion kort",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
+            "alt": "Slowfashion logo",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
+            "alt": "Slowfashion kort kläder",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
+            "alt": "Slowfashion footer",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
   },
   "fullstackPortfolioSection": {
-      "titlePortfolioFullstack": "Fullstackprojekt",
-      "subTitlePortfolioFullstack": "Från Databas till Design",
-      "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#831518] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Jag har omfattande erfarenhet av både frontend- och backend-utveckling, inklusive databashantering, API-integrationer, serveradministration och användarvänlig design. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
-      "ctaButtonViewAll": "Visa Detaljer",
+    "titlePortfolioFullstack": "Fullstackprojekt",
+    "subTitlePortfolioFullstack": "Från Databas till Design",
+    "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#831518] font-semibold'>Projekt som förenar kreativitet med robust funktionalitet.</span> Jag har omfattande erfarenhet av både frontend- och backend-utveckling, inklusive databashantering, API-integrationer, serveradministration och användarvänlig design. Har du en idé eller ett projekt i åtanke? Tveka inte att kontakta mig – jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+    "ctaButtonViewAll": "Visa Detaljer",
 
-      "fullstackItems": [
-          {
-              "projectType":"Sido projekt",
-              "title": "Printagon Graphics",
-              "urlTitle": "printagon-graphics",
-              "applicationType": "webb",
-              "applicationTypeDetail": {
-                  "text": "FULLSTACK",
-                  "icon": {
-                  "name": "icon-park-outline:dot",
-                  "width": 48,
-                  "height": 48,
-                  "color": "#76150d"
-                  },
-                  "suffix": "WEBBAPPLIKATION"
-              },
-              "subTitle": "Fullstack",
-              "titleDescription": "Systemintegration för grafiskt företag",
-              "projectDuration": "june 2024 - in progress",
-              "description": "Utveckling av ett robust system för att hantera och spåra arbetsflödet för två tryckmaskiner, med fokus på jobbhållning, övervakning av pappersanvändning, avfallshantering och hantering av återstående papperslager.<br><br> <span class='font-bold'>Huvudsakliga Bidrag:</span><br> <span class='font-bold'>- Kravanalys & Systemdesign:</span> Genomförde detaljerad kravanalys och använde Figma för att visualisera systemets gränssnitt och arbetsflöde, vilket säkerställde att både tekniska och affärsmässiga behov beaktades innan utvecklingen. <br><span class='font-bold'>- Backend-utveckling:</span> Ledde utvecklingen av backend-systemet med hjälp av ASP.NET web API, vilket säkerställde robusthet, skalbarhet och prestanda. <br><span class='font-bold'>- Databashantering:</span> Implementerade SQL Server för att effektivt hantera komplexa relationella data och hantera stora informationsvolymer, vilket säkerställde sömlös datahantering och åtkomst. <br><span class='font-bold'>- Säkerhet:</span>  Utvecklade ett säkert autentiseringssystem med olika roller för administratörs- och användaråtkomst. <br><br><span class='font-bold'>Använda Tekniker:</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI för responsiv webbplats <br><span class='font-bold'>- Designverktyg:</span> Figma för wireframes och gränssnittsdesign <br><span class='font-bold'>- Databas:</span> SQL Server (SMSS) <br><span class='font-bold'>- Versionskontroll:</span> Git <br><span class='font-bold'>- Kommandoradsgränssnitt:</span> CLI <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio 2022 <br><br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Designade ett skalbart system för att hantera högvolymsdata och operationer. <br>- Säkerställde robust dataintegritet och effektiv datahantering med SQL Server. <br>- Övervann utmaningar i backend-autentiseringsimplementering, vilket berikade min förståelse för backend-komplexiteter. <br><br><span class='font-bold'>Resultat:</span> <br>- Förbättrad arbetsflödshantering och tillhandahöll detaljerade insikter i pappersanvändning och avfall, vilket optimerade driftseffektiviteten. <br>- Underlättade hanteringen av papperslager.",                
-              "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-              "linkTitle": "Länkar",
-              "ctaButton": "Visa Detaljer",
-              "links": [
-                  {
-                      "type": "Det här reprot är privat"
-                  }
-              ],
-              "techTitle": "Tech",
-                  "tech": [
-                      {
-                          "name": "C-sharp",
-                          "icon": "logos:c-sharp"
-                      },
-                      {
-                          "name": "TypeScript",
-                          "icon": "catppuccin:typescript"
-                      },
-                      {
-                          "name": "Postman",
-                          "icon": "skill-icons:postman"
-                      },
-                      {
-                          "name": "React",
-                          "icon": "skill-icons:react-dark"
-                      },
-                      
-                      {
-                          "name": ".NET",
-                          "icon": "logos:dotnet"
-                      },
-                      {
-                          "name": "Postman",
-                          "icon": "logos:material-ui"
-                      }
-                  ],
-                  "images": [
-                      {
-                          "src": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
-                          "alt": "Printagon Logga in",
-                          "span": "tall"
-                      },
-                      {
-                          "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
-                          "alt": "Printagon pausade jobb",
-                          "span": "wide"
-                      },
-                      {
-                          "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
-                          "alt": "Printagon pausade jobb",
-                          "span": "tall"
-                      },
-                      {
-                          "src": "/assets/images/portfolio/fullstack/pg/pg-trello.jpg",
-                          "alt": "Printagon trello",
-                          "span": "tall"
-                      },
-                      {
-                          "src": "/assets/images/portfolio/fullstack/pg/pg-register-role.jpg",
-                          "alt": "Printagon registera rullar",
-                          "span": "tall"
-                      },
-                      {
-                          "src": "/assets/images/portfolio/fullstack/pg/pg-joblist.jpg",
-                          "alt": "Printagon jobb lista",
-                          "span": "wide"
-                      }
-                  ]
+    "fullstackItems": [
+      {
+        "projectType": "Sido projekt",
+        "title": "Printagon Graphics",
+        "urlTitle": "printagon-graphics",
+        "applicationType": "webb",
+        "applicationTypeDetail": {
+          "text": "FULLSTACK",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
           },
+          "suffix": "WEBBAPPLIKATION"
+        },
+        "subTitle": "Fullstack",
+        "titleDescription": "Systemintegration för grafiskt företag",
+        "projectDuration": "june 2024 - in progress",
+        "description": "Utveckling av ett robust system för att hantera och spåra arbetsflödet för två tryckmaskiner, med fokus på jobbhållning, övervakning av pappersanvändning, avfallshantering och hantering av återstående papperslager.<br><br> <span class='font-bold'>Huvudsakliga Bidrag:</span><br> <span class='font-bold'>- Kravanalys & Systemdesign:</span> Genomförde detaljerad kravanalys och använde Figma för att visualisera systemets gränssnitt och arbetsflöde, vilket säkerställde att både tekniska och affärsmässiga behov beaktades innan utvecklingen. <br><span class='font-bold'>- Backend-utveckling:</span> Ledde utvecklingen av backend-systemet med hjälp av ASP.NET web API, vilket säkerställde robusthet, skalbarhet och prestanda. <br><span class='font-bold'>- Databashantering:</span> Implementerade SQL Server för att effektivt hantera komplexa relationella data och hantera stora informationsvolymer, vilket säkerställde sömlös datahantering och åtkomst. <br><span class='font-bold'>- Säkerhet:</span>  Utvecklade ett säkert autentiseringssystem med olika roller för administratörs- och användaråtkomst. <br><br><span class='font-bold'>Använda Tekniker:</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI för responsiv webbplats <br><span class='font-bold'>- Designverktyg:</span> Figma för wireframes och gränssnittsdesign <br><span class='font-bold'>- Databas:</span> SQL Server (SMSS) <br><span class='font-bold'>- Versionskontroll:</span> Git <br><span class='font-bold'>- Kommandoradsgränssnitt:</span> CLI <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio 2022 <br><br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Designade ett skalbart system för att hantera högvolymsdata och operationer. <br>- Säkerställde robust dataintegritet och effektiv datahantering med SQL Server. <br>- Övervann utmaningar i backend-autentiseringsimplementering, vilket berikade min förståelse för backend-komplexiteter. <br><br><span class='font-bold'>Resultat:</span> <br>- Förbättrad arbetsflödshantering och tillhandahöll detaljerade insikter i pappersanvändning och avfall, vilket optimerade driftseffektiviteten. <br>- Underlättade hanteringen av papperslager.",
+        "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
           {
-              "projectType":"Sido projekt / LIA",
-              "title": "Prodigies",
-              "urlTitle": "prodigies",
-              "applicationType": "App",
-              "applicationTypeDetail": {
-                  "text": "BACKEND",
-                  "icon": {
-                  "name": "icon-park-outline:dot",
-                  "width": 48,
-                  "height": 48,
-                  "color": "#76150d"
-                  },
-                  "suffix": "APP APPLIKATION"
-              },
-              "subTitle": "Fullstack",
-              "titleDescription": "En App för gymnasieelever",
-              "projectDuration": "januari 2024- september 2024",
-              "description": "Utveckla en mobilapplikation för att hjälpa gymnasieelever att utforska möjligheter till eftergymnasial utbildning, med fokus på att erbjuda en sömlös, plattformsoberoende användarupplevelse.<br> <br><span class='font-bold'>Huvudsakliga Bidrag:</span> <br><span class='font-bold'>- Frontend Utveckling:</span> <br>- Använde React Native och TypeScript för att skapa ett responsivt och intuitivt gränssnitt. <br>- Säkerställde en konsekvent användarupplevelse över iOS- och Android-plattformarna. <br><span class='font-bold'>- Backend Utveckling:</span> <br>- Hanterade API:er och datalagring med Firebase, vilket tillhandahöll tillförlitliga backendtjänster. <br>- Implementerade SQLite för effektiv hantering av lokala data och offlinefunktioner. <br><span class='font-bold'>- Problemlösning:</span> <br>- Övervann specifika utmaningar inom iOS-utveckling, vilket säkerställde en robust plattformsoberoende funktionalitet. <br>- Anpassade utvecklingsstrategier för att bibehålla sömlös prestanda och användbarhet.<br><br><span class='font-bold'> Använda Teknologier:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Versionshantering:</span> Git <br><span class='font-bold'>- Terminal:</span> Kommandoradsgränssnitt (CLI) <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code <br><span class='font-bold'>- Metodik:</span> Scrum <br> <br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Löste komplexa iOS-plattformsspecifika problem, vilket förbättrade mina problemlösningsfärdigheter och tekniska kunskaper. <br>- Säkerställde appens responsivitet och prestanda över olika enheter och skärmstorlekar. <br><br><span class='font-bold'>Resultat:</span> <br>- Levererade ett värdefullt verktyg som hjälper elever att effektivt navigera sina utbildningsval.<br>- Fick omfattande erfarenhet av mobilutveckling och plattformsoberoende integration.",                
-              "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main-hero.jpg",
-              "linkTitle": "Länkar",
-              "ctaButton": "Visa Detaljer",
-              "links": [
-                  {
-                      "type": "App Store",
-                      "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
-                      "icon": "logos:apple-app-store"
-                  }
-              ],
-              "techTitle": "Tech",
-              "tech": [
-                  {
-                      "name": "React Native",
-                      "icon": "devicon:reactnative-wordmark"
-                  },
-                  {
-                      "name": "Firebase",
-                      "icon": "devicon:firebase"
-                  },
-                  {
-                      "name": "TypeScript",
-                      "icon": "catppuccin:typescript"
-                  },
-                  {
-                      "name": "Sql Lite",
-                      "icon": "vscode-icons:file-type-sql"
-                  },
-                  {
-                      "name": "Tailwind CSS",
-                      "icon": "skill-icons:tailwindcss-dark"
-                  }
-              ],
-              "images": [
-                  {
-                      "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-deploy.jpg",
-                      "alt": "Prodigies deploya app",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/fullstack/prodigies/prdogies-main.jpg",
-                      "alt": "Prodigies main",
-                      "span": "wide"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/fullstack/prodigies/searchCityScreen_figma.jpg",
-                      "alt": "Prodigies sök funktion figma",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/fullstack/prodigies/prodiges-filtering-search.jpg",
-                      "alt": "Prodigies filtera & sök",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-högskole.jpg",
-                      "alt": "Prodigies högskole sida",
-                      "span": "tall"
-                  },
-                  {
-                      "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-filtering.jpg",
-                      "alt": "Prodigies filtering",
-                      "span": "wide"
-                  }
-              ]
-          },
-          {
-            "projectType": "Examensarbete",
-            "title": "Kaffe Bönans Skafferi",
-            "urlTitle": "coffee-shop",
-            "applicationType": "Webb",
-            "applicationTypeDetail": {
-              "text": "FULLSTACK",
-              "icon": {
-                "name": "icon-park-outline:dot",
-                "width": 48,
-                "height": 48,
-                "color": "#76150d"
-              },
-              "suffix": "WEBBAPPLIKATION"
-            },
-            "subTitle": "Fullstack",
-            "titleDescription": "En kaffeshop för kaffeälskare",
-            "projectDuration": "December 2023 – Januari 2024",
-            "description": "Påbörjade en resa in i full-stack-utveckling genom att skapa en e-handelsplattform skräddarsydd för kaffeentusiaster som en del av mitt examensarbete. Började med noggrann planering, kuraterade jag en teknikstack som var i linje med de tänkta funktionaliteterna, med hjälp av SQL för användar-, kundvagns- och produktrelationer. Genom att använda både lo-fi och hi-fi prototyper i Figma, finslipade jag appens estetik, från färgscheman till typsnittsval. <br><br><span class='font-bold'>Huvudsakliga Bidrag:</span> <br><span class='font-bold'>- Frontend Utveckling:</span><br>- Använde React och TypeScript för att orkestrera en sömlös användarupplevelse. <br>- Förbättrade estetiken genom noggranna designval med hjälp av Figma-prototyper.<br><span class='font-bold'>- Backend Utveckling:</span><br>- Använde ASP.NET Core för att integrera backend- och frontend-element sömlöst.<br>- Implementerade robust backend-autentisering med hjälp av ASP.NET Core Authentication-biblioteket. <br> <br><span class='font-bold'>Använda Teknologier:</span> <br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core, SQL Server <br><span class='font-bold'>- Databas:</span> SQLite <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code <br><span class='font-bold'>- Versionshantering:</span> Git <br><span class='font-bold'>- Distribution:</span> Docker (Planerad integration för strömlinjeformad distribution) <br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Överkom utmaningar i implementeringen av backend-autentisering, vilket berikade min förståelse för backendens komplexitet. <br>- Planerad integration av PostgreSQL för förbättrad databashantering och Docker för strömlinjeformad distribution på en Azure-baserad server. <br><br><span class='font-bold'>Resultat:</span> Navigerade framgångsrikt resan från koncept till förverkligande inom satta tidsfrister, vilket berikade mina färdigheter och förståelse för fullstack-utveckling. Framåtblickande siktar jag på att integrera PostgreSQL för förbättrad databashantering och Docker för strömlinjeformad distribution på en Azure-baserad server.",
-            "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg",
-            "linkTitle": "Länkar",
-            "ctaButton": "Visa Detaljer",
-            "links": [
-              {
-                "type": "GitHub",
-                "url": "https://github.com/FiaNerd/theCoffeeShop_exam",
-                "icon": "line-md:github-twotone"
-              }
-            ],
-            "techTitle": "Tech",
-            "tech": [
-              {
-                "name": "C-sharp",
-                "icon": "logos:c-sharp"
-              },
-              {
-                "name": "TypeScript",
-                "icon": "catppuccin:typescript"
-              },
-              {
-                "name": "Postman",
-                "icon": "skill-icons:postman"
-              },
-              {
-                "name": "React",
-                "icon": "skill-icons:react-dark"
-              },
-              {
-                "name": ".NET",
-                "icon": "logos:dotnet"
-              },
-              {
-                "name": "SQL Server (SMMS)",
-                "icon": "devicon:microsoftsqlserver"
-              },
-              {
-                "name": "Tailwind CSS",
-                "icon": "skill-icons:tailwindcss-dark"
-              }
-            ],
-            "images": [
-              {
-                "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-loggedin-user.jpg",
-                "alt": "Kaffebönan inloggad användare",
-                "span": "tall"
-              },
-              {
-                "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-basket.jpg",
-                "alt": "Kaffebönan varukorg",
-                "span": "wide"
-              },
-              {
-                "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-login.jpg",
-                "alt": "Kaffebönan logga in",
-                "span": "tall"
-              },
-              {
-                "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-mobile.jpg",
-                "alt": "Kaffebönan mobil kort",
-                "span": "tall"
-              },
-              {
-                "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-register2.jpg",
-                "alt": "Kaffebönan registrering",
-                "span": "tall"
-              },
-              {
-                "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-order.jpg",
-                "alt": "Kaffebönan order",
-                "span": "wide"
-              }
-            ]
+            "type": "Det här reprot är privat"
           }
-      ]
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "C-sharp",
+            "icon": "logos:c-sharp"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          },
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+
+          {
+            "name": ".NET",
+            "icon": "logos:dotnet"
+          },
+          {
+            "name": "Postman",
+            "icon": "logos:material-ui"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+            "alt": "Printagon Logga in",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
+            "alt": "Printagon pausade jobb",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
+            "alt": "Printagon pausade jobb",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-trello.jpg",
+            "alt": "Printagon trello",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-register-role.jpg",
+            "alt": "Printagon registera rullar",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-joblist.jpg",
+            "alt": "Printagon jobb lista",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Sido projekt / LIA",
+        "title": "Prodigies",
+        "urlTitle": "prodigies",
+        "applicationType": "App",
+        "applicationTypeDetail": {
+          "text": "BACKEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "APP APPLIKATION"
+        },
+        "subTitle": "Fullstack",
+        "titleDescription": "En App för gymnasieelever",
+        "projectDuration": "januari 2024- september 2024",
+        "description": "Utveckla en mobilapplikation för att hjälpa gymnasieelever att utforska möjligheter till eftergymnasial utbildning, med fokus på att erbjuda en sömlös, plattformsoberoende användarupplevelse.<br> <br><span class='font-bold'>Huvudsakliga Bidrag:</span> <br><span class='font-bold'>- Frontend Utveckling:</span> <br>- Använde React Native och TypeScript för att skapa ett responsivt och intuitivt gränssnitt. <br>- Säkerställde en konsekvent användarupplevelse över iOS- och Android-plattformarna. <br><span class='font-bold'>- Backend Utveckling:</span> <br>- Hanterade API:er och datalagring med Firebase, vilket tillhandahöll tillförlitliga backendtjänster. <br>- Implementerade SQLite för effektiv hantering av lokala data och offlinefunktioner. <br><span class='font-bold'>- Problemlösning:</span> <br>- Övervann specifika utmaningar inom iOS-utveckling, vilket säkerställde en robust plattformsoberoende funktionalitet. <br>- Anpassade utvecklingsstrategier för att bibehålla sömlös prestanda och användbarhet.<br><br><span class='font-bold'> Använda Teknologier:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Versionshantering:</span> Git <br><span class='font-bold'>- Terminal:</span> Kommandoradsgränssnitt (CLI) <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code <br><span class='font-bold'>- Metodik:</span> Scrum <br> <br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Löste komplexa iOS-plattformsspecifika problem, vilket förbättrade mina problemlösningsfärdigheter och tekniska kunskaper. <br>- Säkerställde appens responsivitet och prestanda över olika enheter och skärmstorlekar. <br><br><span class='font-bold'>Resultat:</span> <br>- Levererade ett värdefullt verktyg som hjälper elever att effektivt navigera sina utbildningsval.<br>- Fick omfattande erfarenhet av mobilutveckling och plattformsoberoende integration.",
+        "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "App Store",
+            "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
+            "icon": "logos:apple-app-store"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React Native",
+            "icon": "devicon:reactnative-wordmark"
+          },
+          {
+            "name": "Firebase",
+            "icon": "devicon:firebase"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Sql Lite",
+            "icon": "vscode-icons:file-type-sql"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-deploy.jpg",
+            "alt": "Prodigies deploya app",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prdogies-main.jpg",
+            "alt": "Prodigies main",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/searchCityScreen_figma.jpg",
+            "alt": "Prodigies sök funktion figma",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodiges-filtering-search.jpg",
+            "alt": "Prodigies filtera & sök",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-högskole.jpg",
+            "alt": "Prodigies högskole sida",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-filtering.jpg",
+            "alt": "Prodigies filtering",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Examensarbete",
+        "title": "Kaffe Bönans Skafferi",
+        "urlTitle": "coffee-shop",
+        "applicationType": "Webb",
+        "applicationTypeDetail": {
+          "text": "FULLSTACK",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBBAPPLIKATION"
+        },
+        "subTitle": "Fullstack",
+        "titleDescription": "En kaffeshop för kaffeälskare",
+        "projectDuration": "December 2023 – Januari 2024",
+        "description": "Påbörjade en resa in i full-stack-utveckling genom att skapa en e-handelsplattform skräddarsydd för kaffeentusiaster som en del av mitt examensarbete. Började med noggrann planering, kuraterade jag en teknikstack som var i linje med de tänkta funktionaliteterna, med hjälp av SQL för användar-, kundvagns- och produktrelationer. Genom att använda både lo-fi och hi-fi prototyper i Figma, finslipade jag appens estetik, från färgscheman till typsnittsval. <br><br><span class='font-bold'>Huvudsakliga Bidrag:</span> <br><span class='font-bold'>- Frontend Utveckling:</span><br>- Använde React och TypeScript för att orkestrera en sömlös användarupplevelse. <br>- Förbättrade estetiken genom noggranna designval med hjälp av Figma-prototyper.<br><span class='font-bold'>- Backend Utveckling:</span><br>- Använde ASP.NET Core för att integrera backend- och frontend-element sömlöst.<br>- Implementerade robust backend-autentisering med hjälp av ASP.NET Core Authentication-biblioteket. <br> <br><span class='font-bold'>Använda Teknologier:</span> <br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core, SQL Server <br><span class='font-bold'>- Databas:</span> SQLite <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code <br><span class='font-bold'>- Versionshantering:</span> Git <br><span class='font-bold'>- Distribution:</span> Docker (Planerad integration för strömlinjeformad distribution) <br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Överkom utmaningar i implementeringen av backend-autentisering, vilket berikade min förståelse för backendens komplexitet. <br>- Planerad integration av PostgreSQL för förbättrad databashantering och Docker för strömlinjeformad distribution på en Azure-baserad server. <br><br><span class='font-bold'>Resultat:</span> Navigerade framgångsrikt resan från koncept till förverkligande inom satta tidsfrister, vilket berikade mina färdigheter och förståelse för fullstack-utveckling. Framåtblickande siktar jag på att integrera PostgreSQL för förbättrad databashantering och Docker för strömlinjeformad distribution på en Azure-baserad server.",
+        "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg",
+        "linkTitle": "Länkar",
+        "ctaButton": "Visa Detaljer",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/theCoffeeShop_exam",
+            "icon": "line-md:github-twotone"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "C-sharp",
+            "icon": "logos:c-sharp"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          },
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": ".NET",
+            "icon": "logos:dotnet"
+          },
+          {
+            "name": "SQL Server (SMMS)",
+            "icon": "devicon:microsoftsqlserver"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-loggedin-user.jpg",
+            "alt": "Kaffebönan inloggad användare",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-basket.jpg",
+            "alt": "Kaffebönan varukorg",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-login.jpg",
+            "alt": "Kaffebönan logga in",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-mobile.jpg",
+            "alt": "Kaffebönan mobil kort",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-register2.jpg",
+            "alt": "Kaffebönan registrering",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-order.jpg",
+            "alt": "Kaffebönan order",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
   },
-  "goBack": "Tillbaka"
+
+  "graphicPortfolioSection": [
+    {
+      "projectType": "Grafisk Design",
+      "title": "Skjortkravallerna",
+      "urlTitle": "skjortkravallerna",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
+      "subTitle": "Projekt för Alla Tiders Teater",
+      "titleDescription": "Grafiskt material skapat för Alla Tiders Teater ",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Alla Tiders Teater 'Skjortkravallerna'.' Projektet inkluderade affischer, flyers och programhäften.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><span class='font-bold'>- Kundsamarbete:</span> Arbetade nära kunden för att säkerställa att designen överensstämde med deras vision.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><span class='font-bold'>- Designprocess:</span> Brainstorming, skissning och digitala mockups.<br><br><span class='font-bold'>Resultat:</span><br>- Ökad evenemangsdeltagande med 30% jämfört med föregående år.<br>- Fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+      "ctaButton": "Visa Detaljer",
+      "ctaLink": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+      "links": [
+        {
+          "type": "Client Website",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+          "alt": "Skjortkravallerna Affisch",
+          "span": "wide"
+        }
+      ],
+      "category": "Affischer & Flyers",
+      "year": "'24",
+      "yearText": "ÅR",
+      "client": "Alla Tiders Teater",
+      "goal": "Att skapa en visuellt slående affisch som fångar essensen av teaterproduktionen och attraherar en bred publik.",
+      "role": "Grafisk Designer – Ansvarig för konceptskapande, layoutdesign och slutgiltigt konstverk.",
+      "challenges": "Kunden önskade en design som var både modern och traditionell, vilket krävde en balans mellan kontrasterande stilar.",
+      "results": "Affischdesignen ökade evenemangsdeltagandet med 30% jämfört med föregående år.",
+      "testimonial": "Designen överträffade våra förväntningar och fångade perfekt evenemangets anda. – Kund, Alla Tiders Teater",
+      "process": "Började med brainstorming och skissning av koncept, följt av att skapa digitala mockups i Illustrator. Slutförde designen efter kundens feedback.",
+      "tags": ["Teater", "Affischer", "Flyers", "Illustrator", "Photoshop"],
+      "relatedProjects": ["en-kvall-for-fred", "skjortkravallerna"],
+      "media": []
+    },
+    {
+      "projectType": "Grafisk Design",
+      "urlTitle": "fred-for-kvall",
+      "title": "Fred för Kväll",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
+      "subTitle": "Projekt för Alla Tiders Teater",
+      "titleDescription": "Grafiskt material skapat för Alla Tiders Teaters evenemang 'Fred för Kväll.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Alla Tiders Teaters evenemang 'Fred för Kväll.' Projektet inkluderade affischer, flyers och marknadsföringsmaterial.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både kunden och publiken.",
+      "linkTitle": "Länkar",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
+      "ctaButton": "Visa Detaljer",
+      "ctaLinks": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+      "links": [
+        {
+          "type": "Client Website",
+          "url": "https://www.stumpenensemblen.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
+          "alt": "Fred för Kväll Affisch",
+          "span": "wide"
+        }
+      ],
+      "category": "Affischer & Flyers",
+      "year": "'24",
+      "yearText": "ÅR",
+      "client": "Alla Tiders Teater",
+      "goal": "Att skapa en design som fångar evenemangets tema och attraherar en bred publik.",
+      "role": "Grafisk Designer – Ansvarig för konceptskapande och layout.",
+      "challenges": "Att skapa en design som överensstämde med Alla Tiders Teaters varumärke och evenemangets tema.",
+      "results": "Designen fick positiv feedback från både kunden och publiken.",
+      "testimonial": "Designen var fantastisk och hjälpte oss att nå en bredare publik. – Kund, Alla Tiders Teater",
+      "process": "Började med att analysera evenemangets tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
+      "tags": ["Teater", "Affischer", "Flyers", "Photoshop", "Illustrator"],
+      "relatedProjects": ["skjortkravallerna", "haxan", "label-haxan"],
+      "ctaLink": "https://example.com/project-details",
+      "media": []
+    },
+
+    {
+      "urlTitle": "tyckte-jag-horde-hundar",
+      "projectType": "Grafisk Design",
+      "title": "Tyckte Jag Hör Hundar",
+      "applicationType": "grafisk",
+      "applicationTypeDetail": {
+        "text": "GRAFISK DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "AFFISCHER & FLYERS"
+      },
+      "subTitle": "Projekt för Stumpenensemblen",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Tyckte Jag Hör Hundar.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "linkTitle": "Länkar",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+      "ctaButton": "Visa detaljer",
+      "ctaLink": [
+        {
+          "type": "Kundens Webbplats",
+          "url": "www.stumpenensemblen.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Teknik",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+          "alt": "Tyckte Jag Hör Hundar Affisch",
+          "span": "wide"
+        }
+      ],
+      "category": "Grafisk Design",
+      "year": "'24",
+      "yearText": "ÅR",
+      "client": "Stumpenensemblen",
+      "goal": "Att skapa en design som fångar produktionens tema och lockar en bred publik.",
+      "role": "Grafisk designer – Ansvarig för konceptskapande och layout.",
+      "challenges": "Att skapa en design som både var i linje med Stumpenensemblens varumärke och produktionens tema.",
+      "results": "Designen fick positiv feedback från både klienten och publiken.",
+      "testimonial": "Designen var fantastisk och hjälpte oss att nå ut till en bredare publik. – Kund, Stumpenensemblen",
+      "process": "Började med att analysera produktionens tema och skapa skisser. Slutförde designen i Photoshop och Illustrator.",
+      "tags": ["Teater", "Grafisk Design", "Illustrator", "Photoshop"],
+      "relatedProjects": ["hemmet", "genomskinliga-hjartan"],
+      "media": []
+    }
+  ]
 }
-  

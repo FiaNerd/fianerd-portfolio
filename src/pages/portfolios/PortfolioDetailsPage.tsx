@@ -34,6 +34,7 @@ const PortfolioDetailsPage = () => {
       ...(portfolioData.frontendPortfolioSection?.frontendItems || []),
       ...(portfolioData.backendPortfolioSection?.backendItems || []),
       ...(portfolioData.fullstackPortfolioSection?.fullstackItems || []),
+      ...(portfolioData.graphicPortfolioSection || []),
     ];
 
     const filteredItems = sections.filter(
