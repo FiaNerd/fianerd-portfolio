@@ -20,39 +20,44 @@ interface Technology {
   icon: string;
 }
 
-interface GraphicDetails {
-  title: string;
-  image: string;
-  alt: string;
-  images: { src: string }[];
-  subTitle: string;
-  client: string;
-  yearText: string;
-  year: string;
-  tech: Technology[];
-  goals: string;
-  role: string;
-  challenges: string;
-  results: string;
-  testimonial: string;
-  tags: string[];
-  relatedProjects: string[];
-  demands: string;
-  ctaLink: string;
-  ctaButton: string;
-}
-
-interface SidebarGraphicPortfolioProps {
+interface ISidebarGraphicPortfolioProps {
   isVisible: boolean;
   onClose: () => void;
-  graphicDetails: GraphicDetails;
+  sidebarWidth?: number;
+  setSidebarWidth?: React.Dispatch<React.SetStateAction<number>>;
+  graphicDetails?: {
+    urlTitle: string;
+    title: string;
+    subTitle: string;
+    image: string;
+    images: { src: string; alt: string; span?: string }[];
+    category: string;
+    year: string;
+    yearText: string;
+    clientTitle?: string;
+    client: string;
+    tecthTitle?: string;
+    tech: { name: string; icon: string }[];
+    description: string;
+    goals: string;
+    role: string;
+    challenges: string;
+    results: string;
+    testimonial: string;
+    tags: string[];
+    relatedProjects: string[];
+    ctaLink: string;
+    demands: string;
+    alt: string;
+    ctaButton: string;
+  };
 }
 
-const SidebarGraphicPortfolio: React.FC<SidebarGraphicPortfolioProps> = ({
+const SidebarGraphicPortfolio = ({
   isVisible,
   onClose,
   graphicDetails,
-}) => {
+}: ISidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection', 'common']);
   const [openLightbox, setOpenLightbox] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,10 +83,34 @@ const SidebarGraphicPortfolio: React.FC<SidebarGraphicPortfolioProps> = ({
     return null;
   }
 
+  const graphicItemsPortfolio = [
+    {
+      clientTitle: graphicDetails?.clientTitle,
+      client: graphicDetails?.client,
+      subTitle: graphicDetails?.subTitle,
+      techTitle: graphicDetails?.tecthTitle,
+      tech:
+        graphicDetails?.tech?.map((technology) => ({
+          name: technology.name,
+          icon: technology.icon,
+        })) || [],
+      goals: graphicDetails?.goals,
+      role: graphicDetails?.role,
+      challenges: graphicDetails?.challenges,
+      results: graphicDetails?.results,
+      testimonial: graphicDetails?.testimonial,
+      tags: graphicDetails?.tags,
+      relatedProjects: graphicDetails?.relatedProjects,
+      demands: graphicDetails?.demands,
+      ctaLink: graphicDetails?.ctaLink,
+      ctaButton: graphicDetails?.ctaButton,
+    },
+  ];
+
+  // Fetch titles dynamically
   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
     clientTitle?: string;
   };
-
   return (
     <>
       <div className="fixed inset-0 z-50 flex">
@@ -90,11 +119,12 @@ const SidebarGraphicPortfolio: React.FC<SidebarGraphicPortfolioProps> = ({
           ref={sidebarRef}
           className="relative bg-bg-primary flex flex-col gap-2 h-full z-40 overflow-y-auto ml-auto max-w-[700px] w-full"
         >
+          {/* HeroDetails Component */}
           <div className="w-full">
             <HeroDetails
-              title={graphicDetails.title}
-              image={graphicDetails.image}
-              subTitle={graphicDetails.subTitle}
+              title={graphicDetails?.title || ''}
+              image={graphicDetails?.image || ''}
+              subTitle={graphicDetails?.subTitle || ''}
               light="text-[#8d4970]"
               dark="dark:text-[#55ae63]"
             />
@@ -112,16 +142,16 @@ const SidebarGraphicPortfolio: React.FC<SidebarGraphicPortfolioProps> = ({
             </div>
 
             <ContentTitleDetails
-              title={graphicDetails.title}
-              yearText={graphicDetails.yearText}
-              year={graphicDetails.year}
-              clientTitle={titles.clientTitle}
-              client={graphicDetails.client}
-              subTitle={graphicDetails.subTitle}
+              title={graphicDetails?.title || ''}
+              yearText={graphicDetails?.yearText || 'N/A'}
+              year={graphicDetails?.year || ''}
+              clientTitle={titles?.clientTitle || ''}
+              client={graphicDetails?.client || ''}
+              subTitle={graphicDetails?.subTitle || ''}
             />
 
             <ContentDetails
-              content={graphicDetails.testimonial}
+              content={graphicDetails.description}
               suffix={''}
               http={''}
               icon={{
@@ -144,7 +174,7 @@ const SidebarGraphicPortfolio: React.FC<SidebarGraphicPortfolioProps> = ({
             </div>
 
             <GraphicPortfolioContentAbout
-              graphicItemsPortfolio={[graphicDetails]}
+              graphicItemsPortfolio={graphicItemsPortfolio}
             />
           </div>
         </aside>

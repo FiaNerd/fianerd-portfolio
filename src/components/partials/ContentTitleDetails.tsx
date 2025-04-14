@@ -51,7 +51,7 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
             </div>
           )}
 
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-4">
             {/* Title */}
             <h2 className="text-[#3C2F2F] mb-0 font-bold ">{title}</h2>
             <div className="flex flex-rows gap-4">
