@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
@@ -98,7 +98,7 @@ const PortfolioDetailsPage = () => {
   }
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div
         className="mb-8"
         style={{
@@ -148,7 +148,7 @@ const PortfolioDetailsPage = () => {
             />
           </div>
         ))}
-    </>
+    </Suspense>
   );
 };
 
