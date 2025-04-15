@@ -68,40 +68,41 @@ const WebPortfolioDetailsPage = () => {
 
   const handleNavigateBack = () => {
     if (window.history.length > 1) {
-      navigate(-1);
+      navigate && navigate(-1);
     } else {
       navigate('/');
     }
   };
 
   return (
-    <>
-      <div
-        className="mb-8"
-        style={{
-          marginTop: `${headerHeight}px`,
-          transition: 'top 0.3s ease',
-        }}
-      >
+    <div
+      style={{
+        paddingTop: `${headerHeight}px`,
+        transition: 'padding-top 0.3s ease',
+      }}
+      className="bg-blend-multiply mb-8"
+    >
+      <div className="mb-8">
         {portfolioItems.map((item) => (
           <HeroDetails
             key={item.urlTitle}
             title={item.title}
+            subTitle={item.subTitle || ''}
             image={item.image}
-            subTitle={item.titleDescription}
+            titleDescription={item.titleDescription}
             light="text-[#4b8668]"
             dark="dark:text-[#86834b]"
           />
         ))}
       </div>
 
-      <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
+      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
           onClick={handleNavigateBack}
-          className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
+          className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('goBack').toUpperCase()}
+          {t('common:goBack').toUpperCase()}
         </button>
       </div>
 
@@ -110,7 +111,7 @@ const WebPortfolioDetailsPage = () => {
           <div
             id="portfolio-details"
             key={item.urlTitle}
-            className="py-12 max-w-screen-xl mx-auto px-4"
+            className="py-12 max-w-screen-2xl mx-auto px-4"
           >
             <PortfolioDetailsItems
               title={item.title}
@@ -121,11 +122,11 @@ const WebPortfolioDetailsPage = () => {
               tech={item.tech}
               applicationTypeDetail={item.applicationTypeDetail}
               linkTitle={item.linkTitle}
-              links={item.ctaLink}
+              links={item.links}
             />
           </div>
         ))}
-    </>
+    </div>
   );
 };
 
