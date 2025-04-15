@@ -1,5 +1,5 @@
 import { ErrorBoundary } from 'react-error-boundary';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import SocialMediaAndContact from './components/SocialMediaAndContact';
@@ -38,6 +38,7 @@ const App = () => {
             <Routes>
               {/* Home Route */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<Navigate to="/" />} />
               <Route path="/profile" element={<HomePage />} />
               <Route path="/profile/who-am-i" element={<HomePage />} />
               <Route path="/profile/web-skills" element={<HomePage />} />

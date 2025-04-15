@@ -9,6 +9,8 @@ export interface Route {
   dropdown?: Route[];
   icon?: IconDefinition;
   description?: string;
+  sectionId?: string;
+  isActive?: boolean;
 }
 
 export const navRoutes: Route[] = [
@@ -16,6 +18,8 @@ export const navRoutes: Route[] = [
     title: 'home',
     url: '/',
     nav: HomePage,
+    sectionId: 'home',
+    isActive: true,
   },
   {
     title: 'profile',

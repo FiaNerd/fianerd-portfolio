@@ -48,7 +48,7 @@ const SidebarGraphicPortfolio = ({
   onClose,
   graphicDetails,
 }: ISidebarGraphicPortfolioProps) => {
-  const { t } = useTranslation(['portfolio/graphicPortfolioSection']);
+  const { t } = useTranslation(['portfolio/graphicPortfolioSection', 'common']);
   const lightGallery = useRef<any>(null);
 
   const openLightbox = (index: number) => {
@@ -86,8 +86,8 @@ const SidebarGraphicPortfolio = ({
     },
   ];
 
-   // Fetch titles dynamically
-   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
+  // Fetch titles dynamically
+  const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
     clientTitle?: string;
   };
 
@@ -121,7 +121,7 @@ const SidebarGraphicPortfolio = ({
                 className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
               >
                 <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-                {t('partialTranslation:goBack')}
+                {t('common:goBack')}
               </button>
             </div>
 

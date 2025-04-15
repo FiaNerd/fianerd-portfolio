@@ -33,8 +33,8 @@ const BlogDetailsPage = () => {
     console.error('Blog post not found:', urlTitle);
     return <div>{t('noBlogPost', 'Blog post not found.')}</div>;
   }
-  const handleNavigationBack = () => {
-    navigate(-1);
+  const handleNavigateBack = () => {
+    navigate && navigate(-1);
   };
 
   if (!ready) {
@@ -62,11 +62,11 @@ const BlogDetailsPage = () => {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col items-start lg:flex-row mb-8">
           <button
-            onClick={handleNavigationBack}
+            onClick={handleNavigateBack}
             className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
           >
             <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-            {t('common:goBack')}
+            {t('common:goBack').toUpperCase()}
           </button>
         </div>
 

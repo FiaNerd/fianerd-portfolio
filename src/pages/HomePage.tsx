@@ -49,10 +49,6 @@ const HomePage = () => {
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
 
-  // const handleNavigation = () => {
-  //   isNavigating.current = true;
-  // };
-
   return (
     <div
       className="bg-blend-multiply"
