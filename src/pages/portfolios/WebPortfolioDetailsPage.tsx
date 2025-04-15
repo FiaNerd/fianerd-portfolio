@@ -1,16 +1,8 @@
-import { Icon } from '@iconify/react';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router-dom';
-import HeroDetails from '../../components/partials/HeroDetails';
-import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
-import useHeaderHeight from '../../hook/useHeaderHeight';
-
 const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
 
-  const { i18n, t } = useTranslation([
+  const { i18n, t, ready } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
     'portfolio/frontendPortfolioSection',
@@ -19,58 +11,67 @@ const WebPortfolioDetailsPage = () => {
     'portfolio/graphicPortfolioSection',
     'common',
   ]);
-  
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const { headerHeight } = useHeaderHeight();
 
   useEffect(() => {
     const loadPortfolioData = async () => {
-      const portfolioData = await Promise.all([
-        i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
-        i18n.getResourceBundle(i18n.language, 'portfolio/top5PortfolioSection'),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/frontendPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/backendPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/fullstackPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/graphicPortfolioSection'
-        ),
-      ]);
+      if (!ready) return;
 
-      const sections = [
-        ...(portfolioData[1]?.top5Items || []),
-        ...(portfolioData[2]?.frontendItems || []),
-        ...(portfolioData[3]?.backendItems || []),
-        ...(portfolioData[4]?.fullstackItems || []),
-        ...(portfolioData[5]?.graphicItemsPortfolio || []),
-      ];
+      try {
+        const portfolioData = await Promise.all([
+          i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
+          i18n.getResourceBundle(i18n.language, 'portfolio/top5PortfolioSection'),
+          i18n.getResourceBundle(i18n.language, 'portfolio/frontendPortfolioSection'),
+          i18n.getResourceBundle(i18n.language, 'portfolio/backendPortfolioSection'),
+          i18n.getResourceBundle(i18n.language, 'portfolio/fullstackPortfolioSection'),
+          i18n.getResourceBundle(i18n.language, 'portfolio/graphicPortfolioSection'),
+        ]);
 
-      const filteredItems = sections.filter(
-        (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
-      );
+        console.log('portfolioData:', portfolioData);
 
-      const uniqueItems = Array.from(
-        new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
-      );
+        if (!portfolioData || portfolioData.length === 0) {
+          console.error('Portfolio data is missing or empty.');
+          return;
+        }
 
-      setPortfolioItems(uniqueItems);
+        const sections = [
+          ...(portfolioData[1]?.top5Items || []),
+          ...(portfolioData[2]?.frontendItems || []),
+          ...(portfolioData[3]?.backendItems || []),
+          ...(portfolioData[4]?.fullstackItems || []),
+          ...(portfolioData[5]?.graphicItemsPortfolio || []),
+        ];
+
+        if (sections.length === 0) {
+          console.error('No sections found in portfolio data.');
+          return;
+        }
+
+        const filteredItems = sections.filter(
+          (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
+        );
+
+        const uniqueItems = Array.from(
+          new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
+        );
+
+        setPortfolioItems(uniqueItems);
+      } catch (error) {
+        console.error('Error loading portfolio data:', error);
+      }
     };
 
     loadPortfolioData();
-  }, [urlTitle, i18n.language]);
+  }, [urlTitle, i18n.language, ready]);
+
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
 
   if (portfolioItems.length === 0) {
-    return <div>Loading...</div>;
+    return <div>{t('common:loadingPortfolio', 'Loading portfolio...')}</div>;
   }
 
   const handleNavigationback = () => {
