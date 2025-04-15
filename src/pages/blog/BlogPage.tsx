@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import useHeaderHeight from '../../hook/useHeaderHeight';
-import useSmoothScroll from '../../hook/useSmoothScroll';
 import Title from '../../components/partials/Title';
 import BlogCards from '../../components/blog/BlogCards';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';

@@ -9,7 +9,7 @@ import useHeaderHeight from '../../hook/useHeaderHeight';
 const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-  // const [headerHeight, setHeaderHeight] = useState(0);
+
   const { i18n, t } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
@@ -17,8 +17,9 @@ const WebPortfolioDetailsPage = () => {
     'portfolio/backendPortfolioSection',
     'portfolio/fullstackPortfolioSection',
     'portfolio/graphicPortfolioSection',
-    'partialTranslation',
+    'common',
   ]);
+  
   const navigate = useNavigate();
 
   const { headerHeight } = useHeaderHeight();
@@ -51,7 +52,7 @@ const WebPortfolioDetailsPage = () => {
         ...(portfolioData[2]?.frontendItems || []),
         ...(portfolioData[3]?.backendItems || []),
         ...(portfolioData[4]?.fullstackItems || []),
-        ...(portfolioData[5]?.graphicItemsPortfolio || []), 
+        ...(portfolioData[5]?.graphicItemsPortfolio || []),
       ];
 
       const filteredItems = sections.filter(
@@ -71,6 +72,10 @@ const WebPortfolioDetailsPage = () => {
   if (portfolioItems.length === 0) {
     return <div>Loading...</div>;
   }
+
+  const handleNavigationback = () => {
+    navigate(-1);
+  };
 
   return (
     <>
@@ -95,11 +100,11 @@ const WebPortfolioDetailsPage = () => {
 
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
-          onClick={() => navigate(-1)}
+          onClick={handleNavigationback}
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('partialTranslation:goBack')}
+          {t('common:goBack')}
         </button>
       </div>
 

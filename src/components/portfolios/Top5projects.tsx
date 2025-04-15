@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
+import { startTransition } from 'react';
 
 const Top5Projects = () => {
   const { t } = useTranslation('portfolio/top5PortfolioSection');
@@ -19,7 +20,9 @@ const Top5Projects = () => {
   }[];
 
   const navigateToDetails = (urlTitle: string) => {
-    navigate(`/portfolio/${urlTitle}`);
+    startTransition(() => {
+      navigate(`/portfolio/${urlTitle}`);
+    });
   };
 
   return (

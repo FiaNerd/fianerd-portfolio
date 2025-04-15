@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import useSmoothScroll from '../../hook/useSmoothScroll';
+
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import { IBlogDetails } from '../../interfaces/BlogInterface';
 import { Icon } from '@iconify/react';
@@ -10,14 +10,12 @@ import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
 
 const BlogDetailsPage = () => {
-  const { t } = useTranslation([
-    'blogPost',
-    'blogPostCards',
-    'partialTranslation',
-  ]);
+  const { t } = useTranslation(['blogPost', 'blogPostCards', 'common']);
   const { headerHeight } = useHeaderHeight();
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
+
+  console.log('urlTitle:', urlTitle);
 
   const blogDetails: IBlogDetails[] = t('blogPostCards', {
     returnObjects: true,
@@ -25,9 +23,15 @@ const BlogDetailsPage = () => {
 
   const blog = blogDetails.find((blog) => blog.urlTitle === urlTitle);
 
+  console.log('blog', blog);
+
   if (!blog) {
     return <div>{t('noBlogPost')}</div>;
   }
+
+  const handleNavigationBack = () => {
+    navigate(-1);
+  };
 
   return (
     <div
@@ -50,11 +54,11 @@ const BlogDetailsPage = () => {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col items-start lg:flex-row mb-8">
           <button
-            onClick={() => navigate(-1)}
+            onClick={handleNavigationBack}
             className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
           >
             <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-            {t('partialTranslation:goBack')}
+            {t('common:goBack')}
           </button>
         </div>
 
@@ -78,6 +82,7 @@ const BlogDetailsPage = () => {
                 day={blog.day}
                 subTitle={blog.titleDescription}
               />
+
               <ContentDetails
                 content={blog.content || ''}
                 suffix={blog.suffix || ''}
