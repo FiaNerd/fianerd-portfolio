@@ -28,27 +28,27 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'me',
-        url: '/profile/who-am-i#who-am-i',
+        url: '/profile/#who-am-i',
         description: 'meDescription',
       },
       {
         title: 'skillsWeb',
-        url: '/profile/web-skills#web-skills',
+        url: '/profile/#web-skills',
         description: 'skillsWebDescription',
       },
       {
         title: 'skillsGraphic',
-        url: '/profile/graphic-skills#graphic-skills',
+        url: '/profile/#graphic-skills',
         description: 'skillsGraphicDescription',
       },
       {
         title: 'otherSkills',
-        url: '/profile/additional-skills#additional-skills',
+        url: '/profile/#additional-skills',
         description: 'otherSkillsDescription',
       },
       {
         title: 'programsAndSoftwares',
-        url: '/profile/programs-and-softwares#programs-and-softwares',
+        url: '/profile/#programs-and-softwares',
         description: 'programsAndSoftwaresDescription',
       },
       {
@@ -58,12 +58,12 @@ export const navRoutes: Route[] = [
       },
       {
         title: 'education',
-        url: '/profile/education#education',
+        url: '/profile/#education',
         description: 'educationDescription',
       },
       {
         title: 'hobbies',
-        url: '/profile/hobbies#hobbies',
+        url: '/profile/#hobbies',
         description: 'hobbiesDescription',
       },
     ],
@@ -75,27 +75,27 @@ export const navRoutes: Route[] = [
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/portfolio/top-5-projects#top-5-projects',
+        url: '/portfolio/s#top-5-projects',
         description: 'top5best-projectsDescription',
       },
       {
         title: 'frontend',
-        url: '/portfolio/frontend#frontend',
+        url: '/portfolio/#frontend',
         description: 'frontendDescription',
       },
       {
         title: 'backend',
-        url: '/portfolio/backend#backend',
+        url: '/portfolio/#backend',
         description: 'backendDescription',
       },
       {
         title: 'fullstack',
-        url: '/portfolio/fullstack#fullstack',
+        url: '/portfolio/#fullstack',
         description: 'fullstackDescription',
       },
       {
         title: 'graphic-design',
-        url: '/portfolio/graphic-design#graphic-design',
+        url: '/portfolio/#graphic-design',
         description: 'graphicDescription',
       },
     ],
