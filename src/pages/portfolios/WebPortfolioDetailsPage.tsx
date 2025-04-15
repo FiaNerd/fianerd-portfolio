@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, startTransition } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
@@ -67,9 +67,9 @@ const WebPortfolioDetailsPage = () => {
     loadPortfolioData();
   }, [urlTitle]);
 
-  const navigateToDetails = (urlTitle: string, projectType: string) => {
-    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
-      state: { fromSection: projectType.toLowerCase() }, // Pass the section name dynamically
+  const navigateToDetails = () => {
+    startTransition(() => {
+      navigate('/portfolio');
     });
   };
 
@@ -97,7 +97,7 @@ const WebPortfolioDetailsPage = () => {
 
       <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
-          onClick={() => navigate('/portfolio', { replace: true })}
+          onClick={() => navigateToDetails()}
           className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />

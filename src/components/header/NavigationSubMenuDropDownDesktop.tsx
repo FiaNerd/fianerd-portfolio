@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
-import { useEffect, startTransition } from 'react';
+import { startTransition } from 'react';
+
 interface IProps {
   navigationMenu: string;
   onMouseEnter: () => void;
@@ -18,37 +19,29 @@ const NavigationSubMenuDropDownDesktop = ({
   const { t } = useTranslation('translation');
   const navigate = useNavigate();
 
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
-    e.preventDefault(); // Prevent default link behavior
+  const handleMenuClick = (
+    e: React.MouseEvent,
+    url: string,
+    sectionId?: string
+  ) => {
+    e.preventDefault();
 
-    const [path, sectionId] = url.split('#'); // Split the URL to check for a section ID
+    // Navigate to the base route if not already there
+    if (location.pathname !== url) {
+      navigate(url);
+    }
 
-    startTransition(() => {
-      if (sectionId) {
-        if (location.pathname === path) {
-          // Scroll to the section if it's on the same page
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            console.error(`Element with id "${sectionId}" not found.`);
-          }
+    // Scroll to the section after navigation
+    if (sectionId) {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
         } else {
-          // Navigate to the path and scroll after navigation
-          navigate(path, { replace: true });
-          setTimeout(() => {
-            const element = document.getElementById(sectionId);
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            } else {
-              console.error(`Element with id "${sectionId}" not found.`);
-            }
-          }, 300); // Delay to ensure the DOM is rendered
+          console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      } else {
-        navigate(path); // Navigate to the path without a section ID
-      }
-    });
+      }, 0); // Delay to ensure the page has loaded
+    }
 
     closeMenuOnClick();
   };
@@ -106,14 +99,18 @@ const NavigationSubMenuDropDownDesktop = ({
               <NavLink
                 to={subMenu.url}
                 className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
-                onClick={(e) => handleMenuClick(e, subMenu.url)}
+                onClick={(e) =>
+                  handleMenuClick(e, subMenu.url, subMenu.sectionId)
+                } // Pass sectionId here
               >
                 <span dangerouslySetInnerHTML={{ __html: t(subMenu.title) }} />
               </NavLink>
               {subMenu.description && (
                 <span
                   className="block text-xs text-text-primary font-light leading-6 opacity-70"
-                  dangerouslySetInnerHTML={{ __html: t(subMenu.description) }}
+                  dangerouslySetInnerHTML={{
+                    __html: t(subMenu.description),
+                  }}
                 />
               )}
             </div>

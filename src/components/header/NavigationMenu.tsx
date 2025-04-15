@@ -6,7 +6,14 @@ import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
 
 const NavigationMenu = () => {
-  const { t } = useTranslation('translation');
+  const { i18n, t } = useTranslation();
+
+  useEffect(() => {
+    if (!i18n.hasResourceBundle('translation', i18n.language)) {
+      i18n.loadNamespaces('translation');
+    }
+  }, [i18n]);
+
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [navigationMenu, setNavigationMenu] = useState('');
   const navigate = useNavigate();
@@ -51,35 +58,34 @@ const NavigationMenu = () => {
     setNavigationMenuOpen(false);
     setNavigationMenu('');
   };
-
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+  const handleMenuClick = (
+    e: React.MouseEvent,
+    url: string,
+    sectionId?: string
+  ) => {
     e.preventDefault();
+    // Navigate to the base route if not already there
+    if (location.pathname !== url) {
+      navigate(url);
+    }
 
-    const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
-
-    startTransition(() => {
-      if (sectionId) {
-        if (location.pathname === path) {
-          // If already on the correct path, scroll to the section
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
+    // Scroll to the section after navigation
+    if (sectionId) {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
         } else {
-          // Navigate to the path and include the hash fragment
-          navigate(`${path}#${sectionId}`, { replace: true });
+          console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      } else {
-        // Navigate to the path without a hash fragment
-        navigate(path, { replace: true });
-      }
-    });
+      }, 0); // Delay to ensure the page has loaded
+    }
 
     closeMenuOnClick();
   };
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className="relative z-10">
         <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-4 lg:gap-1 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
@@ -94,11 +100,19 @@ const NavigationMenu = () => {
                   }`
                 }
                 onMouseEnter={() => {
-                  setNavigationMenuOpen(true);
-                  setNavigationMenu(menu.title);
+                  startTransition(() => {
+                    setNavigationMenuOpen(true);
+                    setNavigationMenu(menu.title);
+                  });
                 }}
                 onMouseLeave={handleMouseLeave}
-                onClick={(e) => handleMenuClick(e, menu.url)}
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  startTransition(() => {
+                    handleMenuClick(e, menu.url, menu.sectionId);
+                  });
+                }}
               >
                 <span
                   dangerouslySetInnerHTML={{ __html: t(menu.title) }}
@@ -117,17 +131,17 @@ const NavigationMenu = () => {
         </ul>
       </div>
 
-      {navigationMenuOpen && (
-        <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading submenu...</div>}>
+        {navigationMenuOpen && (
           <NavigationSubMenuDropDownDesktop
             navigationMenu={navigationMenu}
             onMouseEnter={clearCloseTimeout}
             onMouseLeave={handleMouseLeave}
             closeMenuOnClick={() => setNavigationMenuOpen(false)}
           />
-        </Suspense>
-      )}
-    </>
+        )}
+      </Suspense>
+    </Suspense>
   );
 };
 

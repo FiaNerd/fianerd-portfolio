@@ -1,16 +1,16 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
-import ErrorFallback from './components/partials/errors/ErrorFallBack';
+
 import SocialMediaAndContact from './components/SocialMediaAndContact';
 import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
-import PortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
-import WebPortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
+import PortfolioDetailsPage from './pages/portfolios/WebPortfolioDetailsPage';
+import ErrorFallback from './components/partials/errors/ErrorFallBack';
 
 const App = () => {
   return (
@@ -24,20 +24,23 @@ const App = () => {
         {/* Main Content */}
         <main className="flex-grow ">
           <ErrorBoundary
-            fallbackRender={({ error, resetErrorBoundary }) => (
-              <ErrorFallback
-                error={error}
-                resetErrorBoundary={resetErrorBoundary}
-              />
-            )}
+            fallbackRender={({ error, resetErrorBoundary }) => {
+              console.error('Error caught by ErrorBoundary:', error);
+              return (
+                <ErrorFallback
+                  error={error}
+                  resetErrorBoundary={resetErrorBoundary}
+                />
+              );
+            }}
             onReset={() => {
-              // Reset the state of your app so the error doesn't happen again
-              window.location.reload();
+              console.log('ErrorBoundary reset');
             }}
           >
             <Routes>
               {/* Home Route */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/profile/home" element={<Navigate to="/" />} />
               <Route path="/profile" element={<HomePage />} />
               <Route path="/profile/who-am-i" element={<HomePage />} />
               <Route path="/profile/web-skills" element={<HomePage />} />
@@ -51,8 +54,11 @@ const App = () => {
               <Route path="/profile/education" element={<HomePage />} />
               <Route path="/profile/hobbies" element={<HomePage />} />
 
-              {/* Portfolio Routes */}
               <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio/my-work"
+                element={<Navigate to="/portfolio" />}
+              />
               <Route
                 path="/portfolio/top-5-projects"
                 element={<PortfolioPage />}
@@ -66,7 +72,7 @@ const App = () => {
               />
               <Route
                 path="/portfolio/:urlTitle"
-                element={<WebPortfolioDetailsPage />}
+                element={<PortfolioDetailsPage />}
               />
 
               {/* Blog Routes */}

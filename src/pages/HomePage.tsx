@@ -8,7 +8,7 @@ import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdateURL';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../utils/handleHashNavigation';
 
 const HomePage = () => {
@@ -18,9 +18,10 @@ const HomePage = () => {
     'profile/education',
     'profile/hobbies',
   ]);
+  const [isNavigating, setIsNavigating] = useState(false);
+  const isNavigatingRef = useRef(isNavigating);
 
   const { headerHeight } = useHeaderHeight();
-  const isNavigating = useRef(false);
 
   const sectionIds = [
     'home',
@@ -38,10 +39,10 @@ const HomePage = () => {
     handleHashNavigation({
       sectionIds,
       headerHeight,
-      isHeaderVisible: true,
-      isNavigating,
+      isHeaderVisible: false,
+      isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-        console.log('Navigation completed!');
+        setIsNavigating(false); 
       },
     });
   }, [headerHeight]);

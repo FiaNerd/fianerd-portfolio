@@ -52,10 +52,10 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           }
         } else {
           // Otherwise, navigate to the path with the section ID (scroll will be handled)
-          navigate(`${path}#${sectionId}`, { replace: true });
+          navigate(`${path}/#${sectionId}`, { replace: true });
         }
       } else {
-        navigate(path); // Navigate to the path without a section ID
+        navigate(path); 
       }
     });
 
