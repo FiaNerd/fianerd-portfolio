@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
-import { useState, useEffect, startTransition } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import HeroDetails from '../../components/partials/HeroDetails';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import useHeaderHeight from '../../hook/useHeaderHeight';
@@ -28,6 +28,7 @@ const WebPortfolioDetailsPage = () => {
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const navigate = useNavigate();
   const { headerHeight } = useHeaderHeight();
+  const location = useLocation();
 
   if (!ready) {
     return <div>Loading translations...</div>;
@@ -66,12 +67,10 @@ const WebPortfolioDetailsPage = () => {
     loadPortfolioData();
   }, [urlTitle]);
 
-  const handleNavigateBack = () => {
-    if (window.history.length > 1) {
-      navigate && navigate(-1);
-    } else {
-      navigate('/');
-    }
+  const navigateToDetails = (urlTitle: string, projectType: string) => {
+    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
+      state: { fromSection: projectType.toLowerCase() }, // Pass the section name dynamically
+    });
   };
 
   return (
@@ -98,7 +97,7 @@ const WebPortfolioDetailsPage = () => {
 
       <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
-          onClick={handleNavigateBack}
+          onClick={() => navigate('/portfolio', { replace: true })}
           className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />

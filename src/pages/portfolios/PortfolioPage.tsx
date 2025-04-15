@@ -12,7 +12,7 @@ import FullStackPortfolio from '../../components/portfolios/FullStackPortfolio';
 import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
 import { useEffect, useRef } from 'react';
@@ -74,6 +74,8 @@ const PortfolioPage = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+
 
   return (
     <div

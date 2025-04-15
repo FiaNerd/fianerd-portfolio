@@ -40,8 +40,10 @@ const PortfolioCard = ({
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   const navigate = useNavigate();
 
-  const navigateToDetails = () => {
-    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
+   const navigateToDetails = () => {
+    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
+      state: { fromSection: projectType.toLowerCase() },
+    });
   };
 
   const truncatedDescription =
