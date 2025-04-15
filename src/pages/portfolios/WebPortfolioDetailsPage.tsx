@@ -1,47 +1,43 @@
+import { Icon } from '@iconify/react';
+import { useState, useEffect, startTransition } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import HeroDetails from '../../components/partials/HeroDetails';
+import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
+import useHeaderHeight from '../../hook/useHeaderHeight';
+import portfolioData from '../../../public/locales/en/portfolio/portfolio.json';
+import top5PortfolioSection from '../../../public/locales/en/portfolio/top5PortfolioSection.json';
+import frontendPortfolioSection from '../../../public/locales/en/portfolio/frontendPortfolioSection.json';
+import backendPortfolioSection from '../../../public/locales/en/portfolio/backendPortfolioSection.json';
+import fullstackPortfolioSection from '../../../public/locales/en/portfolio/fullstackPortfolioSection.json';
+import graphicPortfolioSection from '../../../public/locales/en/portfolio/graphicPortfolioSection.json';
+import { mergeTranslations } from '../../utils/mergeTranslation';
+
+const mergedPortfolioData = mergeTranslations(
+  portfolioData,
+  top5PortfolioSection,
+  frontendPortfolioSection,
+  backendPortfolioSection,
+  fullstackPortfolioSection,
+  graphicPortfolioSection
+);
+
 const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-
-  const { i18n, t, ready } = useTranslation([
-    'portfolio/portfolio',
-    'portfolio/top5PortfolioSection',
-    'portfolio/frontendPortfolioSection',
-    'portfolio/backendPortfolioSection',
-    'portfolio/fullstackPortfolioSection',
-    'portfolio/graphicPortfolioSection',
-    'common',
-  ]);
-
   const navigate = useNavigate();
   const { headerHeight } = useHeaderHeight();
 
   useEffect(() => {
     const loadPortfolioData = async () => {
-      if (!ready) return;
-
       try {
-        const portfolioData = await Promise.all([
-          i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
-          i18n.getResourceBundle(i18n.language, 'portfolio/top5PortfolioSection'),
-          i18n.getResourceBundle(i18n.language, 'portfolio/frontendPortfolioSection'),
-          i18n.getResourceBundle(i18n.language, 'portfolio/backendPortfolioSection'),
-          i18n.getResourceBundle(i18n.language, 'portfolio/fullstackPortfolioSection'),
-          i18n.getResourceBundle(i18n.language, 'portfolio/graphicPortfolioSection'),
-        ]);
-
-        console.log('portfolioData:', portfolioData);
-
-        if (!portfolioData || portfolioData.length === 0) {
-          console.error('Portfolio data is missing or empty.');
-          return;
-        }
+        console.log('Merged Portfolio Data:', mergedPortfolioData);
 
         const sections = [
-          ...(portfolioData[1]?.top5Items || []),
-          ...(portfolioData[2]?.frontendItems || []),
-          ...(portfolioData[3]?.backendItems || []),
-          ...(portfolioData[4]?.fullstackItems || []),
-          ...(portfolioData[5]?.graphicItemsPortfolio || []),
+          ...(mergedPortfolioData.top5Items || []),
+          ...(mergedPortfolioData.frontendItems || []),
+          ...(mergedPortfolioData.backendItems || []),
+          ...(mergedPortfolioData.fullstackItems || []),
+          ...(mergedPortfolioData.graphicItemsPortfolio || []),
         ];
 
         if (sections.length === 0) {
@@ -64,18 +60,12 @@ const WebPortfolioDetailsPage = () => {
     };
 
     loadPortfolioData();
-  }, [urlTitle, i18n.language, ready]);
-
-  if (!ready) {
-    return <div>Loading...</div>;
-  }
-
-  if (portfolioItems.length === 0) {
-    return <div>{t('common:loadingPortfolio', 'Loading portfolio...')}</div>;
-  }
+  }, [urlTitle]);
 
   const handleNavigationback = () => {
-    navigate(-1);
+    startTransition(() => {
+      navigate(-1);
+    });
   };
 
   return (
@@ -105,7 +95,7 @@ const WebPortfolioDetailsPage = () => {
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('common:goBack')}
+          Go Back
         </button>
       </div>
 

@@ -1,0 +1,915 @@
+{
+  "portfolio": {
+    "titlePortfolio": "Portfolio",
+    "subTitlePortfolio": "Where Code Meets Creativity",
+    "mainSectionTitle": "When ideas becomes reality",
+    "portfolioIntro": "This is a show case of my passion for coding and design. I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+    "ctaButtonCV": "Download Resume",
+    "ctaButtonContactMe": "Get In Touch",
+    "cta": "Read more",
+    "ctaLess": "Read less"
+  },
+  "top5PortfolioSection": {
+    "titleTop5Portfolio": "Top <span class='text-btn-bg dark:text-accent-primary'>5</span> <span class='px-4'>Projects</span>",
+    "subTitleTop5Portfolio": "Projects that I am proud of",
+    "introTop5Portfolio": "These are the projects that I am most proud of. They are a mix of creativity and functionality. I am always looking for new challenges and I am excited to see what the future holds.",
+    "ctaButtonViewAll": "View All Projects",
+    "top5Items": [
+      {
+        "title": "Skjort kravallerna",
+        "subTitle": "Graphic",
+        "urlTitle": "skjort-kravallerna",
+        "description": "Photoshop and Illustrator",
+        "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+        "ctaButton": "View Details"
+      },
+      {
+        "title": "Brutal Beats",
+        "urlTitle": "brutal-beats",
+        "subTitle": "Frontend",
+        "description": "React and Tailwind CSS",
+        "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+        "ctaButton": "View Details"
+      },
+      {
+        "title": "MSB",
+        "urlTitle": "msb",
+        "subTitle": "Graphic & Frontend",
+        "description": "Photoshop, Illustrator and HTML & CSS",
+        "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-hero.jpg",
+        "ctaButton": "View Details"
+      },
+      {
+        "title": "Printagon",
+        "urlTitle": "printagon-graphics",
+        "subTitle": "Fullstack",
+        "description": "ASP.NET, SQL, React and Material-UI",
+        "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+        "ctaButton": "View Details"
+      },
+      {
+        "title": "Tyckte jag hörde hundar",
+        "urlTitle": "tyckte-jag-horde-hundar",
+        "subTitle": "Graphic",
+        "description": "Photoshop and Illustrator",
+        "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+        "ctaButton": "View Details"
+      }
+    ]
+  },
+
+  "frontendPortfolioSection": {
+    "titleFrontendPortfolio": "Frontend Cases",
+    "subTitleFrontendPortfolio": "Projects that merge creativity and functionality.",
+    "introFrontendPortfolio": "<span class='text-[#d60d20] dark:text-[#d6a70d] font-semibold'>I love creating beautiful and functional websites.</span> I have created a few projects that I am proud of and I am always looking for new challenges. If you have a project in mind, don't hesitate to contact me.",
+    "ctaButtonViewAll": "View Details",
+    "frontendItems": [
+      {
+        "projectType": "Side project",
+        "title": "BrutalBeats",
+        "urlTitle": "brutal-beats",
+        "applicationType": "web",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBB APPLICATION"
+        },
+        "subTitle": "Frontend",
+        "titleDescription": "Booking agency website",
+        "projectDuration": "march 2023 - january 2025",
+        "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.<br><br><span class='font-bold'>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>-Frontend Development:</span><br> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span class='font-bold'>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span class='font-bold'>- Backend:</span> Node.js<br><span class='font-bold'>- Version Control:</span> Git<br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI)<br><span class='font-bold'>- Development Tools:</span> Visual Studio Code<br><span class='font-bold'>- CMS:</span> Planned integration with WordPress or Umbraco<br><br><span class='font-bold'>Challenges & Solutions:</span><br> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness.<br> - Planned and strategized for future integration with Node.js and CMS system.<br><br><span class='font-bold'>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality.",
+        "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
+        "ctaButton": "View Details",
+        "linkTitle": "Links",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://www.brutalbeats.se/",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-detail-hero.jpg",
+            "alt": "Brutal hero section",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-home.jpg",
+            "alt": "Brutal mobile home",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-details.jpg",
+            "alt": "Brutal mobil card",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-main.jpg",
+            "alt": "Brutal main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-mobile-main.jpg",
+            "alt": "Brutal mobile main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/bb/brutal-hero-detail.jpg",
+            "alt": "Brutal hero detail",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "School project",
+        "title": "The Movie DB",
+        "urlTitle": "the-movie-db",
+        "applicationType": "web",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBB APPLICATION"
+        },
+        "subTitle": "Frontend",
+        "titleDescription": "Movie database website",
+        "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
+        "description": "I developed an interactive web application that integrates the IMDb API to display movie data, focusing on a seamless and engaging user experience. Leveraging React, TypeScript, Axios, and React Query, I implemented advanced frontend functionalities, including efficient search capabilities, while ensuring reusable and maintainable components.<br><br><span class='font-bold'>Purpose:</span> In this project, I focused on frontend development, specifically advanced JavaScript using React. The task involved integrating the IMDb API and utilizing the Axios library along with React Query to fetch and display movie data. My goal was to create a user-friendly and interactive web application that offers a seamless experience to users.<br><br><span class='font-bold'>Key Contributions:</span><br>- Utilized React and TypeScript to implement the frontend functionalities, ensuring a smooth user experience.<br>- Integrated external APIs and libraries, such as Axios and React Query, to fetch and manage movie data effectively.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Frontend:</span> React, TypeScript, Axios, React Query, SCSS<br><span class='font-bold'>- Development Tools:</span> Visual Studio Code<br><br><span class='font-bold'>Project Highlights:</span><br>- Designed and organized components to ensure reusability and maintainability.<br>- Implemented efficient search functionality for users, enhancing the overall user experience.<br><br><span class='font-bold'>Outcome:</span> This project not only strengthened my proficiency in React and frontend development but also provided me with valuable experience in handling and displaying data from external APIs. It has equipped me with the skills and confidence to tackle similar challenges in future projects.",
+        "image": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
+        "linkTitle": "Links",
+        "ctaButton": "View Details",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/TMDB",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://the-movie-data.netlify.app",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-top-main.jpg",
+            "alt": "TMDB top main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-deails-movie.jpg",
+            "alt": "TMDB top main",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-hero.jpg",
+            "alt": "TMDB mobile hero",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/school-tmdb-mobile-main.jpg",
+            "alt": "TMDB mobile main",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-mobile-deails-movie.jpg",
+            "alt": "TMDB details movie",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/theMovieDb/tmdb-hero.jpg",
+            "alt": "TMDB hero section",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "School project",
+        "title": "MSB",
+        "urlTitle": "msb",
+        "applicationType": "web",
+        "applicationTypeDetail": {
+          "text": "FRONTEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEBB APPLICATION"
+        },
+        "subTitle": "Graphic Tools",
+        "titleDescription": "Graphic Elements and Illustrations",
+        "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
+        "description": "This project combines graphic design and web development, where I applied my skills in Adobe Illustrator and Photoshop to create graphic elements and illustrations.<br><br> The course focused on building a website following the MSB graphic profile, incorporating typography, color schemes, and layout principles. I also gained hands-on experience with HTML and CSS to develop a responsive and visually engaging site.<br><br><span class='font-bold'>Purpose:</span> The Graphic Tools course aimed to provide foundational knowledge of Illustrator and Photoshop. In Illustrator, the objective was to create three distinct elements, while in Photoshop, the task involved clipping out at least three individuals. Additionally, the course emphasized adhering to the graphic profile of MSB (Civil Contingencies)<span class='font-bold'>[MSB Graphic Profile]</span> <span class='italic'> (https://www.msb.se/) </span>, focusing on typography, font sizes, color schemes, etc., and subsequently building a website using HTML and CSS following this profile.<br><br><span class='font-bold'>Key Contributions:</span><br>- Created all graphic elements for the website, utilizing images composed of various other images. For instance, the Hero section and fire image were assembled from clipped-out images combined with other visuals.<br>- Ensured semantic correctness in HTML and CSS, employing flexbox and grid extensively to enhance frontend development techniques.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Graphic Tools:</span> Photoshop, Illustrator<br><span class='font-bold'>- Frontend:</span> HTML, CSS<br><span class='font-bold'>- Development Tools:</span> Visual Studio Code<br><br><span class='font-bold'>Project Highlights:</span><br>- Utilized flexbox and grid layouts to create a visually appealing and responsive website.<br>- Emphasized adherence to the MSB graphic profile, enhancing understanding of design principles and brand consistency.<br><br><span class='font-bold'>Outcome:</span> While the primary focus was on graphic tools, the project provided valuable insights into HTML and CSS, improving proficiency in frontend development. The project website showcases the application of design principles and techniques learned during the course.",
+        "linkTitle": "Links",
+        "ctaButton": "View Details",
+        "image": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
+
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/msb_falling_trees_mission.git",
+            "icon": "line-md:github-twotone"
+          },
+          {
+            "type": "Website",
+            "url": "https://lucky-basbousa-252a0a.netlify.app/",
+            "icon": "tdesign:internet-filled"
+          }
+        ],
+
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "Photoshop",
+            "icon": "skill-icons:photoshop"
+          },
+          {
+            "name": "Illustrator",
+            "icon": "logos:adobe-illustrator"
+          },
+          {
+            "name": "HTML",
+            "icon": "logos:html-5"
+          },
+          {
+            "name": "CSS",
+            "icon": "logos:css-3"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-footer-landscape.jpg",
+            "alt": "MSB landscape",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-prototyp.jpg",
+            "alt": "MSB hero figma prototype",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-firetruck-orginal-photoshop.jpg",
+            "alt": "MSB min bild vs orginal bild",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-figma-high.jpg",
+            "alt": "MSB figma prototyp",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-card.jpg",
+            "alt": "MSB information card",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/front-end/school/ux-ui/msb-fireman-cards.jpg",
+            "alt": "MSB fireman cards",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
+  },
+
+  "backendPortfolioSection": {
+    "titlePortfolioBackend": "Backend Cases",
+    "subTitlePortfolioBackend": "The Backbone of Digital Solutions",
+    "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projects that combine creativity and functionality. </span> My backend project is currently not live, but I have some experience in backend development, including database management, API integrations, and server administration. If you have an idea or a project in mind, don't hesitate to contact me. I look forward to collaborating and creating something amazing together.",
+
+    "backendItems": [
+      {
+        "projectType": "School Project",
+        "title": "Photo App",
+        "urlTitle": "photo-app",
+        "applicationType": "web",
+        "applicationTypeDetail": {
+          "text": "BACKEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEB APPLICATION"
+        },
+        "subTitle": "Backend",
+        "titleDescription": "Backend for a photo app",
+        "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
+        "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><br><span class='font-bold'>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
+        "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
+        "linkTitle": "Links",
+        "ctaButton": "View Details",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+            "icon": "line-md:github-twotone"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "Node.js",
+            "icon": "vscode-icons:file-type-node"
+          },
+          {
+            "name": "Prisma",
+            "icon": "catppuccin:prisma"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
+            "alt": "Photo App browser",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+            "alt": "Photo prisma App",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+            "alt": "Photo App code",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
+            "alt": "Photo App request",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
+            "alt": "Photo App postman",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
+            "alt": "Photo App prisma and SQL",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Side project",
+        "title": "Slowfashion API",
+        "urlTitle": "slowfashion-api",
+        "applicationType": "App",
+        "subTitle": "Backend",
+        "applicationTypeDetail": {
+          "text": "BACKEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "APPLICATION"
+        },
+        "titleDescription": "Backend for fashion",
+        "projectDuration": "June 2023 – March 2024",
+        "description": "Contributed to the development of the Slowfashion app by supporting the backend developer in creating a comprehensive CRUD system for managing products and blog posts. Utilized tools like Swagger and Postman for extensive API testing and validation.<br><br><span class='font-bold'>Key Contributions:</span><br>- Developed a CRUD system for products and blog posts, significantly improving content management efficiency. <br>- Enhanced my backend development skills in ASP.NET and API interaction. <br>- Adapted to an existing project by thoroughly analyzing the codebase and deepening my understanding of software architecture.<br><br> <span class='font-bold'>Technologies Used:</span> <span class='font-bold'><br>- Programming Language:</span> C# <span class='font-bold'><br>- Framework:</span> ASP.NET Core Web API <br><span class='font-bold'>- Databases:</span> PostgreSQL, DBeaver <br><span class='font-bold'>- API Testing:</span> Swagger, Postman, Insomnia <span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Cloud Services:</span> Azure <br><span class='font-bold'>- Development Environment (IDE):</span> Visual Studio 2022 <br><br><span class='font-bold'>Challenges & Solutions:</span><br> - Overcame challenges in understanding and adapting to the codebase of an existing project. <br>- Improved problem-solving and critical thinking skills through in-depth analysis and study.<span class='bold'>Outcome:</span><br><br><span class='font-bold'>Outcomes:</span> Successfully contributed to the development of a robust backend system for the Slowfashion app, gaining valuable experience in backend development and software architecture.",
+        "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+
+        "linkTitle": "Links to my GitHub",
+        "ctaButton": "View Details",
+
+        "links": [
+          {
+            "type": "This repro is private"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "C-sharp",
+            "icon": "logos:c-sharp"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          },
+          {
+            "name": ".NET",
+            "icon": "logos:dotnet"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+            "alt": "Slowfashion mobiles prototype",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
+            "alt": "Slofashion mobile prototype",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
+            "alt": "Slowfasion discover",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
+            "alt": "Slowfashion logo",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
+            "alt": "Slowfashion discover cloths",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
+            "alt": "slowfashion footer",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
+  },
+
+  "fullstackPortfolioSection": {
+    "titlePortfolioFullstack": "Fullstack Projects",
+    "subTitlePortfolioFullstack": "From Database to Design",
+    "introFullstackPortfolio": "<span class='text-[#064352] dark:text-[#831518] font-semibold'>Projects that combine creativity with robust functionality.</span> I have extensive experience in both frontend and backend development, including database management, API integrations, server administration, and user-friendly design. Do you have an idea or a project in mind? Don't hesitate to contact me – I look forward to collaborating and creating something amazing together.",
+    "ctaButtonViewAll": "View Details",
+
+    "fullstackItems": [
+      {
+        "projectType": "Side project",
+        "title": "Printagon Graphics",
+        "urlTitle": "printagon-graphics",
+        "applicationType": "web",
+        "applicationTypeDetail": {
+          "text": "FULLSTACK",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEB APPLICATION"
+        },
+        "subTitle": "Fullstack",
+        "titleDescription": "Graphic company system integration",
+        "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
+        "description": "Developing a mobile application to help high school students explore opportunities for post-secondary education, focusing on providing a seamless, cross-platform user experience. <br><br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span> <br>- Used React Native and TypeScript to create a responsive and intuitive interface. <br>- Ensured a consistent user experience across iOS and Android platforms. <br><span class='font-bold'>- Backend Development:</span> <br>- Managed APIs and data storage with Firebase, providing reliable backend services. <br>- Implemented SQLite for efficient handling of local data and offline functionality. <br><br><span class='font-bold'>- Problem Solving:</span> <br>- Overcame specific challenges in iOS development, ensuring robust cross-platform functionality. <br>- Adapted development strategies to maintain seamless performance and usability.<br><br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI) <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Methodology:</span> Scrum <br><br><span class='font-bold'>Challenges & Solutions:</span> <br>- Solved complex iOS platform-specific issues, enhancing my problem-solving skills and technical knowledge. <br>- Ensured the app's responsiveness and performance across different devices and screen sizes. <br><br><span class='font-bold'>Outcomes:</span> <br>- Delivered a valuable tool that helps students effectively navigate their educational choices.<br>- Gained extensive experience in mobile development and cross-platform integration.",
+        "linkTitle": "Links",
+        "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+        "ctaButton": "View Details",
+        "links": [
+          {
+            "type": "This repro is private"
+          },
+          {
+            "type": "App store",
+            "url": "",
+            "icon": "logos:apple-app-store"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "C-sharp",
+            "icon": "logos:c-sharp"
+          },
+          {
+            "name": "Firebase",
+            "icon": "devicon:firebase"
+          },
+          {
+            "name": ".NET",
+            "icon": "logos:dotnet"
+          },
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+
+          {
+            "name": "Postman",
+            "icon": "logos:material-ui"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
+            "alt": "Printagon login",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
+            "alt": "Printagon paused job",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-paused-job.jpg",
+            "alt": "Printagon paused job list",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-trello.jpg",
+            "alt": "Printagon trello",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-register-role.jpg",
+            "alt": "Printagon register role",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/pg/pg-joblist.jpg",
+            "alt": "Printagon job list",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Side Project / Internship",
+        "title": "Prodigies",
+        "urlTitle": "prodigies",
+        "applicationType": "App",
+        "applicationTypeDetail": {
+          "text": "BACKEND",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "APPLICATION"
+        },
+        "subTitle": "Fullstack",
+        "titleDescription": "An App for High School Students",
+        "projectDuration": "Lund <span class='not-italic'>|</span> January 2024 - September 2024",
+        "description": "Developing a mobile application to help high school students explore opportunities for post-secondary education, focusing on providing a seamless, cross-platform user experience. <br><br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span> <br>- Used React Native and TypeScript to create a responsive and intuitive interface. <br>- Ensured a consistent user experience across iOS and Android platforms. <br><span class='font-bold'>- Backend Development:</span> <br>- Managed APIs and data storage with Firebase, providing reliable backend services. <br>- Implemented SQLite for efficient handling of local data and offline functionality. <br><span class='font-bold'>- Problem Solving:</span> <br>- Overcame specific challenges in iOS development, ensuring robust cross-platform functionality. <br>- Adapted development strategies to maintain seamless performance and usability.<br><br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI) <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Methodology:</span> Scrum <br><br><span class='font-bold'>Challenges & Solutions:</span> <br>- Solved complex iOS platform-specific issues, enhancing my problem-solving skills and technical knowledge. <br>- Ensured the app's responsiveness and performance across different devices and screen sizes.<br><br><span class='font-bold'>Outcomes:</span> <br>- Delivered a valuable tool that helps students effectively navigate their educational choices.<br>- Gained extensive experience in mobile development and cross-platform integration.",
+        "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main-hero.jpg",
+        "linkTitle": "Links",
+        "ctaButton": "View Details",
+        "links": [
+          {
+            "type": "App Store",
+            "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
+            "icon": "logos:apple-app-store"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "devicon:reactnative-wordmark",
+            "icon": "devicon:reactnative-wordmark"
+          },
+          {
+            "name": "Firebase",
+            "icon": "devicon:firebase"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "SQLite",
+            "icon": "vscode-icons:file-type-sql"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-deploy.jpg",
+            "alt": "Prodigies deploy app",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prdogies-main.jpg",
+            "alt": "Prdogies main",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/searchCityScreen_figma.jpg",
+            "alt": "Prodigies search city screen figma",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodiges-filtering-search.jpg",
+            "alt": "Prodiges filtering & search",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodiges-filtering-search.jpg",
+            "alt": "Prodigies högskole",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/prodigies/prodigies-filtering.jpg",
+            "alt": "Prodigies filtering",
+            "span": "wide"
+          }
+        ]
+      },
+      {
+        "projectType": "Thesis Project",
+        "title": "Kaffe Bönans Skafferi",
+        "urlTitle": "coffee-shop",
+        "applicationType": "Web",
+        "applicationTypeDetail": {
+          "text": "FULLSTACK",
+          "icon": {
+            "name": "icon-park-outline:dot",
+            "width": 48,
+            "height": 48,
+            "color": "#76150d"
+          },
+          "suffix": "WEB APPLICATION"
+        },
+        "subTitle": "Fullstack",
+        "titleDescription": "A coffee shop for coffee lovers",
+        "projectDuration": "December 2023 – January 2024",
+        "description": "Embarked on a journey into full-stack development by creating an e-commerce platform tailored for coffee enthusiasts as part of my thesis project. Started with meticulous planning, I curated a tech stack that aligned with the intended functionalities, using SQL for user, cart, and product relations. By using both lo-fi and hi-fi prototypes in Figma, I refined the app's aesthetics, from color schemes to font choices. <br><br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span><br>- Used React and TypeScript to orchestrate a seamless user experience. <br>- Enhanced aesthetics through careful design choices using Figma prototypes.<br><span class='font-bold'>- Backend Development:</span><br>- Used ASP.NET Core to seamlessly integrate backend and frontend elements.<br>- Implemented robust backend authentication using the ASP.NET Core Authentication library. <br> <br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core, SQL Server <br><span class='font-bold'>- Database:</span> SQLite <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Deployment:</span> Docker (Planned integration for streamlined deployment) <br><br><span class='font-bold'>Challenges & Solutions:</span><br>- Overcame challenges in implementing backend authentication, enriching my understanding of backend complexities. <br>- Planned integration of PostgreSQL for improved database management and Docker for streamlined deployment on an Azure-based server. <br><br><span class='font-bold'>Outcomes:</span> Successfully navigated the journey from concept to realization within set deadlines, enriching my skills and understanding of full-stack development. Looking forward, I aim to integrate PostgreSQL for improved database management and Docker for streamlined deployment on an Azure-based server.",
+        "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg",
+        "linkTitle": "Links",
+        "ctaButton": "View Details",
+        "links": [
+          {
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/theCoffeeShop_exam",
+            "icon": "line-md:github-twotone"
+          }
+        ],
+        "techTitle": "Tech",
+        "tech": [
+          {
+            "name": "C-sharp",
+            "icon": "logos:c-sharp"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          },
+          {
+            "name": "React",
+            "icon": "skill-icons:react-dark"
+          },
+          {
+            "name": ".NET",
+            "icon": "logos:dotnet"
+          },
+          {
+            "name": "SQL Server (SMMS)",
+            "icon": "devicon:microsoftsqlserver"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
+          }
+        ],
+        "images": [
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-loggedin-user.jpg",
+            "alt": "Kaffebönan loggedin user",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-basket.jpg",
+            "alt": "Kaffebönan basket",
+            "span": "wide"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-login.jpg",
+            "alt": "Kaffebönan login",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-mobile.jpg",
+            "alt": "Kaffe bönan mobile card",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-register2.jpg",
+            "alt": "Kaffebönan register",
+            "span": "tall"
+          },
+          {
+            "src": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-order.jpg",
+            "alt": "Kaffebönan order",
+            "span": "wide"
+          }
+        ]
+      }
+    ]
+  },
+
+  "graphicPortfolioSection": [
+    {
+      "title": "Skjortkravallerna",
+      "projectType": "Graphic Design",
+      "urlTitle": "skjortkravallerna",
+      "applicationType": "graphic",
+      "applicationTypeDetail": {
+        "text": "GRAPHIC DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "POSTERS & FLYERS"
+      },
+      "subTitle": "Project for Alla Tiders Teater",
+      "titleDescription": "Graphic material created for Alla Tiders Teater",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Graphic material created for Alla Tiders Teater 'Skjortkravallerna.' The project included posters, flyers, and program booklets.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><span class='font-bold'>- Client Collaboration:</span> Worked closely with the client to ensure the designs aligned with their vision.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><span class='font-bold'>- Design Process:</span> Brainstorming, sketching, and digital mockups.<br><br><span class='font-bold'>Results:</span><br>- Increased event attendance by 30% compared to the previous year.<br>- Received positive feedback from both the client and the audience.",
+      "linkTitle": "Links",
+      "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+      "ctaLink": [
+        {
+          "type": "Client Website",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+      "techTitle": "Tech",
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
+          "alt": "Skjortkravallerna Poster",
+          "span": "wide"
+        }
+      ],
+
+      "links": [
+        {
+          "type": "Client Website",
+          "url": "https://www.allatidersteater.se",
+          "icon": "logos:website"
+        }
+      ],
+
+      "category": "Posters & Flyers",
+      "year": "'24",
+      "yearText": "YEAR",
+      "client": "Alla Tiders Teater",
+      "clientLink": "https://www.allatidersteater.se",
+      "goal": "To create a visually striking poster that captures the essence of the theater production and attracts a wide audience.",
+      "role": "Graphic Designer – Responsible for concept creation, layout design, and final artwork.",
+      "challenges": "The client requested a design that was both modern and traditional, which required balancing contrasting styles.",
+      "results": "The poster design increased event attendance by 30% compared to the previous year.",
+      "testimonial": "The design exceeded our expectations and perfectly captured the spirit of the event. – Client, Alla Tiders Teater",
+      "process": "Started with brainstorming and sketching concepts, followed by creating digital mockups in Illustrator. Finalized the design after client feedback.",
+      "tags": ["Theater", "Posters", "Flyers", "Illustrator", "Photoshop"],
+      "relatedProjects": ["en-kvall-for-fred", "skjortkravallerna"],
+      "ctaButton": "View Details",
+      "media": []
+    },
+
+    {
+      "title": "Tyckte Jag Hörde Hundar",
+      "urlTitle": "tyckte-jag-horde-hundar",
+      "applicationType": "graphic",
+      "applicationTypeDetail": {
+        "text": "GRAPHIC DESIGN",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "POSTERS & FLYERS"
+      },
+      "subTitle": "Project for Stumpenensemblen",
+      "titleDescription": "Graphic material created for Stumpenensemblen's production.'",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
+      "description": "Graphic material created for Stumpenensemblen's production 'Tyckte Jag Hörde Hundar.'<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop, InDesign<br><br><span class='font-bold'>Results:</span><br>- The design received positive feedback from both the client and the audience.",
+      "linkTitle": "Links",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+      "ctaLink": [
+        {
+          "type": "Client Website",
+          "url": "https://example.com",
+          "icon": "logos:website"
+        }
+      ],
+      "tech": [
+        {
+          "name": "Adobe Photoshop",
+          "icon": "logos:adobe-photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "icon": "logos:adobe-illustrator"
+        },
+        {
+          "name": "Adobe InDesign",
+          "icon": "logos:adobe-indesign"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-tyckeJagHordeHundar.jpg",
+          "alt": "Tyckte Jag Hörde Hundar Poster",
+          "span": "wide"
+        }
+      ],
+      "links": [
+        {
+          "type": "Client Website",
+          "url": "https://www.stumpenensemblen.se",
+          "icon": "logos:website"
+        }
+      ],
+      "category": "Graphic Design",
+      "year": "'24",
+      "yearText": "YEAR",
+      "client": "Stumpenensemblen",
+      "goal": "To create a design that captures the theme of the production and attracts a wide audience.",
+      "role": "Graphic Designer – Responsible for concept creation and layout.",
+      "challenges": "To create a design that aligned with Stumpenensemblen's brand and the theme of the production.",
+      "results": "The design received positive feedback from both the client and the audience.",
+      "testimonial": "The design was fantastic and helped us reach a wider audience. – Client, Stumpenensemblen",
+      "process": "Started by analyzing the theme of the production and creating sketches. Finalized the design in Photoshop and Illustrator.",
+      "tags": ["Theater", "Graphic Design", "Photoshop", "Illustrator"],
+      "relatedProjects": ["Hemmet", "Genomskinliga Hjärtan", "Begravt Barn"],
+      "ctaButton": "View Details",
+      "media": []
+    }
+  ]
+}
