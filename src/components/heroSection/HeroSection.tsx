@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import Button from '../partials/Button';
 import ResponsiveHeroImage from './ResponsiveHeroImage';
+import { startTransition } from 'react';
 
 const HeroSection = () => {
   const { t } = useTranslation('heroSection');
@@ -23,6 +24,12 @@ const HeroSection = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleNavigatePortfolio = () => {
+    startTransition(() => {
+      navigate('/portfolio');
+    });
   };
 
   return (
@@ -56,7 +63,7 @@ const HeroSection = () => {
                 {t('ctaButtonCV')}
               </Button>
               <Button
-                onClick={() => navigate('/portfolio')}
+                onClick={handleNavigatePortfolio}
                 className="flex flex-row gap-2 justify-center items-center border-2 border-[#350712] bg-[#350712] dark:bg-transparent dark:border-btn-bg text-bg-primary dark:text-btn-bg tracking-wide font-semibold hover:bg-bg-hover hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover"
               >
                 <Icon icon="ix:explore" width="30" height="30" />{' '}
