@@ -1,13 +1,13 @@
-import { Route } from '../../config/MenuItemsData'
-import MenuItems from './MenuItems'
+import { Route } from '../../config/MenuItemsData';
+import MenuItemsMobile from './MenuItemsMobile';
 
 interface IProps {
-  submenus: Route[]
-  dropdown: boolean
-  depthLevel: number
-  closeMenu: () => void
-  onMouseEnter?: () => void 
-  onMouseLeave?: () => void 
+  submenus: Route[];
+  dropdown: boolean;
+  depthLevel: number;
+  closeMenu: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const DropdownMenuMobile = ({
@@ -18,12 +18,12 @@ const DropdownMenuMobile = ({
   onMouseEnter,
   onMouseLeave,
 }: IProps) => {
-  
   // Increase the depth level by 1 for nested dropdowns
   const newDepthLevel = depthLevel + 1;
 
   // Define the margin left based on the depth level, adjusting multiplier as needed
-  const marginLeftClass = newDepthLevel > 1 ? `ml-${newDepthLevel * 2}` : 'ml-0';
+  const marginLeftClass =
+    newDepthLevel > 1 ? `ml-${newDepthLevel * 2}` : 'ml-0';
 
   // Define the dropdown positioning class, with adjustments for deeper levels
   const dropdownClass = `${dropdown ? 'block' : 'hidden'} ${
@@ -33,20 +33,23 @@ const DropdownMenuMobile = ({
   return (
     <ul
       className={`${dropdownClass} ${marginLeftClass}`}
-      onMouseEnter={onMouseEnter} 
-      onMouseLeave={onMouseLeave} 
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {submenus.map((submenu, index) => (
-          <li key={index} className="relative text-[1.2rem] cursor-pointer py-2 px-4">
-            <MenuItems
-              items={submenu}
-              depthLevel={newDepthLevel}  
-              closeMenu={closeMenu}
-              />
-          </li>
+        <li
+          key={index}
+          className="relative text-[1.2rem] cursor-pointer py-2 px-4"
+        >
+          <MenuItemsMobile
+            items={submenu}
+            depthLevel={newDepthLevel}
+            closeMenu={closeMenu}
+          />
+        </li>
       ))}
     </ul>
   );
 };
-// text-text-primary hover:bg-accent-secondary dark:hover:bg-bg-secondary 
+// text-text-primary hover:bg-accent-secondary dark:hover:bg-bg-secondary
 export default DropdownMenuMobile;

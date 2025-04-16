@@ -48,7 +48,7 @@ const NavigationMenu = () => {
         } else {
           console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      }, 100); // You may need to adjust this delay
+      }, 300); 
     }
   }, [location]);
 

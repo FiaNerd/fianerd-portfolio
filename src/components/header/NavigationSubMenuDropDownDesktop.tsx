@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
 import { startTransition, Suspense } from 'react';
-import { start } from 'repl';
 
 interface IProps {
   navigationMenu: string;
@@ -107,7 +106,7 @@ const NavigationSubMenuDropDownDesktop = ({
                     startTransition(() => {
                       handleMenuClick(e, subMenu.url, subMenu.sectionId);
                     })
-                  } // Pass sectionId here
+                  } 
                 >
                   <span
                     dangerouslySetInnerHTML={{ __html: t(subMenu.title) }}

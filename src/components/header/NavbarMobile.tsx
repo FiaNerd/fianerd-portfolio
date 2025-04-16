@@ -10,7 +10,7 @@ import Footer from '../footer/Footer';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import AnimatedHamburgerButton from './AnimatedHamburgerButton';
-import MenuItems from './MenuItems';
+import MenuItemsMobile from './MenuItemsMobile';
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
   `link ${isActive ? 'active contact' : ''}`;
@@ -26,7 +26,6 @@ const NavbarMobile = () => {
     // Handle context not being available
     throw new Error('ThemeContext must be used within a ThemeProvider');
   }
-
 
   const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
 
@@ -63,10 +62,9 @@ const NavbarMobile = () => {
                 <ThemeSwitch />
                 <SelectLanguage />
               </div>
-
               <ul className="grid gap-2 pl-8">
                 {navRoutes.map((menu, index) => (
-                  <MenuItems
+                  <MenuItemsMobile
                     key={index}
                     items={{ ...menu, subMenu: menu.subMenu || [] }}
                     depthLevel={0}

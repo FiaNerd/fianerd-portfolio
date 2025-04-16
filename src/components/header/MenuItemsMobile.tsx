@@ -12,7 +12,7 @@ interface MenuItemsProps {
   closeMenu: () => void;
 }
 
-const MenuItems: React.FC<MenuItemsProps> = ({
+const MenuItemsMobile: React.FC<MenuItemsProps> = ({
   items,
   depthLevel,
   closeMenu,
@@ -44,41 +44,40 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   };
 
   const handleMenuClick = (
-    e: React.MouseEvent,
+    e: React.MouseEvent | React.TouchEvent,
     url: string,
     sectionId?: string
   ) => {
     e.preventDefault();
 
     startTransition(() => {
-      // If we are already on the destination (portfolio) page…
-      if (sectionId && location.pathname === url) {
-        // Update the URL with the hash but then immediately scroll
-        navigate(`${url}#${sectionId}`);
+      // Navigate to the base route if not already there
+      if (location.pathname !== url) {
+        navigate(url);
+      }
+
+      // Scroll to the section after navigation
+      if (sectionId) {
         setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
+            console.log('Scrolling to element:', element);
             element.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.warn(`Element with ID "${sectionId}" not found.`);
           }
-        }, 100);
-      } else if (location.pathname !== url) {
-        // When not on the portfolio page, navigate normally with the hash if provided
-        if (sectionId) {
-          navigate(`${url}#${sectionId}`);
-        } else {
-          navigate(url);
-        }
+        }, 400);
       }
 
+      // Close the menu after navigation
       setTimeout(() => {
         closeMenu();
-      }, 300);
+      }, 400);
     });
   };
 
   const renderLinkOrButton = () => {
     if (!items.title || !items.url) {
-      console.warn('Menu item is missing title or URL:', items);
       return null;
     }
 
@@ -86,7 +85,11 @@ const MenuItems: React.FC<MenuItemsProps> = ({
       <NavLink
         to={items.url}
         className="px-4 font-sub-heading tracking-wider text-xl hover:text-nav-hover focus:text-nav-hover"
-        onClick={(e) => handleMenuClick(e, items.url)}
+        onClick={(e) =>
+          startTransition(() => {
+            handleMenuClick(e, items.url, items.sectionId);
+          })
+        }
       >
         <span dangerouslySetInnerHTML={{ __html: t(items.title) }} />
       </NavLink>
@@ -144,4 +147,4 @@ const MenuItems: React.FC<MenuItemsProps> = ({
   );
 };
 
-export default MenuItems;
+export default MenuItemsMobile;

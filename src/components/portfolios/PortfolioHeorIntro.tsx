@@ -25,7 +25,6 @@ const PortfolioHeorIntro = () => {
     document.body.removeChild(link);
   };
 
-  
   return (
     <div className="max-w-screen-7xl mx-auto px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">
       <div className="flex flex-col justify-center items-center text-center gap-4 md:gap-8">
@@ -44,7 +43,7 @@ const PortfolioHeorIntro = () => {
             </Button>
             <NavLink
               to={'/contact'}
-              className="flex flex-row w-full justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded text-base md:text-md lg:text-lg hover:shadow-lg px-4 py-4 cursor-pointer"
+              className="flex flex-row w-full justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded text-base md:text-md lg:text-lg hover:shadow-lg px-4 py-2 md:px-4 cursor-pointer"
             >
               <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
               {t('ctaButtonContactMe')}
