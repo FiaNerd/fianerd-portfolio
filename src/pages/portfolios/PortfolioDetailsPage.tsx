@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { startTransition, useEffect, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import portfolioDataEn from '../../../public/locales/en/portfolioSection.json';
@@ -52,6 +52,12 @@ const PortfolioDetailsPage = () => {
     return <div>Loading...</div>;
   }
 
+  const handleNavigate = () => {
+    startTransition(() => {
+      navigate('/portfolio');
+    });
+  };
+
   return (
     <div
       style={{
@@ -76,7 +82,7 @@ const PortfolioDetailsPage = () => {
 
       <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
-          onClick={() => navigate(-1)}
+          onClick={handleNavigate}
           className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
