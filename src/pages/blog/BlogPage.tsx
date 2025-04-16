@@ -16,27 +16,8 @@ const BlogPage = () => {
   useEffect(() => {
     isNavigatingRef.current = isNavigating;
   }, [isNavigating]);
-
-  // Use effect for handling hash navigation
-  useEffect(() => {
-    const handleNavigation = () => {
-      setIsNavigating(true);
-      handleHashNavigation({
-        sectionIds: ['blog'], // Ensure these are correct section IDs
-        headerHeight,
-        isHeaderVisible: false,
-        isNavigating: isNavigatingRef,
-        onNavigationComplete: () => {
-          setIsNavigating(false); // Set to false once navigation is done
-        },
-      });
-    };
-
-    handleNavigation();
-  }, [headerHeight, isNavigating]);
-
-  // Update the URL when scrolling
-  useScrollUpdateURL(['blog'], 'blog', headerHeight);
+  
+  useScrollUpdateURL(['blog'], '', headerHeight);
 
   return (
     <section

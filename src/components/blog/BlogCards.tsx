@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
@@ -19,12 +20,6 @@ const BlogCards = () => {
     const s = Math.floor(Math.random() * 41) + 60; // Saturation (60-100%)
     const l = Math.floor(Math.random() * 41) + 40; // Lightness (40-80%)
     return `hsl(${h}, ${s}%, ${l}%)`;
-  };
-
-  const handleNaviagete = (urlTitle: string) => {
-    // Encode the URL title to handle special characters
-    // const encodedUrlTitle = encodeURIComponent(urlTitle);
-    navigate(`/blog/${encodeURIComponent(urlTitle)}`);
   };
 
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
@@ -109,12 +104,12 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <Button
-                  onClick={() => handleNaviagete(card.urlTitle)}
+                <NavLink
+                  to={`/blog/${encodeURIComponent(card.urlTitle)}`}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </Button>
+                </NavLink>
               </div>
             </div>
           </motion.div>
