@@ -46,8 +46,7 @@ const BlogPage = () => {
         marginTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
         overflowX: 'hidden',
-        height: '100vh',
-       
+        minHeight: '100vh',
       }}
     >
       <Title
