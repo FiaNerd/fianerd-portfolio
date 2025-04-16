@@ -59,6 +59,7 @@ const PortfolioPage = () => {
       style={{
         marginTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
+        overflowX: 'hidden',
       }}
     >
       <section id="my-work" className="bg-[#436e74] dark:bg-[#16443e]">

@@ -20,11 +20,11 @@ const BlogPage = () => {
   // Use effect for handling hash navigation
   useEffect(() => {
     const handleNavigation = () => {
-      setIsNavigating(true); 
+      setIsNavigating(true);
       handleHashNavigation({
         sectionIds: ['blog'], // Ensure these are correct section IDs
         headerHeight,
-        isHeaderVisible: false, 
+        isHeaderVisible: false,
         isNavigating: isNavigatingRef,
         onNavigationComplete: () => {
           setIsNavigating(false); // Set to false once navigation is done
@@ -43,18 +43,21 @@ const BlogPage = () => {
       id="blog"
       className="relative w-full overflow-hidden"
       style={{
-        marginTop: `${headerHeight}px`, // Offset the section from the top
+        marginTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
+        overflowX: 'hidden',
+        height: '100vh',
+       
       }}
     >
       <Title
         title={t('blogPostTitle')}
         dot={'.'}
         children={t('subTitleBlogPost')}
-        className="text-bg-secondary dark:text-text-accent leading-none"
+        className=" leading-none"
         subHeadingClassName="text-hover-text dark:text-text-secondary leading-none"
-        light="bg-[#1e3237]"
-        dark="dark:bg-[#180f08]"
+        light="text-bg-secondary bg-[#1e3237]"
+        dark="dark:text-text-accent dark:bg-[#180f08]"
         sticky
       />
 

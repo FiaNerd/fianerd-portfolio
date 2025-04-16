@@ -56,6 +56,7 @@ const HomePage = () => {
       style={{
         marginTop: `${headerHeight}px `,
         transition: 'top 0.3s ease',
+        overflowX: 'hidden',
       }}
     >
       {/* Hero Section */}
