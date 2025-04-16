@@ -1,4 +1,4 @@
-interface HashNavigationParams {
+interface IHashNavigationParams {
   sectionIds: string[];
   headerHeight: number;
   isHeaderVisible: boolean;
@@ -13,37 +13,39 @@ export const handleHashNavigation = ({
   isHeaderVisible,
   isNavigating,
   onNavigationComplete,
-}: HashNavigationParams) => {
-  const hash = window.location.hash.slice(1); // Get the current hash
-  console.log('Current hash:', hash);
+}: IHashNavigationParams) => {
+  const hash = window.location.hash;
 
-  if (!hash) {
-    return;
-  }
+  if (hash) {
+    const sectionId = hash.substring(1);
+    console.log(sectionIds);
+    console.log(isNavigating.current);
 
-  if (!sectionIds.includes(hash)) {
-    console.error(`Section ID "${hash}" is not in the valid sectionIds array.`);
-    return;
-  }
+    if (sectionIds.includes(sectionId)) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        isNavigating.current = true;
 
-  const element = document.getElementById(hash);
-  if (element) {
-    isNavigating.current = true;
+        const offset = element.offsetTop - (isHeaderVisible ? headerHeight : 0);
 
-    const offset = element.offsetTop - (isHeaderVisible ? headerHeight : 0);
+        window.scrollTo({
+          top: offset > 0 ? offset : 0,
+          behavior: 'smooth',
+        });
 
-    window.scrollTo({
-      top: offset > 0 ? offset : 0,
-      behavior: 'smooth',
-    });
-
-    setTimeout(() => {
-      isNavigating.current = false;
-      if (onNavigationComplete) {
-        onNavigationComplete();
+        setTimeout(() => {
+          isNavigating.current = false;
+          if (onNavigationComplete) {
+            onNavigationComplete();
+          }
+        }, 500);
+      } else {
+        console.warn(`Element with ID "${sectionId}" not found in the DOM.`);
       }
-    }, 500);
-  } else {
-    console.warn(`Element with ID "${hash}" not found in the DOM.`);
+    } else {
+      console.warn(
+        `Section ID "${sectionId}" is not in the valid sectionIds array.`
+      );
+    }
   }
 };

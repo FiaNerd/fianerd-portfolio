@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
-import { startTransition } from 'react';
+import { startTransition, Suspense } from 'react';
+import { start } from 'repl';
 
 interface IProps {
   navigationMenu: string;
@@ -26,24 +27,26 @@ const NavigationSubMenuDropDownDesktop = ({
   ) => {
     e.preventDefault();
 
-    startTransition(() => {
-      if (location.pathname !== url) {
-        navigate(url);
-      }
+    // Navigate to the base route if not already there
+    if (location.pathname !== url) {
+      navigate(url);
+    }
 
+    startTransition(() => {
+      // Scroll to the section after navigation
       if (sectionId) {
         setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.warn(`Section with ID "${sectionId}" not found.`);
           }
-        }, 0);
+        }, 300);
       }
-
-      setTimeout(() => {
-        closeMenuOnClick();
-      }, 300);
     });
+
+    closeMenuOnClick();
   };
 
   const currentMenu = navRoutes.find((menu) => menu.title === navigationMenu);
@@ -93,29 +96,35 @@ const NavigationSubMenuDropDownDesktop = ({
         </div>
 
         {/* Submenu Section */}
-        <div className="col-span-2 grid gap-6 grid-cols-2 xl:grid-cols-2 p-4 bg-bg-primary">
-          {currentMenu.subMenu.map((subMenu, index) => (
-            <div key={index} className="flex flex-col">
-              <NavLink
-                to={subMenu.url}
-                className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
-                onClick={(e) =>
-                  handleMenuClick(e, subMenu.url, subMenu.sectionId)
-                } // Pass sectionId here
-              >
-                <span dangerouslySetInnerHTML={{ __html: t(subMenu.title) }} />
-              </NavLink>
-              {subMenu.description && (
-                <span
-                  className="block text-xs text-text-primary font-light leading-6 opacity-70"
-                  dangerouslySetInnerHTML={{
-                    __html: t(subMenu.description),
-                  }}
-                />
-              )}
-            </div>
-          ))}
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="col-span-2 grid gap-6 grid-cols-2 xl:grid-cols-2 p-4 bg-bg-primary">
+            {currentMenu.subMenu.map((subMenu, index) => (
+              <div key={index} className="flex flex-col">
+                <NavLink
+                  to={subMenu.url}
+                  className="text-lg font-medium font-sub-heading text-nav-text hover:text-nav-hover"
+                  onClick={(e) =>
+                    startTransition(() => {
+                      handleMenuClick(e, subMenu.url, subMenu.sectionId);
+                    })
+                  } // Pass sectionId here
+                >
+                  <span
+                    dangerouslySetInnerHTML={{ __html: t(subMenu.title) }}
+                  />
+                </NavLink>
+                {subMenu.description && (
+                  <span
+                    className="block text-xs text-text-primary font-light leading-6 opacity-70"
+                    dangerouslySetInnerHTML={{
+                      __html: t(subMenu.description),
+                    }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </Suspense>
       </div>
     </div>
   );
