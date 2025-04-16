@@ -1,14 +1,26 @@
-import { useRef } from 'react';
+// SidebarGraphicPortfolio.tsx
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import HeroDetails from '../../partials/HeroDetails';
 import { Icon } from '@iconify/react';
-import ContentTitleDetails from '../../partials/ContentTitleDetails';
+import 'yet-another-react-lightbox/styles.css';
+import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import ContentDetails from '../../partials/ContentDetails';
+import ContentTitleDetails from '../../partials/ContentTitleDetails';
+import HeroDetails from '../../partials/HeroDetails';
 import GraphicPortfolioContentAbout from './GraphicPortfolioContentAbout';
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgShare from 'lightgallery/plugins/share';
-import lgHash from 'lightgallery/plugins/hash';
-import LightGallery from 'lightgallery/react';
+import { useClickOutside } from '../../../hook/useClickOutside';
+import useFadeIn from '../../../hook/useFadeIn';
+import { motion } from 'framer-motion';
+
+interface Technology {
+  name: string;
+  icon: string;
+}
 
 interface ISidebarGraphicPortfolioProps {
   isVisible: boolean;
@@ -33,7 +45,7 @@ interface ISidebarGraphicPortfolioProps {
     role: string;
     challenges: string;
     results: string;
-    testmonial: string;
+    testimonial: string;
     tags: string[];
     relatedProjects: string[];
     ctaLink: string;
@@ -49,19 +61,34 @@ const SidebarGraphicPortfolio = ({
   graphicDetails,
 }: ISidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection', 'common']);
+<<<<<<< HEAD:src/components/portfolios/graphic/SidebarGraphicPortfolio.tsx
   const lightGallery = useRef<any>(null);
+=======
+  const [openLightbox, setOpenLightbox] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+>>>>>>> hotfix/navigation:src/components/portfolios/graphic/GraphicSidebarPortfolio.tsx
 
-  const openLightbox = (index: number) => {
-    if (lightGallery.current) {
-      lightGallery.current.openGallery(index);
+  useEffect(() => {
+    if (!isVisible) {
+      setOpenLightbox(false);
     }
+  }, [isVisible]);
+
+  const handleOpenLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setOpenLightbox(true);
   };
 
+  const handleCloseLightbox = () => {
+    setOpenLightbox(false);
+  };
+
+  const sidebarRef = useClickOutside<HTMLDivElement>(onClose);
+
   if (!isVisible || !graphicDetails) {
-    return null; // Don't render if the sidebar is not visible or no data is available
+    return null;
   }
 
-  // Transform graphicDetails into an array
   const graphicItemsPortfolio = [
     {
       clientTitle: graphicDetails?.clientTitle,
@@ -77,7 +104,7 @@ const SidebarGraphicPortfolio = ({
       role: graphicDetails?.role,
       challenges: graphicDetails?.challenges,
       results: graphicDetails?.results,
-      testimonial: graphicDetails?.testmonial,
+      testimonial: graphicDetails?.testimonial,
       tags: graphicDetails?.tags,
       relatedProjects: graphicDetails?.relatedProjects,
       demands: graphicDetails?.demands,
@@ -91,17 +118,26 @@ const SidebarGraphicPortfolio = ({
     clientTitle?: string;
   };
 
+  const fadeInRight = useFadeIn({
+    direction: 'right',
+    delay: 0.7,
+    duration: 1,
+  });
+
   return (
     <>
-      <div className="fixed inset-0 z-50 flex overflow-hidden">
-        {/* Background Overlay */}
-        <div
-          className="absolute inset-0 bg-black opacity-80 z-40"
-          onClick={onClose}
-        ></div>
-
-        {/* Sidebar */}
-        <aside className="relative bg-bg-primary flex flex-col gap-2 h-full z-50 overflow-y-auto ml-auto max-w-[700px] w-full">
+      <motion.div
+        ref={fadeInRight.ref}
+        initial="hidden"
+        animate={fadeInRight.ctrls}
+        variants={fadeInRight.vars}
+        className="fixed inset-0 z-50 flex"
+      >
+        <div className="fixed inset-0 bg-black bg-opacity-80" />
+        <aside
+          ref={sidebarRef}
+          className="relative bg-bg-primary flex flex-col gap-2 h-full z-40 overflow-y-auto ml-auto max-w-[700px] w-full"
+        >
           {/* HeroDetails Component */}
           <div className="w-full">
             <HeroDetails
@@ -113,15 +149,18 @@ const SidebarGraphicPortfolio = ({
             />
           </div>
 
-          {/* Header Section */}
           <div className="px-8 mb-12">
             <div className="flex flex-col mb-8 items-start lg:flex-row">
               <button
                 onClick={onClose}
-                className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
+                className="font-sub-heading inline-flex items-center gap-2 text-xl transition-all duration-200 bg-none hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover w-auto py-1"
               >
                 <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
+<<<<<<< HEAD:src/components/portfolios/graphic/SidebarGraphicPortfolio.tsx
                 {t('common:goBack')}
+=======
+                {t('common:goBack').toUpperCase()}
+>>>>>>> hotfix/navigation:src/components/portfolios/graphic/GraphicSidebarPortfolio.tsx
               </button>
             </div>
 
@@ -148,7 +187,7 @@ const SidebarGraphicPortfolio = ({
 
             <div
               className="lg:col-span-1 mb-12 cursor-zoom-in"
-              onClick={() => openLightbox(0)}
+              onClick={() => handleOpenLightbox(0)}
             >
               <img
                 src={graphicDetails.image}
@@ -157,29 +196,31 @@ const SidebarGraphicPortfolio = ({
               />
             </div>
 
-            {/* Pass the transformed data */}
             <GraphicPortfolioContentAbout
               graphicItemsPortfolio={graphicItemsPortfolio}
             />
           </div>
         </aside>
-      </div>
 
-      {/* LightGallery Component */}
-      <LightGallery
-        onInit={(ref: { instance: any }) => {
-          if (ref) {
-            lightGallery.current = ref.instance;
-          }
-        }}
-        plugins={[lgZoom, lgShare, lgHash]}
-        dynamic
-        dynamicEl={(graphicDetails.images || []).map((image) => ({
-          src: image.src,
-          thumb: image.src,
-          subHtml: `<h4>${image.alt}</h4>`,
-        }))}
-      />
+        <Lightbox
+          open={openLightbox}
+          close={handleCloseLightbox}
+          index={currentIndex}
+          slides={graphicDetails.images.map((image) => ({
+            src: image.src,
+            title: graphicDetails.title,
+            alt: graphicDetails.alt,
+          }))}
+          carousel={{ finite: graphicDetails.images.length <= 1 }}
+          render={{
+            buttonPrev:
+              graphicDetails.images.length <= 1 ? () => null : undefined,
+            buttonNext:
+              graphicDetails.images.length <= 1 ? () => null : undefined,
+          }}
+          plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Zoom]}
+        />
+      </motion.div>
     </>
   );
 };

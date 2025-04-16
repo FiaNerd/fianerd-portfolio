@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import useFadeIn from '../../../hook/useFadeIn';
 import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import Button from '../../partials/Button';
 
 const AboutMe = () => {
   const { t } = useTranslation(['profile/aboutMe', 'translation']);
@@ -24,7 +25,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-10 py-8 md:py-20">
+    <section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-10 py-8 md:py-20">
       {/* Left Column: Image */}
       <motion.div
         ref={fadeInImage.ref}
@@ -90,12 +91,12 @@ const AboutMe = () => {
             </NavLink>
           </>
         )}
-        <button
+        <Button
           className="flex mt-4 text-lg items-end justify-end font-bold text-nav-text hover:text-nav-hover bg-transparent hover:underline-offset-4 hover:underline"
           onClick={handleToggleText}
         >
           {isExpanded ? t('ctaLess') : t('cta')}
-        </button>
+        </Button>
       </motion.div>
     </section>
   );

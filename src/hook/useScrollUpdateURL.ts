@@ -13,7 +13,7 @@ const useScrollUpdateURL = (
   const isNavigating = useRef(false);
   const lastVisibleSectionId = useRef<string | null>(null);
 
-  useEffect(() => {
+    useEffect(() => {
     const onScroll = () =>
       updateURLOnScroll({
         sectionIds,
@@ -24,19 +24,21 @@ const useScrollUpdateURL = (
         location,
         isNavigating,
       });
-
-    const onHashNavigate = () =>
-      handleHashNavigation({
-        sectionIds,
-        headerHeight,
-        isHeaderVisible,
-        // location,
-        isNavigating,
-      });
-
+  
+    const onHashNavigate = () => {
+      if (window.location.hash) {
+        handleHashNavigation({
+          sectionIds,
+          headerHeight,
+          isHeaderVisible,
+          isNavigating,
+        });
+      }
+    };
+  
     window.addEventListener('scroll', onScroll);
-    onHashNavigate();
-
+    onHashNavigate(); // Only call if there's a hash
+  
     return () => {
       window.removeEventListener('scroll', onScroll);
     };

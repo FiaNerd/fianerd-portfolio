@@ -5,12 +5,16 @@ import Title from '../../components/partials/Title';
 import useSmoothScroll from '../../hook/useSmoothScroll';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
 
 const ContactPage = () => {
   const { t } = useTranslation('contact/contact');
-  const { headerHeight, isHeaderVisible } = useHeaderHeight();
+  const { headerHeight } = useHeaderHeight();
 
-  useScrollUpdateURL(['contact'], '', headerHeight, isHeaderVisible);
+  useScrollUpdateURL(['contact'], '', headerHeight);
+
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
 
   return (
     <div
@@ -31,7 +35,14 @@ const ContactPage = () => {
         dark="dark:bg-[#1d1617]"
         sticky
       />
-      <div className="max-w-screen-lg mx-auto lg:bg-[#d47166] lg:dark:bg-[#1d1617] mb-20 grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg">
+
+      <motion.div
+        ref={fadeInDown.ref}
+        initial="hidden"
+        animate={fadeInDown.ctrls}
+        variants={fadeInDown.vars}
+        className="max-w-screen-xl mx-auto lg:bg-[#d47166] lg:dark:bg-[#1d1617] mb-20 grid grid-row md:grid-cols-[auto_45%] gap-4 justify-center items-center py-4 md:px-4 rounded-lg"
+      >
         <div className="flex flex-col items-center md:px-2 text-wrap">
           <h1 className="text-text-primary">
             {t('contactGreeting').toUpperCase()}
@@ -55,7 +66,7 @@ const ContactPage = () => {
         <div className="bg-[#e7a48a] dark:bg-[#1d1617] flex flex-col py-4 px-4 lg:px-8 rounded-lg">
           <ContactForm />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

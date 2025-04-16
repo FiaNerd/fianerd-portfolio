@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GraphicGalleryItems from './GraphicImageItems';
-import SidebarGraphicPortfolio from './SidebarGraphicPortfolio';
+import SidebarGraphicPortfolio from './GraphicSidebarPortfolio';
 import useSmoothScroll from '../../../hook/useSmoothScroll';
 
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [sidebarWidth, setSidebarWidth] = useState(700); // Initial sidebar width
   const [selectedUrlTitle, setSelectedUrlTitle] = useState<string | null>(null);
 
   const graphicImages = t('graphicItemsPortfolio', {
@@ -28,7 +27,7 @@ const GraphicImageGallery = () => {
     role: string;
     challenges: string;
     results: string;
-    testmonial: string;
+    testimonial: string;
     tags: string[];
     relatedProjects: string[];
     ctaLink: string;
@@ -47,11 +46,9 @@ const GraphicImageGallery = () => {
   };
 
   const handleCloseSidebar = () => {
-    setIsSidebarOpen(false); // Close the sidebar
-    setSelectedUrlTitle(null); // Clear the selected image when closing the sidebar
+    setIsSidebarOpen(false);
+    setSelectedUrlTitle(null);
   };
-
-  // useSmoothScroll(0); 
 
   const selectedImageDetails = graphicImages.find(
     (image) => image.urlTitle === selectedUrlTitle
@@ -72,7 +69,7 @@ const GraphicImageGallery = () => {
     role: '',
     challenges: '',
     results: '',
-    testmonial: '',
+    testimonial: '',
     tags: [],
     relatedProjects: [],
     ctaLink: '',
@@ -84,9 +81,9 @@ const GraphicImageGallery = () => {
   return (
     <>
       <div className="p-4 flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8 md:gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-8 md:gap-12 ">
           {/* Column 1 */}
-          <div className="grid md:grid-rows-2 lg:grid-rows-3  gap-8 md:gap-4 lg:place-self-center">
+          <div className="grid md:grid-rows-2 lg:grid-rows-3  gap-8 md:gap-12 lg:place-self-center">
             {column1.map((image, index) => (
               <div
                 key={index}
@@ -103,7 +100,7 @@ const GraphicImageGallery = () => {
           </div>
 
           {/* Column 2 */}
-          <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-8 md:gap-4 ">
+          <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-8 md:gap-12 ">
             {column2.map((image, index) => (
               <div
                 key={index}
@@ -120,7 +117,7 @@ const GraphicImageGallery = () => {
           </div>
 
           {/* Column 3 */}
-          <div className="grid lg:grid-rows-2 gap-8 md:gap-4 lg:place-self-center">
+          <div className="grid lg:grid-rows-2 gap-8 md:gap-12 lg:place-self-center">
             {column3.map((image, index) => (
               <div
                 key={index}
@@ -142,8 +139,6 @@ const GraphicImageGallery = () => {
             <SidebarGraphicPortfolio
               isVisible={isSidebarOpen}
               onClose={handleCloseSidebar}
-              sidebarWidth={sidebarWidth}
-              setSidebarWidth={setSidebarWidth}
               graphicDetails={selectedImageDetails}
             />
           </div>

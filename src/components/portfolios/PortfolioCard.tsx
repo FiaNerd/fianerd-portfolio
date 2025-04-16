@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import Popup from '../partials/Popup';
 
-interface PortfolioCardProps {
+interface IPortfolioCardProps {
   title: string;
   urlTitle: string;
   applicationType: string;
@@ -19,6 +19,7 @@ interface PortfolioCardProps {
   ctaButton: string;
   projectDuration: string;
   titleDescription: string;
+  sectionId?: string;
 }
 
 const PortfolioCard = ({
@@ -36,13 +37,20 @@ const PortfolioCard = ({
   ctaButton,
   projectDuration,
   titleDescription,
-}: PortfolioCardProps) => {
+  sectionId,
+}: IPortfolioCardProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   const navigate = useNavigate();
 
+<<<<<<< HEAD
    const navigateToDetails = () => {
     navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
       state: { fromSection: projectType.toLowerCase() },
+=======
+  const navigateToDetails = () => {
+    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
+      state: { sectionId },
+>>>>>>> hotfix/navigation
     });
   };
 
@@ -55,8 +63,8 @@ const PortfolioCard = ({
     <section className="flex flex-col items-center justify-center">
       {/* First Section (Navigable) */}
       <div
-        className="flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-t-lg cursor-pointer"
-        onClick={navigateToDetails} // Navigate on click anywhere in this section
+        className="portfolio-card flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-t-lg cursor-pointer"
+        onClick={navigateToDetails}
       >
         {/* Image */}
         <img

@@ -33,6 +33,7 @@ const GraphicPortfolioContentAbout = ({
 
   // Fetch titles dynamically
   const titles = t('graphicItemsPortfolioTitles', { returnObjects: true }) as {
+    clientTitle?: string;
     subTitle?: string;
     techTitle?: string;
     tech?: string;
@@ -45,7 +46,7 @@ const GraphicPortfolioContentAbout = ({
   };
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 px-8">
       {graphicItemsPortfolio.map((item, index) => (
         <div key={index} className="flex flex-col gap-4">
           {/* Client Section */}

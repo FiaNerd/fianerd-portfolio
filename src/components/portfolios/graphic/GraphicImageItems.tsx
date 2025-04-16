@@ -16,9 +16,15 @@ const GraphicGalleryItems = ({
   };
 
   return (
+<<<<<<< HEAD
     <div className="w-full h-full rounded-lg p-4">
       {/* Image Container */}
       <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-outrounded-lg overflow-hidden">
+=======
+    <div className="w-full h-full rounded-lg ">
+      {/* Image Container */}
+      <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg overflow-hidden">
+>>>>>>> hotfix/navigation
         {/* Image */}
         <img
           src={image.image}

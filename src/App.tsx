@@ -39,8 +39,7 @@ const App = () => {
           >
             <Routes>
               {/* Home Route */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/profile/home" element={<Navigate to="/" />} />
+              <Route path="/home" element={<HomePage />} />
               <Route path="/profile" element={<HomePage />} />
               <Route path="/profile/who-am-i" element={<HomePage />} />
               <Route path="/profile/web-skills" element={<HomePage />} />

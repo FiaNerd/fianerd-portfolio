@@ -12,9 +12,13 @@ import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
-import { useEffect, useRef } from 'react';
+import { startTransition, useEffect, useRef } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
+<<<<<<< HEAD
 import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeroIntro';
+=======
+import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeorIntro';
+>>>>>>> hotfix/navigation
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
@@ -39,6 +43,7 @@ const PortfolioPage = () => {
   ];
 
   useEffect(() => {
+    startTransition(() => {});
     handleHashNavigation({
       sectionIds,
       headerHeight,
@@ -58,6 +63,7 @@ const PortfolioPage = () => {
       style={{
         marginTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
+        overflowX: 'hidden',
       }}
     >
       <section id="my-work" className="bg-[#436e74] dark:bg-[#16443e]">
@@ -83,7 +89,7 @@ const PortfolioPage = () => {
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 leading-[0]"
           sticky
         />
-        <Top5projects />
+        <Top5projects sectionId="top-5-projects" />
       </section>
 
       <section id="frontend" className="top-0">
@@ -106,7 +112,7 @@ const PortfolioPage = () => {
             dark="dark:text-[#d6a70d] dark:bg-[#4a2342]"
             sticky
           />
-          <FrontendPortfolio />
+          <FrontendPortfolio sectionId="frontend" />
         </SectionPlate>
         <RippedPaperBottom colorLight={'#f69497'} colorDark={'#4a2342'} />
       </section>
@@ -123,7 +129,7 @@ const PortfolioPage = () => {
           dark="dark:text-[#1d7ecc] dark:bg-[#1b0909]"
           sticky
         />
-        <BackendPortfolio />
+        <BackendPortfolio sectionId="backend" />
       </section>
 
       <section id="fullstack">
@@ -143,7 +149,7 @@ const PortfolioPage = () => {
             dark="dark:text-[#831518] dark:bg-[#dc8e32]"
             sticky
           />
-          <FullStackPortfolio />
+          <FullStackPortfolio sectionId="fullstack" />
         </SectionPlate>
         <RippedPaperBottom colorLight={'#9fc4bd'} colorDark={'#dc8e32'} />
       </section>

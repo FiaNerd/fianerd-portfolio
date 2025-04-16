@@ -37,27 +37,29 @@ const NavigationMenu = () => {
   };
 
   useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.hash.replace('#', '');
-
-      if (sectionId) {
+    const hash = location.hash;
+    if (hash) {
+      const sectionId = hash.replace('#', '');
+      // Wait briefly for the element to render
+      setTimeout(() => {
         const element = document.getElementById(sectionId);
-
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         } else {
           console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      }
-    };
-
-    handleHashNavigation();
+      }, 300); 
+    }
   }, [location]);
 
   const closeMenuOnClick = () => {
     setNavigationMenuOpen(false);
     setNavigationMenu('');
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> hotfix/navigation
   const handleMenuClick = (
     e: React.MouseEvent,
     url: string,
@@ -69,6 +71,7 @@ const NavigationMenu = () => {
       navigate(url);
     }
 
+<<<<<<< HEAD
     // Scroll to the section after navigation
     if (sectionId) {
       setTimeout(() => {
@@ -80,8 +83,32 @@ const NavigationMenu = () => {
         }
       }, 0); // Delay to ensure the page has loaded
     }
+=======
+    startTransition(() => {
+      // If we are already on the destination (portfolio) page…
+      if (sectionId && location.pathname === url) {
+        // Update the URL with the hash but then immediately scroll
+        navigate(`${url}#${sectionId}`);
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else if (location.pathname !== url) {
+        // When not on the portfolio page, navigate normally with the hash if provided
+        if (sectionId) {
+          navigate(`${url}#${sectionId}`);
+        } else {
+          navigate(url);
+        }
+      }
+>>>>>>> hotfix/navigation
 
-    closeMenuOnClick();
+      setTimeout(() => {
+        closeMenuOnClick();
+      }, 300);
+    });
   };
 
   return (

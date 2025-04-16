@@ -1,8 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useTranslation } from 'react-i18next';
 import PortfolioCard from './PortfolioCard';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
 
-const FullStackPortfolio = () => {
+interface IFullStackProps {
+  sectionId: string;
+}
+
+const FullStackPortfolio = ({ sectionId }: IFullStackProps) => {
   const { t } = useTranslation('portfolio');
 
   // Retrieve frontend items dynamically
@@ -13,8 +19,16 @@ const FullStackPortfolio = () => {
     }
   );
 
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
+
   return (
-    <section className="max-w-screen-xl mx-auto px-4">
+    <motion.section
+      ref={fadeInDown.ref}
+      initial="hidden"
+      animate={fadeInDown.ctrls}
+      variants={fadeInDown.vars}
+      className="max-w-screen-2xl mx-auto px-4"
+    >
       <p
         className="mb-12"
         dangerouslySetInnerHTML={{
@@ -43,10 +57,11 @@ const FullStackPortfolio = () => {
               techTitle={item.techTitle}
               projectDuration={item.projectDuration}
               titleDescription={item.titleDescription}
+              sectionId={sectionId}
             />
           ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

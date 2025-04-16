@@ -4,7 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { startTransition } from 'react';
+=======
+>>>>>>> hotfix/navigation
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
@@ -23,9 +26,15 @@ const BlogCards = () => {
   };
 
   const handleNaviagete = (urlTitle: string) => {
+<<<<<<< HEAD
     startTransition(() => {
       navigate(`/blog/${encodeURIComponent(urlTitle)}`);
     });
+=======
+    // Encode the URL title to handle special characters
+    // const encodedUrlTitle = encodeURIComponent(urlTitle);
+    navigate(`/blog/${encodeURIComponent(urlTitle)}`);
+>>>>>>> hotfix/navigation
   };
 
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
