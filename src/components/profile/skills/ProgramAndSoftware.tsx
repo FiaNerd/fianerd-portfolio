@@ -12,7 +12,7 @@ const ProgramAndSoftware = () => {
       initial="hidden"
       animate={fadeInDown.ctrls}
       variants={fadeInDown.vars}
-      className="max-w-screen-2xl mx-auto py-12"
+      className="max-w-screen-2xl mx-auto py-12 px-4"
     >
       <div className="items-center md:row-start-2 md:col-start-1 mb-20">
         <h2 className="text-[#035d44] dark:text-[#a05a48] mb-0 font-textImportant text-4xl md:text-5xl font-bold text-center md:leading-[3rem]">

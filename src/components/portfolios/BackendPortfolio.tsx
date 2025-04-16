@@ -4,7 +4,11 @@ import PortfolioCard from './PortfolioCard';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
-const BackendPortfolio = () => {
+interface IBackendProps {
+  sectionId: string;
+}
+
+const BackendPortfolio = ({ sectionId }: IBackendProps) => {
   const { t } = useTranslation('portfolio');
 
   const backendItems = t('portfolio/backendPortfolioSection:backendItems', {
@@ -46,6 +50,7 @@ const BackendPortfolio = () => {
               techTitle={item.techTitle}
               projectDuration={item.projectDuration}
               titleDescription={item.titleDescription}
+              sectionId={sectionId}
             />
           ))}
       </div>

@@ -28,7 +28,7 @@ const Education = () => {
           initial="hidden"
           animate={fadeInLeft.ctrls}
           variants={fadeInLeft.vars}
-          className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-4 md:px-10"
+          className="flex flex-col w-full lg:sticky md:top-[12em] lg:w-1/3 mt-2 md:mt-12 px-2 md:px-10"
         >
           <p className="text-text-accent dark:text-[#b5685c] uppercase -mb-2 tracking-loose">
             {t('titleWorkingAction')}

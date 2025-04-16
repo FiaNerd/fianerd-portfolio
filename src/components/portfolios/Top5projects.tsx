@@ -5,7 +5,10 @@ import Button from '../partials/Button';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
-const Top5Projects = () => {
+interface ITop5Item {
+  sectionId: string;
+}
+const Top5Projects = ({ sectionId }: ITop5Item) => {
   const { t } = useTranslation('portfolio/top5PortfolioSection');
   const navigate = useNavigate();
 
@@ -20,12 +23,11 @@ const Top5Projects = () => {
     urlTitle: string;
   }[];
 
-  const navigateToDetails = (urlTitle: string) => {
-    // navigate(`/portfolio/${urlTitle}`);
-    // Encode the URL title to handle special characters
+   const navigateToDetails = (urlTitle: string) => {
     const encodedUrlTitle = encodeURIComponent(urlTitle);
-    navigate(`/portfolio/${encodedUrlTitle}`);
+    navigate(`/portfolio/${encodedUrlTitle}`, { state: { sectionId } });
   };
+  
   const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
 
   return (
@@ -68,7 +70,7 @@ const Top5Projects = () => {
                   className={`${columnSpan} h-auto lg:h-full flex flex-col`}
                 >
                   <div
-                    className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow cursor-pointer"
+                    className="portfolio-card group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow cursor-pointer"
                     onClick={() => navigateToDetails(item.urlTitle)}
                   >
                     {/* Image */}

@@ -19,7 +19,7 @@ const HomePage = () => {
     'profile/hobbies',
   ]);
   const [isNavigating, setIsNavigating] = useState(false);
-    const isNavigatingRef = useRef(isNavigating);
+  const isNavigatingRef = useRef(isNavigating);
 
   const { headerHeight } = useHeaderHeight();
 
@@ -41,9 +41,9 @@ const HomePage = () => {
       headerHeight,
       isHeaderVisible: false,
       isNavigating: isNavigatingRef,
-        onNavigationComplete: () => {
-          setIsNavigating(false); // Set to false once navigation is done
-        },
+      onNavigationComplete: () => {
+        setIsNavigating(false); // Set to false once navigation is done
+      },
     });
   }, [headerHeight]);
 
@@ -62,6 +62,7 @@ const HomePage = () => {
       <section id="home" className="relative">
         <HeroSection />
       </section>
+
       {/* Profile Section */}
       <section id="who-am-i" className="relative">
         <Title
@@ -76,8 +77,10 @@ const HomePage = () => {
         />
         <AboutMe />
       </section>
+
       {/* Skills Section */}
       <Skills />
+
       {/* Work Experience Section */}
       <section id="experience" className="relative">
         <Title
@@ -90,6 +93,7 @@ const HomePage = () => {
         />
         <WorkExperience />
       </section>
+
       {/* Education Section */}
       <section id="education" className="relative">
         <Title
@@ -103,6 +107,7 @@ const HomePage = () => {
         />
         <Education />
       </section>
+
       {/* Hobbies Section */}
       <section id="hobbies" className="mb-20 relative">
         <Title

@@ -5,7 +5,11 @@ import PortfolioCard from './PortfolioCard';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
-const FrontendPortfolio = () => {
+interface FrontendPortfolioProps {
+  sectionId: string;
+}
+
+const FrontendPortfolio = ({ sectionId }: FrontendPortfolioProps) => {
   const { t } = useTranslation('portfolio/frontendPortfolioSection');
 
   // Retrieve frontend items dynamically
@@ -51,6 +55,7 @@ const FrontendPortfolio = () => {
               techTitle={item.techTitle}
               projectDuration={item.projectDuration}
               titleDescription={item.titleDescription}
+              sectionId={sectionId} 
             />
           ))}
       </div>

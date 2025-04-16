@@ -4,7 +4,11 @@ import PortfolioCard from './PortfolioCard';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
-const FullStackPortfolio = () => {
+interface IFullStackProps {
+  sectionId: string;
+}
+
+const FullStackPortfolio = ({ sectionId }: IFullStackProps) => {
   const { t } = useTranslation('portfolio');
 
   // Retrieve frontend items dynamically
@@ -53,6 +57,7 @@ const FullStackPortfolio = () => {
               techTitle={item.techTitle}
               projectDuration={item.projectDuration}
               titleDescription={item.titleDescription}
+              sectionId={sectionId}
             />
           ))}
       </div>
