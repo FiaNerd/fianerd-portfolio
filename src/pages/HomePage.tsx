@@ -11,7 +11,7 @@ import useScrollUpdateURL from '../hook/useScrollUpdateURL';
 import { useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../utils/handleHashNavigation';
 
-const HomePage = () => {
+const HomePage = ({headerHeight}: {headerHeight: number}) => {
   const { t } = useTranslation([
     'profile/aboutMe',
     'profile/experience',
@@ -21,7 +21,6 @@ const HomePage = () => {
   const [isNavigating, setIsNavigating] = useState(false);
   const isNavigatingRef = useRef(isNavigating);
 
-  const { headerHeight } = useHeaderHeight();
 
   const sectionIds = [
     'home',
@@ -42,7 +41,7 @@ const HomePage = () => {
       isHeaderVisible: false,
       isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-        setIsNavigating(false); // Set to false once navigation is done
+        //setIsNavigating(false); // Set to false once navigation is done
       },
     });
   }, [headerHeight]);
@@ -53,11 +52,6 @@ const HomePage = () => {
   return (
     <div
       className="bg-blend-multiply"
-      style={{
-        paddingTop: `${headerHeight}px `,
-        transition: 'top 0.3s ease',
-        overflowX: 'hidden',
-      }}
     >
       {/* Hero Section */}
       <section id="home" className="relative">

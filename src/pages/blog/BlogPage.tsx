@@ -6,9 +6,8 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
 
-const BlogPage = () => {
+const BlogPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation('blogPost');
-  const { headerHeight } = useHeaderHeight();
   const [isNavigating, setIsNavigating] = useState(false);
   const isNavigatingRef = useRef(isNavigating);
   const sectionIds = ['blog']; // Initialize sectionIds with appropriate values
@@ -36,16 +35,7 @@ const BlogPage = () => {
   useScrollUpdateURL(sectionIds, 'blog', headerHeight);
 
   return (
-    <section
-      id="blog"
-      className="relative w-full overflow-hidden"
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'top 0.3s ease',
-        overflowX: 'hidden',
-        minHeight: '100vh',
-      }}
-    >
+    <section id="blog" className="relative w-full overflow-hidden">
       <Title
         title={t('blogPostTitle')}
         dot={'.'}

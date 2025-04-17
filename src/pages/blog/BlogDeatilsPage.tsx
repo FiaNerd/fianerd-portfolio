@@ -10,9 +10,8 @@ import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
 import Button from '../../components/partials/Button';
 
-const BlogDetailsPage = () => {
+const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation(['blogPost', 'blogPostCards', 'common']);
-  const { headerHeight } = useHeaderHeight();
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
 
@@ -32,10 +31,6 @@ const BlogDetailsPage = () => {
 
   return (
     <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
-      }}
       className="bg-blend-multiply"
     >
       <div className="mb-8">

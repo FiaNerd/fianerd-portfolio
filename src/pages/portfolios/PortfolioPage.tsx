@@ -16,7 +16,7 @@ import { startTransition, useEffect, useRef } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
 import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeorIntro';
 
-const PortfolioPage = () => {
+const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
@@ -26,7 +26,6 @@ const PortfolioPage = () => {
     'portfolio/graphicPortfolioSection',
   ]);
 
-  const { headerHeight } = useHeaderHeight();
   const isNavigating = useRef(false);
 
   const sectionIds = [
@@ -56,11 +55,6 @@ const PortfolioPage = () => {
   return (
     <div
       className="bg-blend-multiply"
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'top 0.3s ease',
-        overflowX: 'hidden',
-      }}
     >
       <section id="my-work" className="bg-[#436e74] dark:bg-[#16443e]">
         <Title

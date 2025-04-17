@@ -15,11 +15,13 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from './components/partials/LoadingSpinner';
 import { useHeaderVisibility } from './hook/useHeaderVisibility';
+import useHeaderHeight from './hook/useHeaderHeight';
 
 const App = () => {
   const { i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const isHeaderVisible = useHeaderVisibility();
+  const headerHeight = useHeaderHeight();
 
   // Monitor i18n's ready state
   useEffect(() => {
@@ -47,7 +49,14 @@ const App = () => {
           <SocialMediaAndContact />
         </div>
         {/* Main Content */}
-        <main className="flex-grow ">
+        <main
+          className="flex-grow"
+          style={{
+            marginTop: headerHeight,
+            transition: 'top 0.3s ease',
+            overflowX: 'hidden',
+          }}
+        >
           <ErrorBoundary
             fallbackRender={({ error, resetErrorBoundary }) => (
               <ErrorFallback
@@ -62,48 +71,96 @@ const App = () => {
           >
             <Routes>
               {/* Home Route */}
-              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
               <Route path="/profile/home" element={<Navigate to="/" />} />
-              <Route path="/profile" element={<HomePage />} />
-              <Route path="/profile/who-am-i" element={<HomePage />} />
-              <Route path="/profile/web-skills" element={<HomePage />} />
-              <Route path="/profile/graphic-skills" element={<HomePage />} />
-              <Route path="/profile/additional-skills" element={<HomePage />} />
+              <Route
+                path="/profile"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/profile/who-am-i"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/profile/web-skills"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/profile/graphic-skills"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/profile/additional-skills"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
               <Route
                 path="/profile/programs-and-softwares"
-                element={<HomePage />}
+                element={<HomePage headerHeight={headerHeight} />}
               />
-              <Route path="/profile/experience" element={<HomePage />} />
-              <Route path="/profile/education" element={<HomePage />} />
-              <Route path="/profile/hobbies" element={<HomePage />} />
+              <Route
+                path="/profile/experience"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/profile/education"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/profile/hobbies"
+                element={<HomePage headerHeight={headerHeight} />}
+              />
 
-              <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio"
+                element={<PortfolioPage headerHeight={headerHeight} />}
+              />
               <Route
                 path="/portfolio/my-work"
                 element={<Navigate to="/portfolio" />}
               />
               <Route
                 path="/portfolio/top-5-projects"
-                element={<PortfolioPage />}
+                element={<PortfolioPage headerHeight={headerHeight} />}
               />
-              <Route path="/portfolio/frontend" element={<PortfolioPage />} />
-              <Route path="/portfolio/backend" element={<PortfolioPage />} />
-              <Route path="/portfolio/fullstack" element={<PortfolioPage />} />
+              <Route
+                path="/portfolio/frontend"
+                element={<PortfolioPage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/portfolio/backend"
+                element={<PortfolioPage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/portfolio/fullstack"
+                element={<PortfolioPage headerHeight={headerHeight} />}
+              />
               <Route
                 path="/portfolio/graphic-design"
-                element={<PortfolioPage />}
+                element={<PortfolioPage headerHeight={headerHeight} />}
               />
               <Route
                 path="/portfolio/:urlTitle"
-                element={<PortfolioDetailsPage />}
+                element={<PortfolioDetailsPage headerHeight={headerHeight} />}
               />
 
               {/* Blog Routes */}
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/:urlTitle" element={<BlogDeatilsPage />} />
+              <Route
+                path="/blog"
+                element={<BlogPage headerHeight={headerHeight} />}
+              />
+              <Route
+                path="/blog/:urlTitle"
+                element={<BlogDeatilsPage headerHeight={headerHeight} />}
+              />
 
               {/* Contact Route */}
-              <Route path="/contact" element={<ContactPage />} />
+              <Route
+                path="/contact"
+                element={<ContactPage headerHeight={headerHeight} />}
+              />
 
               {/* 404 Page */}
               <Route path="*" element={<PageNotFound />} />

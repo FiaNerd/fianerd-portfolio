@@ -9,15 +9,13 @@ import useSmoothScroll from '../../hook/useSmoothScroll';
 import HeroDetails from '../../components/partials/HeroDetails';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 
-const PortfolioDetailsPage = () => {
+const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const { i18n } = useTranslation();
   const { t } = useTranslation(['portfolio', 'common']);
   const location = useLocation();
   const navigate = useNavigate();
-
-  const { headerHeight } = useHeaderHeight();
 
   useEffect(() => {
     const portfolioData =
@@ -68,10 +66,6 @@ const PortfolioDetailsPage = () => {
 
   return (
     <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
-      }}
       className="bg-blend-multiply mb-8"
     >
       <div className="mb-8">

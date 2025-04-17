@@ -24,14 +24,14 @@ export const useHeaderVisibility = () => {
       // Only apply scroll logic if scrolling is possible
       if (documentHeight > viewportHeight) {
         // Hide the header when scrolling down
-        if (currentScrollY > lastScrollY + 5) {
+        if (currentScrollY > lastScrollY) {
           if (!isHeaderHidden) {
             setIsHeaderHidden(true);
             console.log('Hiding header (scrolling down)');
           }
         }
         // Show the header when scrolling up
-        else if (currentScrollY < lastScrollY - 5) {
+        else if (currentScrollY < lastScrollY ) {
           if (isHeaderHidden) {
             setIsHeaderHidden(false);
             console.log('Showing header (scrolling up)');
