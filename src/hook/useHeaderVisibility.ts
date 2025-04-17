@@ -30,17 +30,18 @@ export const useHeaderVisibility = () => {
 
       // Hide the header when scrolling down
       if (currentScrollY > lastScrollY + scrollThreshold) {
-        if (!isHeaderHidden) {
-          setIsHeaderHidden(true);
-        }
+        setTimeout(() => {
+          if (!isHeaderHidden) {
+            setIsHeaderHidden(true);
+          }
+        }, 100); // Add a 100ms delay
+      } else if (currentScrollY < lastScrollY - scrollThreshold) {
+        setTimeout(() => {
+          if (isHeaderHidden) {
+            setIsHeaderHidden(false);
+          }
+        }, 100); // Add a 100ms delay
       }
-      // Show the header when scrolling up
-      else if (currentScrollY < lastScrollY - scrollThreshold) {
-        if (isHeaderHidden) {
-          setIsHeaderHidden(false);
-        }
-      }
-
       setLastScrollY(currentScrollY); // Update the last scroll position
     };
 
