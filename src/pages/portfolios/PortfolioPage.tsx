@@ -53,9 +53,7 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
   useScrollUpdateURL(sectionIds, 'portfolio', headerHeight);
 
   return (
-    <div
-      className="bg-blend-multiply"
-    >
+    <div className="bg-blend-multiply">
       <section id="my-work" className="bg-[#436e74] dark:bg-[#16443e]">
         <Title
           title={t('titlePortfolio')}

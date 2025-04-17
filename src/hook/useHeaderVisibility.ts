@@ -5,30 +5,37 @@ export const useHeaderVisibility = () => {
   const [isHeaderHidden, setIsHeaderHidden] = useState(false); // Tracks if the header is hidden
   const [lastScrollY, setLastScrollY] = useState(0); // Tracks the last scroll position
   const location = useLocation(); // Detects route changes
+  const [isNavigating, setIsNavigating] = useState(false); // Tracks if navigation is happening
 
   useEffect(() => {
     // Reset header visibility when navigating to a new page
     console.log('Route changed, resetting header visibility');
     setIsHeaderHidden(false); // Ensure the header is visible
     setLastScrollY(window.scrollY); // Reset the last scroll position to the current scroll position
+    setIsNavigating(true); // Mark as navigating
+
+    // Clear the navigation flag after a short delay
+    const timeout = setTimeout(() => setIsNavigating(false), 300);
+
+    return () => clearTimeout(timeout);
   }, [location]); // Trigger on route changes
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isNavigating) return; // Ignore scroll events triggered by navigation
+
       const currentScrollY = window.scrollY;
 
       // Hide the header when scrolling down
-      if (currentScrollY > lastScrollY && !isHeaderHidden) { // Add a small threshold to avoid flickering
+      if (currentScrollY > lastScrollY + 5) {
         if (!isHeaderHidden) {
           setIsHeaderHidden(true);
-          console.log('Hiding header (scrolling down)');
         }
       }
       // Show the header when scrolling up
-      else if (currentScrollY < lastScrollY) { // Add a small threshold to avoid flickering
+      else if (currentScrollY < lastScrollY - 5) {
         if (isHeaderHidden) {
           setIsHeaderHidden(false);
-          console.log('Showing header (scrolling up)');
         }
       }
 
@@ -40,7 +47,7 @@ export const useHeaderVisibility = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY, isHeaderHidden]);
+  }, [lastScrollY, isHeaderHidden, isNavigating]);
 
   return isHeaderHidden;
 };

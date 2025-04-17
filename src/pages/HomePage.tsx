@@ -53,7 +53,7 @@ const HomePage = ({headerHeight}: {headerHeight: number}) => {
     <div
       className="bg-blend-multiply"
     >
-      {/* Hero Section */} 
+      {/* Hero Section */}
       <section id="home" className="relative">
         <HeroSection />
       </section>

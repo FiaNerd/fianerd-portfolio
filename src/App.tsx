@@ -12,7 +12,8 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from './components/partials/LoadingSpinner';
 import { useHeaderVisibility } from './hook/useHeaderVisibility';
-import useHeaderHeight from './hook/useHeaderHeight';
+import useHeaderHeight  from './hook/useHeaderHeight'; // Import the missing hook
+
 import BlogPage from './pages/blog/BlogPage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 
