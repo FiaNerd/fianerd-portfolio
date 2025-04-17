@@ -22,7 +22,7 @@ const App = () => {
   // Monitor i18n's ready state
   useEffect(() => {
     if (i18n.isInitialized) {
-      setIsLoading(true);
+      setIsLoading(false);
     } else {
       setIsLoading(true);
     }

@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
 import { startTransition, Suspense } from 'react';
+import LoadingSpinner from '../partials/LoadingSpinner';
 
 interface IProps {
   navigationMenu: string;
@@ -95,7 +96,7 @@ const NavigationSubMenuDropDownDesktop = ({
         </div>
 
         {/* Submenu Section */}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <div className="col-span-2 grid gap-6 grid-cols-2 xl:grid-cols-2 p-4 bg-bg-primary">
             {currentMenu.subMenu.map((subMenu, index) => (
               <div key={index} className="flex flex-col">

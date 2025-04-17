@@ -5,6 +5,7 @@ import Arrow from '../../assets/svg/Arrow';
 import { Route } from '../../config/MenuItemsData';
 import useIsTabletOrMobile from '../../hook/useTabletOrMobile';
 import DropdownMenuMobile from './DropdownMenuMobile';
+import LoadingSpinner from '../partials/LoadingSpinner';
 
 interface MenuItemsProps {
   items: Route;
@@ -97,7 +98,7 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingSpinner />}>
       <ul
         className="text-nav-text font-sub-heading font-medium flex items-center space-x-4"
         onMouseEnter={handleMouseEnter}
