@@ -57,7 +57,7 @@ const PortfolioPage = () => {
     <div
       className="bg-blend-multiply"
       style={{
-        marginTop: `${headerHeight}px`,
+        paddingTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
         overflowX: 'hidden',
       }}

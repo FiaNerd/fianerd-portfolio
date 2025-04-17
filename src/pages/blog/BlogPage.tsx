@@ -40,7 +40,7 @@ const BlogPage = () => {
       id="blog"
       className="relative w-full overflow-hidden"
       style={{
-        marginTop: `${headerHeight}px`,
+        paddingTop: `${headerHeight}px`,
         transition: 'top 0.3s ease',
         overflowX: 'hidden',
         minHeight: '100vh',

@@ -8,7 +8,9 @@ export const useHeaderVisibility = () => {
 
   useEffect(() => {
     // Reset header visibility when navigating to a new page or the same page
-    console.log('Route changed or navigated to the same page, resetting header visibility');
+    console.log(
+      'Route changed or navigated to the same page, resetting header visibility'
+    );
     setIsHeaderHidden(false); // Ensure the header is visible
     setLastScrollY(window.scrollY); // Reset the last scroll position to the current scroll position
   }, [location.key]); // Use `location.key` to detect navigation, even to the same page
