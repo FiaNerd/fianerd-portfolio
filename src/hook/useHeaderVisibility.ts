@@ -7,42 +7,32 @@ export const useHeaderVisibility = () => {
   const location = useLocation(); // Detects route changes
 
   useEffect(() => {
-    // Reset header visibility when navigating to a new page or the same page
-    console.log(
-      'Route changed or navigated to the same page, resetting header visibility'
-    );
+    // Reset header visibility when navigating to a new page
+    console.log('Route changed, resetting header visibility');
     setIsHeaderHidden(false); // Ensure the header is visible
     setLastScrollY(window.scrollY); // Reset the last scroll position to the current scroll position
-  }, [location.key]); // Use `location.key` to detect navigation, even to the same page
+  }, [location]); // Trigger on route changes
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const documentHeight = document.body.scrollHeight; // Total height of the document
-      const viewportHeight = window.innerHeight; // Height of the viewport
 
-      // Only apply scroll logic if scrolling is possible
-      if (documentHeight > viewportHeight) {
-        // Hide the header when scrolling down
-        if (currentScrollY > lastScrollY) {
-          if (!isHeaderHidden) {
-            setIsHeaderHidden(true);
-            console.log('Hiding header (scrolling down)');
-          }
+      // Hide the header when scrolling down
+      if (currentScrollY > lastScrollY && !isHeaderHidden) { // Add a small threshold to avoid flickering
+        if (!isHeaderHidden) {
+          setIsHeaderHidden(true);
+          console.log('Hiding header (scrolling down)');
         }
-        // Show the header when scrolling up
-        else if (currentScrollY < lastScrollY ) {
-          if (isHeaderHidden) {
-            setIsHeaderHidden(false);
-            console.log('Showing header (scrolling up)');
-          }
-        }
-
-        setLastScrollY(currentScrollY); // Update the last scroll position
-      } else {
-        // If no scrolling is possible, always show the header
-        setIsHeaderHidden(false);
       }
+      // Show the header when scrolling up
+      else if (currentScrollY < lastScrollY) { // Add a small threshold to avoid flickering
+        if (isHeaderHidden) {
+          setIsHeaderHidden(false);
+          console.log('Showing header (scrolling up)');
+        }
+      }
+
+      setLastScrollY(currentScrollY); // Update the last scroll position
     };
 
     window.addEventListener('scroll', handleScroll);

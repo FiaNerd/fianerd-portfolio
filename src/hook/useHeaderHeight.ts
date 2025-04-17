@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useHeaderHeight = () => {
-  const [headerHeight, setHeaderHeight] = useState(0);
+  const [headerHeight, setHeaderHeight] = useState(112); // Default height (e.g., 64px)
 
   useEffect(() => {
     const header = document.getElementById('header');
