@@ -11,8 +11,31 @@ import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
 import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 import ErrorFallback from './components/partials/errors/ErrorFallBack';
+import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import LoadingSpinner from './components/partials/LoadingSpinner';
 
 const App = () => {
+  const { i18n } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Monitor i18n's ready state
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      setIsLoading(true);
+    } else {
+      setIsLoading(true);
+    }
+  }, [i18n.isInitialized]);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container flex items-center justify-center h-screen  bg-gradient-to-br from-[#e48149] via-[#e13d03] to-[#691203] ">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       <Header />
