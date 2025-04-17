@@ -115,6 +115,5 @@ export const navRoutes: Route[] = [
   {
     title: 'blog',
     url: '/blog',
-    sectionId: 'blog',
   },
 ];

@@ -1,21 +1,20 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
-
+import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import SocialMediaAndContact from './components/SocialMediaAndContact';
 import ContactPage from './pages/contact/ContactPage';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/portfolios/PortfolioPage';
 import PageNotFound from './pages/PageNotFound';
-import BlogPage from './pages/blog/BlogPage';
 import BlogDeatilsPage from './pages/blog/BlogDeatilsPage';
-import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
-import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from './components/partials/LoadingSpinner';
 import { useHeaderVisibility } from './hook/useHeaderVisibility';
 import useHeaderHeight from './hook/useHeaderHeight';
+import BlogPage from './pages/blog/BlogPage';
+import PortfolioDetailsPage from './pages/portfolios/PortfolioDetailsPage';
 
 const App = () => {
   const { i18n } = useTranslation();
