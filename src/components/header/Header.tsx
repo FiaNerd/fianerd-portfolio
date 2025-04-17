@@ -9,7 +9,7 @@ import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
 
-const Header = () => {
+const Header = ({ isHeaderHidden }: { isHeaderHidden: boolean }) => {
   const { t } = useTranslation(['translation']);
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
@@ -19,33 +19,33 @@ const Header = () => {
   const [isNavigating, setIsNavigating] = useState(false);
   const headerRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isNavigating) {
-        return;
-      }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (isNavigating) {
+  //       return;
+  //     }
 
-      const currentScrollY = window.scrollY;
+  //     const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 0) {
-        setIsHidden(true);
-      } else if (currentScrollY < lastScrollY) {
-        setIsHidden(false);
-      }
-      setLastScrollY(currentScrollY);
-    };
+  //     if (currentScrollY > lastScrollY && currentScrollY > 0) {
+  //       setIsHidden(true);
+  //     } else if (currentScrollY < lastScrollY) {
+  //       setIsHidden(false);
+  //     }
+  //     setLastScrollY(currentScrollY);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isNavigating]);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [lastScrollY, isNavigating]);
 
   return (
     <header
       ref={headerRef}
       id="header"
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
-        isHidden ? '-translate-y-full' : 'translate-y-0'
+        isHeaderHidden ? '-translate-y-full' : 'translate-y-0'
       } backdrop-blur-xl bg-bg-secondary/5 dark:bg-bg-primary/5`}
       style={{
         left: `${sidebarWidth}px`,

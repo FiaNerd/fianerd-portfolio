@@ -14,10 +14,12 @@ import ErrorFallback from './components/partials/errors/ErrorFallBack';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from './components/partials/LoadingSpinner';
+import { useHeaderVisibility } from './hook/useHeaderVisibility';
 
 const App = () => {
   const { i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
+  const isHeaderHidden = useHeaderVisibility();
 
   // Monitor i18n's ready state
   useEffect(() => {
@@ -38,7 +40,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header isHeaderHidden={isHeaderHidden} />
       <div className="flex flex-grow">
         {/* Sidebar */}
         <div className="sticky top-0 h-screen bg-bg-secondary text-text-secondary dark:bg-black dark:text-text-accent z-50 pointer-events-auto">
