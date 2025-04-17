@@ -9,7 +9,6 @@ export const useHeaderVisibility = () => {
 
   useEffect(() => {
     // Reset header visibility when navigating to a new page
-    console.log('Route changed, resetting header visibility');
     setIsHeaderHidden(false); // Ensure the header is visible
     setLastScrollY(window.scrollY); // Reset the last scroll position to the current scroll position
     setIsNavigating(true); // Mark as navigating
@@ -26,14 +25,17 @@ export const useHeaderVisibility = () => {
 
       const currentScrollY = window.scrollY;
 
+      // Prevent flickering by adding a threshold
+      const scrollThreshold = 10;
+
       // Hide the header when scrolling down
-      if (currentScrollY > lastScrollY + 5) {
+      if (currentScrollY > lastScrollY + scrollThreshold) {
         if (!isHeaderHidden) {
           setIsHeaderHidden(true);
         }
       }
       // Show the header when scrolling up
-      else if (currentScrollY < lastScrollY - 5) {
+      else if (currentScrollY < lastScrollY - scrollThreshold) {
         if (isHeaderHidden) {
           setIsHeaderHidden(false);
         }
