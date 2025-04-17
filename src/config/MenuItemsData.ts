@@ -16,7 +16,6 @@ export const navRoutes: Route[] = [
   {
     title: 'home',
     url: '/profile',
-    sectionId: 'home',
     nav: HomePage,
   },
   {
@@ -116,6 +115,5 @@ export const navRoutes: Route[] = [
   {
     title: 'blog',
     url: '/blog',
-    sectionId: 'blog',
   },
 ];

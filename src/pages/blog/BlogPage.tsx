@@ -16,7 +16,7 @@ const BlogPage = () => {
   useEffect(() => {
     isNavigatingRef.current = isNavigating;
   }, [isNavigating]);
-  
+
   useScrollUpdateURL(['blog'], '', headerHeight);
 
   return (
