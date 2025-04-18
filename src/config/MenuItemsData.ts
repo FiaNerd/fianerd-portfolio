@@ -1,5 +1,6 @@
 import { faCaretDown, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import HomePage from '../pages/HomePage';
+import PortfolioPage from '../pages/portfolios/PortfolioPage';
 
 export interface Route {
   url: string;
@@ -77,8 +78,8 @@ export const navRoutes: Route[] = [
   {
     title: 'portfolio',
     url: '/portfolio/my-work',
-    sectionId: 'my-work',
     icon: faCaretDown,
+    nav: PortfolioPage,
     subMenu: [
       {
         title: 'top5best-projects',

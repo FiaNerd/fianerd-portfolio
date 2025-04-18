@@ -17,15 +17,18 @@ export const useHeaderVisibility = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
+      // Prevent flickering by adding a threshold
+      const scrollThreshold = 10;
+
       // Hide the header when scrolling down
-      if (currentScrollY > lastScrollY && !isHeaderHidden) { // Add a small threshold to avoid flickering
+      if (currentScrollY > lastScrollY + scrollThreshold) {
         if (!isHeaderHidden) {
           setIsHeaderHidden(true);
           console.log('Hiding header (scrolling down)');
         }
       }
       // Show the header when scrolling up
-      else if (currentScrollY < lastScrollY) { // Add a small threshold to avoid flickering
+      else if (currentScrollY < lastScrollY - scrollThreshold) {
         if (isHeaderHidden) {
           setIsHeaderHidden(false);
           console.log('Showing header (scrolling up)');
@@ -35,7 +38,7 @@ export const useHeaderVisibility = () => {
       setLastScrollY(currentScrollY); // Update the last scroll position
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
