@@ -1,18 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 import Title from '../../components/partials/Title';
 import BlogCards from '../../components/blog/BlogCards';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
-import { startTransition, useEffect, useRef, useState } from 'react';
-import { handleHashNavigation } from '../../utils/handleHashNavigation';
-
 const BlogPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation('blogPost');
 
   useScrollUpdateURL(['blog'], '', headerHeight);
 
   return (
-    <section id="blog" className="relative w-full overflow-hidden">
+    <section id="blog" className="relative w-full ">
       <Title
         title={t('blogPostTitle')}
         dot={'.'}

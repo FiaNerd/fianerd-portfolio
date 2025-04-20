@@ -1,5 +1,5 @@
 import { useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 interface IFadeInProps {
@@ -33,32 +33,60 @@ export default function useFadeIn({
   direction = 'up', // Default direction
 }: IFadeInProps) {
   const ctrls = useAnimation();
-
   const { ref, inView } = useInView({
-    threshold: threshold || 0.1,
-    triggerOnce: !repeat,
+    threshold: threshold || 0.2, // Ensure at least 50% of the element is visible
+    triggerOnce: !repeat, // Trigger only once unless repeat is true
   });
+
+  // Dynamically detect screen size
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia('(max-width: 768px)').matches
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     if (inView) {
-      ctrls.start('visible');
+      ctrls.start('visible').then(() => {
+        console.log('Animation complete');
+      });
     } else {
       ctrls.start('hidden');
     }
   }, [ctrls, inView]);
 
+  // Set different animations for mobile and desktop
   const vars = customVars || {
     hidden: {
       opacity: 0,
-      x: direction === 'left' ? -100 : direction === 'right' ? 100 : 0,
-      y: direction === 'up' ? -100 : direction === 'down' ? 100 : 0,
+      x: isMobile
+        ? 0
+        : direction === 'left'
+        ? -100
+        : direction === 'right'
+        ? 100
+        : 0, // No horizontal movement for mobile
+      y: isMobile
+        ? direction === 'up'
+          ? 100
+          : direction === 'down'
+          ? -100
+          : 0 // Vertical movement for mobile
+        : 0, // No vertical movement for desktop
     },
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
       transition: {
-        delay: delay || 1,
+        delay: delay || 0.5,
         duration: duration || 0.8,
         ease: [0.2, 0.65, 0.3, 0.9],
       },
