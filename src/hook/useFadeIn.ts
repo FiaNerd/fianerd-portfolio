@@ -69,15 +69,15 @@ export default function useFadeIn({
       x: isMobile
         ? 0
         : direction === 'left'
-        ? -100
+        ? -50
         : direction === 'right'
-        ? 100
+        ? 50
         : 0, // No horizontal movement for mobile
       y: isMobile
         ? direction === 'up'
-          ? 100
+          ? 50
           : direction === 'down'
-          ? -100
+          ? 50
           : 0 // Vertical movement for mobile
         : 0, // No vertical movement for desktop
     },
