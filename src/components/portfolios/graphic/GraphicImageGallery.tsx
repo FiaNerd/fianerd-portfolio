@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GraphicGalleryItems from './GraphicImageItems';
 import SidebarGraphicPortfolio from './GraphicSidebarPortfolio';
-import useSmoothScroll from '../../../hook/useSmoothScroll';
 
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');

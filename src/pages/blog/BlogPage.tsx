@@ -6,8 +6,10 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
 
-const BlogPage = () => {
+const BlogPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation('blogPost');
+
+  useScrollUpdateURL(['blog'], '', headerHeight);
 
   return (
     <section id="blog" className="relative w-full overflow-hidden">

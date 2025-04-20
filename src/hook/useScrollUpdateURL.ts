@@ -13,7 +13,7 @@ const useScrollUpdateURL = (
   const isNavigating = useRef(false);
   const lastVisibleSectionId = useRef<string | null>(null);
 
-    useEffect(() => {
+  useEffect(() => {
     const onScroll = () =>
       updateURLOnScroll({
         sectionIds,
@@ -24,7 +24,7 @@ const useScrollUpdateURL = (
         location,
         isNavigating,
       });
-  
+
     const onHashNavigate = () => {
       if (window.location.hash) {
         handleHashNavigation({
@@ -35,10 +35,12 @@ const useScrollUpdateURL = (
         });
       }
     };
-  
+
+    // Scroll to the correct section on page load
+    onHashNavigate();
+
     window.addEventListener('scroll', onScroll);
-    onHashNavigate(); // Only call if there's a hash
-  
+
     return () => {
       window.removeEventListener('scroll', onScroll);
     };

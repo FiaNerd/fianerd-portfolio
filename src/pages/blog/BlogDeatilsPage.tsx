@@ -1,7 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import useSmoothScroll from '../../hook/useSmoothScroll';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 import { IBlogDetails } from '../../interfaces/BlogInterface';
 import { Icon } from '@iconify/react';
 import HeroDetails from '../../components/partials/HeroDetails';

@@ -5,9 +5,7 @@ import { useTranslation } from 'react-i18next';
 import portfolioDataEn from '../../../public/locales/en/portfolioSection.json';
 import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
-import useSmoothScroll from '../../hook/useSmoothScroll';
 import HeroDetails from '../../components/partials/HeroDetails';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 
 const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();

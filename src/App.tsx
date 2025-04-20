@@ -75,6 +75,7 @@ const App = () => {
                 element={<HomePage headerHeight={headerHeight} />}
               />
               <Route path="/profile/home" element={<Navigate to="/" />} />
+
               <Route
                 path="/profile"
                 element={<HomePage headerHeight={headerHeight} />}
@@ -146,7 +147,10 @@ const App = () => {
               />
 
               {/* Blog Routes */}
-              <Route path="/blog" element={<BlogPage />} />
+              <Route
+                path="/blog"
+                element={<BlogPage headerHeight={headerHeight} />}
+              />
               <Route
                 path="/blog/:urlTitle"
                 element={<BlogDeatilsPage headerHeight={headerHeight} />}

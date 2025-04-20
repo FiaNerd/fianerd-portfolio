@@ -1,9 +1,6 @@
-import { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ContactForm from '../../components/contact/ContactForm';
 import Title from '../../components/partials/Title';
-import useSmoothScroll from '../../hook/useSmoothScroll';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
