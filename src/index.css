@@ -18,7 +18,7 @@ body {
   font-style: normal;
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.6;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 /* * {
   outline: 1px solid red;
@@ -75,36 +75,11 @@ p {
   font-size: clamp(1rem, 1.8vw, 1.125rem);
   color: var(--color-text-primary);
 }
-
+/* 
 section {
   min-height: auto;
 }
-
-/* Override for the caption */
-.yarl__slide_caption {
-  position: absolute;
-  top: 20px; /* Position from the top of the image */
-  left: 0;
-  right: 0;
-  z-index: 1050;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional background */
-  color: white; /* Optional text color */
-  padding: 10px;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-/* Ensure the image is not being overlapped by other elements */
-.yarl__slide_image {
-  z-index: 100; /* Make sure the image is underneath the caption */
-}
-
-/* Custom styling for the image inside the Lightbox */
-.lightbox-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
+ */
 
 .outlined-text {
   color: #25021c;

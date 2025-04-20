@@ -12,11 +12,13 @@ import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
-import { startTransition, useEffect, useRef } from 'react';
+import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
 import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeorIntro';
 
 const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
+  const [isNavigating, setIsNavigating] = useState(false);
+
   const { t } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
@@ -26,7 +28,6 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
     'portfolio/graphicPortfolioSection',
   ]);
 
-  const isNavigating = useRef(false);
 
   const sectionIds = [
     'my-work',
@@ -37,19 +38,25 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
     'graphic-design',
   ];
 
+  const isNavigatingRef = useRef(isNavigating);
+  
+  useEffect(() => {
+    isNavigatingRef.current = isNavigating; // Keep ref in sync with state
+  }, [isNavigating]);
+  
   useEffect(() => {
     startTransition(() => {});
     handleHashNavigation({
       sectionIds,
       headerHeight,
       isHeaderVisible: true,
-      isNavigating,
+      isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-        console.log('Navigation completed!');
+        setIsNavigating(false); // Update state
       },
     });
   }, [headerHeight]);
-
+  
   useScrollUpdateURL(sectionIds, 'portfolio', headerHeight);
 
   return (

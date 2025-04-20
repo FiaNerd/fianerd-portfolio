@@ -54,7 +54,8 @@ const App = () => {
           style={{
             marginTop: headerHeight,
             transition: 'top 0.3s ease',
-            overflowX: 'hidden',
+            // overflowX: 'hidden',
+            // overflow: 'hidden',
           }}
         >
           <ErrorBoundary
