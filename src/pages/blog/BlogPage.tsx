@@ -8,31 +8,8 @@ import { handleHashNavigation } from '../../utils/handleHashNavigation';
 
 const BlogPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation('blogPost');
-  const [isNavigating, setIsNavigating] = useState(false);
-  const isNavigatingRef = useRef(isNavigating);
-  const sectionIds = ['blog']; // Initialize sectionIds with appropriate values
-
-  // Ensure that the ref is updated when the state changes
-  useEffect(() => {
-    isNavigatingRef.current = isNavigating;
-  }, [isNavigating]);
 
   useScrollUpdateURL(['blog'], '', headerHeight);
-
-  useEffect(() => {
-    startTransition(() => {});
-    handleHashNavigation({
-      sectionIds,
-      headerHeight,
-      isHeaderVisible: true,
-      isNavigating: isNavigatingRef,
-      onNavigationComplete: () => {
-        console.log('Navigation completed!');
-      },
-    });
-  }, [headerHeight]);
-
-  useScrollUpdateURL(sectionIds, 'blog', headerHeight);
 
   return (
     <section id="blog" className="relative w-full overflow-hidden">

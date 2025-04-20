@@ -75,7 +75,8 @@ const App = () => {
                 path="/"
                 element={<HomePage headerHeight={headerHeight} />}
               />
-              <Route path="/profile" element={<Navigate to="/" />} />
+              <Route path="/profile/home" element={<Navigate to="/" />} />
+
               <Route
                 path="/profile"
                 element={<HomePage headerHeight={headerHeight} />}
