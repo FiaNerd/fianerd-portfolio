@@ -54,13 +54,13 @@ export default function useFadeIn({
 
   useEffect(() => {
     if (inView) {
-      ctrls.start('visible').then(() => {
-        console.log('Animation complete');
+      requestAnimationFrame(() => {
+        ctrls.start('visible');
       });
     } else {
       ctrls.start('hidden');
     }
-  }, [ctrls, inView]);
+  }, [ctrls, inView, isMobile]);
 
   // Set different animations for mobile and desktop
   const vars = customVars || {
