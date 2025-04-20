@@ -56,13 +56,13 @@ const WorkExperience = () => {
           variants={fadeInRight.vars}
           className="flex mx-auto md:ml-12 lg:w-2/3 sticky"
         >
-          <div className="max-w-screen-2xl	mx-auto w-full h-full">
+          <div className="max-w-screen-2xlmx-auto w-full h-full">
             <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
               <div className="hidden md:block absolute h-full border-2 lg:border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
 
-              <div className="rounded-lg md:mb-8 flex justify-between items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                 <div className="order-1 lg:w-5/12"></div>
-                <div className="order-1 px-2 py-4 md:w-5/12 md:py-4 text-left">
+                <div className="order-1 md:w-5/12 px-1 py-4 text-left">
                   <p className="mb-3 text-bg-secondary dark:text-text-accent">
                     {t('dateWorkBrutal')}
                   </p>
@@ -84,8 +84,6 @@ const WorkExperience = () => {
                   ></p>
                 </div>
               </div>
-
-              {/* <SvgArrowLine colorDark="#b0c3c6" colorLight="#aa7339" direction="right" className="items-center md:hidden" /> */}
 
               <div className="md:mb-8 flex justify-between items-center w-full left-timeline ">
                 <div className="order-1 md:w-5/12"></div>
