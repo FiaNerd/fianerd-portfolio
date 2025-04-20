@@ -6,12 +6,11 @@ import AboutMe from '../components/profile/about/AboutMe';
 import Education from '../components/profile/education/Education';
 import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
-import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdateURL';
-import { useEffect, useRef, useState } from 'react';
+import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../utils/handleHashNavigation';
 
-const HomePage = ({headerHeight}: {headerHeight: number}) => {
+const HomePage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation([
     'profile/aboutMe',
     'profile/experience',
@@ -19,8 +18,6 @@ const HomePage = ({headerHeight}: {headerHeight: number}) => {
     'profile/hobbies',
   ]);
   const [isNavigating, setIsNavigating] = useState(false);
-  const isNavigatingRef = useRef(isNavigating);
-
 
   const sectionIds = [
     'home',
@@ -34,14 +31,21 @@ const HomePage = ({headerHeight}: {headerHeight: number}) => {
     'hobbies',
   ];
 
+  const isNavigatingRef = useRef(isNavigating);
+
   useEffect(() => {
+    isNavigatingRef.current = isNavigating; // Keep ref in sync with state
+  }, [isNavigating]);
+
+  useEffect(() => {
+    startTransition(() => {});
     handleHashNavigation({
       sectionIds,
       headerHeight,
-      isHeaderVisible: false,
+      isHeaderVisible: true,
       isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-        //setIsNavigating(false); // Set to false once navigation is done
+        setIsNavigating(false); // Update state
       },
     });
   }, [headerHeight]);
@@ -50,10 +54,8 @@ const HomePage = ({headerHeight}: {headerHeight: number}) => {
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
 
   return (
-    <div
-      className="bg-blend-multiply"
-    >
-      {/* Hero Section */} 
+    <div className="bg-blend-multiply">
+      {/* Hero Section */}
       <section id="home" className="relative">
         <HeroSection />
       </section>
