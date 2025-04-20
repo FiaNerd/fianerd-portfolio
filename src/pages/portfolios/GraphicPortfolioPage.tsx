@@ -6,11 +6,17 @@ import { motion } from 'framer-motion';
 const GraphicPortfolioPage = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
 
-  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
+  // Add threshold to ensure the element is detected
+  const fadeInDown = useFadeIn({
+    direction: 'down',
+    delay: 0.5,
+    duration: 1,
+    threshold: 0.1,
+  });
 
   return (
     <motion.section
-      ref={fadeInDown.ref}
+      ref={fadeInDown.ref} // Attach ref correctly
       initial="hidden"
       animate={fadeInDown.ctrls}
       variants={fadeInDown.vars}

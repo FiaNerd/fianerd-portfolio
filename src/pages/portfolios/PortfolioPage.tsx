@@ -28,7 +28,6 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
     'portfolio/graphicPortfolioSection',
   ]);
 
-
   const sectionIds = [
     'my-work',
     'top-5-projects',
@@ -39,11 +38,11 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
   ];
 
   const isNavigatingRef = useRef(isNavigating);
-  
+
   useEffect(() => {
     isNavigatingRef.current = isNavigating; // Keep ref in sync with state
   }, [isNavigating]);
-  
+
   useEffect(() => {
     startTransition(() => {});
     handleHashNavigation({
@@ -56,7 +55,7 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
       },
     });
   }, [headerHeight]);
-  
+
   useScrollUpdateURL(sectionIds, 'portfolio', headerHeight);
 
   return (
@@ -149,7 +148,7 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
         <RippedPaperBottom colorLight={'#9fc4bd'} colorDark={'#dc8e32'} />
       </section>
 
-      <section id="graphic-design" className="top-0">
+      <section id="graphic-design" className="relative">
         <Title
           title={t('portfolio/graphicPortfolioSection:titleGraphicPortfolio')}
           dot={'.'}
