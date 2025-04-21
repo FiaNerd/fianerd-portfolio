@@ -62,7 +62,6 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
         setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
-            console.log('Scrolling to element:', element);
             element.scrollIntoView({ behavior: 'smooth' });
           } else {
             console.warn(`Element with ID "${sectionId}" not found.`);

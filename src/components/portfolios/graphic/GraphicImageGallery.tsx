@@ -99,7 +99,7 @@ const GraphicImageGallery = () => {
           </div>
 
           {/* Column 2 */}
-          <div className="grid md:grid-rows-4 lg:grid-rows-4 gap-8 md:gap-12 ">
+          <div className="grid md:grid-rows-2 lg:grid-rows-4 gap-8 md:gap-12 ">
             {column2.map((image, index) => (
               <div
                 key={index}

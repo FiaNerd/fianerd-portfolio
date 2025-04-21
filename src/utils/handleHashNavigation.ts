@@ -18,8 +18,6 @@ export const handleHashNavigation = ({
 
   if (hash) {
     const sectionId = hash.substring(1);
-    console.log(sectionIds);
-    console.log(isNavigating.current);
 
     if (sectionIds.includes(sectionId)) {
       const element = document.getElementById(sectionId);
