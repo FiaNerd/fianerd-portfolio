@@ -65,7 +65,7 @@
     "ctaButtonViewAll": "Visa Detaljer",
     "frontendItems": [
       {
-        "projectType": "Sido projekt",
+        "projectType": "Sidoprojekt",
         "title": "BrutalBeats",
         "urlTitle": "brutal-beats",
         "applicationType": "webb",
@@ -414,7 +414,7 @@
         ]
       },
       {
-        "projectType": "Sido projekt",
+        "projectType": "Sidoprojekt",
         "title": "Slowfashion API",
         "urlTitle": "slowfashion-api",
         "applicationType": "App",
@@ -499,7 +499,7 @@
 
     "fullstackItems": [
       {
-        "projectType": "Sido projekt",
+        "projectType": "Sidoprojekt",
         "title": "Printagon Graphics",
         "urlTitle": "printagon-graphics",
         "applicationType": "webb",
@@ -587,7 +587,7 @@
         ]
       },
       {
-        "projectType": "Sido projekt / LIA",
+        "projectType": "Sidoprojekt / LIA",
         "title": "Prodigies",
         "urlTitle": "prodigies",
         "applicationType": "App",
