@@ -56,10 +56,6 @@ const NavigationMenu = () => {
     setNavigationMenuOpen(false);
     setNavigationMenu('');
   };
-<<<<<<< HEAD
-=======
-
->>>>>>> hotfix/navigation
   const handleMenuClick = (
     e: React.MouseEvent,
     url: string,
@@ -71,19 +67,6 @@ const NavigationMenu = () => {
       navigate(url);
     }
 
-<<<<<<< HEAD
-    // Scroll to the section after navigation
-    if (sectionId) {
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          console.warn(`Section with ID "${sectionId}" not found.`);
-        }
-      }, 0); // Delay to ensure the page has loaded
-    }
-=======
     startTransition(() => {
       // If we are already on the destination (portfolio) page…
       if (sectionId && location.pathname === url) {
@@ -103,7 +86,6 @@ const NavigationMenu = () => {
           navigate(url);
         }
       }
->>>>>>> hotfix/navigation
 
       setTimeout(() => {
         closeMenuOnClick();

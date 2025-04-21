@@ -42,15 +42,9 @@ const PortfolioCard = ({
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   const navigate = useNavigate();
 
-<<<<<<< HEAD
    const navigateToDetails = () => {
     navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
       state: { fromSection: projectType.toLowerCase() },
-=======
-  const navigateToDetails = () => {
-    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
-      state: { sectionId },
->>>>>>> hotfix/navigation
     });
   };
 

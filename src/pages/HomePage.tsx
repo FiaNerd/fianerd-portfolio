@@ -42,11 +42,7 @@ const HomePage = () => {
       isHeaderVisible: false,
       isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-<<<<<<< HEAD
         setIsNavigating(false); 
-=======
-        setIsNavigating(false); // Set to false once navigation is done
->>>>>>> hotfix/navigation
       },
     });
   }, [headerHeight]);
