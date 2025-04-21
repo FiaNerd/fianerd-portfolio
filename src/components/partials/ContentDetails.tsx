@@ -31,8 +31,8 @@ const ContentDetails = ({
         <div className="border border-[#3C2F2F] mb-2"></div>
 
         <div className="flex flex-col lg:flex-row gap-2 items-center">
-          <NavLink
-            to={http}
+          <a
+            href={http}
             target="_blank"
             className="text-bg-secondary dark:text-text-accent font-bold cusros-pointer hover:underline"
           >
@@ -43,7 +43,7 @@ const ContentDetails = ({
               style={{ color: icon.color }}
               className="text-btn-bg hover:text-bg-hover cursor-pointe items-centerr"
             />
-          </NavLink>
+          </a>
           <p className="text-xs lg:text-sm mb-0">{privateText}</p>
         </div>
       </div>

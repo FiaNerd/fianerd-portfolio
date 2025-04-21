@@ -8,8 +8,14 @@ import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
 import Button from '../../components/partials/Button';
 
+<<<<<<< HEAD
 const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation(['blogPost', 'blogPostCards', 'common']);
+=======
+const BlogDetailsPage = () => {
+  const { t, ready } = useTranslation(['blogPost', 'blogPostCards', 'common']);
+  const { headerHeight } = useHeaderHeight();
+>>>>>>> 92a8a149 (Fixed navigation to Blog details page)
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
 
@@ -17,15 +23,29 @@ const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
     returnObjects: true,
   }) as IBlogDetails[];
 
+  if (!blogDetails || blogDetails.length === 0) {
+    console.error('No blog details found.');
+    return <div>{t('noBlogPost', 'No blog posts available.')}</div>;
+  }
   const blog = blogDetails.find((blog) => blog.urlTitle === urlTitle);
 
   if (!blog) {
-    return <div>{t('noBlogPost')}</div>;
+    console.error('Blog post not found:', urlTitle);
+    return <div>{t('noBlogPost', 'Blog post not found.')}</div>;
   }
+<<<<<<< HEAD
 
   const handleNavigate = () => {
     navigate(`/blog`);
+=======
+  const handleNavigationBack = () => {
+    navigate(-1);
+>>>>>>> 92a8a149 (Fixed navigation to Blog details page)
   };
+
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div
