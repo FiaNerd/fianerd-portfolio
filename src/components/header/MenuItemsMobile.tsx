@@ -87,6 +87,7 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
         className="px-4 font-sub-heading tracking-wider text-xl hover:text-nav-hover focus:text-nav-hover"
         onClick={(e) =>
           startTransition(() => {
+            window.scrollTo(0, 0);
             handleMenuClick(e, items.url, items.sectionId);
           })
         }
@@ -120,7 +121,7 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
                 )}
               </button>
 
-              <Suspense fallback={<div>Loading submenu...</div>}>
+              <Suspense fallback={<LoadingSpinner />}>
                 <DropdownMenuMobile
                   submenus={
                     isTabletOrMobile && items.title === 'portfolio'

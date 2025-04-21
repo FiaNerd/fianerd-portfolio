@@ -24,6 +24,7 @@ const PortfolioHeorIntro = () => {
     link.click();
     document.body.removeChild(link);
   };
+  
 
   return (
     <div className="max-w-screen-7xl mx-auto px-4 md:px-12 py-8 grid grid-row-1 lg:grid-cols-[50%_40%] 2xl:grid-cols-[40%_30%] gap-8 lg:gap-20 items-center justify-center">

@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import Button from '../partials/Button';
 import ResponsiveHeroImage from './ResponsiveHeroImage';
-import { startTransition } from 'react';
+import { startTransition, useEffect } from 'react';
 
 const HeroSection = () => {
   const { t } = useTranslation('heroSection');
@@ -27,10 +27,9 @@ const HeroSection = () => {
   };
 
   const handleNavigate = () => {
+    window.scrollTo(0, 0);
     startTransition(() => {
-      startTransition(() => {
-        navigate('/portfolio');
-      });
+      navigate('/portfolio');
     });
   };
 
