@@ -6,7 +6,6 @@ import HeroDetails from '../../components/partials/HeroDetails';
 import ContentTitleDetails from '../../components/partials/ContentTitleDetails';
 import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
-import Button from '../../components/partials/Button';
 
 const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation(['blogPost', 'blogPostCards', 'common']);
@@ -24,13 +23,15 @@ const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   }
 
   const handleNavigate = () => {
+    window.scrollTo({
+      top: headerHeight,
+      behavior: 'smooth',
+    });
     navigate(`/blog`);
   };
 
   return (
-    <div
-      className="bg-blend-multiply"
-    >
+    <div className="bg-blend-multiply">
       <div className="mb-8">
         <HeroDetails
           title={blog.title}

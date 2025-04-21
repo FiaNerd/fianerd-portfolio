@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogInterface';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
+import { startTransition } from 'react';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
@@ -20,6 +20,16 @@ const BlogCards = () => {
     const s = Math.floor(Math.random() * 41) + 60; // Saturation (60-100%)
     const l = Math.floor(Math.random() * 41) + 40; // Lightness (40-80%)
     return `hsl(${h}, ${s}%, ${l}%)`;
+  };
+
+  const handleNaviagete = (urlTitle: string) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    startTransition(() => {
+      navigate(`/blog/${encodeURIComponent(urlTitle)}`);
+    });
   };
 
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
@@ -104,12 +114,12 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <NavLink
-                  to={`/blog/${encodeURIComponent(card.urlTitle)}`}
+                <button
+                  onClick={() => handleNaviagete(card.urlTitle)}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </NavLink>
+                </button>
               </div>
             </div>
           </motion.div>

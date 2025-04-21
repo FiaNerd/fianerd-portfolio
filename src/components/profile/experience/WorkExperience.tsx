@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../partials/Button';
-import { startTransition } from 'react';
+import { startTransition, useEffect } from 'react';
 import useFadeIn from '../../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
@@ -11,8 +11,12 @@ const WorkExperience = () => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     startTransition(() => {
-      navigate('/portfolio');
+      navigate('/portfolio/my-work');
     });
   };
 
