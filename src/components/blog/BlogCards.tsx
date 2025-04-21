@@ -23,6 +23,10 @@ const BlogCards = () => {
   };
 
   const handleNaviagete = (urlTitle: string) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     startTransition(() => {
       navigate(`/blog/${encodeURIComponent(urlTitle)}`);
     });
@@ -110,12 +114,12 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <NavLink
-                  to={`/blog/${encodeURIComponent(card.urlTitle)}`}
+                <button
+                  onClick={() => handleNaviagete(card.urlTitle)}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </NavLink>
+                </button>
               </div>
             </div>
           </motion.div>
