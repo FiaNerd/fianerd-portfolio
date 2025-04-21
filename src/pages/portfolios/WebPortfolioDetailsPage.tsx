@@ -11,6 +11,7 @@ import backendPortfolioSection from '../../../public/locales/en/portfolio/backen
 import fullstackPortfolioSection from '../../../public/locales/en/portfolio/fullstackPortfolioSection.json';
 import graphicPortfolioSection from '../../../public/locales/en/portfolio/graphicPortfolioSection.json';
 import { mergeTranslations } from '../../utils/mergeTranslation';
+import { useTranslation } from 'react-i18next';
 
 const mergedPortfolioData = mergeTranslations(
   portfolioData,
@@ -22,16 +23,19 @@ const mergedPortfolioData = mergeTranslations(
 );
 
 const WebPortfolioDetailsPage = () => {
+  const { t, ready } = useTranslation('common');
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const navigate = useNavigate();
-  const { headerHeight } = useHeaderHeight();
+  const  headerHeight  = useHeaderHeight();
+
+  if (!ready) {
+    return <div>Loading translations...</div>;
+  }
 
   useEffect(() => {
     const loadPortfolioData = async () => {
       try {
-        console.log('Merged Portfolio Data:', mergedPortfolioData);
-
         const sections = [
           ...(mergedPortfolioData.top5Items || []),
           ...(mergedPortfolioData.frontendItems || []),
@@ -62,10 +66,12 @@ const WebPortfolioDetailsPage = () => {
     loadPortfolioData();
   }, [urlTitle]);
 
-  const handleNavigationback = () => {
-    startTransition(() => {
+  const handleNavigateBack = () => {
+    if (window.history.length > 1) {
       navigate(-1);
-    });
+    } else {
+      navigate('/');
+    }
   };
 
   return (
@@ -91,11 +97,11 @@ const WebPortfolioDetailsPage = () => {
 
       <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
         <button
-          onClick={handleNavigationback}
+          onClick={handleNavigateBack}
           className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          Go Back
+          {t('goBack').toUpperCase()}
         </button>
       </div>
 

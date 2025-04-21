@@ -18,6 +18,7 @@ export const navRoutes: Route[] = [
     title: 'home',
     url: '/profile/home',
     nav: HomePage,
+    sectionId: 'home',
   },
   {
     title: 'profile',
