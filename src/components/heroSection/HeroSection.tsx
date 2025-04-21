@@ -26,11 +26,7 @@ const HeroSection = () => {
     document.body.removeChild(link);
   };
 
-<<<<<<< HEAD
   const handleNavigatePortfolio = () => {
-=======
-  const handleNavigate = () => {
->>>>>>> hotfix/navigation
     startTransition(() => {
       navigate('/portfolio');
     });
@@ -67,11 +63,7 @@ const HeroSection = () => {
                 {t('ctaButtonCV')}
               </Button>
               <Button
-<<<<<<< HEAD
                 onClick={handleNavigatePortfolio}
-=======
-                onClick={handleNavigate}
->>>>>>> hotfix/navigation
                 className="flex flex-row gap-2 justify-center items-center border-2 border-[#350712] bg-[#350712] dark:bg-transparent dark:border-btn-bg text-bg-primary dark:text-btn-bg tracking-wide font-semibold hover:bg-bg-hover hover:border-[#350712ab] hover:text-bg-primary dark:hover:text-bg-primary dark:hover:bg-bg-hover"
               >
                 <Icon icon="ix:explore" width="30" height="30" />{' '}

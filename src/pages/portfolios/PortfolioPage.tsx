@@ -14,11 +14,7 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
 import { startTransition, useEffect, useRef } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
-<<<<<<< HEAD
 import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeroIntro';
-=======
-import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeorIntro';
->>>>>>> hotfix/navigation
 
 const PortfolioPage = () => {
   const { t } = useTranslation([
