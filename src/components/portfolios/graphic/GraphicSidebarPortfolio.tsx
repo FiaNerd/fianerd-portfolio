@@ -61,12 +61,8 @@ const SidebarGraphicPortfolio = ({
   graphicDetails,
 }: ISidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection', 'common']);
-<<<<<<< HEAD:src/components/portfolios/graphic/SidebarGraphicPortfolio.tsx
-  const lightGallery = useRef<any>(null);
-=======
   const [openLightbox, setOpenLightbox] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
->>>>>>> hotfix/navigation:src/components/portfolios/graphic/GraphicSidebarPortfolio.tsx
 
   useEffect(() => {
     if (!isVisible) {
@@ -156,11 +152,7 @@ const SidebarGraphicPortfolio = ({
                 className="font-sub-heading inline-flex items-center gap-2 text-xl transition-all duration-200 bg-none hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover w-auto py-1"
               >
                 <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-<<<<<<< HEAD:src/components/portfolios/graphic/SidebarGraphicPortfolio.tsx
-                {t('common:goBack')}
-=======
                 {t('common:goBack').toUpperCase()}
->>>>>>> hotfix/navigation:src/components/portfolios/graphic/GraphicSidebarPortfolio.tsx
               </button>
             </div>
 
