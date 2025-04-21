@@ -11,9 +11,12 @@ const Education = () => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     startTransition(() => {
-      navigate('/portfolio');
+      navigate('/portfolio/my-work');
     });
   };
 
