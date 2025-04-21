@@ -14,7 +14,7 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
 import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
-import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeorIntro';
+import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeroIntro';
 
 const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
   const [isNavigating, setIsNavigating] = useState(false);

@@ -107,7 +107,7 @@ const NavigationSubMenuDropDownDesktop = ({
                     startTransition(() => {
                       handleMenuClick(e, subMenu.url, subMenu.sectionId);
                     })
-                  } 
+                  }
                 >
                   <span
                     dangerouslySetInnerHTML={{ __html: t(subMenu.title) }}

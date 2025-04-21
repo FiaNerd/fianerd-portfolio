@@ -59,15 +59,17 @@ const App = () => {
           }}
         >
           <ErrorBoundary
-            fallbackRender={({ error, resetErrorBoundary }) => (
-              <ErrorFallback
-                error={error}
-                resetErrorBoundary={resetErrorBoundary}
-              />
-            )}
+            fallbackRender={({ error, resetErrorBoundary }) => {
+              console.error('Error caught by ErrorBoundary:', error);
+              return (
+                <ErrorFallback
+                  error={error}
+                  resetErrorBoundary={resetErrorBoundary}
+                />
+              );
+            }}
             onReset={() => {
-              // Reset the state of your app so the error doesn't happen again
-              window.location.reload();
+              console.log('ErrorBoundary reset');
             }}
           >
             <Routes>

@@ -57,13 +57,16 @@ const NavigationMenu = () => {
     setNavigationMenuOpen(false);
     setNavigationMenu('');
   };
-
   const handleMenuClick = (
     e: React.MouseEvent,
     url: string,
     sectionId?: string
   ) => {
     e.preventDefault();
+    // Navigate to the base route if not already there
+    if (location.pathname !== url) {
+      navigate(url);
+    }
 
     startTransition(() => {
       // If we are already on the destination (portfolio) page…

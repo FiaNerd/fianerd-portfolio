@@ -19,7 +19,6 @@ const HomePage = ({ headerHeight }: { headerHeight: number }) => {
     'profile/hobbies',
   ]);
 
-
   const sectionIds = [
     'home',
     'who-am-i',
@@ -33,24 +32,24 @@ const HomePage = ({ headerHeight }: { headerHeight: number }) => {
   ];
 
   const [isNavigating, setIsNavigating] = useState(false);
-    const isNavigatingRef = useRef(isNavigating);
-    
-    useEffect(() => {
-      isNavigatingRef.current = isNavigating; // Keep ref in sync with state
-    }, [isNavigating]);
-    
-    useEffect(() => {
-      startTransition(() => {});
-      handleHashNavigation({
-        sectionIds,
-        headerHeight,
-        isHeaderVisible: true,
-        isNavigating: isNavigatingRef,
-        onNavigationComplete: () => {
-          setIsNavigating(false); // Update state
-        },
-      });
-    }, [headerHeight]);
+  const isNavigatingRef = useRef(isNavigating);
+
+  useEffect(() => {
+    isNavigatingRef.current = isNavigating; // Keep ref in sync with state
+  }, [isNavigating]);
+
+  useEffect(() => {
+    startTransition(() => {});
+    handleHashNavigation({
+      sectionIds,
+      headerHeight,
+      isHeaderVisible: true,
+      isNavigating: isNavigatingRef,
+      onNavigationComplete: () => {
+        setIsNavigating(false); // Update state
+      },
+    });
+  }, [headerHeight]);
 
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);

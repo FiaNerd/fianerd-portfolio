@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import Button from '../../partials/Button';
 
-const GraphicGalleryItems = ({
+const GraphicImageItems = ({
   image,
   setIsSidebarOpen,
   setSelectedUrlTitle,
@@ -60,4 +60,4 @@ const GraphicGalleryItems = ({
   );
 };
 
-export default GraphicGalleryItems;
+export default GraphicImageItems;

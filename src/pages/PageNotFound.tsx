@@ -14,7 +14,6 @@ const PageNotFound = () => {
       navigate(-1);
     });
   };
-
   return (
     <div
       className=" items-center justify-center w-full h-full flex flex-col px-4 "

@@ -8,18 +8,27 @@ import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
 
 const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
-  const { t } = useTranslation(['blogPost', 'blogPostCards', 'common']);
+  const { t, ready } = useTranslation(['blogPost', 'blogPostCards', 'common']);
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
+
+  console.log('urlTitle:', urlTitle);
 
   const blogDetails: IBlogDetails[] = t('blogPostCards', {
     returnObjects: true,
   }) as IBlogDetails[];
 
+  if (!blogDetails || blogDetails.length === 0) {
+    console.error('No blog details found.');
+    return <div>{t('noBlogPost', 'No blog posts available.')}</div>;
+  }
   const blog = blogDetails.find((blog) => blog.urlTitle === urlTitle);
 
+  console.log('blog', blog);
+
   if (!blog) {
-    return <div>{t('noBlogPost')}</div>;
+    console.error('Blog post not found:', urlTitle);
+    return <div>{t('noBlogPost', 'Blog post not found.')}</div>;
   }
 
   const handleNavigate = () => {
@@ -29,6 +38,10 @@ const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
     });
     navigate(`/blog`);
   };
+
+  if (!ready) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="bg-blend-multiply">

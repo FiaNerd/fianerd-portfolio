@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
+import { startTransition } from 'react';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
@@ -23,9 +24,10 @@ const Top5Projects = ({ sectionId }: ITop5Item) => {
     urlTitle: string;
   }[];
 
-   const navigateToDetails = (urlTitle: string) => {
-    const encodedUrlTitle = encodeURIComponent(urlTitle);
-    navigate(`/portfolio/${encodedUrlTitle}`, { state: { sectionId } });
+  const navigateToDetails = (urlTitle: string) => {
+    startTransition(() => {
+      navigate(`/portfolio/${urlTitle}`);
+    });
   };
   
   const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
