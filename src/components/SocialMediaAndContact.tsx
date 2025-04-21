@@ -20,7 +20,7 @@ const SocialMediaAndContact = () => {
     <div className="sidebar h-screen flex flex-col justify-between w-[37px] md:w-[55px] mx-auto pt-12 px-[0.23em]">
       {/* Logo Section */}
       <div className="flex justify-start ">
-        <NavLink to="/#home">
+        <NavLink to="/profile/#home">
           <img
             src={
               isDarkMode

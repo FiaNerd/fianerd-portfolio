@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogInterface';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
@@ -23,6 +23,10 @@ const BlogCards = () => {
   };
 
   const handleNaviagete = (urlTitle: string) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     startTransition(() => {
       navigate(`/blog/${encodeURIComponent(urlTitle)}`);
     });
@@ -110,12 +114,12 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <Button
+                <button
                   onClick={() => handleNaviagete(card.urlTitle)}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </Button>
+                </button>
               </div>
             </div>
           </motion.div>

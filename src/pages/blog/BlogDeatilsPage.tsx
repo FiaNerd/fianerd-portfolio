@@ -1,18 +1,14 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-import useHeaderHeight from '../../hook/useHeaderHeight';
 import { IBlogDetails } from '../../interfaces/BlogInterface';
 import { Icon } from '@iconify/react';
 import HeroDetails from '../../components/partials/HeroDetails';
 import ContentTitleDetails from '../../components/partials/ContentTitleDetails';
 import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
-import Button from '../../components/partials/Button';
 
-const BlogDetailsPage = () => {
+const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t, ready } = useTranslation(['blogPost', 'blogPostCards', 'common']);
-  const { headerHeight } = useHeaderHeight();
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
 
@@ -34,8 +30,13 @@ const BlogDetailsPage = () => {
     console.error('Blog post not found:', urlTitle);
     return <div>{t('noBlogPost', 'Blog post not found.')}</div>;
   }
-  const handleNavigateBack = () => {
-    navigate && navigate(-1);
+
+  const handleNavigate = () => {
+    window.scrollTo({
+      top: headerHeight,
+      behavior: 'smooth',
+    });
+    navigate(`/blog`);
   };
 
   if (!ready) {
@@ -43,13 +44,7 @@ const BlogDetailsPage = () => {
   }
 
   return (
-    <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
-      }}
-      className="bg-blend-multiply"
-    >
+    <div className="bg-blend-multiply">
       <div className="mb-8">
         <HeroDetails
           title={blog.title}
@@ -63,7 +58,7 @@ const BlogDetailsPage = () => {
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col items-start lg:flex-row mb-8">
           <button
-            onClick={handleNavigateBack}
+            onClick={handleNavigate}
             className="inline-flex items-center gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
           >
             <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
@@ -91,6 +86,7 @@ const BlogDetailsPage = () => {
                 day={blog.day}
                 subTitle={blog.titleDescription}
               />
+
               <ContentDetails
                 content={blog.content || ''}
                 suffix={blog.suffix || ''}

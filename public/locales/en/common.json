@@ -1,6 +1,6 @@
 {
   "pageNotFoundTitle": "<span class='highlight-container'><span class='oops-text highlight-text'>Oops!</span></span> Looks like someone <br> just got lost.. ",
   "pageNotFoundMessage": "The page you are looking for is not available.",
-  "ctaButtonCV": "Download resume"
-  
+  "ctaButtonCV": "Download resume",
+  "loading": "Loading..."
 }

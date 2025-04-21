@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navRoutes } from '../../config/MenuItemsData';
 import { startTransition, Suspense } from 'react';
+import LoadingSpinner from '../partials/LoadingSpinner';
 
 interface IProps {
   navigationMenu: string;

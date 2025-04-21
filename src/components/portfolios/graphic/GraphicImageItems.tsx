@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import Button from '../../partials/Button';
 
-const GraphicGalleryItems = ({
+const GraphicImageItems = ({
   image,
   setIsSidebarOpen,
   setSelectedUrlTitle,
@@ -16,15 +16,9 @@ const GraphicGalleryItems = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="w-full h-full rounded-lg p-4">
-      {/* Image Container */}
-      <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-outrounded-lg overflow-hidden">
-=======
     <div className="w-full h-full rounded-lg ">
       {/* Image Container */}
-      <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg overflow-hidden">
->>>>>>> hotfix/navigation
+      <div className="md:h-full relative group hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg overflow-hidden">
         {/* Image */}
         <img
           src={image.image}
@@ -44,7 +38,7 @@ const GraphicGalleryItems = ({
           {/* Button at the Bottom (Hover) */}
           <Button
             onClick={handleButtonClick}
-            className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs mx-auto mb-4"
+            className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs mx-auto mb-8"
           >
             <Icon icon="ix:explore" width="20" height="20" />
             <span>{image.ctaButton}</span>
@@ -53,7 +47,7 @@ const GraphicGalleryItems = ({
       </div>
 
       {/* Button Below Image (Visible Only on Mobile and Tablet) */}
-      <div className="md:hidden mt-4 flex justify-center">
+      <div className="md:hidden mt-8 mb-8 flex justify-center">
         <Button
           onClick={handleButtonClick}
           className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs"
@@ -66,4 +60,4 @@ const GraphicGalleryItems = ({
   );
 };
 
-export default GraphicGalleryItems;
+export default GraphicImageItems;

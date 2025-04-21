@@ -12,11 +12,13 @@ import Top5projects from '../../components/portfolios/Top5projects';
 import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
-import { startTransition, useEffect, useRef } from 'react';
+import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
 import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeroIntro';
 
-const PortfolioPage = () => {
+const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
+  const [isNavigating, setIsNavigating] = useState(false);
+
   const { t } = useTranslation([
     'portfolio/portfolio',
     'portfolio/top5PortfolioSection',
@@ -25,9 +27,6 @@ const PortfolioPage = () => {
     'portfolio/fullstackPortfolioSection',
     'portfolio/graphicPortfolioSection',
   ]);
-
-  const { headerHeight } = useHeaderHeight();
-  const isNavigating = useRef(false);
 
   const sectionIds = [
     'my-work',
@@ -38,15 +37,21 @@ const PortfolioPage = () => {
     'graphic-design',
   ];
 
+  const isNavigatingRef = useRef(isNavigating);
+
+  useEffect(() => {
+    isNavigatingRef.current = isNavigating; // Keep ref in sync with state
+  }, [isNavigating]);
+
   useEffect(() => {
     startTransition(() => {});
     handleHashNavigation({
       sectionIds,
       headerHeight,
       isHeaderVisible: true,
-      isNavigating,
+      isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-        console.log('Navigation completed!');
+        setIsNavigating(false); // Update state
       },
     });
   }, [headerHeight]);
@@ -54,14 +59,7 @@ const PortfolioPage = () => {
   useScrollUpdateURL(sectionIds, 'portfolio', headerHeight);
 
   return (
-    <div
-      className="bg-blend-multiply"
-      style={{
-        marginTop: `${headerHeight}px`,
-        transition: 'top 0.3s ease',
-        overflowX: 'hidden',
-      }}
-    >
+    <div className="bg-blend-multiply">
       <section id="my-work" className="bg-[#436e74] dark:bg-[#16443e]">
         <Title
           title={t('titlePortfolio')}
@@ -150,7 +148,7 @@ const PortfolioPage = () => {
         <RippedPaperBottom colorLight={'#9fc4bd'} colorDark={'#dc8e32'} />
       </section>
 
-      <section id="graphic-design" className="top-0">
+      <section id="graphic-design" className="relative">
         <Title
           title={t('portfolio/graphicPortfolioSection:titleGraphicPortfolio')}
           dot={'.'}

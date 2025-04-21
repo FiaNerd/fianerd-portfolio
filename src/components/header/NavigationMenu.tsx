@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
+import LoadingSpinner from '../partials/LoadingSpinner';
 
 const NavigationMenu = () => {
   const { i18n, t } = useTranslation();
@@ -94,7 +95,7 @@ const NavigationMenu = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingSpinner />}>
       <div className="relative z-10">
         <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-4 lg:gap-1 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
@@ -140,7 +141,7 @@ const NavigationMenu = () => {
         </ul>
       </div>
 
-      <Suspense fallback={<div>Loading submenu...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         {navigationMenuOpen && (
           <NavigationSubMenuDropDownDesktop
             navigationMenu={navigationMenu}

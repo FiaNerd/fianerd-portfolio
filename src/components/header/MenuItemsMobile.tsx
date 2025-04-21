@@ -5,6 +5,7 @@ import Arrow from '../../assets/svg/Arrow';
 import { Route } from '../../config/MenuItemsData';
 import useIsTabletOrMobile from '../../hook/useTabletOrMobile';
 import DropdownMenuMobile from './DropdownMenuMobile';
+import LoadingSpinner from '../partials/LoadingSpinner';
 
 interface MenuItemsProps {
   items: Route;
@@ -61,7 +62,6 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
         setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
-            console.log('Scrolling to element:', element);
             element.scrollIntoView({ behavior: 'smooth' });
           } else {
             console.warn(`Element with ID "${sectionId}" not found.`);
@@ -87,6 +87,7 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
         className="px-4 font-sub-heading tracking-wider text-xl hover:text-nav-hover focus:text-nav-hover"
         onClick={(e) =>
           startTransition(() => {
+            window.scrollTo(0, 0);
             handleMenuClick(e, items.url, items.sectionId);
           })
         }
@@ -97,7 +98,7 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingSpinner />}>
       <ul
         className="text-nav-text font-sub-heading font-medium flex items-center space-x-4"
         onMouseEnter={handleMouseEnter}
@@ -120,7 +121,7 @@ const MenuItemsMobile: React.FC<MenuItemsProps> = ({
                 )}
               </button>
 
-              <Suspense fallback={<div>Loading submenu...</div>}>
+              <Suspense fallback={<LoadingSpinner />}>
                 <DropdownMenuMobile
                   submenus={
                     isTabletOrMobile && items.title === 'portfolio'

@@ -4,13 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../partials/Button';
 import useFadeIn from '../../../hook/useFadeIn';
 import { motion } from 'framer-motion';
+import { startTransition, useEffect } from 'react';
 
 const Education = () => {
   const { t } = useTranslation('profile/education');
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    navigate('/portfolio');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    startTransition(() => {
+      navigate('/portfolio/my-work');
+    });
   };
 
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });

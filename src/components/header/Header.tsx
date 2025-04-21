@@ -9,43 +9,19 @@ import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
 
-const Header = () => {
+const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
   const { t } = useTranslation(['translation']);
   const themeContext = useContext(ThemeContext);
   const currentTheme = themeContext?.currentTheme;
   const sidebarWidth = useSidebarWidth();
-  const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isNavigating, setIsNavigating] = useState(false);
   const headerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isNavigating) {
-        return;
-      }
-
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 0) {
-        setIsHidden(true);
-      } else if (currentScrollY < lastScrollY) {
-        setIsHidden(false);
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isNavigating]);
 
   return (
     <header
       ref={headerRef}
       id="header"
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
-        isHidden ? '-translate-y-full' : 'translate-y-0'
+        isHeaderVisible ? '-translate-y-full' : 'translate-y-0'
       } backdrop-blur-xl bg-bg-secondary/5 dark:bg-bg-primary/5`}
       style={{
         left: `${sidebarWidth}px`,
@@ -62,7 +38,7 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-        <NavLink to="/#home" className="flex-shrink-0">
+        <NavLink to="/profile/#home" className="flex-shrink-0">
           <img
             src={`/assets/images/logos/Logo${
               currentTheme === 'dark' ? 'Dark' : 'Light'

@@ -1,29 +1,19 @@
-import { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ContactForm from '../../components/contact/ContactForm';
 import Title from '../../components/partials/Title';
-import useSmoothScroll from '../../hook/useSmoothScroll';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 
-const ContactPage = () => {
+const ContactPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation('contact/contact');
-  const { headerHeight } = useHeaderHeight();
 
   useScrollUpdateURL(['contact'], '', headerHeight);
 
   const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
 
   return (
-    <div
-      style={{
-        paddingTop: `${headerHeight}px`,
-        transition: 'padding-top 0.3s ease',
-      }}
-      className="bg-blend-multiply min-h-screen h-full lg:bg-[url('/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg')] bg-cover bg-center w-full"
-    >
+    <div className="bg-blend-multiply min-h-screen h-full lg:bg-[url('/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg')] bg-cover bg-center w-full">
       <Title
         id="contact"
         title={t('contactTitle')}
