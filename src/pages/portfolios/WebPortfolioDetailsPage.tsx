@@ -25,7 +25,7 @@ const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const navigate = useNavigate();
-  const { headerHeight } = useHeaderHeight();
+  const headerHeight  = useHeaderHeight();
 
   useEffect(() => {
     const loadPortfolioData = async () => {
