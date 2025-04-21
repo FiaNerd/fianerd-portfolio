@@ -27,8 +27,7 @@ const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const navigate = useNavigate();
-  const headerHeight  = useHeaderHeight();
-  const location = useLocation();
+  const  headerHeight  = useHeaderHeight();
 
   if (!ready) {
     return <div>Loading translations...</div>;
