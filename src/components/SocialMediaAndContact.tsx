@@ -1,12 +1,13 @@
 import { Icon } from '@iconify/react';
-import { useContext } from 'react';
+import { startTransition, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 
 const SocialMediaAndContact = () => {
   const { t } = useTranslation('translation');
   const themeContext = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   if (!themeContext) {
     return null;
@@ -16,11 +17,23 @@ const SocialMediaAndContact = () => {
 
   const isDarkMode = currentTheme === 'dark';
 
+  const handleNavigate = (path: string, hash: string) => {
+    startTransition(() => {
+      navigate(path);
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
+    });
+  };
+
   return (
     <div className="sidebar h-screen flex flex-col justify-between w-[37px] md:w-[55px] mx-auto pt-12 px-[0.23em]">
       {/* Logo Section */}
       <div className="flex justify-start ">
-        <NavLink to="/profile/#home">
+        <button onClick={() => handleNavigate('/profile', '#home')}>
           <img
             src={
               isDarkMode
@@ -28,9 +41,9 @@ const SocialMediaAndContact = () => {
                 : '/assets/images/logos/logo-icon-dark.svg'
             }
             alt="Logo"
-            className="w-[8em] md:w-[7em]" // Match the width and height to the icon size
+            className="w-[8em] md:w-[7em]"
           />
-        </NavLink>
+        </button>
       </div>
 
       {/* Icons Section */}

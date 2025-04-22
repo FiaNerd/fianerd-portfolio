@@ -7,7 +7,7 @@ import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import HeroDetails from '../../components/partials/HeroDetails';
 
-const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
+const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const { i18n } = useTranslation();
@@ -51,8 +51,16 @@ const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
 
     startTransition(() => {
       if (sectionId) {
+        window.scrollTo({
+          top: headerHeight,
+          behavior: 'smooth',
+        });
         navigate(`/portfolio#${sectionId}`);
       } else {
+        window.scrollTo({
+          top: headerHeight,
+          behavior: 'smooth',
+        });
         navigate('/portfolio');
       }
     });
@@ -63,9 +71,7 @@ const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
   }
 
   return (
-    <div
-      className="bg-blend-multiply mb-8"
-    >
+    <div className="bg-blend-multiply mb-8">
       <div className="mb-8">
         {portfolioItems.map((item) => (
           <HeroDetails

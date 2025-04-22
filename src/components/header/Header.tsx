@@ -1,7 +1,13 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useContext, useEffect, useRef, useState } from 'react';
+import {
+  startTransition,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useSidebarWidth } from '../../hook/useSidebarWidth';
 import SelectLanguage from '../SelectLanguage';
@@ -15,6 +21,19 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
   const currentTheme = themeContext?.currentTheme;
   const sidebarWidth = useSidebarWidth();
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
+
+  const handleNavigate = (path: string, hash: string) => {
+    startTransition(() => {
+      navigate(path); 
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' }); 
+        }
+      }, 0); 
+    });
+  };
 
   return (
     <header
@@ -38,15 +57,18 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-        <NavLink to="/profile/#home" className="flex-shrink-0">
-          <img
-            src={`/assets/images/logos/Logo${
-              currentTheme === 'dark' ? 'Dark' : 'Light'
-            }.svg`}
-            alt="Logo"
-            className="w-[6em]"
-          />
-        </NavLink>
+      <button
+              onClick={() => handleNavigate('/profile', '#home')}
+              className="flex-shrink-0"
+            >
+              <img
+                src={`/assets/images/logos/Logo${
+                  currentTheme === 'dark' ? 'Dark' : 'Light'
+                }.svg`}
+                alt="Logo"
+                className="w-[6em]"
+              />
+            </button>
 
         <div className="hidden lg:flex">
           <NavbarDesktop />
