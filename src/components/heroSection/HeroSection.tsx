@@ -1,10 +1,10 @@
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import Button from '../partials/Button';
 import ResponsiveHeroImage from './ResponsiveHeroImage';
-import { startTransition, useEffect } from 'react';
+import { startTransition } from 'react';
 
 const HeroSection = () => {
   const { t } = useTranslation('heroSection');

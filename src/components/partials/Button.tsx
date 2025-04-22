@@ -1,11 +1,4 @@
-import React from 'react';
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  bgColor?: string;
-  border?: string;
-  className?: string;
-  children: React.ReactNode;
-}
+import { ButtonProps } from '../../interfaces/ButtonInterface';
 
 const Button = ({
   bgColor = 'transparent',

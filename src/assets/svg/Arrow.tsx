@@ -1,9 +1,5 @@
-import { Menu } from '../../interfaces/MenuInterface';
-const Arrow = ({
-  navigationMenuOpen,
-  navigationMenu,
-  menu,
-}: Menu.ArrowProps) => {
+import { ArrowProps } from '../../interfaces/MenuInterface';
+const Arrow = ({ navigationMenuOpen, navigationMenu, menu }: ArrowProps) => {
   return (
     <svg
       className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${

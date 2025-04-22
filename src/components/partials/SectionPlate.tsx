@@ -1,27 +1,20 @@
-import React from "react";
-
-interface IProps {
-  bgColor?: string;
-  bgImage?: string;
-  className?: string;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-  id?: string
-}
+import { SectionPlateProps } from '../../interfaces/SectionPlateInterface';
 
 const SectionPlate = ({
-  bgColor = "transparent",
+  bgColor = 'transparent',
   bgImage,
-  className = "",
+  className = '',
   children,
   style = {},
   id,
   ...props
-}: IProps) => {
+}: SectionPlateProps) => {
   return (
     <section
-    id={id}
-      className={`${bgColor} ${bgImage ? `bg-cover bg-center bg-no-repeat` : ""} ${className}`}
+      id={id}
+      className={`${bgColor} ${
+        bgImage ? `bg-cover bg-center bg-no-repeat` : ''
+      } ${className}`}
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : undefined,
         ...style,

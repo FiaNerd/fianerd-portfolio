@@ -1,9 +1,5 @@
-interface PopupProps {
-  text: string;
-  show: boolean;
-}
-
-const Popup = ({ text, show }: PopupProps) => {
+import { PopupProp } from '../../interfaces/PopupInterface';
+const Popup = ({ text, show }: PopupProp) => {
   if (!show) return null;
 
   return (

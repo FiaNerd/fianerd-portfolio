@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GraphicGalleryItems from './GraphicImageItems';
 import SidebarGraphicPortfolio from './GraphicSidebarPortfolio';
+import { UrlTitle } from '../../../interfaces/SharedInterface';
 
 const GraphicImageGallery = () => {
   const { t } = useTranslation('portfolio/graphicPortfolioSection');
@@ -28,7 +29,7 @@ const GraphicImageGallery = () => {
     results: string;
     testimonial: string;
     tags: string[];
-    relatedProjects: string[];
+    relatedProjects: { name: string }[];
     ctaLink: string;
     demands: string;
     alt: string;
@@ -70,7 +71,10 @@ const GraphicImageGallery = () => {
     results: '',
     testimonial: '',
     tags: [],
-    relatedProjects: [],
+    relatedProjects:
+      graphicImages[0]?.relatedProjects.map((project) => ({
+        name: project.name, // Correctly map the name property
+      })) || [],
     ctaLink: '',
     demands: '',
     alt: '',

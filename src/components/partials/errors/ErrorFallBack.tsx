@@ -9,7 +9,7 @@ const ErrorFallback = ({
 }) => {
   console.error('Error caught by ErrorBoundary:', error);
 
-  const { headerHeight } = useHeaderHeight();
+  const headerHeight  = useHeaderHeight();
 
   return (
     <div
