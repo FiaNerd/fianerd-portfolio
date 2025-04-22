@@ -1,13 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
+import { Svg } from "../../interfaces/SvgInterface";
 
-interface RippedPaperProps {
-    colorLight: string;
-    colorDark: string;
-    id?: string;
-}
-
-const RippedPaperTop = ({id, colorLight, colorDark}: RippedPaperProps) => {
+const RippedPaperTop = ({id, colorLight, colorDark}: Svg.RippedPaperItems) => {
     const themeContext = useContext(ThemeContext);
     const currentTheme = themeContext?.currentTheme || "light"; 
     const isDark = currentTheme === "dark";

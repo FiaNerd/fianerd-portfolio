@@ -5,27 +5,7 @@ import Popup from '../partials/Popup';
 import PortfolioImageDetails from './PortfolioImageDetails';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
-
-interface PortfolioDetailsItemsProps {
-  title: string;
-  titleDescription: string;
-  images?: { src: string; alt: string; span?: string }[];
-  description: string;
-  techTitle: string;
-  tech: { name: string; icon: string }[];
-  applicationTypeDetail: {
-    text: string;
-    icon: {
-      name: string;
-      width: number;
-      height: number;
-      color: string;
-    };
-    suffix: string;
-  };
-  linkTitle?: string;
-  links?: { type: string; url: string; icon: string }[];
-}
+import { Portfolio } from '../../interfaces/PortfolioInterface';
 
 const PortfolioDetailsItems = ({
   title = 'Untitled',
@@ -41,7 +21,7 @@ const PortfolioDetailsItems = ({
   },
   linkTitle = '',
   links = [],
-}: PortfolioDetailsItemsProps) => {
+}: Portfolio.DetailsItemsProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });

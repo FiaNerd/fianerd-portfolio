@@ -3,24 +3,7 @@ import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import Popup from '../partials/Popup';
-
-interface IPortfolioCardProps {
-  title: string;
-  urlTitle: string;
-  applicationType: string;
-  subTitle: string;
-  description: string;
-  img: string;
-  projectType: string;
-  linkTitle: string;
-  links: { type: string; url: string; icon: string }[];
-  techTitle: string;
-  tech: { name: string; icon: string }[];
-  ctaButton: string;
-  projectDuration: string;
-  titleDescription: string;
-  sectionId?: string;
-}
+import { Portfolio } from '../../interfaces/PortfolioInterface';
 
 const PortfolioCard = ({
   title,
@@ -37,8 +20,7 @@ const PortfolioCard = ({
   ctaButton,
   projectDuration,
   titleDescription,
-  sectionId,
-}: IPortfolioCardProps) => {
+}: Portfolio.PortfolioItems) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   const navigate = useNavigate();
 

@@ -7,13 +7,10 @@ import Video from 'yet-another-react-lightbox/plugins/video';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
+import { Portfolio } from '../../interfaces/PortfolioInterface';
 
-interface PortfolioImageDetailsProps {
-  images: { src: string; alt: string; span?: string }[];
-}
-
-const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
+const PortfolioImageDetails = ({ images }: Portfolio.ImageDetailsProps) => {
   const [openLightbox, setOpenLightbox] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
