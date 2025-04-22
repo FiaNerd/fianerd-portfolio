@@ -8,7 +8,7 @@ import Competencies from './Competencies';
 const Skills = () => {
   const { t } = useTranslation(['profile/skills']);
 
-  const { headerHeight } = useHeaderHeight();
+  const headerHeight  = useHeaderHeight();
 
   return (
     <div
