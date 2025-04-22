@@ -18,11 +18,8 @@ body {
   font-style: normal;
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.6;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
-/* * {
-  outline: 1px solid red;
-} */
 
 h1 {
   font-weight: bold;
