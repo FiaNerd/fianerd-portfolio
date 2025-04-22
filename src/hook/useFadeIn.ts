@@ -62,24 +62,27 @@ export default function useFadeIn({
     }
   }, [ctrls, inView, isMobile]);
 
-  // Set different animations for mobile and desktop
   const vars = customVars || {
     hidden: {
       opacity: 0,
       x: isMobile
         ? 0
         : direction === 'left'
-        ? -50
+        ? -50 // Reduced horizontal movement
         : direction === 'right'
-        ? 50
-        : 0, // No horizontal movement for mobile
+        ? 50 // Reduced horizontal movement
+        : 0,
       y: isMobile
         ? direction === 'up'
           ? 50
           : direction === 'down'
           ? 50
-          : 0 // Vertical movement for mobile
-        : 0, // No vertical movement for desktop
+          : 0
+        : direction === 'up'
+        ? -50 // Optional vertical movement for desktop
+        : direction === 'down'
+        ? 50
+        : 0,
     },
     visible: {
       opacity: 1,

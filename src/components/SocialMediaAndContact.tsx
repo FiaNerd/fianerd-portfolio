@@ -3,6 +3,7 @@ import { startTransition, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
+import useHeaderHeight from '../hook/useHeaderHeight';
 
 const SocialMediaAndContact = () => {
   const { t } = useTranslation('translation');
@@ -12,6 +13,7 @@ const SocialMediaAndContact = () => {
   if (!themeContext) {
     return null;
   }
+  const headerHeight = useHeaderHeight();
 
   const { currentTheme } = themeContext;
 
@@ -22,8 +24,11 @@ const SocialMediaAndContact = () => {
       navigate(path);
       setTimeout(() => {
         const element = document.querySelector(hash);
+
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          const elementTop =
+            element.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top: elementTop, behavior: 'smooth' });
         }
       }, 0);
     });

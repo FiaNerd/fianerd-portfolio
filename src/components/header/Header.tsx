@@ -14,6 +14,7 @@ import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
+import useHeaderHeight from '../../hook/useHeaderHeight';
 
 const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
   const { t } = useTranslation(['translation']);
@@ -22,16 +23,19 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
   const sidebarWidth = useSidebarWidth();
   const headerRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
+  const headerHeight = useHeaderHeight();
 
   const handleNavigate = (path: string, hash: string) => {
     startTransition(() => {
-      navigate(path); 
+      navigate(path);
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' }); 
+          const elementTop =
+            element.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top: elementTop, behavior: 'smooth' });
         }
-      }, 0); 
+      }, 0);
     });
   };
 
@@ -57,18 +61,18 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-      <button
-              onClick={() => handleNavigate('/profile', '#home')}
-              className="flex-shrink-0"
-            >
-              <img
-                src={`/assets/images/logos/Logo${
-                  currentTheme === 'dark' ? 'Dark' : 'Light'
-                }.svg`}
-                alt="Logo"
-                className="w-[6em]"
-              />
-            </button>
+        <button
+          onClick={() => handleNavigate('/profile', '#home')}
+          className="flex-shrink-0"
+        >
+          <img
+            src={`/assets/images/logos/Logo${
+              currentTheme === 'dark' ? 'Dark' : 'Light'
+            }.svg`}
+            alt="Logo"
+            className="w-[6em]"
+          />
+        </button>
 
         <div className="hidden lg:flex">
           <NavbarDesktop />

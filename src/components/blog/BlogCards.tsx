@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogInterface';
-import { NavLink, useNavigate } from 'react-router-dom';
-import Button from '../partials/Button';
+import { useNavigate } from 'react-router-dom';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 import { startTransition } from 'react';
@@ -14,15 +13,19 @@ const BlogCards = () => {
 
   const navigate = useNavigate();
 
-  // Function to generate random color in HSL format
   const getRandomHSLColor = () => {
-    const h = Math.floor(Math.random() * 350); // Hue (0-350)
-    const s = Math.floor(Math.random() * 41) + 60; // Saturation (60-100%)
-    const l = Math.floor(Math.random() * 41) + 40; // Lightness (40-80%)
+    const h = Math.floor(Math.random() * 350);
+    const s = Math.floor(Math.random() * 41) + 60;
+    const l = Math.floor(Math.random() * 41) + 40;
     return `hsl(${h}, ${s}%, ${l}%)`;
   };
 
-  const handleNaviagete = (urlTitle: string) => {
+  const blogCardsWithColors = blogCards.map((card) => ({
+    ...card,
+    color: getRandomHSLColor(),
+  }));
+
+  const handleNavigate = (urlTitle: string) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -46,7 +49,6 @@ const BlogCards = () => {
       </h2>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-1 lg:grid-cols-4">
-        {/* Title Column */}
         <motion.div
           ref={fadeInLeft.ref}
           initial="hidden"
@@ -67,8 +69,7 @@ const BlogCards = () => {
           </div>
         </motion.div>
 
-        {/* Blog Cards */}
-        {blogCards.map((card, index) => (
+        {blogCardsWithColors.map((card, index) => (
           <motion.div
             ref={fadeInRight.ref}
             initial="hidden"
@@ -88,8 +89,8 @@ const BlogCards = () => {
                   <div
                     className="absolute inset-0 rounded-md"
                     style={{
-                      backgroundColor: getRandomHSLColor(),
-                      opacity: 0.5,
+                      backgroundColor: card.color,
+                      opacity: 0.5, // Set opacity separately
                       transition: 'opacity 0.3s',
                     }}
                   ></div>
@@ -98,7 +99,7 @@ const BlogCards = () => {
                   </span>
                 </div>
 
-                <div className=" pb-2 mb-2">
+                <div className="pb-2 mb-2">
                   <h5 className="font-semibold mb-0 ml-4">{card.month}</h5>
                   <h4 className="text-bg-secondary dark:text-text-accent font-bold leading-none mb-4 ml-4">
                     {card.day}
@@ -115,8 +116,9 @@ const BlogCards = () => {
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
                 <button
-                  onClick={() => handleNaviagete(card.urlTitle)}
+                  onClick={() => handleNavigate(card.urlTitle)}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
+                  aria-label={`Read more about ${card.title}`}
                 >
                   {t('readMore')}
                 </button>
