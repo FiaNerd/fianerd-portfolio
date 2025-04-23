@@ -20,6 +20,7 @@ import {
   GraphicDetailsProps,
   SidebarGraphicPortfolioProps,
 } from '../../../interfaces/GraphicInterface';
+import Button from '../../partials/Button';
 
 const SidebarGraphicPortfolio = ({
   isVisible,
@@ -115,13 +116,14 @@ const SidebarGraphicPortfolio = ({
 
           <div className="px-8 mb-12">
             <div className="flex flex-col mb-8 items-start lg:flex-row">
-              <button
+              <Button
+                variant="text"
                 onClick={onClose}
-                className="font-sub-heading inline-flex items-center gap-2 text-xl transition-all duration-200 bg-none hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover w-auto py-1"
+                className="inline-flex items-center gap-2 text-xl transition-all duration-200 bg-none hover:scale-105 w-auto py-1"
               >
                 <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
                 {t('common:goBack').toUpperCase()}
-              </button>
+              </Button>
             </div>
 
             <ContentTitleDetails

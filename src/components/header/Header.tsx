@@ -66,7 +66,7 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
           </div>
           <NavLink
             to="/contact"
-            className="hidden lg:flex justify-center items-center font-sub-heading text-lg gap-2 lg:text-xl font-medium border-2 rounded border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
+            className="hidden lg:flex justify-center items-center font-sub-heading text-lg gap-2 lg:text-xl font-medium border-2 rounded-lg border-btn-bg px-3 py-1 md:px-4 md:py-2 text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary"
           >
             <Icon icon="line-md:email-twotone" width="24" height="24" />{' '}
             {t('contact')}

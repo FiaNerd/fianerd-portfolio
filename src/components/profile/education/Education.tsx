@@ -45,8 +45,9 @@ const Education = () => {
           </h4>
           <p className="text-text-secondary mb-8">{t('checkoutText')}</p>
           <Button
+            variant="outlined"
             onClick={handleNavigation}
-            className="flex flex-row gap-4 justify-center items-center mb-12 md:mb-0 font-sub-heading bg-transparent mr-auto text-btn-bg font-bold hover:shadow-lg border-2 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow border-btn-bg hover:border-transparent"
+            className="flex flex-row gap-4 justify-center items-center mb-12 md:mb-0 mr-auto"
           >
             <Icon icon="ix:explore" width="30" height="30" />
             {t('exploreBtn')}

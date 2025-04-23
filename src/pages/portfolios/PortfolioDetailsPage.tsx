@@ -7,6 +7,7 @@ import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import HeroDetails from '../../components/partials/HeroDetails';
 import LoadingSpinner from '../../components/partials/LoadingSpinner';
+import Button from '../../components/partials/Button';
 
 const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
@@ -80,13 +81,14 @@ const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
       </div>
 
       <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
-        <button
+        <Button
+          variant="text"
           onClick={handleBack}
-          className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
+          className="inline-flex items-start gap-2 transition-all duration-200 hover:scale-105 w-auto"
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
           {t('common:goBack').toUpperCase()}
-        </button>
+        </Button>
       </div>
 
       {portfolioItems.map((item) => (

@@ -7,6 +7,7 @@ import ContentTitleDetails from '../../components/partials/ContentTitleDetails';
 import BlogSidebar from '../../components/blog/BlogSidebar';
 import ContentDetails from '../../components/partials/ContentDetails';
 import LoadingSpinner from '../../components/partials/LoadingSpinner';
+import Button from '../../components/partials/Button';
 
 const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t, ready } = useTranslation(['blogPost', 'blogPostCards', 'common']);
@@ -58,13 +59,14 @@ const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
 
       <div className="max-w-screen-2xl mx-auto px-4">
         <div className="flex flex-col items-start lg:flex-row mb-8 ">
-          <button
+          <Button
+            variant="text"
             onClick={handleNavigate}
-            className="inline-flex items-center font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover:text-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1"
+            className="inline-flex items-center gap-2 transition-all duration-200 hover:scale-105 w-auto"
           >
             <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
             {t('common:goBack').toUpperCase()}
-          </button>
+          </Button>
         </div>
 
         {/* Blog Content */}
