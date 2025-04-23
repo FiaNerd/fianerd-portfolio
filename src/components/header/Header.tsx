@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useContext, useRef } from 'react';
+import { startTransition, useContext, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import { useSidebarWidth } from '../../hook/useSidebarWidth';
 import SelectLanguage from '../SelectLanguage';
@@ -15,6 +15,13 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
   const currentTheme = themeContext?.currentTheme;
   const sidebarWidth = useSidebarWidth();
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    startTransition(() => {
+      navigate(path);
+    })
+  }
 
   return (
     <header
@@ -38,7 +45,7 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
 
       {/* Navigation */}
       <nav className="mx-auto flex items-center justify-between py-2 px-4">
-        <NavLink to="/profile/#home" className="flex-shrink-0">
+        <button onClick={()  => handleNavigation('/profile/#home')} className="flex-shrink-0">
           <img
             src={`/assets/images/logos/Logo${
               currentTheme === 'dark' ? 'Dark' : 'Light'
@@ -46,7 +53,7 @@ const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
             alt="Logo"
             className="w-[6em]"
           />
-        </NavLink>
+        </button>
 
         <div className="hidden lg:flex">
           <NavbarDesktop />
