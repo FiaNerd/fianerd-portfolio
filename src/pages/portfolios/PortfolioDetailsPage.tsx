@@ -6,8 +6,9 @@ import portfolioDataEn from '../../../public/locales/en/portfolioSection.json';
 import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import HeroDetails from '../../components/partials/HeroDetails';
+import LoadingSpinner from '../../components/partials/LoadingSpinner';
 
-const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
+const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const { i18n } = useTranslation();
@@ -59,13 +60,11 @@ const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
   };
 
   if (portfolioItems.length === 0) {
-    return <div>Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   return (
-    <div
-      className="bg-blend-multiply mb-8"
-    >
+    <div className="bg-blend-multiply mb-8">
       <div className="mb-8">
         {portfolioItems.map((item) => (
           <HeroDetails

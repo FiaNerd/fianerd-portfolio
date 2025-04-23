@@ -27,7 +27,7 @@ const WebPortfolioDetailsPage = () => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const navigate = useNavigate();
-  const  headerHeight  = useHeaderHeight();
+  const headerHeight = useHeaderHeight();
 
   if (!ready) {
     return <div>Loading translations...</div>;
@@ -100,7 +100,7 @@ const WebPortfolioDetailsPage = () => {
           className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
-          {t('common:goBack').toUpperCase()}
+          {t('goBack').toUpperCase()}
         </button>
       </div>
 
