@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 import PortfolioCard from './PortfolioCard';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
-import { Portfolio } from '../../interfaces/PortfolioInterface';
+import { SectionId } from '../../interfaces/SharedInterface';
 
-
-const FullStackPortfolio = ({ sectionId }: Portfolio.SectionId) => {
+const FullStackPortfolio = ({ sectionId }: { sectionId: SectionId }) => {
   const { t } = useTranslation('portfolio');
 
   // Retrieve frontend items dynamically

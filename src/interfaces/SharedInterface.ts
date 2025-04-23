@@ -27,5 +27,5 @@ export interface ReletedProjectsProps {
 //   urlTitle?: string;
 // }
 
-export type SectionId = string; // Simplify SectionId to a string
-export type UrlTitle = string; // Simplify UrlTitle to a string
+export type SectionId = string; 
+export type UrlTitle = string; 

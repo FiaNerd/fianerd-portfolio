@@ -5,8 +5,9 @@ import Button from '../partials/Button';
 import { startTransition } from 'react';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
+import { SectionId } from '../../interfaces/SharedInterface';
 
-const Top5Projects = () => {
+const Top5Projects = ({ sectionId }: { sectionId: SectionId }) => {
   const { t } = useTranslation('portfolio/top5PortfolioSection');
   const navigate = useNavigate();
 

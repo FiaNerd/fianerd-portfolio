@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import PortfolioCard from './PortfolioCard';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
-import { Portfolio } from '../../interfaces/PortfolioInterface';
+import { SectionId } from '../../interfaces/SharedInterface';
 
-const BackendPortfolio = ({ sectionId }: Portfolio.SectionId) => {
+const BackendPortfolio = ({ sectionId }: { sectionId: SectionId }) => {
   const { t } = useTranslation('portfolio');
 
   const backendItems = t('portfolio/backendPortfolioSection:backendItems', {

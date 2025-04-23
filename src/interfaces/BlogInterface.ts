@@ -48,3 +48,10 @@ export interface IBlogContentProps {
   };
   privateText?: string;
 }
+
+export interface BlogSidebarProps {
+  titleTeche: string;
+  technologies: string[];
+  titleKeyFeature: string;
+  keyFeatures: string[];
+}

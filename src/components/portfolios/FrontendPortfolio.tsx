@@ -4,12 +4,9 @@ import { useTranslation } from 'react-i18next';
 import PortfolioCard from './PortfolioCard';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
+import { SectionId } from '../../interfaces/SharedInterface';
 
-interface FrontendPortfolioProps {
-  sectionId: string;
-}
-
-const FrontendPortfolio = ({ sectionId }: FrontendPortfolioProps) => {
+const FrontendPortfolio = ({ sectionId }: {sectionId : SectionId}) => {
   const { t } = useTranslation('portfolio/frontendPortfolioSection');
 
   // Retrieve frontend items dynamically
