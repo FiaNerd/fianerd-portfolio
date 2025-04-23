@@ -1,9 +1,10 @@
 import {
   Tech,
   ImageDetails,
-  UrlTitle,
   ReletedProjectsProps,
 } from '../interfaces/SharedInterface';
+
+import { SectionId, UrlTitle } from './SharedInterface';
 
 export interface GraphicItem {
   urlTitle?: UrlTitle;
@@ -59,4 +60,8 @@ export interface GraphicDetailsProps {
   demands: string;
   alt: string;
   ctaButton: string;
+}
+
+export interface GraphicPortfolioContentAboutProps {
+  graphicItemsPortfolio: GraphicItem[];
 }
