@@ -1,5 +1,5 @@
 // SidebarGraphicPortfolio.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@iconify/react';
 import 'yet-another-react-lightbox/styles.css';
@@ -16,50 +16,16 @@ import GraphicPortfolioContentAbout from './GraphicPortfolioContentAbout';
 import { useClickOutside } from '../../../hook/useClickOutside';
 import useFadeIn from '../../../hook/useFadeIn';
 import { motion } from 'framer-motion';
-
-interface Technology {
-  name: string;
-  icon: string;
-}
-
-interface ISidebarGraphicPortfolioProps {
-  isVisible: boolean;
-  onClose: () => void;
-  sidebarWidth?: number;
-  setSidebarWidth?: React.Dispatch<React.SetStateAction<number>>;
-  graphicDetails?: {
-    urlTitle: string;
-    title: string;
-    subTitle: string;
-    image: string;
-    images: { src: string; alt: string; span?: string }[];
-    category: string;
-    year: string;
-    yearText: string;
-    clientTitle?: string;
-    client: string;
-    tecthTitle?: string;
-    tech: { name: string; icon: string }[];
-    description: string;
-    goals: string;
-    role: string;
-    challenges: string;
-    results: string;
-    testimonial: string;
-    tags: string[];
-    relatedProjects: string[];
-    ctaLink: string;
-    demands: string;
-    alt: string;
-    ctaButton: string;
-  };
-}
+import {
+  GraphicDetailsProps,
+  SidebarGraphicPortfolioProps,
+} from '../../../interfaces/GraphicInterface';
 
 const SidebarGraphicPortfolio = ({
   isVisible,
   onClose,
   graphicDetails,
-}: ISidebarGraphicPortfolioProps) => {
+}: SidebarGraphicPortfolioProps) => {
   const { t } = useTranslation(['portfolio/graphicPortfolioSection', 'common']);
   const [openLightbox, setOpenLightbox] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -87,15 +53,17 @@ const SidebarGraphicPortfolio = ({
 
   const graphicItemsPortfolio = [
     {
-      clientTitle: graphicDetails?.clientTitle,
+      clientTitle: graphicDetails.clientTitle,
       client: graphicDetails?.client,
       subTitle: graphicDetails?.subTitle,
-      techTitle: graphicDetails?.tecthTitle,
+      techTitle: graphicDetails?.techTitle,
       tech:
-        graphicDetails?.tech?.map((technology) => ({
-          name: technology.name,
-          icon: technology.icon,
-        })) || [],
+        graphicDetails?.tech?.map(
+          (technology: { name: string; icon: string }) => ({
+            name: technology.name,
+            icon: technology.icon,
+          })
+        ) || [],
       goals: graphicDetails?.goals,
       role: graphicDetails?.role,
       challenges: graphicDetails?.challenges,

@@ -1,14 +1,4 @@
-
-interface InputFiledProps {
-    name: string;
-    label?: string;
-    placeholder?: string;
-    error?: string;
-    register?: any;
-    className?: string;
-    type?: string;
-    autocomplete?: string;
-}
+import {InputFiledProps}  from "../../interfaces/FormInterface";
 
 const InputFiled = ({  register,
     name,

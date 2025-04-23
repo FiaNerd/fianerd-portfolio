@@ -1,11 +1,4 @@
-import React from 'react';
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  bgColor?: string;
-  border?: string;
-  className?: string;
-  children: React.ReactNode;
-}
+import { ButtonProps } from '../../interfaces/ButtonInterface';
 
 const Button = ({
   bgColor = 'transparent',
@@ -19,7 +12,7 @@ const Button = ({
       className={`${bgColor} ${
         border
           ? border
-          : 'w-full font-sub-heading tracking-wider border-3 rounded-lg text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-4 py-2 md:py-4 cursor-pointer'
+          : 'w-full font-sub-heading tracking-wider border-3 rounded-lg text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-2 py-2 md:px-4 md:py-2 cursor-pointer'
       } ${className}`}
       {...props}
     >

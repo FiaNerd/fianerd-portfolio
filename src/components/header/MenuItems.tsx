@@ -2,21 +2,11 @@ import React, { startTransition, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
-import { Route } from '../../config/MenuItemsData';
 import useIsTabletOrMobile from '../../hook/useTabletOrMobile';
 import DropdownMenuMobile from './DropdownMenuMobile';
+import { MenuItemsProps } from '../../interfaces/MenuInterface';
 
-interface MenuItemsProps {
-  items: Route;
-  depthLevel: number;
-  closeMenu: () => void;
-}
-
-const MenuItems: React.FC<MenuItemsProps> = ({
-  items,
-  depthLevel,
-  closeMenu,
-}) => {
+const MenuItems = ({ items, depthLevel, closeMenu }: MenuItemsProps) => {
   const [dropdown, setDropdown] = useState(false);
   const { t } = useTranslation('translation');
   const isTabletOrMobile = useIsTabletOrMobile();
@@ -55,7 +45,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
           navigate(`${path}/#${sectionId}`, { replace: true });
         }
       } else {
-        navigate(path); 
+        navigate(path);
       }
     });
 

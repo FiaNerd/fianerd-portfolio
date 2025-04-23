@@ -1,14 +1,6 @@
 import { Route } from '../../config/MenuItemsData';
 import MenuItemsMobile from './MenuItemsMobile';
-
-interface IProps {
-  submenus: Route[];
-  dropdown: boolean;
-  depthLevel: number;
-  closeMenu: () => void;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
-}
+import { DropDownMenuProps } from '../../interfaces/MenuInterface';
 
 const DropdownMenuMobile = ({
   submenus,
@@ -17,7 +9,7 @@ const DropdownMenuMobile = ({
   closeMenu,
   onMouseEnter,
   onMouseLeave,
-}: IProps) => {
+}: DropDownMenuProps) => {
   // Increase the depth level by 1 for nested dropdowns
   const newDepthLevel = depthLevel + 1;
 

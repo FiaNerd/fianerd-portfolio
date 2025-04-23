@@ -1,18 +1,9 @@
 import Title from './Title';
-
-interface HeroDetailsProps {
-  title: string;
-  subTitle: string;
-  image: string;
-  dark: string;
-  light: string;
-  titleDescription?: string;
-}
+import type { HeroDetailsProps } from '../../interfaces/HeroDetailsInterface';
 
 const HeroDetails = ({
   title,
   image,
-  subTitle,
   dark,
   light,
   titleDescription,

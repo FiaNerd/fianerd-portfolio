@@ -5,11 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Arrow from '../assets/svg/Arrow';
 import { useClickOutside } from '../hook/useClickOutside';
 
-interface ISelectLanguageProps {
-  onChange?: () => void;
-}
-
-const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
+const SelectLanguage = () => {
   const { i18n, t } = useTranslation('translation');
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
@@ -23,10 +19,10 @@ const SelectLanguage = ({ onChange }: ISelectLanguageProps) => {
   const ref = useClickOutside<HTMLDivElement>(() => setIsOpen(false));
 
   const handleLanguageChange = (code: string) => {
-      i18n.changeLanguage(code); // 👈 Safe now, won't crash
-      localStorage.setItem('i18nextLng', code);
-      setSelectedLanguage(code);
-      setIsOpen(false);
+    i18n.changeLanguage(code); // 👈 Safe now, won't crash
+    localStorage.setItem('i18nextLng', code);
+    setSelectedLanguage(code);
+    setIsOpen(false);
   };
 
   const LANGUAGES = [

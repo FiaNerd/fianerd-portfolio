@@ -1,18 +1,11 @@
-import React from 'react';
+import { BlogSidebarProps } from '../../interfaces/BlogInterface';
 
-interface BlogSidebarProps {
-  titleTeche: string;
-  technologies: string[];
-  titleKeyFeature: string;
-  keyFeatures: string[];
-}
-
-const BlogSidebar: React.FC<BlogSidebarProps> = ({
+const BlogSidebar = ({
   titleTeche,
   technologies,
   titleKeyFeature,
   keyFeatures,
-}) => {
+}: BlogSidebarProps) => {
   return (
     <div className="bg-[#000] p-4 lg:col-span-1">
       <div className="mb-8 ">

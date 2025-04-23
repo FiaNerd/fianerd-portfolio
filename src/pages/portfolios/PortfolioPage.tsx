@@ -83,7 +83,7 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 leading-[0]"
           sticky
         />
-        <Top5projects sectionId="top-5-projects" />
+        <Top5projects sectionId={'top-5-projects'}  />
       </section>
 
       <section id="frontend" className="top-0">

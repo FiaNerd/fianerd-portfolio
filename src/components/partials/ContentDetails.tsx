@@ -1,6 +1,4 @@
 import { Icon } from '@iconify/react';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { IBlogContentProps } from '../../interfaces/BlogInterface';
 
 const ContentDetails = ({

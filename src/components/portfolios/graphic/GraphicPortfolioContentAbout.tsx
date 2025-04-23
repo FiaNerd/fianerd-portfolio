@@ -1,26 +1,6 @@
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
-
-interface IGraphicItem {
-  urlTitle?: string;
-  subTitle?: string;
-  techTitle?: string;
-  tech: { name: string; icon: string }[];
-  goals: string;
-  role: string;
-  challenges: string;
-  results: string;
-  testimonial: string;
-  tags: string[];
-  relatedProjects: string[];
-  ctaLink: string;
-  demands: string;
-  ctaButton: string;
-}
-
-interface GraphicPortfolioContentAboutProps {
-  graphicItemsPortfolio: IGraphicItem[];
-}
+import { GraphicPortfolioContentAboutProps } from '../../../interfaces/GraphicInterface';
 
 const GraphicPortfolioContentAbout = ({
   graphicItemsPortfolio,
