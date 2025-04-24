@@ -1,21 +1,11 @@
 import { createElement, forwardRef, ForwardedRef, ReactNode } from "react";
-import { UseFormRegister, UseFormHandleSubmit } from "react-hook-form";
+import type {Form} from "../../interfaces/FormInterface"
 import Button from "./Button";
 import { Icon } from "@iconify/react";
 
-export interface IFormProps {
-  children?: ReactNode;
-  buttonLabel: string;
-  register: UseFormRegister<any>;
-  handleSubmit: UseFormHandleSubmit<any>;
-  onSubmit: (data: any) => void;
-  className?: string;
-  isLoading: boolean;
-  isSuccess?: boolean;
-  buttonLoading: string;
-}
 
-const Form = forwardRef<HTMLFormElement, IFormProps>(({
+
+const Form = forwardRef<HTMLFormElement, Form>(({
   buttonLabel = "Submit",
   children,
   className,

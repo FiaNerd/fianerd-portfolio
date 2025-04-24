@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { IBlogCard } from '../../interfaces/BlogInterface';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { startTransition } from 'react';
 import Button from '../partials/Button';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
+import { startTransition } from 'react';
 
 const BlogCards = () => {
   const { t } = useTranslation(['blogPost', 'blogPostCards']);
@@ -21,22 +23,37 @@ const BlogCards = () => {
   };
 
   const handleNaviagete = (urlTitle: string) => {
-    // Encode the URL title to handle special characters
-    const encodedUrlTitle = encodeURIComponent(urlTitle);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     startTransition(() => {
-      navigate(`/blog/${encodedUrlTitle}`);
+      navigate(`/blog/${encodeURIComponent(urlTitle)}`);
     });
   };
 
+  const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
+  const fadeInRight = useFadeIn({
+    direction: 'right',
+    delay: 0.7,
+    duration: 1,
+  });
+
   return (
-    <div className="max-w-screen-xl mx-auto px-4 mt-12 mb-12">
-      <h2 className="mb-8 text-3xl text-bg-secondary dark:text-text-accent font-bold">
+    <div className="max-w-screen-2xl mx-auto px-4 mt-12 mb-12">
+      <h2 className="mb-8 text-bg-secondary dark:text-text-accent font-bold">
         {t('blogYear2025')}
       </h2>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-1 lg:grid-cols-4">
         {/* Title Column */}
-        <div className="flex col-span-1 text-bg-secondary dark:text-text-accent bg-[#1e3237] dark:bg-[#180f08] font-bold p-8 items-center justify-center">
+        <motion.div
+          ref={fadeInLeft.ref}
+          initial="hidden"
+          animate={fadeInLeft.ctrls}
+          variants={fadeInLeft.vars}
+          className="flex col-span-1 text-bg-secondary dark:text-text-accent bg-[#1e3237] dark:bg-[#180f08] font-bold p-8 items-center justify-center"
+        >
           <div className="text-center">
             <span className="text-[6.6em] leading-[1.6em] block">
               {t('blogPostTitlePart1').toUpperCase()}
@@ -48,11 +65,15 @@ const BlogCards = () => {
               {t('blogPostTitlePart3').toUpperCase()}
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Blog Cards */}
         {blogCards.map((card, index) => (
-          <div
+          <motion.div
+            ref={fadeInRight.ref}
+            initial="hidden"
+            animate={fadeInRight.ctrls}
+            variants={fadeInRight.vars}
             key={index}
             className="rounded-lg transition-shadow duration-300 flex flex-col h-full"
           >
@@ -93,15 +114,15 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <Button
+                <button
                   onClick={() => handleNaviagete(card.urlTitle)}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </Button>
+                </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

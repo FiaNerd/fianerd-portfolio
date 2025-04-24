@@ -1,25 +1,9 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { startTransition, useState } from 'react';
+import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import Popup from '../partials/Popup';
-
-interface PortfolioCardProps {
-  title: string;
-  urlTitle: string;
-  applicationType: string;
-  subTitle: string;
-  description: string;
-  img: string;
-  projectType: string;
-  linkTitle: string;
-  links: { type: string; url: string; icon: string }[];
-  techTitle: string;
-  tech: { name: string; icon: string }[];
-  ctaButton: string;
-  projectDuration: string;
-  titleDescription: string;
-}
+import { PortfolioItems } from '../../interfaces/PortfolioInterface';
 
 const PortfolioCard = ({
   title,
@@ -36,17 +20,15 @@ const PortfolioCard = ({
   ctaButton,
   projectDuration,
   titleDescription,
-}: PortfolioCardProps) => {
+}: PortfolioItems) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
-    startTransition(() => {
-      navigate(`/portfolio/${encodeURIComponent(urlTitle)}`);
+    navigate(`/portfolio/${encodeURIComponent(urlTitle )}`, {
+      state: { fromSection: projectType.toLowerCase() },
     });
   };
-  
-
 
   const truncatedDescription =
     description.length > 110
@@ -57,8 +39,8 @@ const PortfolioCard = ({
     <section className="flex flex-col items-center justify-center">
       {/* First Section (Navigable) */}
       <div
-        className="flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-t-lg cursor-pointer"
-        onClick={navigateToDetails} // Navigate on click anywhere in this section
+        className="portfolio-card flex flex-col h-full w-full bg-bg-primary dark:bg-[#240313] rounded-t-lg cursor-pointer"
+        onClick={navigateToDetails}
       >
         {/* Image */}
         <img

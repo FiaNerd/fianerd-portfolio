@@ -3,8 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from '../partials/Button';
 import { startTransition } from 'react';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
+import { SectionId } from '../../interfaces/SharedInterface';
 
-const Top5Projects = () => {
+const Top5Projects = ({ sectionId }: { sectionId: SectionId }) => {
   const { t } = useTranslation('portfolio/top5PortfolioSection');
   const navigate = useNavigate();
 
@@ -21,15 +24,20 @@ const Top5Projects = () => {
 
   const navigateToDetails = (urlTitle: string) => {
     startTransition(() => {
-      // navigate(`/portfolio/${urlTitle}`);
-      // Encode the URL title to handle special characters
-      const encodedUrlTitle = encodeURIComponent(urlTitle);
-      navigate(`/portfolio/${encodedUrlTitle}`);
+      navigate(`/portfolio/${urlTitle}`);
     });
   };
 
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
+
   return (
-    <div className="max-w-screen-xl mx-auto px-4">
+    <motion.div
+      ref={fadeInDown.ref}
+      initial="hidden"
+      animate={fadeInDown.ctrls}
+      variants={fadeInDown.vars}
+      className="max-w-screen-2xl mx-auto px-4"
+    >
       <p>{t('portfolio/top5PortfolioSection:introTop5Portfolio')}</p>
       <section className="mb-12">
         <div className="py-4 px-2 mx-auto sm:py-4">
@@ -58,11 +66,11 @@ const Top5Projects = () => {
 
               return (
                 <div
-                  key={index}
+                  key={item.urlTitle}
                   className={`${columnSpan} h-auto lg:h-full flex flex-col`}
                 >
                   <div
-                    className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow cursor-pointer"
+                    className="portfolio-card group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow cursor-pointer"
                     onClick={() => navigateToDetails(item.urlTitle)}
                   >
                     {/* Image */}
@@ -84,7 +92,7 @@ const Top5Projects = () => {
                         <p className="text-white text-sm">{item.description}</p>
                         <Button
                           onClick={() => navigateToDetails(item.urlTitle)}
-                          className="bg-btn-bg hover:bg-bg-hover flex items-center justify-center gap-2 w-full max-w-xs"
+                          className="hidden lg:flex bg-btn-bg hover:bg-bg-hover  items-center justify-center gap-2 w-full max-w-xs"
                         >
                           <Icon icon="ix:explore" width="20" height="20" />
                           <span>{item.ctaButton}</span>
@@ -108,7 +116,7 @@ const Top5Projects = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

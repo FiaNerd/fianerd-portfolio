@@ -1,19 +1,12 @@
 import Title from './Title';
-
-interface HeroDetailsProps {
-  title: string;
-  subTitle: string;
-  image: string;
-  dark: string;
-  light: string;
-}
+import type { HeroDetailsProps } from '../../interfaces/HeroDetailsInterface';
 
 const HeroDetails = ({
   title,
   image,
-  subTitle,
   dark,
   light,
+  titleDescription,
 }: HeroDetailsProps) => {
   return (
     <div
@@ -30,7 +23,7 @@ const HeroDetails = ({
         <Title
           title={title}
           dot={'.'}
-          children={subTitle}
+          children={titleDescription || ''}
           className="bg-black py-2 px-4 xl:px-12 md:w-auto md:rounded-lg break-words"
           subHeadingClassName="text-amber-100 break-words"
           titleClassName="text-[1.8rem] md:text-[2.5rem] break-words"

@@ -83,7 +83,7 @@ const TitleAnimation = ({
       initial="hidden"
       animate={controls}
       onAnimationComplete={onComplete}
-      className={`font-heading font-bold mb-0 pt-4 leading-none md:mb-4 ${className} ${
+      className={`font-heading font-bold mb-0 pt-6 md:pt-12 leading-none md:mb-4 ${className} ${
         titleClassName || ''
       }`}
       style={style}

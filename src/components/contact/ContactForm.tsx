@@ -7,14 +7,8 @@ import getFormContactSchema from "../../utils/contactValidation";
 import Form from "../../components/partials/Form";
 import { useState, useEffect } from "react";
 import { sendCustomEmail } from "../../utils/sendCustomEmail";
+import { ContactFormInputs } from "../../interfaces/ContactInterface";
 
-interface IContactFormInputs {
-  name: string;
-  companyName?: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 
 const ContactForm = () => {
   const { t, i18n } = useTranslation(["contact/contactForm"]);
@@ -26,7 +20,7 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     reset
-  } = useForm<IContactFormInputs>({
+  } = useForm<ContactFormInputs>({
     resolver: yupResolver(formValidationSchema),
     defaultValues: {
       name: "",
@@ -41,7 +35,7 @@ const ContactForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const onSubmit = async (data: IContactFormInputs) => {
+  const onSubmit = async (data: ContactFormInputs) => {
     setIsLoading(true);
     setErrorMessage(null);
     try {

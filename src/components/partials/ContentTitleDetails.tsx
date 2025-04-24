@@ -1,26 +1,13 @@
-import React from 'react';
-interface IContentTitleDetails {
-  title: string;
-  clientTitle?: string;
-  client?: string;
-  day?: string;
-  month?: string;
-  year?: string;
-  yearText?: string;
-  subTitle: string;
-  titleClassName?: string;
-  subTitleClassName?: string;
-}
-
-const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
+import type { ContentTitleDetails } from '../../interfaces/ContentTitleDetailsInterface';
+const ContentTitleDetails = ({
   title,
   clientTitle,
   client,
-  day,
+  day, 
   month,
   year,
   yearText,
-}) => {
+}: ContentTitleDetails) => {
   return (
     <>
       <div className="flex flex-col px-8">
@@ -51,7 +38,7 @@ const ContentTitleDetails: React.FC<IContentTitleDetails> = ({
             </div>
           )}
 
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-4">
             {/* Title */}
             <h2 className="text-[#3C2F2F] mb-0 font-bold ">{title}</h2>
             <div className="flex flex-rows gap-4">

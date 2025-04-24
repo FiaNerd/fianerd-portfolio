@@ -1,13 +1,9 @@
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import useVisibility from '../../../hook/useVisibility';
+import type { ProgressBar } from '../../../interfaces/ProgressInterface';
 
-interface IProps {
-  percentage: number;
-  className?: string;
-}
-
-const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
+const ProgressBar = ({ percentage, className }: ProgressBar) => {
   const [ref, isVisible] = useVisibility();
   const [completed, setCompleted] = useState(0);
 
@@ -16,7 +12,7 @@ const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
 
     if (isVisible) {
       intervalId = setInterval(() => {
-        setCompleted(prev => {
+        setCompleted((prev) => {
           if (prev < percentage) {
             return prev + 1;
           } else {
@@ -37,7 +33,10 @@ const ProgressBar: React.FC<IProps> = ({ percentage, className }) => {
   }, [isVisible, percentage]);
 
   return (
-    <div ref={ref} className={`relative w-full bg-bg-secondary rounded-full h-4 mb-[1em] ${className}`}>
+    <div
+      ref={ref}
+      className={`relative w-full bg-bg-secondary rounded-full h-4 mb-[1em] ${className}`}
+    >
       <motion.div
         className="absolute top-0 left-0 bg-gradient-to-r from-text-secondary dark:from-hover-text to-text-sub-heading dark:to-accent-primary h-full"
         initial={{ width: 0 }}

@@ -4,6 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Arrow from '../../assets/svg/Arrow';
 import { navRoutes } from '../../config/MenuItemsData';
 import NavigationSubMenuDropDownDesktop from './NavigationSubMenuDropDownDesktop';
+import LoadingSpinner from '../partials/LoadingSpinner';
 
 const NavigationMenu = () => {
   const { i18n, t } = useTranslation();
@@ -36,62 +37,65 @@ const NavigationMenu = () => {
     }, navigationMenuCloseDelay);
   };
 
-  const handleMouseEnter = (menuTitle: string) => {
-    setNavigationMenuOpen(true);
-    setNavigationMenu(menuTitle);
-  };
-
   useEffect(() => {
-    const handleHashNavigation = () => {
-      const sectionId = location.hash.replace('#', '');
-
-      if (sectionId) {
+    const hash = location.hash;
+    if (hash) {
+      const sectionId = hash.replace('#', '');
+      // Wait briefly for the element to render
+      setTimeout(() => {
         const element = document.getElementById(sectionId);
-
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         } else {
           console.warn(`Section with ID "${sectionId}" not found.`);
         }
-      }
-    };
-
-    handleHashNavigation();
+      }, 300); 
+    }
   }, [location]);
 
   const closeMenuOnClick = () => {
     setNavigationMenuOpen(false);
     setNavigationMenu('');
   };
-
-  const handleMenuClick = (e: React.MouseEvent, url: string) => {
+  const handleMenuClick = (
+    e: React.MouseEvent,
+    url: string,
+    sectionId?: string
+  ) => {
     e.preventDefault();
-
-    const [path, sectionId] = url.split('#'); // Split the URL into path and section ID
+    // Navigate to the base route if not already there
+    if (location.pathname !== url) {
+      navigate(url);
+    }
 
     startTransition(() => {
-      if (sectionId) {
-        if (location.pathname === path) {
-          // If already on the correct path, scroll to the section
+      // If we are already on the destination (portfolio) page…
+      if (sectionId && location.pathname === url) {
+        // Update the URL with the hash but then immediately scroll
+        navigate(`${url}#${sectionId}`);
+        setTimeout(() => {
           const element = document.getElementById(sectionId);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
+        }, 100);
+      } else if (location.pathname !== url) {
+        // When not on the portfolio page, navigate normally with the hash if provided
+        if (sectionId) {
+          navigate(`${url}#${sectionId}`);
         } else {
-          // Navigate to the path and include the hash fragment
-          navigate(`${path}#${sectionId}`, { replace: true });
+          navigate(url);
         }
-      } else {
-        // Navigate to the path without a hash fragment
-        navigate(path, { replace: true });
       }
-    });
 
-    closeMenuOnClick();
+      setTimeout(() => {
+        closeMenuOnClick();
+      }, 300);
+    });
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingSpinner />}>
       <div className="relative z-10">
         <ul className="flex items-center font-sub-heading justify-center flex-1 p-1 gap-4 lg:gap-1 xl:gap-20 list-none group">
           {navRoutes.map((menu, index) => (
@@ -106,7 +110,6 @@ const NavigationMenu = () => {
                   }`
                 }
                 onMouseEnter={() => {
-                  console.log('onMouseEnter triggered for menu:', menu.title);
                   startTransition(() => {
                     setNavigationMenuOpen(true);
                     setNavigationMenu(menu.title);
@@ -115,9 +118,9 @@ const NavigationMenu = () => {
                 onMouseLeave={handleMouseLeave}
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log('onClick triggered for menu:', menu.url);
+
                   startTransition(() => {
-                    handleMenuClick(e, menu.url);
+                    handleMenuClick(e, menu.url, menu.sectionId);
                   });
                 }}
               >
@@ -138,7 +141,7 @@ const NavigationMenu = () => {
         </ul>
       </div>
 
-      <Suspense fallback={<div>Loading submenu...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         {navigationMenuOpen && (
           <NavigationSubMenuDropDownDesktop
             navigationMenu={navigationMenu}

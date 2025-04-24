@@ -1,16 +1,27 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useTranslation } from 'react-i18next';
 import PortfolioCard from './PortfolioCard';
+import useFadeIn from '../../hook/useFadeIn';
+import { motion } from 'framer-motion';
+import { SectionId } from '../../interfaces/SharedInterface';
 
-const BackendPortfolio = () => {
+const BackendPortfolio = ({ sectionId }: { sectionId: SectionId }) => {
   const { t } = useTranslation('portfolio');
 
   const backendItems = t('portfolio/backendPortfolioSection:backendItems', {
     returnObjects: true,
   });
 
+  const fadeInDown = useFadeIn({ direction: 'down', delay: 0.5, duration: 1 });
+
   return (
-    <section className="max-w-screen-xl mx-auto px-4">
+    <motion.section
+      ref={fadeInDown.ref}
+      initial="hidden"
+      animate={fadeInDown.ctrls}
+      variants={fadeInDown.vars}
+      className="max-w-screen-2xl mx-auto px-4"
+    >
       <p
         className="mb-12"
         dangerouslySetInnerHTML={{
@@ -36,10 +47,11 @@ const BackendPortfolio = () => {
               techTitle={item.techTitle}
               projectDuration={item.projectDuration}
               titleDescription={item.titleDescription}
+              sectionId={sectionId}
             />
           ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

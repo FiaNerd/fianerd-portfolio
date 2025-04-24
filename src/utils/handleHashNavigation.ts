@@ -1,4 +1,4 @@
-interface HashNavigationParams {
+interface IHashNavigationParams {
   sectionIds: string[];
   headerHeight: number;
   isHeaderVisible: boolean;
@@ -13,8 +13,8 @@ export const handleHashNavigation = ({
   isHeaderVisible,
   isNavigating,
   onNavigationComplete,
-}: HashNavigationParams) => {
-  const hash = window.location.hash.slice(1); // Get the hash without '#'
+}: IHashNavigationParams) => {
+  const hash = window.location.hash;
 
   if (hash) {
     const sectionId = hash.substring(1);

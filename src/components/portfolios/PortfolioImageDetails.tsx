@@ -1,28 +1,22 @@
-import 'lightgallery/css/lg-autoplay.css';
-import 'lightgallery/css/lg-fullscreen.css';
-import 'lightgallery/css/lg-pager.css';
-import 'lightgallery/css/lg-share.css';
-import 'lightgallery/css/lg-thumbnail.css';
-import 'lightgallery/css/lg-video.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lightgallery.css';
-import lgHash from 'lightgallery/plugins/hash';
-import lgShare from 'lightgallery/plugins/share';
-import lgZoom from 'lightgallery/plugins/zoom';
-import LightGallery from 'lightgallery/react';
-import { useRef } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import Video from 'yet-another-react-lightbox/plugins/video';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import 'yet-another-react-lightbox/plugins/captions.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import { useState } from 'react';
+import { DetailsItemsProps } from '../../interfaces/PortfolioInterface';
 
-interface PortfolioImageDetailsProps {
-  images: { src: string; alt: string; span?: string }[];
-}
+const PortfolioImageDetails = ({ images }: DetailsItemsProps) => {
+  const [openLightbox, setOpenLightbox] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
-  const lightGallery = useRef<any>(null);
-
-  const openLightbox = (index: number) => {
-    if (lightGallery.current) {
-      lightGallery.current.openGallery(index);
-    }
+  const handleOpenLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setOpenLightbox(true);
   };
 
   return (
@@ -30,24 +24,24 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
       {/* Responsive Grid */}
       <div
         className={`grid ${
-          images.length === 1
+          (images?.length ?? 0) === 1
             ? 'grid-cols-1 h-full' // Single image takes full height and width
             : 'grid-cols-1 md:grid-cols-2 gap-4'
         } w-full p-4 bg-[#4b8668] dark:bg-accent-secondary rounded-lg`}
       >
-        {images?.map((image, index) => (
+        {(images ?? []).map((image, index) => (
           <div
             key={index}
             className={`relative cursor-zoom-in overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 ${
-              images.length === 1
+              (images?.length ?? 0) === 1
                 ? 'h-[50vh] md:h-[60vh] lg:h-full'
                 : 'h-[15vh] md:h-[20vh] lg:h-full'
             }`}
-            onClick={() => openLightbox(index)}
+            onClick={() => handleOpenLightbox(index)}
           >
             <img
               className={`absolute inset-0 w-full h-full object-cover ${
-                images.length === 1 ? 'rounded-none' : 'rounded-lg'
+                (images?.length ?? 0) === 1 ? 'rounded-none' : 'rounded-lg'
               }`}
               src={image.src}
               alt={image.alt}
@@ -58,20 +52,15 @@ const PortfolioImageDetails = ({ images }: PortfolioImageDetailsProps) => {
         ))}
       </div>
 
-      {/* LightGallery Component */}
-      <LightGallery
-        onInit={(ref) => {
-          if (ref) {
-            lightGallery.current = ref.instance;
-          }
-        }}
-        plugins={[lgZoom, lgShare, lgHash]}
-        dynamic
-        dynamicEl={images.map((image) => ({
+      <Lightbox
+        open={openLightbox}
+        close={() => setOpenLightbox(false)}
+        index={currentIndex}
+        slides={(images ?? []).map((image) => ({
           src: image.src,
-          thumb: image.src,
-          subHtml: `<h4>${image.alt}</h4>`,
+          alt: image.alt,
         }))}
+        plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Video, Zoom]}
       />
     </>
   );

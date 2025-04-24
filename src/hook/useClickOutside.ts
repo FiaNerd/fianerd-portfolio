@@ -1,21 +1,24 @@
 // import { useEffect, useRef } from 'react';
 
-// export const useClickOutside = <T extends HTMLElement>(callback: () => void) => {
+// // Custom hook for detecting clicks outside of a specific element
+// export const useClickOutside = <T extends HTMLElement>(
+//   callback: () => void
+// ) => {
 //   const ref = useRef<T>(null);
 
 //   useEffect(() => {
-//     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+//     const handleClickOutside = (event: MouseEvent) => {
 //       if (ref.current && !ref.current.contains(event.target as Node)) {
 //         callback();
 //       }
 //     };
 
-//     document.addEventListener('mouseup', handleClickOutside);
-//     document.addEventListener('touchend', handleClickOutside);
+//     // Attach the event listener to the document
+//     document.addEventListener('mousedown', handleClickOutside);
 
 //     return () => {
-//       document.removeEventListener('mouseup', handleClickOutside);
-//       document.removeEventListener('touchend', handleClickOutside);
+//       // Clean up the event listener when the component unmounts
+//       document.removeEventListener('mousedown', handleClickOutside);
 //     };
 //   }, [callback]);
 
@@ -24,27 +27,24 @@
 
 import { useEffect, useRef } from 'react';
 
-// Custom hook for detecting clicks outside of a specific element
-export const useClickOutside = <T extends HTMLElement>(
-  callback: () => void
-) => {
+export function useClickOutside<T extends HTMLElement>(handler: () => void) {
   const ref = useRef<T>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const listener = (event: MouseEvent | TouchEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        callback();
+        handler();
       }
     };
 
-    // Attach the event listener to the document
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
 
     return () => {
-      // Clean up the event listener when the component unmounts
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
     };
-  }, [callback]);
+  }, [handler]);
 
   return ref;
-};
+}

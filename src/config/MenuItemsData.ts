@@ -1,5 +1,6 @@
 import { faCaretDown, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import HomePage from '../pages/HomePage';
+import PortfolioPage from '../pages/portfolios/PortfolioPage';
 
 export interface Route {
   url: string;
@@ -9,89 +10,107 @@ export interface Route {
   dropdown?: Route[];
   icon?: IconDefinition;
   description?: string;
+  sectionId?: string;
 }
 
 export const navRoutes: Route[] = [
   {
     title: 'home',
-    url: '/',
+    url: '/profile',
     nav: HomePage,
+    sectionId: 'home',
   },
   {
     title: 'profile',
-    url: '/profile#who-am-i',
+    url: '/profile',
+    sectionId: 'who-am-i',
     icon: faCaretDown,
     subMenu: [
       {
         title: 'me',
-        url: '/profile/who-am-i#who-am-i',
+        url: '/profile',
+        sectionId: 'who-am-i',
         description: 'meDescription',
       },
       {
         title: 'skillsWeb',
-        url: '/profile/web-skills#web-skills',
+        url: '/profile',
+        sectionId: 'web-skills',
         description: 'skillsWebDescription',
       },
       {
         title: 'skillsGraphic',
-        url: '/profile/graphic-skills#graphic-skills',
+        url: '/profile',
+        sectionId: 'graphic-skills',
         description: 'skillsGraphicDescription',
       },
       {
         title: 'otherSkills',
-        url: '/profile/additional-skills#additional-skills',
+        url: '/profile',
+        sectionId: 'additional-skills',
         description: 'otherSkillsDescription',
       },
       {
         title: 'programsAndSoftwares',
-        url: '/profile/programs-and-softwares#programs-and-softwares',
+        url: '/profile',
+        sectionId: 'programs-and-softwares',
         description: 'programsAndSoftwaresDescription',
       },
       {
         title: 'experience',
-        url: '/profile/experience#experience',
+        url: '/profile',
+        sectionId: 'experience',
         description: 'experienceDescription',
       },
       {
         title: 'education',
-        url: '/profile/education#education',
+        url: '/profile',
+        sectionId: 'education',
         description: 'educationDescription',
       },
       {
         title: 'hobbies',
-        url: '/profile/hobbies#hobbies',
+        url: '/profile',
+        sectionId: 'hobbies',
         description: 'hobbiesDescription',
       },
     ],
   },
   {
     title: 'portfolio',
-    url: '/portfolio#portfolio',
+    url: '/portfolio',
     icon: faCaretDown,
+    sectionId: 'my-work',
+    nav: PortfolioPage,
     subMenu: [
       {
         title: 'top5best-projects',
-        url: '/portfolio/top-5-projects#top-5-projects',
+        url: '/portfolio',
+        sectionId: 'top-5-projects',
         description: 'top5best-projectsDescription',
       },
       {
         title: 'frontend',
-        url: '/portfolio/frontend#frontend',
+        url: '/portfolio',
+        sectionId: 'frontend',
         description: 'frontendDescription',
       },
       {
         title: 'backend',
-        url: '/portfolio/backend#backend',
+        url: '/portfolio',
+        sectionId: 'backend',
         description: 'backendDescription',
       },
       {
         title: 'fullstack',
-        url: '/portfolio/fullstack#fullstack',
+        url: '/portfolio',
+        sectionId: 'fullstack',
         description: 'fullstackDescription',
       },
       {
         title: 'graphic-design',
-        url: '/portfolio/graphic-design#graphic-design',
+        url: '/portfolio',
+        sectionId: 'graphic-design',
         description: 'graphicDescription',
       },
     ],

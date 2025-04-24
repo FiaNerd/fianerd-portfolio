@@ -8,10 +8,10 @@ import WorkExperience from '../components/profile/experience/WorkExperience';
 import Skills from '../components/profile/skills/Skills';
 import useHeaderHeight from '../hook/useHeaderHeight';
 import useScrollUpdateURL from '../hook/useScrollUpdateURL';
-import { useEffect, useRef } from 'react';
+import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../utils/handleHashNavigation';
 
-const HomePage = () => {
+const HomePage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation([
     'profile/aboutMe',
     'profile/experience',
@@ -19,11 +19,8 @@ const HomePage = () => {
     'profile/hobbies',
   ]);
 
-  const { headerHeight } = useHeaderHeight();
-  // const isHeaderVisible = useHeaderVisibility();
-  const isNavigating = useRef(false);
-
   const sectionIds = [
+    'home',
     'who-am-i',
     'web-skills',
     'graphic-skills',
@@ -34,14 +31,22 @@ const HomePage = () => {
     'hobbies',
   ];
 
+  const [isNavigating, setIsNavigating] = useState(false);
+  const isNavigatingRef = useRef(isNavigating);
+
   useEffect(() => {
+    isNavigatingRef.current = isNavigating; // Keep ref in sync with state
+  }, [isNavigating]);
+
+  useEffect(() => {
+    startTransition(() => {});
     handleHashNavigation({
       sectionIds,
       headerHeight,
       isHeaderVisible: true,
-      isNavigating,
+      isNavigating: isNavigatingRef,
       onNavigationComplete: () => {
-        console.log('Navigation completed!');
+        setIsNavigating(false); // Update state
       },
     });
   }, [headerHeight]);
@@ -49,16 +54,14 @@ const HomePage = () => {
   // Update the URL when scrollin
   useScrollUpdateURL(sectionIds, 'profile', headerHeight);
 
+  // const handleNavigation = () => {
+  //   isNavigating.current = true;
+  // };
+
   return (
-    <div
-      className="bg-blend-multiply"
-      style={{
-        marginTop: `${headerHeight}px `,
-        transition: 'top 0.3s ease',
-      }}
-    >
+    <div className="bg-blend-multiply">
       {/* Hero Section */}
-      <section className="relative">
+      <section id="home" className="relative">
         <HeroSection />
       </section>
       {/* Profile Section */}

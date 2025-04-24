@@ -10,7 +10,7 @@ import Footer from '../footer/Footer';
 import SelectLanguage from '../SelectLanguage';
 import ThemeSwitch from '../ThemeSwitch';
 import AnimatedHamburgerButton from './AnimatedHamburgerButton';
-import MenuItems from './MenuItems';
+import MenuItemsMobile from './MenuItemsMobile';
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
   `link ${isActive ? 'active contact' : ''}`;
@@ -27,8 +27,6 @@ const NavbarMobile = () => {
     throw new Error('ThemeContext must be used within a ThemeProvider');
   }
 
-  // const { currentTheme } = context;
-
   const ref = useClickOutside<HTMLDivElement>(() => setShowMenu(false));
 
   useEffect(() => {
@@ -43,21 +41,6 @@ const NavbarMobile = () => {
       document.body.style.overflow = '';
     };
   }, [showMenu]);
-
-  // useEffect(() => {
-  //   document.body.classList.toggle('dark', currentTheme === 'dark');
-
-  //   // Prevent background scrolling when the menu is open
-  //   if (showMenu) {
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     document.body.style.overflow = '';
-  //   }
-
-  //   return () => {
-  //     document.body.style.overflow = '';
-  //   };
-  // }, [currentTheme, showMenu]);
 
   return (
     <div ref={ref} className="lg:hidden relative">
@@ -79,10 +62,9 @@ const NavbarMobile = () => {
                 <ThemeSwitch />
                 <SelectLanguage />
               </div>
-
               <ul className="grid gap-2 pl-8">
                 {navRoutes.map((menu, index) => (
-                  <MenuItems
+                  <MenuItemsMobile
                     key={index}
                     items={{ ...menu, subMenu: menu.subMenu || [] }}
                     depthLevel={0}

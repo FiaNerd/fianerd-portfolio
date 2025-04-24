@@ -9,12 +9,12 @@ const ErrorFallback = ({
 }) => {
   console.error('Error caught by ErrorBoundary:', error);
 
-  const { headerHeight } = useHeaderHeight();
+  const headerHeight  = useHeaderHeight();
 
   return (
     <div
       role="alert"
-      className="max-w-screen-xl p-4 bg-red-100 text-red-800"
+      className="max-w-screen-2xl p-4 bg-red-100 text-red-800"
       style={{ marginTop: headerHeight }}
     >
       <h2>Something went wrong:</h2>

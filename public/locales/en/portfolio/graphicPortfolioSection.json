@@ -81,8 +81,8 @@
       "media": []
     },
     {
-      "urlTitle": "fred-for-kvall",
-      "title": "Fred för Kväll",
+      "urlTitle": "en-kvall-for-fred",
+      "title": "En Kväll för Fred",
       "applicationType": "graphic",
       "applicationTypeDetail": {
         "text": "GRAPHIC DESIGN",
@@ -95,9 +95,9 @@
         "suffix": "POSTERS & FLYERS"
       },
       "subTitle": "Alla Tiders Teater",
-      "titleDescription": "Graphic material created for Alla Tiders Teater's event 'Fred för Kväll.'",
+      "titleDescription": "Graphic material created for Alla Tiders Teater's event 'En Kväll för Fred.'",
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
-      "description": "Graphic material created for Alla Tiders Teater's event 'Fred för Kväll.' The project included posters, flyers, and promotional materials.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Results:</span><br>- The design received positive feedback from both the client and the audience.",
+      "description": "Graphic material created for Alla Tiders Teater's event 'En Kväll för Fred.' The project included posters, flyers, and promotional materials.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Results:</span><br>- The design received positive feedback from both the client and the audience.",
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
       "ctaButton": "View Details",
@@ -121,7 +121,7 @@
       "images": [
         {
           "src": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
-          "alt": "Fred för Kväll Poster",
+          "alt": "En Kväll för Fred Poster",
           "span": "wide"
         }
       ],

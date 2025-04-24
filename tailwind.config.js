@@ -1,4 +1,4 @@
-const withMT = require("@material-tailwind/react/utils/withMT");
+const withMT = require('@material-tailwind/react/utils/withMT');
 
 module.exports = withMT({
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -28,7 +28,10 @@ module.exports = withMT({
         'sub-heading': ['cabin-sketch-regular', 'sans-serif'],
       },
       zIndex: {
-        '100': '100',
+        9999: '9999',
+        100: '100',
+        70: '70',
+        50: '50',
       },
       screens: {
         xxs: '320px',
@@ -41,11 +44,11 @@ module.exports = withMT({
         '3xl': '1920px',
       },
       resolutions: {
-        '2': '2dppx',
-        '3': '3dppx',
-        '4': '4dppx',
-        '5': '5dppx',
-        '6': '6dppx'
+        2: '2dppx',
+        3: '3dppx',
+        4: '4dppx',
+        5: '5dppx',
+        6: '6dppx',
       },
       lineClamp: {
         7: '7',
@@ -55,8 +58,8 @@ module.exports = withMT({
       },
       keyframes: {
         fade: {
-          'from': { opacity: 0.4 },
-          'to': { opacity: 1 },
+          from: { opacity: 0.4 },
+          to: { opacity: 1 },
         },
       },
       animation: {

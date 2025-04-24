@@ -1,134 +1,115 @@
 import { Icon } from '@iconify/react';
-import { startTransition, useEffect, useState } from 'react';
+import { startTransition, useEffect, useLayoutEffect, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router-dom';
-import HeroDetails from '../../components/partials/HeroDetails';
+import portfolioDataEn from '../../../public/locales/en/portfolioSection.json';
+import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
-import useHeaderHeight from '../../hook/useHeaderHeight';
-import Button from '../../components/partials/Button';
+import HeroDetails from '../../components/partials/HeroDetails';
 
-const PortfolioDetailsPage = () => {
+const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-  // const [headerHeight, setHeaderHeight] = useState(0);
-  const { i18n, t } = useTranslation([
-    'portfolio/portfolio',
-    'portfolio/top5PortfolioSection',
-    'portfolio/frontendPortfolioSection',
-    'portfolio/backendPortfolioSection',
-    'portfolio/fullstackPortfolioSection',
-    'portfolio/graphicPortfolioSection',
-    'common',
-  ]);
+  const { i18n } = useTranslation();
+  const { t } = useTranslation(['portfolio', 'common']);
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate(-1);
-  };
+  useEffect(() => {
+    const portfolioData =
+      i18n.language === 'sv' ? portfolioDataSv : portfolioDataEn;
 
-  const { headerHeight } = useHeaderHeight();
+    const sections = [
+      ...(portfolioData.top5PortfolioSection?.top5Items || []),
+      ...(portfolioData.frontendPortfolioSection?.frontendItems || []),
+      ...(portfolioData.backendPortfolioSection?.backendItems || []),
+      ...(portfolioData.fullstackPortfolioSection?.fullstackItems || []),
+      ...(portfolioData.graphicPortfolioSection || []),
+    ];
+
+    const filteredItems = sections.filter(
+      (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
+    );
+
+    const uniqueItems = Array.from(
+      new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
+    );
+
+    setPortfolioItems(uniqueItems);
+  }, [urlTitle, i18n.language]);
 
   useEffect(() => {
-    const loadPortfolioData = async () => {
-      const portfolioData = await Promise.all([
-        i18n.getResourceBundle(i18n.language, 'portfolio/portfolio'),
-        i18n.getResourceBundle(i18n.language, 'portfolio/top5PortfolioSection'),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/frontendPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/backendPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/fullstackPortfolioSection'
-        ),
-        i18n.getResourceBundle(
-          i18n.language,
-          'portfolio/graphicPortfolioSection'
-        ),
-      ]);
+    if (location.state?.sectionId) {
+      sessionStorage.setItem('lastPortfolioSection', location.state.sectionId);
+    }
+  }, [location.state]);
 
-      const sections = [
-        ...(portfolioData[1]?.top5Items || []),
-        ...(portfolioData[2]?.frontendItems || []),
-        ...(portfolioData[3]?.backendItems || []),
-        ...(portfolioData[4]?.fullstackItems || []),
-        ...(portfolioData[5]?.graphicItemsPortfolio || []),
-      ];
+  const handleBack = () => {
+    const sectionId =
+      location.state?.sectionId ||
+      sessionStorage.getItem('lastPortfolioSection');
 
-      const filteredItems = sections.filter(
-        (item) => item.urlTitle === decodeURIComponent(urlTitle || '')
-      );
-
-      const uniqueItems = Array.from(
-        new Map(filteredItems.map((item) => [item.urlTitle, item])).values()
-      );
-
-      setPortfolioItems(uniqueItems);
-    };
-
-    loadPortfolioData();
-  }, [urlTitle, i18n.language]);
+    startTransition(() => {
+      if (sectionId) {
+        navigate(`/portfolio#${sectionId}`);
+      } else {
+        navigate('/portfolio');
+      }
+    });
+  };
 
   if (portfolioItems.length === 0) {
     return <div>Loading...</div>;
   }
 
   return (
-    <>
-      <div
-        className="mb-8"
-        style={{
-          marginTop: `${headerHeight}px`,
-          transition: 'top 0.3s ease',
-        }}
-      >
+    <div
+      className="bg-blend-multiply mb-8"
+    >
+      <div className="mb-8">
         {portfolioItems.map((item) => (
           <HeroDetails
             key={item.urlTitle}
             title={item.title}
+            subTitle={item.subTitle || ''}
             image={item.image}
-            subTitle={item.titleDescription}
+            titleDescription={item.titleDescription}
             light="text-[#4b8668]"
             dark="dark:text-[#86834b]"
           />
         ))}
       </div>
 
-      <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-start lg:flex-row">
-        <Button
-          onClick={handleNavigate}
-          className="inline-flex items-start gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
+      <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
+        <button
+          onClick={handleBack}
+          className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
           {t('common:goBack').toUpperCase()}
-        </Button>
+        </button>
       </div>
 
-      {portfolioItems &&
-        portfolioItems.map((item) => (
-          <div
-            id="portfolio-details"
-            key={item.urlTitle}
-            className="py-12 max-w-screen-xl mx-auto px-4"
-          >
-            <PortfolioDetailsItems
-              title={item.title}
-              titleDescription={item.titleDescription}
-              images={item.images}
-              description={item.description}
-              techTitle={item.techTitle}
-              tech={item.tech}
-              applicationTypeDetail={item.applicationTypeDetail}
-              linkTitle={item.linkTitle}
-              links={item.ctaLink}
-            />
-          </div>
-        ))}
-    </>
+      {portfolioItems.map((item) => (
+        <div
+          id="portfolio-details"
+          key={item.urlTitle}
+          className="py-12 max-w-screen-2xl mx-auto px-4"
+        >
+          <PortfolioDetailsItems
+            title={item.title}
+            titleDescription={item.titleDescription}
+            images={item.images}
+            description={item.description}
+            techTitle={item.techTitle}
+            tech={item.tech}
+            applicationTypeDetail={item.applicationTypeDetail}
+            linkTitle={item.linkTitle}
+            links={item.links}
+          />
+        </div>
+      ))}
+    </div>
   );
 };
 

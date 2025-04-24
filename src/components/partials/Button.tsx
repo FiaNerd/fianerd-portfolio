@@ -1,16 +1,29 @@
-import React from 'react';
+import { ButtonProps } from '../../interfaces/ButtonInterface';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  bgColor?: string;
-  border?: string;
-  className?: string;
-  children: React.ReactNode;
-}
+const Button = ({
+  bgColor = 'transparent',
+  border,
+  className = '',
+  children,
+  variant = 'contained', // Add a variant prop with a default value
+  ...props
+}: ButtonProps & { variant?: 'text' | 'outlined' | 'contained' }) => {
+  // Define base styles
+  const baseStyles =
+    'font-sub-heading tracking-wider text-base md:text-md lg:text-lg font-medium transition-all duration-300 cursor-pointer';
 
-const Button = ({ bgColor = 'transparent', border, className = '', children, ...props }: ButtonProps) => {
+  // Define styles for each variant
+  const variants = {
+    text: 'bg-transparent border-none font-bold text-nav-text hover:text-nav-hover  hover:underline-offset-4 hover:underline py-2', // Text-only button
+    outlined:
+      'w-full md:w-80 py-2 px-2 bg-transparent rounded-lg font-sub-heading border-2 tracking-wider font-bold border-btn-bg text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary',
+    contained:
+      'w-full bg-btn-bg py-2 px-2 text-bg-primary font-sub-heading hover:bg-bg-hover rounded-lg ',
+  };
+
   return (
     <button
-      className={`${bgColor} ${border ? border : 'w-full font-sub-heading tracking-wider border-3 rounded text-base md:text-md lg:text-lg font-medium hover:shadow-lg hover:text-bg-primary px-4 py-2 cursor-pointer'} ${className}`}
+      className={`${baseStyles} ${variants[variant]} ${className}`}
       {...props}
     >
       {children}
