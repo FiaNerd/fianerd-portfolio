@@ -10,13 +10,16 @@ const WorkExperience = () => {
   const { t } = useTranslation('profile/experience');
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    const handleNavigation = () => {
     startTransition(() => {
-      navigate('/portfolio/my-work');
+      navigate('/portfolio');
+  
+      setTimeout(() => {
+        const element = document.getElementById('my-work');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); 
     });
   };
 

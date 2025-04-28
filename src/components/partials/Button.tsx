@@ -14,11 +14,11 @@ const Button = ({
 
   // Define styles for each variant
   const variants = {
-    text: 'bg-transparent border-none font-bold text-nav-text hover:text-nav-hover  hover:underline-offset-4 hover:underline py-2', // Text-only button
+    text: 'bg-transparent py-1 border-none font-bold text-nav-text hover:text-nav-hover  hover:underline-offset-4 hover:underline ', // Text-only button
     outlined:
       'w-full md:w-80 py-2 px-2 bg-transparent rounded-lg font-sub-heading border-2 tracking-wider font-bold border-btn-bg text-btn-bg hover:bg-bg-hover hover:border-bg-hover hover:text-bg-primary',
     contained:
-      'w-full bg-btn-bg py-2 px-2 text-bg-primary font-sub-heading hover:bg-bg-hover rounded-lg ',
+      'w-full bg-btn-bg py-2 px-2 text-bg-primary font-bold font-sub-heading hover:bg-bg-hover rounded-lg ',
   };
 
   return (

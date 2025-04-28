@@ -11,12 +11,15 @@ const Education = () => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
     startTransition(() => {
-      navigate('/portfolio/my-work');
+      navigate('/portfolio');
+
+      setTimeout(() => {
+        const element = document.getElementById('my-work');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     });
   };
 

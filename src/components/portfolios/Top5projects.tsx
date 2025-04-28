@@ -94,7 +94,7 @@ const Top5Projects = ({ sectionId }: { sectionId: SectionId }) => {
                           onClick={() => navigateToDetails(item.urlTitle)}
                           className="hidden lg:flex bg-btn-bg hover:bg-bg-hover  items-center justify-center gap-2 w-full max-w-xs"
                         >
-                          <Icon icon="ix:explore" width="20" height="20" />
+                          <Icon icon="ix:explore" width="30" height="30" />
                           <span>{item.ctaButton}</span>
                         </Button>
                       </div>
