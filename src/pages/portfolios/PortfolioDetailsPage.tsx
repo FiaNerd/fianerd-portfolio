@@ -6,10 +6,8 @@ import portfolioDataEn from '../../../public/locales/en/portfolioSection.json';
 import portfolioDataSv from '../../../public/locales/sv/portfolioSection.json';
 import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
 import HeroDetails from '../../components/partials/HeroDetails';
-import LoadingSpinner from '../../components/partials/LoadingSpinner';
-import Button from '../../components/partials/Button';
 
-const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
+const PortfolioDetailsPage = ({headerHeight} : {headerHeight: number}) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
   const { i18n } = useTranslation();
@@ -61,11 +59,13 @@ const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   };
 
   if (portfolioItems.length === 0) {
-    return <LoadingSpinner />;
+    return <div>Loading...</div>;
   }
 
   return (
-    <div className="bg-blend-multiply mb-8">
+    <div
+      className="bg-blend-multiply mb-8"
+    >
       <div className="mb-8">
         {portfolioItems.map((item) => (
           <HeroDetails
@@ -81,14 +81,13 @@ const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
       </div>
 
       <div className="max-w-screen-2xl mx-auto px-4 flex flex-col items-start lg:flex-row">
-        <Button
-          variant="text"
+        <button
           onClick={handleBack}
-          className="inline-flex items-start gap-2 transition-all duration-200 hover:scale-105 w-auto"
+          className="inline-flex items-start font-sub-heading gap-2 text-xl transition-all duration-200 hover:scale-105 text-btn-bg hover-bg-hover dark:hover:text-bg-hover bg-transparent w-auto py-1 "
         >
           <Icon icon="ic:twotone-arrow-back-ios" width="24" height="24" />
           {t('common:goBack').toUpperCase()}
-        </Button>
+        </button>
       </div>
 
       {portfolioItems.map((item) => (
