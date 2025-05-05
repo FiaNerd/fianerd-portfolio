@@ -29,12 +29,10 @@
       "ctaButton": "View Details",
       "ctaLink": [
         {
-          "type": "This repro is private"
-        },
-        {
-          "type": "App store",
-          "url": "https://www.printagon.se/",
-          "icon": "logos:apple-app-store"
+          "type": "GitHub",
+          "privateText": "This repo is private. BUT checkout my other projects.",
+          "url": "https://github.com/FiaNerd",
+          "icon": "line-md:github-twotone"
         }
       ],
       "techTitle": "Tech",
@@ -122,9 +120,10 @@
       "ctaButton": "View Details",
       "ctaLink": [
         {
-          "type": "App Store",
-          "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
-          "icon": "logos:apple-app-store"
+          "type": "GitHub",
+          "privateText": "This repo is private. BUT checkout my other projects.",
+          "url": "https://github.com/FiaNerd",
+          "icon": "line-md:github-twotone"
         }
       ],
       "techTitle": "Tech",

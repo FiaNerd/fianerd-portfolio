@@ -5,7 +5,10 @@ import Popup from '../partials/Popup';
 import PortfolioImageDetails from './PortfolioImageDetails';
 import useFadeIn from '../../hook/useFadeIn';
 import { motion } from 'framer-motion';
-import { Portfolio } from '../../interfaces/PortfolioInterface';
+import {
+  DetailsItemsProps,
+  LinkItem,
+} from '../../interfaces/PortfolioInterface';
 
 const PortfolioDetailsItems = ({
   title = 'Untitled',
@@ -21,7 +24,7 @@ const PortfolioDetailsItems = ({
   },
   linkTitle = '',
   links = [],
-}: Portfolio.DetailsItemsProps) => {
+}: DetailsItemsProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
@@ -65,16 +68,16 @@ const PortfolioDetailsItems = ({
 
             <ul className="flex items-center space-x-4 justify-center px-2 lg:px-8">
               {links.length > 0 &&
-                links.map((item, index) => (
-                  <li
-                    key={index}
-                    className="justify-center items-center flex flex-col cursor-pointer"
+                links.map((item: LinkItem, index: number) => (
+                  <NavLink
+                    to={item.url}
+                    className="flex flex-col items-center cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <NavLink
-                      to={item.url}
-                      className="flex flex-col items-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <li
+                      key={index}
+                      className="justify-center items-center flex flex-col cursor-pointer"
                     >
                       <Icon
                         icon={item.icon}
@@ -85,8 +88,11 @@ const PortfolioDetailsItems = ({
                       <p className="text-xs font-light tracking-wider text-text-primary">
                         {item.type}
                       </p>
-                    </NavLink>
-                  </li>
+                    </li>
+                    <p className="text-xs font-light tracking-wider text-text-primary">
+                      {item.privateText ? item.privateText : item.text}
+                    </p>
+                  </NavLink>
                 ))}
             </ul>
           </div>
@@ -97,8 +103,8 @@ const PortfolioDetailsItems = ({
             </p>
             <ul className="items-center pb-4 grid grid-cols-3 md:grid-cols-5 justify-center gap-8">
               {tech.length > 0 &&
-                tech.map((item, index) => (
-                  <li key={index}>
+                tech.map((item: any, index: number) => (
+                  <li key={item.name}>
                     <div className="relative">
                       <Icon
                         icon={item.icon}
@@ -135,13 +141,13 @@ const PortfolioDetailsItems = ({
             <h6 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">
               {applicationTypeDetail.text || 'N/A'}
             </h6>
-            {applicationTypeDetail.icon.name && (
+            {applicationTypeDetail.icon?.name && (
               <Icon
                 icon={applicationTypeDetail.icon.name}
-                width={applicationTypeDetail.icon.width}
-                height={applicationTypeDetail.icon.height}
-                style={{ color: applicationTypeDetail.icon.color }}
-                className=" w-[1.4em] lg:w-auto lg:rotate-90 md:transform"
+                width={applicationTypeDetail.icon.width || 24} // Default width
+                height={applicationTypeDetail.icon.height || 24} // Default height
+                style={{ color: applicationTypeDetail.icon.color || '#000' }} // Default color
+                className="w-[1.4em] lg:w-auto lg:rotate-90 md:transform"
               />
             )}
             <h6 className="text-nowrap text-lg md:text-2xl lg:text-3xl font-bold text-[#edd8bf] dark:text-[#240313] lg:rotate-90 lg:transform">

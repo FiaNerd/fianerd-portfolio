@@ -81,7 +81,7 @@
         },
         "subTitle": "Frontend",
         "titleDescription": "Booking agency website",
-        "projectDuration": "march 2023 - january 2025",
+        "projectDuration": "March 2023 - March 2025",
         "description": "I designed and developed a responsive, mobile-first website for BrutalBeats Agency & Booking with a sleek dark theme. Future plans include integrating Node.js for contact forms and connecting the site to a CMS for easier management.<br><br><span class='font-bold'>Purpose:</span> Undertook the challenge of developing a website for BrutalBeats Agency & Booking, a newly established booking company. The primary requirement was to create a website with a dark theme, designed to be mobile-first and responsive. Future plans include integrating Node.js for handling contact requests through Nodemailer and connecting the site to a CMS system like WordPress or Umbraco.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>-Frontend Development:</span><br> - Utilized React and TypeScript to craft a responsive and intuitive user interface. - Implemented a mobile-first approach with Tailwind CSS for optimal user experience.<br><span class='font-bold'>- Backend Development:</span> - Managed backend development, ensuring seamless integration with frontend components. - Planned integration of Node.js for handling contact requests.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS<br><span class='font-bold'>- Backend:</span> Node.js<br><span class='font-bold'>- Version Control:</span> Git<br><span class='font-bold'>- Terminal:</span> Command Line Interface (CLI)<br><span class='font-bold'>- Development Tools:</span> Visual Studio Code<br><span class='font-bold'>- CMS:</span> Planned integration with WordPress or Umbraco<br><br><span class='font-bold'>Challenges & Solutions:</span><br> - Overcame challenges in implementing a dark theme while maintaining mobile-first responsiveness.<br> - Planned and strategized for future integration with Node.js and CMS system.<br><br><span class='font-bold'>Outcome:</span> Successfully developed a basic structure and design for the website, with plans for further enhancements and integrations to improve user experience and functionality.",
         "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
         "ctaButton": "View Details",
@@ -433,7 +433,10 @@
 
         "links": [
           {
-            "type": "This repro is private"
+            "type": "GitHub",
+            "privateText": "This repo is private. BUT checkout my other projects.",
+            "url": "https://github.com/FiaNerd",
+            "icon": "line-md:github-twotone"
           }
         ],
         "techTitle": "Tech",
@@ -518,12 +521,10 @@
         "ctaButton": "View Details",
         "links": [
           {
-            "type": "This repro is private"
-          },
-          {
-            "type": "App store",
-            "url": "",
-            "icon": "logos:apple-app-store"
+            "type": "GitHub",
+            "privateText": "This repo is private. BUT checkout my other projects.",
+            "url": "https://github.com/FiaNerd",
+            "icon": "line-md:github-twotone"
           }
         ],
         "techTitle": "Tech",

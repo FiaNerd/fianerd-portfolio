@@ -25,7 +25,7 @@ const PortfolioCard = ({
   const navigate = useNavigate();
 
   const navigateToDetails = () => {
-    navigate(`/portfolio/${encodeURIComponent(urlTitle )}`, {
+    navigate(`/portfolio/${encodeURIComponent(urlTitle)}`, {
       state: { fromSection: projectType.toLowerCase() },
     });
   };
@@ -102,22 +102,27 @@ const PortfolioCard = ({
                   key={index}
                   className="justify-center items-center flex flex-col cursor-pointer"
                 >
-                  <NavLink
-                    to={item.url}
-                    className="flex flex-col items-center"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon
-                      icon={item.icon}
-                      width="24"
-                      height="24"
-                      className="text-btn-bg hover:text-bg-hover"
-                    />
-                    <p className="text-xs font-light tracking-wider text-text-primary">
-                      {item.type}
+                  <div className="flex flex-row items-center gap-4">
+                    <NavLink
+                      to={item.url}
+                      className="flex flex-col items-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon
+                        icon={item.icon}
+                        width="24"
+                        height="24"
+                        className="text-btn-bg hover:text-bg-hover"
+                      />
+                      <p className="text-xs font-light tracking-wider text-text-primary">
+                        {item.type}
+                      </p>
+                    </NavLink>
+                    <p className="text-xs font-light tracking-wider text-text-primary ">
+                      {item.privateText ? item.privateText : ''}
                     </p>
-                  </NavLink>
+                  </div>
                 </li>
               ))}
             </ul>

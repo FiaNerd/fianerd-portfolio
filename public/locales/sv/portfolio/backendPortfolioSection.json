@@ -1,167 +1,169 @@
 {
-    "titlePortfolioBackend": "Backendprojekt",
-    "subTitlePortfolioBackend": "Ryggraden i Digitala Lösningar",
-    "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
-    "ctaButtonViewAll": "Visa Detaljer",
+  "titlePortfolioBackend": "Backendprojekt",
+  "subTitlePortfolioBackend": "Ryggraden i Digitala Lösningar",
+  "introBackendPortfolio": "<span class='text-[#ec4428] dark:text-[#1d7ecc] font-semibold'> Projekt som kombinera kreativitet och funktionalitet. </span> Mitt backend-projekt är för närvarande inte live, men jag har endel erfarenhet inom backend-utveckling, inklusive arbete med databashantering, API-integrationer och serveradministration. Om du har en idé eller ett projekt i åtanke, tveka inte att kontakta mig. Jag ser fram emot att samarbeta och skapa något fantastiskt tillsammans.",
+  "ctaButtonViewAll": "Visa Detaljer",
 
-    "backendItems": [
-      {
-        "projectType": "Skolprojekt",
-        "title": "Photo App",
-        "urlTitle": "photo-app",
-        "applicationType": "webb",
-        "subTitle": "Backend",
-        "applicationTypeDetail": {
-          "text": "BACKEND",
-          "icon": {
-            "name": "icon-park-outline:dot",
-            "width": 48,
-            "height": 48,
-            "color": "#76150d"
-          },
-          "suffix": "WEBBAPPLIKATION"
+  "backendItems": [
+    {
+      "projectType": "Skolprojekt",
+      "title": "Photo App",
+      "urlTitle": "photo-app",
+      "applicationType": "webb",
+      "subTitle": "Backend",
+      "applicationTypeDetail": {
+        "text": "BACKEND",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
         },
-        "titleDescription": "Backand för en foto app",
-        "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
-        "description": "Jag utvecklade en backend för en foto app som möjliggör användare att ladda upp, hämta och uppdatera och ta bort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
-        "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
-        "linkTitle": "Länkar",
-        "ctaButton": "Visa Detaljer",
-        "ctaLink": [
-          {
-            "type": "GitHub",
-            "url": "https://github.com/FiaNerd/prisma_photo_app_api",
-            "icon": "line-md:github-twotone"
-          }
-        ],
-        "techTitle": "Tech",
-        "tech": [
-          {
-            "name": "node.js",
-            "icon": "vscode-icons:file-type-node"
-          },
-          {
-            "name": "prisma",
-            "icon": "catppuccin:prisma"
-          },
-          {
-            "name": "TypeScript",
-            "icon": "catppuccin:typescript"
-          },
-          {
-            "name": "Postman",
-            "icon": "skill-icons:postman"
-          }
-        ],
-        "images": [
-          {
-            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
-            "alt": "Foto App Code",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
-            "alt": "Foto App code",
-            "span": "wide"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
-            "alt": "Foto App code",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
-            "alt": "Foto App webläsare",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
-            "alt": "Foto App postman",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
-            "alt": "Foto App prisma & SQL",
-            "span": "wide"
-          }
-        ]
+        "suffix": "WEBBAPPLIKATION"
       },
-      {
-        "projectType": "Sidoprojekt",
-        "title": "Slowfashion API",
-        "urlTitle": "slowfashion-api",
-        "applicationType": "App",
-        "subTitle": "Backend",
-        "applicationTypeDetail": {
-          "text": "BACKEND",
-          "icon": {
-            "name": "icon-park-outline:dot",
-            "width": 48,
-            "height": 48,
-            "color": "#76150d"
-          },
-          "suffix": "APP APPLIKATION"
+      "titleDescription": "Backand för en foto app",
+      "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
+      "description": "Jag utvecklade en backend för en foto app som möjliggör användare att ladda upp, hämta och uppdatera och ta bort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
+      "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
+      "linkTitle": "Länkar",
+      "ctaButton": "Visa Detaljer",
+      "ctaLink": [
+        {
+          "type": "GitHub",
+          "url": "https://github.com/FiaNerd/prisma_photo_app_api",
+          "icon": "line-md:github-twotone"
+        }
+      ],
+      "techTitle": "Tech",
+      "tech": [
+        {
+          "name": "node.js",
+          "icon": "vscode-icons:file-type-node"
         },
-        "titleDescription": "Backend för modemedvetna",
-        "projectDuration": "juni 2023 – mars 2024",
-        "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utvecklaren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<br><br><span class='font-bold'>Huvudsakliga Bidrag:</span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Programmeringsspråk:</span> C#<br>- Ramverk: ASP.NET Core Web API<br><span class='font-bold'>- Databaser:</span> PostgreSQL, DBeaver<br><span class='font-bold'>- API-testning:</span> Swagger, Postman, Insomnia<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Molntjänster:</span> Azure<br></span><span class='font-bold'>- Utvecklingsmiljö (IDE):</span> Visual Studio 2022<br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
-        "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
-        "ctaButton": "Visa Detaljer",
-        "linkTitle": "Länk till mitt GitHub",
-        "ctaLink": [
-          {
-            "type": "Det här reprot är privat"
-          }
-        ],
+        {
+          "name": "prisma",
+          "icon": "catppuccin:prisma"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "catppuccin:typescript"
+        },
+        {
+          "name": "Postman",
+          "icon": "skill-icons:postman"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-browser.jpg",
+          "alt": "Foto App Code",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+          "alt": "Foto App code",
+          "span": "wide"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/prismaPhoto/code-prisma-app.jpg",
+          "alt": "Foto App code",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
+          "alt": "Foto App webläsare",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/prismaPhoto/photo-postman.jpg",
+          "alt": "Foto App postman",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/prismaPhoto/prismaPhototSql.jpg",
+          "alt": "Foto App prisma & SQL",
+          "span": "wide"
+        }
+      ]
+    },
+    {
+      "projectType": "Sidoprojekt",
+      "title": "Slowfashion API",
+      "urlTitle": "slowfashion-api",
+      "applicationType": "App",
+      "subTitle": "Backend",
+      "applicationTypeDetail": {
+        "text": "BACKEND",
+        "icon": {
+          "name": "icon-park-outline:dot",
+          "width": 48,
+          "height": 48,
+          "color": "#76150d"
+        },
+        "suffix": "APP APPLIKATION"
+      },
+      "titleDescription": "Backend för modemedvetna",
+      "projectDuration": "juni 2023 – mars 2024",
+      "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utvecklaren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<br><br><span class='font-bold'>Huvudsakliga Bidrag:</span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Programmeringsspråk:</span> C#<br>- Ramverk: ASP.NET Core Web API<br><span class='font-bold'>- Databaser:</span> PostgreSQL, DBeaver<br><span class='font-bold'>- API-testning:</span> Swagger, Postman, Insomnia<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Molntjänster:</span> Azure<br></span><span class='font-bold'>- Utvecklingsmiljö (IDE):</span> Visual Studio 2022<br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
+      "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+      "ctaButton": "Visa Detaljer",
+      "linkTitle": "Länk till mitt GitHub",
+      "ctaLink": [
+        {
+          "type": "GitHub",
+          "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
+          "url": "https://github.com/FiaNerd",
+          "icon": "line-md:github-twotone"
+        }
+      ],
 
-        "techTitle": "Tech",
-        "tech": [
-          {
-            "name": "C-sharp",
-            "icon": "logos:c-sharp"
-          },
-          {
-            "name": "Postman",
-            "icon": "skill-icons:postman"
-          },
-          {
-            "name": ".NET",
-            "icon": "logos:dotnet"
-          }
-        ],
-        "images": [
-          {
-            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
-            "alt": "Slowashion mobil app",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
-            "alt": "Slowfashion app",
-            "span": "wide"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
-            "alt": "Slowfashion kort",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
-            "alt": "Slowfashion logo",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
-            "alt": "Slowfashion kort kläder",
-            "span": "tall"
-          },
-          {
-            "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
-            "alt": "Slowfashion footer",
-            "span": "wide"
-          }
-        ]
-      }
-    ]
-  
+      "techTitle": "Tech",
+      "tech": [
+        {
+          "name": "C-sharp",
+          "icon": "logos:c-sharp"
+        },
+        {
+          "name": "Postman",
+          "icon": "skill-icons:postman"
+        },
+        {
+          "name": ".NET",
+          "icon": "logos:dotnet"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
+          "alt": "Slowashion mobil app",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-app.jpg",
+          "alt": "Slowfashion app",
+          "span": "wide"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cards.jpg",
+          "alt": "Slowfashion kort",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-logo-verticale.jpg",
+          "alt": "Slowfashion logo",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-cloth-cards.jpg",
+          "alt": "Slowfashion kort kläder",
+          "span": "tall"
+        },
+        {
+          "src": "/assets/images/portfolio/back-end/slowfashion/slowfashion-foot.jpg",
+          "alt": "Slowfashion footer",
+          "span": "wide"
+        }
+      ]
+    }
+  ]
 }

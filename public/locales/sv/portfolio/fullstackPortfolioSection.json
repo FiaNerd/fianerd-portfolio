@@ -29,7 +29,10 @@
       "ctaButton": "Visa Detaljer",
       "ctaLink": [
         {
-          "type": "Det här reprot är privat"
+          "type": "GitHub",
+          "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
+          "url": "https://github.com/FiaNerd",
+          "icon": "line-md:github-twotone"
         }
       ],
       "techTitle": "Tech",
@@ -117,9 +120,10 @@
       "ctaButton": "Visa Detaljer",
       "ctaLink": [
         {
-          "type": "App Store",
-          "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
-          "icon": "logos:apple-app-store"
+          "type": "GitHub",
+          "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
+          "url": "https://github.com/FiaNerd",
+          "icon": "line-md:github-twotone"
         }
       ],
       "techTitle": "Tech",

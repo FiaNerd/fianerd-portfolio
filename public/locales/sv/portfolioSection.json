@@ -81,7 +81,7 @@
         },
         "subTitle": "Frontend",
         "titleDescription": "Webbplats för bokningsföretag",
-        "projectDuration": "mars 2023 - januari 2025",
+        "projectDuration": "mars 2023 - mars 2025",
         "description": "Jag designade och utvecklade en responsiv, mobilanpassad webbplats för BrutalBeats Agency & Booking med en modern mörk design. <br><br>Framtida planer inkluderar integration av Node.js för kontaktformulär och koppling till ett CMS för enklare hantering.",
         "image": "/assets/images/portfolio/front-end/bb/brutal-hero.jpg",
         "linkTitle": "Länkar",
@@ -522,7 +522,10 @@
         "ctaButton": "Visa Detaljer",
         "links": [
           {
-            "type": "Det här reprot är privat"
+            "type": "GitHub",
+            "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
+            "url": "https://github.com/FiaNerd",
+            "icon": "line-md:github-twotone"
           }
         ],
         "techTitle": "Tech",
@@ -610,9 +613,10 @@
         "ctaButton": "Visa Detaljer",
         "links": [
           {
-            "type": "App Store",
-            "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
-            "icon": "logos:apple-app-store"
+            "type": "GitHub",
+            "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
+            "url": "https://github.com/FiaNerd",
+            "icon": "line-md:github-twotone"
           }
         ],
         "techTitle": "Tech",
@@ -969,6 +973,3 @@
     }
   ]
 }
-
-
-

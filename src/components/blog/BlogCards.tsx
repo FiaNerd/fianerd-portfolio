@@ -77,7 +77,10 @@ const BlogCards = () => {
             key={index}
             className="rounded-lg transition-shadow duration-300 flex flex-col h-full"
           >
-            <div className="flex flex-col justify-between h-full group p-4 rounded-md">
+            <NavLink
+              to={`/blog/${encodeURIComponent(card.urlTitle)}`}
+              className="flex flex-col justify-between h-full group p-4 rounded-md"
+            >
               <div>
                 <div className="relative w-full h-48 mb-4">
                   <img
@@ -122,7 +125,7 @@ const BlogCards = () => {
                   {t('readMore')}
                 </Button>
               </div>
-            </div>
+            </NavLink>
           </motion.div>
         ))}
       </div>

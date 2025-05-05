@@ -1,10 +1,4 @@
-import {
-  ImageDetails,
-  Link,
-  SectionId,
-  Tech,
-  UrlTitle,
-} from './SharedInterface';
+import { ImageDetails, Link, SectionId, Tech } from './SharedInterface';
 
 export interface PortfolioItems {
   sectionId: string;
@@ -31,22 +25,30 @@ export interface Section {
 }
 
 export interface DetailsItemsProps {
-  title: string;
-  titleDescription: string;
+  title?: string;
+  titleDescription?: string;
   images?: ImageDetails[];
-  description: string;
-  techTitle: string;
-  tech: Tech[];
-  applicationTypeDetail: {
-    text: string;
-    icon: {
-      name: string;
-      width: number;
-      height: number;
-      color: string;
+  description?: string;
+  techTitle?: string;
+  tech?: Tech[];
+  applicationTypeDetail?: {
+    text?: string;
+    icon?: {
+      name?: string;
+      width?: number;
+      height?: number;
+      color?: string;
     };
-    suffix: string;
+    suffix?: string;
   };
   linkTitle?: string;
   links?: Link[];
+}
+
+export interface LinkItem {
+  url: string;
+  icon: string;
+  type: string;
+  text?: string;
+  privateText?: string;
 }

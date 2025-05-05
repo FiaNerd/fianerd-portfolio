@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import Title from '../../components/partials/Title';
 import BlogCards from '../../components/blog/BlogCards';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
+import { NavLink } from 'react-router-dom';
 const BlogPage = ({ headerHeight }: { headerHeight: number }) => {
   const { t } = useTranslation('blogPost');
 
