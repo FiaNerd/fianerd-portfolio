@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../partials/Button';
 import { useTranslation } from 'react-i18next';
 
-const PortfolioHeorIntro = () => {
+const PortfolioHeroIntro = () => {
   const { t, i18n } = useTranslation(['portfolio/portfolio']);
 
   const onButtonClick = () => {
@@ -66,4 +66,4 @@ const PortfolioHeorIntro = () => {
   );
 };
 
-export default PortfolioHeorIntro;
+export default PortfolioHeroIntro;

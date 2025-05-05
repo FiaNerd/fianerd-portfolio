@@ -89,7 +89,7 @@ const PortfolioCard = ({
       </div>
 
       {/* Links and Tech Section (Non-Navigable) */}
-      <div className="flex items-end w-full h-full rounded-b-lg px-2 bg-deep-orange-100 dark:bg-black">
+      <div className="flex items-end w-full rounded-b-lg px-2 bg-deep-orange-100 dark:bg-black">
         <div className="flex border-t border-gray-700 w-full pt-3">
           {/* Links Section */}
           <div className="flex flex-col border-r border-gray-700 w-full">

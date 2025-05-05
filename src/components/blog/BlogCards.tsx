@@ -114,12 +114,13 @@ const BlogCards = () => {
               </div>
 
               <div className="flex justify-end mt-auto border-t border-text-primary">
-                <button
+                <Button
+                  variant="text"
                   onClick={() => handleNaviagete(card.urlTitle)}
                   className="font-sub-heading text-end font-bold text-nav-text hover:text-nav-hover hover:underline hover:underline-offset-4 cursor-pointer mt-2"
                 >
                   {t('readMore')}
-                </button>
+                </Button>
               </div>
             </div>
           </motion.div>

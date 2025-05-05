@@ -14,7 +14,7 @@ import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
 import { startTransition, useEffect, useRef, useState } from 'react';
 import { handleHashNavigation } from '../../utils/handleHashNavigation';
-import PortfolioHeorIntro from '../../components/portfolios/PortfolioHeroIntro';
+import PortfolioHeroIntro from '../../components/portfolios/PortfolioHeroIntro';
 
 const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
   const [isNavigating, setIsNavigating] = useState(false);
@@ -68,7 +68,7 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
           className="bg-[#436e74] dark:bg-[#16443e] text-[#f39058] dark:text-[#d85f2d] mb-6 md:mb-8 lg:mb-10 leading-[0]"
           sticky
         />
-        <PortfolioHeorIntro />
+        <PortfolioHeroIntro />
       </section>
 
       <SvgWaves colorLight={'#436e74'} colorDark={'#16443e'} />
@@ -83,7 +83,7 @@ const PortfolioPage = ({ headerHeight }: { headerHeight: number }) => {
           className="bg-[#f5e3c8] dark:bg-[#1b0909] text-[#2ea25f] dark:text-[#cb384c] px-4 mb-6 md::mb-8 leading-[0]"
           sticky
         />
-        <Top5projects sectionId={'top-5-projects'}  />
+        <Top5projects sectionId={'top-5-projects'} />
       </section>
 
       <section id="frontend" className="top-0">
