@@ -56,7 +56,7 @@ const Hobbies = () => {
           ></h4>
           <NavLink
             to="/contact"
-            className="flex flex-row items-center text-lg md:text-3xl gap-4 justify-center font-sub-heading bg-transparent text-btn-bg font-medium hover:shadow-lg border-2 md:border-4 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded shadow py-2 md:py-4 px-4 md:px-8 border-btn-bg hover:border-transparent"
+            className="flex flex-row items-center text-lg md:text-3xl gap-4 justify-center font-sub-heading bg-transparent text-btn-bg font-medium hover:shadow-lg border-2 md:border-4 hover:bg-bg-hover tracking-wider hover:text-bg-primary rounded-lg shadow py-2 md:py-4 px-4 md:px-8 border-btn-bg hover:border-transparent"
           >
             <Icon
               icon="line-md:email-twotone"

@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import i18n from '../../../public/i18n/i18n';
 import Button from '../partials/Button';
 import ResponsiveHeroImage from './ResponsiveHeroImage';
@@ -56,7 +56,9 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-8 w-full">
               <Button
+                variant="contained"
                 onClick={onButtonClick}
+                bgColor="bg-btn-bg"
                 className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide"
               >
                 <Icon
@@ -66,13 +68,16 @@ const HeroSection = () => {
                 />{' '}
                 {t('ctaButtonCV')}
               </Button>
-              <button
+
+              <Button
+                variant="contained"
                 onClick={handleNavigate}
-                className="flex flex-row w-full py-2 md:py-4 px-4 justify-center items-center gap-4 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary rounded-lg text-base md:text-md lg:text-lg hover:shadow-lg cursor-pointer"
+                bgColor="bg-[#350712] dark:bg-[#5a1a2b]"
+                className="flex flex-row w-full py-2 md:py-3 px-4 justify-center items-center gap-4 font-sub-heading text-bg-primary dark:text-text-primary tracking-wide font-semibold rounded-lg text-base md:text-md lg:text-lg hover:shadow-lg cursor-pointer hover:bg-[#5a1a2b] dark:hover:bg-[#350712]"
               >
                 <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
                 {t('ctaButtonPortfolio')}
-              </button>
+              </Button>
             </div>
           </div>
         </div>

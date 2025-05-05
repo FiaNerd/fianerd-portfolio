@@ -32,19 +32,22 @@ const PortfolioHeorIntro = () => {
           <h1 className="text-[#f3d758] dark:text-[#d85f2d] text-md md:text-[3rem] xl:text-[5rem] xl:leading-[4.2rem] font-semibold tracking-wpide">
             {t('mainSectionTitle').toUpperCase()}
           </h1>
-          <p className="font-semibold tracking-wide mb-12 md:mb-4">{t('portfolioIntro')}</p>
+          <p className="font-semibold tracking-wide mb-12 md:mb-4">
+            {t('portfolioIntro')}
+          </p>
           <div className="flex flex-col w-80 lg:w-full xl:flex-row items-center mx-auto md:mt-8 gap-4 lg:gap-8 xl:gap-8 2xl:gap-20">
             <Button
               variant="contained"
               onClick={onButtonClick}
-              className="flex flex-row justify-center items-center gap-4 md:gap-4 lg:gap-2 xl:gap-2 bg-btn-bg"
+              bgColor="bg-btn-bg"
+              className="flex flex-row gap-2 justify-center items-center bg-btn-bg text-bg-primary border-2 border-btn-bg hover:border-bg-hover hover:bg-bg-hover font-semibold tracking-wide"
             >
               <Icon icon="line-md:cloud-alt-download" width="30" height="30" />{' '}
               {t('ctaButtonCV')}
             </Button>
             <NavLink
               to={'/contact'}
-              className="flex flex-row w-full justify-center items-center gap-4 md:gap-2 lg:gap-2 xl:gap-2 font-sub-heading bg-[#350712] border-3 border-[#350712] text-bg-primary dark:text-text-primary tracking-wide font-semibold hover:bg-bg-hover dark:hover:bg-[#350712ab] hover:border-bg-hover dark:hover:border-[#350712ab] hover:text-bg-primary  rounded-lg text-base md:text-md lg:text-lg hover:shadow-lg px-4 py-2 cursor-pointer"
+              className="flex flex-row w-full py-4 px-2 text-bg-primary font-bold font-sub-heading rounded-lg hover:shadow-lg justify-center items-center gap-4 md:gap-2 lg:gap-2 xl:gap-2 bg-[#350712] border-3 border-[#350712]  dark:text-text-primary tracking-wide hover:bg-bg-hover hover:bg-[#5a1a2b] dark:hover:bg-[#350712]  hover:border-bg-hover hover:text-bg-primary  text-base md:text-md lg:text-lg cursor-pointer"
             >
               <Icon icon="line-md:email-twotone" width="30" height="30" />{' '}
               {t('ctaButtonContactMe')}
