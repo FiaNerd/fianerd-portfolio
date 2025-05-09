@@ -67,16 +67,19 @@ const WorkExperience = () => {
           variants={fadeInRight.vars}
           className="flex mx-auto md:ml-12 lg:w-2/3 sticky"
         >
-          <div className="max-w-screen-2xlmx-auto w-full h-full">
-            <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
-              <div className="hidden md:block absolute h-full border-2 lg:border-4 right-[50%] border-bg-secondary dark:border-text-accent rounded-[1%]"></div>
+          <div className="max-w-screen-2xl mx-auto w-full h-full">
+            <div className="hidden md:block relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
+              <div className="hidden md:block absolute h-full border-2 lg:border-4 left-1/2 -translate-x-1/2 border-bg-secondary dark:border-text-accent rounded-[1%] opacity-60"></div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 lg:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left">
                   <p className="mb-3 text-bg-secondary dark:text-text-accent">
                     {t('dateWorkBrutal')}
                   </p>
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-bg-secondary dark:border-text-accent rounded-full z-20"></div>
+
+
                   <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading">
                     {t('titleBrutal')}
                   </h4>
@@ -96,12 +99,15 @@ const WorkExperience = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full left-timeline ">
+              <div className="md:mb-8 flex justify-between items-center w-full  ">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
                   <p className="mb-3 text-bg-secondary dark:text-text-accent">
                     {t('dateWorkProdigies')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-bg-secondary dark:border-text-accent rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading ">
                     {t('titleProdigies')}
                   </h4>
@@ -123,13 +129,16 @@ const WorkExperience = () => {
 
               <div className=" left-1/2 transform -translate-x-1/2 h-[10%] border-l-2 border-bg-secondary dark:border-text-accent"></div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
                   <p className="mb-3 text-bg-secondary dark:text-text-accent">
                     {' '}
                     {t('dateWorkOmegapoint')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-bg-secondary dark:border-text-accent rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-bg-secondary dark:text-text-accent dark:text-text-heading ">
                     {t('titleOmegapoint')}
                   </h4>
@@ -149,12 +158,15 @@ const WorkExperience = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
                   <p className="mb-3 text-bg-secondary dark:text-[#aa7339]">
                     {t('dateWorkAllaTiders')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-bg-secondary dark:border-text-accent rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold  text-bg-secondary dark:text-[#aa7339]">
                     {t('titleAllaTiders')}
                   </h4>
@@ -174,7 +186,7 @@ const WorkExperience = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full ">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
                   <p className="mb-3 text-bg-secondary dark:text-[#aa7339]">
@@ -199,12 +211,15 @@ const WorkExperience = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
                   <p className="mb-3  text-bg-secondary dark:text-[#aa7339]">
                     {t('dateWorkPrintagon')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-bg-secondary dark:border-text-accent rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-bg-secondary dark:text-[#aa7339]">
                     {t('titlePrintagon')}
                   </h4>
@@ -224,12 +239,15 @@ const WorkExperience = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
                   <p className="mb-3 text-bg-secondary dark:text-[#aa7339]">
                     {t('dateWorkStumpen')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-bg-secondary dark:border-text-accent rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-bg-secondary dark:text-[#aa7339]">
                     {t('titleStumpen')}
                   </h4>
