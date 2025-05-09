@@ -22,7 +22,7 @@ const Education = () => {
         } else {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-      }, 300); 
+      }, 300);
     });
   };
 
@@ -68,18 +68,22 @@ const Education = () => {
           className="flex mx-auto md:ml-12 lg:w-2/3 sticky"
         >
           <div className="max-w-screen-2xl mx-auto w-full h-full">
-            <div className="relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
-              <div className="hidden md:block absolute h-full border-2 lg:border-4 right-[50%] border-[#501842] dark:border-[#b5685c] rounded-[1%]"></div>
+            <div className="hidden md:block relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
+              <div className="hidden md:block absolute h-full border-2 lg:border-4 left-1/2 -translate-x-1/2 border-[#501842] dark:border-[#b5685c] rounded-[1%] opacity-60"></div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 lg:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left">
                   <p className="mb-3 text-text-accent dark:text-[#b5685c]">
                     {t('dateFE')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading">
                     {t('titleFEmedie')}
                   </h4>
+
                   <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                     {t('edutacationCoursesFE')}
                   </p>
@@ -100,18 +104,23 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full left-timeline ">
+              <div className="md:mb-8 flex justify-between items-center w-full relative">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
                   <p className="mb-3 text-text-accent dark:text-[#b5685c]">
                     {t('dateBE')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading ">
                     {t('titleBE')}
                   </h4>
+
                   <p className="leading-snug text-text-secondary dark:text-text-accentdark:text-text-seondary text-opacity-100">
                     {t('edutacationCoursesFE')}
                   </p>
+
                   <p
                     className="leading-snug dark:text-text-primary text-opacity-100"
                     dangerouslySetInnerHTML={{ __html: t('placeFEec') }}
@@ -131,13 +140,16 @@ const Education = () => {
 
               <div className=" left-1/2 transform -translate-x-1/2 h-[10%] border-l-2 border-bg-secondary dark:border-text-accent"></div>
 
-              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
                   <p className="mb-3 text-text-accent dark:text-[#b5685c]">
                     {' '}
                     {t('datePrint')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading ">
                     {t('titlePrint')}
                   </h4>
@@ -163,15 +175,19 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full left-timeline">
+              <div className="md:mb-8 flex justify-between items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
                   <p className="mb-3 text-text-accent dark:text-[#b5685c]">
                     {t('dateGraphic')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c]">
                     {t('titleGraphic')}
                   </h4>
+
                   <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
                     {t('edutacationCoursesGraphic')}
                   </p>
@@ -194,12 +210,15 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div className="mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-left md:text-right">
                   <p className="mb-3 text-text-accent dark:text-[#b5685c]">
                     {t('dateWedesign')}
                   </p>
+
+                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c]">
                     {t('titleWedesign')}
                   </h4>
