@@ -107,18 +107,18 @@ const WorkExperience = () => {
                 ].map((item, index) => (
                   <li key={index} className="mb-5">
                     <div className="flex group items-center">
-                      <div className="border-bg-secondary dark:border-text-accent bg-bg-primary group-hover:bg-bg-primary z-10 rounded-full border-4 h-5 w-5">
+                      <div className="border-bg-secondary dark:border-text-accent bg-[#f2d6a2] group-hover:bg-bg-primary z-10 rounded-full border-4 h-5 w-5">
                         <div className="bg-bg-secondary dark:bg-accent-primary h-1 w-6 items-center ml-4 mt-1"></div>
                       </div>
+
                       <div className="flex-1 ml-4 z-10 font-medium">
-                        <div className="order-1 space-y-2 bg-bg-primary rounded-lg shadow-only transition-ease px-6 py-4">
+                        <div className="order-1 space-y-2 bg-[#f2d6a2] dark:bg-bg-primary rounded-lg shadow-only transition-ease px-6 py-4">
                           <p className="text-sm text-bg-secondary dark:text-text-accent">
                             {item.date}
                           </p>
-                          <h3 className="mb-3 font-bold text-bg-secondary dark:text-text-accent text-2xl">
+                          <h3 className="mb-3 font-bold text-bg-secondary dark:text-text-accent text-2xl border-b-2 pb-2 border-bg-secondary dark:border-text-accent">
                             {item.title}
                           </h3>
-                          <hr />
                           <p
                             className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
                             dangerouslySetInnerHTML={{

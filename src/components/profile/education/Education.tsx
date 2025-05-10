@@ -60,6 +60,85 @@ const Education = () => {
           </Button>
         </motion.div>
 
+        <div className="block md:hidden py-10 container mx-auto">
+          <div className="relative">
+            <div
+              className="border-r-4 border-[#501842] dark:border-[#b5685c] absolute h-full top-0"
+              style={{ left: '9px' }}
+            ></div>
+            <ul className="list-none m-0 p-0">
+              {/* Timeline Items */}
+              {[
+                {
+                  title: t('titleFEmedie'),
+                  date: t('dateFE'),
+                  description: t('descriptionEducationBE'),
+                  tech: t('techEducationBE'),
+                  place: t('placeFEec'),
+                },
+                {
+                  title: t('titleBE'),
+                  date: t('dateBE'),
+                  description: t('descriptionEducationBE'),
+                  tech: t('techEducationBE'),
+                  place: t('placeFEec'),
+                },
+                {
+                  title: t('titlePrint'),
+                  date: t('datePrint'),
+                  description: t('descriptionEducationPrint'),
+                  tech: t('techEducationPrint'),
+                  place: t('placePrint'),
+                },
+                {
+                  title: t('titleGraphic'),
+                  date: t('dateGraphic'),
+                  description: t('descriptionEducationGraphic'),
+                  tech: t('techEducationGraphic'),
+                  place: t('placeGraphic'),
+                },
+                {
+                  title: t('titleWedesign'),
+                  date: t('dateWedesign'),
+                  description: t('descriptionEducationWedesign'),
+                  tech: t('techEducationWedesign'),
+                  place: t('placeWedesign'),
+                },
+              ].map((item, index) => (
+                <li key={index} className="mb-5">
+                  <div className="flex group items-center">
+                    <div className="bg-[#dfc7b3]   dark:bg-[#370808] group-hover:bg-bg-primary z-10 rounded-full border-4 border-[#501842] dark:border-[#b5685c] h-5 w-5">
+                      <div className="bg-[#501842] dark:bg-[#b5685c] h-1 w-6 items-center ml-4 mt-1"></div>
+                    </div>
+                    <div className="flex-1 ml-4 z-10 font-medium">
+                      <div className="order-1 space-y-2 bg-[#dfc7b3] dark:bg-[#370808] rounded-lg shadow-only transition-ease px-6 py-4">
+                        <p className="text-sm  text-text-accent dark:text-[#b5685c]">
+                          {item.date}
+                        </p>
+                        <h3 className="mb-3 font-bold text-text-accent dark:text-[#b5685c] text-2xl border-b-2 pb-2 border-[#501842] dark:border-[#b5685c]">
+                          {item.title}
+                        </h3>
+                        <p
+                          className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
+                          dangerouslySetInnerHTML={{ __html: item.description }}
+                        ></p>
+                        <p
+                          className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
+                          dangerouslySetInnerHTML={{ __html: item.tech }}
+                        ></p>
+                        <p
+                          className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
+                          dangerouslySetInnerHTML={{ __html: item.place }}
+                        ></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         <motion.div
           ref={fadeInRight.ref}
           initial="hidden"
@@ -67,7 +146,7 @@ const Education = () => {
           variants={fadeInRight.vars}
           className="flex mx-auto md:ml-12 lg:w-2/3 sticky"
         >
-          <div className="max-w-screen-2xl mx-auto w-full h-full">
+          <div className="hidden md:block max-w-screen-2xl mx-auto w-full h-full">
             <div className=" relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
               <div className="hidden md:block absolute h-full border-2 lg:border-4 left-1/2 -translate-x-1/2 border-[#501842] dark:border-[#b5685c] rounded-[1%] opacity-60"></div>
 
@@ -84,7 +163,7 @@ const Education = () => {
                     {t('titleFEmedie')}
                   </h4>
 
-                  <p className="leading-snug text-text-secondary dark:text-text-secondary text-opacity-100">
+                  <p className="leading-snug text-text-secondary  text-opacity-100">
                     {t('edutacationCoursesFE')}
                   </p>
                   <p
@@ -111,13 +190,13 @@ const Education = () => {
                     {t('dateBE')}
                   </p>
 
-                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4  border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading ">
                     {t('titleBE')}
                   </h4>
 
-                  <p className="leading-snug text-text-secondary dark:text-text-accentdark:text-text-seondary text-opacity-100">
+                  <p className="leading-snug text-text-secondary dark:text-text-accent text-opacity-100">
                     {t('edutacationCoursesFE')}
                   </p>
 
