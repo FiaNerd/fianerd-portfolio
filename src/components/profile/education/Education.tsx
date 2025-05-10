@@ -53,7 +53,7 @@ const Education = () => {
           <Button
             variant="outlined"
             onClick={handleNavigation}
-            className="flex flex-row gap-4 justify-center items-center mb-12 md:mb-0 mr-auto"
+            className="flex flex-row w-60 md:w-full gap-4 justify-center items-center mb-12 md:mb-0 mr-auto"
           >
             <Icon icon="ix:explore" width="30" height="30" />
             {t('exploreBtn')}
@@ -68,7 +68,7 @@ const Education = () => {
           className="flex mx-auto md:ml-12 lg:w-2/3 sticky"
         >
           <div className="max-w-screen-2xl mx-auto w-full h-full">
-            <div className="hidden md:block relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
+            <div className=" relative wrap overflow-hidden md:pr-4 md:pl-8 md:py-20 lg:p-10 h-full">
               <div className="hidden md:block absolute h-full border-2 lg:border-4 left-1/2 -translate-x-1/2 border-[#501842] dark:border-[#b5685c] rounded-[1%] opacity-60"></div>
 
               <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
@@ -78,7 +78,7 @@ const Education = () => {
                     {t('dateFE')}
                   </p>
 
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading">
                     {t('titleFEmedie')}
@@ -111,7 +111,7 @@ const Education = () => {
                     {t('dateBE')}
                   </p>
 
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading ">
                     {t('titleBE')}
@@ -138,7 +138,7 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className=" left-1/2 transform -translate-x-1/2 h-[10%] border-l-2 border-bg-secondary dark:border-text-accent"></div>
+              <div className="left-1/2 transform -translate-x-1/2 h-[10%] border-l-2 border-bg-secondary dark:border-text-accent"></div>
 
               <div className="md:mb-8 flex justify-between flex-row-reverse items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
@@ -148,7 +148,7 @@ const Education = () => {
                     {t('datePrint')}
                   </p>
 
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading ">
                     {t('titlePrint')}
@@ -182,7 +182,7 @@ const Education = () => {
                     {t('dateGraphic')}
                   </p>
 
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c]">
                     {t('titleGraphic')}
@@ -217,7 +217,7 @@ const Education = () => {
                     {t('dateWedesign')}
                   </p>
 
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c]">
                     {t('titleWedesign')}
