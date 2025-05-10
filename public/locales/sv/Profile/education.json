@@ -11,7 +11,7 @@
   "exploreBtn": "Utforska Nu",
 
   "dateFE": "september 2022 - maj 2024",
-  "titleFEmedie": "Frontend utveckling",
+  "titleFE": "Frontend utveckling",
   "edutacationCoursesFE": "2-årig YH-utbildning inom frontend",
   "placeFE": "Medieinstitutet, Malmö",
   "descriptionEducationFE": "<b>Kunskaper</b> - lärde mig bygga responsive deisgn, Hantera diverse API:er, skapa enkla och komplexa webbapplikationer",
@@ -20,7 +20,7 @@
   "dateBE": "augusti 2020 - juni 2022",
   "titleBE": "Webbutveckling inom .NET",
   "edutacationCoursesBE": "2-årig YH-utbildning inom backend fullstack",
-  "placeFEec": "EC utbildningen, Helsingborg",
+  "placeBE": "EC utbildningen, Helsingborg",
   "descriptionEducationBE": "<b>Kunskaper</b> - lärde mig bygga API:er, skapa SQL Server (SMMS) database, skapa enkla och komplexa webbapplikationer",
   "techEducationBE": "<b>Tekniker:</b> C#, ASP.NET Core, SQL Server, HTML & CSS, JavaScript, React, TypeScript, Axios",
 

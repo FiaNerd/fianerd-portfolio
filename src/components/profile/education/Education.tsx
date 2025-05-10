@@ -50,14 +50,14 @@ const Education = () => {
             {t('checkOut')}
           </h4>
           <p className="text-text-secondary mb-8">{t('checkoutText')}</p>
-          <Button
-            variant="outlined"
-            onClick={handleNavigation}
-            className="flex flex-row w-60 md:w-full gap-4 justify-center items-center mb-12 md:mb-0 mr-auto"
-          >
-            <Icon icon="ix:explore" width="30" height="30" />
-            {t('exploreBtn')}
-          </Button>
+           <Button
+              variant="outlined"
+              onClick={handleNavigation}
+              className="flex flex-row gap-4 justify-center items-center mb-12 md:mb-0 mr-auto"
+            >
+              <Icon icon="ix:explore" width="30" height="30" />
+              {t('exploreBtn')}
+            </Button>
         </motion.div>
 
         <div className="block md:hidden py-10 container mx-auto">
@@ -70,39 +70,39 @@ const Education = () => {
               {/* Timeline Items */}
               {[
                 {
-                  title: t('titleFEmedie'),
                   date: t('dateFE'),
-                  description: t('descriptionEducationBE'),
-                  tech: t('techEducationBE'),
-                  place: t('placeFEec'),
+                  title: t('titleFE'),
+                  place: t('placeFE'),
+                  description: t('descriptionEducationFE'),
+                  tech: t('techEducationFE'),
                 },
                 {
-                  title: t('titleBE'),
                   date: t('dateBE'),
+                  title: t('titleBE'),
+                  place: t('placeBE'),
                   description: t('descriptionEducationBE'),
                   tech: t('techEducationBE'),
-                  place: t('placeFEec'),
                 },
                 {
-                  title: t('titlePrint'),
                   date: t('datePrint'),
+                  title: t('titlePrint'),
+                  place: t('placePrint'),
                   description: t('descriptionEducationPrint'),
                   tech: t('techEducationPrint'),
-                  place: t('placePrint'),
                 },
                 {
-                  title: t('titleGraphic'),
                   date: t('dateGraphic'),
+                  title: t('titleGraphic'),
+                  place: t('placeGraphic'),
                   description: t('descriptionEducationGraphic'),
                   tech: t('techEducationGraphic'),
-                  place: t('placeGraphic'),
                 },
                 {
-                  title: t('titleWedesign'),
                   date: t('dateWedesign'),
+                  title: t('titleWedesign'),
+                  place: t('placeWedesign'),
                   description: t('descriptionEducationWedesign'),
                   tech: t('techEducationWedesign'),
-                  place: t('placeWedesign'),
                 },
               ].map((item, index) => (
                 <li key={index} className="mb-5">
@@ -115,20 +115,20 @@ const Education = () => {
                         <p className="text-sm  text-text-accent dark:text-[#b5685c]">
                           {item.date}
                         </p>
-                        <h3 className="mb-3 font-bold text-text-accent dark:text-[#b5685c] text-2xl border-b-2 pb-2 border-[#501842] dark:border-[#b5685c]">
+                        <h3 className="mb-3 font-bold text-text-accent dark:text-[#b5685c] text-2xl ">
                           {item.title}
                         </h3>
                         <p
-                          className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
+                          className="text-sm font-medium leading-snug tracking-wide text-text-secondary dark:text-text-accent text-opacity-100 border-b-2 pb-2 border-[#501842] dark:border-[#b5685c]"
+                          dangerouslySetInnerHTML={{ __html: item.place }}
+                        ></p>
+                        <p
+                          className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100 pt-2"
                           dangerouslySetInnerHTML={{ __html: item.description }}
                         ></p>
                         <p
                           className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
                           dangerouslySetInnerHTML={{ __html: item.tech }}
-                        ></p>
-                        <p
-                          className="text-sm font-medium leading-snug tracking-wide text-text-primary text-opacity-100"
-                          dangerouslySetInnerHTML={{ __html: item.place }}
                         ></p>
                       </div>
                     </div>
@@ -157,33 +157,33 @@ const Education = () => {
                     {t('dateFE')}
                   </p>
 
-                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4 border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-bg-primary border-2 md:border-4  border-[#501842] dark:border-[#b5685c] rounded-full z-20"></div>
 
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading">
-                    {t('titleFEmedie')}
+                    {t('titleFE')}
                   </h4>
 
-                  <p className="leading-snug text-text-secondary  text-opacity-100">
+                  <p className="leading-snug text-text-secondary text-opacity-100">
                     {t('edutacationCoursesFE')}
                   </p>
                   <p
                     className="leading-snug text-opacity-100"
-                    dangerouslySetInnerHTML={{ __html: t('placeFEec') }}
+                    dangerouslySetInnerHTML={{ __html: t('placeFE') }}
                   ></p>
                   <p
                     className="leading-snug text-opacity-100"
                     dangerouslySetInnerHTML={{
-                      __html: t('descriptionEducationBE'),
+                      __html: t('descriptionEducationFE'),
                     }}
                   ></p>
                   <p
                     className="leading-snug text-opacity-100"
-                    dangerouslySetInnerHTML={{ __html: t('techEducationBE') }}
+                    dangerouslySetInnerHTML={{ __html: t('techEducationFE') }}
                   ></p>
                 </div>
               </div>
 
-              <div className="md:mb-8 flex justify-between items-center w-full relative">
+              <div className="md:mb-8 flex justify-between items-center w-full">
                 <div className="order-1 md:w-5/12"></div>
                 <div className="order-1 md:w-5/12 px-1 py-4 text-right md:text-left">
                   <p className="mb-3 text-text-accent dark:text-[#b5685c]">
@@ -196,13 +196,13 @@ const Education = () => {
                     {t('titleBE')}
                   </h4>
 
-                  <p className="leading-snug text-text-secondary dark:text-text-accent text-opacity-100">
-                    {t('edutacationCoursesFE')}
+                  <p className="leading-snug text-text-secondary text-opacity-100">
+                    {t('edutacationCoursesBE')}
                   </p>
 
                   <p
                     className="leading-snug dark:text-text-primary text-opacity-100"
-                    dangerouslySetInnerHTML={{ __html: t('placeFEec') }}
+                    dangerouslySetInnerHTML={{ __html: t('placeBE') }}
                   ></p>
                   <p
                     className="leading-snug dark:text-text-primary text-opacity-100"
@@ -232,7 +232,7 @@ const Education = () => {
                   <h4 className="mb-0 font-bold text-text-accent dark:text-[#b5685c] dark:text-text-heading ">
                     {t('titlePrint')}
                   </h4>
-                  <p className="leading-snug text-text-secondary dark:text-text-accentdark:text-text-seondary text-opacity-100">
+                  <p className="leading-snug text-text-secondary dark:text-text-accent text-opacity-100">
                     {t('edutacationCoursesPrint')}
                   </p>
                   <p

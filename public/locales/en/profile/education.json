@@ -8,18 +8,17 @@
     "checkoutText": "Discover my projects – see what I have created and how I have developed in web development and graphic design!",
     "exploreBtn": "Explore Now",
 
-
     "dateFE": "September 2022 - May 2024",
-    "titleFEmedie": "Frontend Development",
+    "titleFE": "Frontend Development",
     "edutacationCoursesFE": "2-year vocational education in frontend development",
     "placeFE": "Medieinstitutet, Malmö",
     "descriptionEducationFE": "<b>Learning</b> - Learned to build responsive designs, work with various APIs, and create simple and complex web applications",
     "techEducationFE": "<b>Technologies:</b> React, TypeScript, HTML & CSS, JavaScript, React Query, Axios, Node.js, SQL & NoSQL, Figma, Cypress",
 
     "dateBE": "August 2020 - June 2022",
-    "titleBE": "Web Development with .NET",
+    "titleBEec": "Web Development with .NET",
     "edutacationCoursesBE": "2-year vocational education in backend fullstack development",
-    "placeFEec": "EC Utbildning, Helsingborg",
+    "placeBE": "EC Utbildning, Helsingborg",
     "descriptionEducationBE": "<b>Learning</b> - Learned to build APIs, create SQL Server (SSMS) databases, and develop simple and complex web applications",
     "techEducationBE": "<b>Technologies:</b> C#, ASP.NET Core, SQL Server, HTML & CSS, JavaScript, React, TypeScript, Axios",
 
