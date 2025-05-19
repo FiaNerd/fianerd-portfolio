@@ -6,23 +6,36 @@ import { useTranslation } from 'react-i18next';
 const PortfolioHeroIntro = () => {
   const { t, i18n } = useTranslation(['portfolio/portfolio']);
 
-  const onButtonClick = () => {
+  const onButtonClick = async () => {
     const resumePath =
       i18n.language === 'sv'
         ? '/files/Sofia-Mattiasson-CV-PB-sv.pdf'
         : '/files/Sofia-Mattiasson-Resume-Coverletter-en.pdf';
 
-    const link = document.createElement('a');
-
-    link.href = resumePath;
-
-    link.download =
+    const fileName =
       i18n.language === 'sv'
         ? 'Sofia-Mattiasson-CV-PB-sv.pdf'
         : 'Sofia-Mattiasson-Resume-Coverletter-en.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+
+    try {
+      const response = await fetch(resumePath);
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = fileName;
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      document.body.removeChild(link);
+
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
   };
 
   return (
