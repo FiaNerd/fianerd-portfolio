@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
+    "@iconify/tailwind": "^1.2.0",
     "@svgr/webpack": "^8.1.0",
     "@types/babel__core": "^7.20.5",
     "@types/babel__generator": "^7.6.8",

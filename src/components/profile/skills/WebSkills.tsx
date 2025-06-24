@@ -2,19 +2,31 @@ import { useTranslation } from 'react-i18next';
 import ProgressBar from './ProgressBar';
 import useFadeIn from '../../../hook/useFadeIn';
 import { motion } from 'framer-motion';
+import Techstack from './Techstack';
+import { Icon } from '@iconify/react';
 
 const WebSkills = () => {
   const { t } = useTranslation('profile/skills');
 
   const webSkills = [
-    { name: 'C#', percentage: 70 },
-    { name: 'ASP.Net Core', percentage: 60 },
-    { name: 'Sql Server', percentage: 60 },
-    { name: 'React', percentage: 80 },
-    { name: 'TypeScript', percentage: 80 },
-    { name: 'HTML / CSS and Tailwind CSS', percentage: 90 },
-    { name: 'Node js', percentage: 40 },
-    { name: 'Git / terminal', percentage: 90 },
+    { name: 'ASP.Net Core', icon: 'skill-icons:dotnet' },
+    { name: 'Sql Server', icon: 'devicon:microsoftsqlserver' },
+    { name: 'React', icon: 'devicon:react' },
+    { name: 'TypeScript', icon: 'devicon:typescript' },
+    {
+      name: 'HTML',
+      icon: 'devicon:html5',
+    },
+    {
+      name: 'CSS',
+      icon: 'logos:css-3',
+    },
+    {
+      name: 'Tailwind CSS',
+      icon: 'logos:tailwindcss-icon',
+    },
+    { name: 'Node js', icon: 'devicon:nodejs' },
+    { name: 'Git / terminal', icon: 'devicon:git' },
   ];
 
   // Animations for the image and text
@@ -59,7 +71,7 @@ const WebSkills = () => {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:order-0 lg:grid-cols-[6%_50%_auto] gap-4 mb-8">
+      <div className="grid grid-cols-1 md:order-0 lg:grid-cols-[6%_auto_50%] gap-4 mb-8">
         {/* Vertical Text Column */}
         <motion.div
           ref={fadeInLeft.ref}
@@ -72,6 +84,26 @@ const WebSkills = () => {
           <h1 className="uppercase font-semibold whitespace-pre-line text-[#535437] dark:text-[#489c80] tracking-widest transform rotate-180 [writing-mode:vertical-lr] text-center">
             {t('webSkills.webbDev')}
           </h1>
+        </motion.div>
+        {/* Skills Column */}
+        <motion.div
+          ref={fadeInRight.ref}
+          initial="hidden"
+          animate={fadeInRight.ctrls}
+          variants={fadeInRight.vars}
+          className=""
+        >
+          <h4 className="text-text-secondary font-semibold mb-[0.15em]">
+            Frontend
+          </h4>
+          {webSkills.map((skill) => (
+            <div
+              className=" justify-center items-center gap-2 p-2 rounded-lg  hover:scale-105 transition-transform duration-300"
+              key={skill.name}
+            >
+              <Techstack name={skill.name} icon={skill.icon} />
+            </div>
+          ))}
         </motion.div>
 
         {/* Middle Column */}
@@ -115,24 +147,6 @@ const WebSkills = () => {
           <p className="text-text-secondary font-sub-heading outline-dashed outline-2 outline-text-secondary dark:outline-text-[#489c80] outline-offset-4 italic font-normal py-2 px-4 p-2 rounded">
             {t('webSkills.textGoal')}
           </p>
-        </motion.div>
-
-        {/* Skills Column */}
-        <motion.div
-          ref={fadeInRight.ref}
-          initial="hidden"
-          animate={fadeInRight.ctrls}
-          variants={fadeInRight.vars}
-          className="col-span-2 md:col-span-1"
-        >
-          {webSkills.map((skill) => (
-            <div key={skill.name}>
-              <h2 className="text-sm text-text-secondary font-semibold mb-[0.15em]">
-                {skill.name}
-              </h2>
-              <ProgressBar percentage={skill.percentage} />
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>
