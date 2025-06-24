@@ -10,6 +10,36 @@
 
   "blogPostCards": [
     {
+      "urlTitle": "haxan-grafisk-layout",
+      "day": ".25",
+      "month": "JUNI",
+      "title": "Häxan - grafisk layout",
+      "titleDescription": "När form möter mörker - affisch och flyer för Häxan",
+      "date": "2025-06-25",
+      "content": "",
+      "httpHomepage": "https://www.allatidersteater.se/",
+      "img": "/assets/images/portfolio/graphic/allaTiders/allaTiders-haxan-flyer.jpg",
+      "suffix": "Graphic",
+      "titleTeche": "Teknologier",
+      "technologies": ["Photoshop", "Illustrator"],
+      "status": "Completed",
+      "titleKeyFeature": "Key Features",
+      "keyFeatures": [
+        "Layout",
+        "Graphic design",
+        "Poster design",
+        "Flyer design",
+        "Rollup design"
+      ],
+      "icon": {
+        "name": "icon-park-twotone:web-page",
+        "width": 40,
+        "height": 40,
+        "color": ""
+      },
+      "privateText": "Alla Tiders Teater - hemsida"
+    },
+    {
       "urlTitle": "warp-terminal",
       "day": ".18",
       "month": "MARS",
@@ -67,5 +97,6 @@
       },
       "privateText": "Detta repro är privat. Men kolla in mina andra projekt."
     }
+    
   ]
 }

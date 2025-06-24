@@ -14,8 +14,6 @@ const BlogDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();
   const navigate = useNavigate();
 
-  console.log('urlTitle:', urlTitle);
-
   const blogDetails: IBlogDetails[] = t('blogPostCards', {
     returnObjects: true,
   }) as IBlogDetails[];
