@@ -98,7 +98,7 @@ const WebSkills = () => {
           </h4>
           {webSkills.map((skill) => (
             <div
-              className=" justify-center items-center gap-2 p-2 rounded-lg  hover:scale-105 transition-transform duration-300"
+              className=" justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"
               key={skill.name}
             >
               <Techstack name={skill.name} icon={skill.icon} />
