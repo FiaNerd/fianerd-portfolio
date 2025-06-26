@@ -16,18 +16,19 @@ const ContentDetails = ({
       />
       <div className="border border-[#3C2F2F] mb-2"></div>
 
-      {/* <div className="flex flex-rows gap-4 px-4 justify-evenly"> */}
+      <div className="flex flex-rows gap-4 px-4 justify-evenly">
         <p
           className="text-bg-secondary dark:text-text-accent items-center font-bold"
         >
           {suffix}
         </p>
 
+<div className="border-r-2 border-[#3C2F2F]"></div>
         <div className="flex flex-col lg:flex-row gap-2 items-center">
             <a
-              href={http}
+              href={http} 
               target="_blank"
-              className="grid grid-cols-[20%_80%] align-items text-bg-secondary dark:text-text-accent cusros-pointer hover:underline hover:underline-offset-4 transition-all duration-200"
+              className="grid grid-cols-[20%_80%] sm:grid-cols-[20%_80%] gap-4 items-center text-bg-secondary dark:text-text-accent cusros-pointer hover:underline hover:underline-offset-4 transition-all duration-200"
             >
               <Icon
                 icon={icon.name}
@@ -41,7 +42,7 @@ const ContentDetails = ({
 
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 
