@@ -17,32 +17,30 @@ const ContentDetails = ({
       <div className="border border-[#3C2F2F] mb-2"></div>
 
       <div className="flex flex-rows gap-8 px-4 justify-evenly">
-        <a
-          href={http}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-bg-secondary dark:text-text-accent items-center font-bold cusros-pointer hover:underline"
+        <p
+          className="text-bg-secondary dark:text-text-accent items-center font-bold"
         >
           {suffix}
-        </a>
+        </p>
 
         <div className="border border-[#3C2F2F] mb-2"></div>
 
         <div className="flex flex-col lg:flex-row gap-2 items-center">
-          <a
-            href={http}
-            target="_blank"
-            className="text-bg-secondary dark:text-text-accent font-bold cusros-pointer hover:underline"
-          >
-            <Icon
-              icon={icon.name}
-              width={icon.width}
-              height={icon.height}
-              style={{ color: icon.color }}
-              className="text-btn-bg hover:text-bg-hover cursor-pointe items-centerr"
-            />
-          </a>
-          <p className="text-xs lg:text-sm mb-0">{privateText}</p>
+            <a
+              href={http}
+              target="_blank"
+              className="grid grid-cols-[20%_80%] text-bg-secondary dark:text-text-accent cusros-pointer hover:underline hover:underline-offset-4 transition-all duration-200 hover:text-bg-secondary dark:hover:text-text-accent"
+            >
+              <Icon
+                icon={icon.name}
+                width={icon.width}
+                height={icon.height}
+                style={{ color: icon.color }}
+                className="text-btn-bg hover:text-bg-hover cursor-pointe items-center"
+              />
+            <p className="text-xs lg:text-sm mb-0">{privateText}</p>
+            </a>
+
         </div>
       </div>
     </div>
