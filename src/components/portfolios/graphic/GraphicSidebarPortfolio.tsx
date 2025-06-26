@@ -1,5 +1,4 @@
-// SidebarGraphicPortfolio.tsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '@iconify/react';
 import 'yet-another-react-lightbox/styles.css';
@@ -7,7 +6,6 @@ import Lightbox from 'yet-another-react-lightbox';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
 import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
-import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import ContentDetails from '../../partials/ContentDetails';
 import ContentTitleDetails from '../../partials/ContentTitleDetails';
@@ -17,7 +15,6 @@ import { useClickOutside } from '../../../hook/useClickOutside';
 import useFadeIn from '../../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 import {
-  GraphicDetailsProps,
   SidebarGraphicPortfolioProps,
 } from '../../../interfaces/GraphicInterface';
 import Button from '../../partials/Button';
@@ -42,12 +39,6 @@ const SidebarGraphicPortfolio = ({
     setOpenLightbox(true);
   };
 
-  const handleCloseLightbox = () => {
-    setOpenLightbox(false);
-  };
-
-  const sidebarRef = useClickOutside<HTMLDivElement>(onClose);
-
   if (!isVisible || !graphicDetails) {
     return null;
   }
@@ -65,6 +56,13 @@ const SidebarGraphicPortfolio = ({
             icon: technology.icon,
           })
         ) || [],
+      images:
+        graphicDetails?.images?.map(
+          (img: { src: string; alt: string }) => ({
+            src: img.src,
+            alt: img.alt,
+          })
+        ),
       goals: graphicDetails?.goals,
       role: graphicDetails?.role,
       challenges: graphicDetails?.challenges,
@@ -98,10 +96,18 @@ const SidebarGraphicPortfolio = ({
         variants={fadeInRight.vars}
         className="fixed inset-0 z-50 flex"
       >
-        <div className="fixed inset-0 bg-black bg-opacity-80" />
+
+       {!openLightbox && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80"
+          onClick={onClose}   
+        />
+      )}
+
         <aside
-          ref={sidebarRef}
           className="relative bg-bg-primary flex flex-col gap-2 h-full z-40 overflow-y-auto ml-auto max-w-[700px] w-full"
+
+          onClick={(e) => e.stopPropagation()}
         >
           {/* HeroDetails Component */}
           <div className="w-full">
@@ -148,16 +154,31 @@ const SidebarGraphicPortfolio = ({
             />
 
             <div
-              className="lg:col-span-1 mb-12 cursor-zoom-in"
-              onClick={() => handleOpenLightbox(0)}
+              className="mb-4 cursor-zoom-in"
+              onClick={() => handleOpenLightbox(currentIndex)}
             >
               <img
-                src={graphicDetails.image}
-                alt={graphicDetails.alt}
+                src={graphicDetails.images[currentIndex].src}
+                alt={graphicDetails.images[currentIndex].alt}
                 className="w-full md:w-[70%] h-auto mx-auto rounded-lg shadow-md"
               />
             </div>
 
+{            graphicDetails.images.length > 1 && (
+            <div className="flex flex-wrap gap-4 mb-8 justify-center">
+              { graphicDetails.images.map((img, idx) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  className={`w-24 h-24 object-cover rounded-lg cursor-pointer border-2 transition
+                    ${idx === currentIndex ? 'border-primary' : 'border-transparent'}
+                    hover:border-primary`}
+                  onClick={() => setCurrentIndex(idx)}
+                />
+              ))}
+            </div>
+)}    
             <GraphicPortfolioContentAbout
               graphicItemsPortfolio={graphicItemsPortfolio}
             />
@@ -166,22 +187,23 @@ const SidebarGraphicPortfolio = ({
 
         <Lightbox
           open={openLightbox}
-          close={handleCloseLightbox}
+          close={() => setOpenLightbox(false)}
           index={currentIndex}
           slides={graphicDetails.images.map((image) => ({
             src: image.src,
             title: graphicDetails.title,
-            alt: graphicDetails.alt,
+            alt: image.alt,
           }))}
-          carousel={{ finite: graphicDetails.images.length <= 1 }}
+          carousel={{ finite: graphicDetails.images.length >= 1 }}
           render={{
             buttonPrev:
               graphicDetails.images.length <= 1 ? () => null : undefined,
             buttonNext:
               graphicDetails.images.length <= 1 ? () => null : undefined,
           }}
-          plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Zoom]}
-        />
+          plugins={[Captions, Fullscreen, Slideshow, Zoom]}
+
+          />
       </motion.div>
     </>
   );

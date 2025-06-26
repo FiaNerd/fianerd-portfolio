@@ -60,6 +60,7 @@ const PortfolioImageDetails = ({ images }: DetailsItemsProps) => {
           src: image.src,
           alt: image.alt,
         }))}
+        carousel={{ finite:true }}
         plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Video, Zoom]}
       />
     </>

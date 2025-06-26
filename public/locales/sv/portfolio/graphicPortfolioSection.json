@@ -543,7 +543,7 @@
       "subTitle": "Projekt för Alla Tiders Teater",
       "titleDescription": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.'",
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
-      "description": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
+      "description": "Grafiskt material skapat för Alla Tiders Teaters produktion 'Häxan.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken",
       "linkTitle": "Länkar",
       "image": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
       "ctaButton": "Visa detaljer",
@@ -566,9 +566,14 @@
         }
       ],
       "images": [
-        {
+          {
           "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
           "alt": "Häxan Affisch",
+          "span": "wide"
+        }, 
+        {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-haxan-flyer.jpg",
+          "alt": "Häxan Flyer",
           "span": "wide"
         }
       ],

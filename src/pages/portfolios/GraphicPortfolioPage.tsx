@@ -16,7 +16,7 @@ const GraphicPortfolioPage = () => {
 
   return (
     <motion.section
-      ref={fadeInDown.ref} // Attach ref correctly
+      ref={fadeInDown.ref} 
       initial="hidden"
       animate={fadeInDown.ctrls}
       variants={fadeInDown.vars}

@@ -11,10 +11,10 @@ const ContentTitleDetails = ({
   return (
     <>
       <div className="flex flex-col px-8">
-        <div className="flex flex-rowsn gap-4">
+        <div className="flex flex-rows gap-4">
           {/* Date Section */}
           {(month || day || year || yearText) && (
-            <div className="border-r-2 border-[#3C2F2F] mb-2">
+            <div className="border-r-2 border-[#3C2F2F]  mb-2">
               {month && (
                 <h5 className="font-semibold px-2 mb-0 leading-0">{month}</h5>
               )}

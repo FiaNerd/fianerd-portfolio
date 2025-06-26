@@ -16,14 +16,12 @@ const ContentDetails = ({
       />
       <div className="border border-[#3C2F2F] mb-2"></div>
 
-      <div className="flex flex-rows gap-4 px-4 justify-evenly">
+      {/* <div className="flex flex-rows gap-4 px-4 justify-evenly"> */}
         <p
           className="text-bg-secondary dark:text-text-accent items-center font-bold"
         >
           {suffix}
         </p>
-
-        <div className="border border-[#3C2F2F] mb-2"></div>
 
         <div className="flex flex-col lg:flex-row gap-2 items-center">
             <a
@@ -43,7 +41,7 @@ const ContentDetails = ({
 
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

@@ -62,6 +62,7 @@
           "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-SkjortKravaller.jpg",
           "alt": "Skjortkravallerna Poster",
           "span": "wide"
+       
         }
       ],
       "category": "Posters & Flyers",
@@ -122,6 +123,11 @@
         {
           "src": "/assets/images/portfolio/graphic/allaTiders/allatiders-enKvallForFred-2024.jpg",
           "alt": "En Kväll för Fred Poster",
+          "span": "wide"
+        },
+        {
+          "src": "   /assets/images/portfolio/graphic/allaTiders/allaTiders-haxan-flyer.jpg",
+          "alt": "Häxan Flyer",
           "span": "wide"
         }
       ],
@@ -570,6 +576,11 @@
         {
           "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-Haxan-A6-2024.jpg",
           "alt": "Häxan flyer",
+          "span": "wide"
+        },
+          {
+          "src": "/assets/images/portfolio/graphic/allaTiders/allaTiders-haxan-flyer.jpg",
+          "alt": "Häxan Flyer",
           "span": "wide"
         }
       ],
