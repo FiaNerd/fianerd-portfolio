@@ -263,12 +263,11 @@
       "media": []
     },
     {
-      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
+      "title": "En Uppstopppad Hund",
+      "urlTitle": "en-uppstopppad-hund",
+      "image": "/assets/images/portfolio/graphic/stumpen/enUppstoppadHund-A4.jpg",
       "category": "Graphic Design",
-
       "projectType": "Graphic Design",
-      "title": "Begravt Barn",
-      "urlTitle": "begravt-barn",
       "applicationType": "graphic",
       "applicationTypeDetail": {
         "text": "GRAPHIC DESIGN",
@@ -281,9 +280,9 @@
         "suffix": "POSTERS & FLYERS"
       },
       "subTitle": "Project for Stumpenensemblen",
-      "titleDescription": "Graphic material created for Stumpenensemblen's production 'Begravt Barn.'",
+      "titleDescription": "Graphic material created for Stumpenensemblen's production 'En Uppstoppad Hund.'",
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2011",
-      "description": "Graphic material created for Stumpenensemblen's production 'Begravt Barn.' The project included posters and promotional materials.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Results:</span><br>- Received positive feedback from both the client and the audience.",
+      "description": "Graphic material created for Stumpenensemblen's production 'En Uppstoppad Hund.' The project included posters and promotional materials.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Concept Creation:</span> Developed creative concepts and layouts for promotional materials.<br><span class='font-bold'>- Design Execution:</span> Designed posters and flyers using Illustrator and Photoshop.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Tools:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Results:</span><br>- Received positive feedback from both the client and the audience.",
       "linkTitle": "Links",
 
       "ctaLink": [
@@ -306,13 +305,13 @@
       ],
       "images": [
         {
-          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
-          "alt": "Begravt Barn Poster",
+          "src": "/assets/images/portfolio/graphic/stumpen/enUppstoppadHund-A4.jpg",
+          "alt": "En Uppstoppad Hund Poster",
           "span": "wide"
         }
       ],
 
-      "year": "'11",
+      "year": "'13",
       "yearText": "YEAR",
       "client": "Stumpenensemblen",
       "goal": "To create a design that captures the theme of the production and attracts a wide audience.",
@@ -392,7 +391,7 @@
         "Illustrator",
         "InDesign"
       ],
-      "relatedProjects": ["Begravt Barn", "Hemmet"]
+      "relatedProjects": ["Tyckte Jag Hörde Hundar", "Hemmet"]
     },
     {
       "urlTitle": "hemmet",
@@ -462,7 +461,7 @@
       ],
       "relatedProjects": [
         "Genomskinliga Hjärtan",
-        "Begravt Barn",
+        "Hemmet",
         "Tyckte Jag Hörde Hundar"
       ]
     },
@@ -526,7 +525,7 @@
       "testimonial": "The design was fantastic and helped us reach a wider audience. – Client, Stumpenensemblen",
       "process": "Started by analyzing the theme of the production and creating sketches. Finalized the design in Photoshop and Illustrator.",
       "tags": ["Theater", "Graphic Design", "Photoshop", "Illustrator"],
-      "relatedProjects": ["Hemmet", "Genomskinliga Hjärtan", "Begravt Barn"],
+      "relatedProjects": ["Hemmet", "Genomskinliga Hjärtan", "Tyckte Jag Hörde Hundar"],
       "ctaButton": "View Details",
       "media": []
     },

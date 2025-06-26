@@ -261,8 +261,8 @@
       "media": []
     },
     {
-      "title": "Begravt Barn",
-      "urlTitle": "begravt-barn",
+      "title": "En Uppstoppad Hund",
+      "urlTitle": "en-uppstoppad-hund",
       "applicationType": "grafisk",
       "image": "/assets/images/portfolio/graphic/stumpen/enUppstoppadHund-A4.jpg",
       "category": "Grafisk Design",
@@ -279,9 +279,9 @@
         "suffix": "AFFISCHER & FLYERS"
       },
       "subTitle": "Projekt för Stumpenensemblen",
-      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'Begravt Barn.'",
+      "titleDescription": "Grafiskt material skapat för Stumpenensemblens produktion 'En Uppstoppad Hund.'",
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2011",
-      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Begravt Barn.' Projektet inkluderade affischer och marknadsföringsmaterial.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Fick positiv feedback från både kunden och publiken.",
+      "description": "Grafiskt material skapat för Stumpenensemblens produktion 'En Uppstoppad Hund.' Projektet inkluderade affischer och marknadsföringsmaterial.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop<br><br><span class='font-bold'>Resultat:</span><br>- Fick positiv feedback från både kunden och publiken.",
       "linkTitle": "Länkar",
 
       "ctaLink": [
@@ -304,13 +304,13 @@
       ],
       "images": [
         {
-          "src": "/assets/images/portfolio/graphic/stumpen/stumpen-begravt-barn.jpg",
-          "alt": "Begravt Barn Affisch",
+          "src": "/assets/images/portfolio/graphic/stumpen/enUppstoppadHund-A4.jpg",
+          "alt": "En Uppstoppad hund Affisch",
           "span": "wide"
         }
       ],
 
-      "year": "'11",
+      "year": "'13",
       "yearText": "ÅR",
       "client": "Stumpenensemblen",
       "technologies": ["Photoshop", "Illustrator"],
@@ -392,7 +392,7 @@
         "Photoshop",
         "InDesign"
       ],
-      "relatedProjects": ["begravt-barn", "hemmet"],
+      "relatedProjects": ["", "hemmet"],
       "media": []
     },
     {
@@ -414,7 +414,7 @@
       "projectDuration": "Helsingborg <span class='not-italic'>|</span> 2024",
       "description": "Grafiskt material skapat för Stumpenensemblens produktion 'Hemmet.' Projektet inkluderade affischer och flyers.<br><br><span class='font-bold'>Viktiga Bidrag:</span><br><span class='font-bold'>- Konceptskapande:</span> Utvecklade kreativa koncept och layouter för marknadsföringsmaterial.<br><span class='font-bold'>- Designutförande:</span> Designade affischer och flyers med hjälp av Illustrator och Photoshop.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Verktyg:</span> Adobe Illustrator, Photoshop, InDesign<br><br><span class='font-bold'>Resultat:</span><br>- Designen fick positiv feedback från både klienten och publiken.",
       "linkTitle": "Länkar",
-      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",
+      "image": "/assets/images/portfolio/graphic/stumpen/stumpen-hemmet-2023.jpg",  
       "ctaButton": "Visa detaljer",
       "ctaLink": [
         {
@@ -462,7 +462,7 @@
         "Photoshop",
         "InDesign"
       ],
-      "relatedProjects": ["genomskinliga-hjartan", "begravt-barn"],
+      "relatedProjects": ["genomskinliga-hjartan", "Tyckte Jag Hörde Hundar"],
       "media": []
     },
     {
