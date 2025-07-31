@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react/dist/iconify.js';
 import { useTranslation } from 'react-i18next';
 import RippedPaperBottom from '../../assets/svg/RippedPaperBottom';
 import RippedPaperTop from '../../assets/svg/RippedPaperTop';
@@ -9,7 +8,6 @@ import BackendPortfolio from '../../components/portfolios/BackendPortfolio';
 import FrontendPortfolio from '../../components/portfolios/FrontendPortfolio';
 import FullStackPortfolio from '../../components/portfolios/FullStackPortfolio';
 import Top5projects from '../../components/portfolios/Top5projects';
-import useHeaderHeight from '../../hook/useHeaderHeight';
 import useScrollUpdateURL from '../../hook/useScrollUpdateURL';
 import GraphicPortfolioPage from './GraphicPortfolioPage';
 import { startTransition, useEffect, useRef, useState } from 'react';

@@ -13,13 +13,13 @@ const HeroSection = () => {
   const onButtonClick = async () => {
     const resumePath =
       i18n.language === 'sv'
-        ? '/files/Sofia-Mattiasson-CV-PB-sv.pdf'
-        : '/files/Sofia-Mattiasson-Resume-Coverletter-en.pdf';
+        ? '/files/Sofia-Mattiasson-CV-Personligtbrev-SV.pdf'
+        : '/files/Sofia-Mattiasson-Resume-Coverletter-EN.pdf';
 
     const fileName =
       i18n.language === 'sv'
-        ? 'Sofia-Mattiasson-CV-PB-sv.pdf'
-        : 'Sofia-Mattiasson-Resume-Coverletter-en.pdf';
+        ? 'Sofia-Mattiasson-CV-Personligtbrev-SV.pdf'
+        : 'Sofia-Mattiasson-Resume-Coverletter-EN.pdf';
 
     try {
       const response = await fetch(resumePath);
