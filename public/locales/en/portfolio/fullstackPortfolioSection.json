@@ -22,8 +22,8 @@
       },
       "subTitle": "Fullstack",
       "titleDescription": "Graphic company system integration",
-      "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
-      "description": "Development of a robust system to manage and track the workflow of two printing machines, focusing on job handling, monitoring paper usage, waste management, and managing remaining paper stock.<br><br><span class='font-bold'>Key Contributions:</span><br><span class='font-bold'>- Requirements Analysis & System Design:</span> Conducted detailed requirements analysis and used Figma to visualize the system's interface and workflow, ensuring that both technical and business needs were considered before development.<br><span class='font-bold'>- Backend Development:</span> Led the development of the backend system using ASP.NET Web API, ensuring robustness, scalability, and performance.<br><span class='font-bold'>- Database Management:</span> Implemented SQL Server to efficiently handle complex relational data and manage large volumes of information, ensuring seamless data handling and access.<br><span class='font-bold'>- Security:</span> Developed a secure authentication system with different roles for administrator and user access.<br><br><span class='font-bold'>Technologies Used:</span><br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core<br><span class='font-bold'>- Frontend:</span> Material UI for responsive websites<br><span class='font-bold'>- Design Tools:</span> Figma for wireframes and interface design<br><span class='font-bold'>- Database:</span> SQL Server (SMSS)<br><span class='font-bold'>- Version Control:</span> Git<br><span class='font-bold'>- Command Line Interface:</span> CLI<br><span class='font-bold'>- Development Tools:</span> Visual Studio 2022<br><br><span class='font-bold'>Challenges & Solutions:</span><br>- Designed a scalable system to handle high-volume data and operations.<br>- Ensured robust data integrity and efficient data management with SQL Server.<br>- Overcame challenges in backend authentication implementation, enriching my understanding of backend complexities.<br><br><span class='font-bold'>Results:</span><br>- Improved workflow management and provided detailed insights into paper usage and waste, optimizing operational efficiency.<br>- Facilitated the management of paper stock.",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> August 2025 - ongoing",
+      "description": "Planned development of a robust system to manage and track the workflow of two printing machines, with a focus on job handling, monitoring paper usage, waste management, and managing remaining paper stock.<br><br><span class='font-bold'>Planned Contributions:</span><br><span class='font-bold'>- Requirements Analysis & System Design:</span> Starting with detailed requirements analysis and using Figma to visualize the system's interface and workflow, ensuring that both technical and business needs are considered before development.<br><span class='font-bold'>- Backend Development:</span> Will develop the backend system using ASP.NET Web API, focusing on robustness, scalability, and performance.<br><span class='font-bold'>- Database Management:</span> Plan to implement SQL Server to efficiently handle complex relational data and manage large volumes of information.<br><span class='font-bold'>- Security:</span> Will design a secure authentication system with different roles for administrator and user access.<br><br><span class='font-bold'>Technologies To Be Used:</span><br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core<br><span class='font-bold'>- Frontend:</span> Material UI for responsive websites<br><span class='font-bold'>- Design Tools:</span> Figma for wireframes and interface design<br><span class='font-bold'>- Database:</span> SQL Server (SMSS)<br><span class='font-bold'>- Version Control:</span> Git<br><span class='font-bold'>- Command Line Interface:</span> CLI<br><span class='font-bold'>- Development Tools:</span> Visual Studio 2022<br><br><span class='font-bold'>Expected Challenges & Learning Opportunities:</span><br>- Designing a scalable system to handle high-volume data and operations.<br>- Ensuring robust data integrity and efficient data management with SQL Server.<br>- Implementing secure authentication and role management.<br><br><span class='font-bold'>Anticipated Outcomes:</span><br>- A system that improves workflow management and provides insights into paper usage and waste.<br>- Tools to facilitate better management of paper stock and optimize operational efficiency.",
       "linkTitle": "Links",
       "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
       "ctaButton": "View Details",
@@ -42,25 +42,28 @@
           "icon": "logos:c-sharp"
         },
         {
-          "name": "Firebase",
-          "icon": "devicon:firebase"
-        },
-        {
           "name": ".NET",
           "icon": "logos:dotnet"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "catppuccin:typescript"
+        },
+        {
+          "name": "Postman",
+          "icon": "skill-icons:postman"
+        },
+        {
+          "name": "SQL Server (SMMS)",
+          "icon": "devicon:microsoftsqlserver"
         },
         {
           "name": "React",
           "icon": "skill-icons:react-dark"
         },
         {
-          "name": "TypeScript",
-          "icon": "catppuccin:typescript"
-        },
-
-        {
-          "name": "Postman",
-          "icon": "logos:material-ui"
+          "name": "TailwindCSS",
+          "icon": "skill-icons:tailwindcss-dark"
         }
       ],
       "images": [
@@ -121,8 +124,8 @@
       "ctaLink": [
         {
           "type": "GitHub",
-          "privateText": "This repo is private. BUT checkout my other projects.",
-          "url": "https://github.com/FiaNerd",
+          "privateText": "",
+          "url": "https://github.com/FiaNerd/Prodigies-showcase",
           "icon": "line-md:github-twotone"
         }
       ],
@@ -199,7 +202,7 @@
       },
       "subTitle": "Fullstack",
       "titleDescription": "A coffee shop for coffee lovers",
-      "projectDuration": "December 2023 – January 2024",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span>  December 2023 – January 2024",
       "description": "Embarked on a journey into full-stack development by creating an e-commerce platform tailored for coffee enthusiasts as part of my thesis project. Started with meticulous planning, I curated a tech stack that aligned with the intended functionalities, using SQL for user, cart, and product relations. By using both lo-fi and hi-fi prototypes in Figma, I refined the app's aesthetics, from color schemes to font choices. <br><br><span class='font-bold'>Main Contributions:</span> <br><span class='font-bold'>- Frontend Development:</span><br>- Used React and TypeScript to orchestrate a seamless user experience. <br>- Enhanced aesthetics through careful design choices using Figma prototypes.<br><span class='font-bold'>- Backend Development:</span><br>- Used ASP.NET Core to seamlessly integrate backend and frontend elements.<br>- Implemented robust backend authentication using the ASP.NET Core Authentication library. <br> <br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'>- Frontend:</span> React, TypeScript, Tailwind CSS <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core, SQL Server <br><span class='font-bold'>- Database:</span> SQLite <br><span class='font-bold'>- Development Tools:</span> Visual Studio Code <br><span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Deployment:</span> Docker (Planned integration for streamlined deployment) <br><br><span class='font-bold'>Challenges & Solutions:</span><br>- Overcame challenges in implementing backend authentication, enriching my understanding of backend complexities. <br>- Planned integration of PostgreSQL for improved database management and Docker for streamlined deployment on an Azure-based server. <br><br><span class='font-bold'>Outcomes:</span> Successfully navigated the journey from concept to realization within set deadlines, enriching my skills and understanding of full-stack development. Looking forward, I aim to integrate PostgreSQL for improved database management and Docker for streamlined deployment on an Azure-based server.",
       "image": "/assets/images/portfolio/fullstack/school/coffeshop/coffe-hero.jpg",
       "linkTitle": "Links",
@@ -218,24 +221,24 @@
           "icon": "logos:c-sharp"
         },
         {
-          "name": "TypeScript",
-          "icon": "catppuccin:typescript"
+          "name": ".NET",
+          "icon": "logos:dotnet"
         },
         {
           "name": "Postman",
           "icon": "skill-icons:postman"
         },
         {
+          "name": "SQL Server (SMMS)",
+          "icon": "devicon:microsoftsqlserver"
+        },
+        {
           "name": "React",
           "icon": "skill-icons:react-dark"
         },
         {
-          "name": ".NET",
-          "icon": "logos:dotnet"
-        },
-        {
-          "name": "SQL Server (SMMS)",
-          "icon": "devicon:microsoftsqlserver"
+          "name": "TypeScript",
+          "icon": "catppuccin:typescript"
         },
         {
           "name": "Tailwind CSS",

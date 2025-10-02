@@ -21,7 +21,7 @@
       },
       "subTitle": "Backend",
       "titleDescription": "Backend for a photo app",
-      "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
+      "projectDuration": "Medieinstitutet Malmö <span class='not-italic'>|</span> Mars 2023",
       "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><br><span class='font-bold'>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
       "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
       "linkTitle": "Links",
@@ -102,7 +102,7 @@
         "suffix": "APPLICATION"
       },
       "titleDescription": "Backend for fashion",
-      "projectDuration": "June 2023 – March 2024",
+      "projectDuration": "Remote/Stockholm <span class='not-italic'>|</span> June 2023 – March 2024",
       "description": "Contributed to the development of the Slowfashion app by supporting the backend developer in creating a comprehensive CRUD system for managing products and blog posts. Utilized tools like Swagger and Postman for extensive API testing and validation.<br><br><span class='font-bold'>Key Contributions:</span><br>- Developed a CRUD system for products and blog posts, significantly improving content management efficiency. <br>- Enhanced my backend development skills in ASP.NET and API interaction. <br>- Adapted to an existing project by thoroughly analyzing the codebase and deepening my understanding of software architecture.<br><br> <span class='font-bold'>Technologies Used:</span> <span class='font-bold'><br>- Programming Language:</span> C# <span class='font-bold'><br>- Framework:</span> ASP.NET Core Web API <br><span class='font-bold'>- Databases:</span> PostgreSQL, DBeaver <br><span class='font-bold'>- API Testing:</span> Swagger, Postman, Insomnia <span class='font-bold'>- Version Control:</span> Git <br><span class='font-bold'>- Cloud Services:</span> Azure <br><span class='font-bold'>- Development Environment (IDE):</span> Visual Studio 2022 <br><br><span class='font-bold'>Challenges & Solutions:</span><br> - Overcame challenges in understanding and adapting to the codebase of an existing project. <br>- Improved problem-solving and critical thinking skills through in-depth analysis and study.<span class='bold'>Outcome:</span><br><br><span class='font-bold'>Outcomes:</span> Successfully contributed to the development of a robust backend system for the Slowfashion app, gaining valuable experience in backend development and software architecture.",
       "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
 

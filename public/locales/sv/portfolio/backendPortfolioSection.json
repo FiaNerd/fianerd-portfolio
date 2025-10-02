@@ -22,7 +22,7 @@
         "suffix": "WEBBAPPLIKATION"
       },
       "titleDescription": "Backand för en foto app",
-      "projectDuration": "Medieinstitutet <span class='not italic'>|</span> 2023",
+      "projectDuration": "Medieinstitutet Malmö <span class='not italic'>|</span> Mars 2023",
       "description": "Jag utvecklade en backend för en foto app som möjliggör användare att ladda upp, hämta och uppdatera och ta bort bilder. Genom att använda node.js express, prisma, typeScript och mySQL skapade jag en säker och effektiv databasstruktur för att lagra användarinformation och bilder. Jag implementerade också en RESTful API för att hantera dataöverföring.<br><br><span class='font-bold'>Syfte:</span> Uppgiften var att utveckla en backend för en fotodelningsapp som skulle lagra användarinformation och bilder på ett säkert och effektivt sätt.",
       "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
       "linkTitle": "Länkar",
@@ -103,7 +103,7 @@
         "suffix": "APP APPLIKATION"
       },
       "titleDescription": "Backend för modemedvetna",
-      "projectDuration": "juni 2023 – mars 2024",
+      "projectDuration": "Distans/Stockholm <span class='not-italic'>|</span> juni 2023 – mars 2024",
       "description": "Bidrog till utvecklingen av Slowfashion-appen genom att stödja backend-utvecklaren i skapandet av ett omfattande CRUD-system för hantering av produkter och bl.a blogginlägg. Använde verktyg som Swagger och Postman för omfattande API-testning och validering.<br><br><span class='font-bold'>Huvudsakliga Bidrag:</span><br>- Utvecklade ett CRUD-system för produkter och blogginlägg, vilket förbättrade effekti viteten i inne hållshanteringen.<br>- Förstärkte backendutvecklingskunskaper i ASP.NET och API-interaktion.<br>- Anpassade mig till ett befintligt projekt genom att noggrant analysera kodbasen och fördjupa min förståelse för mjukvaruarkitektur.<br><br><span class='font-bold'>Använda Teknologier:</span><br><span class='font-bold'>- Programmeringsspråk:</span> C#<br>- Ramverk: ASP.NET Core Web API<br><span class='font-bold'>- Databaser:</span> PostgreSQL, DBeaver<br><span class='font-bold'>- API-testning:</span> Swagger, Postman, Insomnia<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Molntjänster:</span> Azure<br></span><span class='font-bold'>- Utvecklingsmiljö (IDE):</span> Visual Studio 2022<br><br><span class='font-bold'>Utmaningar & Lösningar:</span><br>- Övervann utmaningar med att förstå och anpassa mig till kodbasen i ett befintligt projekt.<br>- Förbättrade problemlösnings- och kritiskt tänkande färdigheter genom djupgående analys och studier.<br><br><span class='font-bold'>Resultat:</span>Bidrog framgångsrikt till utvecklingen av ett robust backend-system för Slowfa- shionappen, och fick värdefull erfarenhet inom backendutveckling och mjukvaruarkitektur.",
       "image": "/assets/images/portfolio/back-end/slowfashion/slowfashion.jpg",
       "ctaButton": "Visa Detaljer",

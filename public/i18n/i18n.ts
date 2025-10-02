@@ -39,6 +39,7 @@ i18n
       'portfolio/frontendPortfolioSection',
       'portfolio/backendPortfolioSection',
       'portfolio/fullstackPortfolioSection',
+      'portfolio/portfolioSection',
 
       'contact/contact',
       'contact/contactForm',

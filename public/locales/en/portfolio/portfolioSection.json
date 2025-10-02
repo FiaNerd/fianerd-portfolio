@@ -344,7 +344,7 @@
         "subTitle": "Backend",
         "titleDescription": "Backend for a photo app",
         "projectDuration": "Medieinstitutet <span class='not-italic'>|</span> 2023",
-        "description": "I developed a backend for a photo app that allows users to upload, retrieve, update, and delete photos. By using Node.js, Express, Prisma, TypeScript, and MySQL, I created a secure and efficient database structure to store user information and photos. I also implemented a RESTful API to handle data transfer.<br><br><span class='font-bold'>Purpose:</span> The task was to develop a backend for a photo-sharing app that would store user information and photos in a secure and efficient manner.",
+        "description": "Planned development of a robust system to manage and track the workflow of two printing machines, with a focus on job handling, monitoring paper usage, waste management, and managing remaining paper stock.<br><br><span class='font-bold'>Planned Contributions:</span><br><span class='font-bold'>- Requirements Analysis & System Design:</span> Starting with detailed requirements analysis and using Figma to visualize the system's interface and workflow, ensuring that both technical and business needs are considered before development.<br><span class='font-bold'>- Backend Development:</span> Will develop the backend system using ASP.NET Web API, focusing on robustness, scalability, and performance.<br><span class='font-bold'>- Database Management:</span> Plan to implement SQL Server to efficiently handle complex relational data and manage large volumes of information.<br><span class='font-bold'>- Security:</span> Will design a secure authentication system with different roles for administrator and user access.<br><br><span class='font-bold'>Technologies To Be Used:</span><br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core<br><span class='font-bold'>- Frontend:</span> Material UI for responsive websites<br><span class='font-bold'>- Design Tools:</span> Figma for wireframes and interface design<br><span class='font-bold'>- Database:</span> SQL Server (SMSS)<br><span class='font-bold'>- Version Control:</span> Git<br><span class='font-bold'>- Command Line Interface:</span> CLI<br><span class='font-bold'>- Development Tools:</span> Visual Studio 2022<br><br><span class='font-bold'>Expected Challenges & Learning Opportunities:</span><br>- Designing a scalable system to handle high-volume data and operations.<br>- Ensuring robust data integrity and efficient data management with SQL Server.<br>- Implementing secure authentication and role management.<br><br><span class='font-bold'>Anticipated Outcomes:</span><br>- A system that improves workflow management and provides insights into paper usage and waste.<br>- Tools to facilitate better management of paper stock and optimize operational efficiency.",
         "image": "/assets/images/portfolio/back-end/prismaPhoto/photo-request.jpg",
         "linkTitle": "Links",
         "ctaButton": "View Details",
@@ -534,12 +534,16 @@
             "icon": "logos:c-sharp"
           },
           {
-            "name": "Firebase",
-            "icon": "devicon:firebase"
-          },
-          {
             "name": ".NET",
             "icon": "logos:dotnet"
+          },
+          {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+          },
+          {
+            "name": "SQL Server (SMMS)",
+            "icon": "devicon:microsoftsqlserver"
           },
           {
             "name": "React",
@@ -549,10 +553,9 @@
             "name": "TypeScript",
             "icon": "catppuccin:typescript"
           },
-
           {
-            "name": "Postman",
-            "icon": "logos:material-ui"
+            "name": "Tailwind CSS",
+            "icon": "skill-icons:tailwindcss-dark"
           }
         ],
         "images": [
@@ -612,9 +615,9 @@
         "ctaButton": "View Details",
         "links": [
           {
-            "type": "App Store",
-            "url": "https://apps.apple.com/se/app/prodigies/id6475810228",
-            "icon": "logos:apple-app-store"
+            "type": "GitHub",
+            "url": "https://github.com/FiaNerd/Prodigies-showcase",
+            "icon": "line-md:github-twotone"
           }
         ],
         "techTitle": "Tech",

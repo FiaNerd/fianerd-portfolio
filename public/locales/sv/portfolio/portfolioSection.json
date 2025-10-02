@@ -515,8 +515,8 @@
         },
         "subTitle": "Fullstack",
         "titleDescription": "Systemintegration för grafiskt företag",
-        "projectDuration": "june 2024 - in progress",
-        "description": "Utveckling av ett robust system för att hantera och spåra arbetsflödet för två tryckmaskiner, med fokus på jobbhållning, övervakning av pappersanvändning, avfallshantering och hantering av återstående papperslager.<br><br> <span class='font-bold'>Huvudsakliga Bidrag:</span><br> <span class='font-bold'>- Kravanalys & Systemdesign:</span> Genomförde detaljerad kravanalys och använde Figma för att visualisera systemets gränssnitt och arbetsflöde, vilket säkerställde att både tekniska och affärsmässiga behov beaktades innan utvecklingen. <br><span class='font-bold'>- Backend-utveckling:</span> Ledde utvecklingen av backend-systemet med hjälp av ASP.NET web API, vilket säkerställde robusthet, skalbarhet och prestanda. <br><span class='font-bold'>- Databashantering:</span> Implementerade SQL Server för att effektivt hantera komplexa relationella data och hantera stora informationsvolymer, vilket säkerställde sömlös datahantering och åtkomst. <br><span class='font-bold'>- Säkerhet:</span>  Utvecklade ett säkert autentiseringssystem med olika roller för administratörs- och användaråtkomst. <br><br><span class='font-bold'>Använda Tekniker:</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI för responsiv webbplats <br><span class='font-bold'>- Designverktyg:</span> Figma för wireframes och gränssnittsdesign <br><span class='font-bold'>- Databas:</span> SQL Server (SMSS) <br><span class='font-bold'>- Versionskontroll:</span> Git <br><span class='font-bold'>- Kommandoradsgränssnitt:</span> CLI <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio 2022 <br><br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Designade ett skalbart system för att hantera högvolymsdata och operationer. <br>- Säkerställde robust dataintegritet och effektiv datahantering med SQL Server. <br>- Övervann utmaningar i backend-autentiseringsimplementering, vilket berikade min förståelse för backend-komplexiteter. <br><br><span class='font-bold'>Resultat:</span> <br>- Förbättrad arbetsflödshantering och tillhandahöll detaljerade insikter i pappersanvändning och avfall, vilket optimerade driftseffektiviteten. <br>- Underlättade hanteringen av papperslager.",
+        "projectDuration": "juni 2024 - pågående",
+        "description": "Planerad utveckling av ett robust system för att hantera och spåra arbetsflödet för två tryckmaskiner, med fokus på jobbhantering, övervakning av pappersförbrukning, avfallshantering och administration av återstående papperslager.<br><br><span class='font-bold'>Planerade bidrag:</span><br><span class='font-bold'>- Kravanalys & systemdesign:</span> Börjar med en detaljerad kravanalys och använder Figma för att visualisera systemets gränssnitt och arbetsflöde, för att säkerställa att både tekniska och verksamhetsmässiga behov beaktas innan utveckling.<br><span class='font-bold'>- Backend-utveckling:</span> Kommer att utveckla backend-systemet med ASP.NET Web API, med fokus på robusthet, skalbarhet och prestanda.<br><span class='font-bold'>- Databashantering:</span> Planerar att implementera SQL Server för att hantera komplex relationsdata och stora datamängder på ett effektivt sätt.<br><span class='font-bold'>- Säkerhet:</span> Kommer att designa ett säkert autentiseringssystem med olika roller för administratörer och användare.<br><br><span class='font-bold'>Tekniker som kommer att användas:</span><br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core<br><span class='font-bold'>- Frontend:</span> Material UI för responsiva webbapplikationer<br><span class='font-bold'>- Designverktyg:</span> Figma för wireframes och gränssnittsdesign<br><span class='font-bold'>- Databas:</span> SQL Server (SMSS)<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Kommandoradsverktyg:</span> CLI<br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio 2022<br><br><span class='font-bold'>Förväntade utmaningar & lärandemöjligheter:</span><br>- Designa ett skalbart system som kan hantera stora datamängder och många operationer.<br>- Säkerställa robust dataintegritet och effektiv datahantering med SQL Server.<br>- Implementera säker autentisering och rollhantering.<br><br><span class='font-bold'>Förväntade resultat:</span><br>- Ett system som förbättrar arbetsflödeshanteringen och ger insikter i pappersförbrukning och avfall.<br>- Verktyg som underlättar administrationen av papperslager och optimerar den operativa effektiviteten.",
         "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
         "linkTitle": "Länkar",
         "ctaButton": "Visa Detaljer",
@@ -535,8 +535,8 @@
             "icon": "logos:c-sharp"
           },
           {
-            "name": "TypeScript",
-            "icon": "catppuccin:typescript"
+            "name": ".NET",
+            "icon": "logos:dotnet"
           },
           {
             "name": "Postman",
@@ -546,14 +546,13 @@
             "name": "React",
             "icon": "skill-icons:react-dark"
           },
-
           {
-            "name": ".NET",
-            "icon": "logos:dotnet"
+            "name": "TypeScript",
+            "icon": "catppuccin:typescript"
           },
           {
-            "name": "Postman",
-            "icon": "logos:material-ui"
+            "name": "TailwindCSS",
+            "icon": "skill-icons:tailwindcss-dark"
           }
         ],
         "images": [
@@ -614,8 +613,8 @@
         "links": [
           {
             "type": "GitHub",
-            "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
-            "url": "https://github.com/FiaNerd",
+            "privateText": "",
+            "url": "https://github.com/FiaNerd/Prodigies-showcase",
             "icon": "line-md:github-twotone"
           }
         ],

@@ -22,8 +22,8 @@
       },
       "subTitle": "Fullstack",
       "titleDescription": "Systemintegration för grafiskt företag",
-      "projectDuration": "juni 2024 - in progress",
-      "description": "Utveckling av ett robust system för att hantera och spåra arbetsflödet för två tryckmaskiner, med fokus på jobbhållning, övervakning av pappersanvändning, avfallshantering och hantering av återstående papperslager.<br><br> <span class='font-bold'>Huvudsakliga Bidrag:</span><br> <span class='font-bold'>- Kravanalys & Systemdesign:</span> Genomförde detaljerad kravanalys och använde Figma för att visualisera systemets gränssnitt och arbetsflöde, vilket säkerställde att både tekniska och affärsmässiga behov beaktades innan utvecklingen. <br><span class='font-bold'>- Backend-utveckling:</span> Ledde utvecklingen av backend-systemet med hjälp av ASP.NET web API, vilket säkerställde robusthet, skalbarhet och prestanda. <br><span class='font-bold'>- Databashantering:</span> Implementerade SQL Server för att effektivt hantera komplexa relationella data och hantera stora informationsvolymer, vilket säkerställde sömlös datahantering och åtkomst. <br><span class='font-bold'>- Säkerhet:</span>  Utvecklade ett säkert autentiseringssystem med olika roller för administratörs- och användaråtkomst. <br><br><span class='font-bold'>Använda Tekniker:</span> <br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core Blazor <br><span class='font-bold'>- Frontend:</span> Material UI för responsiv webbplats <br><span class='font-bold'>- Designverktyg:</span> Figma för wireframes och gränssnittsdesign <br><span class='font-bold'>- Databas:</span> SQL Server (SMSS) <br><span class='font-bold'>- Versionskontroll:</span> Git <br><span class='font-bold'>- Kommandoradsgränssnitt:</span> CLI <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio 2022 <br><br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Designade ett skalbart system för att hantera högvolymsdata och operationer. <br>- Säkerställde robust dataintegritet och effektiv datahantering med SQL Server. <br>- Övervann utmaningar i backend-autentiseringsimplementering, vilket berikade min förståelse för backend-komplexiteter. <br><br><span class='font-bold'>Resultat:</span> <br>- Förbättrad arbetsflödshantering och tillhandahöll detaljerade insikter i pappersanvändning och avfall, vilket optimerade driftseffektiviteten. <br>- Underlättade hanteringen av papperslager.",
+      "projectDuration": "Helsingborg <span class='not-italic'>|</span> August 2025 - in progress",
+      "description": "Planerad utveckling av ett robust system för att hantera och spåra arbetsflödet för två tryckmaskiner, med fokus på jobbhantering, övervakning av pappersförbrukning, avfallshantering och administration av återstående papperslager.<br><br><span class='font-bold'>Planerade bidrag:</span><br><span class='font-bold'>- Kravanalys & systemdesign:</span> Börjar med en detaljerad kravanalys och använder Figma för att visualisera systemets gränssnitt och arbetsflöde, för att säkerställa att både tekniska och verksamhetsmässiga behov beaktas innan utveckling.<br><span class='font-bold'>- Backend-utveckling:</span> Kommer att utveckla backend-systemet med ASP.NET Web API, med fokus på robusthet, skalbarhet och prestanda.<br><span class='font-bold'>- Databashantering:</span> Planerar att implementera SQL Server för att hantera komplex relationsdata och stora datamängder på ett effektivt sätt.<br><span class='font-bold'>- Säkerhet:</span> Kommer att designa ett säkert autentiseringssystem med olika roller för administratörer och användare.<br><br><span class='font-bold'>Tekniker som kommer att användas:</span><br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core<br><span class='font-bold'>- Frontend:</span> Material UI för responsiva webbapplikationer<br><span class='font-bold'>- Designverktyg:</span> Figma för wireframes och gränssnittsdesign<br><span class='font-bold'>- Databas:</span> SQL Server (SMSS)<br><span class='font-bold'>- Versionshantering:</span> Git<br><span class='font-bold'>- Kommandoradsverktyg:</span> CLI<br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio 2022<br><br><span class='font-bold'>Förväntade utmaningar & lärandemöjligheter:</span><br>- Designa ett skalbart system som kan hantera stora datamängder och många operationer.<br>- Säkerställa robust dataintegritet och effektiv datahantering med SQL Server.<br>- Implementera säker autentisering och rollhantering.<br><br><span class='font-bold'>Förväntade resultat:</span><br>- Ett system som förbättrar arbetsflödeshanteringen och ger insikter i pappersförbrukning och avfall.<br>- Verktyg som underlättar administrationen av papperslager och optimerar den operativa effektiviteten.",
       "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
       "linkTitle": "Länkar",
       "ctaButton": "Visa Detaljer",
@@ -42,6 +42,10 @@
           "icon": "logos:c-sharp"
         },
         {
+          "name": ".NET",
+          "icon": "logos:dotnet"
+        },
+        {
           "name": "TypeScript",
           "icon": "catppuccin:typescript"
         },
@@ -50,17 +54,16 @@
           "icon": "skill-icons:postman"
         },
         {
+          "name": "SQL Server (SMMS)",
+          "icon": "devicon:microsoftsqlserver"
+        },
+        {
           "name": "React",
           "icon": "skill-icons:react-dark"
         },
-
         {
-          "name": ".NET",
-          "icon": "logos:dotnet"
-        },
-        {
-          "name": "Postman",
-          "icon": "logos:material-ui"
+          "name": "TailwindCSS",
+          "icon": "skill-icons:tailwindcss-dark"
         }
       ],
       "images": [
@@ -113,7 +116,7 @@
       },
       "subTitle": "Fullstack",
       "titleDescription": "En App för gymnasieelever",
-      "projectDuration": "januari 2024- september 2024",
+      "projectDuration": "Lund <span class='not-italic'>|</span> January 2024 - September 2024",
       "description": "Utveckla en mobilapplikation för att hjälpa gymnasieelever att utforska möjligheter till eftergymnasial utbildning, med fokus på att erbjuda en sömlös, plattformsoberoende användarupplevelse.<br> <br><span class='font-bold'>Huvudsakliga Bidrag:</span> <br><span class='font-bold'>- Frontend Utveckling:</span> <br>- Använde React Native och TypeScript för att skapa ett responsivt och intuitivt gränssnitt. <br>- Säkerställde en konsekvent användarupplevelse över iOS- och Android-plattformarna. <br><span class='font-bold'>- Backend Utveckling:</span> <br>- Hanterade API:er och datalagring med Firebase, vilket tillhandahöll tillförlitliga backendtjänster. <br>- Implementerade SQLite för effektiv hantering av lokala data och offlinefunktioner. <br><span class='font-bold'>- Problemlösning:</span> <br>- Övervann specifika utmaningar inom iOS-utveckling, vilket säkerställde en robust plattformsoberoende funktionalitet. <br>- Anpassade utvecklingsstrategier för att bibehålla sömlös prestanda och användbarhet.<br><br><span class='font-bold'> Använda Teknologier:</span> <br><span class='font-bold'>- Frontend:</span> React Native, TypeScript <br><span class='font-bold'>- Backend:</span> Firebase, SQLite <br><span class='font-bold'>- Versionshantering:</span> Git <br><span class='font-bold'>- Terminal:</span> Kommandoradsgränssnitt (CLI) <br><span class='font-bold'>- Utvecklingsverktyg:</span> Visual Studio Code <br><span class='font-bold'>- Metodik:</span> Scrum <br> <br><span class='font-bold'>Utmaningar & Lösningar:</span> <br>- Löste komplexa iOS-plattformsspecifika problem, vilket förbättrade mina problemlösningsfärdigheter och tekniska kunskaper. <br>- Säkerställde appens responsivitet och prestanda över olika enheter och skärmstorlekar. <br><br><span class='font-bold'>Resultat:</span> <br>- Levererade ett värdefullt verktyg som hjälper elever att effektivt navigera sina utbildningsval.<br>- Fick omfattande erfarenhet av mobilutveckling och plattformsoberoende integration.",
       "image": "/assets/images/portfolio/fullstack/prodigies/prodigies-main-hero.jpg",
       "linkTitle": "Länkar",
@@ -121,8 +124,8 @@
       "ctaLink": [
         {
           "type": "GitHub",
-          "privateText": "Detta reprot är privat. Men kolla in på mina andra projekt.",
-          "url": "https://github.com/FiaNerd",
+          "privateText": "",
+          "url": "https://github.com/FiaNerd/Prodigies-showcase",
           "icon": "line-md:github-twotone"
         }
       ],
