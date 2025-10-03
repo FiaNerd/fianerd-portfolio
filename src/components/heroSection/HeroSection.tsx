@@ -1,9 +1,9 @@
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import i18n from '../../../public/i18n/i18n';
-import Button from '../partials/Button';
-import ResponsiveHeroImage from './ResponsiveHeroImage';
+import i18n from '../../../public/i18n/i18n.js';
+import Button from '../partials/Button.js';
+import ResponsiveHeroImage from './ResponsiveHeroImage.js';
 import { startTransition } from 'react';
 
 const HeroSection = () => {
@@ -13,13 +13,13 @@ const HeroSection = () => {
   const onButtonClick = async () => {
     const resumePath =
       i18n.language === 'sv'
-        ? '/files/Sofia-Mattiasson-CV-Personligtbrev-SV.pdf'
-        : '/files/Sofia-Mattiasson-Resume-Coverletter-EN.pdf';
+        ? '/files/Sofia-Travnicek-Mattiasson-CV-PersonligtBrev-SV.pdf'
+        : '/files/Sofia-Travnicek-Mattiasson-Resume-Coverletter-EN.pdf';
 
     const fileName =
       i18n.language === 'sv'
-        ? 'Sofia-Mattiasson-CV-Personligtbrev-SV.pdf'
-        : 'Sofia-Mattiasson-Resume-Coverletter-EN.pdf';
+        ? 'Sofia-Travnicek-Mattiasson-CV-PersonligtBrev-SV.pdf'
+        : 'Sofia-Travnicek-Mattiasson-Resume-Coverletter-EN.pdf';
 
     try {
       const response = await fetch(resumePath);

@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
-import Button from '../partials/Button';
+import Button from '../partials/Button.js';
 import { useTranslation } from 'react-i18next';
 
 const PortfolioHeroIntro = () => {
@@ -9,13 +9,13 @@ const PortfolioHeroIntro = () => {
   const onButtonClick = async () => {
     const resumePath =
       i18n.language === 'sv'
-        ? '/files/Sofia-Mattiasson-CV-Personligtbrev-SV.pdf'
-        : '/files/Sofia-Mattiasson-Resume-Coverletter-EN.pdf';
+        ? '/files/Sofia-Travnicek-Mattiasson-CV-PersonligtBrev-SV.pdf'
+        : '/files/Sofia-Travnicek-Mattiasson-Resume-Coverletter-EN.pdf';
 
     const fileName =
       i18n.language === 'sv'
-        ? 'Sofia-Mattiasson-CV-Personligtbrev-SV.pdf'
-        : 'Sofia-Mattiasson-Resume-Coverletter-EN.pdf';
+        ? 'Sofia-Travnicek-Mattiasson-CV-PersonligtBrev-SV.pdf'
+        : 'Sofia-Travnicek-Mattiasson-Resume-Coverletter-EN.pdf';
 
     try {
       const response = await fetch(resumePath);
