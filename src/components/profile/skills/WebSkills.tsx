@@ -6,26 +6,28 @@ import Techstack from './Techstack';
 const WebSkills = () => {
   const { t } = useTranslation('profile/skills');
 
-  const webSkills = [
-    { name: 'ASP.Net Core', icon: 'skill-icons:dotnet' },
-    { name: 'Sql Server', icon: 'devicon:microsoftsqlserver' },
-    { name: 'React', icon: 'devicon:react' },
-    { name: 'TypeScript', icon: 'devicon:typescript' },
-    {
-      name: 'HTML',
-      icon: 'devicon:html5',
-    },
-    {
-      name: 'CSS',
-      icon: 'logos:css-3',
-    },
-    {
-      name: 'Tailwind CSS',
-      icon: 'logos:tailwindcss-icon',
-    },
-    { name: 'Node js', icon: 'devicon:nodejs' },
-    { name: 'Git / terminal', icon: 'devicon:git' },
-  ];
+   const frontendSkills = [
+  { name: 'JavaScript', icon: 'devicon:javascript' },
+  { name: 'React', icon: 'devicon:react' },
+  { name: 'TypeScript', icon: 'devicon:typescript' },
+  { name: 'HTML', icon: 'devicon:html5' },
+  { name: 'CSS', icon: 'devicon:css3' },
+  { name: 'Tailwind CSS', icon: 'devicon:tailwindcss' },
+];
+
+  const backendSkills = [
+  { name: 'C#', icon: 'devicon:csharp' },
+  { name: 'Entity Framework', icon: 'devicon:entityframeworkcore' },
+  { name: 'ASP.NET Core', icon: 'devicon:dotnetcore' },
+  { name: 'Node.js', icon: 'devicon:nodejs' },
+];
+
+ const databaseSkills = [
+  { name: 'SQL Server', icon: 'devicon:microsoftsqlserver' },
+  { name: 'MySQL', icon: 'devicon:mysql' },
+  { name: 'PostgreSQL', icon: 'devicon:postgresql' },
+  { name: 'MongoDB', icon: 'devicon:mongodb' },
+];
 
   // Animations for the image and text
   const fadeInLeft = useFadeIn({ direction: 'left', delay: 0.5, duration: 1 });
@@ -95,9 +97,9 @@ const WebSkills = () => {
             Frontend
           </h4>
           
-          <div className='grid grid-cols-3'>
+          <div className='grid grid-cols-3 xl:grid-cols-5 gap-4'>
 
-          {webSkills.map((skill) => (
+          {frontendSkills.map((skill) => (
             <div
             className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"
             key={skill.name}
@@ -106,6 +108,32 @@ const WebSkills = () => {
             </div>
           ))}
           </div>
+
+          <h4 className="text-text-secondary font-semibold mt-6 mb-[0.15em]">Backend</h4>
+           
+          <div className='grid grid-cols-3'>
+          {backendSkills.map((skill) => (
+            <div
+            className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"  
+            key={skill.name}
+            >
+              <Techstack name={skill.name} icon={skill.icon} />
+            </div>
+          ))}
+          </div>
+
+          <h4 className="text-text-secondary font-semibold mt-6 mb-[0.15em]">Database</h4>
+          <div className='grid grid-cols-3'>
+          {databaseSkills.map((skill) => (
+            <div
+            className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"  
+            key={skill.name}  
+            >
+              <Techstack name={skill.name} icon={skill.icon} />
+            </div>
+          ))}
+          </div>
+
         </motion.div>
 
         {/* Middle Column */}
