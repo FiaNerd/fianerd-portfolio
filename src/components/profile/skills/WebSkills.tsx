@@ -97,7 +97,7 @@ const WebSkills = () => {
             Frontend
           </h4>
           
-          <div className='grid grid-cols-4 md:grid-cols-6 xl:grid-cols-5 gap-4'>
+          <div className='grid grid-cols-3 md:grid-cols-5 gap-4'>
 
           {frontendSkills.map((skill) => (
             <div
@@ -111,7 +111,7 @@ const WebSkills = () => {
 
           <h4 className="text-text-secondary font-semibold mt-6 mb-[0.15em]">Backend</h4>
            
-            <div className='grid grid-cols-4 md:grid-cols-6 xl:grid-cols-5 gap-4'>
+            <div className='grid grid-cols-3 md:grid-cols-5 gap-4'>
           {backendSkills.map((skill) => (
             <div
             className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"  
@@ -123,7 +123,7 @@ const WebSkills = () => {
           </div>
 
           <h4 className="text-text-secondary font-semibold mt-6 mb-[0.15em]">Database</h4>
-            <div className='grid grid-cols-4 md:grid-cols-6 xl:grid-cols-5 gap-4'>
+            <div className='grid grid-cols-3 md:grid-cols-5 gap-4'>
           {databaseSkills.map((skill) => (
             <div
             className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"  
