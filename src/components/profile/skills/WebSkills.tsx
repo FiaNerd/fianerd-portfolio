@@ -111,12 +111,13 @@ const WebSkills = () => {
 
           <h4 className="text-text-secondary font-semibold mt-6 mb-[0.15em]">Backend</h4>
            
-            <div className='grid grid-cols-3 md:grid-cols-5 gap-4'>
+            <div className='grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-4'>
           {backendSkills.map((skill) => (
             <div
             className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"  
             key={skill.name}
             >
+
               <Techstack name={skill.name} icon={skill.icon} />
             </div>
           ))}
