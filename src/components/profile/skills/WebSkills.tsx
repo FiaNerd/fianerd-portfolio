@@ -1,9 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import ProgressBar from './ProgressBar';
 import useFadeIn from '../../../hook/useFadeIn';
 import { motion } from 'framer-motion';
 import Techstack from './Techstack';
-import { Icon } from '@iconify/react';
 
 const WebSkills = () => {
   const { t } = useTranslation('profile/skills');
@@ -96,14 +94,18 @@ const WebSkills = () => {
           <h4 className="text-text-secondary font-semibold mb-[0.15em]">
             Frontend
           </h4>
+          
+          <div className='grid grid-cols-3'>
+
           {webSkills.map((skill) => (
             <div
-              className=" justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"
-              key={skill.name}
+            className="  justify-center items-center gap-2 p-2 rounded-lg hover:scale-105 transition-transform duration-300"
+            key={skill.name}
             >
               <Techstack name={skill.name} icon={skill.icon} />
             </div>
           ))}
+          </div>
         </motion.div>
 
         {/* Middle Column */}

@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import Title from '../../partials/Title';
-import GraphicSkills from './GraphicSkills';
-import WebSkills from './WebSkills';
-import useHeaderHeight from '../../../hook/useHeaderHeight';
-import ProgramAndSoftware from './ProgramAndSoftware';
-import Competencies from './Competencies';
+import useHeaderHeight from '../../../hook/useHeaderHeight.js';
+import Title from '../../partials/Title.js';
+import WebSkills from './WebSkills.js';
+import GraphicSkills from './GraphicSkills.js';
+import Competencies from './Competencies.js';
+import ProgramAndSoftware from './ProgramAndSoftware.js';
+
 const Skills = () => {
   const { t } = useTranslation(['profile/skills']);
 
