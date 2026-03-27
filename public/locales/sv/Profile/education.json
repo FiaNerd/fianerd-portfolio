@@ -10,12 +10,12 @@
   "checkoutText": "Upptäck mina projekt – se vad jag har skapat och hur jag har utvecklats inom webbutveckling och grafisk design!",
   "exploreBtn": "Utforska Nu",
 
-  "dateBE-Course": "november 2025 - februari 2026",
-  "titleBE-Course": "Web‑API:er i .NET",
-  "edutacationCoursesBE-Course": "YH-kurs 12 veckor, 50% distans",
-  "placeBE-Course": "Medieinstitutet",
-  "descriptionEducationBE-Course": "<b>Kunskaper</b> - Fördjupning i att skapa, strukturera och säkra Web‑API:er i .NET. Fokus på REST‑principer, API‑arkitektur, CRUD, datahantering, autentisering/auktorisering och hur API:er integreras med frontend och backend. Arbetade även med testning, felsökning och dokumentation av API:er samt relevanta AI‑verktyg.",
-  "techEducationBE-Course": "<b>Tekniker:</b> .NET, C#, REST, API‑design, säkerhet, CRUD, Postman/Insomnia/Swagger",
+  "dateAPI": "november 2025 - februari 2026",
+  "titleAPI": "Web‑API:er i .NET",
+  "edutacationCoursesAPI": "YH-kurs 12 veckor, 50% (distans)",
+  "placeAPI": "Medieinstitutet",
+  "descriptionEducationAPI": "<b>Kunskaper</b> - Fördjupning i att skapa, strukturera och säkra Web‑API:er i .NET. Fokus på REST‑principer, API‑arkitektur, CRUD, datahantering, autentisering/auktorisering och hur API:er integreras med frontend och backend. Arbetade även med testning, felsökning och dokumentation av API:er samt relevanta AI‑verktyg.",
+  "techEducationAPI": "<b>Tekniker:</b> .NET, C#, REST, API‑design, säkerhet, CRUD, Postman/Insomnia/Swagger",
 
   "dateFE": "september 2022 - maj 2024",
   "titleFE": "Frontend utveckling",
