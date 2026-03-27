@@ -8,6 +8,13 @@
     "checkoutText": "Discover my projects – see what I have created and how I have developed in web development and graphic design!",
     "exploreBtn": "Explore Now",
 
+    "dateBE-Course": "November 2025 – February 2026",
+    "titleBE-Course": "Web APIs in .NET",
+    "edutacationCoursesBE-Course": "12‑week YH course, 50% remote",
+    "placeBE-Course": "Medieinstitutet",
+    "descriptionEducationBE-Course": "<b>Skills</b> – In‑depth training in creating, structuring, and securing Web APIs in .NET. Focus on REST principles, API architecture, CRUD operations, data handling, authentication/authorization, and integrating APIs with both frontend and backend applications. Also worked with API testing, debugging, documentation, and relevant AI tools.",
+    "techEducationBE-Course": "<b>Technologies:</b> .NET, C#, REST, API design, security, CRUD, Postman/Insomnia/Swagger",
+
     "dateFE": "September 2022 - May 2024",
     "titleFE": "Frontend Development",
     "edutacationCoursesFE": "2-year vocational education in frontend development",
