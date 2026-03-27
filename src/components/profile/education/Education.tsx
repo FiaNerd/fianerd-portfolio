@@ -69,6 +69,13 @@ const Education = () => {
             <ul className="list-none m-0 p-0">
               {/* Timeline Items */}
               {[
+                   {
+                  date: t('dateBE-Course'),
+                  title: t('titleBE-Course'),
+                  place: t('placeBE-Course'),
+                  description: t('descriptionEducationBE-Course'),
+                  tech: t('techEducationBE-Course'),
+                },
                 {
                   date: t('dateFE'),
                   title: t('titleFE'),
