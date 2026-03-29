@@ -30,8 +30,8 @@
       "ctaLink": [
         {
           "type": "GitHub",
-          "privateText": "This repo is private. BUT checkout my other projects.",
-          "url": "https://github.com/FiaNerd",
+          "privateText": "",
+          "url": "https://github.com/FiaNerd/Printagon",
           "icon": "line-md:github-twotone"
         }
       ],

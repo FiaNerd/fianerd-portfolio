@@ -515,15 +515,15 @@
         "subTitle": "Fullstack",
         "titleDescription": "Graphic company system integration",
         "projectDuration": "Helsingborg <span class='not-italic'>|</span> June 2024 - ongoing",
-        "description": "Development of a robust system to manage and track the workflow of two printing machines, focusing on job tracking, paper usage monitoring, waste management, and handling of remaining paper stock.<br><br><span class='font-bold'>Main Contributions:</span><br><span class='font-bold'>– Requirements Analysis & System Design: </span>Conducted a detailed requirements analysis and used Figma to visualize the system’s interface and workflow, ensuring that both technical and business needs were addressed before development.<br><span class='font-bold'>– Backend Development:</span> Led the development of the backend system using ASP.NET Web API, ensuring robustness, scalability, and performance.<br><span class='font-bold'>– Database Management: </span> Implemented SQL Server to efficiently handle complex relational data and manage large volumes of information, ensuring seamless data processing and access.<br><span class='font-bold'> – Security: </span> Developed a secure authentication system with different roles for administrator and user access.<br><br><span class='font-bold'>Technologies Used:</span> <br><span class='font-bold'> – Backend: </span> C#, ASP.NET Core<br>–<span class='font-bold'> Frontend: </span> Material UI for a responsive website<br><span class='font-bold'> – Design Tools: </span> Figma for wireframes and UI design<br><span class='font-bold'> – Database: </span> SQL Server (SSMS)<br><span class='font-bold'> – Version Control: </span> Git<br>– Command Line Interface: CLI<br><span class='font-bold'>– Development Tools: </span> Visual Studio 2022<br><br><span class='font-bold'>Challenges & Solutions:</span><br>– Designed a scalable system to handle high-volume data and operations.<br>– Ensured robust data integrity and efficient data handling using SQL Server.<br>– Overcame challenges in implementing backend authentication, deepening my understanding of backend complexities.<br><br><span class='font-bold'>Results:</span><br>– Improved workflow management and provided detailed insights into paper usage and waste, optimizing operational efficiency.<br>– Facilitated the management of paper stock.",
+        "description": "Planned development of a robust system for managing and tracking the workflow of two printing machines, focusing on job handling, monitoring paper consumption, waste management, and administration of remaining paper stock.<br><br><span class='font-bold'>My current contributions:</span><br><span class='font-bold'>- Requirements analysis & system design:</span> Conducting a detailed requirements analysis and working with <span class='font-bold'>UX/UI design</span> in Figma to create wireframes, prototypes, and visual interfaces. Also visualizing system logic and workflows using <span class='font-bold'>Mermaid diagrams</span> to achieve a clear and structured overview before development.<br><span class='font-bold'>- Backend development:</span> Beginning the development of the backend system using ASP.NET Web API, focusing on robustness, scalability, and performance.<br><span class='font-bold'></br>Planned contributions ahead<br>- Database management:</span> Planning to implement PostgreSQL to handle complex relational data and large data volumes efficiently.<br><span class='font-bold'>- Security:</span> Will design a secure authentication system with different roles for administrators and users.<br><span class='font-bold'>- Cloud & DevOps:</span> Planning to use Azure for hosting, storage, and monitoring of the system. Will also set up CI/CD pipelines in Azure DevOps for automated build and deployment flows.<br><br><span class='font-bold'>Technologies to be used:</span><br><span class='font-bold'>- Backend:</span> C#, ASP.NET Core<br><span class='font-bold'>- Frontend:</span> Tailwind CSS for responsive web applications<br><span class='font-bold'>- Design tools:</span> Figma for UX/UI design, wireframes, and prototypes<br><span class='font-bold'>- Database:</span> PostgreSQL<br><span class='font-bold'>- Cloud platform:</span> Azure (hosting, storage, monitoring)<br><span class='font-bold'>- DevOps:</span> Azure DevOps (Git‑repo, Pipelines)<br><span class='font-bold'>- Version control:</span> Git<br><span class='font-bold'>- Command line tools:</span> CLI<br><span class='font-bold'>- Development environment:</span> Visual Studio 2022<br><br><span class='font-bold'>Expected challenges & learning opportunities:</span><br>- Designing a scalable system capable of handling large data volumes and many operations.<br>- Ensuring robust data integrity and efficient data management with PostgreSQL.<br><br><span class='font-bold'>Expected results:</span><br>- A system that improves workflow management and provides insights into paper consumption and waste.<br>- Tools that simplify paper stock administration and optimize operational efficiency.",
         "linkTitle": "Links",
         "image": "/assets/images/portfolio/fullstack/pg/pg-login.jpg",
         "ctaButton": "View Details",
         "links": [
           {
             "type": "GitHub",
-            "privateText": "This repo is private. BUT checkout my other projects.",
-            "url": "https://github.com/FiaNerd",
+            "privateText": "",
+            "url": "https://github.com/FiaNerd/Printagon",
             "icon": "line-md:github-twotone"
           }
         ],
@@ -542,9 +542,16 @@
             "icon": "skill-icons:postman"
           },
           {
-            "name": "SQL Server (SMMS)",
-            "icon": "devicon:microsoftsqlserver"
+            "name": "PostgreSQL",
+            "icon": "devicon:postgresql"
           },
+          { "name": "Figma", "icon": "skill-icons:figma" },
+          {
+            "name": "Mermaid",
+            "icon": "simple-icons:mermaid"
+          },
+          { "name": "Azure", 
+          "icon": "logos:microsoft-azure" },
           {
             "name": "React",
             "icon": "skill-icons:react-dark"
