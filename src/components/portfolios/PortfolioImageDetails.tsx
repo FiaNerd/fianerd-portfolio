@@ -8,7 +8,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { useState } from 'react';
-import { DetailsItemsProps } from '../../interfaces/PortfolioInterface';
+import { DetailsItemsProps } from '../../interfaces/PortfolioInterface.js';
 
 const PortfolioImageDetails = ({ images }: DetailsItemsProps) => {
   const [openLightbox, setOpenLightbox] = useState(false);
@@ -60,7 +60,7 @@ const PortfolioImageDetails = ({ images }: DetailsItemsProps) => {
           src: image.src,
           alt: image.alt,
         }))}
-        carousel={{ finite:true }}
+        carousel={{ finite: true }}
         plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Video, Zoom]}
       />
     </>

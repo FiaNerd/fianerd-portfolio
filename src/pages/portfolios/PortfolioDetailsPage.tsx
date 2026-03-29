@@ -1,11 +1,11 @@
 import { Icon } from '@iconify/react';
-import { startTransition, useEffect, useLayoutEffect, useState } from 'react';
+import { startTransition, useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import portfolioDataEn from '../../../public/locales/en/portfolio/portfolioSection.json';
 import portfolioDataSv from '../../../public/locales/sv/portfolio/portfolioSection.json';
-import HeroDetails from '../../components/partials/HeroDetails';
-import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems';
+import PortfolioDetailsItems from '../../components/portfolios/PortfolioDetailsItems.js';
+import HeroDetails from '../../components/partials/HeroDetails.js';
 
 const PortfolioDetailsPage = ({ headerHeight }: { headerHeight: number }) => {
   const { urlTitle } = useParams<{ urlTitle: string }>();

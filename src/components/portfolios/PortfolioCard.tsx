@@ -1,9 +1,9 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import Button from '../partials/Button';
-import Popup from '../partials/Popup';
-import { PortfolioItems } from '../../interfaces/PortfolioInterface';
+import { PortfolioItems } from '../../interfaces/PortfolioInterface.js';
+import Button from '../partials/Button.js';
+import Popup from '../partials/Popup.js';
 
 const PortfolioCard = ({
   title,
